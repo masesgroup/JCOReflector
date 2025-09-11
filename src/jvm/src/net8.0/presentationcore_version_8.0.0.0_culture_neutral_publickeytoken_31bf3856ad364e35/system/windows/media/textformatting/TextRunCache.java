@@ -161,7 +161,7 @@ public class TextRunCache extends NetObject  {
     
     public void Change(int textSourceCharacterIndex, int addition, int removal) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Change", textSourceCharacterIndex, addition, removal);
         } catch (JCNativeException jcne) {
@@ -171,7 +171,7 @@ public class TextRunCache extends NetObject  {
 
     public void Invalidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {

@@ -170,10 +170,14 @@ public class UnreferencedObjectEventArgs extends EventArgs  {
     
     public NetObject getUnreferencedObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnreferencedObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnreferencedObject");
+            retObjectUnreferencedObject = classInstance.Get("UnreferencedObject");
+            JCObject val = (JCObject)retObjectUnreferencedObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnreferencedObject != null ? retObjectUnreferencedObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class UnreferencedObjectEventArgs extends EventArgs  {
 
     public java.lang.String getUnreferencedId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnreferencedId = null;
         try {
-            return (java.lang.String)classInstance.Get("UnreferencedId");
+            retObjectUnreferencedId = classInstance.Get("UnreferencedId");
+            return (java.lang.String)retObjectUnreferencedId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUnreferencedId != null ? retObjectUnreferencedId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

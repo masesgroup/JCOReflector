@@ -161,10 +161,14 @@ public class ObjectPutEventArgs extends ManagementEventArgs  {
     
     public ManagementPath getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            JCObject val = (JCObject)retObjectPath;
             return new ManagementPath(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

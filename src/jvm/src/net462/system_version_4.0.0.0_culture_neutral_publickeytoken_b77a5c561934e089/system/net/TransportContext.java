@@ -155,10 +155,14 @@ public class TransportContext extends NetObject  {
     
     public ChannelBinding GetChannelBinding(ChannelBindingKind kind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChannelBinding = null;
         try {
-            JCObject objGetChannelBinding = (JCObject)classInstance.Invoke("GetChannelBinding", kind == null ? null : kind.getJCOInstance());
+            retObjectGetChannelBinding = classInstance.Invoke("GetChannelBinding", kind == null ? null : kind.getJCOInstance());
+            JCObject objGetChannelBinding = (JCObject)retObjectGetChannelBinding;
             return new ChannelBinding(objGetChannelBinding);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChannelBinding != null ? retObjectGetChannelBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

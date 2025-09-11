@@ -144,7 +144,7 @@ public class ISerializableImplementation extends NetObject implements ISerializa
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

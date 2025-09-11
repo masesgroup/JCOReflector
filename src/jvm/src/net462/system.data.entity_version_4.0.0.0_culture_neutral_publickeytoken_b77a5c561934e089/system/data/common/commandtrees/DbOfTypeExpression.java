@@ -158,7 +158,7 @@ public class DbOfTypeExpression extends DbUnaryExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,10 +172,14 @@ public class DbOfTypeExpression extends DbUnaryExpression  {
     
     public TypeUsage getOfType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOfType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OfType");
+            retObjectOfType = classInstance.Get("OfType");
+            JCObject val = (JCObject)retObjectOfType;
             return new TypeUsage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOfType != null ? retObjectOfType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

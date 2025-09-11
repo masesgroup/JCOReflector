@@ -167,9 +167,13 @@ public class XmlWriter extends NetObject implements AutoCloseable {
     
     public java.lang.String LookupPrefix(java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", ns);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", ns);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task FlushAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlushAsync = null;
         try {
-            JCObject objFlushAsync = (JCObject)classInstance.Invoke("FlushAsync");
+            retObjectFlushAsync = classInstance.Invoke("FlushAsync");
+            JCObject objFlushAsync = (JCObject)retObjectFlushAsync;
             return new Task(objFlushAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlushAsync != null ? retObjectFlushAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteAttributesAsync(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAttributesAsync = null;
         try {
-            JCObject objWriteAttributesAsync = (JCObject)classInstance.Invoke("WriteAttributesAsync", reader == null ? null : reader.getJCOInstance(), defattr);
+            retObjectWriteAttributesAsync = classInstance.Invoke("WriteAttributesAsync", reader == null ? null : reader.getJCOInstance(), defattr);
+            JCObject objWriteAttributesAsync = (JCObject)retObjectWriteAttributesAsync;
             return new Task(objWriteAttributesAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAttributesAsync != null ? retObjectWriteAttributesAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteAttributeStringAsync(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAttributeStringAsync = null;
         try {
-            JCObject objWriteAttributeStringAsync = (JCObject)classInstance.Invoke("WriteAttributeStringAsync", prefix, localName, ns, value);
+            retObjectWriteAttributeStringAsync = classInstance.Invoke("WriteAttributeStringAsync", prefix, localName, ns, value);
+            JCObject objWriteAttributeStringAsync = (JCObject)retObjectWriteAttributeStringAsync;
             return new Task(objWriteAttributeStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAttributeStringAsync != null ? retObjectWriteAttributeStringAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteBase64Async(byte[] buffer, int index, int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBase64Async = null;
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", buffer, index, count);
+            retObjectWriteBase64Async = classInstance.Invoke("WriteBase64Async", buffer, index, count);
+            JCObject objWriteBase64Async = (JCObject)retObjectWriteBase64Async;
             return new Task(objWriteBase64Async);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBase64Async != null ? retObjectWriteBase64Async.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteBase64Async(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBase64Async = null;
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectWriteBase64Async = classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteBase64Async = (JCObject)retObjectWriteBase64Async;
             return new Task(objWriteBase64Async);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBase64Async != null ? retObjectWriteBase64Async.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteBinHexAsync(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBinHexAsync = null;
         try {
-            JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", buffer, index, count);
+            retObjectWriteBinHexAsync = classInstance.Invoke("WriteBinHexAsync", buffer, index, count);
+            JCObject objWriteBinHexAsync = (JCObject)retObjectWriteBinHexAsync;
             return new Task(objWriteBinHexAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBinHexAsync != null ? retObjectWriteBinHexAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteBinHexAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBinHexAsync = null;
         try {
-            JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectWriteBinHexAsync = classInstance.Invoke("WriteBinHexAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteBinHexAsync = (JCObject)retObjectWriteBinHexAsync;
             return new Task(objWriteBinHexAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBinHexAsync != null ? retObjectWriteBinHexAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteCDataAsync(java.lang.String text) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteCDataAsync = null;
         try {
-            JCObject objWriteCDataAsync = (JCObject)classInstance.Invoke("WriteCDataAsync", text);
+            retObjectWriteCDataAsync = classInstance.Invoke("WriteCDataAsync", text);
+            JCObject objWriteCDataAsync = (JCObject)retObjectWriteCDataAsync;
             return new Task(objWriteCDataAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteCDataAsync != null ? retObjectWriteCDataAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteCharEntityAsync(char ch) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteCharEntityAsync = null;
         try {
-            JCObject objWriteCharEntityAsync = (JCObject)classInstance.Invoke("WriteCharEntityAsync", ch);
+            retObjectWriteCharEntityAsync = classInstance.Invoke("WriteCharEntityAsync", ch);
+            JCObject objWriteCharEntityAsync = (JCObject)retObjectWriteCharEntityAsync;
             return new Task(objWriteCharEntityAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteCharEntityAsync != null ? retObjectWriteCharEntityAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteCharsAsync(char[] buffer, int index, int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteCharsAsync = null;
         try {
-            JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", buffer, index, count);
+            retObjectWriteCharsAsync = classInstance.Invoke("WriteCharsAsync", buffer, index, count);
+            JCObject objWriteCharsAsync = (JCObject)retObjectWriteCharsAsync;
             return new Task(objWriteCharsAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteCharsAsync != null ? retObjectWriteCharsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +331,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteCharsAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteCharsAsync = null;
         try {
-            JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectWriteCharsAsync = classInstance.Invoke("WriteCharsAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteCharsAsync = (JCObject)retObjectWriteCharsAsync;
             return new Task(objWriteCharsAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteCharsAsync != null ? retObjectWriteCharsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +346,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteCommentAsync(java.lang.String text) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteCommentAsync = null;
         try {
-            JCObject objWriteCommentAsync = (JCObject)classInstance.Invoke("WriteCommentAsync", text);
+            retObjectWriteCommentAsync = classInstance.Invoke("WriteCommentAsync", text);
+            JCObject objWriteCommentAsync = (JCObject)retObjectWriteCommentAsync;
             return new Task(objWriteCommentAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteCommentAsync != null ? retObjectWriteCommentAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +361,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteDocTypeAsync(java.lang.String name, java.lang.String pubid, java.lang.String sysid, java.lang.String subset) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteDocTypeAsync = null;
         try {
-            JCObject objWriteDocTypeAsync = (JCObject)classInstance.Invoke("WriteDocTypeAsync", name, pubid, sysid, subset);
+            retObjectWriteDocTypeAsync = classInstance.Invoke("WriteDocTypeAsync", name, pubid, sysid, subset);
+            JCObject objWriteDocTypeAsync = (JCObject)retObjectWriteDocTypeAsync;
             return new Task(objWriteDocTypeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteDocTypeAsync != null ? retObjectWriteDocTypeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +376,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteElementStringAsync(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteElementStringAsync = null;
         try {
-            JCObject objWriteElementStringAsync = (JCObject)classInstance.Invoke("WriteElementStringAsync", prefix, localName, ns, value);
+            retObjectWriteElementStringAsync = classInstance.Invoke("WriteElementStringAsync", prefix, localName, ns, value);
+            JCObject objWriteElementStringAsync = (JCObject)retObjectWriteElementStringAsync;
             return new Task(objWriteElementStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteElementStringAsync != null ? retObjectWriteElementStringAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +391,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteEndDocumentAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteEndDocumentAsync = null;
         try {
-            JCObject objWriteEndDocumentAsync = (JCObject)classInstance.Invoke("WriteEndDocumentAsync");
+            retObjectWriteEndDocumentAsync = classInstance.Invoke("WriteEndDocumentAsync");
+            JCObject objWriteEndDocumentAsync = (JCObject)retObjectWriteEndDocumentAsync;
             return new Task(objWriteEndDocumentAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteEndDocumentAsync != null ? retObjectWriteEndDocumentAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +406,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteEndElementAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteEndElementAsync = null;
         try {
-            JCObject objWriteEndElementAsync = (JCObject)classInstance.Invoke("WriteEndElementAsync");
+            retObjectWriteEndElementAsync = classInstance.Invoke("WriteEndElementAsync");
+            JCObject objWriteEndElementAsync = (JCObject)retObjectWriteEndElementAsync;
             return new Task(objWriteEndElementAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteEndElementAsync != null ? retObjectWriteEndElementAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +421,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteEntityRefAsync(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteEntityRefAsync = null;
         try {
-            JCObject objWriteEntityRefAsync = (JCObject)classInstance.Invoke("WriteEntityRefAsync", name);
+            retObjectWriteEntityRefAsync = classInstance.Invoke("WriteEntityRefAsync", name);
+            JCObject objWriteEntityRefAsync = (JCObject)retObjectWriteEntityRefAsync;
             return new Task(objWriteEntityRefAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteEntityRefAsync != null ? retObjectWriteEntityRefAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +436,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteFullEndElementAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteFullEndElementAsync = null;
         try {
-            JCObject objWriteFullEndElementAsync = (JCObject)classInstance.Invoke("WriteFullEndElementAsync");
+            retObjectWriteFullEndElementAsync = classInstance.Invoke("WriteFullEndElementAsync");
+            JCObject objWriteFullEndElementAsync = (JCObject)retObjectWriteFullEndElementAsync;
             return new Task(objWriteFullEndElementAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteFullEndElementAsync != null ? retObjectWriteFullEndElementAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +451,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteNameAsync(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteNameAsync = null;
         try {
-            JCObject objWriteNameAsync = (JCObject)classInstance.Invoke("WriteNameAsync", name);
+            retObjectWriteNameAsync = classInstance.Invoke("WriteNameAsync", name);
+            JCObject objWriteNameAsync = (JCObject)retObjectWriteNameAsync;
             return new Task(objWriteNameAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteNameAsync != null ? retObjectWriteNameAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +466,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteNmTokenAsync(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteNmTokenAsync = null;
         try {
-            JCObject objWriteNmTokenAsync = (JCObject)classInstance.Invoke("WriteNmTokenAsync", name);
+            retObjectWriteNmTokenAsync = classInstance.Invoke("WriteNmTokenAsync", name);
+            JCObject objWriteNmTokenAsync = (JCObject)retObjectWriteNmTokenAsync;
             return new Task(objWriteNmTokenAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteNmTokenAsync != null ? retObjectWriteNmTokenAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +481,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteNodeAsync(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentNullException, system.security.SecurityException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteNodeAsync = null;
         try {
-            JCObject objWriteNodeAsync = (JCObject)classInstance.Invoke("WriteNodeAsync", reader == null ? null : reader.getJCOInstance(), defattr);
+            retObjectWriteNodeAsync = classInstance.Invoke("WriteNodeAsync", reader == null ? null : reader.getJCOInstance(), defattr);
+            JCObject objWriteNodeAsync = (JCObject)retObjectWriteNodeAsync;
             return new Task(objWriteNodeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteNodeAsync != null ? retObjectWriteNodeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +496,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteNodeAsync(XPathNavigator navigator, boolean defattr) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteNodeAsync = null;
         try {
-            JCObject objWriteNodeAsync = (JCObject)classInstance.Invoke("WriteNodeAsync", navigator == null ? null : navigator.getJCOInstance(), defattr);
+            retObjectWriteNodeAsync = classInstance.Invoke("WriteNodeAsync", navigator == null ? null : navigator.getJCOInstance(), defattr);
+            JCObject objWriteNodeAsync = (JCObject)retObjectWriteNodeAsync;
             return new Task(objWriteNodeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteNodeAsync != null ? retObjectWriteNodeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +511,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteProcessingInstructionAsync(java.lang.String name, java.lang.String text) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteProcessingInstructionAsync = null;
         try {
-            JCObject objWriteProcessingInstructionAsync = (JCObject)classInstance.Invoke("WriteProcessingInstructionAsync", name, text);
+            retObjectWriteProcessingInstructionAsync = classInstance.Invoke("WriteProcessingInstructionAsync", name, text);
+            JCObject objWriteProcessingInstructionAsync = (JCObject)retObjectWriteProcessingInstructionAsync;
             return new Task(objWriteProcessingInstructionAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteProcessingInstructionAsync != null ? retObjectWriteProcessingInstructionAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +526,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteQualifiedNameAsync(java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteQualifiedNameAsync = null;
         try {
-            JCObject objWriteQualifiedNameAsync = (JCObject)classInstance.Invoke("WriteQualifiedNameAsync", localName, ns);
+            retObjectWriteQualifiedNameAsync = classInstance.Invoke("WriteQualifiedNameAsync", localName, ns);
+            JCObject objWriteQualifiedNameAsync = (JCObject)retObjectWriteQualifiedNameAsync;
             return new Task(objWriteQualifiedNameAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteQualifiedNameAsync != null ? retObjectWriteQualifiedNameAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +541,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteRawAsync(char[] buffer, int index, int count) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteRawAsync = null;
         try {
-            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", buffer, index, count);
+            retObjectWriteRawAsync = classInstance.Invoke("WriteRawAsync", buffer, index, count);
+            JCObject objWriteRawAsync = (JCObject)retObjectWriteRawAsync;
             return new Task(objWriteRawAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteRawAsync != null ? retObjectWriteRawAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +556,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteRawAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteRawAsync = null;
         try {
-            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectWriteRawAsync = classInstance.Invoke("WriteRawAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteRawAsync = (JCObject)retObjectWriteRawAsync;
             return new Task(objWriteRawAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteRawAsync != null ? retObjectWriteRawAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +571,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteRawAsync(java.lang.String data) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteRawAsync = null;
         try {
-            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", data);
+            retObjectWriteRawAsync = classInstance.Invoke("WriteRawAsync", data);
+            JCObject objWriteRawAsync = (JCObject)retObjectWriteRawAsync;
             return new Task(objWriteRawAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteRawAsync != null ? retObjectWriteRawAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,10 +586,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteStartDocumentAsync() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteStartDocumentAsync = null;
         try {
-            JCObject objWriteStartDocumentAsync = (JCObject)classInstance.Invoke("WriteStartDocumentAsync");
+            retObjectWriteStartDocumentAsync = classInstance.Invoke("WriteStartDocumentAsync");
+            JCObject objWriteStartDocumentAsync = (JCObject)retObjectWriteStartDocumentAsync;
             return new Task(objWriteStartDocumentAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStartDocumentAsync != null ? retObjectWriteStartDocumentAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +601,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteStartDocumentAsync(boolean standalone) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteStartDocumentAsync = null;
         try {
-            JCObject objWriteStartDocumentAsync = (JCObject)classInstance.Invoke("WriteStartDocumentAsync", standalone);
+            retObjectWriteStartDocumentAsync = classInstance.Invoke("WriteStartDocumentAsync", standalone);
+            JCObject objWriteStartDocumentAsync = (JCObject)retObjectWriteStartDocumentAsync;
             return new Task(objWriteStartDocumentAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStartDocumentAsync != null ? retObjectWriteStartDocumentAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,10 +616,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteStartElementAsync(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteStartElementAsync = null;
         try {
-            JCObject objWriteStartElementAsync = (JCObject)classInstance.Invoke("WriteStartElementAsync", prefix, localName, ns);
+            retObjectWriteStartElementAsync = classInstance.Invoke("WriteStartElementAsync", prefix, localName, ns);
+            JCObject objWriteStartElementAsync = (JCObject)retObjectWriteStartElementAsync;
             return new Task(objWriteStartElementAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStartElementAsync != null ? retObjectWriteStartElementAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,10 +631,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteStringAsync(java.lang.String text) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteStringAsync = null;
         try {
-            JCObject objWriteStringAsync = (JCObject)classInstance.Invoke("WriteStringAsync", text);
+            retObjectWriteStringAsync = classInstance.Invoke("WriteStringAsync", text);
+            JCObject objWriteStringAsync = (JCObject)retObjectWriteStringAsync;
             return new Task(objWriteStringAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteStringAsync != null ? retObjectWriteStringAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,10 +646,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteSurrogateCharEntityAsync(char lowChar, char highChar) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteSurrogateCharEntityAsync = null;
         try {
-            JCObject objWriteSurrogateCharEntityAsync = (JCObject)classInstance.Invoke("WriteSurrogateCharEntityAsync", lowChar, highChar);
+            retObjectWriteSurrogateCharEntityAsync = classInstance.Invoke("WriteSurrogateCharEntityAsync", lowChar, highChar);
+            JCObject objWriteSurrogateCharEntityAsync = (JCObject)retObjectWriteSurrogateCharEntityAsync;
             return new Task(objWriteSurrogateCharEntityAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteSurrogateCharEntityAsync != null ? retObjectWriteSurrogateCharEntityAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,10 +661,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public Task WriteWhitespaceAsync(java.lang.String ws) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteWhitespaceAsync = null;
         try {
-            JCObject objWriteWhitespaceAsync = (JCObject)classInstance.Invoke("WriteWhitespaceAsync", ws);
+            retObjectWriteWhitespaceAsync = classInstance.Invoke("WriteWhitespaceAsync", ws);
+            JCObject objWriteWhitespaceAsync = (JCObject)retObjectWriteWhitespaceAsync;
             return new Task(objWriteWhitespaceAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteWhitespaceAsync != null ? retObjectWriteWhitespaceAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +676,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(Stream output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,10 +691,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(Stream output, XmlWriterSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,10 +706,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(TextWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -573,10 +721,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(TextWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,10 +736,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(java.lang.String outputFileName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.ObjectDisposedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", outputFileName);
+            retObjectCreate = classType.Invoke("Create", outputFileName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,10 +751,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(java.lang.String outputFileName, XmlWriterSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.XmlException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", outputFileName, settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", outputFileName, settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,10 +766,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(StringBuilder output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,10 +781,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(StringBuilder output, XmlWriterSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,10 +796,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(XmlWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,10 +811,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public static XmlWriter Create(XmlWriter output, XmlWriterSettings settings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new XmlWriter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,7 +826,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -660,7 +836,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -670,7 +846,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -680,7 +856,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteAttributes(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributes", reader == null ? null : reader.getJCOInstance(), defattr);
         } catch (JCNativeException jcne) {
@@ -690,7 +866,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteAttributeString(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributeString", localName, value);
         } catch (JCNativeException jcne) {
@@ -700,7 +876,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteAttributeString(java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributeString", localName, ns, value);
         } catch (JCNativeException jcne) {
@@ -710,7 +886,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteAttributeString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributeString", prefix, localName, ns, value);
         } catch (JCNativeException jcne) {
@@ -720,7 +896,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteBase64(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBase64", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -730,7 +906,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -740,7 +916,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBinHex", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -750,7 +926,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -760,7 +936,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteCData(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCData", text);
         } catch (JCNativeException jcne) {
@@ -770,7 +946,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteCharEntity(char ch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteCharEntity", ch);
         } catch (JCNativeException jcne) {
@@ -780,7 +956,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteChars(char[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteChars", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -790,7 +966,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -800,7 +976,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteComment(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteComment", text);
         } catch (JCNativeException jcne) {
@@ -810,7 +986,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteDocType(java.lang.String name, java.lang.String pubid, java.lang.String sysid, java.lang.String subset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDocType", name, pubid, sysid, subset);
         } catch (JCNativeException jcne) {
@@ -820,7 +996,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteElementString(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteElementString", localName, value);
         } catch (JCNativeException jcne) {
@@ -830,7 +1006,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteElementString(java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteElementString", localName, ns, value);
         } catch (JCNativeException jcne) {
@@ -840,7 +1016,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteElementString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteElementString", prefix, localName, ns, value);
         } catch (JCNativeException jcne) {
@@ -850,7 +1026,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteEndAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndAttribute");
         } catch (JCNativeException jcne) {
@@ -860,7 +1036,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteEndDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndDocument");
         } catch (JCNativeException jcne) {
@@ -870,7 +1046,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteEndElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEndElement");
         } catch (JCNativeException jcne) {
@@ -880,7 +1056,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteEntityRef(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteEntityRef", name);
         } catch (JCNativeException jcne) {
@@ -890,7 +1066,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteFullEndElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteFullEndElement");
         } catch (JCNativeException jcne) {
@@ -900,7 +1076,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteName", name);
         } catch (JCNativeException jcne) {
@@ -910,7 +1086,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteNmToken(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNmToken", name);
         } catch (JCNativeException jcne) {
@@ -920,7 +1096,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteNode(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNode", reader == null ? null : reader.getJCOInstance(), defattr);
         } catch (JCNativeException jcne) {
@@ -930,7 +1106,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteNode(XPathNavigator navigator, boolean defattr) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNode", navigator == null ? null : navigator.getJCOInstance(), defattr);
         } catch (JCNativeException jcne) {
@@ -940,7 +1116,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteProcessingInstruction(java.lang.String name, java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteProcessingInstruction", name, text);
         } catch (JCNativeException jcne) {
@@ -950,7 +1126,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteQualifiedName(java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteQualifiedName", localName, ns);
         } catch (JCNativeException jcne) {
@@ -960,7 +1136,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteRaw(char[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -970,7 +1146,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -980,7 +1156,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteRaw(java.lang.String data) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRaw", data);
         } catch (JCNativeException jcne) {
@@ -990,7 +1166,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartAttribute(java.lang.String localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", localName);
         } catch (JCNativeException jcne) {
@@ -1000,7 +1176,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartAttribute(java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", localName, ns);
         } catch (JCNativeException jcne) {
@@ -1010,7 +1186,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -1020,7 +1196,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartDocument");
         } catch (JCNativeException jcne) {
@@ -1030,7 +1206,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartDocument(boolean standalone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartDocument", standalone);
         } catch (JCNativeException jcne) {
@@ -1040,7 +1216,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartElement(java.lang.String localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", localName);
         } catch (JCNativeException jcne) {
@@ -1050,7 +1226,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartElement(java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", localName, ns);
         } catch (JCNativeException jcne) {
@@ -1060,7 +1236,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", prefix, localName, ns);
         } catch (JCNativeException jcne) {
@@ -1070,7 +1246,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteString(java.lang.String text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", text);
         } catch (JCNativeException jcne) {
@@ -1080,7 +1256,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteSurrogateCharEntity(char lowChar, char highChar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSurrogateCharEntity", lowChar, highChar);
         } catch (JCNativeException jcne) {
@@ -1090,7 +1266,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(boolean value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value);
         } catch (JCNativeException jcne) {
@@ -1100,7 +1276,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value);
         } catch (JCNativeException jcne) {
@@ -1110,7 +1286,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value);
         } catch (JCNativeException jcne) {
@@ -1120,7 +1296,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value);
         } catch (JCNativeException jcne) {
@@ -1130,7 +1306,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1140,7 +1316,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(DateTime value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1150,7 +1326,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(DateTimeOffset value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1160,7 +1336,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1170,7 +1346,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(NetObject value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1180,7 +1356,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteValue(java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value);
         } catch (JCNativeException jcne) {
@@ -1190,7 +1366,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public void WriteWhitespace(java.lang.String ws) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteWhitespace", ws);
         } catch (JCNativeException jcne) {
@@ -1201,7 +1377,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -1217,9 +1393,13 @@ public class XmlWriter extends NetObject implements AutoCloseable {
     
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlLang = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            retObjectXmlLang = classInstance.Get("XmlLang");
+            return (java.lang.String)retObjectXmlLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlLang != null ? retObjectXmlLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,10 +1407,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public WriteState getWriteState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WriteState");
+            retObjectWriteState = classInstance.Get("WriteState");
+            JCObject val = (JCObject)retObjectWriteState;
             return new WriteState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteState != null ? retObjectWriteState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1238,10 +1422,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public XmlSpace getXmlSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSpace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlSpace");
+            retObjectXmlSpace = classInstance.Get("XmlSpace");
+            JCObject val = (JCObject)retObjectXmlSpace;
             return new XmlSpace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlSpace != null ? retObjectXmlSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,10 +1437,14 @@ public class XmlWriter extends NetObject implements AutoCloseable {
 
     public XmlWriterSettings getSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new XmlWriterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

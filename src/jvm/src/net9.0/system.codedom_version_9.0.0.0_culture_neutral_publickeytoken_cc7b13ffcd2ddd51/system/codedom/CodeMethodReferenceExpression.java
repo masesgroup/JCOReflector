@@ -188,10 +188,14 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
     
     public CodeExpression getTargetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetObject");
+            retObjectTargetObject = classInstance.Get("TargetObject");
+            JCObject val = (JCObject)retObjectTargetObject;
             return new CodeExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetObject != null ? retObjectTargetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
 
     public void setTargetObject(CodeExpression TargetObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetObject", TargetObject == null ? null : TargetObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
 
     public CodeTypeReferenceCollection getTypeArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeArguments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeArguments");
+            retObjectTypeArguments = classInstance.Get("TypeArguments");
+            JCObject val = (JCObject)retObjectTypeArguments;
             return new CodeTypeReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeArguments != null ? retObjectTypeArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +228,13 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
 
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
 
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {

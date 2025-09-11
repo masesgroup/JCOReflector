@@ -187,10 +187,14 @@ public class Saml2Subject extends NetObject  {
     
     public Saml2NameIdentifier getNameId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameId");
+            retObjectNameId = classInstance.Get("NameId");
+            JCObject val = (JCObject)retObjectNameId;
             return new Saml2NameIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameId != null ? retObjectNameId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class Saml2Subject extends NetObject  {
 
     public void setNameId(Saml2NameIdentifier NameId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameId", NameId == null ? null : NameId.getJCOInstance());
         } catch (JCNativeException jcne) {

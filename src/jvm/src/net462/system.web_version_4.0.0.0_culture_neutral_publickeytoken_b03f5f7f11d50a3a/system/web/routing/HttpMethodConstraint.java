@@ -175,7 +175,7 @@ public class HttpMethodConstraint extends NetObject implements system.web.routin
      */
     @Deprecated 
     public boolean Match(HttpContextBase httpContext, Route route, java.lang.String parameterName, RouteValueDictionary values, RouteDirection routeDirection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteConstraint to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteConstraint to obtain the full interface.");
     }
 
 

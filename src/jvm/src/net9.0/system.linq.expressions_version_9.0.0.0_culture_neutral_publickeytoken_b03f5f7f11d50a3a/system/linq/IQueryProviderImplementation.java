@@ -145,10 +145,14 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
     
     public IQueryable CreateQuery(Expression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateQuery = null;
         try {
-            JCObject objCreateQuery = (JCObject)classInstance.Invoke("CreateQuery", expression == null ? null : expression.getJCOInstance());
+            retObjectCreateQuery = classInstance.Invoke("CreateQuery", expression == null ? null : expression.getJCOInstance());
+            JCObject objCreateQuery = (JCObject)retObjectCreateQuery;
             return new IQueryableImplementation(objCreateQuery);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateQuery != null ? retObjectCreateQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
 
     public NetObject Execute(Expression expression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            JCObject objExecute = (JCObject)classInstance.Invoke("Execute", expression == null ? null : expression.getJCOInstance());
+            retObjectExecute = classInstance.Invoke("Execute", expression == null ? null : expression.getJCOInstance());
+            JCObject objExecute = (JCObject)retObjectExecute;
             return new NetObject(objExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

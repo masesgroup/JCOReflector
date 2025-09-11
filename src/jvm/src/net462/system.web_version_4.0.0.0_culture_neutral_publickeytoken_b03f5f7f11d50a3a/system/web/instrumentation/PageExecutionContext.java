@@ -166,9 +166,13 @@ public class PageExecutionContext extends NetObject  {
     
     public boolean getIsLiteral() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLiteral = null;
         try {
-            return (boolean)classInstance.Get("IsLiteral");
+            retObjectIsLiteral = classInstance.Get("IsLiteral");
+            return (boolean)retObjectIsLiteral;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLiteral != null ? retObjectIsLiteral.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class PageExecutionContext extends NetObject  {
 
     public void setIsLiteral(boolean IsLiteral) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsLiteral", IsLiteral);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class PageExecutionContext extends NetObject  {
 
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class PageExecutionContext extends NetObject  {
 
     public void setLength(int Length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Length", Length);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class PageExecutionContext extends NetObject  {
 
     public int getStartPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartPosition = null;
         try {
-            return (int)classInstance.Get("StartPosition");
+            retObjectStartPosition = classInstance.Get("StartPosition");
+            return (int)retObjectStartPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartPosition != null ? retObjectStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class PageExecutionContext extends NetObject  {
 
     public void setStartPosition(int StartPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartPosition", StartPosition);
         } catch (JCNativeException jcne) {
@@ -226,10 +238,14 @@ public class PageExecutionContext extends NetObject  {
 
     public TextWriter getTextWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextWriter");
+            retObjectTextWriter = classInstance.Get("TextWriter");
+            JCObject val = (JCObject)retObjectTextWriter;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextWriter != null ? retObjectTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class PageExecutionContext extends NetObject  {
 
     public void setTextWriter(TextWriter TextWriter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextWriter", TextWriter == null ? null : TextWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class PageExecutionContext extends NetObject  {
 
     public java.lang.String getVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("VirtualPath");
+            retObjectVirtualPath = classInstance.Get("VirtualPath");
+            return (java.lang.String)retObjectVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVirtualPath != null ? retObjectVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class PageExecutionContext extends NetObject  {
 
     public void setVirtualPath(java.lang.String VirtualPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualPath", VirtualPath);
         } catch (JCNativeException jcne) {

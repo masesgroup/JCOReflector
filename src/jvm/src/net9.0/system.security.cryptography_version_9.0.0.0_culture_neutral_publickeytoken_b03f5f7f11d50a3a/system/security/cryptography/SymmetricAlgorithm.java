@@ -159,9 +159,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     public boolean ValidKeySize(int bitLength) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidKeySize = null;
         try {
-            return (boolean)classInstance.Invoke("ValidKeySize", bitLength);
+            retObjectValidKeySize = classInstance.Invoke("ValidKeySize", bitLength);
+            return (boolean)retObjectValidKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidKeySize != null ? retObjectValidKeySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptCbc(byte[] ciphertext, byte[] iv, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptCbc = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptCbc", ciphertext, iv, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectDecryptCbc = classInstance.Invoke("DecryptCbc", ciphertext, iv, paddingMode == null ? null : paddingMode.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptCbc;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -181,6 +187,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptCbc] = (byte)resultingArrayList.get(indexDecryptCbc);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptCbc != null ? retObjectDecryptCbc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptCbc(JCORefOut dupParam0, JCORefOut dupParam1, PaddingMode dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptCbc = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptCbc", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectDecryptCbc = classInstance.Invoke("DecryptCbc", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptCbc;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -200,6 +210,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptCbc] = (byte)resultingArrayList.get(indexDecryptCbc);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptCbc != null ? retObjectDecryptCbc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptCfb(byte[] ciphertext, byte[] iv, PaddingMode paddingMode, int feedbackSizeInBits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptCfb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptCfb", ciphertext, iv, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            retObjectDecryptCfb = classInstance.Invoke("DecryptCfb", ciphertext, iv, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            JCObject resultingObjects = (JCObject)retObjectDecryptCfb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -219,6 +233,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptCfb] = (byte)resultingArrayList.get(indexDecryptCfb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptCfb != null ? retObjectDecryptCfb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptCfb(JCORefOut dupParam0, JCORefOut dupParam1, PaddingMode dupParam2, int dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptCfb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptCfb", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            retObjectDecryptCfb = classInstance.Invoke("DecryptCfb", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            JCObject resultingObjects = (JCObject)retObjectDecryptCfb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -238,6 +256,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptCfb] = (byte)resultingArrayList.get(indexDecryptCfb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptCfb != null ? retObjectDecryptCfb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +265,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptEcb(byte[] ciphertext, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptEcb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptEcb", ciphertext, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectDecryptEcb = classInstance.Invoke("DecryptEcb", ciphertext, paddingMode == null ? null : paddingMode.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptEcb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -257,6 +279,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptEcb] = (byte)resultingArrayList.get(indexDecryptEcb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptEcb != null ? retObjectDecryptEcb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +288,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] DecryptEcb(JCORefOut dupParam0, PaddingMode dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptEcb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptEcb", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectDecryptEcb = classInstance.Invoke("DecryptEcb", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptEcb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -276,6 +302,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexDecryptEcb] = (byte)resultingArrayList.get(indexDecryptEcb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptEcb != null ? retObjectDecryptEcb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +311,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptCbc(byte[] plaintext, byte[] iv, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptCbc = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptCbc", plaintext, iv, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectEncryptCbc = classInstance.Invoke("EncryptCbc", plaintext, iv, paddingMode == null ? null : paddingMode.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptCbc;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -295,6 +325,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptCbc] = (byte)resultingArrayList.get(indexEncryptCbc);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptCbc != null ? retObjectEncryptCbc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +334,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptCbc(JCORefOut dupParam0, JCORefOut dupParam1, PaddingMode dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptCbc = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptCbc", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectEncryptCbc = classInstance.Invoke("EncryptCbc", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptCbc;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -314,6 +348,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptCbc] = (byte)resultingArrayList.get(indexEncryptCbc);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptCbc != null ? retObjectEncryptCbc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +357,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptCfb(byte[] plaintext, byte[] iv, PaddingMode paddingMode, int feedbackSizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptCfb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptCfb", plaintext, iv, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            retObjectEncryptCfb = classInstance.Invoke("EncryptCfb", plaintext, iv, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            JCObject resultingObjects = (JCObject)retObjectEncryptCfb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -333,6 +371,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptCfb] = (byte)resultingArrayList.get(indexEncryptCfb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptCfb != null ? retObjectEncryptCfb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +380,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptCfb(JCORefOut dupParam0, JCORefOut dupParam1, PaddingMode dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptCfb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptCfb", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            retObjectEncryptCfb = classInstance.Invoke("EncryptCfb", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            JCObject resultingObjects = (JCObject)retObjectEncryptCfb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -352,6 +394,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptCfb] = (byte)resultingArrayList.get(indexEncryptCfb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptCfb != null ? retObjectEncryptCfb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +403,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptEcb(byte[] plaintext, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptEcb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptEcb", plaintext, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectEncryptEcb = classInstance.Invoke("EncryptEcb", plaintext, paddingMode == null ? null : paddingMode.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptEcb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -371,6 +417,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptEcb] = (byte)resultingArrayList.get(indexEncryptEcb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptEcb != null ? retObjectEncryptEcb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +426,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] EncryptEcb(JCORefOut dupParam0, PaddingMode dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptEcb = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptEcb", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectEncryptEcb = classInstance.Invoke("EncryptEcb", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptEcb;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -390,6 +440,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexEncryptEcb] = (byte)resultingArrayList.get(indexEncryptEcb);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptEcb != null ? retObjectEncryptEcb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +449,19 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int GetCiphertextLengthCbc(int plaintextLength, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCiphertextLengthCbc = null;
         try {
-            return (int)classInstance.Invoke("GetCiphertextLengthCbc", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectGetCiphertextLengthCbc = classInstance.Invoke("GetCiphertextLengthCbc", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
+            return (int)retObjectGetCiphertextLengthCbc;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCiphertextLengthCbcNumber = (java.lang.Number)retObjectGetCiphertextLengthCbc;
+                return retObjectGetCiphertextLengthCbcNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCbc != null ? retObjectGetCiphertextLengthCbc.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +469,19 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int GetCiphertextLengthCfb(int plaintextLength, PaddingMode paddingMode, int feedbackSizeInBits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCiphertextLengthCfb = null;
         try {
-            return (int)classInstance.Invoke("GetCiphertextLengthCfb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            retObjectGetCiphertextLengthCfb = classInstance.Invoke("GetCiphertextLengthCfb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance(), feedbackSizeInBits);
+            return (int)retObjectGetCiphertextLengthCfb;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCiphertextLengthCfbNumber = (java.lang.Number)retObjectGetCiphertextLengthCfb;
+                return retObjectGetCiphertextLengthCfbNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthCfb != null ? retObjectGetCiphertextLengthCfb.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +489,19 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int GetCiphertextLengthEcb(int plaintextLength, PaddingMode paddingMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCiphertextLengthEcb = null;
         try {
-            return (int)classInstance.Invoke("GetCiphertextLengthEcb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
+            retObjectGetCiphertextLengthEcb = classInstance.Invoke("GetCiphertextLengthEcb", plaintextLength, paddingMode == null ? null : paddingMode.getJCOInstance());
+            return (int)retObjectGetCiphertextLengthEcb;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCiphertextLengthEcbNumber = (java.lang.Number)retObjectGetCiphertextLengthEcb;
+                return retObjectGetCiphertextLengthEcbNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCiphertextLengthEcb != null ? retObjectGetCiphertextLengthEcb.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +509,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateDecryptor() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDecryptor = null;
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor");
+            retObjectCreateDecryptor = classInstance.Invoke("CreateDecryptor");
+            JCObject objCreateDecryptor = (JCObject)retObjectCreateDecryptor;
             return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDecryptor != null ? retObjectCreateDecryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +524,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateDecryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDecryptor = null;
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", rgbKey, rgbIV);
+            retObjectCreateDecryptor = classInstance.Invoke("CreateDecryptor", rgbKey, rgbIV);
+            JCObject objCreateDecryptor = (JCObject)retObjectCreateDecryptor;
             return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDecryptor != null ? retObjectCreateDecryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +539,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateDecryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDecryptor = null;
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectCreateDecryptor = classInstance.Invoke("CreateDecryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            JCObject objCreateDecryptor = (JCObject)retObjectCreateDecryptor;
             return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDecryptor != null ? retObjectCreateDecryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +554,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateEncryptor() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEncryptor = null;
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor");
+            retObjectCreateEncryptor = classInstance.Invoke("CreateEncryptor");
+            JCObject objCreateEncryptor = (JCObject)retObjectCreateEncryptor;
             return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEncryptor != null ? retObjectCreateEncryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +569,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateEncryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEncryptor = null;
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", rgbKey, rgbIV);
+            retObjectCreateEncryptor = classInstance.Invoke("CreateEncryptor", rgbKey, rgbIV);
+            JCObject objCreateEncryptor = (JCObject)retObjectCreateEncryptor;
             return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEncryptor != null ? retObjectCreateEncryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +584,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public ICryptoTransform CreateEncryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEncryptor = null;
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectCreateEncryptor = classInstance.Invoke("CreateEncryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            JCObject objCreateEncryptor = (JCObject)retObjectCreateEncryptor;
             return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEncryptor != null ? retObjectCreateEncryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +599,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public static SymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SymmetricAlgorithm(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +614,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public static SymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algName);
+            retObjectCreate = classType.Invoke("Create", algName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new SymmetricAlgorithm(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,7 +629,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -525,7 +639,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -535,7 +649,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void GenerateIV() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateIV");
         } catch (JCNativeException jcne) {
@@ -545,7 +659,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void GenerateKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateKey");
         } catch (JCNativeException jcne) {
@@ -556,7 +670,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -572,10 +686,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     public byte[] getIV() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIV = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("IV");
+            retObjectIV = classInstance.Get("IV");
+            JCObject resultingObjects = (JCObject)retObjectIV;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -584,6 +700,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexIV] = (byte)resultingArrayList.get(indexIV);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectIV != null ? retObjectIV.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,7 +709,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setIV(byte[] IV) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IV", IV);
         } catch (JCNativeException jcne) {
@@ -601,10 +719,12 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] getKey() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject resultingObjects = (JCObject)retObjectKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -613,6 +733,8 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexKey] = (byte)resultingArrayList.get(indexKey);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,7 +742,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setKey(byte[] Key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Key", Key);
         } catch (JCNativeException jcne) {
@@ -630,9 +752,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int getBlockSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlockSize = null;
         try {
-            return (int)classInstance.Get("BlockSize");
+            retObjectBlockSize = classInstance.Get("BlockSize");
+            return (int)retObjectBlockSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBlockSize != null ? retObjectBlockSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,7 +766,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setBlockSize(int BlockSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BlockSize", BlockSize);
         } catch (JCNativeException jcne) {
@@ -650,9 +776,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int getFeedbackSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFeedbackSize = null;
         try {
-            return (int)classInstance.Get("FeedbackSize");
+            retObjectFeedbackSize = classInstance.Get("FeedbackSize");
+            return (int)retObjectFeedbackSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFeedbackSize != null ? retObjectFeedbackSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +790,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setFeedbackSize(int FeedbackSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FeedbackSize", FeedbackSize);
         } catch (JCNativeException jcne) {
@@ -670,9 +800,13 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public int getKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeySize != null ? retObjectKeySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,7 +814,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setKeySize(int KeySize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySize", KeySize);
         } catch (JCNativeException jcne) {
@@ -690,10 +824,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public CipherMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new CipherMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,7 +839,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setMode(CipherMode Mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -711,16 +849,20 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public final KeySizes[] getLegalBlockSizes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLegalBlockSizes = null;
         try {
             ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LegalBlockSizes");
+            retObjectLegalBlockSizes = classInstance.Get("LegalBlockSizes");
+            JCObject resultingObjects = (JCObject)retObjectLegalBlockSizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new KeySizes(resultingObject));
             }
             KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLegalBlockSizes != null ? retObjectLegalBlockSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,16 +870,20 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public final KeySizes[] getLegalKeySizes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLegalKeySizes = null;
         try {
             ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LegalKeySizes");
+            retObjectLegalKeySizes = classInstance.Get("LegalKeySizes");
+            JCObject resultingObjects = (JCObject)retObjectLegalKeySizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new KeySizes(resultingObject));
             }
             KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLegalKeySizes != null ? retObjectLegalKeySizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -745,10 +891,14 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public PaddingMode getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new PaddingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,7 +906,7 @@ public class SymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setPadding(PaddingMode Padding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {

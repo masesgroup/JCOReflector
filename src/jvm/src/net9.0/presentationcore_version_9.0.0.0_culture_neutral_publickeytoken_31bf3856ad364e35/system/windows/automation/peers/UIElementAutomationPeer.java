@@ -168,10 +168,14 @@ public class UIElementAutomationPeer extends AutomationPeer  {
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class UIElementAutomationPeer extends AutomationPeer  {
 
     public static AutomationPeer CreatePeerForElement(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePeerForElement = null;
         try {
-            JCObject objCreatePeerForElement = (JCObject)classType.Invoke("CreatePeerForElement", element == null ? null : element.getJCOInstance());
+            retObjectCreatePeerForElement = classType.Invoke("CreatePeerForElement", element == null ? null : element.getJCOInstance());
+            JCObject objCreatePeerForElement = (JCObject)retObjectCreatePeerForElement;
             return new AutomationPeer(objCreatePeerForElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePeerForElement != null ? retObjectCreatePeerForElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class UIElementAutomationPeer extends AutomationPeer  {
 
     public static AutomationPeer FromElement(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromElement = null;
         try {
-            JCObject objFromElement = (JCObject)classType.Invoke("FromElement", element == null ? null : element.getJCOInstance());
+            retObjectFromElement = classType.Invoke("FromElement", element == null ? null : element.getJCOInstance());
+            JCObject objFromElement = (JCObject)retObjectFromElement;
             return new AutomationPeer(objFromElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromElement != null ? retObjectFromElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class UIElementAutomationPeer extends AutomationPeer  {
     
     public UIElement getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

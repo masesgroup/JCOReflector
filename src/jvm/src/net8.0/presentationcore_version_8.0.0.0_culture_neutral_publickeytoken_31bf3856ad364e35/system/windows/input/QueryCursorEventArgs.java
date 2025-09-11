@@ -183,10 +183,14 @@ public class QueryCursorEventArgs extends MouseEventArgs  {
     
     public Cursor getCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cursor");
+            retObjectCursor = classInstance.Get("Cursor");
+            JCObject val = (JCObject)retObjectCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursor != null ? retObjectCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class QueryCursorEventArgs extends MouseEventArgs  {
 
     public void setCursor(Cursor Cursor) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cursor", Cursor == null ? null : Cursor.getJCOInstance());
         } catch (JCNativeException jcne) {

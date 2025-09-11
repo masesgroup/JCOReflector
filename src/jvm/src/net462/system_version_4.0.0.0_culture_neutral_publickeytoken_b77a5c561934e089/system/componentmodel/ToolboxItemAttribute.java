@@ -186,9 +186,13 @@ public class ToolboxItemAttribute extends Attribute  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class ToolboxItemAttribute extends Attribute  {
     
     public java.lang.String getToolboxItemTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolboxItemTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolboxItemTypeName");
+            retObjectToolboxItemTypeName = classInstance.Get("ToolboxItemTypeName");
+            return (java.lang.String)retObjectToolboxItemTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolboxItemTypeName != null ? retObjectToolboxItemTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +218,14 @@ public class ToolboxItemAttribute extends Attribute  {
 
     public NetType getToolboxItemType() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolboxItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolboxItemType");
+            retObjectToolboxItemType = classInstance.Get("ToolboxItemType");
+            JCObject val = (JCObject)retObjectToolboxItemType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolboxItemType != null ? retObjectToolboxItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

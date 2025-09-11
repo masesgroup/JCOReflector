@@ -159,7 +159,7 @@ public class ClockController extends DispatcherObject  {
     
     public void Begin() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Begin");
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class ClockController extends DispatcherObject  {
 
     public void Pause() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Pause");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class ClockController extends DispatcherObject  {
 
     public void Remove() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove");
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class ClockController extends DispatcherObject  {
 
     public void Resume() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resume");
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class ClockController extends DispatcherObject  {
 
     public void Seek(TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seek", offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class ClockController extends DispatcherObject  {
 
     public void SeekAlignedToLastTick(TimeSpan offset, TimeSeekOrigin origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SeekAlignedToLastTick", offset == null ? null : offset.getJCOInstance(), origin == null ? null : origin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class ClockController extends DispatcherObject  {
 
     public void SkipToFill() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkipToFill");
         } catch (JCNativeException jcne) {
@@ -229,7 +229,7 @@ public class ClockController extends DispatcherObject  {
 
     public void Stop() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -243,9 +243,13 @@ public class ClockController extends DispatcherObject  {
     
     public double getSpeedRatio() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpeedRatio = null;
         try {
-            return (double)classInstance.Get("SpeedRatio");
+            retObjectSpeedRatio = classInstance.Get("SpeedRatio");
+            return (double)retObjectSpeedRatio;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +257,7 @@ public class ClockController extends DispatcherObject  {
 
     public void setSpeedRatio(double SpeedRatio) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeedRatio", SpeedRatio);
         } catch (JCNativeException jcne) {
@@ -263,10 +267,14 @@ public class ClockController extends DispatcherObject  {
 
     public Clock getClock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clock");
+            retObjectClock = classInstance.Get("Clock");
+            JCObject val = (JCObject)retObjectClock;
             return new Clock(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClock != null ? retObjectClock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -173,10 +173,14 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     public static StringCollection GenerateWebReferences(WebReferenceCollection webReferences, CodeDomProvider codeProvider, CodeCompileUnit codeCompileUnit, WebReferenceOptions options) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateWebReferences = null;
         try {
-            JCObject objGenerateWebReferences = (JCObject)classType.Invoke("GenerateWebReferences", webReferences == null ? null : webReferences.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectGenerateWebReferences = classType.Invoke("GenerateWebReferences", webReferences == null ? null : webReferences.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objGenerateWebReferences = (JCObject)retObjectGenerateWebReferences;
             return new StringCollection(objGenerateWebReferences);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateWebReferences != null ? retObjectGenerateWebReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public ServiceDescriptionImportWarnings Import(CodeNamespace codeNamespace, CodeCompileUnit codeCompileUnit) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotImplementedException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImport = null;
         try {
-            JCObject objImport = (JCObject)classInstance.Invoke("Import", codeNamespace == null ? null : codeNamespace.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance());
+            retObjectImport = classInstance.Invoke("Import", codeNamespace == null ? null : codeNamespace.getJCOInstance(), codeCompileUnit == null ? null : codeCompileUnit.getJCOInstance());
+            JCObject objImport = (JCObject)retObjectImport;
             return new ServiceDescriptionImportWarnings(objImport);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImport != null ? retObjectImport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public void AddServiceDescription(ServiceDescription serviceDescription, java.lang.String appSettingUrlKey, java.lang.String appSettingBaseUrl) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddServiceDescription", serviceDescription == null ? null : serviceDescription.getJCOInstance(), appSettingUrlKey, appSettingBaseUrl);
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class ServiceDescriptionImporter extends NetObject  {
     
     public CodeDomProvider getCodeGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeGenerator");
+            retObjectCodeGenerator = classInstance.Get("CodeGenerator");
+            JCObject val = (JCObject)retObjectCodeGenerator;
             return new CodeDomProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeGenerator != null ? retObjectCodeGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public void setCodeGenerator(CodeDomProvider CodeGenerator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeGenerator", CodeGenerator == null ? null : CodeGenerator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            retObjectProtocolName = classInstance.Get("ProtocolName");
+            return (java.lang.String)retObjectProtocolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolName != null ? retObjectProtocolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public void setProtocolName(java.lang.String ProtocolName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtocolName", ProtocolName);
         } catch (JCNativeException jcne) {
@@ -250,10 +266,14 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            retObjectServiceDescriptions = classInstance.Get("ServiceDescriptions");
+            JCObject val = (JCObject)retObjectServiceDescriptions;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptions != null ? retObjectServiceDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +281,14 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public ServiceDescriptionImportStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ServiceDescriptionImportStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public void setStyle(ServiceDescriptionImportStyle Style) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +306,14 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public CodeGenerationOptions getCodeGenerationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeGenerationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeGenerationOptions");
+            retObjectCodeGenerationOptions = classInstance.Get("CodeGenerationOptions");
+            JCObject val = (JCObject)retObjectCodeGenerationOptions;
             return new CodeGenerationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeGenerationOptions != null ? retObjectCodeGenerationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +321,7 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public void setCodeGenerationOptions(CodeGenerationOptions CodeGenerationOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeGenerationOptions", CodeGenerationOptions == null ? null : CodeGenerationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,10 +331,14 @@ public class ServiceDescriptionImporter extends NetObject  {
 
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -177,7 +177,7 @@ public class ApplicationManifest extends AssemblyManifest  {
     
     public void Validate() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.xpath.XPathException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.schema.XmlSchemaException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.BadImageFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -191,9 +191,13 @@ public class ApplicationManifest extends AssemblyManifest  {
     
     public boolean getHostInBrowser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostInBrowser = null;
         try {
-            return (boolean)classInstance.Get("HostInBrowser");
+            retObjectHostInBrowser = classInstance.Get("HostInBrowser");
+            return (boolean)retObjectHostInBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHostInBrowser != null ? retObjectHostInBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +205,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setHostInBrowser(boolean HostInBrowser) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostInBrowser", HostInBrowser);
         } catch (JCNativeException jcne) {
@@ -211,9 +215,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public boolean getIsClickOnceManifest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClickOnceManifest = null;
         try {
-            return (boolean)classInstance.Get("IsClickOnceManifest");
+            retObjectIsClickOnceManifest = classInstance.Get("IsClickOnceManifest");
+            return (boolean)retObjectIsClickOnceManifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClickOnceManifest != null ? retObjectIsClickOnceManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setIsClickOnceManifest(boolean IsClickOnceManifest) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsClickOnceManifest", IsClickOnceManifest);
         } catch (JCNativeException jcne) {
@@ -231,9 +239,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public boolean getUseApplicationTrust() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseApplicationTrust = null;
         try {
-            return (boolean)classInstance.Get("UseApplicationTrust");
+            retObjectUseApplicationTrust = classInstance.Get("UseApplicationTrust");
+            return (boolean)retObjectUseApplicationTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseApplicationTrust != null ? retObjectUseApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +253,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setUseApplicationTrust(boolean UseApplicationTrust) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseApplicationTrust", UseApplicationTrust);
         } catch (JCNativeException jcne) {
@@ -251,9 +263,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public int getMaxTargetPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTargetPath = null;
         try {
-            return (int)classInstance.Get("MaxTargetPath");
+            retObjectMaxTargetPath = classInstance.Get("MaxTargetPath");
+            return (int)retObjectMaxTargetPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxTargetPath != null ? retObjectMaxTargetPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +277,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setMaxTargetPath(int MaxTargetPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTargetPath", MaxTargetPath);
         } catch (JCNativeException jcne) {
@@ -271,10 +287,14 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public AssemblyIdentity getXmlEntryPointIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlEntryPointIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlEntryPointIdentity");
+            retObjectXmlEntryPointIdentity = classInstance.Get("XmlEntryPointIdentity");
+            JCObject val = (JCObject)retObjectXmlEntryPointIdentity;
             return new AssemblyIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlEntryPointIdentity != null ? retObjectXmlEntryPointIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +302,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlEntryPointIdentity(AssemblyIdentity XmlEntryPointIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlEntryPointIdentity", XmlEntryPointIdentity == null ? null : XmlEntryPointIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,16 +312,20 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public final FileAssociation[] getXmlFileAssociations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlFileAssociations = null;
         try {
             ArrayList<FileAssociation> resultingArrayList = new ArrayList<FileAssociation>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlFileAssociations");
+            retObjectXmlFileAssociations = classInstance.Get("XmlFileAssociations");
+            JCObject resultingObjects = (JCObject)retObjectXmlFileAssociations;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileAssociation(resultingObject));
             }
             FileAssociation[] resultingArray = new FileAssociation[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlFileAssociations != null ? retObjectXmlFileAssociations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +333,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlFileAssociations(FileAssociation[] XmlFileAssociations) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlFileAssociations", toObjectFromArray(XmlFileAssociations));
         } catch (JCNativeException jcne) {
@@ -319,10 +343,14 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public FileAssociationCollection getFileAssociations() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileAssociations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileAssociations");
+            retObjectFileAssociations = classInstance.Get("FileAssociations");
+            JCObject val = (JCObject)retObjectFileAssociations;
             return new FileAssociationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileAssociations != null ? retObjectFileAssociations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +358,14 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public TrustInfo getTrustInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustInfo");
+            retObjectTrustInfo = classInstance.Get("TrustInfo");
+            JCObject val = (JCObject)retObjectTrustInfo;
             return new TrustInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustInfo != null ? retObjectTrustInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +373,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setTrustInfo(TrustInfo TrustInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustInfo", TrustInfo == null ? null : TrustInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,9 +383,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getConfigFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfigFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ConfigFile");
+            retObjectConfigFile = classInstance.Get("ConfigFile");
+            return (java.lang.String)retObjectConfigFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConfigFile != null ? retObjectConfigFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +397,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setConfigFile(java.lang.String ConfigFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfigFile", ConfigFile);
         } catch (JCNativeException jcne) {
@@ -371,9 +407,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getErrorReportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReportUrl");
+            retObjectErrorReportUrl = classInstance.Get("ErrorReportUrl");
+            return (java.lang.String)retObjectErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReportUrl != null ? retObjectErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +421,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReportUrl", ErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -391,9 +431,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getIconFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIconFile = null;
         try {
-            return (java.lang.String)classInstance.Get("IconFile");
+            retObjectIconFile = classInstance.Get("IconFile");
+            return (java.lang.String)retObjectIconFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIconFile != null ? retObjectIconFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +445,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setIconFile(java.lang.String IconFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IconFile", IconFile);
         } catch (JCNativeException jcne) {
@@ -411,9 +455,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getOSDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("OSDescription");
+            retObjectOSDescription = classInstance.Get("OSDescription");
+            return (java.lang.String)retObjectOSDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSDescription != null ? retObjectOSDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +469,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setOSDescription(java.lang.String OSDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OSDescription", OSDescription);
         } catch (JCNativeException jcne) {
@@ -431,9 +479,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getOSSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("OSSupportUrl");
+            retObjectOSSupportUrl = classInstance.Get("OSSupportUrl");
+            return (java.lang.String)retObjectOSSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSSupportUrl != null ? retObjectOSSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +493,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setOSSupportUrl(java.lang.String OSSupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OSSupportUrl", OSSupportUrl);
         } catch (JCNativeException jcne) {
@@ -451,9 +503,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getOSVersion() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOSVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("OSVersion");
+            retObjectOSVersion = classInstance.Get("OSVersion");
+            return (java.lang.String)retObjectOSVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOSVersion != null ? retObjectOSVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +517,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setOSVersion(java.lang.String OSVersion) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OSVersion", OSVersion);
         } catch (JCNativeException jcne) {
@@ -471,9 +527,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("Product");
+            retObjectProduct = classInstance.Get("Product");
+            return (java.lang.String)retObjectProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProduct != null ? retObjectProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +541,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setProduct(java.lang.String Product) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Product", Product);
         } catch (JCNativeException jcne) {
@@ -491,9 +551,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getPublisher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublisher = null;
         try {
-            return (java.lang.String)classInstance.Get("Publisher");
+            retObjectPublisher = classInstance.Get("Publisher");
+            return (java.lang.String)retObjectPublisher;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublisher != null ? retObjectPublisher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +565,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setPublisher(java.lang.String Publisher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Publisher", Publisher);
         } catch (JCNativeException jcne) {
@@ -511,9 +575,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getSuiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SuiteName");
+            retObjectSuiteName = classInstance.Get("SuiteName");
+            return (java.lang.String)retObjectSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuiteName != null ? retObjectSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +589,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuiteName", SuiteName);
         } catch (JCNativeException jcne) {
@@ -531,9 +599,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportUrl");
+            retObjectSupportUrl = classInstance.Get("SupportUrl");
+            return (java.lang.String)retObjectSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportUrl != null ? retObjectSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +613,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setSupportUrl(java.lang.String SupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUrl", SupportUrl);
         } catch (JCNativeException jcne) {
@@ -551,9 +623,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkVersion");
+            retObjectTargetFrameworkVersion = classInstance.Get("TargetFrameworkVersion");
+            return (java.lang.String)retObjectTargetFrameworkVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkVersion != null ? retObjectTargetFrameworkVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,7 +637,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkVersion", TargetFrameworkVersion);
         } catch (JCNativeException jcne) {
@@ -571,9 +647,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlConfigFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlConfigFile = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlConfigFile");
+            retObjectXmlConfigFile = classInstance.Get("XmlConfigFile");
+            return (java.lang.String)retObjectXmlConfigFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlConfigFile != null ? retObjectXmlConfigFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,7 +661,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlConfigFile(java.lang.String XmlConfigFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlConfigFile", XmlConfigFile);
         } catch (JCNativeException jcne) {
@@ -591,9 +671,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlEntryPointParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlEntryPointParameters = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlEntryPointParameters");
+            retObjectXmlEntryPointParameters = classInstance.Get("XmlEntryPointParameters");
+            return (java.lang.String)retObjectXmlEntryPointParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlEntryPointParameters != null ? retObjectXmlEntryPointParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,7 +685,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlEntryPointParameters(java.lang.String XmlEntryPointParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlEntryPointParameters", XmlEntryPointParameters);
         } catch (JCNativeException jcne) {
@@ -611,9 +695,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlEntryPointPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlEntryPointPath = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlEntryPointPath");
+            retObjectXmlEntryPointPath = classInstance.Get("XmlEntryPointPath");
+            return (java.lang.String)retObjectXmlEntryPointPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlEntryPointPath != null ? retObjectXmlEntryPointPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,7 +709,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlEntryPointPath(java.lang.String XmlEntryPointPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlEntryPointPath", XmlEntryPointPath);
         } catch (JCNativeException jcne) {
@@ -631,9 +719,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlErrorReportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlErrorReportUrl");
+            retObjectXmlErrorReportUrl = classInstance.Get("XmlErrorReportUrl");
+            return (java.lang.String)retObjectXmlErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlErrorReportUrl != null ? retObjectXmlErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,7 +733,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlErrorReportUrl(java.lang.String XmlErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlErrorReportUrl", XmlErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -651,9 +743,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlHostInBrowser() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlHostInBrowser = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlHostInBrowser");
+            retObjectXmlHostInBrowser = classInstance.Get("XmlHostInBrowser");
+            return (java.lang.String)retObjectXmlHostInBrowser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlHostInBrowser != null ? retObjectXmlHostInBrowser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,7 +757,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlHostInBrowser(java.lang.String XmlHostInBrowser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlHostInBrowser", XmlHostInBrowser);
         } catch (JCNativeException jcne) {
@@ -671,9 +767,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlIconFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIconFile = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIconFile");
+            retObjectXmlIconFile = classInstance.Get("XmlIconFile");
+            return (java.lang.String)retObjectXmlIconFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIconFile != null ? retObjectXmlIconFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,7 +781,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlIconFile(java.lang.String XmlIconFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIconFile", XmlIconFile);
         } catch (JCNativeException jcne) {
@@ -691,9 +791,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlIsClickOnceManifest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIsClickOnceManifest = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIsClickOnceManifest");
+            retObjectXmlIsClickOnceManifest = classInstance.Get("XmlIsClickOnceManifest");
+            return (java.lang.String)retObjectXmlIsClickOnceManifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIsClickOnceManifest != null ? retObjectXmlIsClickOnceManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,7 +805,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlIsClickOnceManifest(java.lang.String XmlIsClickOnceManifest) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIsClickOnceManifest", XmlIsClickOnceManifest);
         } catch (JCNativeException jcne) {
@@ -711,9 +815,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSBuild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSBuild = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSBuild");
+            retObjectXmlOSBuild = classInstance.Get("XmlOSBuild");
+            return (java.lang.String)retObjectXmlOSBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSBuild != null ? retObjectXmlOSBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,7 +829,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSBuild(java.lang.String XmlOSBuild) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSBuild", XmlOSBuild);
         } catch (JCNativeException jcne) {
@@ -731,9 +839,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSDescription");
+            retObjectXmlOSDescription = classInstance.Get("XmlOSDescription");
+            return (java.lang.String)retObjectXmlOSDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSDescription != null ? retObjectXmlOSDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,7 +853,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSDescription(java.lang.String XmlOSDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSDescription", XmlOSDescription);
         } catch (JCNativeException jcne) {
@@ -751,9 +863,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSMajor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSMajor = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSMajor");
+            retObjectXmlOSMajor = classInstance.Get("XmlOSMajor");
+            return (java.lang.String)retObjectXmlOSMajor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSMajor != null ? retObjectXmlOSMajor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,7 +877,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSMajor(java.lang.String XmlOSMajor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSMajor", XmlOSMajor);
         } catch (JCNativeException jcne) {
@@ -771,9 +887,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSMinor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSMinor = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSMinor");
+            retObjectXmlOSMinor = classInstance.Get("XmlOSMinor");
+            return (java.lang.String)retObjectXmlOSMinor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSMinor != null ? retObjectXmlOSMinor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,7 +901,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSMinor(java.lang.String XmlOSMinor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSMinor", XmlOSMinor);
         } catch (JCNativeException jcne) {
@@ -791,9 +911,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSRevision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSRevision = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSRevision");
+            retObjectXmlOSRevision = classInstance.Get("XmlOSRevision");
+            return (java.lang.String)retObjectXmlOSRevision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSRevision != null ? retObjectXmlOSRevision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,7 +925,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSRevision(java.lang.String XmlOSRevision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSRevision", XmlOSRevision);
         } catch (JCNativeException jcne) {
@@ -811,9 +935,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlOSSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlOSSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlOSSupportUrl");
+            retObjectXmlOSSupportUrl = classInstance.Get("XmlOSSupportUrl");
+            return (java.lang.String)retObjectXmlOSSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlOSSupportUrl != null ? retObjectXmlOSSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -821,7 +949,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlOSSupportUrl(java.lang.String XmlOSSupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlOSSupportUrl", XmlOSSupportUrl);
         } catch (JCNativeException jcne) {
@@ -831,9 +959,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlProduct");
+            retObjectXmlProduct = classInstance.Get("XmlProduct");
+            return (java.lang.String)retObjectXmlProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlProduct != null ? retObjectXmlProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -841,7 +973,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlProduct(java.lang.String XmlProduct) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlProduct", XmlProduct);
         } catch (JCNativeException jcne) {
@@ -851,9 +983,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlPublisher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlPublisher = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlPublisher");
+            retObjectXmlPublisher = classInstance.Get("XmlPublisher");
+            return (java.lang.String)retObjectXmlPublisher;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlPublisher != null ? retObjectXmlPublisher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,7 +997,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlPublisher(java.lang.String XmlPublisher) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlPublisher", XmlPublisher);
         } catch (JCNativeException jcne) {
@@ -871,9 +1007,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlSuiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSuiteName");
+            retObjectXmlSuiteName = classInstance.Get("XmlSuiteName");
+            return (java.lang.String)retObjectXmlSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSuiteName != null ? retObjectXmlSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,7 +1021,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlSuiteName(java.lang.String XmlSuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSuiteName", XmlSuiteName);
         } catch (JCNativeException jcne) {
@@ -891,9 +1031,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlSupportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSupportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSupportUrl");
+            retObjectXmlSupportUrl = classInstance.Get("XmlSupportUrl");
+            return (java.lang.String)retObjectXmlSupportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSupportUrl != null ? retObjectXmlSupportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -901,7 +1045,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlSupportUrl(java.lang.String XmlSupportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSupportUrl", XmlSupportUrl);
         } catch (JCNativeException jcne) {
@@ -911,9 +1055,13 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public java.lang.String getXmlUseApplicationTrust() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlUseApplicationTrust = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlUseApplicationTrust");
+            retObjectXmlUseApplicationTrust = classInstance.Get("XmlUseApplicationTrust");
+            return (java.lang.String)retObjectXmlUseApplicationTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlUseApplicationTrust != null ? retObjectXmlUseApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -921,7 +1069,7 @@ public class ApplicationManifest extends AssemblyManifest  {
 
     public void setXmlUseApplicationTrust(java.lang.String XmlUseApplicationTrust) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlUseApplicationTrust", XmlUseApplicationTrust);
         } catch (JCNativeException jcne) {

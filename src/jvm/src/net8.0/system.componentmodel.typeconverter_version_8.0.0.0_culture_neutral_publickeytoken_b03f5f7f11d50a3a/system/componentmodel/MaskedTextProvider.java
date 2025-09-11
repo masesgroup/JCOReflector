@@ -227,9 +227,13 @@ public class MaskedTextProvider extends NetObject  {
     
     public boolean Add(char input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (boolean)classInstance.Invoke("Add", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectAdd = classInstance.Invoke("Add", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +241,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Add(char input) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (boolean)classInstance.Invoke("Add", input);
+            retObjectAdd = classInstance.Invoke("Add", input);
+            return (boolean)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +255,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Add(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (boolean)classInstance.Invoke("Add", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectAdd = classInstance.Invoke("Add", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +269,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Add(java.lang.String input) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (boolean)classInstance.Invoke("Add", input);
+            retObjectAdd = classInstance.Invoke("Add", input);
+            return (boolean)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +283,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static boolean GetOperationResultFromHint(MaskedTextResultHint hint) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOperationResultFromHint = null;
         try {
-            return (boolean)classType.Invoke("GetOperationResultFromHint", hint == null ? null : hint.getJCOInstance());
+            retObjectGetOperationResultFromHint = classType.Invoke("GetOperationResultFromHint", hint == null ? null : hint.getJCOInstance());
+            return (boolean)retObjectGetOperationResultFromHint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetOperationResultFromHint != null ? retObjectGetOperationResultFromHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +297,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean InsertAt(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAt = null;
         try {
-            return (boolean)classInstance.Invoke("InsertAt", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectInsertAt = classInstance.Invoke("InsertAt", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectInsertAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInsertAt != null ? retObjectInsertAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +311,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean InsertAt(char input, int position) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAt = null;
         try {
-            return (boolean)classInstance.Invoke("InsertAt", input, position);
+            retObjectInsertAt = classInstance.Invoke("InsertAt", input, position);
+            return (boolean)retObjectInsertAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInsertAt != null ? retObjectInsertAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +325,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean InsertAt(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAt = null;
         try {
-            return (boolean)classInstance.Invoke("InsertAt", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectInsertAt = classInstance.Invoke("InsertAt", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectInsertAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInsertAt != null ? retObjectInsertAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +339,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean InsertAt(java.lang.String input, int position) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAt = null;
         try {
-            return (boolean)classInstance.Invoke("InsertAt", input, position);
+            retObjectInsertAt = classInstance.Invoke("InsertAt", input, position);
+            return (boolean)retObjectInsertAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInsertAt != null ? retObjectInsertAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +353,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean IsAvailablePosition(int position) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAvailablePosition = null;
         try {
-            return (boolean)classInstance.Invoke("IsAvailablePosition", position);
+            retObjectIsAvailablePosition = classInstance.Invoke("IsAvailablePosition", position);
+            return (boolean)retObjectIsAvailablePosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAvailablePosition != null ? retObjectIsAvailablePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +367,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean IsEditPosition(int position) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEditPosition = null;
         try {
-            return (boolean)classInstance.Invoke("IsEditPosition", position);
+            retObjectIsEditPosition = classInstance.Invoke("IsEditPosition", position);
+            return (boolean)retObjectIsEditPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEditPosition != null ? retObjectIsEditPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +381,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static boolean IsValidInputChar(char c) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidInputChar = null;
         try {
-            return (boolean)classType.Invoke("IsValidInputChar", c);
+            retObjectIsValidInputChar = classType.Invoke("IsValidInputChar", c);
+            return (boolean)retObjectIsValidInputChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidInputChar != null ? retObjectIsValidInputChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +395,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static boolean IsValidMaskChar(char c) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidMaskChar = null;
         try {
-            return (boolean)classType.Invoke("IsValidMaskChar", c);
+            retObjectIsValidMaskChar = classType.Invoke("IsValidMaskChar", c);
+            return (boolean)retObjectIsValidMaskChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidMaskChar != null ? retObjectIsValidMaskChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +409,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static boolean IsValidPasswordChar(char c) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidPasswordChar = null;
         try {
-            return (boolean)classType.Invoke("IsValidPasswordChar", c);
+            retObjectIsValidPasswordChar = classType.Invoke("IsValidPasswordChar", c);
+            return (boolean)retObjectIsValidPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidPasswordChar != null ? retObjectIsValidPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +423,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Remove() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove");
+            retObjectRemove = classInstance.Invoke("Remove");
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +437,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Remove(JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectRemove = classInstance.Invoke("Remove", testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +451,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean RemoveAt(int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAt = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAt", startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectRemoveAt = classInstance.Invoke("RemoveAt", startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectRemoveAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAt != null ? retObjectRemoveAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +465,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean RemoveAt(int startPosition, int endPosition) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAt = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAt", startPosition, endPosition);
+            retObjectRemoveAt = classInstance.Invoke("RemoveAt", startPosition, endPosition);
+            return (boolean)retObjectRemoveAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAt != null ? retObjectRemoveAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +479,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean RemoveAt(int position) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAt = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAt", position);
+            retObjectRemoveAt = classInstance.Invoke("RemoveAt", position);
+            return (boolean)retObjectRemoveAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAt != null ? retObjectRemoveAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +493,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectReplace = classInstance.Invoke("Replace", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +507,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(char input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectReplace = classInstance.Invoke("Replace", input, startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +521,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(char input, int position) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, position);
+            retObjectReplace = classInstance.Invoke("Replace", input, position);
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +535,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectReplace = classInstance.Invoke("Replace", input, position, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +549,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(java.lang.String input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectReplace = classInstance.Invoke("Replace", input, startPosition, endPosition, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +563,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Replace(java.lang.String input, int position) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplace = null;
         try {
-            return (boolean)classInstance.Invoke("Replace", input, position);
+            retObjectReplace = classInstance.Invoke("Replace", input, position);
+            return (boolean)retObjectReplace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReplace != null ? retObjectReplace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +577,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Set(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSet = null;
         try {
-            return (boolean)classInstance.Invoke("Set", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectSet = classInstance.Invoke("Set", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSet != null ? retObjectSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,9 +591,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean Set(java.lang.String input) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSet = null;
         try {
-            return (boolean)classInstance.Invoke("Set", input);
+            retObjectSet = classInstance.Invoke("Set", input);
+            return (boolean)retObjectSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSet != null ? retObjectSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +605,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean VerifyChar(char input, int position, JCORefOut<MaskedTextResultHint> hint) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyChar = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyChar", input, position, hint.getJCRefOut());
+            retObjectVerifyChar = classInstance.Invoke("VerifyChar", input, position, hint.getJCRefOut());
+            return (boolean)retObjectVerifyChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyChar != null ? retObjectVerifyChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,9 +619,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean VerifyEscapeChar(char input, int position) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyEscapeChar = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyEscapeChar", input, position);
+            retObjectVerifyEscapeChar = classInstance.Invoke("VerifyEscapeChar", input, position);
+            return (boolean)retObjectVerifyEscapeChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyEscapeChar != null ? retObjectVerifyEscapeChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,9 +633,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean VerifyString(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyString = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyString", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            retObjectVerifyString = classInstance.Invoke("VerifyString", input, testPosition.getJCRefOut(), resultHint.getJCRefOut());
+            return (boolean)retObjectVerifyString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyString != null ? retObjectVerifyString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,9 +647,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean VerifyString(java.lang.String input) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyString = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyString", input);
+            retObjectVerifyString = classInstance.Invoke("VerifyString", input);
+            return (boolean)retObjectVerifyString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyString != null ? retObjectVerifyString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,9 +661,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindAssignedEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAssignedEditPositionFrom = null;
         try {
-            return (int)classInstance.Invoke("FindAssignedEditPositionFrom", position, direction);
+            retObjectFindAssignedEditPositionFrom = classInstance.Invoke("FindAssignedEditPositionFrom", position, direction);
+            return (int)retObjectFindAssignedEditPositionFrom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindAssignedEditPositionFromNumber = (java.lang.Number)retObjectFindAssignedEditPositionFrom;
+                return retObjectFindAssignedEditPositionFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionFrom != null ? retObjectFindAssignedEditPositionFrom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,9 +681,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindAssignedEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAssignedEditPositionInRange = null;
         try {
-            return (int)classInstance.Invoke("FindAssignedEditPositionInRange", startPosition, endPosition, direction);
+            retObjectFindAssignedEditPositionInRange = classInstance.Invoke("FindAssignedEditPositionInRange", startPosition, endPosition, direction);
+            return (int)retObjectFindAssignedEditPositionInRange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindAssignedEditPositionInRangeNumber = (java.lang.Number)retObjectFindAssignedEditPositionInRange;
+                return retObjectFindAssignedEditPositionInRangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindAssignedEditPositionInRange != null ? retObjectFindAssignedEditPositionInRange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,9 +701,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindEditPositionFrom = null;
         try {
-            return (int)classInstance.Invoke("FindEditPositionFrom", position, direction);
+            retObjectFindEditPositionFrom = classInstance.Invoke("FindEditPositionFrom", position, direction);
+            return (int)retObjectFindEditPositionFrom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindEditPositionFromNumber = (java.lang.Number)retObjectFindEditPositionFrom;
+                return retObjectFindEditPositionFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionFrom != null ? retObjectFindEditPositionFrom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,9 +721,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindEditPositionInRange = null;
         try {
-            return (int)classInstance.Invoke("FindEditPositionInRange", startPosition, endPosition, direction);
+            retObjectFindEditPositionInRange = classInstance.Invoke("FindEditPositionInRange", startPosition, endPosition, direction);
+            return (int)retObjectFindEditPositionInRange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindEditPositionInRangeNumber = (java.lang.Number)retObjectFindEditPositionInRange;
+                return retObjectFindEditPositionInRangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindEditPositionInRange != null ? retObjectFindEditPositionInRange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,9 +741,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindNonEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindNonEditPositionFrom = null;
         try {
-            return (int)classInstance.Invoke("FindNonEditPositionFrom", position, direction);
+            retObjectFindNonEditPositionFrom = classInstance.Invoke("FindNonEditPositionFrom", position, direction);
+            return (int)retObjectFindNonEditPositionFrom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNonEditPositionFromNumber = (java.lang.Number)retObjectFindNonEditPositionFrom;
+                return retObjectFindNonEditPositionFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionFrom != null ? retObjectFindNonEditPositionFrom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,9 +761,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindNonEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindNonEditPositionInRange = null;
         try {
-            return (int)classInstance.Invoke("FindNonEditPositionInRange", startPosition, endPosition, direction);
+            retObjectFindNonEditPositionInRange = classInstance.Invoke("FindNonEditPositionInRange", startPosition, endPosition, direction);
+            return (int)retObjectFindNonEditPositionInRange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindNonEditPositionInRangeNumber = (java.lang.Number)retObjectFindNonEditPositionInRange;
+                return retObjectFindNonEditPositionInRangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindNonEditPositionInRange != null ? retObjectFindNonEditPositionInRange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,9 +781,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindUnassignedEditPositionFrom(int position, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUnassignedEditPositionFrom = null;
         try {
-            return (int)classInstance.Invoke("FindUnassignedEditPositionFrom", position, direction);
+            retObjectFindUnassignedEditPositionFrom = classInstance.Invoke("FindUnassignedEditPositionFrom", position, direction);
+            return (int)retObjectFindUnassignedEditPositionFrom;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindUnassignedEditPositionFromNumber = (java.lang.Number)retObjectFindUnassignedEditPositionFrom;
+                return retObjectFindUnassignedEditPositionFromNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionFrom != null ? retObjectFindUnassignedEditPositionFrom.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,9 +801,19 @@ public class MaskedTextProvider extends NetObject  {
 
     public int FindUnassignedEditPositionInRange(int startPosition, int endPosition, boolean direction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindUnassignedEditPositionInRange = null;
         try {
-            return (int)classInstance.Invoke("FindUnassignedEditPositionInRange", startPosition, endPosition, direction);
+            retObjectFindUnassignedEditPositionInRange = classInstance.Invoke("FindUnassignedEditPositionInRange", startPosition, endPosition, direction);
+            return (int)retObjectFindUnassignedEditPositionInRange;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindUnassignedEditPositionInRangeNumber = (java.lang.Number)retObjectFindUnassignedEditPositionInRange;
+                return retObjectFindUnassignedEditPositionInRangeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindUnassignedEditPositionInRange != null ? retObjectFindUnassignedEditPositionInRange.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,10 +821,14 @@ public class MaskedTextProvider extends NetObject  {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.TypeInitializationException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,9 +836,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToDisplayString() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDisplayString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToDisplayString");
+            retObjectToDisplayString = classInstance.Invoke("ToDisplayString");
+            return (java.lang.String)retObjectToDisplayString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToDisplayString != null ? retObjectToDisplayString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,9 +850,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(boolean ignorePasswordChar, boolean includePrompt, boolean includeLiterals, int startPosition, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", ignorePasswordChar, includePrompt, includeLiterals, startPosition, length);
+            retObjectToString = classInstance.Invoke("ToString", ignorePasswordChar, includePrompt, includeLiterals, startPosition, length);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,9 +864,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(boolean includePrompt, boolean includeLiterals, int startPosition, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", includePrompt, includeLiterals, startPosition, length);
+            retObjectToString = classInstance.Invoke("ToString", includePrompt, includeLiterals, startPosition, length);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,9 +878,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(boolean includePrompt, boolean includeLiterals) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", includePrompt, includeLiterals);
+            retObjectToString = classInstance.Invoke("ToString", includePrompt, includeLiterals);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,9 +892,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(boolean ignorePasswordChar, int startPosition, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", ignorePasswordChar, startPosition, length);
+            retObjectToString = classInstance.Invoke("ToString", ignorePasswordChar, startPosition, length);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,9 +906,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(boolean ignorePasswordChar) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", ignorePasswordChar);
+            retObjectToString = classInstance.Invoke("ToString", ignorePasswordChar);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,9 +920,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String ToString(int startPosition, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", startPosition, length);
+            retObjectToString = classInstance.Invoke("ToString", startPosition, length);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,7 +934,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void Clear() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -708,7 +944,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void Clear(JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear", resultHint.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -722,9 +958,13 @@ public class MaskedTextProvider extends NetObject  {
     
     public boolean getAllowPromptAsInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPromptAsInput = null;
         try {
-            return (boolean)classInstance.Get("AllowPromptAsInput");
+            retObjectAllowPromptAsInput = classInstance.Get("AllowPromptAsInput");
+            return (boolean)retObjectAllowPromptAsInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPromptAsInput != null ? retObjectAllowPromptAsInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,9 +972,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getAsciiOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsciiOnly = null;
         try {
-            return (boolean)classInstance.Get("AsciiOnly");
+            retObjectAsciiOnly = classInstance.Get("AsciiOnly");
+            return (boolean)retObjectAsciiOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsciiOnly != null ? retObjectAsciiOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -742,9 +986,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getIncludeLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeLiterals = null;
         try {
-            return (boolean)classInstance.Get("IncludeLiterals");
+            retObjectIncludeLiterals = classInstance.Get("IncludeLiterals");
+            return (boolean)retObjectIncludeLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeLiterals != null ? retObjectIncludeLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,7 +1000,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setIncludeLiterals(boolean IncludeLiterals) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeLiterals", IncludeLiterals);
         } catch (JCNativeException jcne) {
@@ -762,9 +1010,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getIncludePrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludePrompt = null;
         try {
-            return (boolean)classInstance.Get("IncludePrompt");
+            retObjectIncludePrompt = classInstance.Get("IncludePrompt");
+            return (boolean)retObjectIncludePrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludePrompt != null ? retObjectIncludePrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,7 +1024,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setIncludePrompt(boolean IncludePrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludePrompt", IncludePrompt);
         } catch (JCNativeException jcne) {
@@ -782,9 +1034,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getIsPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPassword = null;
         try {
-            return (boolean)classInstance.Get("IsPassword");
+            retObjectIsPassword = classInstance.Get("IsPassword");
+            return (boolean)retObjectIsPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPassword != null ? retObjectIsPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -792,7 +1048,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setIsPassword(boolean IsPassword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPassword", IsPassword);
         } catch (JCNativeException jcne) {
@@ -802,9 +1058,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getMaskCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaskCompleted = null;
         try {
-            return (boolean)classInstance.Get("MaskCompleted");
+            retObjectMaskCompleted = classInstance.Get("MaskCompleted");
+            return (boolean)retObjectMaskCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaskCompleted != null ? retObjectMaskCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -812,9 +1072,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getMaskFull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaskFull = null;
         try {
-            return (boolean)classInstance.Get("MaskFull");
+            retObjectMaskFull = classInstance.Get("MaskFull");
+            return (boolean)retObjectMaskFull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaskFull != null ? retObjectMaskFull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -822,9 +1086,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getResetOnPrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetOnPrompt = null;
         try {
-            return (boolean)classInstance.Get("ResetOnPrompt");
+            retObjectResetOnPrompt = classInstance.Get("ResetOnPrompt");
+            return (boolean)retObjectResetOnPrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResetOnPrompt != null ? retObjectResetOnPrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -832,7 +1100,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setResetOnPrompt(boolean ResetOnPrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResetOnPrompt", ResetOnPrompt);
         } catch (JCNativeException jcne) {
@@ -842,9 +1110,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getResetOnSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetOnSpace = null;
         try {
-            return (boolean)classInstance.Get("ResetOnSpace");
+            retObjectResetOnSpace = classInstance.Get("ResetOnSpace");
+            return (boolean)retObjectResetOnSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResetOnSpace != null ? retObjectResetOnSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -852,7 +1124,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setResetOnSpace(boolean ResetOnSpace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResetOnSpace", ResetOnSpace);
         } catch (JCNativeException jcne) {
@@ -862,9 +1134,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public boolean getSkipLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLiterals = null;
         try {
-            return (boolean)classInstance.Get("SkipLiterals");
+            retObjectSkipLiterals = classInstance.Get("SkipLiterals");
+            return (boolean)retObjectSkipLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipLiterals != null ? retObjectSkipLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,7 +1148,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setSkipLiterals(boolean SkipLiterals) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLiterals", SkipLiterals);
         } catch (JCNativeException jcne) {
@@ -882,9 +1158,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static char getDefaultPasswordChar() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultPasswordChar = null;
         try {
-            return (char)classType.Get("DefaultPasswordChar");
+            retObjectDefaultPasswordChar = classType.Get("DefaultPasswordChar");
+            return (char)retObjectDefaultPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectDefaultPasswordChar != null ? retObjectDefaultPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -892,9 +1172,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public char getPasswordChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordChar = null;
         try {
-            return (char)classInstance.Get("PasswordChar");
+            retObjectPasswordChar = classInstance.Get("PasswordChar");
+            return (char)retObjectPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPasswordChar != null ? retObjectPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -902,7 +1186,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setPasswordChar(char PasswordChar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordChar", PasswordChar);
         } catch (JCNativeException jcne) {
@@ -912,9 +1196,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public char getPromptChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromptChar = null;
         try {
-            return (char)classInstance.Get("PromptChar");
+            retObjectPromptChar = classInstance.Get("PromptChar");
+            return (char)retObjectPromptChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPromptChar != null ? retObjectPromptChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -922,7 +1210,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setPromptChar(char PromptChar) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PromptChar", PromptChar);
         } catch (JCNativeException jcne) {
@@ -932,9 +1220,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public int getAssignedEditPositionCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssignedEditPositionCount = null;
         try {
-            return (int)classInstance.Get("AssignedEditPositionCount");
+            retObjectAssignedEditPositionCount = classInstance.Get("AssignedEditPositionCount");
+            return (int)retObjectAssignedEditPositionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAssignedEditPositionCount != null ? retObjectAssignedEditPositionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -942,7 +1234,7 @@ public class MaskedTextProvider extends NetObject  {
 
     public void setAssignedEditPositionCount(int AssignedEditPositionCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssignedEditPositionCount", AssignedEditPositionCount);
         } catch (JCNativeException jcne) {
@@ -952,9 +1244,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public int getAvailableEditPositionCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableEditPositionCount = null;
         try {
-            return (int)classInstance.Get("AvailableEditPositionCount");
+            retObjectAvailableEditPositionCount = classInstance.Get("AvailableEditPositionCount");
+            return (int)retObjectAvailableEditPositionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAvailableEditPositionCount != null ? retObjectAvailableEditPositionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -962,9 +1258,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public int getEditPositionCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditPositionCount = null;
         try {
-            return (int)classInstance.Get("EditPositionCount");
+            retObjectEditPositionCount = classInstance.Get("EditPositionCount");
+            return (int)retObjectEditPositionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEditPositionCount != null ? retObjectEditPositionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -972,9 +1272,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public static int getInvalidIndex() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvalidIndex = null;
         try {
-            return (int)classType.Get("InvalidIndex");
+            retObjectInvalidIndex = classType.Get("InvalidIndex");
+            return (int)retObjectInvalidIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInvalidIndex != null ? retObjectInvalidIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -982,9 +1286,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public int getLastAssignedPosition() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastAssignedPosition = null;
         try {
-            return (int)classInstance.Get("LastAssignedPosition");
+            retObjectLastAssignedPosition = classInstance.Get("LastAssignedPosition");
+            return (int)retObjectLastAssignedPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLastAssignedPosition != null ? retObjectLastAssignedPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -992,9 +1300,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1002,10 +1314,14 @@ public class MaskedTextProvider extends NetObject  {
 
     public IEnumerator getEditPositions() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditPositions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditPositions");
+            retObjectEditPositions = classInstance.Get("EditPositions");
+            JCObject val = (JCObject)retObjectEditPositions;
             return new IEnumeratorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditPositions != null ? retObjectEditPositions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1013,10 +1329,14 @@ public class MaskedTextProvider extends NetObject  {
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1024,9 +1344,13 @@ public class MaskedTextProvider extends NetObject  {
 
     public java.lang.String getMask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMask = null;
         try {
-            return (java.lang.String)classInstance.Get("Mask");
+            retObjectMask = classInstance.Get("Mask");
+            return (java.lang.String)retObjectMask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMask != null ? retObjectMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -200,9 +200,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
     
     public boolean IsBindableType(NetType type) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindableType = null;
         try {
-            return (boolean)classInstance.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            retObjectIsBindableType = classInstance.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsBindableType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBindableType != null ? retObjectIsBindableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void DataBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void DeleteRow(int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteRow", rowIndex);
         } catch (JCNativeException jcne) {
@@ -230,7 +234,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void SelectRow(int rowIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectRow", rowIndex);
         } catch (JCNativeException jcne) {
@@ -240,7 +244,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void SetEditRow(int rowIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEditRow", rowIndex);
         } catch (JCNativeException jcne) {
@@ -250,7 +254,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void SetPageIndex(int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPageIndex", rowIndex);
         } catch (JCNativeException jcne) {
@@ -260,7 +264,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void Sort(java.lang.String sortExpression, SortDirection sortDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sort", sortExpression, sortDirection == null ? null : sortDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +274,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void UpdateRow(int rowIndex, boolean causesValidation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateRow", rowIndex, causesValidation);
         } catch (JCNativeException jcne) {
@@ -284,7 +288,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public PostBackOptions GetPostBackOptions(IButtonControl buttonControl) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
     }
 
     /**
@@ -293,7 +297,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
     /**
@@ -302,7 +306,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public java.lang.String GetCallbackScript(IButtonControl buttonControl, java.lang.String argument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackContainer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackContainer to obtain the full interface.");
     }
 
     /**
@@ -311,7 +315,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public java.lang.String GetCallbackResult() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
 
     /**
@@ -320,7 +324,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
 
 
@@ -329,9 +333,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
     
     public boolean getAllowCustomPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCustomPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowCustomPaging");
+            retObjectAllowCustomPaging = classInstance.Get("AllowCustomPaging");
+            return (boolean)retObjectAllowCustomPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCustomPaging != null ? retObjectAllowCustomPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +347,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAllowCustomPaging(boolean AllowCustomPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCustomPaging", AllowCustomPaging);
         } catch (JCNativeException jcne) {
@@ -349,9 +357,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAllowPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowPaging");
+            retObjectAllowPaging = classInstance.Get("AllowPaging");
+            return (boolean)retObjectAllowPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPaging != null ? retObjectAllowPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +371,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAllowPaging(boolean AllowPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPaging", AllowPaging);
         } catch (JCNativeException jcne) {
@@ -369,9 +381,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAllowSorting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSorting = null;
         try {
-            return (boolean)classInstance.Get("AllowSorting");
+            retObjectAllowSorting = classInstance.Get("AllowSorting");
+            return (boolean)retObjectAllowSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSorting != null ? retObjectAllowSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +395,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAllowSorting(boolean AllowSorting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSorting", AllowSorting);
         } catch (JCNativeException jcne) {
@@ -389,9 +405,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAutoGenerateColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateColumns = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateColumns");
+            retObjectAutoGenerateColumns = classInstance.Get("AutoGenerateColumns");
+            return (boolean)retObjectAutoGenerateColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateColumns != null ? retObjectAutoGenerateColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +419,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateColumns", AutoGenerateColumns);
         } catch (JCNativeException jcne) {
@@ -409,9 +429,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAutoGenerateDeleteButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateDeleteButton = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateDeleteButton");
+            retObjectAutoGenerateDeleteButton = classInstance.Get("AutoGenerateDeleteButton");
+            return (boolean)retObjectAutoGenerateDeleteButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateDeleteButton != null ? retObjectAutoGenerateDeleteButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +443,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAutoGenerateDeleteButton(boolean AutoGenerateDeleteButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateDeleteButton", AutoGenerateDeleteButton);
         } catch (JCNativeException jcne) {
@@ -429,9 +453,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAutoGenerateEditButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateEditButton = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateEditButton");
+            retObjectAutoGenerateEditButton = classInstance.Get("AutoGenerateEditButton");
+            return (boolean)retObjectAutoGenerateEditButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateEditButton != null ? retObjectAutoGenerateEditButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +467,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAutoGenerateEditButton(boolean AutoGenerateEditButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateEditButton", AutoGenerateEditButton);
         } catch (JCNativeException jcne) {
@@ -449,9 +477,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getAutoGenerateSelectButton() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateSelectButton = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateSelectButton");
+            retObjectAutoGenerateSelectButton = classInstance.Get("AutoGenerateSelectButton");
+            return (boolean)retObjectAutoGenerateSelectButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateSelectButton != null ? retObjectAutoGenerateSelectButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,7 +491,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAutoGenerateSelectButton(boolean AutoGenerateSelectButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateSelectButton", AutoGenerateSelectButton);
         } catch (JCNativeException jcne) {
@@ -469,9 +501,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getEnableModelValidation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableModelValidation = null;
         try {
-            return (boolean)classInstance.Get("EnableModelValidation");
+            retObjectEnableModelValidation = classInstance.Get("EnableModelValidation");
+            return (boolean)retObjectEnableModelValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableModelValidation != null ? retObjectEnableModelValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,7 +515,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEnableModelValidation(boolean EnableModelValidation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableModelValidation", EnableModelValidation);
         } catch (JCNativeException jcne) {
@@ -489,9 +525,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getEnablePersistedSelection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnablePersistedSelection = null;
         try {
-            return (boolean)classInstance.Get("EnablePersistedSelection");
+            retObjectEnablePersistedSelection = classInstance.Get("EnablePersistedSelection");
+            return (boolean)retObjectEnablePersistedSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnablePersistedSelection != null ? retObjectEnablePersistedSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +539,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEnablePersistedSelection(boolean EnablePersistedSelection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnablePersistedSelection", EnablePersistedSelection);
         } catch (JCNativeException jcne) {
@@ -509,9 +549,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getEnableSortingAndPagingCallbacks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableSortingAndPagingCallbacks = null;
         try {
-            return (boolean)classInstance.Get("EnableSortingAndPagingCallbacks");
+            retObjectEnableSortingAndPagingCallbacks = classInstance.Get("EnableSortingAndPagingCallbacks");
+            return (boolean)retObjectEnableSortingAndPagingCallbacks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableSortingAndPagingCallbacks != null ? retObjectEnableSortingAndPagingCallbacks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,7 +563,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEnableSortingAndPagingCallbacks(boolean EnableSortingAndPagingCallbacks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableSortingAndPagingCallbacks", EnableSortingAndPagingCallbacks);
         } catch (JCNativeException jcne) {
@@ -529,9 +573,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getShowFooter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowFooter = null;
         try {
-            return (boolean)classInstance.Get("ShowFooter");
+            retObjectShowFooter = classInstance.Get("ShowFooter");
+            return (boolean)retObjectShowFooter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowFooter != null ? retObjectShowFooter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,7 +587,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setShowFooter(boolean ShowFooter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowFooter", ShowFooter);
         } catch (JCNativeException jcne) {
@@ -549,9 +597,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getShowHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHeader = null;
         try {
-            return (boolean)classInstance.Get("ShowHeader");
+            retObjectShowHeader = classInstance.Get("ShowHeader");
+            return (boolean)retObjectShowHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHeader != null ? retObjectShowHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,7 +611,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setShowHeader(boolean ShowHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHeader", ShowHeader);
         } catch (JCNativeException jcne) {
@@ -569,9 +621,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getShowHeaderWhenEmpty() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHeaderWhenEmpty = null;
         try {
-            return (boolean)classInstance.Get("ShowHeaderWhenEmpty");
+            retObjectShowHeaderWhenEmpty = classInstance.Get("ShowHeaderWhenEmpty");
+            return (boolean)retObjectShowHeaderWhenEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHeaderWhenEmpty != null ? retObjectShowHeaderWhenEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,7 +635,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setShowHeaderWhenEmpty(boolean ShowHeaderWhenEmpty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHeaderWhenEmpty", ShowHeaderWhenEmpty);
         } catch (JCNativeException jcne) {
@@ -589,9 +645,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getUseAccessibleHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAccessibleHeader = null;
         try {
-            return (boolean)classInstance.Get("UseAccessibleHeader");
+            retObjectUseAccessibleHeader = classInstance.Get("UseAccessibleHeader");
+            return (boolean)retObjectUseAccessibleHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAccessibleHeader != null ? retObjectUseAccessibleHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -599,7 +659,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setUseAccessibleHeader(boolean UseAccessibleHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAccessibleHeader", UseAccessibleHeader);
         } catch (JCNativeException jcne) {
@@ -609,9 +669,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -619,7 +683,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -629,9 +693,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,7 +707,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -649,9 +717,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getEditIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditIndex = null;
         try {
-            return (int)classInstance.Get("EditIndex");
+            retObjectEditIndex = classInstance.Get("EditIndex");
+            return (int)retObjectEditIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEditIndex != null ? retObjectEditIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -659,7 +731,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEditIndex(int EditIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditIndex", EditIndex);
         } catch (JCNativeException jcne) {
@@ -669,9 +741,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getPageCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,9 +755,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getPageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageIndex = null;
         try {
-            return (int)classInstance.Get("PageIndex");
+            retObjectPageIndex = classInstance.Get("PageIndex");
+            return (int)retObjectPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -689,7 +769,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setPageIndex(int PageIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageIndex", PageIndex);
         } catch (JCNativeException jcne) {
@@ -699,9 +779,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getPageSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            return (int)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            return (int)retObjectPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -709,7 +793,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setPageSize(int PageSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize);
         } catch (JCNativeException jcne) {
@@ -719,9 +803,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getSelectedIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -729,7 +817,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -739,9 +827,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public int getVirtualItemCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualItemCount = null;
         try {
-            return (int)classInstance.Get("VirtualItemCount");
+            retObjectVirtualItemCount = classInstance.Get("VirtualItemCount");
+            return (int)retObjectVirtualItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -749,7 +841,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setVirtualItemCount(int VirtualItemCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualItemCount", VirtualItemCount);
         } catch (JCNativeException jcne) {
@@ -759,10 +851,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public NetObject getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            JCObject val = (JCObject)retObjectSelectedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,9 +866,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getBackImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("BackImageUrl");
+            retObjectBackImageUrl = classInstance.Get("BackImageUrl");
+            return (java.lang.String)retObjectBackImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBackImageUrl != null ? retObjectBackImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,7 +880,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setBackImageUrl(java.lang.String BackImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackImageUrl", BackImageUrl);
         } catch (JCNativeException jcne) {
@@ -790,9 +890,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getCaption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,7 +904,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -810,9 +914,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteMethod");
+            retObjectDeleteMethod = classInstance.Get("DeleteMethod");
+            return (java.lang.String)retObjectDeleteMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteMethod != null ? retObjectDeleteMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,7 +928,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteMethod", DeleteMethod);
         } catch (JCNativeException jcne) {
@@ -830,9 +938,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getEmptyDataText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataText = null;
         try {
-            return (java.lang.String)classInstance.Get("EmptyDataText");
+            retObjectEmptyDataText = classInstance.Get("EmptyDataText");
+            return (java.lang.String)retObjectEmptyDataText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmptyDataText != null ? retObjectEmptyDataText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -840,7 +952,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEmptyDataText(java.lang.String EmptyDataText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmptyDataText", EmptyDataText);
         } catch (JCNativeException jcne) {
@@ -850,9 +962,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getRowHeaderColumn() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowHeaderColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("RowHeaderColumn");
+            retObjectRowHeaderColumn = classInstance.Get("RowHeaderColumn");
+            return (java.lang.String)retObjectRowHeaderColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRowHeaderColumn != null ? retObjectRowHeaderColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,7 +976,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setRowHeaderColumn(java.lang.String RowHeaderColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowHeaderColumn", RowHeaderColumn);
         } catch (JCNativeException jcne) {
@@ -870,9 +986,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getSortExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("SortExpression");
+            retObjectSortExpression = classInstance.Get("SortExpression");
+            return (java.lang.String)retObjectSortExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortExpression != null ? retObjectSortExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -880,9 +1000,13 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateMethod");
+            retObjectUpdateMethod = classInstance.Get("UpdateMethod");
+            return (java.lang.String)retObjectUpdateMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateMethod != null ? retObjectUpdateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -890,7 +1014,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMethod", UpdateMethod);
         } catch (JCNativeException jcne) {
@@ -900,10 +1024,12 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String[] getClientIDRowSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientIDRowSuffix = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ClientIDRowSuffix");
+            retObjectClientIDRowSuffix = classInstance.Get("ClientIDRowSuffix");
+            JCObject resultingObjects = (JCObject)retObjectClientIDRowSuffix;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -912,6 +1038,8 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 				resultingArray[indexClientIDRowSuffix] = (java.lang.String)resultingArrayList.get(indexClientIDRowSuffix);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectClientIDRowSuffix != null ? retObjectClientIDRowSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,7 +1047,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setClientIDRowSuffix(java.lang.String[] ClientIDRowSuffix) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientIDRowSuffix", ClientIDRowSuffix);
         } catch (JCNativeException jcne) {
@@ -929,10 +1057,12 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String[] getDataKeyNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeyNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DataKeyNames");
+            retObjectDataKeyNames = classInstance.Get("DataKeyNames");
+            JCObject resultingObjects = (JCObject)retObjectDataKeyNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -941,6 +1071,8 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 				resultingArray[indexDataKeyNames] = (java.lang.String)resultingArrayList.get(indexDataKeyNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDataKeyNames != null ? retObjectDataKeyNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -948,7 +1080,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKeyNames", DataKeyNames);
         } catch (JCNativeException jcne) {
@@ -958,10 +1090,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public IAutoFieldGenerator getColumnsGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnsGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnsGenerator");
+            retObjectColumnsGenerator = classInstance.Get("ColumnsGenerator");
+            JCObject val = (JCObject)retObjectColumnsGenerator;
             return new IAutoFieldGeneratorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnsGenerator != null ? retObjectColumnsGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -969,7 +1105,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setColumnsGenerator(IAutoFieldGenerator ColumnsGenerator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnsGenerator", ColumnsGenerator == null ? null : ColumnsGenerator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -979,10 +1115,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getEmptyDataTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmptyDataTemplate");
+            retObjectEmptyDataTemplate = classInstance.Get("EmptyDataTemplate");
+            JCObject val = (JCObject)retObjectEmptyDataTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptyDataTemplate != null ? retObjectEmptyDataTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -990,7 +1130,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEmptyDataTemplate(ITemplate EmptyDataTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmptyDataTemplate", EmptyDataTemplate == null ? null : EmptyDataTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1000,10 +1140,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getPagerTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerTemplate");
+            retObjectPagerTemplate = classInstance.Get("PagerTemplate");
+            JCObject val = (JCObject)retObjectPagerTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerTemplate != null ? retObjectPagerTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1011,7 +1155,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setPagerTemplate(ITemplate PagerTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PagerTemplate", PagerTemplate == null ? null : PagerTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1021,10 +1165,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public DataControlFieldCollection getColumns() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
             return new DataControlFieldCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1032,10 +1180,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public DataKey getSelectedDataKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDataKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDataKey");
+            retObjectSelectedDataKey = classInstance.Get("SelectedDataKey");
+            JCObject val = (JCObject)retObjectSelectedDataKey;
             return new DataKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDataKey != null ? retObjectSelectedDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1043,10 +1195,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public DataKey getSelectedPersistedDataKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedPersistedDataKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedPersistedDataKey");
+            retObjectSelectedPersistedDataKey = classInstance.Get("SelectedPersistedDataKey");
+            JCObject val = (JCObject)retObjectSelectedPersistedDataKey;
             return new DataKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedPersistedDataKey != null ? retObjectSelectedPersistedDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1054,7 +1210,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setSelectedPersistedDataKey(DataKey SelectedPersistedDataKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedPersistedDataKey", SelectedPersistedDataKey == null ? null : SelectedPersistedDataKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1064,10 +1220,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public DataKeyArray getClientIDRowSuffixDataKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientIDRowSuffixDataKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientIDRowSuffixDataKeys");
+            retObjectClientIDRowSuffixDataKeys = classInstance.Get("ClientIDRowSuffixDataKeys");
+            JCObject val = (JCObject)retObjectClientIDRowSuffixDataKeys;
             return new DataKeyArray(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientIDRowSuffixDataKeys != null ? retObjectClientIDRowSuffixDataKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1075,10 +1235,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public DataKeyArray getDataKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKeys");
+            retObjectDataKeys = classInstance.Get("DataKeys");
+            JCObject val = (JCObject)retObjectDataKeys;
             return new DataKeyArray(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataKeys != null ? retObjectDataKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1086,10 +1250,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridLines getGridLines() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLines");
+            retObjectGridLines = classInstance.Get("GridLines");
+            JCObject val = (JCObject)retObjectGridLines;
             return new GridLines(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLines != null ? retObjectGridLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1097,7 +1265,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setGridLines(GridLines GridLines) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLines", GridLines == null ? null : GridLines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1107,10 +1275,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRow getBottomPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomPagerRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BottomPagerRow");
+            retObjectBottomPagerRow = classInstance.Get("BottomPagerRow");
+            JCObject val = (JCObject)retObjectBottomPagerRow;
             return new GridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBottomPagerRow != null ? retObjectBottomPagerRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1118,10 +1290,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRow getFooterRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterRow");
+            retObjectFooterRow = classInstance.Get("FooterRow");
+            JCObject val = (JCObject)retObjectFooterRow;
             return new GridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterRow != null ? retObjectFooterRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1129,10 +1305,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRow getHeaderRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderRow");
+            retObjectHeaderRow = classInstance.Get("HeaderRow");
+            JCObject val = (JCObject)retObjectHeaderRow;
             return new GridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderRow != null ? retObjectHeaderRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1140,10 +1320,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRow getSelectedRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedRow");
+            retObjectSelectedRow = classInstance.Get("SelectedRow");
+            JCObject val = (JCObject)retObjectSelectedRow;
             return new GridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedRow != null ? retObjectSelectedRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1151,10 +1335,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRow getTopPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopPagerRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopPagerRow");
+            retObjectTopPagerRow = classInstance.Get("TopPagerRow");
+            JCObject val = (JCObject)retObjectTopPagerRow;
             return new GridViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopPagerRow != null ? retObjectTopPagerRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1162,10 +1350,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public GridViewRowCollection getRows() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRows = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rows");
+            retObjectRows = classInstance.Get("Rows");
+            JCObject val = (JCObject)retObjectRows;
             return new GridViewRowCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRows != null ? retObjectRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1173,10 +1365,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public HorizontalAlign getHorizontalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalAlign");
+            retObjectHorizontalAlign = classInstance.Get("HorizontalAlign");
+            JCObject val = (JCObject)retObjectHorizontalAlign;
             return new HorizontalAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalAlign != null ? retObjectHorizontalAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1184,7 +1380,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setHorizontalAlign(HorizontalAlign HorizontalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalAlign", HorizontalAlign == null ? null : HorizontalAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1194,10 +1390,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public PagerSettings getPagerSettings() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerSettings");
+            retObjectPagerSettings = classInstance.Get("PagerSettings");
+            JCObject val = (JCObject)retObjectPagerSettings;
             return new PagerSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerSettings != null ? retObjectPagerSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1205,10 +1405,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public SortDirection getSortDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDirection");
+            retObjectSortDirection = classInstance.Get("SortDirection");
+            JCObject val = (JCObject)retObjectSortDirection;
             return new SortDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDirection != null ? retObjectSortDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1216,10 +1420,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableCaptionAlign getCaptionAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            retObjectCaptionAlign = classInstance.Get("CaptionAlign");
+            JCObject val = (JCObject)retObjectCaptionAlign;
             return new TableCaptionAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionAlign != null ? retObjectCaptionAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,7 +1435,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1237,10 +1445,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getAlternatingRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingRowStyle");
+            retObjectAlternatingRowStyle = classInstance.Get("AlternatingRowStyle");
+            JCObject val = (JCObject)retObjectAlternatingRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingRowStyle != null ? retObjectAlternatingRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1248,10 +1460,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getEditRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditRowStyle");
+            retObjectEditRowStyle = classInstance.Get("EditRowStyle");
+            JCObject val = (JCObject)retObjectEditRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditRowStyle != null ? retObjectEditRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1259,10 +1475,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getEmptyDataRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmptyDataRowStyle");
+            retObjectEmptyDataRowStyle = classInstance.Get("EmptyDataRowStyle");
+            JCObject val = (JCObject)retObjectEmptyDataRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptyDataRowStyle != null ? retObjectEmptyDataRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1270,10 +1490,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getFooterStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterStyle");
+            retObjectFooterStyle = classInstance.Get("FooterStyle");
+            JCObject val = (JCObject)retObjectFooterStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterStyle != null ? retObjectFooterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1281,10 +1505,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1292,10 +1520,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getPagerStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerStyle");
+            retObjectPagerStyle = classInstance.Get("PagerStyle");
+            JCObject val = (JCObject)retObjectPagerStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerStyle != null ? retObjectPagerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1303,10 +1535,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyle");
+            retObjectRowStyle = classInstance.Get("RowStyle");
+            JCObject val = (JCObject)retObjectRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyle != null ? retObjectRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1314,10 +1550,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getSelectedRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedRowStyle");
+            retObjectSelectedRowStyle = classInstance.Get("SelectedRowStyle");
+            JCObject val = (JCObject)retObjectSelectedRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedRowStyle != null ? retObjectSelectedRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1325,10 +1565,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getSortedAscendingCellStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortedAscendingCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortedAscendingCellStyle");
+            retObjectSortedAscendingCellStyle = classInstance.Get("SortedAscendingCellStyle");
+            JCObject val = (JCObject)retObjectSortedAscendingCellStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortedAscendingCellStyle != null ? retObjectSortedAscendingCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1336,10 +1580,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getSortedAscendingHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortedAscendingHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortedAscendingHeaderStyle");
+            retObjectSortedAscendingHeaderStyle = classInstance.Get("SortedAscendingHeaderStyle");
+            JCObject val = (JCObject)retObjectSortedAscendingHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortedAscendingHeaderStyle != null ? retObjectSortedAscendingHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1347,10 +1595,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getSortedDescendingCellStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortedDescendingCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortedDescendingCellStyle");
+            retObjectSortedDescendingCellStyle = classInstance.Get("SortedDescendingCellStyle");
+            JCObject val = (JCObject)retObjectSortedDescendingCellStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortedDescendingCellStyle != null ? retObjectSortedDescendingCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1358,10 +1610,14 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getSortedDescendingHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortedDescendingHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortedDescendingHeaderStyle");
+            retObjectSortedDescendingHeaderStyle = classInstance.Get("SortedDescendingHeaderStyle");
+            JCObject val = (JCObject)retObjectSortedDescendingHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortedDescendingHeaderStyle != null ? retObjectSortedDescendingHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1374,7 +1630,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addPageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1384,7 +1640,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removePageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1394,7 +1650,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1404,7 +1660,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeSelectedIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1414,7 +1670,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Sorted", handler);
         } catch (JCNativeException jcne) {
@@ -1424,7 +1680,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeSorted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Sorted", handler);
         } catch (JCNativeException jcne) {
@@ -1434,7 +1690,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowCancelingEdit(GridViewCancelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowCancelingEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1444,7 +1700,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowCancelingEdit(GridViewCancelEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowCancelingEdit", handler);
         } catch (JCNativeException jcne) {
@@ -1454,7 +1710,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowCommand(GridViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowCommand", handler);
         } catch (JCNativeException jcne) {
@@ -1464,7 +1720,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowCommand(GridViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowCommand", handler);
         } catch (JCNativeException jcne) {
@@ -1474,7 +1730,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowDeleted(GridViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1484,7 +1740,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowDeleted(GridViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1494,7 +1750,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowDeleting(GridViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -1504,7 +1760,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowDeleting(GridViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -1514,7 +1770,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowEditing(GridViewEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowEditing", handler);
         } catch (JCNativeException jcne) {
@@ -1524,7 +1780,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowEditing(GridViewEditEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowEditing", handler);
         } catch (JCNativeException jcne) {
@@ -1534,7 +1790,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addPageIndexChanging(GridViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1544,7 +1800,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removePageIndexChanging(GridViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1554,7 +1810,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowCreated(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowCreated", handler);
         } catch (JCNativeException jcne) {
@@ -1564,7 +1820,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowCreated(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowCreated", handler);
         } catch (JCNativeException jcne) {
@@ -1574,7 +1830,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowDataBound(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -1584,7 +1840,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowDataBound(GridViewRowEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -1594,7 +1850,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addSelectedIndexChanging(GridViewSelectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1604,7 +1860,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeSelectedIndexChanging(GridViewSelectEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1614,7 +1870,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addSorting(GridViewSortEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Sorting", handler);
         } catch (JCNativeException jcne) {
@@ -1624,7 +1880,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeSorting(GridViewSortEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Sorting", handler);
         } catch (JCNativeException jcne) {
@@ -1634,7 +1890,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowUpdated(GridViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -1644,7 +1900,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowUpdated(GridViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -1654,7 +1910,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void addRowUpdating(GridViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {
@@ -1664,7 +1920,7 @@ public class GridView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeRowUpdating(GridViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {

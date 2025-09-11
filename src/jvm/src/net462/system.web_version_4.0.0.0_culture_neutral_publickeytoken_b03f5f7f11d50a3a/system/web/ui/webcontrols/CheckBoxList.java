@@ -178,7 +178,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
      */
     @Deprecated 
     public Style GetItemStyle(ListItemType itemType, int repeatIndex) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
     }
 
     /**
@@ -187,7 +187,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
      */
     @Deprecated 
     public void RenderItem(ListItemType itemType, int repeatIndex, RepeatInfo repeatInfo, HtmlTextWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
     }
 
     /**
@@ -196,7 +196,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -205,7 +205,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
 
@@ -214,9 +214,13 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
     
     public boolean getRenderWhenDataEmpty() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderWhenDataEmpty = null;
         try {
-            return (boolean)classInstance.Get("RenderWhenDataEmpty");
+            retObjectRenderWhenDataEmpty = classInstance.Get("RenderWhenDataEmpty");
+            return (boolean)retObjectRenderWhenDataEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderWhenDataEmpty != null ? retObjectRenderWhenDataEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +228,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setRenderWhenDataEmpty(boolean RenderWhenDataEmpty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderWhenDataEmpty", RenderWhenDataEmpty);
         } catch (JCNativeException jcne) {
@@ -234,9 +238,13 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +252,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -254,9 +262,13 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +276,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -274,9 +286,13 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public int getRepeatColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatColumns = null;
         try {
-            return (int)classInstance.Get("RepeatColumns");
+            retObjectRepeatColumns = classInstance.Get("RepeatColumns");
+            return (int)retObjectRepeatColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRepeatColumns != null ? retObjectRepeatColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +300,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setRepeatColumns(int RepeatColumns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatColumns", RepeatColumns);
         } catch (JCNativeException jcne) {
@@ -294,10 +310,14 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public RepeatDirection getRepeatDirection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatDirection");
+            retObjectRepeatDirection = classInstance.Get("RepeatDirection");
+            JCObject val = (JCObject)retObjectRepeatDirection;
             return new RepeatDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatDirection != null ? retObjectRepeatDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +325,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setRepeatDirection(RepeatDirection RepeatDirection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatDirection", RepeatDirection == null ? null : RepeatDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,10 +335,14 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public RepeatLayout getRepeatLayout() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRepeatLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RepeatLayout");
+            retObjectRepeatLayout = classInstance.Get("RepeatLayout");
+            JCObject val = (JCObject)retObjectRepeatLayout;
             return new RepeatLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRepeatLayout != null ? retObjectRepeatLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +350,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setRepeatLayout(RepeatLayout RepeatLayout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RepeatLayout", RepeatLayout == null ? null : RepeatLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -336,10 +360,14 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public TextAlign getTextAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlign");
+            retObjectTextAlign = classInstance.Get("TextAlign");
+            JCObject val = (JCObject)retObjectTextAlign;
             return new TextAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlign != null ? retObjectTextAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +375,7 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
 
     public void setTextAlign(TextAlign TextAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlign", TextAlign == null ? null : TextAlign.getJCOInstance());
         } catch (JCNativeException jcne) {

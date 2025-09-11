@@ -170,10 +170,14 @@ public class WebReferenceOptions extends NetObject  {
     
     public static WebReferenceOptions Read(Stream stream, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validationEventHandler);
+            retObjectRead = classType.Invoke("Read", stream == null ? null : stream.getJCOInstance(), validationEventHandler);
+            JCObject objRead = (JCObject)retObjectRead;
             return new WebReferenceOptions(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public static WebReferenceOptions Read(TextReader reader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.NullReferenceException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validationEventHandler);
+            retObjectRead = classType.Invoke("Read", reader == null ? null : reader.getJCOInstance(), validationEventHandler);
+            JCObject objRead = (JCObject)retObjectRead;
             return new WebReferenceOptions(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public static WebReferenceOptions Read(XmlReader xmlReader, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.configuration.ConfigurationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.OverflowException, system.MissingMethodException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", xmlReader == null ? null : xmlReader.getJCOInstance(), validationEventHandler);
+            retObjectRead = classType.Invoke("Read", xmlReader == null ? null : xmlReader.getJCOInstance(), validationEventHandler);
+            JCObject objRead = (JCObject)retObjectRead;
             return new WebReferenceOptions(objRead);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +219,13 @@ public class WebReferenceOptions extends NetObject  {
     
     public boolean getVerbose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbose = null;
         try {
-            return (boolean)classInstance.Get("Verbose");
+            retObjectVerbose = classInstance.Get("Verbose");
+            return (boolean)retObjectVerbose;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVerbose != null ? retObjectVerbose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +233,7 @@ public class WebReferenceOptions extends NetObject  {
 
     public void setVerbose(boolean Verbose) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verbose", Verbose);
         } catch (JCNativeException jcne) {
@@ -227,10 +243,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public StringCollection getSchemaImporterExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaImporterExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaImporterExtensions");
+            retObjectSchemaImporterExtensions = classInstance.Get("SchemaImporterExtensions");
+            JCObject val = (JCObject)retObjectSchemaImporterExtensions;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaImporterExtensions != null ? retObjectSchemaImporterExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +258,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public ServiceDescriptionImportStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ServiceDescriptionImportStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +273,7 @@ public class WebReferenceOptions extends NetObject  {
 
     public void setStyle(ServiceDescriptionImportStyle Style) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Style", Style == null ? null : Style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,10 +283,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public static XmlSchema getSchema() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.NullReferenceException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSchema = null;
         try {
-            JCObject val = (JCObject)classType.Get("Schema");
+            retObjectSchema = classType.Get("Schema");
+            JCObject val = (JCObject)retObjectSchema;
             return new XmlSchema(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchema != null ? retObjectSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +298,14 @@ public class WebReferenceOptions extends NetObject  {
 
     public CodeGenerationOptions getCodeGenerationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeGenerationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeGenerationOptions");
+            retObjectCodeGenerationOptions = classInstance.Get("CodeGenerationOptions");
+            JCObject val = (JCObject)retObjectCodeGenerationOptions;
             return new CodeGenerationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeGenerationOptions != null ? retObjectCodeGenerationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +313,7 @@ public class WebReferenceOptions extends NetObject  {
 
     public void setCodeGenerationOptions(CodeGenerationOptions CodeGenerationOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CodeGenerationOptions", CodeGenerationOptions == null ? null : CodeGenerationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {

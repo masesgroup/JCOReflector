@@ -155,9 +155,13 @@ public class CharType extends NetObject  {
     
     public static char FromObject(NetObject Value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromObject = null;
         try {
-            return (char)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            retObjectFromObject = classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return (char)retObjectFromObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectFromObject != null ? retObjectFromObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class CharType extends NetObject  {
 
     public static char FromString(java.lang.String Value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromString = null;
         try {
-            return (char)classType.Invoke("FromString", Value);
+            retObjectFromString = classType.Invoke("FromString", Value);
+            return (char)retObjectFromString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectFromString != null ? retObjectFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

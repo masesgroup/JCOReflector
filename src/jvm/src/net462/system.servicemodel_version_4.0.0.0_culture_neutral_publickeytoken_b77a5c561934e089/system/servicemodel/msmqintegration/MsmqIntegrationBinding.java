@@ -186,9 +186,13 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
     
     public boolean ShouldSerializeSecurity() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSecurity = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSecurity");
+            retObjectShouldSerializeSecurity = classInstance.Invoke("ShouldSerializeSecurity");
+            return (boolean)retObjectShouldSerializeSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSecurity != null ? retObjectShouldSerializeSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +200,14 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
 
     public BindingElementCollection CreateBindingElements() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
     
     public MsmqIntegrationSecurity getSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new MsmqIntegrationSecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
 
     public void setSecurity(MsmqIntegrationSecurity Security) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Security", Security == null ? null : Security.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +244,14 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
 
     public MsmqMessageSerializationFormat getSerializationFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializationFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializationFormat");
+            retObjectSerializationFormat = classInstance.Get("SerializationFormat");
+            JCObject val = (JCObject)retObjectSerializationFormat;
             return new MsmqMessageSerializationFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationFormat != null ? retObjectSerializationFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
 
     public void setSerializationFormat(MsmqMessageSerializationFormat SerializationFormat) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializationFormat", SerializationFormat == null ? null : SerializationFormat.getJCOInstance());
         } catch (JCNativeException jcne) {

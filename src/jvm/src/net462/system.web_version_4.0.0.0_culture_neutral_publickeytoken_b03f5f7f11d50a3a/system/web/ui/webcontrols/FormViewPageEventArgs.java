@@ -170,9 +170,13 @@ public class FormViewPageEventArgs extends CancelEventArgs  {
     
     public int getNewPageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewPageIndex = null;
         try {
-            return (int)classInstance.Get("NewPageIndex");
+            retObjectNewPageIndex = classInstance.Get("NewPageIndex");
+            return (int)retObjectNewPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNewPageIndex != null ? retObjectNewPageIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class FormViewPageEventArgs extends CancelEventArgs  {
 
     public void setNewPageIndex(int NewPageIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewPageIndex", NewPageIndex);
         } catch (JCNativeException jcne) {

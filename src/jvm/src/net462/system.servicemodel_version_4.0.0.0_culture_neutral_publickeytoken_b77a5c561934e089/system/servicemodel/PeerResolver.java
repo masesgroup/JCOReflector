@@ -158,10 +158,14 @@ public class PeerResolver extends NetObject  {
     
     public NetObject Register(java.lang.String meshId, PeerNodeAddress nodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            JCObject objRegister = (JCObject)classInstance.Invoke("Register", meshId, nodeAddress == null ? null : nodeAddress.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            retObjectRegister = classInstance.Invoke("Register", meshId, nodeAddress == null ? null : nodeAddress.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            JCObject objRegister = (JCObject)retObjectRegister;
             return new NetObject(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class PeerResolver extends NetObject  {
 
     public void Initialize(EndpointAddress address, system.servicemodel.channels.Binding binding, ClientCredentials credentials, PeerReferralPolicy referralPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", address == null ? null : address.getJCOInstance(), binding == null ? null : binding.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance(), referralPolicy == null ? null : referralPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class PeerResolver extends NetObject  {
 
     public void Unregister(NetObject registrationId, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unregister", registrationId == null ? null : registrationId.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +193,7 @@ public class PeerResolver extends NetObject  {
 
     public void Update(NetObject registrationId, PeerNodeAddress updatedNodeAddress, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update", registrationId == null ? null : registrationId.getJCOInstance(), updatedNodeAddress == null ? null : updatedNodeAddress.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,9 +207,13 @@ public class PeerResolver extends NetObject  {
     
     public boolean getCanShareReferrals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanShareReferrals = null;
         try {
-            return (boolean)classInstance.Get("CanShareReferrals");
+            retObjectCanShareReferrals = classInstance.Get("CanShareReferrals");
+            return (boolean)retObjectCanShareReferrals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanShareReferrals != null ? retObjectCanShareReferrals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

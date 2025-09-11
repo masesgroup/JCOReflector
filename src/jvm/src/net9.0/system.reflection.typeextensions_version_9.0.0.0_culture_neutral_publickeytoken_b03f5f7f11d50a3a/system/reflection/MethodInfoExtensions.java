@@ -154,10 +154,14 @@ public class MethodInfoExtensions extends NetObject  {
     
     public static MethodInfo GetBaseDefinition(MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBaseDefinition = null;
         try {
-            JCObject objGetBaseDefinition = (JCObject)classType.Invoke("GetBaseDefinition", method == null ? null : method.getJCOInstance());
+            retObjectGetBaseDefinition = classType.Invoke("GetBaseDefinition", method == null ? null : method.getJCOInstance());
+            JCObject objGetBaseDefinition = (JCObject)retObjectGetBaseDefinition;
             return new MethodInfo(objGetBaseDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBaseDefinition != null ? retObjectGetBaseDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

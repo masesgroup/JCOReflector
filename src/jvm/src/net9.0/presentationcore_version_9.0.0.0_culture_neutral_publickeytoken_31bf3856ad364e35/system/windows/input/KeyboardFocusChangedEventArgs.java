@@ -173,10 +173,14 @@ public class KeyboardFocusChangedEventArgs extends KeyboardEventArgs  {
     
     public IInputElement getNewFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewFocus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewFocus");
+            retObjectNewFocus = classInstance.Get("NewFocus");
+            JCObject val = (JCObject)retObjectNewFocus;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewFocus != null ? retObjectNewFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class KeyboardFocusChangedEventArgs extends KeyboardEventArgs  {
 
     public IInputElement getOldFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldFocus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldFocus");
+            retObjectOldFocus = classInstance.Get("OldFocus");
+            JCObject val = (JCObject)retObjectOldFocus;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldFocus != null ? retObjectOldFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

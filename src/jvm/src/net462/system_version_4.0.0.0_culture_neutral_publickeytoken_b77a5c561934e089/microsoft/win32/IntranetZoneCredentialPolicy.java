@@ -166,9 +166,13 @@ public class IntranetZoneCredentialPolicy extends NetObject  {
     
     public boolean ShouldSendCredential(Uri challengeUri, WebRequest request, NetworkCredential credential, IAuthenticationModule authModule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSendCredential = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSendCredential", challengeUri == null ? null : challengeUri.getJCOInstance(), request == null ? null : request.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), authModule == null ? null : authModule.getJCOInstance());
+            retObjectShouldSendCredential = classInstance.Invoke("ShouldSendCredential", challengeUri == null ? null : challengeUri.getJCOInstance(), request == null ? null : request.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), authModule == null ? null : authModule.getJCOInstance());
+            return (boolean)retObjectShouldSendCredential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSendCredential != null ? retObjectShouldSendCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

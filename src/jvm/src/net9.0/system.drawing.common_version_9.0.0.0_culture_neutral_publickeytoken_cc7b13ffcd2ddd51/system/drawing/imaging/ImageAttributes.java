@@ -170,10 +170,14 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearBrushRemapTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearBrushRemapTable");
         } catch (JCNativeException jcne) {
@@ -191,7 +195,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearColorKey() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearColorKey");
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearColorKey(ColorAdjustType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearColorKey", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearColorMatrix() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearColorMatrix");
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearColorMatrix(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearColorMatrix", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +235,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearGamma() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearGamma");
         } catch (JCNativeException jcne) {
@@ -241,7 +245,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearGamma(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearGamma", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +255,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearNoOp() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearNoOp");
         } catch (JCNativeException jcne) {
@@ -261,7 +265,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearNoOp(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearNoOp", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,7 +275,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearOutputChannel() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearOutputChannel");
         } catch (JCNativeException jcne) {
@@ -281,7 +285,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearOutputChannel(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearOutputChannel", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +295,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearOutputChannelColorProfile() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearOutputChannelColorProfile");
         } catch (JCNativeException jcne) {
@@ -301,7 +305,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearOutputChannelColorProfile(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearOutputChannelColorProfile", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,7 +315,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearRemapTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearRemapTable");
         } catch (JCNativeException jcne) {
@@ -321,7 +325,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearRemapTable(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearRemapTable", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +335,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearThreshold() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearThreshold");
         } catch (JCNativeException jcne) {
@@ -341,7 +345,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void ClearThreshold(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearThreshold", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,7 +355,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -361,7 +365,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void GetAdjustedPalette(ColorPalette palette, ColorAdjustType type) throws Throwable, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetAdjustedPalette", palette == null ? null : palette.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,7 +375,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetBrushRemapTable(ColorMap... map) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBrushRemapTable", (java.lang.Object)toObjectFromArray(map));
         } catch (JCNativeException jcne) {
@@ -381,7 +385,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorKey(Color colorLow, Color colorHigh, ColorAdjustType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorKey", colorLow == null ? null : colorLow.getJCOInstance(), colorHigh == null ? null : colorHigh.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,7 +395,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorKey(Color colorLow, Color colorHigh) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorKey", colorLow == null ? null : colorLow.getJCOInstance(), colorHigh == null ? null : colorHigh.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,7 +405,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrices(ColorMatrix newColorMatrix, ColorMatrix grayMatrix, ColorMatrixFlag mode, ColorAdjustType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrices", newColorMatrix == null ? null : newColorMatrix.getJCOInstance(), grayMatrix == null ? null : grayMatrix.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -411,7 +415,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrices(ColorMatrix newColorMatrix, ColorMatrix grayMatrix, ColorMatrixFlag flags) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrices", newColorMatrix == null ? null : newColorMatrix.getJCOInstance(), grayMatrix == null ? null : grayMatrix.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -421,7 +425,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrices(ColorMatrix newColorMatrix, ColorMatrix grayMatrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrices", newColorMatrix == null ? null : newColorMatrix.getJCOInstance(), grayMatrix == null ? null : grayMatrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -431,7 +435,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrix(ColorMatrix newColorMatrix, ColorMatrixFlag mode, ColorAdjustType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrix", newColorMatrix == null ? null : newColorMatrix.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -441,7 +445,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrix(ColorMatrix newColorMatrix, ColorMatrixFlag flags) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrix", newColorMatrix == null ? null : newColorMatrix.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -451,7 +455,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetColorMatrix(ColorMatrix newColorMatrix) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColorMatrix", newColorMatrix == null ? null : newColorMatrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -461,7 +465,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetGamma(Single gamma, ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGamma", gamma == null ? null : gamma.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,7 +475,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetGamma(Single gamma) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGamma", gamma == null ? null : gamma.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -481,7 +485,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetNoOp() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoOp");
         } catch (JCNativeException jcne) {
@@ -491,7 +495,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetNoOp(ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNoOp", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,7 +505,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetOutputChannel(ColorChannelFlag flags, ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputChannel", flags == null ? null : flags.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,7 +515,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetOutputChannel(ColorChannelFlag flags) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputChannel", flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,7 +525,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetOutputChannelColorProfile(java.lang.String colorProfileFilename, ColorAdjustType type) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputChannelColorProfile", colorProfileFilename, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -531,7 +535,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetOutputChannelColorProfile(java.lang.String colorProfileFilename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputChannelColorProfile", colorProfileFilename);
         } catch (JCNativeException jcne) {
@@ -541,7 +545,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetRemapTable(ColorMap[] map, ColorAdjustType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRemapTable", toObjectFromArray(map), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -551,7 +555,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetRemapTable(ColorMap... map) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRemapTable", (java.lang.Object)toObjectFromArray(map));
         } catch (JCNativeException jcne) {
@@ -561,7 +565,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetThreshold(Single threshold, ColorAdjustType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetThreshold", threshold == null ? null : threshold.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -571,7 +575,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetThreshold(Single threshold) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetThreshold", threshold == null ? null : threshold.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -581,7 +585,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetWrapMode(WrapMode mode, Color color, boolean clamp) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWrapMode", mode == null ? null : mode.getJCOInstance(), color == null ? null : color.getJCOInstance(), clamp);
         } catch (JCNativeException jcne) {
@@ -591,7 +595,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetWrapMode(WrapMode mode, Color color) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWrapMode", mode == null ? null : mode.getJCOInstance(), color == null ? null : color.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -601,7 +605,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
 
     public void SetWrapMode(WrapMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetWrapMode", mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -612,7 +616,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

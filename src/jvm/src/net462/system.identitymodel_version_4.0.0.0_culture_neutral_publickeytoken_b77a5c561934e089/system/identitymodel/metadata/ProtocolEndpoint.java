@@ -176,10 +176,14 @@ public class ProtocolEndpoint extends NetObject  {
     
     public Uri getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ProtocolEndpoint extends NetObject  {
 
     public void setBinding(Uri Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class ProtocolEndpoint extends NetObject  {
 
     public Uri getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class ProtocolEndpoint extends NetObject  {
 
     public void setLocation(Uri Location) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,10 +226,14 @@ public class ProtocolEndpoint extends NetObject  {
 
     public Uri getResponseLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResponseLocation");
+            retObjectResponseLocation = classInstance.Get("ResponseLocation");
+            JCObject val = (JCObject)retObjectResponseLocation;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponseLocation != null ? retObjectResponseLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class ProtocolEndpoint extends NetObject  {
 
     public void setResponseLocation(Uri ResponseLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseLocation", ResponseLocation == null ? null : ResponseLocation.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
     
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnIndex = null;
         try {
-            return (int)classInstance.Get("ColumnIndex");
+            retObjectColumnIndex = classInstance.Get("ColumnIndex");
+            return (int)retObjectColumnIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
 
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class DataGridViewCellValidatingEventArgs extends CancelEventArgs  {
 
     public NetObject getFormattedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormattedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormattedValue");
+            retObjectFormattedValue = classInstance.Get("FormattedValue");
+            JCObject val = (JCObject)retObjectFormattedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormattedValue != null ? retObjectFormattedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

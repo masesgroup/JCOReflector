@@ -157,10 +157,14 @@ public class X509CertificateValidator extends NetObject  {
     
     public static X509CertificateValidator CreateChainTrustValidator(boolean useMachineContext, X509ChainPolicy chainPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateChainTrustValidator = null;
         try {
-            JCObject objCreateChainTrustValidator = (JCObject)classType.Invoke("CreateChainTrustValidator", useMachineContext, chainPolicy == null ? null : chainPolicy.getJCOInstance());
+            retObjectCreateChainTrustValidator = classType.Invoke("CreateChainTrustValidator", useMachineContext, chainPolicy == null ? null : chainPolicy.getJCOInstance());
+            JCObject objCreateChainTrustValidator = (JCObject)retObjectCreateChainTrustValidator;
             return new X509CertificateValidator(objCreateChainTrustValidator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChainTrustValidator != null ? retObjectCreateChainTrustValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class X509CertificateValidator extends NetObject  {
 
     public static X509CertificateValidator CreatePeerOrChainTrustValidator(boolean useMachineContext, X509ChainPolicy chainPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePeerOrChainTrustValidator = null;
         try {
-            JCObject objCreatePeerOrChainTrustValidator = (JCObject)classType.Invoke("CreatePeerOrChainTrustValidator", useMachineContext, chainPolicy == null ? null : chainPolicy.getJCOInstance());
+            retObjectCreatePeerOrChainTrustValidator = classType.Invoke("CreatePeerOrChainTrustValidator", useMachineContext, chainPolicy == null ? null : chainPolicy.getJCOInstance());
+            JCObject objCreatePeerOrChainTrustValidator = (JCObject)retObjectCreatePeerOrChainTrustValidator;
             return new X509CertificateValidator(objCreatePeerOrChainTrustValidator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePeerOrChainTrustValidator != null ? retObjectCreatePeerOrChainTrustValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +187,7 @@ public class X509CertificateValidator extends NetObject  {
 
     public void LoadCustomConfiguration(XmlNodeList nodelist) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", nodelist == null ? null : nodelist.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +197,7 @@ public class X509CertificateValidator extends NetObject  {
 
     public void Validate(X509Certificate2 certificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class X509CertificateValidator extends NetObject  {
     
     public static X509CertificateValidator getChainTrust() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChainTrust = null;
         try {
-            JCObject val = (JCObject)classType.Get("ChainTrust");
+            retObjectChainTrust = classType.Get("ChainTrust");
+            JCObject val = (JCObject)retObjectChainTrust;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChainTrust != null ? retObjectChainTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +226,14 @@ public class X509CertificateValidator extends NetObject  {
 
     public static X509CertificateValidator getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +241,14 @@ public class X509CertificateValidator extends NetObject  {
 
     public static X509CertificateValidator getPeerOrChainTrust() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPeerOrChainTrust = null;
         try {
-            JCObject val = (JCObject)classType.Get("PeerOrChainTrust");
+            retObjectPeerOrChainTrust = classType.Get("PeerOrChainTrust");
+            JCObject val = (JCObject)retObjectPeerOrChainTrust;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerOrChainTrust != null ? retObjectPeerOrChainTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class X509CertificateValidator extends NetObject  {
 
     public static X509CertificateValidator getPeerTrust() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPeerTrust = null;
         try {
-            JCObject val = (JCObject)classType.Get("PeerTrust");
+            retObjectPeerTrust = classType.Get("PeerTrust");
+            JCObject val = (JCObject)retObjectPeerTrust;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerTrust != null ? retObjectPeerTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

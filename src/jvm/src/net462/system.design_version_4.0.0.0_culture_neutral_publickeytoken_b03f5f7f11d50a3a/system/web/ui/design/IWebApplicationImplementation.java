@@ -147,10 +147,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
     
     public Configuration OpenWebConfiguration(boolean isReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenWebConfiguration = null;
         try {
-            JCObject objOpenWebConfiguration = (JCObject)classInstance.Invoke("OpenWebConfiguration", isReadOnly);
+            retObjectOpenWebConfiguration = classInstance.Invoke("OpenWebConfiguration", isReadOnly);
+            JCObject objOpenWebConfiguration = (JCObject)retObjectOpenWebConfiguration;
             return new Configuration(objOpenWebConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenWebConfiguration != null ? retObjectOpenWebConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
 
     public NetObject GetService(NetType serviceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetService = null;
         try {
-            JCObject objGetService = (JCObject)classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            retObjectGetService = classInstance.Invoke("GetService", serviceType == null ? null : serviceType.getJCOInstance());
+            JCObject objGetService = (JCObject)retObjectGetService;
             return new NetObject(objGetService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetService != null ? retObjectGetService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +177,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
 
     public IProjectItem GetProjectItemFromUrl(java.lang.String appRelativeUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProjectItemFromUrl = null;
         try {
-            JCObject objGetProjectItemFromUrl = (JCObject)classInstance.Invoke("GetProjectItemFromUrl", appRelativeUrl);
+            retObjectGetProjectItemFromUrl = classInstance.Invoke("GetProjectItemFromUrl", appRelativeUrl);
+            JCObject objGetProjectItemFromUrl = (JCObject)retObjectGetProjectItemFromUrl;
             return new IProjectItemImplementation(objGetProjectItemFromUrl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProjectItemFromUrl != null ? retObjectGetProjectItemFromUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +196,14 @@ public class IWebApplicationImplementation extends NetObject implements IWebAppl
     
     public IProjectItem getRootProjectItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootProjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootProjectItem");
+            retObjectRootProjectItem = classInstance.Get("RootProjectItem");
+            JCObject val = (JCObject)retObjectRootProjectItem;
             return new IProjectItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootProjectItem != null ? retObjectRootProjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

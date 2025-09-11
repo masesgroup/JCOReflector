@@ -206,7 +206,7 @@ public class DataColumn extends MarshalByValueComponent  {
     
     public void SetOrdinal(int ordinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOrdinal", ordinal);
         } catch (JCNativeException jcne) {
@@ -220,9 +220,13 @@ public class DataColumn extends MarshalByValueComponent  {
     
     public boolean getAllowDBNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDBNull = null;
         try {
-            return (boolean)classInstance.Get("AllowDBNull");
+            retObjectAllowDBNull = classInstance.Get("AllowDBNull");
+            return (boolean)retObjectAllowDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDBNull != null ? retObjectAllowDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +234,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setAllowDBNull(boolean AllowDBNull) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDBNull", AllowDBNull);
         } catch (JCNativeException jcne) {
@@ -240,9 +244,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public boolean getAutoIncrement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoIncrement = null;
         try {
-            return (boolean)classInstance.Get("AutoIncrement");
+            retObjectAutoIncrement = classInstance.Get("AutoIncrement");
+            return (boolean)retObjectAutoIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoIncrement != null ? retObjectAutoIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +258,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setAutoIncrement(boolean AutoIncrement) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.OverflowException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoIncrement", AutoIncrement);
         } catch (JCNativeException jcne) {
@@ -260,9 +268,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +282,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -280,9 +292,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public boolean getUnique() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnique = null;
         try {
-            return (boolean)classInstance.Get("Unique");
+            retObjectUnique = classInstance.Get("Unique");
+            return (boolean)retObjectUnique;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnique != null ? retObjectUnique.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +306,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setUnique(boolean Unique) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Unique", Unique);
         } catch (JCNativeException jcne) {
@@ -300,9 +316,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public int getMaxLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +330,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setMaxLength(int MaxLength) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -320,9 +340,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public int getOrdinal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrdinal = null;
         try {
-            return (int)classInstance.Get("Ordinal");
+            retObjectOrdinal = classInstance.Get("Ordinal");
+            return (int)retObjectOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +354,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public long getAutoIncrementSeed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoIncrementSeed = null;
         try {
-            return (long)classInstance.Get("AutoIncrementSeed");
+            retObjectAutoIncrementSeed = classInstance.Get("AutoIncrementSeed");
+            return (long)retObjectAutoIncrementSeed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectAutoIncrementSeed != null ? retObjectAutoIncrementSeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +368,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setAutoIncrementSeed(long AutoIncrementSeed) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoIncrementSeed", AutoIncrementSeed);
         } catch (JCNativeException jcne) {
@@ -350,9 +378,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public long getAutoIncrementStep() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoIncrementStep = null;
         try {
-            return (long)classInstance.Get("AutoIncrementStep");
+            retObjectAutoIncrementStep = classInstance.Get("AutoIncrementStep");
+            return (long)retObjectAutoIncrementStep;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectAutoIncrementStep != null ? retObjectAutoIncrementStep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +392,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setAutoIncrementStep(long AutoIncrementStep) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoIncrementStep", AutoIncrementStep);
         } catch (JCNativeException jcne) {
@@ -370,10 +402,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public DataSetDateTime getDateTimeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDateTimeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DateTimeMode");
+            retObjectDateTimeMode = classInstance.Get("DateTimeMode");
+            JCObject val = (JCObject)retObjectDateTimeMode;
             return new DataSetDateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeMode != null ? retObjectDateTimeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +417,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setDateTimeMode(DataSetDateTime DateTimeMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DateTimeMode", DateTimeMode == null ? null : DateTimeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +427,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +442,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public MappingType getColumnMapping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnMapping = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnMapping");
+            retObjectColumnMapping = classInstance.Get("ColumnMapping");
+            JCObject val = (JCObject)retObjectColumnMapping;
             return new MappingType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnMapping != null ? retObjectColumnMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,7 +457,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setColumnMapping(MappingType ColumnMapping) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnMapping", ColumnMapping == null ? null : ColumnMapping.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -423,10 +467,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public PropertyCollection getExtendedProperties() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProperties");
+            retObjectExtendedProperties = classInstance.Get("ExtendedProperties");
+            JCObject val = (JCObject)retObjectExtendedProperties;
             return new PropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProperties != null ? retObjectExtendedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,10 +482,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public NetObject getDefaultValue() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultValue");
+            retObjectDefaultValue = classInstance.Get("DefaultValue");
+            JCObject val = (JCObject)retObjectDefaultValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultValue != null ? retObjectDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +497,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setDefaultValue(NetObject DefaultValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.OverflowException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultValue", DefaultValue == null ? null : DefaultValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -455,9 +507,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public java.lang.String getCaption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +521,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -475,9 +531,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public java.lang.String getColumnName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnName = null;
         try {
-            return (java.lang.String)classInstance.Get("ColumnName");
+            retObjectColumnName = classInstance.Get("ColumnName");
+            return (java.lang.String)retObjectColumnName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectColumnName != null ? retObjectColumnName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,7 +545,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setColumnName(java.lang.String ColumnName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnName", ColumnName);
         } catch (JCNativeException jcne) {
@@ -495,9 +555,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public java.lang.String getExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("Expression");
+            retObjectExpression = classInstance.Get("Expression");
+            return (java.lang.String)retObjectExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpression != null ? retObjectExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,7 +569,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setExpression(java.lang.String Expression) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.UriFormatException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expression", Expression);
         } catch (JCNativeException jcne) {
@@ -515,9 +579,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public java.lang.String getNamespace() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,7 +593,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -535,9 +603,13 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,7 +617,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setPrefix(java.lang.String Prefix) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Prefix", Prefix);
         } catch (JCNativeException jcne) {
@@ -555,10 +627,14 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public NetType getDataType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataType");
+            retObjectDataType = classInstance.Get("DataType");
+            JCObject val = (JCObject)retObjectDataType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataType != null ? retObjectDataType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +642,7 @@ public class DataColumn extends MarshalByValueComponent  {
 
     public void setDataType(NetType DataType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType == null ? null : DataType.getJCOInstance());
         } catch (JCNativeException jcne) {

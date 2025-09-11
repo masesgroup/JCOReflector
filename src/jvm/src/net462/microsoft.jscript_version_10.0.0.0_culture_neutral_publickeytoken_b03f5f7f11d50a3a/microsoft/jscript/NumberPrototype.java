@@ -157,10 +157,14 @@ public class NumberPrototype extends NumberObject  {
     
     public static NetObject valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectvalueOf = null;
         try {
-            JCObject objvalueOf = (JCObject)classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            retObjectvalueOf = classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objvalueOf = (JCObject)retObjectvalueOf;
             return new NetObject(objvalueOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class NumberPrototype extends NumberObject  {
 
     public static java.lang.String toExponential(NetObject thisob, NetObject fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoExponential = null;
         try {
-            return (java.lang.String)classType.Invoke("toExponential", thisob == null ? null : thisob.getJCOInstance(), fractionDigits == null ? null : fractionDigits.getJCOInstance());
+            retObjecttoExponential = classType.Invoke("toExponential", thisob == null ? null : thisob.getJCOInstance(), fractionDigits == null ? null : fractionDigits.getJCOInstance());
+            return (java.lang.String)retObjecttoExponential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoExponential != null ? retObjecttoExponential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class NumberPrototype extends NumberObject  {
 
     public static java.lang.String toFixed(NetObject thisob, double fractionDigits) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoFixed = null;
         try {
-            return (java.lang.String)classType.Invoke("toFixed", thisob == null ? null : thisob.getJCOInstance(), fractionDigits);
+            retObjecttoFixed = classType.Invoke("toFixed", thisob == null ? null : thisob.getJCOInstance(), fractionDigits);
+            return (java.lang.String)retObjecttoFixed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoFixed != null ? retObjecttoFixed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class NumberPrototype extends NumberObject  {
 
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleString = classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleString != null ? retObjecttoLocaleString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class NumberPrototype extends NumberObject  {
 
     public static java.lang.String toPrecision(NetObject thisob, NetObject precision) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoPrecision = null;
         try {
-            return (java.lang.String)classType.Invoke("toPrecision", thisob == null ? null : thisob.getJCOInstance(), precision == null ? null : precision.getJCOInstance());
+            retObjecttoPrecision = classType.Invoke("toPrecision", thisob == null ? null : thisob.getJCOInstance(), precision == null ? null : precision.getJCOInstance());
+            return (java.lang.String)retObjecttoPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoPrecision != null ? retObjecttoPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class NumberPrototype extends NumberObject  {
 
     public static java.lang.String toString(NetObject thisob, NetObject radix) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.MissingMethodException, system.OverflowException, system.OutOfMemoryException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance(), radix == null ? null : radix.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance(), radix == null ? null : radix.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class NumberPrototype extends NumberObject  {
     
     public static NumberConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new NumberConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

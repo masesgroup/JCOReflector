@@ -146,9 +146,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
     
     public boolean getCanChangeLiveFiltering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveFiltering = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveFiltering");
+            retObjectCanChangeLiveFiltering = classInstance.Get("CanChangeLiveFiltering");
+            return (boolean)retObjectCanChangeLiveFiltering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveFiltering != null ? retObjectCanChangeLiveFiltering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +160,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
 
     public boolean getCanChangeLiveGrouping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveGrouping = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveGrouping");
+            retObjectCanChangeLiveGrouping = classInstance.Get("CanChangeLiveGrouping");
+            return (boolean)retObjectCanChangeLiveGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveGrouping != null ? retObjectCanChangeLiveGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +174,13 @@ public class ICollectionViewLiveShapingImplementation extends NetObject implemen
 
     public boolean getCanChangeLiveSorting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanChangeLiveSorting = null;
         try {
-            return (boolean)classInstance.Get("CanChangeLiveSorting");
+            retObjectCanChangeLiveSorting = classInstance.Get("CanChangeLiveSorting");
+            return (boolean)retObjectCanChangeLiveSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanChangeLiveSorting != null ? retObjectCanChangeLiveSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

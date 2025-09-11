@@ -169,10 +169,14 @@ public class SqlDesignerDataSourceView extends DesignerDataSourceView  {
     
     public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.RankException, system.NullReferenceException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeData = null;
         try {
-            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", minimumRows, isSampleData.getJCRefOut());
+            retObjectGetDesignTimeData = classInstance.Invoke("GetDesignTimeData", minimumRows, isSampleData.getJCRefOut());
+            JCObject objGetDesignTimeData = (JCObject)retObjectGetDesignTimeData;
             return new IEnumerableImplementation(objGetDesignTimeData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeData != null ? retObjectGetDesignTimeData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

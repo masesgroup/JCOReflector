@@ -171,9 +171,13 @@ public class AttributeUsageAttribute extends Attribute  {
     
     public boolean getAllowMultiple() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowMultiple = null;
         try {
-            return (boolean)classInstance.Get("AllowMultiple");
+            retObjectAllowMultiple = classInstance.Get("AllowMultiple");
+            return (boolean)retObjectAllowMultiple;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowMultiple != null ? retObjectAllowMultiple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class AttributeUsageAttribute extends Attribute  {
 
     public void setAllowMultiple(boolean AllowMultiple) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowMultiple", AllowMultiple);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class AttributeUsageAttribute extends Attribute  {
 
     public boolean getInherited() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInherited = null;
         try {
-            return (boolean)classInstance.Get("Inherited");
+            retObjectInherited = classInstance.Get("Inherited");
+            return (boolean)retObjectInherited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInherited != null ? retObjectInherited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class AttributeUsageAttribute extends Attribute  {
 
     public void setInherited(boolean Inherited) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Inherited", Inherited);
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class AttributeUsageAttribute extends Attribute  {
 
     public AttributeTargets getValidOn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidOn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidOn");
+            retObjectValidOn = classInstance.Get("ValidOn");
+            JCObject val = (JCObject)retObjectValidOn;
             return new AttributeTargets(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidOn != null ? retObjectValidOn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,10 +144,14 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
     
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", row, column);
+            retObjectGetItem = classInstance.Invoke("GetItem", row, column);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new IRawElementProviderSimpleImplementation(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,13 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +177,13 @@ public class IGridProviderImplementation extends NetObject implements IGridProvi
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

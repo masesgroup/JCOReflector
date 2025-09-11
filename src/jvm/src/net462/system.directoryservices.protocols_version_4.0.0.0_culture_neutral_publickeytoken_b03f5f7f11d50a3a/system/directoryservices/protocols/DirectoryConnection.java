@@ -159,10 +159,14 @@ public class DirectoryConnection extends NetObject  {
     
     public DirectoryResponse SendRequest(DirectoryRequest request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendRequest = null;
         try {
-            JCObject objSendRequest = (JCObject)classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            retObjectSendRequest = classInstance.Invoke("SendRequest", request == null ? null : request.getJCOInstance());
+            JCObject objSendRequest = (JCObject)retObjectSendRequest;
             return new DirectoryResponse(objSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendRequest != null ? retObjectSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class DirectoryConnection extends NetObject  {
     
     public DirectoryIdentifier getDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Directory");
+            retObjectDirectory = classInstance.Get("Directory");
+            JCObject val = (JCObject)retObjectDirectory;
             return new DirectoryIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectory != null ? retObjectDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class DirectoryConnection extends NetObject  {
 
     public void setCredential(NetworkCredential Credential) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credential", Credential == null ? null : Credential.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,10 +203,14 @@ public class DirectoryConnection extends NetObject  {
 
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificates");
+            retObjectClientCertificates = classInstance.Get("ClientCertificates");
+            JCObject val = (JCObject)retObjectClientCertificates;
             return new X509CertificateCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificates != null ? retObjectClientCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class DirectoryConnection extends NetObject  {
 
     public TimeSpan getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            JCObject val = (JCObject)retObjectTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +233,7 @@ public class DirectoryConnection extends NetObject  {
 
     public void setTimeout(TimeSpan Timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout == null ? null : Timeout.getJCOInstance());
         } catch (JCNativeException jcne) {

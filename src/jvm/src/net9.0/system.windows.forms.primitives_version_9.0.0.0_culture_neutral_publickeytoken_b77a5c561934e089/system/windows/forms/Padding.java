@@ -178,9 +178,13 @@ public class Padding extends ValueType  {
     
     public boolean Equals(Padding other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class Padding extends ValueType  {
 
     public static Padding Add(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", p1 == null ? null : p1.getJCOInstance(), p2 == null ? null : p2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", p1 == null ? null : p1.getJCOInstance(), p2 == null ? null : p2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Padding(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +207,14 @@ public class Padding extends ValueType  {
 
     public static Padding Subtract(Padding p1, Padding p2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", p1 == null ? null : p1.getJCOInstance(), p2 == null ? null : p2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", p1 == null ? null : p1.getJCOInstance(), p2 == null ? null : p2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Padding(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +226,13 @@ public class Padding extends ValueType  {
     
     public int getAll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAll = null;
         try {
-            return (int)classInstance.Get("All");
+            retObjectAll = classInstance.Get("All");
+            return (int)retObjectAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAll != null ? retObjectAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class Padding extends ValueType  {
 
     public void setAll(int All) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("All", All);
         } catch (JCNativeException jcne) {
@@ -234,9 +250,13 @@ public class Padding extends ValueType  {
 
     public int getBottom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottom = null;
         try {
-            return (int)classInstance.Get("Bottom");
+            retObjectBottom = classInstance.Get("Bottom");
+            return (int)retObjectBottom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBottom != null ? retObjectBottom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class Padding extends ValueType  {
 
     public void setBottom(int Bottom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bottom", Bottom);
         } catch (JCNativeException jcne) {
@@ -254,9 +274,13 @@ public class Padding extends ValueType  {
 
     public int getHorizontal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontal = null;
         try {
-            return (int)classInstance.Get("Horizontal");
+            retObjectHorizontal = classInstance.Get("Horizontal");
+            return (int)retObjectHorizontal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontal != null ? retObjectHorizontal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +288,13 @@ public class Padding extends ValueType  {
 
     public int getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            return (int)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            return (int)retObjectLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +302,7 @@ public class Padding extends ValueType  {
 
     public void setLeft(int Left) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Left", Left);
         } catch (JCNativeException jcne) {
@@ -284,9 +312,13 @@ public class Padding extends ValueType  {
 
     public int getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            return (int)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            return (int)retObjectRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +326,7 @@ public class Padding extends ValueType  {
 
     public void setRight(int Right) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Right", Right);
         } catch (JCNativeException jcne) {
@@ -304,9 +336,13 @@ public class Padding extends ValueType  {
 
     public int getTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTop = null;
         try {
-            return (int)classInstance.Get("Top");
+            retObjectTop = classInstance.Get("Top");
+            return (int)retObjectTop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTop != null ? retObjectTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +350,7 @@ public class Padding extends ValueType  {
 
     public void setTop(int Top) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Top", Top);
         } catch (JCNativeException jcne) {
@@ -324,9 +360,13 @@ public class Padding extends ValueType  {
 
     public int getVertical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertical = null;
         try {
-            return (int)classInstance.Get("Vertical");
+            retObjectVertical = classInstance.Get("Vertical");
+            return (int)retObjectVertical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVertical != null ? retObjectVertical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +374,14 @@ public class Padding extends ValueType  {
 
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,13 @@ public class RecycleLimitInfo extends NetObject  {
     
     public boolean getRequestGC() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestGC = null;
         try {
-            return (boolean)classInstance.Get("RequestGC");
+            retObjectRequestGC = classInstance.Get("RequestGC");
+            return (boolean)retObjectRequestGC;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequestGC != null ? retObjectRequestGC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class RecycleLimitInfo extends NetObject  {
 
     public void setRequestGC(boolean RequestGC) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestGC", RequestGC);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class RecycleLimitInfo extends NetObject  {
 
     public long getCurrentPrivateBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPrivateBytes = null;
         try {
-            return (long)classInstance.Get("CurrentPrivateBytes");
+            retObjectCurrentPrivateBytes = classInstance.Get("CurrentPrivateBytes");
+            return (long)retObjectCurrentPrivateBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCurrentPrivateBytes != null ? retObjectCurrentPrivateBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +208,13 @@ public class RecycleLimitInfo extends NetObject  {
 
     public long getRecycleLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecycleLimit = null;
         try {
-            return (long)classInstance.Get("RecycleLimit");
+            retObjectRecycleLimit = classInstance.Get("RecycleLimit");
+            return (long)retObjectRecycleLimit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRecycleLimit != null ? retObjectRecycleLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +222,14 @@ public class RecycleLimitInfo extends NetObject  {
 
     public RecycleLimitNotificationFrequency getTrimFrequency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrimFrequency = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrimFrequency");
+            retObjectTrimFrequency = classInstance.Get("TrimFrequency");
+            JCObject val = (JCObject)retObjectTrimFrequency;
             return new RecycleLimitNotificationFrequency(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimFrequency != null ? retObjectTrimFrequency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

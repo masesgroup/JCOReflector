@@ -168,9 +168,13 @@ public class AntiXssEncoder extends HttpEncoder  {
     
     public static java.lang.String CssEncode(java.lang.String input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCssEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("CssEncode", input);
+            retObjectCssEncode = classType.Invoke("CssEncode", input);
+            return (java.lang.String)retObjectCssEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCssEncode != null ? retObjectCssEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String HtmlEncode(java.lang.String input, boolean useNamedEntities) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHtmlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("HtmlEncode", input, useNamedEntities);
+            retObjectHtmlEncode = classType.Invoke("HtmlEncode", input, useNamedEntities);
+            return (java.lang.String)retObjectHtmlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlEncode != null ? retObjectHtmlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String HtmlFormUrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHtmlFormUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("HtmlFormUrlEncode", input);
+            retObjectHtmlFormUrlEncode = classType.Invoke("HtmlFormUrlEncode", input);
+            return (java.lang.String)retObjectHtmlFormUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlFormUrlEncode != null ? retObjectHtmlFormUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String HtmlFormUrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHtmlFormUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("HtmlFormUrlEncode", input, codePage);
+            retObjectHtmlFormUrlEncode = classType.Invoke("HtmlFormUrlEncode", input, codePage);
+            return (java.lang.String)retObjectHtmlFormUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlFormUrlEncode != null ? retObjectHtmlFormUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String HtmlFormUrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHtmlFormUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("HtmlFormUrlEncode", input, inputEncoding == null ? null : inputEncoding.getJCOInstance());
+            retObjectHtmlFormUrlEncode = classType.Invoke("HtmlFormUrlEncode", input, inputEncoding == null ? null : inputEncoding.getJCOInstance());
+            return (java.lang.String)retObjectHtmlFormUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlFormUrlEncode != null ? retObjectHtmlFormUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +238,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String UrlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", input);
+            retObjectUrlEncode = classType.Invoke("UrlEncode", input);
+            return (java.lang.String)retObjectUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlEncode != null ? retObjectUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +252,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String UrlEncode(java.lang.String input, int codePage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", input, codePage);
+            retObjectUrlEncode = classType.Invoke("UrlEncode", input, codePage);
+            return (java.lang.String)retObjectUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlEncode != null ? retObjectUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +266,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String UrlEncode(java.lang.String input, Encoding inputEncoding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", input, inputEncoding == null ? null : inputEncoding.getJCOInstance());
+            retObjectUrlEncode = classType.Invoke("UrlEncode", input, inputEncoding == null ? null : inputEncoding.getJCOInstance());
+            return (java.lang.String)retObjectUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlEncode != null ? retObjectUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +280,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String XmlAttributeEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlAttributeEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("XmlAttributeEncode", input);
+            retObjectXmlAttributeEncode = classType.Invoke("XmlAttributeEncode", input);
+            return (java.lang.String)retObjectXmlAttributeEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectXmlAttributeEncode != null ? retObjectXmlAttributeEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +294,13 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static java.lang.String XmlEncode(java.lang.String input) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectXmlEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("XmlEncode", input);
+            retObjectXmlEncode = classType.Invoke("XmlEncode", input);
+            return (java.lang.String)retObjectXmlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectXmlEncode != null ? retObjectXmlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +308,7 @@ public class AntiXssEncoder extends HttpEncoder  {
 
     public static void MarkAsSafe(LowerCodeCharts lowerCodeCharts, LowerMidCodeCharts lowerMidCodeCharts, MidCodeCharts midCodeCharts, UpperMidCodeCharts upperMidCodeCharts, UpperCodeCharts upperCodeCharts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MarkAsSafe", lowerCodeCharts == null ? null : lowerCodeCharts.getJCOInstance(), lowerMidCodeCharts == null ? null : lowerMidCodeCharts.getJCOInstance(), midCodeCharts == null ? null : midCodeCharts.getJCOInstance(), upperMidCodeCharts == null ? null : upperMidCodeCharts.getJCOInstance(), upperCodeCharts == null ? null : upperCodeCharts.getJCOInstance());
         } catch (JCNativeException jcne) {

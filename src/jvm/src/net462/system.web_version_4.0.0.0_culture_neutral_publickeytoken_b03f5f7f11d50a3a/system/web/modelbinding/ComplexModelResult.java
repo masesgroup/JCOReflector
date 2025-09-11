@@ -170,10 +170,14 @@ public class ComplexModelResult extends NetObject  {
     
     public NetObject getModel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Model");
+            retObjectModel = classInstance.Get("Model");
+            JCObject val = (JCObject)retObjectModel;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModel != null ? retObjectModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ComplexModelResult extends NetObject  {
 
     public void setModel(NetObject Model) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Model", Model == null ? null : Model.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class ComplexModelResult extends NetObject  {
 
     public ModelValidationNode getValidationNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationNode");
+            retObjectValidationNode = classInstance.Get("ValidationNode");
+            JCObject val = (JCObject)retObjectValidationNode;
             return new ModelValidationNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationNode != null ? retObjectValidationNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class ComplexModelResult extends NetObject  {
 
     public void setValidationNode(ModelValidationNode ValidationNode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationNode", ValidationNode == null ? null : ValidationNode.getJCOInstance());
         } catch (JCNativeException jcne) {

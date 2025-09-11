@@ -187,9 +187,13 @@ public class MailAddress extends NetObject  {
     
     public static boolean TryCreate(java.lang.String address, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", address, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", address, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +201,13 @@ public class MailAddress extends NetObject  {
 
     public static boolean TryCreate(java.lang.String address, java.lang.String displayName, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", address, displayName, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", address, displayName, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +215,13 @@ public class MailAddress extends NetObject  {
 
     public static boolean TryCreate(java.lang.String address, java.lang.String displayName, Encoding displayNameEncoding, JCORefOut<MailAddress> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", address, displayName, displayNameEncoding == null ? null : displayNameEncoding.getJCOInstance(), result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", address, displayName, displayNameEncoding == null ? null : displayNameEncoding.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +233,13 @@ public class MailAddress extends NetObject  {
     
     public java.lang.String getAddress() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            return (java.lang.String)retObjectAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +247,13 @@ public class MailAddress extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +261,13 @@ public class MailAddress extends NetObject  {
 
     public java.lang.String getHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            return (java.lang.String)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            return (java.lang.String)retObjectHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +275,13 @@ public class MailAddress extends NetObject  {
 
     public java.lang.String getUser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            return (java.lang.String)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            return (java.lang.String)retObjectUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

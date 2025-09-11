@@ -204,10 +204,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
     
     public static NetObject GetAppConfig(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAppConfig = null;
         try {
-            JCObject objGetAppConfig = (JCObject)classType.Invoke("GetAppConfig", name);
+            retObjectGetAppConfig = classType.Invoke("GetAppConfig", name);
+            JCObject objGetAppConfig = (JCObject)retObjectGetAppConfig;
             return new NetObject(objGetAppConfig);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAppConfig != null ? retObjectGetAppConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +219,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public NetObject GetConfig(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConfig = null;
         try {
-            JCObject objGetConfig = (JCObject)classInstance.Invoke("GetConfig", name);
+            retObjectGetConfig = classInstance.Invoke("GetConfig", name);
+            JCObject objGetConfig = (JCObject)retObjectGetConfig;
             return new NetObject(objGetConfig);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConfig != null ? retObjectGetConfig.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +234,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static NetObject GetGlobalResourceObject(java.lang.String classKey, java.lang.String resourceKey) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlobalResourceObject = null;
         try {
-            JCObject objGetGlobalResourceObject = (JCObject)classType.Invoke("GetGlobalResourceObject", classKey, resourceKey);
+            retObjectGetGlobalResourceObject = classType.Invoke("GetGlobalResourceObject", classKey, resourceKey);
+            JCObject objGetGlobalResourceObject = (JCObject)retObjectGetGlobalResourceObject;
             return new NetObject(objGetGlobalResourceObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalResourceObject != null ? retObjectGetGlobalResourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +249,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static NetObject GetGlobalResourceObject(java.lang.String classKey, java.lang.String resourceKey, CultureInfo culture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlobalResourceObject = null;
         try {
-            JCObject objGetGlobalResourceObject = (JCObject)classType.Invoke("GetGlobalResourceObject", classKey, resourceKey, culture == null ? null : culture.getJCOInstance());
+            retObjectGetGlobalResourceObject = classType.Invoke("GetGlobalResourceObject", classKey, resourceKey, culture == null ? null : culture.getJCOInstance());
+            JCObject objGetGlobalResourceObject = (JCObject)retObjectGetGlobalResourceObject;
             return new NetObject(objGetGlobalResourceObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalResourceObject != null ? retObjectGetGlobalResourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +264,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static NetObject GetLocalResourceObject(java.lang.String virtualPath, java.lang.String resourceKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalResourceObject = null;
         try {
-            JCObject objGetLocalResourceObject = (JCObject)classType.Invoke("GetLocalResourceObject", virtualPath, resourceKey);
+            retObjectGetLocalResourceObject = classType.Invoke("GetLocalResourceObject", virtualPath, resourceKey);
+            JCObject objGetLocalResourceObject = (JCObject)retObjectGetLocalResourceObject;
             return new NetObject(objGetLocalResourceObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalResourceObject != null ? retObjectGetLocalResourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +279,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static NetObject GetLocalResourceObject(java.lang.String virtualPath, java.lang.String resourceKey, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLocalResourceObject = null;
         try {
-            JCObject objGetLocalResourceObject = (JCObject)classType.Invoke("GetLocalResourceObject", virtualPath, resourceKey, culture == null ? null : culture.getJCOInstance());
+            retObjectGetLocalResourceObject = classType.Invoke("GetLocalResourceObject", virtualPath, resourceKey, culture == null ? null : culture.getJCOInstance());
+            JCObject objGetLocalResourceObject = (JCObject)retObjectGetLocalResourceObject;
             return new NetObject(objGetLocalResourceObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalResourceObject != null ? retObjectGetLocalResourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +294,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public NetObject GetSection(java.lang.String sectionName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSection = null;
         try {
-            JCObject objGetSection = (JCObject)classInstance.Invoke("GetSection", sectionName);
+            retObjectGetSection = classInstance.Invoke("GetSection", sectionName);
+            JCObject objGetSection = (JCObject)retObjectGetSection;
             return new NetObject(objGetSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSection != null ? retObjectGetSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +309,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public ISubscriptionToken DisposeOnPipelineCompleted(IDisposable target) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeOnPipelineCompleted = null;
         try {
-            JCObject objDisposeOnPipelineCompleted = (JCObject)classInstance.Invoke("DisposeOnPipelineCompleted", target == null ? null : target.getJCOInstance());
+            retObjectDisposeOnPipelineCompleted = classInstance.Invoke("DisposeOnPipelineCompleted", target == null ? null : target.getJCOInstance());
+            JCObject objDisposeOnPipelineCompleted = (JCObject)retObjectDisposeOnPipelineCompleted;
             return new ISubscriptionTokenImplementation(objDisposeOnPipelineCompleted);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeOnPipelineCompleted != null ? retObjectDisposeOnPipelineCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +324,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void AddError(NetException errorInfo) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddError", errorInfo == null ? null : errorInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +334,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void ClearError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearError");
         } catch (JCNativeException jcne) {
@@ -312,7 +344,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void RemapHandler(IHttpHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemapHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,7 +354,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void RewritePath(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RewritePath", path);
         } catch (JCNativeException jcne) {
@@ -332,7 +364,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void RewritePath(java.lang.String path, boolean rebaseClientPath) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RewritePath", path, rebaseClientPath);
         } catch (JCNativeException jcne) {
@@ -342,7 +374,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void RewritePath(java.lang.String filePath, java.lang.String pathInfo, java.lang.String queryString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RewritePath", filePath, pathInfo, queryString);
         } catch (JCNativeException jcne) {
@@ -352,7 +384,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void RewritePath(java.lang.String filePath, java.lang.String pathInfo, java.lang.String queryString, boolean setClientFilePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RewritePath", filePath, pathInfo, queryString, setClientFilePath);
         } catch (JCNativeException jcne) {
@@ -362,7 +394,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void SetSessionStateBehavior(SessionStateBehavior sessionStateBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSessionStateBehavior", sessionStateBehavior == null ? null : sessionStateBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +408,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -385,9 +417,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
     
     public boolean getAllowAsyncDuringSyncStages() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowAsyncDuringSyncStages = null;
         try {
-            return (boolean)classInstance.Get("AllowAsyncDuringSyncStages");
+            retObjectAllowAsyncDuringSyncStages = classInstance.Get("AllowAsyncDuringSyncStages");
+            return (boolean)retObjectAllowAsyncDuringSyncStages;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowAsyncDuringSyncStages != null ? retObjectAllowAsyncDuringSyncStages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,7 +431,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setAllowAsyncDuringSyncStages(boolean AllowAsyncDuringSyncStages) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowAsyncDuringSyncStages", AllowAsyncDuringSyncStages);
         } catch (JCNativeException jcne) {
@@ -405,9 +441,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getIsCustomErrorEnabled() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCustomErrorEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsCustomErrorEnabled");
+            retObjectIsCustomErrorEnabled = classInstance.Get("IsCustomErrorEnabled");
+            return (boolean)retObjectIsCustomErrorEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCustomErrorEnabled != null ? retObjectIsCustomErrorEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,9 +455,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getIsDebuggingEnabled() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.web.HttpException, system.web.HttpRequestValidationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDebuggingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsDebuggingEnabled");
+            retObjectIsDebuggingEnabled = classInstance.Get("IsDebuggingEnabled");
+            return (boolean)retObjectIsDebuggingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDebuggingEnabled != null ? retObjectIsDebuggingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,9 +469,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getIsPostNotification() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPostNotification = null;
         try {
-            return (boolean)classInstance.Get("IsPostNotification");
+            retObjectIsPostNotification = classInstance.Get("IsPostNotification");
+            return (boolean)retObjectIsPostNotification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPostNotification != null ? retObjectIsPostNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +483,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setIsPostNotification(boolean IsPostNotification) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsPostNotification", IsPostNotification);
         } catch (JCNativeException jcne) {
@@ -445,9 +493,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getIsWebSocketRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWebSocketRequest = null;
         try {
-            return (boolean)classInstance.Get("IsWebSocketRequest");
+            retObjectIsWebSocketRequest = classInstance.Get("IsWebSocketRequest");
+            return (boolean)retObjectIsWebSocketRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWebSocketRequest != null ? retObjectIsWebSocketRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,9 +507,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getIsWebSocketRequestUpgrading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWebSocketRequestUpgrading = null;
         try {
-            return (boolean)classInstance.Get("IsWebSocketRequestUpgrading");
+            retObjectIsWebSocketRequestUpgrading = classInstance.Get("IsWebSocketRequestUpgrading");
+            return (boolean)retObjectIsWebSocketRequestUpgrading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWebSocketRequestUpgrading != null ? retObjectIsWebSocketRequestUpgrading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,9 +521,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getSkipAuthorization() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipAuthorization = null;
         try {
-            return (boolean)classInstance.Get("SkipAuthorization");
+            retObjectSkipAuthorization = classInstance.Get("SkipAuthorization");
+            return (boolean)retObjectSkipAuthorization;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipAuthorization != null ? retObjectSkipAuthorization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +535,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setSkipAuthorization(boolean SkipAuthorization) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipAuthorization", SkipAuthorization);
         } catch (JCNativeException jcne) {
@@ -485,9 +545,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public boolean getThreadAbortOnTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadAbortOnTimeout = null;
         try {
-            return (boolean)classInstance.Get("ThreadAbortOnTimeout");
+            retObjectThreadAbortOnTimeout = classInstance.Get("ThreadAbortOnTimeout");
+            return (boolean)retObjectThreadAbortOnTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectThreadAbortOnTimeout != null ? retObjectThreadAbortOnTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +559,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setThreadAbortOnTimeout(boolean ThreadAbortOnTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreadAbortOnTimeout", ThreadAbortOnTimeout);
         } catch (JCNativeException jcne) {
@@ -505,10 +569,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public IDictionary getItems() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +584,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public DateTime getTimestamp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            JCObject val = (JCObject)retObjectTimestamp;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +599,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public NetException getError() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Error");
+            retObjectError = classInstance.Get("Error");
+            JCObject val = (JCObject)retObjectError;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectError != null ? retObjectError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,16 +614,20 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public final NetException[] getAllErrors() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllErrors = null;
         try {
             ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AllErrors");
+            retObjectAllErrors = classInstance.Get("AllErrors");
+            JCObject resultingObjects = (JCObject)retObjectAllErrors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetException(resultingObject));
             }
             NetException[] resultingArray = new NetException[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllErrors != null ? retObjectAllErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,10 +635,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public IPrincipal getUser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("User");
+            retObjectUser = classInstance.Get("User");
+            JCObject val = (JCObject)retObjectUser;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUser != null ? retObjectUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +650,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setUser(IPrincipal User) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("User", User == null ? null : User.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -576,9 +660,13 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public java.lang.String getWebSocketNegotiatedProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketNegotiatedProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("WebSocketNegotiatedProtocol");
+            retObjectWebSocketNegotiatedProtocol = classInstance.Get("WebSocketNegotiatedProtocol");
+            return (java.lang.String)retObjectWebSocketNegotiatedProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWebSocketNegotiatedProtocol != null ? retObjectWebSocketNegotiatedProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +674,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public Cache getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cache");
+            retObjectCache = classInstance.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +689,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public AsyncPreloadModeFlags getAsyncPreloadMode() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncPreloadMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncPreloadMode");
+            retObjectAsyncPreloadMode = classInstance.Get("AsyncPreloadMode");
+            JCObject val = (JCObject)retObjectAsyncPreloadMode;
             return new AsyncPreloadModeFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncPreloadMode != null ? retObjectAsyncPreloadMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,7 +704,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setAsyncPreloadMode(AsyncPreloadModeFlags AsyncPreloadMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsyncPreloadMode", AsyncPreloadMode == null ? null : AsyncPreloadMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -618,10 +714,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpApplication getApplicationInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationInstance");
+            retObjectApplicationInstance = classInstance.Get("ApplicationInstance");
+            JCObject val = (JCObject)retObjectApplicationInstance;
             return new HttpApplication(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationInstance != null ? retObjectApplicationInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,7 +729,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setApplicationInstance(HttpApplication ApplicationInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationInstance", ApplicationInstance == null ? null : ApplicationInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -639,10 +739,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpApplicationState getApplication() throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            JCObject val = (JCObject)retObjectApplication;
             return new HttpApplicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,10 +754,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static HttpContext getCurrent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new HttpContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,7 +769,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public static void setCurrent(HttpContext Current) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -671,10 +779,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpRequest getRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Request");
+            retObjectRequest = classInstance.Get("Request");
+            JCObject val = (JCObject)retObjectRequest;
             return new HttpRequest(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequest != null ? retObjectRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,10 +794,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpResponse getResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Response");
+            retObjectResponse = classInstance.Get("Response");
+            JCObject val = (JCObject)retObjectResponse;
             return new HttpResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResponse != null ? retObjectResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,10 +809,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpServerUtility getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            JCObject val = (JCObject)retObjectServer;
             return new HttpServerUtility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,10 +824,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public IHttpHandler getCurrentHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentHandler");
+            retObjectCurrentHandler = classInstance.Get("CurrentHandler");
+            JCObject val = (JCObject)retObjectCurrentHandler;
             return new IHttpHandlerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentHandler != null ? retObjectCurrentHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,10 +839,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public IHttpHandler getHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Handler");
+            retObjectHandler = classInstance.Get("Handler");
+            JCObject val = (JCObject)retObjectHandler;
             return new IHttpHandlerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandler != null ? retObjectHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,7 +854,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setHandler(IHttpHandler Handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Handler", Handler == null ? null : Handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -736,10 +864,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public IHttpHandler getPreviousHandler() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousHandler");
+            retObjectPreviousHandler = classInstance.Get("PreviousHandler");
+            JCObject val = (JCObject)retObjectPreviousHandler;
             return new IHttpHandlerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousHandler != null ? retObjectPreviousHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,10 +879,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public PageInstrumentationService getPageInstrumentation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageInstrumentation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageInstrumentation");
+            retObjectPageInstrumentation = classInstance.Get("PageInstrumentation");
+            JCObject val = (JCObject)retObjectPageInstrumentation;
             return new PageInstrumentationService(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageInstrumentation != null ? retObjectPageInstrumentation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,10 +894,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public ProfileBase getProfile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.configuration.provider.ProviderException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Profile");
+            retObjectProfile = classInstance.Get("Profile");
+            JCObject val = (JCObject)retObjectProfile;
             return new ProfileBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProfile != null ? retObjectProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -769,10 +909,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public RequestNotification getCurrentNotification() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentNotification = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentNotification");
+            retObjectCurrentNotification = classInstance.Get("CurrentNotification");
+            JCObject val = (JCObject)retObjectCurrentNotification;
             return new RequestNotification(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentNotification != null ? retObjectCurrentNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,7 +924,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public void setCurrentNotification(RequestNotification CurrentNotification) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentNotification", CurrentNotification == null ? null : CurrentNotification.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -790,10 +934,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public HttpSessionState getSession() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            JCObject val = (JCObject)retObjectSession;
             return new HttpSessionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,10 +949,14 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
 
     public TraceContext getTrace() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trace");
+            retObjectTrace = classInstance.Get("Trace");
+            JCObject val = (JCObject)retObjectTrace;
             return new TraceContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrace != null ? retObjectTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

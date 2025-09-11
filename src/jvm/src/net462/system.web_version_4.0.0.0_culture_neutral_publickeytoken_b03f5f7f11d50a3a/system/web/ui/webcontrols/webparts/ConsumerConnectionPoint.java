@@ -169,9 +169,13 @@ public class ConsumerConnectionPoint extends ConnectionPoint  {
     
     public boolean SupportsConnection(Control control, ConnectionInterfaceCollection secondaryInterfaces) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsConnection = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsConnection", control == null ? null : control.getJCOInstance(), secondaryInterfaces == null ? null : secondaryInterfaces.getJCOInstance());
+            retObjectSupportsConnection = classInstance.Invoke("SupportsConnection", control == null ? null : control.getJCOInstance(), secondaryInterfaces == null ? null : secondaryInterfaces.getJCOInstance());
+            return (boolean)retObjectSupportsConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsConnection != null ? retObjectSupportsConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ConsumerConnectionPoint extends ConnectionPoint  {
 
     public void SetObject(Control control, NetObject data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetObject", control == null ? null : control.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {

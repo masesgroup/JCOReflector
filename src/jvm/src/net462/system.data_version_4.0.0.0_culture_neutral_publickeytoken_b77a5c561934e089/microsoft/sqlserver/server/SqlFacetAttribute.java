@@ -166,9 +166,13 @@ public class SqlFacetAttribute extends Attribute  {
     
     public boolean getIsFixedLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedLength = null;
         try {
-            return (boolean)classInstance.Get("IsFixedLength");
+            retObjectIsFixedLength = classInstance.Get("IsFixedLength");
+            return (boolean)retObjectIsFixedLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedLength != null ? retObjectIsFixedLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SqlFacetAttribute extends Attribute  {
 
     public void setIsFixedLength(boolean IsFixedLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFixedLength", IsFixedLength);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SqlFacetAttribute extends Attribute  {
 
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullable = null;
         try {
-            return (boolean)classInstance.Get("IsNullable");
+            retObjectIsNullable = classInstance.Get("IsNullable");
+            return (boolean)retObjectIsNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullable != null ? retObjectIsNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SqlFacetAttribute extends Attribute  {
 
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNullable", IsNullable);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class SqlFacetAttribute extends Attribute  {
 
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSize = null;
         try {
-            return (int)classInstance.Get("MaxSize");
+            retObjectMaxSize = classInstance.Get("MaxSize");
+            return (int)retObjectMaxSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class SqlFacetAttribute extends Attribute  {
 
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxSize", MaxSize);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class SqlFacetAttribute extends Attribute  {
 
     public int getPrecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (int)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (int)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class SqlFacetAttribute extends Attribute  {
 
     public void setPrecision(int Precision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Precision", Precision);
         } catch (JCNativeException jcne) {
@@ -246,9 +262,13 @@ public class SqlFacetAttribute extends Attribute  {
 
     public int getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (int)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (int)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +276,7 @@ public class SqlFacetAttribute extends Attribute  {
 
     public void setScale(int Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {

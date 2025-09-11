@@ -156,10 +156,14 @@ public class EdmType extends GlobalItem  {
     
     public CollectionType GetCollectionType() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCollectionType = null;
         try {
-            JCObject objGetCollectionType = (JCObject)classInstance.Invoke("GetCollectionType");
+            retObjectGetCollectionType = classInstance.Invoke("GetCollectionType");
+            JCObject objGetCollectionType = (JCObject)retObjectGetCollectionType;
             return new CollectionType(objGetCollectionType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCollectionType != null ? retObjectGetCollectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class EdmType extends GlobalItem  {
     
     public boolean getAbstract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbstract = null;
         try {
-            return (boolean)classInstance.Get("Abstract");
+            retObjectAbstract = classInstance.Get("Abstract");
+            return (boolean)retObjectAbstract;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAbstract != null ? retObjectAbstract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class EdmType extends GlobalItem  {
 
     public void setAbstract(boolean Abstract) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Abstract", Abstract);
         } catch (JCNativeException jcne) {
@@ -191,10 +199,14 @@ public class EdmType extends GlobalItem  {
 
     public EdmType getBaseType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseType");
+            retObjectBaseType = classInstance.Get("BaseType");
+            JCObject val = (JCObject)retObjectBaseType;
             return new EdmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseType != null ? retObjectBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class EdmType extends GlobalItem  {
 
     public void setBaseType(EdmType BaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseType", BaseType == null ? null : BaseType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +224,13 @@ public class EdmType extends GlobalItem  {
 
     public java.lang.String getFullName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("FullName");
+            retObjectFullName = classInstance.Get("FullName");
+            return (java.lang.String)retObjectFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFullName != null ? retObjectFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +238,13 @@ public class EdmType extends GlobalItem  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +252,7 @@ public class EdmType extends GlobalItem  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -242,9 +262,13 @@ public class EdmType extends GlobalItem  {
 
     public java.lang.String getNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceName");
+            retObjectNamespaceName = classInstance.Get("NamespaceName");
+            return (java.lang.String)retObjectNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceName != null ? retObjectNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +276,7 @@ public class EdmType extends GlobalItem  {
 
     public void setNamespaceName(java.lang.String NamespaceName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceName", NamespaceName);
         } catch (JCNativeException jcne) {

@@ -163,7 +163,7 @@ public class CalendarItem extends Control  {
     
     public void OnApplyTemplate() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.xaml.XamlParseException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -177,10 +177,14 @@ public class CalendarItem extends Control  {
     
     public static ComponentResourceKey getDayTitleTemplateResourceKey() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDayTitleTemplateResourceKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("DayTitleTemplateResourceKey");
+            retObjectDayTitleTemplateResourceKey = classType.Get("DayTitleTemplateResourceKey");
+            JCObject val = (JCObject)retObjectDayTitleTemplateResourceKey;
             return new ComponentResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayTitleTemplateResourceKey != null ? retObjectDayTitleTemplateResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

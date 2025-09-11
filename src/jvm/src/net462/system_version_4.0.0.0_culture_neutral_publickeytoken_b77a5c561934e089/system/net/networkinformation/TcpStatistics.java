@@ -157,9 +157,13 @@ public class TcpStatistics extends NetObject  {
     
     public long getConnectionsAccepted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionsAccepted = null;
         try {
-            return (long)classInstance.Get("ConnectionsAccepted");
+            retObjectConnectionsAccepted = classInstance.Get("ConnectionsAccepted");
+            return (long)retObjectConnectionsAccepted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectConnectionsAccepted != null ? retObjectConnectionsAccepted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getConnectionsInitiated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionsInitiated = null;
         try {
-            return (long)classInstance.Get("ConnectionsInitiated");
+            retObjectConnectionsInitiated = classInstance.Get("ConnectionsInitiated");
+            return (long)retObjectConnectionsInitiated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectConnectionsInitiated != null ? retObjectConnectionsInitiated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getCumulativeConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCumulativeConnections = null;
         try {
-            return (long)classInstance.Get("CumulativeConnections");
+            retObjectCumulativeConnections = classInstance.Get("CumulativeConnections");
+            return (long)retObjectCumulativeConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCumulativeConnections != null ? retObjectCumulativeConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getCurrentConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentConnections = null;
         try {
-            return (long)classInstance.Get("CurrentConnections");
+            retObjectCurrentConnections = classInstance.Get("CurrentConnections");
+            return (long)retObjectCurrentConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCurrentConnections != null ? retObjectCurrentConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsReceived = null;
         try {
-            return (long)classInstance.Get("ErrorsReceived");
+            retObjectErrorsReceived = classInstance.Get("ErrorsReceived");
+            return (long)retObjectErrorsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getFailedConnectionAttempts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFailedConnectionAttempts = null;
         try {
-            return (long)classInstance.Get("FailedConnectionAttempts");
+            retObjectFailedConnectionAttempts = classInstance.Get("FailedConnectionAttempts");
+            return (long)retObjectFailedConnectionAttempts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectFailedConnectionAttempts != null ? retObjectFailedConnectionAttempts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getMaximumConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumConnections = null;
         try {
-            return (long)classInstance.Get("MaximumConnections");
+            retObjectMaximumConnections = classInstance.Get("MaximumConnections");
+            return (long)retObjectMaximumConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumConnections != null ? retObjectMaximumConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getMaximumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumTransmissionTimeout = null;
         try {
-            return (long)classInstance.Get("MaximumTransmissionTimeout");
+            retObjectMaximumTransmissionTimeout = classInstance.Get("MaximumTransmissionTimeout");
+            return (long)retObjectMaximumTransmissionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumTransmissionTimeout != null ? retObjectMaximumTransmissionTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getMinimumTransmissionTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumTransmissionTimeout = null;
         try {
-            return (long)classInstance.Get("MinimumTransmissionTimeout");
+            retObjectMinimumTransmissionTimeout = classInstance.Get("MinimumTransmissionTimeout");
+            return (long)retObjectMinimumTransmissionTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMinimumTransmissionTimeout != null ? retObjectMinimumTransmissionTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getResetConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetConnections = null;
         try {
-            return (long)classInstance.Get("ResetConnections");
+            retObjectResetConnections = classInstance.Get("ResetConnections");
+            return (long)retObjectResetConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectResetConnections != null ? retObjectResetConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +297,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getResetsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetsSent = null;
         try {
-            return (long)classInstance.Get("ResetsSent");
+            retObjectResetsSent = classInstance.Get("ResetsSent");
+            return (long)retObjectResetsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectResetsSent != null ? retObjectResetsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +311,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsReceived = null;
         try {
-            return (long)classInstance.Get("SegmentsReceived");
+            retObjectSegmentsReceived = classInstance.Get("SegmentsReceived");
+            return (long)retObjectSegmentsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSegmentsReceived != null ? retObjectSegmentsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +325,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsResent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsResent = null;
         try {
-            return (long)classInstance.Get("SegmentsResent");
+            retObjectSegmentsResent = classInstance.Get("SegmentsResent");
+            return (long)retObjectSegmentsResent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSegmentsResent != null ? retObjectSegmentsResent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +339,13 @@ public class TcpStatistics extends NetObject  {
 
     public long getSegmentsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSegmentsSent = null;
         try {
-            return (long)classInstance.Get("SegmentsSent");
+            retObjectSegmentsSent = classInstance.Get("SegmentsSent");
+            return (long)retObjectSegmentsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSegmentsSent != null ? retObjectSegmentsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

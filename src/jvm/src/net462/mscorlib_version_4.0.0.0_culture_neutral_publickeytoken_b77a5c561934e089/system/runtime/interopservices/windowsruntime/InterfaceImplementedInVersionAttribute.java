@@ -170,9 +170,13 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
     
     public byte getBuildVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildVersion = null;
         try {
-            return (byte)classInstance.Get("BuildVersion");
+            retObjectBuildVersion = classInstance.Get("BuildVersion");
+            return (byte)retObjectBuildVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectBuildVersion != null ? retObjectBuildVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
 
     public byte getMajorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            return (byte)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            return (byte)retObjectMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
 
     public byte getMinorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            return (byte)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            return (byte)retObjectMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
 
     public byte getRevisionVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevisionVersion = null;
         try {
-            return (byte)classInstance.Get("RevisionVersion");
+            retObjectRevisionVersion = classInstance.Get("RevisionVersion");
+            return (byte)retObjectRevisionVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectRevisionVersion != null ? retObjectRevisionVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class InterfaceImplementedInVersionAttribute extends Attribute  {
 
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InterfaceType");
+            retObjectInterfaceType = classInstance.Get("InterfaceType");
+            JCObject val = (JCObject)retObjectInterfaceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterfaceType != null ? retObjectInterfaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

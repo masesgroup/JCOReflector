@@ -147,7 +147,7 @@ public class IComponentImplementation extends NetObject implements IComponent {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -161,10 +161,14 @@ public class IComponentImplementation extends NetObject implements IComponent {
     
     public ISite getSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
+            retObjectSite = classInstance.Get("Site");
+            JCObject val = (JCObject)retObjectSite;
             return new ISiteImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSite != null ? retObjectSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class IComponentImplementation extends NetObject implements IComponent {
 
     public void setSite(ISite Site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class IComponentImplementation extends NetObject implements IComponent {
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class IComponentImplementation extends NetObject implements IComponent {
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {

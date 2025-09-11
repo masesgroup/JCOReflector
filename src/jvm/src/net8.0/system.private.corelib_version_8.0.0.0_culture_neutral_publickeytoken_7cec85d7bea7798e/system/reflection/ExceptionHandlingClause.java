@@ -160,9 +160,13 @@ public class ExceptionHandlingClause extends NetObject  {
     
     public int getFilterOffset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterOffset = null;
         try {
-            return (int)classInstance.Get("FilterOffset");
+            retObjectFilterOffset = classInstance.Get("FilterOffset");
+            return (int)retObjectFilterOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFilterOffset != null ? retObjectFilterOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public int getHandlerLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandlerLength = null;
         try {
-            return (int)classInstance.Get("HandlerLength");
+            retObjectHandlerLength = classInstance.Get("HandlerLength");
+            return (int)retObjectHandlerLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHandlerLength != null ? retObjectHandlerLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public int getHandlerOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandlerOffset = null;
         try {
-            return (int)classInstance.Get("HandlerOffset");
+            retObjectHandlerOffset = classInstance.Get("HandlerOffset");
+            return (int)retObjectHandlerOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHandlerOffset != null ? retObjectHandlerOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public int getTryLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLength = null;
         try {
-            return (int)classInstance.Get("TryLength");
+            retObjectTryLength = classInstance.Get("TryLength");
+            return (int)retObjectTryLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTryLength != null ? retObjectTryLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public int getTryOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryOffset = null;
         try {
-            return (int)classInstance.Get("TryOffset");
+            retObjectTryOffset = classInstance.Get("TryOffset");
+            return (int)retObjectTryOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTryOffset != null ? retObjectTryOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public ExceptionHandlingClauseOptions getFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Flags");
+            retObjectFlags = classInstance.Get("Flags");
+            JCObject val = (JCObject)retObjectFlags;
             return new ExceptionHandlingClauseOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlags != null ? retObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +245,14 @@ public class ExceptionHandlingClause extends NetObject  {
 
     public NetType getCatchType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCatchType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CatchType");
+            retObjectCatchType = classInstance.Get("CatchType");
+            JCObject val = (JCObject)retObjectCatchType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatchType != null ? retObjectCatchType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,9 +167,13 @@ public class SequencePosition extends ValueType  {
     
     public boolean Equals(SequencePosition other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,19 @@ public class SequencePosition extends ValueType  {
 
     public int GetInteger() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInteger = null;
         try {
-            return (int)classInstance.Invoke("GetInteger");
+            retObjectGetInteger = classInstance.Invoke("GetInteger");
+            return (int)retObjectGetInteger;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetIntegerNumber = (java.lang.Number)retObjectGetInteger;
+                return retObjectGetIntegerNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInteger != null ? retObjectGetInteger.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +201,14 @@ public class SequencePosition extends ValueType  {
 
     public NetObject GetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject");
+            retObjectGetObject = classInstance.Invoke("GetObject");
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

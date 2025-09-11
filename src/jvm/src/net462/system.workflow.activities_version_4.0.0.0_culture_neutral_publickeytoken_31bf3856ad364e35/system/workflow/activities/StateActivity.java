@@ -173,10 +173,14 @@ public class StateActivity extends CompositeActivity  {
     
     public Activity GetDynamicActivity(java.lang.String childActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDynamicActivity = null;
         try {
-            JCObject objGetDynamicActivity = (JCObject)classInstance.Invoke("GetDynamicActivity", childActivityName);
+            retObjectGetDynamicActivity = classInstance.Invoke("GetDynamicActivity", childActivityName);
+            JCObject objGetDynamicActivity = (JCObject)retObjectGetDynamicActivity;
             return new Activity(objGetDynamicActivity);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDynamicActivity != null ? retObjectGetDynamicActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

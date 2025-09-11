@@ -175,10 +175,14 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
     
     public Color getArrowColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArrowColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArrowColor");
+            retObjectArrowColor = classInstance.Get("ArrowColor");
+            JCObject val = (JCObject)retObjectArrowColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrowColor != null ? retObjectArrowColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public void setArrowColor(Color ArrowColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArrowColor", ArrowColor == null ? null : ArrowColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +215,14 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public Rectangle getArrowRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArrowRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArrowRectangle");
+            retObjectArrowRectangle = classInstance.Get("ArrowRectangle");
+            JCObject val = (JCObject)retObjectArrowRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrowRectangle != null ? retObjectArrowRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public void setArrowRectangle(Rectangle ArrowRectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArrowRectangle", ArrowRectangle == null ? null : ArrowRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public ArrowDirection getDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new ArrowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public void setDirection(ArrowDirection Direction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Direction", Direction == null ? null : Direction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +265,14 @@ public class ToolStripArrowRenderEventArgs extends EventArgs  {
 
     public ToolStripItem getItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

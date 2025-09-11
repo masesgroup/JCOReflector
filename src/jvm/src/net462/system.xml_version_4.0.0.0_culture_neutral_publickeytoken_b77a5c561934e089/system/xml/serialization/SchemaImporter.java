@@ -158,10 +158,14 @@ public class SchemaImporter extends NetObject  {
     
     public SchemaImporterExtensionCollection getExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Extensions");
+            retObjectExtensions = classInstance.Get("Extensions");
+            JCObject val = (JCObject)retObjectExtensions;
             return new SchemaImporterExtensionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensions != null ? retObjectExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

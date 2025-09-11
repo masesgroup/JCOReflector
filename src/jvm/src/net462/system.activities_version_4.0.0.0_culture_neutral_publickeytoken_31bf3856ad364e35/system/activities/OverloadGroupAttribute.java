@@ -176,9 +176,13 @@ public class OverloadGroupAttribute extends Attribute  {
     
     public java.lang.String getGroupName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupName = null;
         try {
-            return (java.lang.String)classInstance.Get("GroupName");
+            retObjectGroupName = classInstance.Get("GroupName");
+            return (java.lang.String)retObjectGroupName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGroupName != null ? retObjectGroupName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class OverloadGroupAttribute extends Attribute  {
 
     public void setGroupName(java.lang.String GroupName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupName", GroupName);
         } catch (JCNativeException jcne) {

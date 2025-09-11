@@ -170,9 +170,13 @@ public class ContainerControl extends ScrollableControl  {
     
     public boolean Validate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate");
+            retObjectValidate = classInstance.Invoke("Validate");
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class ContainerControl extends ScrollableControl  {
 
     public boolean Validate(boolean checkAutoValidate) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            return (boolean)classInstance.Invoke("Validate", checkAutoValidate);
+            retObjectValidate = classInstance.Invoke("Validate", checkAutoValidate);
+            return (boolean)retObjectValidate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class ContainerControl extends ScrollableControl  {
 
     public boolean ValidateChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateChildren = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateChildren");
+            retObjectValidateChildren = classInstance.Invoke("ValidateChildren");
+            return (boolean)retObjectValidateChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateChildren != null ? retObjectValidateChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class ContainerControl extends ScrollableControl  {
 
     public boolean ValidateChildren(ValidationConstraints validationConstraints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateChildren = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateChildren", validationConstraints == null ? null : validationConstraints.getJCOInstance());
+            retObjectValidateChildren = classInstance.Invoke("ValidateChildren", validationConstraints == null ? null : validationConstraints.getJCOInstance());
+            return (boolean)retObjectValidateChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateChildren != null ? retObjectValidateChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void PerformAutoScale() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformAutoScale");
         } catch (JCNativeException jcne) {
@@ -224,7 +240,7 @@ public class ContainerControl extends ScrollableControl  {
      */
     @Deprecated 
     public boolean ActivateControl(Control active) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainerControl to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainerControl to obtain the full interface.");
     }
 
 
@@ -233,10 +249,14 @@ public class ContainerControl extends ScrollableControl  {
     
     public SizeF getAutoScaleDimensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScaleDimensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScaleDimensions");
+            retObjectAutoScaleDimensions = classInstance.Get("AutoScaleDimensions");
+            JCObject val = (JCObject)retObjectAutoScaleDimensions;
             return new SizeF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScaleDimensions != null ? retObjectAutoScaleDimensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void setAutoScaleDimensions(SizeF AutoScaleDimensions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScaleDimensions", AutoScaleDimensions == null ? null : AutoScaleDimensions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +274,14 @@ public class ContainerControl extends ScrollableControl  {
 
     public SizeF getCurrentAutoScaleDimensions() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentAutoScaleDimensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentAutoScaleDimensions");
+            retObjectCurrentAutoScaleDimensions = classInstance.Get("CurrentAutoScaleDimensions");
+            JCObject val = (JCObject)retObjectCurrentAutoScaleDimensions;
             return new SizeF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentAutoScaleDimensions != null ? retObjectCurrentAutoScaleDimensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +289,14 @@ public class ContainerControl extends ScrollableControl  {
 
     public AutoScaleMode getAutoScaleMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScaleMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScaleMode");
+            retObjectAutoScaleMode = classInstance.Get("AutoScaleMode");
+            JCObject val = (JCObject)retObjectAutoScaleMode;
             return new AutoScaleMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScaleMode != null ? retObjectAutoScaleMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void setAutoScaleMode(AutoScaleMode AutoScaleMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScaleMode", AutoScaleMode == null ? null : AutoScaleMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +314,14 @@ public class ContainerControl extends ScrollableControl  {
 
     public AutoValidate getAutoValidate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoValidate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoValidate");
+            retObjectAutoValidate = classInstance.Get("AutoValidate");
+            JCObject val = (JCObject)retObjectAutoValidate;
             return new AutoValidate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoValidate != null ? retObjectAutoValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +329,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void setAutoValidate(AutoValidate AutoValidate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoValidate", AutoValidate == null ? null : AutoValidate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,10 +339,14 @@ public class ContainerControl extends ScrollableControl  {
 
     public Control getActiveControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveControl");
+            retObjectActiveControl = classInstance.Get("ActiveControl");
+            JCObject val = (JCObject)retObjectActiveControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveControl != null ? retObjectActiveControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +354,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void setActiveControl(Control ActiveControl) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActiveControl", ActiveControl == null ? null : ActiveControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -328,10 +364,14 @@ public class ContainerControl extends ScrollableControl  {
 
     public Form getParentForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentForm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentForm");
+            retObjectParentForm = classInstance.Get("ParentForm");
+            JCObject val = (JCObject)retObjectParentForm;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentForm != null ? retObjectParentForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +384,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void addAutoValidateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoValidateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -354,7 +394,7 @@ public class ContainerControl extends ScrollableControl  {
 
     public void removeAutoValidateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoValidateChanged", handler);
         } catch (JCNativeException jcne) {

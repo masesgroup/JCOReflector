@@ -172,9 +172,13 @@ public class StatusStrip extends ToolStrip  {
     
     public boolean getCanOverflow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanOverflow = null;
         try {
-            return (boolean)classInstance.Get("CanOverflow");
+            retObjectCanOverflow = classInstance.Get("CanOverflow");
+            return (boolean)retObjectCanOverflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanOverflow != null ? retObjectCanOverflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setCanOverflow(boolean CanOverflow) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanOverflow", CanOverflow);
         } catch (JCNativeException jcne) {
@@ -192,9 +196,13 @@ public class StatusStrip extends ToolStrip  {
 
     public boolean getShowItemToolTips() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowItemToolTips = null;
         try {
-            return (boolean)classInstance.Get("ShowItemToolTips");
+            retObjectShowItemToolTips = classInstance.Get("ShowItemToolTips");
+            return (boolean)retObjectShowItemToolTips;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowItemToolTips != null ? retObjectShowItemToolTips.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setShowItemToolTips(boolean ShowItemToolTips) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowItemToolTips", ShowItemToolTips);
         } catch (JCNativeException jcne) {
@@ -212,9 +220,13 @@ public class StatusStrip extends ToolStrip  {
 
     public boolean getSizingGrip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizingGrip = null;
         try {
-            return (boolean)classInstance.Get("SizingGrip");
+            retObjectSizingGrip = classInstance.Get("SizingGrip");
+            return (boolean)retObjectSizingGrip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSizingGrip != null ? retObjectSizingGrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setSizingGrip(boolean SizingGrip) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizingGrip", SizingGrip);
         } catch (JCNativeException jcne) {
@@ -232,9 +244,13 @@ public class StatusStrip extends ToolStrip  {
 
     public boolean getStretch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            return (boolean)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            return (boolean)retObjectStretch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setStretch(boolean Stretch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Stretch", Stretch);
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class StatusStrip extends ToolStrip  {
 
     public Rectangle getSizeGripBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeGripBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeGripBounds");
+            retObjectSizeGripBounds = classInstance.Get("SizeGripBounds");
+            JCObject val = (JCObject)retObjectSizeGripBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeGripBounds != null ? retObjectSizeGripBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +283,14 @@ public class StatusStrip extends ToolStrip  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +308,14 @@ public class StatusStrip extends ToolStrip  {
 
     public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripStyle");
+            retObjectGripStyle = classInstance.Get("GripStyle");
+            JCObject val = (JCObject)retObjectGripStyle;
             return new ToolStripGripStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripStyle != null ? retObjectGripStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setGripStyle(ToolStripGripStyle GripStyle) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GripStyle", GripStyle == null ? null : GripStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +333,14 @@ public class StatusStrip extends ToolStrip  {
 
     public ToolStripLayoutStyle getLayoutStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutStyle");
+            retObjectLayoutStyle = classInstance.Get("LayoutStyle");
+            JCObject val = (JCObject)retObjectLayoutStyle;
             return new ToolStripLayoutStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutStyle != null ? retObjectLayoutStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +348,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void setLayoutStyle(ToolStripLayoutStyle LayoutStyle) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LayoutStyle", LayoutStyle == null ? null : LayoutStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +363,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -341,7 +373,7 @@ public class StatusStrip extends ToolStrip  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {

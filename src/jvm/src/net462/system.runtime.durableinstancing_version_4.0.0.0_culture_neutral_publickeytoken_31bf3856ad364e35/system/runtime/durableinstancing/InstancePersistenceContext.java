@@ -168,10 +168,14 @@ public class InstancePersistenceContext extends NetObject  {
     
     public NetException CreateBindReclaimedLockException(long instanceVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindReclaimedLockException = null;
         try {
-            JCObject objCreateBindReclaimedLockException = (JCObject)classInstance.Invoke("CreateBindReclaimedLockException", instanceVersion);
+            retObjectCreateBindReclaimedLockException = classInstance.Invoke("CreateBindReclaimedLockException", instanceVersion);
+            JCObject objCreateBindReclaimedLockException = (JCObject)retObjectCreateBindReclaimedLockException;
             return new NetException(objCreateBindReclaimedLockException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindReclaimedLockException != null ? retObjectCreateBindReclaimedLockException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public IAsyncResult BeginBindReclaimedLock(long instanceVersion, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginBindReclaimedLock = null;
         try {
-            JCObject objBeginBindReclaimedLock = (JCObject)classInstance.Invoke("BeginBindReclaimedLock", instanceVersion, timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginBindReclaimedLock = classInstance.Invoke("BeginBindReclaimedLock", instanceVersion, timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginBindReclaimedLock = (JCObject)retObjectBeginBindReclaimedLock;
             return new IAsyncResultImplementation(objBeginBindReclaimedLock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginBindReclaimedLock != null ? retObjectBeginBindReclaimedLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public IAsyncResult BeginExecute(InstancePersistenceCommand command, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginExecute = null;
         try {
-            JCObject objBeginExecute = (JCObject)classInstance.Invoke("BeginExecute", command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginExecute = classInstance.Invoke("BeginExecute", command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginExecute = (JCObject)retObjectBeginExecute;
             return new IAsyncResultImplementation(objBeginExecute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginExecute != null ? retObjectBeginExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void AssociatedInstanceKey(Guid key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AssociatedInstanceKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +223,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void BindAcquiredLock(long instanceVersion) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindAcquiredLock", instanceVersion);
         } catch (JCNativeException jcne) {
@@ -221,7 +233,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void BindEvent(InstancePersistenceEvent persistenceEvent) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindEvent", persistenceEvent == null ? null : persistenceEvent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +243,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void BindInstance(Guid instanceId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindInstance", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -241,7 +253,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void BindInstanceOwner(Guid instanceOwnerId, Guid lockToken) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindInstanceOwner", instanceOwnerId == null ? null : instanceOwnerId.getJCOInstance(), lockToken == null ? null : lockToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +263,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void BindReclaimedLock(long instanceVersion, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindReclaimedLock", instanceVersion, timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,7 +273,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void CompletedInstance() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompletedInstance");
         } catch (JCNativeException jcne) {
@@ -271,7 +283,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void CompletedInstanceKey(Guid key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompletedInstanceKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +293,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void EndBindReclaimedLock(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndBindReclaimedLock", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +303,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void EndExecute(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndExecute", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,7 +313,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void Execute(InstancePersistenceCommand command, TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", command == null ? null : command.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -311,7 +323,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void QueriedInstanceStore(InstanceStoreQueryResult queryResult) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("QueriedInstanceStore", queryResult == null ? null : queryResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -321,7 +333,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void UnassociatedInstanceKey(Guid key) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnassociatedInstanceKey", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +343,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void WroteInstanceKeyMetadataValue(Guid key, XName name, InstanceValue value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WroteInstanceKeyMetadataValue", key == null ? null : key.getJCOInstance(), name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -341,7 +353,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void WroteInstanceMetadataValue(XName name, InstanceValue value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WroteInstanceMetadataValue", name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,7 +363,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void WroteInstanceOwnerMetadataValue(XName name, InstanceValue value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WroteInstanceOwnerMetadataValue", name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,9 +377,13 @@ public class InstancePersistenceContext extends NetObject  {
     
     public long getInstanceVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceVersion = null;
         try {
-            return (long)classInstance.Get("InstanceVersion");
+            retObjectInstanceVersion = classInstance.Get("InstanceVersion");
+            return (long)retObjectInstanceVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectInstanceVersion != null ? retObjectInstanceVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +391,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public Guid getLockToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LockToken");
+            retObjectLockToken = classInstance.Get("LockToken");
+            JCObject val = (JCObject)retObjectLockToken;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockToken != null ? retObjectLockToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +406,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public NetObject getUserContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserContext");
+            retObjectUserContext = classInstance.Get("UserContext");
+            JCObject val = (JCObject)retObjectUserContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserContext != null ? retObjectUserContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +421,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public InstanceHandle getInstanceHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceHandle");
+            retObjectInstanceHandle = classInstance.Get("InstanceHandle");
+            JCObject val = (JCObject)retObjectInstanceHandle;
             return new InstanceHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceHandle != null ? retObjectInstanceHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +436,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void setInstanceHandle(InstanceHandle InstanceHandle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceHandle", InstanceHandle == null ? null : InstanceHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -418,10 +446,14 @@ public class InstancePersistenceContext extends NetObject  {
 
     public InstanceView getInstanceView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceView");
+            retObjectInstanceView = classInstance.Get("InstanceView");
+            JCObject val = (JCObject)retObjectInstanceView;
             return new InstanceView(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceView != null ? retObjectInstanceView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,7 +461,7 @@ public class InstancePersistenceContext extends NetObject  {
 
     public void setInstanceView(InstanceView InstanceView) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceView", InstanceView == null ? null : InstanceView.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,9 +171,13 @@ public class SecurityRulesAttribute extends Attribute  {
     
     public boolean getSkipVerificationInFullTrust() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipVerificationInFullTrust = null;
         try {
-            return (boolean)classInstance.Get("SkipVerificationInFullTrust");
+            retObjectSkipVerificationInFullTrust = classInstance.Get("SkipVerificationInFullTrust");
+            return (boolean)retObjectSkipVerificationInFullTrust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipVerificationInFullTrust != null ? retObjectSkipVerificationInFullTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class SecurityRulesAttribute extends Attribute  {
 
     public void setSkipVerificationInFullTrust(boolean SkipVerificationInFullTrust) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipVerificationInFullTrust", SkipVerificationInFullTrust);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class SecurityRulesAttribute extends Attribute  {
 
     public SecurityRuleSet getRuleSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RuleSet");
+            retObjectRuleSet = classInstance.Get("RuleSet");
+            JCObject val = (JCObject)retObjectRuleSet;
             return new SecurityRuleSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRuleSet != null ? retObjectRuleSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

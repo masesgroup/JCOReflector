@@ -169,10 +169,14 @@ public class TemplatedWizardStep extends WizardStepBase  {
     
     public Control getContentTemplateContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTemplateContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentTemplateContainer");
+            retObjectContentTemplateContainer = classInstance.Get("ContentTemplateContainer");
+            JCObject val = (JCObject)retObjectContentTemplateContainer;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentTemplateContainer != null ? retObjectContentTemplateContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public void setContentTemplateContainer(Control ContentTemplateContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentTemplateContainer", ContentTemplateContainer == null ? null : ContentTemplateContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public Control getCustomNavigationTemplateContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomNavigationTemplateContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomNavigationTemplateContainer");
+            retObjectCustomNavigationTemplateContainer = classInstance.Get("CustomNavigationTemplateContainer");
+            JCObject val = (JCObject)retObjectCustomNavigationTemplateContainer;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomNavigationTemplateContainer != null ? retObjectCustomNavigationTemplateContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public void setCustomNavigationTemplateContainer(Control CustomNavigationTemplateContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomNavigationTemplateContainer", CustomNavigationTemplateContainer == null ? null : CustomNavigationTemplateContainer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public ITemplate getContentTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentTemplate");
+            retObjectContentTemplate = classInstance.Get("ContentTemplate");
+            JCObject val = (JCObject)retObjectContentTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentTemplate != null ? retObjectContentTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public void setContentTemplate(ITemplate ContentTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentTemplate", ContentTemplate == null ? null : ContentTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +244,14 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public ITemplate getCustomNavigationTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomNavigationTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomNavigationTemplate");
+            retObjectCustomNavigationTemplate = classInstance.Get("CustomNavigationTemplate");
+            JCObject val = (JCObject)retObjectCustomNavigationTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomNavigationTemplate != null ? retObjectCustomNavigationTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class TemplatedWizardStep extends WizardStepBase  {
 
     public void setCustomNavigationTemplate(ITemplate CustomNavigationTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomNavigationTemplate", CustomNavigationTemplate == null ? null : CustomNavigationTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -172,9 +172,13 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
     
     public boolean ShouldSerializeIdentityVerifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeIdentityVerifier = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeIdentityVerifier");
+            retObjectShouldSerializeIdentityVerifier = classInstance.Invoke("ShouldSerializeIdentityVerifier");
+            return (boolean)retObjectShouldSerializeIdentityVerifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeIdentityVerifier != null ? retObjectShouldSerializeIdentityVerifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildClientStreamUpgradeProvider = null;
         try {
-            JCObject objBuildClientStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildClientStreamUpgradeProvider = classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildClientStreamUpgradeProvider = (JCObject)retObjectBuildClientStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildClientStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildClientStreamUpgradeProvider != null ? retObjectBuildClientStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public StreamUpgradeProvider BuildServerStreamUpgradeProvider(BindingContext context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildServerStreamUpgradeProvider = null;
         try {
-            JCObject objBuildServerStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildServerStreamUpgradeProvider = classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildServerStreamUpgradeProvider = (JCObject)retObjectBuildServerStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildServerStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildServerStreamUpgradeProvider != null ? retObjectBuildServerStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public XmlElement GetTransportTokenAssertion() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransportTokenAssertion = null;
         try {
-            JCObject objGetTransportTokenAssertion = (JCObject)classInstance.Invoke("GetTransportTokenAssertion");
+            retObjectGetTransportTokenAssertion = classInstance.Invoke("GetTransportTokenAssertion");
+            JCObject objGetTransportTokenAssertion = (JCObject)retObjectGetTransportTokenAssertion;
             return new XmlElement(objGetTransportTokenAssertion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransportTokenAssertion != null ? retObjectGetTransportTokenAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +250,7 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -239,9 +259,13 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
     
     public boolean getRequireClientCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireClientCertificate = null;
         try {
-            return (boolean)classInstance.Get("RequireClientCertificate");
+            retObjectRequireClientCertificate = classInstance.Get("RequireClientCertificate");
+            return (boolean)retObjectRequireClientCertificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireClientCertificate != null ? retObjectRequireClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +273,7 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public void setRequireClientCertificate(boolean RequireClientCertificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireClientCertificate", RequireClientCertificate);
         } catch (JCNativeException jcne) {
@@ -259,10 +283,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public SslProtocols getSslProtocols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSslProtocols = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SslProtocols");
+            retObjectSslProtocols = classInstance.Get("SslProtocols");
+            JCObject val = (JCObject)retObjectSslProtocols;
             return new SslProtocols(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSslProtocols != null ? retObjectSslProtocols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +298,7 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public void setSslProtocols(SslProtocols SslProtocols) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SslProtocols", SslProtocols == null ? null : SslProtocols.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,10 +308,14 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public IdentityVerifier getIdentityVerifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityVerifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityVerifier");
+            retObjectIdentityVerifier = classInstance.Get("IdentityVerifier");
+            JCObject val = (JCObject)retObjectIdentityVerifier;
             return new IdentityVerifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityVerifier != null ? retObjectIdentityVerifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +323,7 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
 
     public void setIdentityVerifier(IdentityVerifier IdentityVerifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentityVerifier", IdentityVerifier == null ? null : IdentityVerifier.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -155,9 +155,13 @@ public class MorphHelper extends NetObject  {
     
     public static PropertyValueMorphHelper GetPropertyValueMorphHelper(NetType propertyType) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPropertyValueMorphHelper = null;
         try {
-            return (PropertyValueMorphHelper)classType.Invoke("GetPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance());
+            retObjectGetPropertyValueMorphHelper = classType.Invoke("GetPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance());
+            return (PropertyValueMorphHelper)retObjectGetPropertyValueMorphHelper;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into PropertyValueMorphHelper", retObjectGetPropertyValueMorphHelper != null ? retObjectGetPropertyValueMorphHelper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class MorphHelper extends NetObject  {
 
     public static void AddPropertyValueMorphHelper(NetType propertyType, PropertyValueMorphHelper extension) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPropertyValueMorphHelper", propertyType == null ? null : propertyType.getJCOInstance(), extension);
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class MorphHelper extends NetObject  {
 
     public static void MorphObject(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MorphObject", oldModelItem == null ? null : oldModelItem.getJCOInstance(), newModelitem == null ? null : newModelitem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class MorphHelper extends NetObject  {
 
     public static void MorphProperties(ModelItem oldModelItem, ModelItem newModelitem) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.NotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MorphProperties", oldModelItem == null ? null : oldModelItem.getJCOInstance(), newModelitem == null ? null : newModelitem.getJCOInstance());
         } catch (JCNativeException jcne) {

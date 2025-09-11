@@ -165,10 +165,14 @@ public class ConnectionStringsExpressionBuilder extends ExpressionBuilder  {
     
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCodeExpression = null;
         try {
-            JCObject objGetCodeExpression = (JCObject)classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectGetCodeExpression = classInstance.Invoke("GetCodeExpression", entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objGetCodeExpression = (JCObject)retObjectGetCodeExpression;
             return new CodeExpression(objGetCodeExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCodeExpression != null ? retObjectGetCodeExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ConnectionStringsExpressionBuilder extends ExpressionBuilder  {
 
     public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateExpression = null;
         try {
-            JCObject objEvaluateExpression = (JCObject)classInstance.Invoke("EvaluateExpression", target == null ? null : target.getJCOInstance(), entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectEvaluateExpression = classInstance.Invoke("EvaluateExpression", target == null ? null : target.getJCOInstance(), entry == null ? null : entry.getJCOInstance(), parsedData == null ? null : parsedData.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objEvaluateExpression = (JCObject)retObjectEvaluateExpression;
             return new NetObject(objEvaluateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateExpression != null ? retObjectEvaluateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class ConnectionStringsExpressionBuilder extends ExpressionBuilder  {
 
     public NetObject ParseExpression(java.lang.String expression, NetType propertyType, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseExpression = null;
         try {
-            JCObject objParseExpression = (JCObject)classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectParseExpression = classInstance.Invoke("ParseExpression", expression, propertyType == null ? null : propertyType.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objParseExpression = (JCObject)retObjectParseExpression;
             return new NetObject(objParseExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExpression != null ? retObjectParseExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class ConnectionStringsExpressionBuilder extends ExpressionBuilder  {
 
     public static java.lang.String GetConnectionString(java.lang.String connectionStringName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConnectionString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetConnectionString", connectionStringName);
+            retObjectGetConnectionString = classType.Invoke("GetConnectionString", connectionStringName);
+            return (java.lang.String)retObjectGetConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetConnectionString != null ? retObjectGetConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class ConnectionStringsExpressionBuilder extends ExpressionBuilder  {
 
     public static java.lang.String GetConnectionStringProviderName(java.lang.String connectionStringName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.configuration.ConfigurationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetConnectionStringProviderName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetConnectionStringProviderName", connectionStringName);
+            retObjectGetConnectionStringProviderName = classType.Invoke("GetConnectionStringProviderName", connectionStringName);
+            return (java.lang.String)retObjectGetConnectionStringProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetConnectionStringProviderName != null ? retObjectGetConnectionStringProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

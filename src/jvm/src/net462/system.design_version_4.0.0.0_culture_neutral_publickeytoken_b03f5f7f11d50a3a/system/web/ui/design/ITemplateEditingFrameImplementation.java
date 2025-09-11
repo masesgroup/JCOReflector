@@ -146,7 +146,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
     
     public void Close(boolean saveChanges) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", saveChanges);
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void Open() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void Resize(int width, int height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resize", width, height);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void Save() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void UpdateControlName(java.lang.String newName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateControlName", newName);
         } catch (JCNativeException jcne) {
@@ -210,9 +210,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
     
     public int getInitialHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialHeight = null;
         try {
-            return (int)classInstance.Get("InitialHeight");
+            retObjectInitialHeight = classInstance.Get("InitialHeight");
+            return (int)retObjectInitialHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInitialHeight != null ? retObjectInitialHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void setInitialHeight(int InitialHeight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialHeight", InitialHeight);
         } catch (JCNativeException jcne) {
@@ -230,9 +234,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public int getInitialWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialWidth = null;
         try {
-            return (int)classInstance.Get("InitialWidth");
+            retObjectInitialWidth = classInstance.Get("InitialWidth");
+            return (int)retObjectInitialWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInitialWidth != null ? retObjectInitialWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +248,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void setInitialWidth(int InitialWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialWidth", InitialWidth);
         } catch (JCNativeException jcne) {
@@ -250,9 +258,13 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +272,12 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public java.lang.String[] getTemplateNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TemplateNames");
+            retObjectTemplateNames = classInstance.Get("TemplateNames");
+            JCObject resultingObjects = (JCObject)retObjectTemplateNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -272,6 +286,8 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 				resultingArray[indexTemplateNames] = (java.lang.String)resultingArrayList.get(indexTemplateNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTemplateNames != null ? retObjectTemplateNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +295,14 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public TemplateEditingVerb getVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerb = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verb");
+            retObjectVerb = classInstance.Get("Verb");
+            JCObject val = (JCObject)retObjectVerb;
             return new TemplateEditingVerb(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerb != null ? retObjectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +310,7 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public void setVerb(TemplateEditingVerb Verb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verb", Verb == null ? null : Verb.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -300,10 +320,14 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public Style getControlStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlStyle");
+            retObjectControlStyle = classInstance.Get("ControlStyle");
+            JCObject val = (JCObject)retObjectControlStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlStyle != null ? retObjectControlStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,16 +335,20 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
 
     public final Style[] getTemplateStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplateStyles = null;
         try {
             ArrayList<Style> resultingArrayList = new ArrayList<Style>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TemplateStyles");
+            retObjectTemplateStyles = classInstance.Get("TemplateStyles");
+            JCObject resultingObjects = (JCObject)retObjectTemplateStyles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Style(resultingObject));
             }
             Style[] resultingArray = new Style[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplateStyles != null ? retObjectTemplateStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

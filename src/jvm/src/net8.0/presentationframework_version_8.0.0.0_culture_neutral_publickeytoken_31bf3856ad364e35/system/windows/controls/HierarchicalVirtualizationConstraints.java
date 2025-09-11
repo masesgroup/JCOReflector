@@ -170,9 +170,13 @@ public class HierarchicalVirtualizationConstraints extends ValueType  {
     
     public boolean Equals(HierarchicalVirtualizationConstraints comparisonConstraints) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", comparisonConstraints == null ? null : comparisonConstraints.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", comparisonConstraints == null ? null : comparisonConstraints.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class HierarchicalVirtualizationConstraints extends ValueType  {
     
     public VirtualizationCacheLength getCacheLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheLength = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheLength");
+            retObjectCacheLength = classInstance.Get("CacheLength");
+            JCObject val = (JCObject)retObjectCacheLength;
             return new VirtualizationCacheLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheLength != null ? retObjectCacheLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class HierarchicalVirtualizationConstraints extends ValueType  {
 
     public VirtualizationCacheLengthUnit getCacheLengthUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheLengthUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheLengthUnit");
+            retObjectCacheLengthUnit = classInstance.Get("CacheLengthUnit");
+            JCObject val = (JCObject)retObjectCacheLengthUnit;
             return new VirtualizationCacheLengthUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheLengthUnit != null ? retObjectCacheLengthUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class HierarchicalVirtualizationConstraints extends ValueType  {
 
     public Rect getViewport() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Viewport");
+            retObjectViewport = classInstance.Get("Viewport");
+            JCObject val = (JCObject)retObjectViewport;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewport != null ? retObjectViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

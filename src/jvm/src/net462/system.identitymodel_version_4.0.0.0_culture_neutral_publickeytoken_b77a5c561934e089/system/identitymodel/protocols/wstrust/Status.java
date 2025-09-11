@@ -169,9 +169,13 @@ public class Status extends NetObject  {
     
     public java.lang.String getCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCode = null;
         try {
-            return (java.lang.String)classInstance.Get("Code");
+            retObjectCode = classInstance.Get("Code");
+            return (java.lang.String)retObjectCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCode != null ? retObjectCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class Status extends NetObject  {
 
     public void setCode(java.lang.String Code) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Code", Code);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class Status extends NetObject  {
 
     public java.lang.String getReason() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReason = null;
         try {
-            return (java.lang.String)classInstance.Get("Reason");
+            retObjectReason = classInstance.Get("Reason");
+            return (java.lang.String)retObjectReason;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReason != null ? retObjectReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class Status extends NetObject  {
 
     public void setReason(java.lang.String Reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reason", Reason);
         } catch (JCNativeException jcne) {

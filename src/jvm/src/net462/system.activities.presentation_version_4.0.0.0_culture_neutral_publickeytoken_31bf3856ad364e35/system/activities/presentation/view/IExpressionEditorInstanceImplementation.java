@@ -145,9 +145,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
     
     public boolean CanCompleteWord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCompleteWord = null;
         try {
-            return (boolean)classInstance.Invoke("CanCompleteWord");
+            retObjectCanCompleteWord = classInstance.Invoke("CanCompleteWord");
+            return (boolean)retObjectCanCompleteWord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCompleteWord != null ? retObjectCanCompleteWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,9 +159,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanCopy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCopy = null;
         try {
-            return (boolean)classInstance.Invoke("CanCopy");
+            retObjectCanCopy = classInstance.Invoke("CanCopy");
+            return (boolean)retObjectCanCopy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCopy != null ? retObjectCanCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +173,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanCut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCut = null;
         try {
-            return (boolean)classInstance.Invoke("CanCut");
+            retObjectCanCut = classInstance.Invoke("CanCut");
+            return (boolean)retObjectCanCut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanCut != null ? retObjectCanCut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +187,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanDecreaseFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDecreaseFilterLevel = null;
         try {
-            return (boolean)classInstance.Invoke("CanDecreaseFilterLevel");
+            retObjectCanDecreaseFilterLevel = classInstance.Invoke("CanDecreaseFilterLevel");
+            return (boolean)retObjectCanDecreaseFilterLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanDecreaseFilterLevel != null ? retObjectCanDecreaseFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +201,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanGlobalIntellisense() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGlobalIntellisense = null;
         try {
-            return (boolean)classInstance.Invoke("CanGlobalIntellisense");
+            retObjectCanGlobalIntellisense = classInstance.Invoke("CanGlobalIntellisense");
+            return (boolean)retObjectCanGlobalIntellisense;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanGlobalIntellisense != null ? retObjectCanGlobalIntellisense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +215,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanIncreaseFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanIncreaseFilterLevel = null;
         try {
-            return (boolean)classInstance.Invoke("CanIncreaseFilterLevel");
+            retObjectCanIncreaseFilterLevel = classInstance.Invoke("CanIncreaseFilterLevel");
+            return (boolean)retObjectCanIncreaseFilterLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanIncreaseFilterLevel != null ? retObjectCanIncreaseFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +229,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanParameterInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanParameterInfo = null;
         try {
-            return (boolean)classInstance.Invoke("CanParameterInfo");
+            retObjectCanParameterInfo = classInstance.Invoke("CanParameterInfo");
+            return (boolean)retObjectCanParameterInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanParameterInfo != null ? retObjectCanParameterInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +243,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanPaste() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanPaste = null;
         try {
-            return (boolean)classInstance.Invoke("CanPaste");
+            retObjectCanPaste = classInstance.Invoke("CanPaste");
+            return (boolean)retObjectCanPaste;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanPaste != null ? retObjectCanPaste.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +257,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanQuickInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanQuickInfo = null;
         try {
-            return (boolean)classInstance.Invoke("CanQuickInfo");
+            retObjectCanQuickInfo = classInstance.Invoke("CanQuickInfo");
+            return (boolean)retObjectCanQuickInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanQuickInfo != null ? retObjectCanQuickInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +271,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanRedo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRedo = null;
         try {
-            return (boolean)classInstance.Invoke("CanRedo");
+            retObjectCanRedo = classInstance.Invoke("CanRedo");
+            return (boolean)retObjectCanRedo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRedo != null ? retObjectCanRedo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +285,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CanUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUndo = null;
         try {
-            return (boolean)classInstance.Invoke("CanUndo");
+            retObjectCanUndo = classInstance.Invoke("CanUndo");
+            return (boolean)retObjectCanUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanUndo != null ? retObjectCanUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +299,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean CompleteWord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteWord = null;
         try {
-            return (boolean)classInstance.Invoke("CompleteWord");
+            retObjectCompleteWord = classInstance.Invoke("CompleteWord");
+            return (boolean)retObjectCompleteWord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCompleteWord != null ? retObjectCompleteWord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +313,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            return (boolean)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            return (boolean)retObjectCopy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +327,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean Cut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCut = null;
         try {
-            return (boolean)classInstance.Invoke("Cut");
+            retObjectCut = classInstance.Invoke("Cut");
+            return (boolean)retObjectCut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCut != null ? retObjectCut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,9 +341,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean DecreaseFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecreaseFilterLevel = null;
         try {
-            return (boolean)classInstance.Invoke("DecreaseFilterLevel");
+            retObjectDecreaseFilterLevel = classInstance.Invoke("DecreaseFilterLevel");
+            return (boolean)retObjectDecreaseFilterLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDecreaseFilterLevel != null ? retObjectDecreaseFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,9 +355,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean GlobalIntellisense() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalIntellisense = null;
         try {
-            return (boolean)classInstance.Invoke("GlobalIntellisense");
+            retObjectGlobalIntellisense = classInstance.Invoke("GlobalIntellisense");
+            return (boolean)retObjectGlobalIntellisense;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGlobalIntellisense != null ? retObjectGlobalIntellisense.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,9 +369,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean IncreaseFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncreaseFilterLevel = null;
         try {
-            return (boolean)classInstance.Invoke("IncreaseFilterLevel");
+            retObjectIncreaseFilterLevel = classInstance.Invoke("IncreaseFilterLevel");
+            return (boolean)retObjectIncreaseFilterLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIncreaseFilterLevel != null ? retObjectIncreaseFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,9 +383,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean ParameterInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterInfo = null;
         try {
-            return (boolean)classInstance.Invoke("ParameterInfo");
+            retObjectParameterInfo = classInstance.Invoke("ParameterInfo");
+            return (boolean)retObjectParameterInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectParameterInfo != null ? retObjectParameterInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,9 +397,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean Paste() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPaste = null;
         try {
-            return (boolean)classInstance.Invoke("Paste");
+            retObjectPaste = classInstance.Invoke("Paste");
+            return (boolean)retObjectPaste;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPaste != null ? retObjectPaste.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,9 +411,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean QuickInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuickInfo = null;
         try {
-            return (boolean)classInstance.Invoke("QuickInfo");
+            retObjectQuickInfo = classInstance.Invoke("QuickInfo");
+            return (boolean)retObjectQuickInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectQuickInfo != null ? retObjectQuickInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,9 +425,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean Redo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedo = null;
         try {
-            return (boolean)classInstance.Invoke("Redo");
+            retObjectRedo = classInstance.Invoke("Redo");
+            return (boolean)retObjectRedo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRedo != null ? retObjectRedo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,9 +439,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean Undo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUndo = null;
         try {
-            return (boolean)classInstance.Invoke("Undo");
+            retObjectUndo = classInstance.Invoke("Undo");
+            return (boolean)retObjectUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUndo != null ? retObjectUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,9 +453,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public java.lang.String GetCommittedText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCommittedText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCommittedText");
+            retObjectGetCommittedText = classInstance.Invoke("GetCommittedText");
+            return (java.lang.String)retObjectGetCommittedText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCommittedText != null ? retObjectGetCommittedText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +467,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void ClearSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearSelection");
         } catch (JCNativeException jcne) {
@@ -385,7 +477,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -395,7 +487,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void Focus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -409,9 +501,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
     
     public boolean getAcceptsReturn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsReturn = null;
         try {
-            return (boolean)classInstance.Get("AcceptsReturn");
+            retObjectAcceptsReturn = classInstance.Get("AcceptsReturn");
+            return (boolean)retObjectAcceptsReturn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsReturn != null ? retObjectAcceptsReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +515,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsReturn", AcceptsReturn);
         } catch (JCNativeException jcne) {
@@ -429,9 +525,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +539,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -449,9 +549,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public boolean getHasAggregateFocus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAggregateFocus = null;
         try {
-            return (boolean)classInstance.Get("HasAggregateFocus");
+            retObjectHasAggregateFocus = classInstance.Get("HasAggregateFocus");
+            return (boolean)retObjectHasAggregateFocus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAggregateFocus != null ? retObjectHasAggregateFocus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,9 +563,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public int getMaxLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLines = null;
         try {
-            return (int)classInstance.Get("MaxLines");
+            retObjectMaxLines = classInstance.Get("MaxLines");
+            return (int)retObjectMaxLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLines != null ? retObjectMaxLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +577,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setMaxLines(int MaxLines) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLines", MaxLines);
         } catch (JCNativeException jcne) {
@@ -479,9 +587,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public int getMinLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinLines = null;
         try {
-            return (int)classInstance.Get("MinLines");
+            retObjectMinLines = classInstance.Get("MinLines");
+            return (int)retObjectMinLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinLines != null ? retObjectMinLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,7 +601,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setMinLines(int MinLines) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinLines", MinLines);
         } catch (JCNativeException jcne) {
@@ -499,9 +611,13 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,7 +625,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -519,10 +635,14 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public Control getHostControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostControl");
+            retObjectHostControl = classInstance.Get("HostControl");
+            JCObject val = (JCObject)retObjectHostControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostControl != null ? retObjectHostControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,10 +650,14 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public ScrollBarVisibility getHorizontalScrollBarVisibility() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalScrollBarVisibility");
+            retObjectHorizontalScrollBarVisibility = classInstance.Get("HorizontalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectHorizontalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScrollBarVisibility != null ? retObjectHorizontalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +665,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setHorizontalScrollBarVisibility(ScrollBarVisibility HorizontalScrollBarVisibility) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalScrollBarVisibility", HorizontalScrollBarVisibility == null ? null : HorizontalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -551,10 +675,14 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public ScrollBarVisibility getVerticalScrollBarVisibility() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollBarVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalScrollBarVisibility");
+            retObjectVerticalScrollBarVisibility = classInstance.Get("VerticalScrollBarVisibility");
+            JCObject val = (JCObject)retObjectVerticalScrollBarVisibility;
             return new ScrollBarVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScrollBarVisibility != null ? retObjectVerticalScrollBarVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,7 +690,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void setVerticalScrollBarVisibility(ScrollBarVisibility VerticalScrollBarVisibility) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalScrollBarVisibility", VerticalScrollBarVisibility == null ? null : VerticalScrollBarVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -577,7 +705,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -587,7 +715,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -597,7 +725,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void addGotAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GotAggregateFocus", handler);
         } catch (JCNativeException jcne) {
@@ -607,7 +735,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void removeGotAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GotAggregateFocus", handler);
         } catch (JCNativeException jcne) {
@@ -617,7 +745,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void addLostAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LostAggregateFocus", handler);
         } catch (JCNativeException jcne) {
@@ -627,7 +755,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void removeLostAggregateFocus(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LostAggregateFocus", handler);
         } catch (JCNativeException jcne) {
@@ -637,7 +765,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -647,7 +775,7 @@ public class IExpressionEditorInstanceImplementation extends NetObject implement
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {

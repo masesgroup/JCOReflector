@@ -166,7 +166,7 @@ public class IncrementalLassoHitTester extends IncrementalHitTester  {
 
     public void addSelectionChanged(LassoSelectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class IncrementalLassoHitTester extends IncrementalHitTester  {
 
     public void removeSelectionChanged(LassoSelectionChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {

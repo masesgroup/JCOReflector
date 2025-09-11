@@ -157,10 +157,14 @@ public class RoutedEvent extends NetObject  {
     
     public RoutedEvent AddOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddOwner = null;
         try {
-            JCObject objAddOwner = (JCObject)classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectAddOwner = classInstance.Invoke("AddOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject objAddOwner = (JCObject)retObjectAddOwner;
             return new RoutedEvent(objAddOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddOwner != null ? retObjectAddOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class RoutedEvent extends NetObject  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class RoutedEvent extends NetObject  {
 
     public NetType getHandlerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandlerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HandlerType");
+            retObjectHandlerType = classInstance.Get("HandlerType");
+            JCObject val = (JCObject)retObjectHandlerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandlerType != null ? retObjectHandlerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class RoutedEvent extends NetObject  {
 
     public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerType");
+            retObjectOwnerType = classInstance.Get("OwnerType");
+            JCObject val = (JCObject)retObjectOwnerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerType != null ? retObjectOwnerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class RoutedEvent extends NetObject  {
 
     public RoutingStrategy getRoutingStrategy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoutingStrategy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RoutingStrategy");
+            retObjectRoutingStrategy = classInstance.Get("RoutingStrategy");
+            JCObject val = (JCObject)retObjectRoutingStrategy;
             return new RoutingStrategy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoutingStrategy != null ? retObjectRoutingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -176,9 +176,13 @@ public class ElementLocalizability extends NetObject  {
     
     public java.lang.String getFormattingTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormattingTag = null;
         try {
-            return (java.lang.String)classInstance.Get("FormattingTag");
+            retObjectFormattingTag = classInstance.Get("FormattingTag");
+            return (java.lang.String)retObjectFormattingTag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormattingTag != null ? retObjectFormattingTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class ElementLocalizability extends NetObject  {
 
     public void setFormattingTag(java.lang.String FormattingTag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormattingTag", FormattingTag);
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class ElementLocalizability extends NetObject  {
 
     public LocalizabilityAttribute getAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttribute = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attribute");
+            retObjectAttribute = classInstance.Get("Attribute");
+            JCObject val = (JCObject)retObjectAttribute;
             return new LocalizabilityAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttribute != null ? retObjectAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ElementLocalizability extends NetObject  {
 
     public void setAttribute(LocalizabilityAttribute Attribute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Attribute", Attribute == null ? null : Attribute.getJCOInstance());
         } catch (JCNativeException jcne) {

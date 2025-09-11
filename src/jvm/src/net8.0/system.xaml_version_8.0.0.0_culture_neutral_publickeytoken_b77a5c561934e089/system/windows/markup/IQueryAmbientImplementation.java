@@ -142,9 +142,13 @@ public class IQueryAmbientImplementation extends NetObject implements IQueryAmbi
     
     public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAmbientPropertyAvailable = null;
         try {
-            return (boolean)classInstance.Invoke("IsAmbientPropertyAvailable", propertyName);
+            retObjectIsAmbientPropertyAvailable = classInstance.Invoke("IsAmbientPropertyAvailable", propertyName);
+            return (boolean)retObjectIsAmbientPropertyAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAmbientPropertyAvailable != null ? retObjectIsAmbientPropertyAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

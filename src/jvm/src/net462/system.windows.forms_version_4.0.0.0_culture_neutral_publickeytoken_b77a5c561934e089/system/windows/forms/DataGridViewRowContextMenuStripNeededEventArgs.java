@@ -171,9 +171,13 @@ public class DataGridViewRowContextMenuStripNeededEventArgs extends EventArgs  {
     
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class DataGridViewRowContextMenuStripNeededEventArgs extends EventArgs  {
 
     public ContextMenuStrip getContextMenuStrip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextMenuStrip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextMenuStrip");
+            retObjectContextMenuStrip = classInstance.Get("ContextMenuStrip");
+            JCObject val = (JCObject)retObjectContextMenuStrip;
             return new ContextMenuStrip(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuStrip != null ? retObjectContextMenuStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class DataGridViewRowContextMenuStripNeededEventArgs extends EventArgs  {
 
     public void setContextMenuStrip(ContextMenuStrip ContextMenuStrip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextMenuStrip", ContextMenuStrip == null ? null : ContextMenuStrip.getJCOInstance());
         } catch (JCNativeException jcne) {

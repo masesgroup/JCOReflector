@@ -164,10 +164,14 @@ public class XpsDocumentWriter extends SerializerWriter  {
     
     public SerializerWriterCollator CreateVisualsCollator() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateVisualsCollator = null;
         try {
-            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator");
+            retObjectCreateVisualsCollator = classInstance.Invoke("CreateVisualsCollator");
+            JCObject objCreateVisualsCollator = (JCObject)retObjectCreateVisualsCollator;
             return new SerializerWriterCollator(objCreateVisualsCollator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateVisualsCollator != null ? retObjectCreateVisualsCollator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public SerializerWriterCollator CreateVisualsCollator(PrintTicket documentSequencePrintTicket, PrintTicket documentPrintTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateVisualsCollator = null;
         try {
-            JCObject objCreateVisualsCollator = (JCObject)classInstance.Invoke("CreateVisualsCollator", documentSequencePrintTicket == null ? null : documentSequencePrintTicket.getJCOInstance(), documentPrintTicket == null ? null : documentPrintTicket.getJCOInstance());
+            retObjectCreateVisualsCollator = classInstance.Invoke("CreateVisualsCollator", documentSequencePrintTicket == null ? null : documentSequencePrintTicket.getJCOInstance(), documentPrintTicket == null ? null : documentPrintTicket.getJCOInstance());
+            JCObject objCreateVisualsCollator = (JCObject)retObjectCreateVisualsCollator;
             return new SerializerWriterCollator(objCreateVisualsCollator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateVisualsCollator != null ? retObjectCreateVisualsCollator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void CancelAsync() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -196,7 +204,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(java.lang.String documentPath, XpsDocumentNotificationLevel notificationLevel) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.diagnostics.UnreachableException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.OverflowException, system.FormatException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", documentPath, notificationLevel == null ? null : notificationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(java.lang.String documentPath) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.ObjectDisposedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", documentPath);
         } catch (JCNativeException jcne) {
@@ -216,7 +224,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +234,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(DocumentPaginator documentPaginator) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", documentPaginator == null ? null : documentPaginator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,7 +244,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,7 +254,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedDocument fixedDocument) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedDocument == null ? null : fixedDocument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +264,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +274,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedDocumentSequence fixedDocumentSequence) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +284,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedPage fixedPage, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +294,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(FixedPage fixedPage) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", fixedPage == null ? null : fixedPage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,7 +304,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(Visual visual, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", visual == null ? null : visual.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -306,7 +314,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void Write(Visual visual) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", visual == null ? null : visual.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +324,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(java.lang.String documentPath, XpsDocumentNotificationLevel notificationLevel) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.diagnostics.UnreachableException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.OverflowException, system.FormatException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPath, notificationLevel == null ? null : notificationLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +334,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(java.lang.String documentPath) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.ObjectDisposedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.windows.xps.XpsPackagingException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPath);
         } catch (JCNativeException jcne) {
@@ -336,7 +344,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(DocumentPaginator documentPaginator, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +354,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +364,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(DocumentPaginator documentPaginator, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,7 +374,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(DocumentPaginator documentPaginator) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", documentPaginator == null ? null : documentPaginator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +384,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocument fixedDocument, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,7 +394,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,7 +404,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocument fixedDocument, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,7 +414,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocument fixedDocument) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocument == null ? null : fixedDocument.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,7 +424,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,7 +434,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,7 +444,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,7 +454,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedDocumentSequence fixedDocumentSequence) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedDocumentSequence == null ? null : fixedDocumentSequence.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -456,7 +464,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedPage fixedPage, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,7 +474,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,7 +484,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedPage fixedPage, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,7 +494,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(FixedPage fixedPage) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", fixedPage == null ? null : fixedPage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,7 +504,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(Visual visual, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", visual == null ? null : visual.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -506,7 +514,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(Visual visual, PrintTicket printTicket, NetObject userSuppliedState) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.io.FileFormatException, system.xml.XmlException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", visual == null ? null : visual.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance(), userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -516,7 +524,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(Visual visual, PrintTicket printTicket) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", visual == null ? null : visual.getJCOInstance(), printTicket == null ? null : printTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,7 +534,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
 
     public void WriteAsync(Visual visual) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.windows.xps.XpsWriterException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.FormatException, system.UriFormatException, system.windows.xps.XpsPackagingException, system.MulticastNotSupportedException, system.printing.PrintingCanceledException, system.security.SecurityException, system.UnauthorizedAccessException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAsync", visual == null ? null : visual.getJCOInstance());
         } catch (JCNativeException jcne) {

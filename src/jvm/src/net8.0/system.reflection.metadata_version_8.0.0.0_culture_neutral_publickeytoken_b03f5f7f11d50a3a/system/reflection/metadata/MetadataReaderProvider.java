@@ -161,10 +161,14 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
     
     public MetadataReader GetMetadataReader(MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMetadataReader = null;
         try {
-            JCObject objGetMetadataReader = (JCObject)classInstance.Invoke("GetMetadataReader", options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            retObjectGetMetadataReader = classInstance.Invoke("GetMetadataReader", options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)retObjectGetMetadataReader;
             return new MetadataReader(objGetMetadataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataReader != null ? retObjectGetMetadataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
 
     public static MetadataReaderProvider FromMetadataStream(Stream stream, MetadataStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromMetadataStream = null;
         try {
-            JCObject objFromMetadataStream = (JCObject)classType.Invoke("FromMetadataStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
+            retObjectFromMetadataStream = classType.Invoke("FromMetadataStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
+            JCObject objFromMetadataStream = (JCObject)retObjectFromMetadataStream;
             return new MetadataReaderProvider(objFromMetadataStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMetadataStream != null ? retObjectFromMetadataStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
 
     public static MetadataReaderProvider FromPortablePdbStream(Stream stream, MetadataStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromPortablePdbStream = null;
         try {
-            JCObject objFromPortablePdbStream = (JCObject)classType.Invoke("FromPortablePdbStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
+            retObjectFromPortablePdbStream = classType.Invoke("FromPortablePdbStream", stream == null ? null : stream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size);
+            JCObject objFromPortablePdbStream = (JCObject)retObjectFromPortablePdbStream;
             return new MetadataReaderProvider(objFromPortablePdbStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromPortablePdbStream != null ? retObjectFromPortablePdbStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -205,7 +217,7 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

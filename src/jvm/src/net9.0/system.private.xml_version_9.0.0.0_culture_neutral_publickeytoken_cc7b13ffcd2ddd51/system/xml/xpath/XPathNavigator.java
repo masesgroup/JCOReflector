@@ -173,9 +173,13 @@ public class XPathNavigator extends XPathItem  {
     
     public boolean CheckValidity(XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.xml.XmlException, system.MulticastNotSupportedException, system.xml.schema.XmlSchemaException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckValidity = null;
         try {
-            return (boolean)classInstance.Invoke("CheckValidity", schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
+            retObjectCheckValidity = classInstance.Invoke("CheckValidity", schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
+            return (boolean)retObjectCheckValidity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckValidity != null ? retObjectCheckValidity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean IsDescendant(XPathNavigator nav) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDescendant = null;
         try {
-            return (boolean)classInstance.Invoke("IsDescendant", nav == null ? null : nav.getJCOInstance());
+            retObjectIsDescendant = classInstance.Invoke("IsDescendant", nav == null ? null : nav.getJCOInstance());
+            return (boolean)retObjectIsDescendant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDescendant != null ? retObjectIsDescendant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean IsSamePosition(XPathNavigator other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSamePosition = null;
         try {
-            return (boolean)classInstance.Invoke("IsSamePosition", other == null ? null : other.getJCOInstance());
+            retObjectIsSamePosition = classInstance.Invoke("IsSamePosition", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectIsSamePosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSamePosition != null ? retObjectIsSamePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean Matches(java.lang.String xpath) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", xpath);
+            retObjectMatches = classInstance.Invoke("Matches", xpath);
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean Matches(XPathExpression expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", expr == null ? null : expr.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", expr == null ? null : expr.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +243,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveTo(XPathNavigator other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveTo = null;
         try {
-            return (boolean)classInstance.Invoke("MoveTo", other == null ? null : other.getJCOInstance());
+            retObjectMoveTo = classInstance.Invoke("MoveTo", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectMoveTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveTo != null ? retObjectMoveTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +257,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", localName, namespaceURI);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", localName, namespaceURI);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +271,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToChild(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToChild = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToChild", localName, namespaceURI);
+            retObjectMoveToChild = classInstance.Invoke("MoveToChild", localName, namespaceURI);
+            return (boolean)retObjectMoveToChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToChild != null ? retObjectMoveToChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +285,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToChild(XPathNodeType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToChild = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToChild", type == null ? null : type.getJCOInstance());
+            retObjectMoveToChild = classInstance.Invoke("MoveToChild", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectMoveToChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToChild != null ? retObjectMoveToChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +299,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFirst() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirst = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirst");
+            retObjectMoveToFirst = classInstance.Invoke("MoveToFirst");
+            return (boolean)retObjectMoveToFirst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirst != null ? retObjectMoveToFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +313,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFirstAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstAttribute");
+            retObjectMoveToFirstAttribute = classInstance.Invoke("MoveToFirstAttribute");
+            return (boolean)retObjectMoveToFirstAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstAttribute != null ? retObjectMoveToFirstAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +327,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFirstChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstChild = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstChild");
+            retObjectMoveToFirstChild = classInstance.Invoke("MoveToFirstChild");
+            return (boolean)retObjectMoveToFirstChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstChild != null ? retObjectMoveToFirstChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +341,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFirstNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstNamespace");
+            retObjectMoveToFirstNamespace = classInstance.Invoke("MoveToFirstNamespace");
+            return (boolean)retObjectMoveToFirstNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstNamespace != null ? retObjectMoveToFirstNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +355,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFirstNamespace(XPathNamespaceScope namespaceScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstNamespace", namespaceScope == null ? null : namespaceScope.getJCOInstance());
+            retObjectMoveToFirstNamespace = classInstance.Invoke("MoveToFirstNamespace", namespaceScope == null ? null : namespaceScope.getJCOInstance());
+            return (boolean)retObjectMoveToFirstNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstNamespace != null ? retObjectMoveToFirstNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +369,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFollowing(java.lang.String localName, java.lang.String namespaceURI, XPathNavigator end) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowing", localName, namespaceURI, end == null ? null : end.getJCOInstance());
+            retObjectMoveToFollowing = classInstance.Invoke("MoveToFollowing", localName, namespaceURI, end == null ? null : end.getJCOInstance());
+            return (boolean)retObjectMoveToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowing != null ? retObjectMoveToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +383,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFollowing(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowing", localName, namespaceURI);
+            retObjectMoveToFollowing = classInstance.Invoke("MoveToFollowing", localName, namespaceURI);
+            return (boolean)retObjectMoveToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowing != null ? retObjectMoveToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +397,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFollowing(XPathNodeType type, XPathNavigator end) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowing", type == null ? null : type.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            retObjectMoveToFollowing = classInstance.Invoke("MoveToFollowing", type == null ? null : type.getJCOInstance(), end == null ? null : end.getJCOInstance());
+            return (boolean)retObjectMoveToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowing != null ? retObjectMoveToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +411,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToFollowing(XPathNodeType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFollowing = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFollowing", type == null ? null : type.getJCOInstance());
+            retObjectMoveToFollowing = classInstance.Invoke("MoveToFollowing", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectMoveToFollowing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFollowing != null ? retObjectMoveToFollowing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +425,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToId(java.lang.String id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToId = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToId", id);
+            retObjectMoveToId = classInstance.Invoke("MoveToId", id);
+            return (boolean)retObjectMoveToId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToId != null ? retObjectMoveToId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +439,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNamespace(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNamespace", name);
+            retObjectMoveToNamespace = classInstance.Invoke("MoveToNamespace", name);
+            return (boolean)retObjectMoveToNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNamespace != null ? retObjectMoveToNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +453,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNext");
+            retObjectMoveToNext = classInstance.Invoke("MoveToNext");
+            return (boolean)retObjectMoveToNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNext != null ? retObjectMoveToNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +467,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNext(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNext", localName, namespaceURI);
+            retObjectMoveToNext = classInstance.Invoke("MoveToNext", localName, namespaceURI);
+            return (boolean)retObjectMoveToNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNext != null ? retObjectMoveToNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,9 +481,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNext(XPathNodeType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNext", type == null ? null : type.getJCOInstance());
+            retObjectMoveToNext = classInstance.Invoke("MoveToNext", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectMoveToNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNext != null ? retObjectMoveToNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,9 +495,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNextAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextAttribute");
+            retObjectMoveToNextAttribute = classInstance.Invoke("MoveToNextAttribute");
+            return (boolean)retObjectMoveToNextAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextAttribute != null ? retObjectMoveToNextAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +509,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNextNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextNamespace");
+            retObjectMoveToNextNamespace = classInstance.Invoke("MoveToNextNamespace");
+            return (boolean)retObjectMoveToNextNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextNamespace != null ? retObjectMoveToNextNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +523,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToNextNamespace(XPathNamespaceScope namespaceScope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextNamespace = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextNamespace", namespaceScope == null ? null : namespaceScope.getJCOInstance());
+            retObjectMoveToNextNamespace = classInstance.Invoke("MoveToNextNamespace", namespaceScope == null ? null : namespaceScope.getJCOInstance());
+            return (boolean)retObjectMoveToNextNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextNamespace != null ? retObjectMoveToNextNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +537,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToParent = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToParent");
+            retObjectMoveToParent = classInstance.Invoke("MoveToParent");
+            return (boolean)retObjectMoveToParent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToParent != null ? retObjectMoveToParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +551,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean MoveToPrevious() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToPrevious = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToPrevious");
+            retObjectMoveToPrevious = classInstance.Invoke("MoveToPrevious");
+            return (boolean)retObjectMoveToPrevious;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToPrevious != null ? retObjectMoveToPrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +565,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject Evaluate(java.lang.String xpath, IXmlNamespaceResolver resolver) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", xpath, resolver == null ? null : resolver.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", xpath, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +580,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject Evaluate(java.lang.String xpath) throws Throwable, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", xpath);
+            retObjectEvaluate = classInstance.Invoke("Evaluate", xpath);
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +595,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject Evaluate(XPathExpression expr, XPathNodeIterator context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", expr == null ? null : expr.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", expr == null ? null : expr.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,10 +610,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject Evaluate(XPathExpression expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate", expr == null ? null : expr.getJCOInstance());
+            retObjectEvaluate = classInstance.Invoke("Evaluate", expr == null ? null : expr.getJCOInstance());
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,10 +625,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject ValueAs(NetType returnType, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAs = null;
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            retObjectValueAs = classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            JCObject objValueAs = (JCObject)retObjectValueAs;
             return new NetObject(objValueAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueAs != null ? retObjectValueAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,9 +640,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String GetAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +654,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String GetNamespace(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNamespace", name);
+            retObjectGetNamespace = classInstance.Invoke("GetNamespace", name);
+            return (java.lang.String)retObjectGetNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNamespace != null ? retObjectGetNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +668,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +682,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String LookupPrefix(java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupPrefix = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupPrefix", namespaceURI);
+            retObjectLookupPrefix = classInstance.Invoke("LookupPrefix", namespaceURI);
+            return (java.lang.String)retObjectLookupPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupPrefix != null ? retObjectLookupPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +696,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlNodeOrder ComparePosition(XPathNavigator nav) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComparePosition = null;
         try {
-            JCObject objComparePosition = (JCObject)classInstance.Invoke("ComparePosition", nav == null ? null : nav.getJCOInstance());
+            retObjectComparePosition = classInstance.Invoke("ComparePosition", nav == null ? null : nav.getJCOInstance());
+            JCObject objComparePosition = (JCObject)retObjectComparePosition;
             return new XmlNodeOrder(objComparePosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComparePosition != null ? retObjectComparePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +711,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlReader ReadSubtree() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSubtree = null;
         try {
-            JCObject objReadSubtree = (JCObject)classInstance.Invoke("ReadSubtree");
+            retObjectReadSubtree = classInstance.Invoke("ReadSubtree");
+            JCObject objReadSubtree = (JCObject)retObjectReadSubtree;
             return new XmlReader(objReadSubtree);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSubtree != null ? retObjectReadSubtree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,10 +726,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter AppendChild() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppendChild = null;
         try {
-            JCObject objAppendChild = (JCObject)classInstance.Invoke("AppendChild");
+            retObjectAppendChild = classInstance.Invoke("AppendChild");
+            JCObject objAppendChild = (JCObject)retObjectAppendChild;
             return new XmlWriter(objAppendChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppendChild != null ? retObjectAppendChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,10 +741,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter CreateAttributes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateAttributes = null;
         try {
-            JCObject objCreateAttributes = (JCObject)classInstance.Invoke("CreateAttributes");
+            retObjectCreateAttributes = classInstance.Invoke("CreateAttributes");
+            JCObject objCreateAttributes = (JCObject)retObjectCreateAttributes;
             return new XmlWriter(objCreateAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttributes != null ? retObjectCreateAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +756,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter InsertAfter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAfter = null;
         try {
-            JCObject objInsertAfter = (JCObject)classInstance.Invoke("InsertAfter");
+            retObjectInsertAfter = classInstance.Invoke("InsertAfter");
+            JCObject objInsertAfter = (JCObject)retObjectInsertAfter;
             return new XmlWriter(objInsertAfter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertAfter != null ? retObjectInsertAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +771,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter InsertBefore() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertBefore = null;
         try {
-            JCObject objInsertBefore = (JCObject)classInstance.Invoke("InsertBefore");
+            retObjectInsertBefore = classInstance.Invoke("InsertBefore");
+            JCObject objInsertBefore = (JCObject)retObjectInsertBefore;
             return new XmlWriter(objInsertBefore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertBefore != null ? retObjectInsertBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,10 +786,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter PrependChild() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrependChild = null;
         try {
-            JCObject objPrependChild = (JCObject)classInstance.Invoke("PrependChild");
+            retObjectPrependChild = classInstance.Invoke("PrependChild");
+            JCObject objPrependChild = (JCObject)retObjectPrependChild;
             return new XmlWriter(objPrependChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrependChild != null ? retObjectPrependChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,10 +801,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlWriter ReplaceRange(XPathNavigator lastSiblingToReplace) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplaceRange = null;
         try {
-            JCObject objReplaceRange = (JCObject)classInstance.Invoke("ReplaceRange", lastSiblingToReplace == null ? null : lastSiblingToReplace.getJCOInstance());
+            retObjectReplaceRange = classInstance.Invoke("ReplaceRange", lastSiblingToReplace == null ? null : lastSiblingToReplace.getJCOInstance());
+            JCObject objReplaceRange = (JCObject)retObjectReplaceRange;
             return new XmlWriter(objReplaceRange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplaceRange != null ? retObjectReplaceRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,10 +816,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathExpression Compile(java.lang.String xpath) throws Throwable, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompile = null;
         try {
-            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", xpath);
+            retObjectCompile = classInstance.Invoke("Compile", xpath);
+            JCObject objCompile = (JCObject)retObjectCompile;
             return new XPathExpression(objCompile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -647,10 +831,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNavigator Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new XPathNavigator(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,10 +846,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNavigator CreateNavigator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateNavigator = null;
         try {
-            JCObject objCreateNavigator = (JCObject)classInstance.Invoke("CreateNavigator");
+            retObjectCreateNavigator = classInstance.Invoke("CreateNavigator");
+            JCObject objCreateNavigator = (JCObject)retObjectCreateNavigator;
             return new XPathNavigator(objCreateNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNavigator != null ? retObjectCreateNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,10 +861,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNavigator SelectSingleNode(java.lang.String xpath, IXmlNamespaceResolver resolver) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectSingleNode = null;
         try {
-            JCObject objSelectSingleNode = (JCObject)classInstance.Invoke("SelectSingleNode", xpath, resolver == null ? null : resolver.getJCOInstance());
+            retObjectSelectSingleNode = classInstance.Invoke("SelectSingleNode", xpath, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objSelectSingleNode = (JCObject)retObjectSelectSingleNode;
             return new XPathNavigator(objSelectSingleNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectSingleNode != null ? retObjectSelectSingleNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,10 +876,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNavigator SelectSingleNode(java.lang.String xpath) throws Throwable, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectSingleNode = null;
         try {
-            JCObject objSelectSingleNode = (JCObject)classInstance.Invoke("SelectSingleNode", xpath);
+            retObjectSelectSingleNode = classInstance.Invoke("SelectSingleNode", xpath);
+            JCObject objSelectSingleNode = (JCObject)retObjectSelectSingleNode;
             return new XPathNavigator(objSelectSingleNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectSingleNode != null ? retObjectSelectSingleNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,10 +891,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNavigator SelectSingleNode(XPathExpression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectSingleNode = null;
         try {
-            JCObject objSelectSingleNode = (JCObject)classInstance.Invoke("SelectSingleNode", expression == null ? null : expression.getJCOInstance());
+            retObjectSelectSingleNode = classInstance.Invoke("SelectSingleNode", expression == null ? null : expression.getJCOInstance());
+            JCObject objSelectSingleNode = (JCObject)retObjectSelectSingleNode;
             return new XPathNavigator(objSelectSingleNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectSingleNode != null ? retObjectSelectSingleNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,10 +906,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator Select(java.lang.String xpath, IXmlNamespaceResolver resolver) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", xpath, resolver == null ? null : resolver.getJCOInstance());
+            retObjectSelect = classInstance.Invoke("Select", xpath, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new XPathNodeIterator(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,10 +921,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator Select(java.lang.String xpath) throws Throwable, system.xml.xpath.XPathException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", xpath);
+            retObjectSelect = classInstance.Invoke("Select", xpath);
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new XPathNodeIterator(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -724,10 +936,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator Select(XPathExpression expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classInstance.Invoke("Select", expr == null ? null : expr.getJCOInstance());
+            retObjectSelect = classInstance.Invoke("Select", expr == null ? null : expr.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new XPathNodeIterator(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -735,10 +951,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectAncestors(java.lang.String name, java.lang.String namespaceURI, boolean matchSelf) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectAncestors = null;
         try {
-            JCObject objSelectAncestors = (JCObject)classInstance.Invoke("SelectAncestors", name, namespaceURI, matchSelf);
+            retObjectSelectAncestors = classInstance.Invoke("SelectAncestors", name, namespaceURI, matchSelf);
+            JCObject objSelectAncestors = (JCObject)retObjectSelectAncestors;
             return new XPathNodeIterator(objSelectAncestors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectAncestors != null ? retObjectSelectAncestors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,10 +966,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectAncestors(XPathNodeType type, boolean matchSelf) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectAncestors = null;
         try {
-            JCObject objSelectAncestors = (JCObject)classInstance.Invoke("SelectAncestors", type == null ? null : type.getJCOInstance(), matchSelf);
+            retObjectSelectAncestors = classInstance.Invoke("SelectAncestors", type == null ? null : type.getJCOInstance(), matchSelf);
+            JCObject objSelectAncestors = (JCObject)retObjectSelectAncestors;
             return new XPathNodeIterator(objSelectAncestors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectAncestors != null ? retObjectSelectAncestors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,10 +981,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectChildren(java.lang.String name, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectChildren = null;
         try {
-            JCObject objSelectChildren = (JCObject)classInstance.Invoke("SelectChildren", name, namespaceURI);
+            retObjectSelectChildren = classInstance.Invoke("SelectChildren", name, namespaceURI);
+            JCObject objSelectChildren = (JCObject)retObjectSelectChildren;
             return new XPathNodeIterator(objSelectChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectChildren != null ? retObjectSelectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,10 +996,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectChildren(XPathNodeType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectChildren = null;
         try {
-            JCObject objSelectChildren = (JCObject)classInstance.Invoke("SelectChildren", type == null ? null : type.getJCOInstance());
+            retObjectSelectChildren = classInstance.Invoke("SelectChildren", type == null ? null : type.getJCOInstance());
+            JCObject objSelectChildren = (JCObject)retObjectSelectChildren;
             return new XPathNodeIterator(objSelectChildren);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectChildren != null ? retObjectSelectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,10 +1011,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectDescendants(java.lang.String name, java.lang.String namespaceURI, boolean matchSelf) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectDescendants = null;
         try {
-            JCObject objSelectDescendants = (JCObject)classInstance.Invoke("SelectDescendants", name, namespaceURI, matchSelf);
+            retObjectSelectDescendants = classInstance.Invoke("SelectDescendants", name, namespaceURI, matchSelf);
+            JCObject objSelectDescendants = (JCObject)retObjectSelectDescendants;
             return new XPathNodeIterator(objSelectDescendants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectDescendants != null ? retObjectSelectDescendants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,10 +1026,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeIterator SelectDescendants(XPathNodeType type, boolean matchSelf) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectDescendants = null;
         try {
-            JCObject objSelectDescendants = (JCObject)classInstance.Invoke("SelectDescendants", type == null ? null : type.getJCOInstance(), matchSelf);
+            retObjectSelectDescendants = classInstance.Invoke("SelectDescendants", type == null ? null : type.getJCOInstance(), matchSelf);
+            JCObject objSelectDescendants = (JCObject)retObjectSelectDescendants;
             return new XPathNodeIterator(objSelectDescendants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectDescendants != null ? retObjectSelectDescendants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,7 +1041,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void AppendChild(java.lang.String newChild) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendChild", newChild);
         } catch (JCNativeException jcne) {
@@ -811,7 +1051,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void AppendChild(XmlReader newChild) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendChild", newChild == null ? null : newChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -821,7 +1061,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void AppendChild(XPathNavigator newChild) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendChild", newChild == null ? null : newChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -831,7 +1071,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void AppendChildElement(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendChildElement", prefix, localName, namespaceURI, value);
         } catch (JCNativeException jcne) {
@@ -841,7 +1081,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void CreateAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateAttribute", prefix, localName, namespaceURI, value);
         } catch (JCNativeException jcne) {
@@ -851,7 +1091,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void DeleteRange(XPathNavigator lastSiblingToDelete) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteRange", lastSiblingToDelete == null ? null : lastSiblingToDelete.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -861,7 +1101,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void DeleteSelf() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteSelf");
         } catch (JCNativeException jcne) {
@@ -871,7 +1111,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertAfter(java.lang.String newSibling) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertAfter", newSibling);
         } catch (JCNativeException jcne) {
@@ -881,7 +1121,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertAfter(XmlReader newSibling) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertAfter", newSibling == null ? null : newSibling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -891,7 +1131,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertAfter(XPathNavigator newSibling) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertAfter", newSibling == null ? null : newSibling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -901,7 +1141,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertBefore(java.lang.String newSibling) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertBefore", newSibling);
         } catch (JCNativeException jcne) {
@@ -911,7 +1151,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertBefore(XmlReader newSibling) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertBefore", newSibling == null ? null : newSibling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -921,7 +1161,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertBefore(XPathNavigator newSibling) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertBefore", newSibling == null ? null : newSibling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -931,7 +1171,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertElementAfter(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertElementAfter", prefix, localName, namespaceURI, value);
         } catch (JCNativeException jcne) {
@@ -941,7 +1181,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void InsertElementBefore(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertElementBefore", prefix, localName, namespaceURI, value);
         } catch (JCNativeException jcne) {
@@ -951,7 +1191,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void MoveToRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToRoot");
         } catch (JCNativeException jcne) {
@@ -961,7 +1201,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void PrependChild(java.lang.String newChild) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrependChild", newChild);
         } catch (JCNativeException jcne) {
@@ -971,7 +1211,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void PrependChild(XmlReader newChild) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrependChild", newChild == null ? null : newChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -981,7 +1221,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void PrependChild(XPathNavigator newChild) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrependChild", newChild == null ? null : newChild.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -991,7 +1231,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void PrependChildElement(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrependChildElement", prefix, localName, namespaceURI, value);
         } catch (JCNativeException jcne) {
@@ -1001,7 +1241,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void ReplaceSelf(java.lang.String newNode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceSelf", newNode);
         } catch (JCNativeException jcne) {
@@ -1011,7 +1251,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void ReplaceSelf(XmlReader newNode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceSelf", newNode == null ? null : newNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1021,7 +1261,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void ReplaceSelf(XPathNavigator newNode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceSelf", newNode == null ? null : newNode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1031,7 +1271,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void SetTypedValue(NetObject typedValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTypedValue", typedValue == null ? null : typedValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1041,7 +1281,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void SetValue(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value);
         } catch (JCNativeException jcne) {
@@ -1051,7 +1291,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void WriteSubtree(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSubtree", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1065,9 +1305,13 @@ public class XPathNavigator extends XPathItem  {
     
     public boolean getCanEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanEdit = null;
         try {
-            return (boolean)classInstance.Get("CanEdit");
+            retObjectCanEdit = classInstance.Get("CanEdit");
+            return (boolean)retObjectCanEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanEdit != null ? retObjectCanEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1075,9 +1319,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean getHasAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAttributes = null;
         try {
-            return (boolean)classInstance.Get("HasAttributes");
+            retObjectHasAttributes = classInstance.Get("HasAttributes");
+            return (boolean)retObjectHasAttributes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAttributes != null ? retObjectHasAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1085,9 +1333,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean getHasChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChildren = null;
         try {
-            return (boolean)classInstance.Get("HasChildren");
+            retObjectHasChildren = classInstance.Get("HasChildren");
+            return (boolean)retObjectHasChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasChildren != null ? retObjectHasChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1095,9 +1347,13 @@ public class XPathNavigator extends XPathItem  {
 
     public boolean getIsEmptyElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmptyElement = null;
         try {
-            return (boolean)classInstance.Get("IsEmptyElement");
+            retObjectIsEmptyElement = classInstance.Get("IsEmptyElement");
+            return (boolean)retObjectIsEmptyElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmptyElement != null ? retObjectIsEmptyElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1105,10 +1361,14 @@ public class XPathNavigator extends XPathItem  {
 
     public static IEqualityComparer getNavigatorComparer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNavigatorComparer = null;
         try {
-            JCObject val = (JCObject)classType.Get("NavigatorComparer");
+            retObjectNavigatorComparer = classType.Get("NavigatorComparer");
+            JCObject val = (JCObject)retObjectNavigatorComparer;
             return new IEqualityComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigatorComparer != null ? retObjectNavigatorComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1116,10 +1376,14 @@ public class XPathNavigator extends XPathItem  {
 
     public NetObject getUnderlyingObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingObject");
+            retObjectUnderlyingObject = classInstance.Get("UnderlyingObject");
+            JCObject val = (JCObject)retObjectUnderlyingObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingObject != null ? retObjectUnderlyingObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1127,9 +1391,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getBaseURI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseURI = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseURI");
+            retObjectBaseURI = classInstance.Get("BaseURI");
+            return (java.lang.String)retObjectBaseURI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseURI != null ? retObjectBaseURI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1137,9 +1405,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getInnerXml() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerXml = null;
         try {
-            return (java.lang.String)classInstance.Get("InnerXml");
+            retObjectInnerXml = classInstance.Get("InnerXml");
+            return (java.lang.String)retObjectInnerXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInnerXml != null ? retObjectInnerXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1147,7 +1419,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void setInnerXml(java.lang.String InnerXml) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InnerXml", InnerXml);
         } catch (JCNativeException jcne) {
@@ -1157,9 +1429,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getLocalName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalName = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalName");
+            retObjectLocalName = classInstance.Get("LocalName");
+            return (java.lang.String)retObjectLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalName != null ? retObjectLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1167,9 +1443,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1177,9 +1457,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getNamespaceURI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceURI = null;
         try {
-            return (java.lang.String)classInstance.Get("NamespaceURI");
+            retObjectNamespaceURI = classInstance.Get("NamespaceURI");
+            return (java.lang.String)retObjectNamespaceURI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespaceURI != null ? retObjectNamespaceURI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1187,9 +1471,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getOuterXml() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOuterXml = null;
         try {
-            return (java.lang.String)classInstance.Get("OuterXml");
+            retObjectOuterXml = classInstance.Get("OuterXml");
+            return (java.lang.String)retObjectOuterXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOuterXml != null ? retObjectOuterXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1197,7 +1485,7 @@ public class XPathNavigator extends XPathItem  {
 
     public void setOuterXml(java.lang.String OuterXml) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OuterXml", OuterXml);
         } catch (JCNativeException jcne) {
@@ -1207,9 +1495,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1217,9 +1509,13 @@ public class XPathNavigator extends XPathItem  {
 
     public java.lang.String getXmlLang() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlLang = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            retObjectXmlLang = classInstance.Get("XmlLang");
+            return (java.lang.String)retObjectXmlLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlLang != null ? retObjectXmlLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,10 +1523,14 @@ public class XPathNavigator extends XPathItem  {
 
     public IXmlSchemaInfo getSchemaInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaInfo");
+            retObjectSchemaInfo = classInstance.Get("SchemaInfo");
+            JCObject val = (JCObject)retObjectSchemaInfo;
             return new IXmlSchemaInfoImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaInfo != null ? retObjectSchemaInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1238,10 +1538,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1249,10 +1553,14 @@ public class XPathNavigator extends XPathItem  {
 
     public XPathNodeType getNodeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
+            retObjectNodeType = classInstance.Get("NodeType");
+            JCObject val = (JCObject)retObjectNodeType;
             return new XPathNodeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeType != null ? retObjectNodeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

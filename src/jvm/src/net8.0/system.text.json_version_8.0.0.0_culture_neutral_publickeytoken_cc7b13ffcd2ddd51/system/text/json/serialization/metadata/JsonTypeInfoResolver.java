@@ -155,10 +155,14 @@ public class JsonTypeInfoResolver extends NetObject  {
     
     public static IJsonTypeInfoResolver Combine(IJsonTypeInfoResolver... resolvers) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            JCObject objCombine = (JCObject)classType.Invoke("Combine", (java.lang.Object)toObjectFromArray(resolvers));
+            retObjectCombine = classType.Invoke("Combine", (java.lang.Object)toObjectFromArray(resolvers));
+            JCObject objCombine = (JCObject)retObjectCombine;
             return new IJsonTypeInfoResolverImplementation(objCombine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

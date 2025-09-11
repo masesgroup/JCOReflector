@@ -162,9 +162,13 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
     
     public int getPrefixLength() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefixLength = null;
         try {
-            return (int)classInstance.Get("PrefixLength");
+            retObjectPrefixLength = classInstance.Get("PrefixLength");
+            return (int)retObjectPrefixLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPrefixLength != null ? retObjectPrefixLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public long getAddressPreferredLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressPreferredLifetime = null;
         try {
-            return (long)classInstance.Get("AddressPreferredLifetime");
+            retObjectAddressPreferredLifetime = classInstance.Get("AddressPreferredLifetime");
+            return (long)retObjectAddressPreferredLifetime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectAddressPreferredLifetime != null ? retObjectAddressPreferredLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public long getAddressValidLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressValidLifetime = null;
         try {
-            return (long)classInstance.Get("AddressValidLifetime");
+            retObjectAddressValidLifetime = classInstance.Get("AddressValidLifetime");
+            return (long)retObjectAddressValidLifetime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectAddressValidLifetime != null ? retObjectAddressValidLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public long getDhcpLeaseLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDhcpLeaseLifetime = null;
         try {
-            return (long)classInstance.Get("DhcpLeaseLifetime");
+            retObjectDhcpLeaseLifetime = classInstance.Get("DhcpLeaseLifetime");
+            return (long)retObjectDhcpLeaseLifetime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDhcpLeaseLifetime != null ? retObjectDhcpLeaseLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public IPAddress getIPv4Mask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIPv4Mask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IPv4Mask");
+            retObjectIPv4Mask = classInstance.Get("IPv4Mask");
+            JCObject val = (JCObject)retObjectIPv4Mask;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIPv4Mask != null ? retObjectIPv4Mask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public DuplicateAddressDetectionState getDuplicateAddressDetectionState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDuplicateAddressDetectionState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DuplicateAddressDetectionState");
+            retObjectDuplicateAddressDetectionState = classInstance.Get("DuplicateAddressDetectionState");
+            JCObject val = (JCObject)retObjectDuplicateAddressDetectionState;
             return new DuplicateAddressDetectionState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDuplicateAddressDetectionState != null ? retObjectDuplicateAddressDetectionState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public PrefixOrigin getPrefixOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefixOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrefixOrigin");
+            retObjectPrefixOrigin = classInstance.Get("PrefixOrigin");
+            JCObject val = (JCObject)retObjectPrefixOrigin;
             return new PrefixOrigin(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrefixOrigin != null ? retObjectPrefixOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
 
     public SuffixOrigin getSuffixOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuffixOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuffixOrigin");
+            retObjectSuffixOrigin = classInstance.Get("SuffixOrigin");
+            JCObject val = (JCObject)retObjectSuffixOrigin;
             return new SuffixOrigin(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuffixOrigin != null ? retObjectSuffixOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

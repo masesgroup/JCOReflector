@@ -173,9 +173,13 @@ public class SqlTrackingQuery extends NetObject  {
     
     public boolean TryGetWorkflow(Guid workflowInstanceId, JCORefOut<SqlTrackingWorkflowInstance> workflowInstance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetWorkflow = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetWorkflow", workflowInstanceId == null ? null : workflowInstanceId.getJCOInstance(), workflowInstance.getJCRefOut());
+            retObjectTryGetWorkflow = classInstance.Invoke("TryGetWorkflow", workflowInstanceId == null ? null : workflowInstanceId.getJCOInstance(), workflowInstance.getJCRefOut());
+            return (boolean)retObjectTryGetWorkflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetWorkflow != null ? retObjectTryGetWorkflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class SqlTrackingQuery extends NetObject  {
     
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class SqlTrackingQuery extends NetObject  {
 
     public void setConnectionString(java.lang.String ConnectionString) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionString", ConnectionString);
         } catch (JCNativeException jcne) {

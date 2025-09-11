@@ -167,16 +167,20 @@ public class AssemblyManifest extends Manifest  {
     
     public final ProxyStub[] getExternalProxyStubs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalProxyStubs = null;
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ExternalProxyStubs");
+            retObjectExternalProxyStubs = classInstance.Get("ExternalProxyStubs");
+            JCObject resultingObjects = (JCObject)retObjectExternalProxyStubs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExternalProxyStubs != null ? retObjectExternalProxyStubs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,16 +188,20 @@ public class AssemblyManifest extends Manifest  {
 
     public final ProxyStub[] getXmlExternalProxyStubs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlExternalProxyStubs = null;
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("XmlExternalProxyStubs");
+            retObjectXmlExternalProxyStubs = classInstance.Get("XmlExternalProxyStubs");
+            JCObject resultingObjects = (JCObject)retObjectXmlExternalProxyStubs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlExternalProxyStubs != null ? retObjectXmlExternalProxyStubs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class AssemblyManifest extends Manifest  {
 
     public void setXmlExternalProxyStubs(ProxyStub[] XmlExternalProxyStubs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlExternalProxyStubs", toObjectFromArray(XmlExternalProxyStubs));
         } catch (JCNativeException jcne) {

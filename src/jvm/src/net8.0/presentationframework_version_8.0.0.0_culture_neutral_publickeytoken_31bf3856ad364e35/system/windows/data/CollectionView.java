@@ -174,9 +174,13 @@ public class CollectionView extends DispatcherObject  {
     
     public boolean Contains(NetObject item) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentTo(NetObject item) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentTo = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentTo", item == null ? null : item.getJCOInstance());
+            retObjectMoveCurrentTo = classInstance.Invoke("MoveCurrentTo", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectMoveCurrentTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentTo != null ? retObjectMoveCurrentTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +202,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentToFirst() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToFirst = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToFirst");
+            retObjectMoveCurrentToFirst = classInstance.Invoke("MoveCurrentToFirst");
+            return (boolean)retObjectMoveCurrentToFirst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToFirst != null ? retObjectMoveCurrentToFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +216,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentToLast() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToLast = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToLast");
+            retObjectMoveCurrentToLast = classInstance.Invoke("MoveCurrentToLast");
+            return (boolean)retObjectMoveCurrentToLast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToLast != null ? retObjectMoveCurrentToLast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentToNext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToNext = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToNext");
+            retObjectMoveCurrentToNext = classInstance.Invoke("MoveCurrentToNext");
+            return (boolean)retObjectMoveCurrentToNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToNext != null ? retObjectMoveCurrentToNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +244,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentToPosition(int position) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToPosition = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToPosition", position);
+            retObjectMoveCurrentToPosition = classInstance.Invoke("MoveCurrentToPosition", position);
+            return (boolean)retObjectMoveCurrentToPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToPosition != null ? retObjectMoveCurrentToPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +258,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean MoveCurrentToPrevious() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCurrentToPrevious = null;
         try {
-            return (boolean)classInstance.Invoke("MoveCurrentToPrevious");
+            retObjectMoveCurrentToPrevious = classInstance.Invoke("MoveCurrentToPrevious");
+            return (boolean)retObjectMoveCurrentToPrevious;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveCurrentToPrevious != null ? retObjectMoveCurrentToPrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +272,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean PassesFilter(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassesFilter = null;
         try {
-            return (boolean)classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            retObjectPassesFilter = classInstance.Invoke("PassesFilter", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectPassesFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPassesFilter != null ? retObjectPassesFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +286,19 @@ public class CollectionView extends DispatcherObject  {
 
     public int IndexOf(NetObject item) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            retObjectIndexOf = classInstance.Invoke("IndexOf", item == null ? null : item.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +306,14 @@ public class CollectionView extends DispatcherObject  {
 
     public IDisposable DeferRefresh() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeferRefresh = null;
         try {
-            JCObject objDeferRefresh = (JCObject)classInstance.Invoke("DeferRefresh");
+            retObjectDeferRefresh = classInstance.Invoke("DeferRefresh");
+            JCObject objDeferRefresh = (JCObject)retObjectDeferRefresh;
             return new IDisposableImplementation(objDeferRefresh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeferRefresh != null ? retObjectDeferRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +321,14 @@ public class CollectionView extends DispatcherObject  {
 
     public NetObject GetItemAt(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemAt = null;
         try {
-            JCObject objGetItemAt = (JCObject)classInstance.Invoke("GetItemAt", index);
+            retObjectGetItemAt = classInstance.Invoke("GetItemAt", index);
+            JCObject objGetItemAt = (JCObject)retObjectGetItemAt;
             return new NetObject(objGetItemAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemAt != null ? retObjectGetItemAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +336,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void DetachFromSourceCollection() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DetachFromSourceCollection");
         } catch (JCNativeException jcne) {
@@ -296,7 +346,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void Refresh() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -310,9 +360,13 @@ public class CollectionView extends DispatcherObject  {
     
     public boolean getCanFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanFilter = null;
         try {
-            return (boolean)classInstance.Get("CanFilter");
+            retObjectCanFilter = classInstance.Get("CanFilter");
+            return (boolean)retObjectCanFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanFilter != null ? retObjectCanFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,9 +374,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getCanGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGroup = null;
         try {
-            return (boolean)classInstance.Get("CanGroup");
+            retObjectCanGroup = classInstance.Get("CanGroup");
+            return (boolean)retObjectCanGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGroup != null ? retObjectCanGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +388,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getCanSort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSort = null;
         try {
-            return (boolean)classInstance.Get("CanSort");
+            retObjectCanSort = classInstance.Get("CanSort");
+            return (boolean)retObjectCanSort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSort != null ? retObjectCanSort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +402,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getIsCurrentAfterLast() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrentAfterLast = null;
         try {
-            return (boolean)classInstance.Get("IsCurrentAfterLast");
+            retObjectIsCurrentAfterLast = classInstance.Get("IsCurrentAfterLast");
+            return (boolean)retObjectIsCurrentAfterLast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentAfterLast != null ? retObjectIsCurrentAfterLast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +416,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getIsCurrentBeforeFirst() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCurrentBeforeFirst = null;
         try {
-            return (boolean)classInstance.Get("IsCurrentBeforeFirst");
+            retObjectIsCurrentBeforeFirst = classInstance.Get("IsCurrentBeforeFirst");
+            return (boolean)retObjectIsCurrentBeforeFirst;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCurrentBeforeFirst != null ? retObjectIsCurrentBeforeFirst.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +430,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getIsEmpty() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,9 +444,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getIsInUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInUse = null;
         try {
-            return (boolean)classInstance.Get("IsInUse");
+            retObjectIsInUse = classInstance.Get("IsInUse");
+            return (boolean)retObjectIsInUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInUse != null ? retObjectIsInUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +458,13 @@ public class CollectionView extends DispatcherObject  {
 
     public boolean getNeedsRefresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeedsRefresh = null;
         try {
-            return (boolean)classInstance.Get("NeedsRefresh");
+            retObjectNeedsRefresh = classInstance.Get("NeedsRefresh");
+            return (boolean)retObjectNeedsRefresh;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNeedsRefresh != null ? retObjectNeedsRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +472,13 @@ public class CollectionView extends DispatcherObject  {
 
     public int getCount() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,9 +486,13 @@ public class CollectionView extends DispatcherObject  {
 
     public int getCurrentPosition() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPosition = null;
         try {
-            return (int)classInstance.Get("CurrentPosition");
+            retObjectCurrentPosition = classInstance.Get("CurrentPosition");
+            return (int)retObjectCurrentPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrentPosition != null ? retObjectCurrentPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +500,14 @@ public class CollectionView extends DispatcherObject  {
 
     public IComparer getComparer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComparer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Comparer");
+            retObjectComparer = classInstance.Get("Comparer");
+            JCObject val = (JCObject)retObjectComparer;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComparer != null ? retObjectComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +515,14 @@ public class CollectionView extends DispatcherObject  {
 
     public IEnumerable getSourceCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceCollection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceCollection");
+            retObjectSourceCollection = classInstance.Get("SourceCollection");
+            JCObject val = (JCObject)retObjectSourceCollection;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceCollection != null ? retObjectSourceCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +530,14 @@ public class CollectionView extends DispatcherObject  {
 
     public SortDescriptionCollection getSortDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortDescriptions");
+            retObjectSortDescriptions = classInstance.Get("SortDescriptions");
+            JCObject val = (JCObject)retObjectSortDescriptions;
             return new SortDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortDescriptions != null ? retObjectSortDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,10 +545,14 @@ public class CollectionView extends DispatcherObject  {
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +560,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void setCulture(CultureInfo Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture == null ? null : Culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -464,10 +570,14 @@ public class CollectionView extends DispatcherObject  {
 
     public NetObject getCurrentItem() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentItem");
+            retObjectCurrentItem = classInstance.Get("CurrentItem");
+            JCObject val = (JCObject)retObjectCurrentItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentItem != null ? retObjectCurrentItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +585,14 @@ public class CollectionView extends DispatcherObject  {
 
     public static NetObject getNewItemPlaceholder() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewItemPlaceholder = null;
         try {
-            JCObject val = (JCObject)classType.Get("NewItemPlaceholder");
+            retObjectNewItemPlaceholder = classType.Get("NewItemPlaceholder");
+            JCObject val = (JCObject)retObjectNewItemPlaceholder;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewItemPlaceholder != null ? retObjectNewItemPlaceholder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,7 +605,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void addCurrentChanging(CurrentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentChanging", handler);
         } catch (JCNativeException jcne) {
@@ -501,7 +615,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void removeCurrentChanging(CurrentChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentChanging", handler);
         } catch (JCNativeException jcne) {
@@ -511,7 +625,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void addCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CurrentChanged", handler);
         } catch (JCNativeException jcne) {
@@ -521,7 +635,7 @@ public class CollectionView extends DispatcherObject  {
 
     public void removeCurrentChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CurrentChanged", handler);
         } catch (JCNativeException jcne) {

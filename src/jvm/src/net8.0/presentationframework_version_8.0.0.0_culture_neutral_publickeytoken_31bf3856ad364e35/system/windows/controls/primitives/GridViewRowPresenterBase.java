@@ -162,7 +162,7 @@ public class GridViewRowPresenterBase extends FrameworkElement implements system
      */
     @Deprecated 
     public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 
@@ -171,10 +171,14 @@ public class GridViewRowPresenterBase extends FrameworkElement implements system
     
     public GridViewColumnCollection getColumns() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
             return new GridViewColumnCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class GridViewRowPresenterBase extends FrameworkElement implements system
 
     public void setColumns(GridViewColumnCollection Columns) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Columns", Columns == null ? null : Columns.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class ServiceAuthorizationBehavior extends NetObject  {
     
     public boolean ShouldSerializeExternalAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeExternalAuthorizationPolicies = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeExternalAuthorizationPolicies");
+            retObjectShouldSerializeExternalAuthorizationPolicies = classInstance.Invoke("ShouldSerializeExternalAuthorizationPolicies");
+            return (boolean)retObjectShouldSerializeExternalAuthorizationPolicies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeExternalAuthorizationPolicies != null ? retObjectShouldSerializeExternalAuthorizationPolicies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public boolean ShouldSerializeServiceAuthorizationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeServiceAuthorizationManager = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeServiceAuthorizationManager");
+            retObjectShouldSerializeServiceAuthorizationManager = classInstance.Invoke("ShouldSerializeServiceAuthorizationManager");
+            return (boolean)retObjectShouldSerializeServiceAuthorizationManager;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeServiceAuthorizationManager != null ? retObjectShouldSerializeServiceAuthorizationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -199,7 +207,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -208,9 +216,13 @@ public class ServiceAuthorizationBehavior extends NetObject  {
     
     public boolean getImpersonateCallerForAllOperations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonateCallerForAllOperations = null;
         try {
-            return (boolean)classInstance.Get("ImpersonateCallerForAllOperations");
+            retObjectImpersonateCallerForAllOperations = classInstance.Get("ImpersonateCallerForAllOperations");
+            return (boolean)retObjectImpersonateCallerForAllOperations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectImpersonateCallerForAllOperations != null ? retObjectImpersonateCallerForAllOperations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public void setImpersonateCallerForAllOperations(boolean ImpersonateCallerForAllOperations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImpersonateCallerForAllOperations", ImpersonateCallerForAllOperations);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public boolean getImpersonateOnSerializingReply() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonateOnSerializingReply = null;
         try {
-            return (boolean)classInstance.Get("ImpersonateOnSerializingReply");
+            retObjectImpersonateOnSerializingReply = classInstance.Get("ImpersonateOnSerializingReply");
+            return (boolean)retObjectImpersonateOnSerializingReply;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectImpersonateOnSerializingReply != null ? retObjectImpersonateOnSerializingReply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public void setImpersonateOnSerializingReply(boolean ImpersonateOnSerializingReply) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImpersonateOnSerializingReply", ImpersonateOnSerializingReply);
         } catch (JCNativeException jcne) {
@@ -248,10 +264,14 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public PrincipalPermissionMode getPrincipalPermissionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrincipalPermissionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrincipalPermissionMode");
+            retObjectPrincipalPermissionMode = classInstance.Get("PrincipalPermissionMode");
+            JCObject val = (JCObject)retObjectPrincipalPermissionMode;
             return new PrincipalPermissionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrincipalPermissionMode != null ? retObjectPrincipalPermissionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public void setPrincipalPermissionMode(PrincipalPermissionMode PrincipalPermissionMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrincipalPermissionMode", PrincipalPermissionMode == null ? null : PrincipalPermissionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public ServiceAuthorizationManager getServiceAuthorizationManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceAuthorizationManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceAuthorizationManager");
+            retObjectServiceAuthorizationManager = classInstance.Get("ServiceAuthorizationManager");
+            JCObject val = (JCObject)retObjectServiceAuthorizationManager;
             return new ServiceAuthorizationManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceAuthorizationManager != null ? retObjectServiceAuthorizationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public void setServiceAuthorizationManager(ServiceAuthorizationManager ServiceAuthorizationManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceAuthorizationManager", ServiceAuthorizationManager == null ? null : ServiceAuthorizationManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,10 +314,14 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public RoleProvider getRoleProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoleProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RoleProvider");
+            retObjectRoleProvider = classInstance.Get("RoleProvider");
+            JCObject val = (JCObject)retObjectRoleProvider;
             return new RoleProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoleProvider != null ? retObjectRoleProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +329,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
 
     public void setRoleProvider(RoleProvider RoleProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RoleProvider", RoleProvider == null ? null : RoleProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -182,7 +182,7 @@ public class CodeActivity extends Activity  {
 
     public void addExecuteCode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ExecuteCode", handler);
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class CodeActivity extends Activity  {
 
     public void removeExecuteCode(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ExecuteCode", handler);
         } catch (JCNativeException jcne) {

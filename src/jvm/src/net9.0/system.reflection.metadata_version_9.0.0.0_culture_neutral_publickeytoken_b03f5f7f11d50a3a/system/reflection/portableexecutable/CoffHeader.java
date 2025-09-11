@@ -161,9 +161,13 @@ public class CoffHeader extends NetObject  {
     
     public short getNumberOfSections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfSections = null;
         try {
-            return (short)classInstance.Get("NumberOfSections");
+            retObjectNumberOfSections = classInstance.Get("NumberOfSections");
+            return (short)retObjectNumberOfSections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectNumberOfSections != null ? retObjectNumberOfSections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class CoffHeader extends NetObject  {
 
     public short getSizeOfOptionalHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfOptionalHeader = null;
         try {
-            return (short)classInstance.Get("SizeOfOptionalHeader");
+            retObjectSizeOfOptionalHeader = classInstance.Get("SizeOfOptionalHeader");
+            return (short)retObjectSizeOfOptionalHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectSizeOfOptionalHeader != null ? retObjectSizeOfOptionalHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class CoffHeader extends NetObject  {
 
     public int getNumberOfSymbols() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfSymbols = null;
         try {
-            return (int)classInstance.Get("NumberOfSymbols");
+            retObjectNumberOfSymbols = classInstance.Get("NumberOfSymbols");
+            return (int)retObjectNumberOfSymbols;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberOfSymbols != null ? retObjectNumberOfSymbols.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class CoffHeader extends NetObject  {
 
     public int getPointerToSymbolTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointerToSymbolTable = null;
         try {
-            return (int)classInstance.Get("PointerToSymbolTable");
+            retObjectPointerToSymbolTable = classInstance.Get("PointerToSymbolTable");
+            return (int)retObjectPointerToSymbolTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPointerToSymbolTable != null ? retObjectPointerToSymbolTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class CoffHeader extends NetObject  {
 
     public int getTimeDateStamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeDateStamp = null;
         try {
-            return (int)classInstance.Get("TimeDateStamp");
+            retObjectTimeDateStamp = classInstance.Get("TimeDateStamp");
+            return (int)retObjectTimeDateStamp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTimeDateStamp != null ? retObjectTimeDateStamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class CoffHeader extends NetObject  {
 
     public Characteristics getCharacteristics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacteristics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Characteristics");
+            retObjectCharacteristics = classInstance.Get("Characteristics");
+            JCObject val = (JCObject)retObjectCharacteristics;
             return new Characteristics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacteristics != null ? retObjectCharacteristics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class CoffHeader extends NetObject  {
 
     public Machine getMachine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Machine");
+            retObjectMachine = classInstance.Get("Machine");
+            JCObject val = (JCObject)retObjectMachine;
             return new Machine(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMachine != null ? retObjectMachine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

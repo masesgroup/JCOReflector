@@ -155,10 +155,14 @@ public class OutputCache extends NetObject  {
     
     public static NetObject Deserialize(Stream stream) throws Throwable, system.ArgumentNullException, system.FormatException, system.runtime.serialization.SerializationException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", stream == null ? null : stream.getJCOInstance());
+            retObjectDeserialize = classType.Invoke("Deserialize", stream == null ? null : stream.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class OutputCache extends NetObject  {
 
     public static void Serialize(Stream stream, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Serialize", stream == null ? null : stream.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class OutputCache extends NetObject  {
     
     public static java.lang.String getDefaultProviderName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultProviderName = null;
         try {
-            return (java.lang.String)classType.Get("DefaultProviderName");
+            retObjectDefaultProviderName = classType.Get("DefaultProviderName");
+            return (java.lang.String)retObjectDefaultProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultProviderName != null ? retObjectDefaultProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class OutputCache extends NetObject  {
 
     public static OutputCacheProviderCollection getProviders() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProviders = null;
         try {
-            JCObject val = (JCObject)classType.Get("Providers");
+            retObjectProviders = classType.Get("Providers");
+            JCObject val = (JCObject)retObjectProviders;
             return new OutputCacheProviderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviders != null ? retObjectProviders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

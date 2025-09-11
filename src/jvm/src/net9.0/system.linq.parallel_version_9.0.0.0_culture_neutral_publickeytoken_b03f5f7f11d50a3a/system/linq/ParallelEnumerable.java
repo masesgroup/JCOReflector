@@ -156,10 +156,14 @@ public class ParallelEnumerable extends NetObject  {
     
     public static ParallelQuery AsOrdered(ParallelQuery source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsOrdered = null;
         try {
-            JCObject objAsOrdered = (JCObject)classType.Invoke("AsOrdered", source == null ? null : source.getJCOInstance());
+            retObjectAsOrdered = classType.Invoke("AsOrdered", source == null ? null : source.getJCOInstance());
+            JCObject objAsOrdered = (JCObject)retObjectAsOrdered;
             return new ParallelQuery(objAsOrdered);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsOrdered != null ? retObjectAsOrdered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ParallelEnumerable extends NetObject  {
 
     public static ParallelQuery AsParallel(IEnumerable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsParallel = null;
         try {
-            JCObject objAsParallel = (JCObject)classType.Invoke("AsParallel", source == null ? null : source.getJCOInstance());
+            retObjectAsParallel = classType.Invoke("AsParallel", source == null ? null : source.getJCOInstance());
+            JCObject objAsParallel = (JCObject)retObjectAsParallel;
             return new ParallelQuery(objAsParallel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsParallel != null ? retObjectAsParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

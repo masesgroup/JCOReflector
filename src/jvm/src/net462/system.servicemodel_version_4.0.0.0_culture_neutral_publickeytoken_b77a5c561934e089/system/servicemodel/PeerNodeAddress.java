@@ -160,10 +160,14 @@ public class PeerNodeAddress extends NetObject  {
     
     public EndpointAddress getEndpointAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointAddress");
+            retObjectEndpointAddress = classInstance.Get("EndpointAddress");
+            JCObject val = (JCObject)retObjectEndpointAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointAddress != null ? retObjectEndpointAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

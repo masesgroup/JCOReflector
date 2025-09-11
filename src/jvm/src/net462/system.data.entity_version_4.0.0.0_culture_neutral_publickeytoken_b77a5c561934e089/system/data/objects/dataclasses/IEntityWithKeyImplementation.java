@@ -147,10 +147,14 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
     
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityKey");
+            retObjectEntityKey = classInstance.Get("EntityKey");
+            JCObject val = (JCObject)retObjectEntityKey;
             return new EntityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityKey != null ? retObjectEntityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
 
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKey", EntityKey == null ? null : EntityKey.getJCOInstance());
         } catch (JCNativeException jcne) {

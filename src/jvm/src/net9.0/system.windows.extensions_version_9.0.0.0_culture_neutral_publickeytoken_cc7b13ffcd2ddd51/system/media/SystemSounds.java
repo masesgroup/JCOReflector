@@ -158,10 +158,14 @@ public class SystemSounds extends NetObject  {
     
     public static SystemSound getAsterisk() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsterisk = null;
         try {
-            JCObject val = (JCObject)classType.Get("Asterisk");
+            retObjectAsterisk = classType.Get("Asterisk");
+            JCObject val = (JCObject)retObjectAsterisk;
             return new SystemSound(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsterisk != null ? retObjectAsterisk.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SystemSounds extends NetObject  {
 
     public static SystemSound getBeep() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBeep = null;
         try {
-            JCObject val = (JCObject)classType.Get("Beep");
+            retObjectBeep = classType.Get("Beep");
+            JCObject val = (JCObject)retObjectBeep;
             return new SystemSound(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeep != null ? retObjectBeep.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SystemSounds extends NetObject  {
 
     public static SystemSound getExclamation() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclamation = null;
         try {
-            JCObject val = (JCObject)classType.Get("Exclamation");
+            retObjectExclamation = classType.Get("Exclamation");
+            JCObject val = (JCObject)retObjectExclamation;
             return new SystemSound(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclamation != null ? retObjectExclamation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class SystemSounds extends NetObject  {
 
     public static SystemSound getHand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHand = null;
         try {
-            JCObject val = (JCObject)classType.Get("Hand");
+            retObjectHand = classType.Get("Hand");
+            JCObject val = (JCObject)retObjectHand;
             return new SystemSound(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHand != null ? retObjectHand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class SystemSounds extends NetObject  {
 
     public static SystemSound getQuestion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectQuestion = null;
         try {
-            JCObject val = (JCObject)classType.Get("Question");
+            retObjectQuestion = classType.Get("Question");
+            JCObject val = (JCObject)retObjectQuestion;
             return new SystemSound(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuestion != null ? retObjectQuestion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

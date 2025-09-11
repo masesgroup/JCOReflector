@@ -154,9 +154,13 @@ public class ConnectionPoint extends NetObject  {
     
     public boolean GetEnabled(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("GetEnabled", control == null ? null : control.getJCOInstance());
+            retObjectGetEnabled = classInstance.Invoke("GetEnabled", control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectGetEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetEnabled != null ? retObjectGetEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ConnectionPoint extends NetObject  {
     
     public boolean getAllowsMultipleConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowsMultipleConnections = null;
         try {
-            return (boolean)classInstance.Get("AllowsMultipleConnections");
+            retObjectAllowsMultipleConnections = classInstance.Get("AllowsMultipleConnections");
+            return (boolean)retObjectAllowsMultipleConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowsMultipleConnections != null ? retObjectAllowsMultipleConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class ConnectionPoint extends NetObject  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class ConnectionPoint extends NetObject  {
 
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectID = null;
         try {
-            return (java.lang.String)classInstance.Get("ID");
+            retObjectID = classInstance.Get("ID");
+            return (java.lang.String)retObjectID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectID != null ? retObjectID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +214,14 @@ public class ConnectionPoint extends NetObject  {
 
     public NetType getControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlType");
+            retObjectControlType = classInstance.Get("ControlType");
+            JCObject val = (JCObject)retObjectControlType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlType != null ? retObjectControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +229,14 @@ public class ConnectionPoint extends NetObject  {
 
     public NetType getInterfaceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InterfaceType");
+            retObjectInterfaceType = classInstance.Get("InterfaceType");
+            JCObject val = (JCObject)retObjectInterfaceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterfaceType != null ? retObjectInterfaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

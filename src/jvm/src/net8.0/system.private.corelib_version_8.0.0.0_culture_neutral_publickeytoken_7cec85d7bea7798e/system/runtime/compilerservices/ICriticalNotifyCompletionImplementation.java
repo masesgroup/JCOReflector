@@ -145,7 +145,7 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
     
     public void OnCompleted(Action continuation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnCompleted", continuation);
         } catch (JCNativeException jcne) {
@@ -155,7 +155,7 @@ public class ICriticalNotifyCompletionImplementation extends NetObject implement
 
     public void UnsafeOnCompleted(Action continuation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsafeOnCompleted", continuation);
         } catch (JCNativeException jcne) {

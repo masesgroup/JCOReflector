@@ -159,10 +159,12 @@ public class HttpServerUtility extends NetObject  {
     
     public static byte[] UrlTokenDecode(java.lang.String input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlTokenDecode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlTokenDecode", input);
+            retObjectUrlTokenDecode = classType.Invoke("UrlTokenDecode", input);
+            JCObject resultingObjects = (JCObject)retObjectUrlTokenDecode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -171,6 +173,8 @@ public class HttpServerUtility extends NetObject  {
 				resultingArray[indexUrlTokenDecode] = (byte)resultingArrayList.get(indexUrlTokenDecode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUrlTokenDecode != null ? retObjectUrlTokenDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class HttpServerUtility extends NetObject  {
 
     public NetException GetLastError() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastError = null;
         try {
-            JCObject objGetLastError = (JCObject)classInstance.Invoke("GetLastError");
+            retObjectGetLastError = classInstance.Invoke("GetLastError");
+            JCObject objGetLastError = (JCObject)retObjectGetLastError;
             return new NetException(objGetLastError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastError != null ? retObjectGetLastError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class HttpServerUtility extends NetObject  {
 
     public NetObject CreateObject(java.lang.String progID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObject = null;
         try {
-            JCObject objCreateObject = (JCObject)classInstance.Invoke("CreateObject", progID);
+            retObjectCreateObject = classInstance.Invoke("CreateObject", progID);
+            JCObject objCreateObject = (JCObject)retObjectCreateObject;
             return new NetObject(objCreateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class HttpServerUtility extends NetObject  {
 
     public NetObject CreateObject(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObject = null;
         try {
-            JCObject objCreateObject = (JCObject)classInstance.Invoke("CreateObject", type == null ? null : type.getJCOInstance());
+            retObjectCreateObject = classInstance.Invoke("CreateObject", type == null ? null : type.getJCOInstance());
+            JCObject objCreateObject = (JCObject)retObjectCreateObject;
             return new NetObject(objCreateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class HttpServerUtility extends NetObject  {
 
     public NetObject CreateObjectFromClsid(java.lang.String clsid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObjectFromClsid = null;
         try {
-            JCObject objCreateObjectFromClsid = (JCObject)classInstance.Invoke("CreateObjectFromClsid", clsid);
+            retObjectCreateObjectFromClsid = classInstance.Invoke("CreateObjectFromClsid", clsid);
+            JCObject objCreateObjectFromClsid = (JCObject)retObjectCreateObjectFromClsid;
             return new NetObject(objCreateObjectFromClsid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObjectFromClsid != null ? retObjectCreateObjectFromClsid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +242,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String HtmlDecode(java.lang.String s) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlDecode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("HtmlDecode", s);
+            retObjectHtmlDecode = classInstance.Invoke("HtmlDecode", s);
+            return (java.lang.String)retObjectHtmlDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlDecode != null ? retObjectHtmlDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +256,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String HtmlEncode(java.lang.String s) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHtmlEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("HtmlEncode", s);
+            retObjectHtmlEncode = classInstance.Invoke("HtmlEncode", s);
+            return (java.lang.String)retObjectHtmlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectHtmlEncode != null ? retObjectHtmlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +270,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String MapPath(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.FormatException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMapPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("MapPath", path);
+            retObjectMapPath = classInstance.Invoke("MapPath", path);
+            return (java.lang.String)retObjectMapPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMapPath != null ? retObjectMapPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +284,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String UrlDecode(java.lang.String s) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.IndexOutOfRangeException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlDecode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UrlDecode", s);
+            retObjectUrlDecode = classInstance.Invoke("UrlDecode", s);
+            return (java.lang.String)retObjectUrlDecode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlDecode != null ? retObjectUrlDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +298,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String UrlEncode(java.lang.String s) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UrlEncode", s);
+            retObjectUrlEncode = classInstance.Invoke("UrlEncode", s);
+            return (java.lang.String)retObjectUrlEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlEncode != null ? retObjectUrlEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +312,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String UrlPathEncode(java.lang.String s) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrlPathEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("UrlPathEncode", s);
+            retObjectUrlPathEncode = classInstance.Invoke("UrlPathEncode", s);
+            return (java.lang.String)retObjectUrlPathEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlPathEncode != null ? retObjectUrlPathEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +326,13 @@ public class HttpServerUtility extends NetObject  {
 
     public static java.lang.String UrlTokenEncode(byte[] input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlTokenEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("UrlTokenEncode", (java.lang.Object)input);
+            retObjectUrlTokenEncode = classType.Invoke("UrlTokenEncode", (java.lang.Object)input);
+            return (java.lang.String)retObjectUrlTokenEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlTokenEncode != null ? retObjectUrlTokenEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +340,13 @@ public class HttpServerUtility extends NetObject  {
 
     public static java.lang.String UrlTokenEncode(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUrlTokenEncode = null;
         try {
-            return (java.lang.String)classType.Invoke("UrlTokenEncode", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectUrlTokenEncode = classType.Invoke("UrlTokenEncode", (java.lang.Object)dupParam0.getJCRefOut());
+            return (java.lang.String)retObjectUrlTokenEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectUrlTokenEncode != null ? retObjectUrlTokenEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +354,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void ClearError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearError");
         } catch (JCNativeException jcne) {
@@ -312,7 +364,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Execute(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", path);
         } catch (JCNativeException jcne) {
@@ -322,7 +374,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Execute(java.lang.String path, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", path, preserveForm);
         } catch (JCNativeException jcne) {
@@ -332,7 +384,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Execute(java.lang.String path, TextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", path, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +394,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Execute(java.lang.String path, TextWriter writer, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MissingMethodException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.OverflowException, system.io.PathTooLongException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", path, writer == null ? null : writer.getJCOInstance(), preserveForm);
         } catch (JCNativeException jcne) {
@@ -352,7 +404,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Execute(IHttpHandler handler, TextWriter writer, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Execute", handler == null ? null : handler.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), preserveForm);
         } catch (JCNativeException jcne) {
@@ -362,7 +414,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void HtmlDecode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HtmlDecode", s, output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +424,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void HtmlEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HtmlEncode", s, output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +434,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Transfer(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ApplicationException, system.NotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transfer", path);
         } catch (JCNativeException jcne) {
@@ -392,7 +444,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Transfer(java.lang.String path, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ApplicationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transfer", path, preserveForm);
         } catch (JCNativeException jcne) {
@@ -402,7 +454,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void Transfer(IHttpHandler handler, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ApplicationException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException, system.OverflowException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transfer", handler == null ? null : handler.getJCOInstance(), preserveForm);
         } catch (JCNativeException jcne) {
@@ -412,7 +464,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void TransferRequest(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransferRequest", path);
         } catch (JCNativeException jcne) {
@@ -422,7 +474,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void TransferRequest(java.lang.String path, boolean preserveForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransferRequest", path, preserveForm);
         } catch (JCNativeException jcne) {
@@ -432,7 +484,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void TransferRequest(java.lang.String path, boolean preserveForm, java.lang.String method, NameValueCollection headers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransferRequest", path, preserveForm, method, headers == null ? null : headers.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +494,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void TransferRequest(java.lang.String path, boolean preserveForm, java.lang.String method, NameValueCollection headers, boolean preserveUser) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransferRequest", path, preserveForm, method, headers == null ? null : headers.getJCOInstance(), preserveUser);
         } catch (JCNativeException jcne) {
@@ -452,7 +504,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void UrlDecode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UrlDecode", s, output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +514,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void UrlEncode(java.lang.String s, TextWriter output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UrlEncode", s, output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,9 +528,13 @@ public class HttpServerUtility extends NetObject  {
     
     public int getScriptTimeout() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScriptTimeout = null;
         try {
-            return (int)classInstance.Get("ScriptTimeout");
+            retObjectScriptTimeout = classInstance.Get("ScriptTimeout");
+            return (int)retObjectScriptTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectScriptTimeout != null ? retObjectScriptTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +542,7 @@ public class HttpServerUtility extends NetObject  {
 
     public void setScriptTimeout(int ScriptTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScriptTimeout", ScriptTimeout);
         } catch (JCNativeException jcne) {
@@ -496,9 +552,13 @@ public class HttpServerUtility extends NetObject  {
 
     public java.lang.String getMachineName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

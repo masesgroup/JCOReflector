@@ -160,9 +160,13 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
     
     public double getCursorLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursorLeft = null;
         try {
-            return (double)classInstance.Get("CursorLeft");
+            retObjectCursorLeft = classInstance.Get("CursorLeft");
+            return (double)retObjectCursorLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectCursorLeft != null ? retObjectCursorLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ContextMenuEventArgs extends RoutedEventArgs  {
 
     public double getCursorTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursorTop = null;
         try {
-            return (double)classInstance.Get("CursorTop");
+            retObjectCursorTop = classInstance.Get("CursorTop");
+            return (double)retObjectCursorTop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectCursorTop != null ? retObjectCursorTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

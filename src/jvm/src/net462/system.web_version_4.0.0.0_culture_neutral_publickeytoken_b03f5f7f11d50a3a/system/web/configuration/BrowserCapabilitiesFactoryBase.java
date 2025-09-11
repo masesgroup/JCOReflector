@@ -163,7 +163,7 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
     
     public void ConfigureBrowserCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ConfigureBrowserCapabilities", headers == null ? null : headers.getJCOInstance(), browserCaps == null ? null : browserCaps.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class BrowserCapabilitiesFactoryBase extends NetObject  {
 
     public void ConfigureCustomCapabilities(NameValueCollection headers, HttpBrowserCapabilities browserCaps) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ConfigureCustomCapabilities", headers == null ? null : headers.getJCOInstance(), browserCaps == null ? null : browserCaps.getJCOInstance());
         } catch (JCNativeException jcne) {

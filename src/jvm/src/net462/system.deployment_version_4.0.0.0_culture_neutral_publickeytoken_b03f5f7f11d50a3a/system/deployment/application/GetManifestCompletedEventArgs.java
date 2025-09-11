@@ -165,9 +165,13 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public boolean getIsCached() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCached = null;
         try {
-            return (boolean)classInstance.Get("IsCached");
+            retObjectIsCached = classInstance.Get("IsCached");
+            return (boolean)retObjectIsCached;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCached != null ? retObjectIsCached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public ActivationContext getActivationContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivationContext");
+            retObjectActivationContext = classInstance.Get("ActivationContext");
+            JCObject val = (JCObject)retObjectActivationContext;
             return new ActivationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivationContext != null ? retObjectActivationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public ApplicationIdentity getApplicationIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            retObjectApplicationIdentity = classInstance.Get("ApplicationIdentity");
+            JCObject val = (JCObject)retObjectApplicationIdentity;
             return new ApplicationIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationIdentity != null ? retObjectApplicationIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public java.lang.String getLogFilePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("LogFilePath");
+            retObjectLogFilePath = classInstance.Get("LogFilePath");
+            return (java.lang.String)retObjectLogFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogFilePath != null ? retObjectLogFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public java.lang.String getProductName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductName");
+            retObjectProductName = classInstance.Get("ProductName");
+            return (java.lang.String)retObjectProductName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductName != null ? retObjectProductName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public java.lang.String getSubscriptionIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscriptionIdentity = null;
         try {
-            return (java.lang.String)classInstance.Get("SubscriptionIdentity");
+            retObjectSubscriptionIdentity = classInstance.Get("SubscriptionIdentity");
+            return (java.lang.String)retObjectSubscriptionIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubscriptionIdentity != null ? retObjectSubscriptionIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public Uri getSupportUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportUri");
+            retObjectSupportUri = classInstance.Get("SupportUri");
+            JCObject val = (JCObject)retObjectSupportUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportUri != null ? retObjectSupportUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public Version getVersion() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public XmlReader getApplicationManifest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationManifest");
+            retObjectApplicationManifest = classInstance.Get("ApplicationManifest");
+            JCObject val = (JCObject)retObjectApplicationManifest;
             return new XmlReader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationManifest != null ? retObjectApplicationManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,14 @@ public class GetManifestCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public XmlReader getDeploymentManifest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentManifest");
+            retObjectDeploymentManifest = classInstance.Get("DeploymentManifest");
+            JCObject val = (JCObject)retObjectDeploymentManifest;
             return new XmlReader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeploymentManifest != null ? retObjectDeploymentManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,7 +162,7 @@ public class LdapSessionOptions extends NetObject  {
     
     public void FastConcurrentBind() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FastConcurrentBind");
         } catch (JCNativeException jcne) {
@@ -172,7 +172,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void StartTransportLayerSecurity(DirectoryControlCollection controls) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.IndexOutOfRangeException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.directoryservices.protocols.TlsOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartTransportLayerSecurity", controls == null ? null : controls.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void StopTransportLayerSecurity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.TlsOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopTransportLayerSecurity");
         } catch (JCNativeException jcne) {
@@ -196,9 +196,13 @@ public class LdapSessionOptions extends NetObject  {
     
     public boolean getAutoReconnect() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoReconnect = null;
         try {
-            return (boolean)classInstance.Get("AutoReconnect");
+            retObjectAutoReconnect = classInstance.Get("AutoReconnect");
+            return (boolean)retObjectAutoReconnect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoReconnect != null ? retObjectAutoReconnect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +210,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setAutoReconnect(boolean AutoReconnect) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoReconnect", AutoReconnect);
         } catch (JCNativeException jcne) {
@@ -216,9 +220,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getHostReachable() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostReachable = null;
         try {
-            return (boolean)classInstance.Get("HostReachable");
+            retObjectHostReachable = classInstance.Get("HostReachable");
+            return (boolean)retObjectHostReachable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHostReachable != null ? retObjectHostReachable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +234,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getRootDseCache() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDseCache = null;
         try {
-            return (boolean)classInstance.Get("RootDseCache");
+            retObjectRootDseCache = classInstance.Get("RootDseCache");
+            return (boolean)retObjectRootDseCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRootDseCache != null ? retObjectRootDseCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setRootDseCache(boolean RootDseCache) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootDseCache", RootDseCache);
         } catch (JCNativeException jcne) {
@@ -246,9 +258,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getSealing() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSealing = null;
         try {
-            return (boolean)classInstance.Get("Sealing");
+            retObjectSealing = classInstance.Get("Sealing");
+            return (boolean)retObjectSealing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSealing != null ? retObjectSealing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSealing(boolean Sealing) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sealing", Sealing);
         } catch (JCNativeException jcne) {
@@ -266,9 +282,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getSecureSocketLayer() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecureSocketLayer = null;
         try {
-            return (boolean)classInstance.Get("SecureSocketLayer");
+            retObjectSecureSocketLayer = classInstance.Get("SecureSocketLayer");
+            return (boolean)retObjectSecureSocketLayer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecureSocketLayer != null ? retObjectSecureSocketLayer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +296,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSecureSocketLayer(boolean SecureSocketLayer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecureSocketLayer", SecureSocketLayer);
         } catch (JCNativeException jcne) {
@@ -286,9 +306,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getSigning() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigning = null;
         try {
-            return (boolean)classInstance.Get("Signing");
+            retObjectSigning = classInstance.Get("Signing");
+            return (boolean)retObjectSigning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSigning != null ? retObjectSigning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +320,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSigning(boolean Signing) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Signing", Signing);
         } catch (JCNativeException jcne) {
@@ -306,9 +330,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public boolean getTcpKeepAlive() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTcpKeepAlive = null;
         try {
-            return (boolean)classInstance.Get("TcpKeepAlive");
+            retObjectTcpKeepAlive = classInstance.Get("TcpKeepAlive");
+            return (boolean)retObjectTcpKeepAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTcpKeepAlive != null ? retObjectTcpKeepAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +344,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setTcpKeepAlive(boolean TcpKeepAlive) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TcpKeepAlive", TcpKeepAlive);
         } catch (JCNativeException jcne) {
@@ -326,9 +354,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public int getPingLimit() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPingLimit = null;
         try {
-            return (int)classInstance.Get("PingLimit");
+            retObjectPingLimit = classInstance.Get("PingLimit");
+            return (int)retObjectPingLimit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPingLimit != null ? retObjectPingLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +368,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setPingLimit(int PingLimit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PingLimit", PingLimit);
         } catch (JCNativeException jcne) {
@@ -346,9 +378,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public int getProtocolVersion() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolVersion = null;
         try {
-            return (int)classInstance.Get("ProtocolVersion");
+            retObjectProtocolVersion = classInstance.Get("ProtocolVersion");
+            return (int)retObjectProtocolVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +392,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setProtocolVersion(int ProtocolVersion) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtocolVersion", ProtocolVersion);
         } catch (JCNativeException jcne) {
@@ -366,9 +402,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public int getReferralHopLimit() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralHopLimit = null;
         try {
-            return (int)classInstance.Get("ReferralHopLimit");
+            retObjectReferralHopLimit = classInstance.Get("ReferralHopLimit");
+            return (int)retObjectReferralHopLimit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReferralHopLimit != null ? retObjectReferralHopLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setReferralHopLimit(int ReferralHopLimit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralHopLimit", ReferralHopLimit);
         } catch (JCNativeException jcne) {
@@ -386,9 +426,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public int getSspiFlag() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSspiFlag = null;
         try {
-            return (int)classInstance.Get("SspiFlag");
+            retObjectSspiFlag = classInstance.Get("SspiFlag");
+            return (int)retObjectSspiFlag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSspiFlag != null ? retObjectSspiFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +440,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSspiFlag(int SspiFlag) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SspiFlag", SspiFlag);
         } catch (JCNativeException jcne) {
@@ -406,10 +450,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public LocatorFlags getLocatorFlag() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocatorFlag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocatorFlag");
+            retObjectLocatorFlag = classInstance.Get("LocatorFlag");
+            JCObject val = (JCObject)retObjectLocatorFlag;
             return new LocatorFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocatorFlag != null ? retObjectLocatorFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +465,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setLocatorFlag(LocatorFlags LocatorFlag) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocatorFlag", LocatorFlag == null ? null : LocatorFlag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,10 +475,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public ReferralCallback getReferralCallback() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralCallback = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferralCallback");
+            retObjectReferralCallback = classInstance.Get("ReferralCallback");
+            JCObject val = (JCObject)retObjectReferralCallback;
             return new ReferralCallback(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferralCallback != null ? retObjectReferralCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +490,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setReferralCallback(ReferralCallback ReferralCallback) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralCallback", ReferralCallback == null ? null : ReferralCallback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -448,10 +500,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public ReferralChasingOptions getReferralChasing() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferralChasing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferralChasing");
+            retObjectReferralChasing = classInstance.Get("ReferralChasing");
+            JCObject val = (JCObject)retObjectReferralChasing;
             return new ReferralChasingOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferralChasing != null ? retObjectReferralChasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,7 +515,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setReferralChasing(ReferralChasingOptions ReferralChasing) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferralChasing", ReferralChasing == null ? null : ReferralChasing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -469,10 +525,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public SecurityPackageContextConnectionInformation getSslInformation() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSslInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SslInformation");
+            retObjectSslInformation = classInstance.Get("SslInformation");
+            JCObject val = (JCObject)retObjectSslInformation;
             return new SecurityPackageContextConnectionInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSslInformation != null ? retObjectSslInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,9 +540,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public VerifyServerCertificateCallback getVerifyServerCertificate() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyServerCertificate = null;
         try {
-            return (VerifyServerCertificateCallback)classInstance.Get("VerifyServerCertificate");
+            retObjectVerifyServerCertificate = classInstance.Get("VerifyServerCertificate");
+            return (VerifyServerCertificateCallback)retObjectVerifyServerCertificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into VerifyServerCertificateCallback", retObjectVerifyServerCertificate != null ? retObjectVerifyServerCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +554,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setVerifyServerCertificate(VerifyServerCertificateCallback VerifyServerCertificate) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerifyServerCertificate", VerifyServerCertificate);
         } catch (JCNativeException jcne) {
@@ -500,10 +564,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public NetObject getSecurityContext() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityContext");
+            retObjectSecurityContext = classInstance.Get("SecurityContext");
+            JCObject val = (JCObject)retObjectSecurityContext;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityContext != null ? retObjectSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,9 +579,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public java.lang.String getDomainName() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomainName = null;
         try {
-            return (java.lang.String)classInstance.Get("DomainName");
+            retObjectDomainName = classInstance.Get("DomainName");
+            return (java.lang.String)retObjectDomainName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDomainName != null ? retObjectDomainName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +593,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setDomainName(java.lang.String DomainName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DomainName", DomainName);
         } catch (JCNativeException jcne) {
@@ -531,9 +603,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public java.lang.String getHostName() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostName = null;
         try {
-            return (java.lang.String)classInstance.Get("HostName");
+            retObjectHostName = classInstance.Get("HostName");
+            return (java.lang.String)retObjectHostName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHostName != null ? retObjectHostName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +617,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setHostName(java.lang.String HostName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostName", HostName);
         } catch (JCNativeException jcne) {
@@ -551,9 +627,13 @@ public class LdapSessionOptions extends NetObject  {
 
     public java.lang.String getSaslMethod() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSaslMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SaslMethod");
+            retObjectSaslMethod = classInstance.Get("SaslMethod");
+            return (java.lang.String)retObjectSaslMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSaslMethod != null ? retObjectSaslMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,7 +641,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSaslMethod(java.lang.String SaslMethod) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SaslMethod", SaslMethod);
         } catch (JCNativeException jcne) {
@@ -571,10 +651,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public TimeSpan getPingKeepAliveTimeout() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPingKeepAliveTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PingKeepAliveTimeout");
+            retObjectPingKeepAliveTimeout = classInstance.Get("PingKeepAliveTimeout");
+            JCObject val = (JCObject)retObjectPingKeepAliveTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPingKeepAliveTimeout != null ? retObjectPingKeepAliveTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,7 +666,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setPingKeepAliveTimeout(TimeSpan PingKeepAliveTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PingKeepAliveTimeout", PingKeepAliveTimeout == null ? null : PingKeepAliveTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -592,10 +676,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public TimeSpan getPingWaitTimeout() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPingWaitTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PingWaitTimeout");
+            retObjectPingWaitTimeout = classInstance.Get("PingWaitTimeout");
+            JCObject val = (JCObject)retObjectPingWaitTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPingWaitTimeout != null ? retObjectPingWaitTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,7 +691,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setPingWaitTimeout(TimeSpan PingWaitTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PingWaitTimeout", PingWaitTimeout == null ? null : PingWaitTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -613,10 +701,14 @@ public class LdapSessionOptions extends NetObject  {
 
     public TimeSpan getSendTimeout() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SendTimeout");
+            retObjectSendTimeout = classInstance.Get("SendTimeout");
+            JCObject val = (JCObject)retObjectSendTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendTimeout != null ? retObjectSendTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,7 +716,7 @@ public class LdapSessionOptions extends NetObject  {
 
     public void setSendTimeout(TimeSpan SendTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendTimeout", SendTimeout == null ? null : SendTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

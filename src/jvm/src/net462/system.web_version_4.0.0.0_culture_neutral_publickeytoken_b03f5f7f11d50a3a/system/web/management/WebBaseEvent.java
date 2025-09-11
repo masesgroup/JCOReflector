@@ -160,9 +160,13 @@ public class WebBaseEvent extends NetObject  {
     
     public java.lang.String ToString(boolean includeAppInfo, boolean includeCustomEventDetails) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", includeAppInfo, includeCustomEventDetails);
+            retObjectToString = classInstance.Invoke("ToString", includeAppInfo, includeCustomEventDetails);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class WebBaseEvent extends NetObject  {
 
     public void FormatCustomEventDetails(WebEventFormatter formatter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatCustomEventDetails", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -180,7 +184,7 @@ public class WebBaseEvent extends NetObject  {
 
     public void Raise() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.threading.AbandonedMutexException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Raise");
         } catch (JCNativeException jcne) {
@@ -190,7 +194,7 @@ public class WebBaseEvent extends NetObject  {
 
     public static void Raise(WebBaseEvent eventRaised) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException, system.InvalidTimeZoneException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Raise", eventRaised == null ? null : eventRaised.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class WebBaseEvent extends NetObject  {
     
     public int getEventCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventCode = null;
         try {
-            return (int)classInstance.Get("EventCode");
+            retObjectEventCode = classInstance.Get("EventCode");
+            return (int)retObjectEventCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventCode != null ? retObjectEventCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class WebBaseEvent extends NetObject  {
 
     public int getEventDetailCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventDetailCode = null;
         try {
-            return (int)classInstance.Get("EventDetailCode");
+            retObjectEventDetailCode = classInstance.Get("EventDetailCode");
+            return (int)retObjectEventDetailCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventDetailCode != null ? retObjectEventDetailCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +236,13 @@ public class WebBaseEvent extends NetObject  {
 
     public long getEventOccurrence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventOccurrence = null;
         try {
-            return (long)classInstance.Get("EventOccurrence");
+            retObjectEventOccurrence = classInstance.Get("EventOccurrence");
+            return (long)retObjectEventOccurrence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEventOccurrence != null ? retObjectEventOccurrence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +250,13 @@ public class WebBaseEvent extends NetObject  {
 
     public long getEventSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventSequence = null;
         try {
-            return (long)classInstance.Get("EventSequence");
+            retObjectEventSequence = classInstance.Get("EventSequence");
+            return (long)retObjectEventSequence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEventSequence != null ? retObjectEventSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +264,14 @@ public class WebBaseEvent extends NetObject  {
 
     public DateTime getEventTime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventTime");
+            retObjectEventTime = classInstance.Get("EventTime");
+            JCObject val = (JCObject)retObjectEventTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventTime != null ? retObjectEventTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +279,14 @@ public class WebBaseEvent extends NetObject  {
 
     public DateTime getEventTimeUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventTimeUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventTimeUtc");
+            retObjectEventTimeUtc = classInstance.Get("EventTimeUtc");
+            JCObject val = (JCObject)retObjectEventTimeUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventTimeUtc != null ? retObjectEventTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +294,14 @@ public class WebBaseEvent extends NetObject  {
 
     public Guid getEventID() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventID = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventID");
+            retObjectEventID = classInstance.Get("EventID");
+            JCObject val = (JCObject)retObjectEventID;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventID != null ? retObjectEventID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +309,14 @@ public class WebBaseEvent extends NetObject  {
 
     public NetObject getEventSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventSource");
+            retObjectEventSource = classInstance.Get("EventSource");
+            JCObject val = (JCObject)retObjectEventSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventSource != null ? retObjectEventSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +324,13 @@ public class WebBaseEvent extends NetObject  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +338,14 @@ public class WebBaseEvent extends NetObject  {
 
     public static WebApplicationInformation getApplicationInformation() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectApplicationInformation = null;
         try {
-            JCObject val = (JCObject)classType.Get("ApplicationInformation");
+            retObjectApplicationInformation = classType.Get("ApplicationInformation");
+            JCObject val = (JCObject)retObjectApplicationInformation;
             return new WebApplicationInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationInformation != null ? retObjectApplicationInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

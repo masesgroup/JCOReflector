@@ -171,10 +171,14 @@ public class SoapProtocolImporter extends ProtocolImporter  {
     
     public SoapBinding getSoapBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapBinding");
+            retObjectSoapBinding = classInstance.Get("SoapBinding");
+            JCObject val = (JCObject)retObjectSoapBinding;
             return new SoapBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapBinding != null ? retObjectSoapBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class SoapProtocolImporter extends ProtocolImporter  {
 
     public SoapCodeExporter getSoapExporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapExporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapExporter");
+            retObjectSoapExporter = classInstance.Get("SoapExporter");
+            JCObject val = (JCObject)retObjectSoapExporter;
             return new SoapCodeExporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapExporter != null ? retObjectSoapExporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class SoapProtocolImporter extends ProtocolImporter  {
 
     public SoapSchemaImporter getSoapImporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapImporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapImporter");
+            retObjectSoapImporter = classInstance.Get("SoapImporter");
+            JCObject val = (JCObject)retObjectSoapImporter;
             return new SoapSchemaImporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapImporter != null ? retObjectSoapImporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class SoapProtocolImporter extends ProtocolImporter  {
 
     public XmlCodeExporter getXmlExporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlExporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlExporter");
+            retObjectXmlExporter = classInstance.Get("XmlExporter");
+            JCObject val = (JCObject)retObjectXmlExporter;
             return new XmlCodeExporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlExporter != null ? retObjectXmlExporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +231,14 @@ public class SoapProtocolImporter extends ProtocolImporter  {
 
     public XmlSchemaImporter getXmlImporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlImporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlImporter");
+            retObjectXmlImporter = classInstance.Get("XmlImporter");
+            JCObject val = (JCObject)retObjectXmlImporter;
             return new XmlSchemaImporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlImporter != null ? retObjectXmlImporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

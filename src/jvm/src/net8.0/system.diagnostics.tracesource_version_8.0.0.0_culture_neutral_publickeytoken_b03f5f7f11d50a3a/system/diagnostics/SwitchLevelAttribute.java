@@ -170,10 +170,14 @@ public class SwitchLevelAttribute extends Attribute  {
     
     public NetType getSwitchLevelType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitchLevelType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SwitchLevelType");
+            retObjectSwitchLevelType = classInstance.Get("SwitchLevelType");
+            JCObject val = (JCObject)retObjectSwitchLevelType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitchLevelType != null ? retObjectSwitchLevelType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class SwitchLevelAttribute extends Attribute  {
 
     public void setSwitchLevelType(NetType SwitchLevelType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SwitchLevelType", SwitchLevelType == null ? null : SwitchLevelType.getJCOInstance());
         } catch (JCNativeException jcne) {

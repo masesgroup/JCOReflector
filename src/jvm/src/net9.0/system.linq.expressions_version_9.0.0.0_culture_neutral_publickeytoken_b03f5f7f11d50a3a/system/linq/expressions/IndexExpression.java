@@ -159,10 +159,14 @@ public class IndexExpression extends Expression  {
     
     public Expression GetArgument(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgument = null;
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            retObjectGetArgument = classInstance.Invoke("GetArgument", index);
+            JCObject objGetArgument = (JCObject)retObjectGetArgument;
             return new Expression(objGetArgument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgument != null ? retObjectGetArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class IndexExpression extends Expression  {
     
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentCount = null;
         try {
-            return (int)classInstance.Get("ArgumentCount");
+            retObjectArgumentCount = classInstance.Get("ArgumentCount");
+            return (int)retObjectArgumentCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectArgumentCount != null ? retObjectArgumentCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class IndexExpression extends Expression  {
 
     public Expression getObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Object");
+            retObjectObject = classInstance.Get("Object");
+            JCObject val = (JCObject)retObjectObject;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObject != null ? retObjectObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class IndexExpression extends Expression  {
 
     public PropertyInfo getIndexer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Indexer");
+            retObjectIndexer = classInstance.Get("Indexer");
+            JCObject val = (JCObject)retObjectIndexer;
             return new PropertyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIndexer != null ? retObjectIndexer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

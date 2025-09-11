@@ -155,9 +155,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,12 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public byte[] GetDerivationNonce() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDerivationNonce = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDerivationNonce");
+            retObjectGetDerivationNonce = classInstance.Invoke("GetDerivationNonce");
+            JCObject resultingObjects = (JCObject)retObjectGetDerivationNonce;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -177,6 +183,8 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 				resultingArray[indexGetDerivationNonce] = (byte)resultingArrayList.get(indexGetDerivationNonce);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetDerivationNonce != null ? retObjectGetDerivationNonce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public SecurityKey CreateKey() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKey = null;
         try {
-            JCObject objCreateKey = (JCObject)classInstance.Invoke("CreateKey");
+            retObjectCreateKey = classInstance.Invoke("CreateKey");
+            JCObject objCreateKey = (JCObject)retObjectCreateKey;
             return new SecurityKey(objCreateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKey != null ? retObjectCreateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
     
     public boolean getCanCreateKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateKey = null;
         try {
-            return (boolean)classInstance.Get("CanCreateKey");
+            retObjectCanCreateKey = classInstance.Get("CanCreateKey");
+            return (boolean)retObjectCanCreateKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateKey != null ? retObjectCanCreateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +225,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public int getDerivationLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDerivationLength = null;
         try {
-            return (int)classInstance.Get("DerivationLength");
+            retObjectDerivationLength = classInstance.Get("DerivationLength");
+            return (int)retObjectDerivationLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDerivationLength != null ? retObjectDerivationLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +239,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public java.lang.String getClauseType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClauseType = null;
         try {
-            return (java.lang.String)classInstance.Get("ClauseType");
+            retObjectClauseType = classInstance.Get("ClauseType");
+            return (java.lang.String)retObjectClauseType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClauseType != null ? retObjectClauseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +253,13 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +267,7 @@ public class SecurityKeyIdentifierClause extends NetObject  {
 
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id);
         } catch (JCNativeException jcne) {

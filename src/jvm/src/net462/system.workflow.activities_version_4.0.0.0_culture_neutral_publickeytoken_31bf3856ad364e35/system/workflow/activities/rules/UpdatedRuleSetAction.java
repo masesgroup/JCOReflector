@@ -177,10 +177,14 @@ public class UpdatedRuleSetAction extends RuleSetChangeAction  {
     
     public RuleSet getOriginalRuleSetDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalRuleSetDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalRuleSetDefinition");
+            retObjectOriginalRuleSetDefinition = classInstance.Get("OriginalRuleSetDefinition");
+            JCObject val = (JCObject)retObjectOriginalRuleSetDefinition;
             return new RuleSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalRuleSetDefinition != null ? retObjectOriginalRuleSetDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class UpdatedRuleSetAction extends RuleSetChangeAction  {
 
     public void setOriginalRuleSetDefinition(RuleSet OriginalRuleSetDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalRuleSetDefinition", OriginalRuleSetDefinition == null ? null : OriginalRuleSetDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,10 +202,14 @@ public class UpdatedRuleSetAction extends RuleSetChangeAction  {
 
     public RuleSet getUpdatedRuleSetDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedRuleSetDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedRuleSetDefinition");
+            retObjectUpdatedRuleSetDefinition = classInstance.Get("UpdatedRuleSetDefinition");
+            JCObject val = (JCObject)retObjectUpdatedRuleSetDefinition;
             return new RuleSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdatedRuleSetDefinition != null ? retObjectUpdatedRuleSetDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class UpdatedRuleSetAction extends RuleSetChangeAction  {
 
     public void setUpdatedRuleSetDefinition(RuleSet UpdatedRuleSetDefinition) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedRuleSetDefinition", UpdatedRuleSetDefinition == null ? null : UpdatedRuleSetDefinition.getJCOInstance());
         } catch (JCNativeException jcne) {

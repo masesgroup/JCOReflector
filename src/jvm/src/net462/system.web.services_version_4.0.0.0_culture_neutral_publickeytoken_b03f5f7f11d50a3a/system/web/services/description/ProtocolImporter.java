@@ -168,10 +168,14 @@ public class ProtocolImporter extends NetObject  {
     
     public NetException OperationBindingSyntaxException(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationBindingSyntaxException = null;
         try {
-            JCObject objOperationBindingSyntaxException = (JCObject)classInstance.Invoke("OperationBindingSyntaxException", text);
+            retObjectOperationBindingSyntaxException = classInstance.Invoke("OperationBindingSyntaxException", text);
+            JCObject objOperationBindingSyntaxException = (JCObject)retObjectOperationBindingSyntaxException;
             return new NetException(objOperationBindingSyntaxException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationBindingSyntaxException != null ? retObjectOperationBindingSyntaxException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ProtocolImporter extends NetObject  {
 
     public NetException OperationSyntaxException(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationSyntaxException = null;
         try {
-            JCObject objOperationSyntaxException = (JCObject)classInstance.Invoke("OperationSyntaxException", text);
+            retObjectOperationSyntaxException = classInstance.Invoke("OperationSyntaxException", text);
+            JCObject objOperationSyntaxException = (JCObject)retObjectOperationSyntaxException;
             return new NetException(objOperationSyntaxException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationSyntaxException != null ? retObjectOperationSyntaxException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class ProtocolImporter extends NetObject  {
 
     public void AddExtensionWarningComments(CodeCommentStatementCollection comments, ServiceDescriptionFormatExtensionCollection extensions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddExtensionWarningComments", comments == null ? null : comments.getJCOInstance(), extensions == null ? null : extensions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class ProtocolImporter extends NetObject  {
 
     public void UnsupportedBindingWarning(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsupportedBindingWarning", text);
         } catch (JCNativeException jcne) {
@@ -210,7 +218,7 @@ public class ProtocolImporter extends NetObject  {
 
     public void UnsupportedOperationBindingWarning(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsupportedOperationBindingWarning", text);
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class ProtocolImporter extends NetObject  {
 
     public void UnsupportedOperationWarning(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsupportedOperationWarning", text);
         } catch (JCNativeException jcne) {
@@ -234,10 +242,14 @@ public class ProtocolImporter extends NetObject  {
     
     public CodeNamespace getCodeNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeNamespace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeNamespace");
+            retObjectCodeNamespace = classInstance.Get("CodeNamespace");
+            JCObject val = (JCObject)retObjectCodeNamespace;
             return new CodeNamespace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeNamespace != null ? retObjectCodeNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +257,14 @@ public class ProtocolImporter extends NetObject  {
 
     public CodeTypeDeclaration getCodeTypeDeclaration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeTypeDeclaration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeTypeDeclaration");
+            retObjectCodeTypeDeclaration = classInstance.Get("CodeTypeDeclaration");
+            JCObject val = (JCObject)retObjectCodeTypeDeclaration;
             return new CodeTypeDeclaration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeTypeDeclaration != null ? retObjectCodeTypeDeclaration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +272,13 @@ public class ProtocolImporter extends NetObject  {
 
     public java.lang.String getClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassName");
+            retObjectClassName = classInstance.Get("ClassName");
+            return (java.lang.String)retObjectClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassName != null ? retObjectClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +286,13 @@ public class ProtocolImporter extends NetObject  {
 
     public java.lang.String getMethodName() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.ObjectDisposedException, system.RankException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +300,13 @@ public class ProtocolImporter extends NetObject  {
 
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            retObjectProtocolName = classInstance.Get("ProtocolName");
+            return (java.lang.String)retObjectProtocolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolName != null ? retObjectProtocolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +314,14 @@ public class ProtocolImporter extends NetObject  {
 
     public system.web.services.description.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.web.services.description.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +329,14 @@ public class ProtocolImporter extends NetObject  {
 
     public Message getInputMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputMessage");
+            retObjectInputMessage = classInstance.Get("InputMessage");
+            JCObject val = (JCObject)retObjectInputMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputMessage != null ? retObjectInputMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +344,14 @@ public class ProtocolImporter extends NetObject  {
 
     public Message getOutputMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputMessage");
+            retObjectOutputMessage = classInstance.Get("OutputMessage");
+            JCObject val = (JCObject)retObjectOutputMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputMessage != null ? retObjectOutputMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +359,14 @@ public class ProtocolImporter extends NetObject  {
 
     public Operation getOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
+            retObjectOperation = classInstance.Get("Operation");
+            JCObject val = (JCObject)retObjectOperation;
             return new Operation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperation != null ? retObjectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +374,14 @@ public class ProtocolImporter extends NetObject  {
 
     public OperationBinding getOperationBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationBinding");
+            retObjectOperationBinding = classInstance.Get("OperationBinding");
+            JCObject val = (JCObject)retObjectOperationBinding;
             return new OperationBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationBinding != null ? retObjectOperationBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +389,14 @@ public class ProtocolImporter extends NetObject  {
 
     public Port getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            JCObject val = (JCObject)retObjectPort;
             return new Port(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +404,14 @@ public class ProtocolImporter extends NetObject  {
 
     public PortType getPortType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PortType");
+            retObjectPortType = classInstance.Get("PortType");
+            JCObject val = (JCObject)retObjectPortType;
             return new PortType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPortType != null ? retObjectPortType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +419,14 @@ public class ProtocolImporter extends NetObject  {
 
     public Service getService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Service");
+            retObjectService = classInstance.Get("Service");
+            JCObject val = (JCObject)retObjectService;
             return new Service(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectService != null ? retObjectService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +434,14 @@ public class ProtocolImporter extends NetObject  {
 
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            retObjectServiceDescriptions = classInstance.Get("ServiceDescriptions");
+            JCObject val = (JCObject)retObjectServiceDescriptions;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptions != null ? retObjectServiceDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +449,14 @@ public class ProtocolImporter extends NetObject  {
 
     public ServiceDescriptionImportStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new ServiceDescriptionImportStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +464,14 @@ public class ProtocolImporter extends NetObject  {
 
     public ServiceDescriptionImportWarnings getWarnings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWarnings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Warnings");
+            retObjectWarnings = classInstance.Get("Warnings");
+            JCObject val = (JCObject)retObjectWarnings;
             return new ServiceDescriptionImportWarnings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWarnings != null ? retObjectWarnings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +479,7 @@ public class ProtocolImporter extends NetObject  {
 
     public void setWarnings(ServiceDescriptionImportWarnings Warnings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Warnings", Warnings == null ? null : Warnings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,10 +489,14 @@ public class ProtocolImporter extends NetObject  {
 
     public CodeIdentifiers getClassNames() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClassNames");
+            retObjectClassNames = classInstance.Get("ClassNames");
+            JCObject val = (JCObject)retObjectClassNames;
             return new CodeIdentifiers(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClassNames != null ? retObjectClassNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +504,14 @@ public class ProtocolImporter extends NetObject  {
 
     public XmlSchemas getAbstractSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbstractSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AbstractSchemas");
+            retObjectAbstractSchemas = classInstance.Get("AbstractSchemas");
+            JCObject val = (JCObject)retObjectAbstractSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbstractSchemas != null ? retObjectAbstractSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +519,14 @@ public class ProtocolImporter extends NetObject  {
 
     public XmlSchemas getConcreteSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConcreteSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConcreteSchemas");
+            retObjectConcreteSchemas = classInstance.Get("ConcreteSchemas");
+            JCObject val = (JCObject)retObjectConcreteSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConcreteSchemas != null ? retObjectConcreteSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +534,14 @@ public class ProtocolImporter extends NetObject  {
 
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

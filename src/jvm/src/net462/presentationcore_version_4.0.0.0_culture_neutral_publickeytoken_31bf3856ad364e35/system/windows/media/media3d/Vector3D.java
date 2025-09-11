@@ -173,9 +173,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
     
     public boolean Equals(Vector3D value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static boolean Equals(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,19 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static double AngleBetween(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAngleBetween = null;
         try {
-            return (double)classType.Invoke("AngleBetween", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectAngleBetween = classType.Invoke("AngleBetween", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectAngleBetween;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAngleBetweenNumber = (java.lang.Number)retObjectAngleBetween;
+                return retObjectAngleBetweenNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAngleBetween != null ? retObjectAngleBetween.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +221,19 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static double DotProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDotProduct = null;
         try {
-            return (double)classType.Invoke("DotProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectDotProduct = classType.Invoke("DotProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            return (double)retObjectDotProduct;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDotProductNumber = (java.lang.Number)retObjectDotProduct;
+                return retObjectDotProductNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDotProduct != null ? retObjectDotProduct.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +241,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +255,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Point3D Add(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Point3D(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +270,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Point3D Subtract(Vector3D vector, Point3D point) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", vector == null ? null : vector.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Point3D(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +285,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Add(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Vector3D(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +300,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D CrossProduct(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCrossProduct = null;
         try {
-            JCObject objCrossProduct = (JCObject)classType.Invoke("CrossProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectCrossProduct = classType.Invoke("CrossProduct", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            JCObject objCrossProduct = (JCObject)retObjectCrossProduct;
             return new Vector3D(objCrossProduct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCrossProduct != null ? retObjectCrossProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +315,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Divide(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", vector == null ? null : vector.getJCOInstance(), scalar);
+            retObjectDivide = classType.Invoke("Divide", vector == null ? null : vector.getJCOInstance(), scalar);
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new Vector3D(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +330,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Multiply(double scalar, Vector3D vector) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", scalar, vector == null ? null : vector.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", scalar, vector == null ? null : vector.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector3D(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +345,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Multiply(Vector3D vector, double scalar) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), scalar);
+            retObjectMultiply = classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), scalar);
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector3D(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +360,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Multiply(Vector3D vector, Matrix3D matrix) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", vector == null ? null : vector.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Vector3D(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +375,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Vector3D(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +390,14 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public static Vector3D Subtract(Vector3D vector1, Vector3D vector2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", vector1 == null ? null : vector1.getJCOInstance(), vector2 == null ? null : vector2.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Vector3D(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +405,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public void Negate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Negate");
         } catch (JCNativeException jcne) {
@@ -343,7 +415,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public void Normalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Normalize");
         } catch (JCNativeException jcne) {
@@ -357,7 +429,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -366,9 +438,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
     
     public double getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (double)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (double)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +452,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public double getLengthSquared() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLengthSquared = null;
         try {
-            return (double)classInstance.Get("LengthSquared");
+            retObjectLengthSquared = classInstance.Get("LengthSquared");
+            return (double)retObjectLengthSquared;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLengthSquared != null ? retObjectLengthSquared.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +466,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public double getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (double)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (double)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectX != null ? retObjectX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +480,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public void setX(double X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -406,9 +490,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public double getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (double)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (double)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectY != null ? retObjectY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,7 +504,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public void setY(double Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {
@@ -426,9 +514,13 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public double getZ() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZ = null;
         try {
-            return (double)classInstance.Get("Z");
+            retObjectZ = classInstance.Get("Z");
+            return (double)retObjectZ;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectZ != null ? retObjectZ.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +528,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
 
     public void setZ(double Z) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Z", Z);
         } catch (JCNativeException jcne) {

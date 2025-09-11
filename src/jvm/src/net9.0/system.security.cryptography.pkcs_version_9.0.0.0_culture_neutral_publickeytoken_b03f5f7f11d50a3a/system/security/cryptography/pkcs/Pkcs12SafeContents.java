@@ -173,10 +173,14 @@ public class Pkcs12SafeContents extends NetObject  {
     
     public Pkcs12CertBag AddCertificate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddCertificate = null;
         try {
-            JCObject objAddCertificate = (JCObject)classInstance.Invoke("AddCertificate", certificate == null ? null : certificate.getJCOInstance());
+            retObjectAddCertificate = classInstance.Invoke("AddCertificate", certificate == null ? null : certificate.getJCOInstance());
+            JCObject objAddCertificate = (JCObject)retObjectAddCertificate;
             return new Pkcs12CertBag(objAddCertificate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddCertificate != null ? retObjectAddCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12KeyBag AddKeyUnencrypted(AsymmetricAlgorithm key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddKeyUnencrypted = null;
         try {
-            JCObject objAddKeyUnencrypted = (JCObject)classInstance.Invoke("AddKeyUnencrypted", key == null ? null : key.getJCOInstance());
+            retObjectAddKeyUnencrypted = classInstance.Invoke("AddKeyUnencrypted", key == null ? null : key.getJCOInstance());
+            JCObject objAddKeyUnencrypted = (JCObject)retObjectAddKeyUnencrypted;
             return new Pkcs12KeyBag(objAddKeyUnencrypted);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddKeyUnencrypted != null ? retObjectAddKeyUnencrypted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12SafeContentsBag AddNestedContents(Pkcs12SafeContents safeContents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddNestedContents = null;
         try {
-            JCObject objAddNestedContents = (JCObject)classInstance.Invoke("AddNestedContents", safeContents == null ? null : safeContents.getJCOInstance());
+            retObjectAddNestedContents = classInstance.Invoke("AddNestedContents", safeContents == null ? null : safeContents.getJCOInstance());
+            JCObject objAddNestedContents = (JCObject)retObjectAddNestedContents;
             return new Pkcs12SafeContentsBag(objAddNestedContents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddNestedContents != null ? retObjectAddNestedContents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm key, byte[] passwordBytes, PbeParameters pbeParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddShroudedKey = null;
         try {
-            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", key == null ? null : key.getJCOInstance(), passwordBytes, pbeParameters == null ? null : pbeParameters.getJCOInstance());
+            retObjectAddShroudedKey = classInstance.Invoke("AddShroudedKey", key == null ? null : key.getJCOInstance(), passwordBytes, pbeParameters == null ? null : pbeParameters.getJCOInstance());
+            JCObject objAddShroudedKey = (JCObject)retObjectAddShroudedKey;
             return new Pkcs12ShroudedKeyBag(objAddShroudedKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddShroudedKey != null ? retObjectAddShroudedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm dupParam0, JCORefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddShroudedKey = null;
         try {
-            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectAddShroudedKey = classInstance.Invoke("AddShroudedKey", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objAddShroudedKey = (JCObject)retObjectAddShroudedKey;
             return new Pkcs12ShroudedKeyBag(objAddShroudedKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddShroudedKey != null ? retObjectAddShroudedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +248,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm key, java.lang.String password, PbeParameters pbeParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NotImplementedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddShroudedKey = null;
         try {
-            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", key == null ? null : key.getJCOInstance(), password, pbeParameters == null ? null : pbeParameters.getJCOInstance());
+            retObjectAddShroudedKey = classInstance.Invoke("AddShroudedKey", key == null ? null : key.getJCOInstance(), password, pbeParameters == null ? null : pbeParameters.getJCOInstance());
+            JCObject objAddShroudedKey = (JCObject)retObjectAddShroudedKey;
             return new Pkcs12ShroudedKeyBag(objAddShroudedKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddShroudedKey != null ? retObjectAddShroudedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +263,7 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public void AddSafeBag(Pkcs12SafeBag safeBag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSafeBag", safeBag == null ? null : safeBag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +273,7 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public void Decrypt(byte[] passwordBytes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", (java.lang.Object)passwordBytes);
         } catch (JCNativeException jcne) {
@@ -259,7 +283,7 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public void Decrypt(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -269,7 +293,7 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public void Decrypt(java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.ArrayTypeMismatchException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrypt", password);
         } catch (JCNativeException jcne) {
@@ -283,9 +307,13 @@ public class Pkcs12SafeContents extends NetObject  {
     
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +321,14 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public Pkcs12ConfidentialityMode getConfidentialityMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfidentialityMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConfidentialityMode");
+            retObjectConfidentialityMode = classInstance.Get("ConfidentialityMode");
+            JCObject val = (JCObject)retObjectConfidentialityMode;
             return new Pkcs12ConfidentialityMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfidentialityMode != null ? retObjectConfidentialityMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +336,7 @@ public class Pkcs12SafeContents extends NetObject  {
 
     public void setConfidentialityMode(Pkcs12ConfidentialityMode ConfidentialityMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfidentialityMode", ConfidentialityMode == null ? null : ConfidentialityMode.getJCOInstance());
         } catch (JCNativeException jcne) {

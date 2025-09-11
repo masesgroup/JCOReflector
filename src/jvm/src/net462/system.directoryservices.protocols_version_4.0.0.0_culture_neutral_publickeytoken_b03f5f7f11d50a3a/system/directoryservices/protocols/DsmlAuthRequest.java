@@ -176,9 +176,13 @@ public class DsmlAuthRequest extends DirectoryRequest  {
     
     public java.lang.String getPrincipal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrincipal = null;
         try {
-            return (java.lang.String)classInstance.Get("Principal");
+            retObjectPrincipal = classInstance.Get("Principal");
+            return (java.lang.String)retObjectPrincipal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrincipal != null ? retObjectPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class DsmlAuthRequest extends DirectoryRequest  {
 
     public void setPrincipal(java.lang.String Principal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Principal", Principal);
         } catch (JCNativeException jcne) {

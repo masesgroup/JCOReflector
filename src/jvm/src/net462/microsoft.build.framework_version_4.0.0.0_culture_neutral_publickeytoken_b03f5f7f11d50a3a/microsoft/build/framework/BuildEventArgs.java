@@ -160,9 +160,13 @@ public class BuildEventArgs extends EventArgs  {
     
     public int getThreadId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadId = null;
         try {
-            return (int)classInstance.Get("ThreadId");
+            retObjectThreadId = classInstance.Get("ThreadId");
+            return (int)retObjectThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectThreadId != null ? retObjectThreadId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class BuildEventArgs extends EventArgs  {
 
     public BuildEventContext getBuildEventContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildEventContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BuildEventContext");
+            retObjectBuildEventContext = classInstance.Get("BuildEventContext");
+            JCObject val = (JCObject)retObjectBuildEventContext;
             return new BuildEventContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildEventContext != null ? retObjectBuildEventContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class BuildEventArgs extends EventArgs  {
 
     public void setBuildEventContext(BuildEventContext BuildEventContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildEventContext", BuildEventContext == null ? null : BuildEventContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,10 +199,14 @@ public class BuildEventArgs extends EventArgs  {
 
     public DateTime getTimestamp() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            JCObject val = (JCObject)retObjectTimestamp;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class BuildEventArgs extends EventArgs  {
 
     public java.lang.String getHelpKeyword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpKeyword = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpKeyword");
+            retObjectHelpKeyword = classInstance.Get("HelpKeyword");
+            return (java.lang.String)retObjectHelpKeyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpKeyword != null ? retObjectHelpKeyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +228,13 @@ public class BuildEventArgs extends EventArgs  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +242,7 @@ public class BuildEventArgs extends EventArgs  {
 
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message);
         } catch (JCNativeException jcne) {
@@ -232,9 +252,13 @@ public class BuildEventArgs extends EventArgs  {
 
     public java.lang.String getSenderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSenderName = null;
         try {
-            return (java.lang.String)classInstance.Get("SenderName");
+            retObjectSenderName = classInstance.Get("SenderName");
+            return (java.lang.String)retObjectSenderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSenderName != null ? retObjectSenderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

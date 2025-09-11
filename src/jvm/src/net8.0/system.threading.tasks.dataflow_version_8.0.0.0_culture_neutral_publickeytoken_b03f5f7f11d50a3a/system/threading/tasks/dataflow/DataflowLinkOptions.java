@@ -165,9 +165,13 @@ public class DataflowLinkOptions extends NetObject  {
     
     public boolean getAppend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            return (boolean)classInstance.Get("Append");
+            retObjectAppend = classInstance.Get("Append");
+            return (boolean)retObjectAppend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class DataflowLinkOptions extends NetObject  {
 
     public void setAppend(boolean Append) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Append", Append);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class DataflowLinkOptions extends NetObject  {
 
     public boolean getPropagateCompletion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagateCompletion = null;
         try {
-            return (boolean)classInstance.Get("PropagateCompletion");
+            retObjectPropagateCompletion = classInstance.Get("PropagateCompletion");
+            return (boolean)retObjectPropagateCompletion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPropagateCompletion != null ? retObjectPropagateCompletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class DataflowLinkOptions extends NetObject  {
 
     public void setPropagateCompletion(boolean PropagateCompletion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropagateCompletion", PropagateCompletion);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class DataflowLinkOptions extends NetObject  {
 
     public int getMaxMessages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxMessages = null;
         try {
-            return (int)classInstance.Get("MaxMessages");
+            retObjectMaxMessages = classInstance.Get("MaxMessages");
+            return (int)retObjectMaxMessages;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxMessages != null ? retObjectMaxMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class DataflowLinkOptions extends NetObject  {
 
     public void setMaxMessages(int MaxMessages) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxMessages", MaxMessages);
         } catch (JCNativeException jcne) {

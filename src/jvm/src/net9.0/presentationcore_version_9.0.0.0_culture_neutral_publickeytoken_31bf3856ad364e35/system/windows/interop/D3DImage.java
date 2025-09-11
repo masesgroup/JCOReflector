@@ -178,9 +178,13 @@ public class D3DImage extends ImageSource  {
     
     public boolean TryLock(Duration timeout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryLock = classInstance.Invoke("TryLock", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLock != null ? retObjectTryLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class D3DImage extends ImageSource  {
 
     public D3DImage CloneNewD3DImage() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new D3DImage(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +207,14 @@ public class D3DImage extends ImageSource  {
 
     public D3DImage CloneCurrentValueNewD3DImage() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new D3DImage(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class D3DImage extends ImageSource  {
 
     public void AddDirtyRect(Int32Rect dirtyRect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDirtyRect", dirtyRect == null ? null : dirtyRect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +232,7 @@ public class D3DImage extends ImageSource  {
 
     public void Lock() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Lock");
         } catch (JCNativeException jcne) {
@@ -230,7 +242,7 @@ public class D3DImage extends ImageSource  {
 
     public void Unlock() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.ObjectDisposedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unlock");
         } catch (JCNativeException jcne) {
@@ -244,9 +256,13 @@ public class D3DImage extends ImageSource  {
     
     public boolean getIsFrontBufferAvailable() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFrontBufferAvailable = null;
         try {
-            return (boolean)classInstance.Get("IsFrontBufferAvailable");
+            retObjectIsFrontBufferAvailable = classInstance.Get("IsFrontBufferAvailable");
+            return (boolean)retObjectIsFrontBufferAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFrontBufferAvailable != null ? retObjectIsFrontBufferAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +270,13 @@ public class D3DImage extends ImageSource  {
 
     public int getPixelHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelHeight = null;
         try {
-            return (int)classInstance.Get("PixelHeight");
+            retObjectPixelHeight = classInstance.Get("PixelHeight");
+            return (int)retObjectPixelHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPixelHeight != null ? retObjectPixelHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +284,13 @@ public class D3DImage extends ImageSource  {
 
     public int getPixelWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelWidth = null;
         try {
-            return (int)classInstance.Get("PixelWidth");
+            retObjectPixelWidth = classInstance.Get("PixelWidth");
+            return (int)retObjectPixelWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPixelWidth != null ? retObjectPixelWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class D3DImage extends ImageSource  {
 
     public void addIsFrontBufferAvailableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsFrontBufferAvailableChanged", handler);
         } catch (JCNativeException jcne) {
@@ -289,7 +313,7 @@ public class D3DImage extends ImageSource  {
 
     public void removeIsFrontBufferAvailableChanged(DependencyPropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsFrontBufferAvailableChanged", handler);
         } catch (JCNativeException jcne) {

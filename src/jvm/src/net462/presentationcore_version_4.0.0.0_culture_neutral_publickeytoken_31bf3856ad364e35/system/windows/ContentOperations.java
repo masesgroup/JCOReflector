@@ -155,10 +155,14 @@ public class ContentOperations extends NetObject  {
     
     public static DependencyObject GetParent(ContentElement reference) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetParent = null;
         try {
-            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", reference == null ? null : reference.getJCOInstance());
+            retObjectGetParent = classType.Invoke("GetParent", reference == null ? null : reference.getJCOInstance());
+            JCObject objGetParent = (JCObject)retObjectGetParent;
             return new DependencyObject(objGetParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParent != null ? retObjectGetParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class ContentOperations extends NetObject  {
 
     public static void SetParent(ContentElement reference, DependencyObject parent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetParent", reference == null ? null : reference.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
         } catch (JCNativeException jcne) {

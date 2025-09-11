@@ -177,7 +177,7 @@ public class SplashScreen extends NetObject  {
     
     public void Close(TimeSpan fadeoutDuration) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.InvalidCastException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", fadeoutDuration == null ? null : fadeoutDuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class SplashScreen extends NetObject  {
 
     public void Show(boolean autoClose, boolean topMost) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.NotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", autoClose, topMost);
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class SplashScreen extends NetObject  {
 
     public void Show(boolean autoClose) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.TimeoutException, system.FormatException, system.MulticastNotSupportedException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", autoClose);
         } catch (JCNativeException jcne) {

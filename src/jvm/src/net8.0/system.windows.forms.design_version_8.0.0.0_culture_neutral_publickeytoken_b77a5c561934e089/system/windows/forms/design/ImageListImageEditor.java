@@ -167,9 +167,13 @@ public class ImageListImageEditor extends ImageEditor  {
     
     public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPaintValueSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetPaintValueSupported = classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetPaintValueSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPaintValueSupported != null ? retObjectGetPaintValueSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class ImageListImageEditor extends ImageEditor  {
 
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.OverflowException, system.FormatException, system.componentmodel.InvalidAsynchronousStateException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditValue = null;
         try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectEditValue = classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objEditValue = (JCObject)retObjectEditValue;
             return new NetObject(objEditValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditValue != null ? retObjectEditValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ImageListImageEditor extends ImageEditor  {
 
     public void PaintValue(PaintValueEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {

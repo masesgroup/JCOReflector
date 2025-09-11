@@ -164,7 +164,7 @@ public class HtmlFormParameterWriter extends UrlEncodedParameterWriter  {
     
     public void InitializeRequest(WebRequest request, NetObject[] values) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeRequest", request == null ? null : request.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class HtmlFormParameterWriter extends UrlEncodedParameterWriter  {
 
     public void WriteRequest(Stream requestStream, NetObject[] values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRequest", requestStream == null ? null : requestStream.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {

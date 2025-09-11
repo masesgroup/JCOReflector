@@ -197,9 +197,13 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
     
     public boolean Contains(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", certificate == null ? null : certificate.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", certificate == null ? null : certificate.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +211,12 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public byte[] Export(X509ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance());
+            retObjectExport = classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -219,6 +225,8 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +234,12 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public byte[] Export(X509ContentType contentType, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password);
+            retObjectExport = classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password);
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -238,6 +248,8 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +257,19 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public int Add(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            return (int)classInstance.Invoke("Add", certificate == null ? null : certificate.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", certificate == null ? null : certificate.getJCOInstance());
+            return (int)retObjectAdd;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAddNumber = (java.lang.Number)retObjectAdd;
+                return retObjectAddNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +277,14 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public X509Certificate2Collection Find(X509FindType findType, NetObject findValue, boolean validOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException, system.OverflowException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", findType == null ? null : findType.getJCOInstance(), findValue == null ? null : findValue.getJCOInstance(), validOnly);
+            retObjectFind = classInstance.Invoke("Find", findType == null ? null : findType.getJCOInstance(), findValue == null ? null : findValue.getJCOInstance(), validOnly);
+            JCObject objFind = (JCObject)retObjectFind;
             return new X509Certificate2Collection(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +292,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void AddRange(X509Certificate2[] certificates) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(certificates));
         } catch (JCNativeException jcne) {
@@ -276,7 +302,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void AddRange(X509Certificate2Collection certificates) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", certificates == null ? null : certificates.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +312,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(byte[] rawData) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.io.EndOfStreamException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", (java.lang.Object)rawData);
         } catch (JCNativeException jcne) {
@@ -296,7 +322,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.io.EndOfStreamException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -306,7 +332,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(byte[] rawData, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.io.EndOfStreamException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", rawData, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +342,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.io.EndOfStreamException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +352,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.IOException, system.io.EndOfStreamException, system.FormatException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", fileName);
         } catch (JCNativeException jcne) {
@@ -336,7 +362,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Import(java.lang.String fileName, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.io.EndOfStreamException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", fileName, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +372,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Insert(int index, X509Certificate2 certificate) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", index, certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +382,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void Remove(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,7 +392,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void RemoveRange(X509Certificate2[] certificates) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRange", (java.lang.Object)toObjectFromArray(certificates));
         } catch (JCNativeException jcne) {
@@ -376,7 +402,7 @@ public class X509Certificate2Collection extends X509CertificateCollection  {
 
     public void RemoveRange(X509Certificate2Collection certificates) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveRange", certificates == null ? null : certificates.getJCOInstance());
         } catch (JCNativeException jcne) {

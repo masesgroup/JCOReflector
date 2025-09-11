@@ -156,10 +156,14 @@ public class Utils extends NetObject  {
     
     public static Array CopyArray(Array arySrc, Array aryDest) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyArray = null;
         try {
-            JCObject objCopyArray = (JCObject)classType.Invoke("CopyArray", arySrc == null ? null : arySrc.getJCOInstance(), aryDest == null ? null : aryDest.getJCOInstance());
+            retObjectCopyArray = classType.Invoke("CopyArray", arySrc == null ? null : arySrc.getJCOInstance(), aryDest == null ? null : aryDest.getJCOInstance());
+            JCObject objCopyArray = (JCObject)retObjectCopyArray;
             return new Array(objCopyArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyArray != null ? retObjectCopyArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class Utils extends NetObject  {
 
     public static java.lang.String GetResourceString(java.lang.String ResourceKey, java.lang.String... Args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetResourceString", ResourceKey, Args);
+            retObjectGetResourceString = classType.Invoke("GetResourceString", ResourceKey, Args);
+            return (java.lang.String)retObjectGetResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceString != null ? retObjectGetResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class Utils extends NetObject  {
 
     public static java.lang.String GetResourceString(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetResourceString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetResourceString", dupParam0, dupParam1.getJCRefOut());
+            retObjectGetResourceString = classType.Invoke("GetResourceString", dupParam0, dupParam1.getJCRefOut());
+            return (java.lang.String)retObjectGetResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceString != null ? retObjectGetResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

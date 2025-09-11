@@ -166,9 +166,13 @@ public class EventClassAttribute extends Attribute  {
     
     public boolean getAllowInprocSubscribers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowInprocSubscribers = null;
         try {
-            return (boolean)classInstance.Get("AllowInprocSubscribers");
+            retObjectAllowInprocSubscribers = classInstance.Get("AllowInprocSubscribers");
+            return (boolean)retObjectAllowInprocSubscribers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowInprocSubscribers != null ? retObjectAllowInprocSubscribers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class EventClassAttribute extends Attribute  {
 
     public void setAllowInprocSubscribers(boolean AllowInprocSubscribers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowInprocSubscribers", AllowInprocSubscribers);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class EventClassAttribute extends Attribute  {
 
     public boolean getFireInParallel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFireInParallel = null;
         try {
-            return (boolean)classInstance.Get("FireInParallel");
+            retObjectFireInParallel = classInstance.Get("FireInParallel");
+            return (boolean)retObjectFireInParallel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFireInParallel != null ? retObjectFireInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class EventClassAttribute extends Attribute  {
 
     public void setFireInParallel(boolean FireInParallel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FireInParallel", FireInParallel);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class EventClassAttribute extends Attribute  {
 
     public java.lang.String getPublisherFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublisherFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("PublisherFilter");
+            retObjectPublisherFilter = classInstance.Get("PublisherFilter");
+            return (java.lang.String)retObjectPublisherFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublisherFilter != null ? retObjectPublisherFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class EventClassAttribute extends Attribute  {
 
     public void setPublisherFilter(java.lang.String PublisherFilter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublisherFilter", PublisherFilter);
         } catch (JCNativeException jcne) {

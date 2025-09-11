@@ -167,7 +167,7 @@ public class TableLayoutControlCollection extends NetObjectEnumerable  {
     
     public void Add(Control control, int column, int row) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", control == null ? null : control.getJCOInstance(), column, row);
         } catch (JCNativeException jcne) {
@@ -181,10 +181,14 @@ public class TableLayoutControlCollection extends NetObjectEnumerable  {
     
     public TableLayoutPanel getContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Container");
+            retObjectContainer = classInstance.Get("Container");
+            JCObject val = (JCObject)retObjectContainer;
             return new TableLayoutPanel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainer != null ? retObjectContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class FaultPropagationQuery extends TrackingQuery  {
     
     public java.lang.String getFaultHandlerActivityName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultHandlerActivityName = null;
         try {
-            return (java.lang.String)classInstance.Get("FaultHandlerActivityName");
+            retObjectFaultHandlerActivityName = classInstance.Get("FaultHandlerActivityName");
+            return (java.lang.String)retObjectFaultHandlerActivityName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFaultHandlerActivityName != null ? retObjectFaultHandlerActivityName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class FaultPropagationQuery extends TrackingQuery  {
 
     public void setFaultHandlerActivityName(java.lang.String FaultHandlerActivityName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FaultHandlerActivityName", FaultHandlerActivityName);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class FaultPropagationQuery extends TrackingQuery  {
 
     public java.lang.String getFaultSourceActivityName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultSourceActivityName = null;
         try {
-            return (java.lang.String)classInstance.Get("FaultSourceActivityName");
+            retObjectFaultSourceActivityName = classInstance.Get("FaultSourceActivityName");
+            return (java.lang.String)retObjectFaultSourceActivityName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFaultSourceActivityName != null ? retObjectFaultSourceActivityName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class FaultPropagationQuery extends TrackingQuery  {
 
     public void setFaultSourceActivityName(java.lang.String FaultSourceActivityName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FaultSourceActivityName", FaultSourceActivityName);
         } catch (JCNativeException jcne) {

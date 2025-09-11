@@ -177,7 +177,7 @@ public class TransactionFlowAttribute extends Attribute implements system.servic
      */
     @Deprecated 
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -186,7 +186,7 @@ public class TransactionFlowAttribute extends Attribute implements system.servic
      */
     @Deprecated 
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -195,7 +195,7 @@ public class TransactionFlowAttribute extends Attribute implements system.servic
      */
     @Deprecated 
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
     /**
@@ -204,7 +204,7 @@ public class TransactionFlowAttribute extends Attribute implements system.servic
      */
     @Deprecated 
     public void Validate(OperationDescription operationDescription) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
     }
 
 
@@ -213,10 +213,14 @@ public class TransactionFlowAttribute extends Attribute implements system.servic
     
     public TransactionFlowOption getTransactions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transactions");
+            retObjectTransactions = classInstance.Get("Transactions");
+            JCObject val = (JCObject)retObjectTransactions;
             return new TransactionFlowOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransactions != null ? retObjectTransactions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

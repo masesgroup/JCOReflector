@@ -143,7 +143,7 @@ public class IDataGridColumnStyleEditingNotificationServiceImplementation extend
     
     public void ColumnStartedEditing(Control editingControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ColumnStartedEditing", editingControl == null ? null : editingControl.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -146,10 +146,14 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
     
     public NetObject getTargetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetObject");
+            retObjectTargetObject = classInstance.Get("TargetObject");
+            JCObject val = (JCObject)retObjectTargetObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetObject != null ? retObjectTargetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IProvideValueTargetImplementation extends NetObject implements IPro
 
     public NetObject getTargetProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetProperty");
+            retObjectTargetProperty = classInstance.Get("TargetProperty");
+            JCObject val = (JCObject)retObjectTargetProperty;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetProperty != null ? retObjectTargetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

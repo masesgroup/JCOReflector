@@ -146,9 +146,19 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
     
     public int Next(int celt, JCORefOut<UCOMIConnectionPoint[]> rgelt, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pceltFetched) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNext = null;
         try {
-            return (int)classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
+            retObjectNext = classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
+            return (int)retObjectNext;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNextNumber = (java.lang.Number)retObjectNext;
+                return retObjectNextNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNext != null ? retObjectNext.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,9 +166,19 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
 
     public int Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReset = null;
         try {
-            return (int)classInstance.Invoke("Reset");
+            retObjectReset = classInstance.Invoke("Reset");
+            return (int)retObjectReset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectResetNumber = (java.lang.Number)retObjectReset;
+                return retObjectResetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReset != null ? retObjectReset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +186,19 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
 
     public int Skip(int celt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkip = null;
         try {
-            return (int)classInstance.Invoke("Skip", celt);
+            retObjectSkip = classInstance.Invoke("Skip", celt);
+            return (int)retObjectSkip;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSkipNumber = (java.lang.Number)retObjectSkip;
+                return retObjectSkipNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSkip != null ? retObjectSkip.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +206,7 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
 
     public void Clone(JCORefOut<UCOMIEnumConnectionPoints> ppenum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {

@@ -169,9 +169,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
     
     public java.lang.String AddControlToDocument(Control newControl, Control referenceControl, ControlLocation location) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddControlToDocument = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AddControlToDocument", newControl == null ? null : newControl.getJCOInstance(), referenceControl == null ? null : referenceControl.getJCOInstance(), location == null ? null : location.getJCOInstance());
+            retObjectAddControlToDocument = classInstance.Invoke("AddControlToDocument", newControl == null ? null : newControl.getJCOInstance(), referenceControl == null ? null : referenceControl.getJCOInstance(), location == null ? null : location.getJCOInstance());
+            return (java.lang.String)retObjectAddControlToDocument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAddControlToDocument != null ? retObjectAddControlToDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public java.lang.String GenerateEmptyDesignTimeHtml(Control control) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateEmptyDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateEmptyDesignTimeHtml", control == null ? null : control.getJCOInstance());
+            retObjectGenerateEmptyDesignTimeHtml = classInstance.Invoke("GenerateEmptyDesignTimeHtml", control == null ? null : control.getJCOInstance());
+            return (java.lang.String)retObjectGenerateEmptyDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateEmptyDesignTimeHtml != null ? retObjectGenerateEmptyDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,9 +197,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public java.lang.String GenerateErrorDesignTimeHtml(Control control, NetException e, java.lang.String errorMessage) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateErrorDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateErrorDesignTimeHtml", control == null ? null : control.getJCOInstance(), e == null ? null : e.getJCOInstance(), errorMessage);
+            retObjectGenerateErrorDesignTimeHtml = classInstance.Invoke("GenerateErrorDesignTimeHtml", control == null ? null : control.getJCOInstance(), e == null ? null : e.getJCOInstance(), errorMessage);
+            return (java.lang.String)retObjectGenerateErrorDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateErrorDesignTimeHtml != null ? retObjectGenerateErrorDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +211,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public java.lang.String ResolveUrl(java.lang.String relativeUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResolveUrl", relativeUrl);
+            retObjectResolveUrl = classInstance.Invoke("ResolveUrl", relativeUrl);
+            return (java.lang.String)retObjectResolveUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResolveUrl != null ? retObjectResolveUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public ClientScriptItemCollection GetClientScriptsInDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetClientScriptsInDocument = null;
         try {
-            JCObject objGetClientScriptsInDocument = (JCObject)classInstance.Invoke("GetClientScriptsInDocument");
+            retObjectGetClientScriptsInDocument = classInstance.Invoke("GetClientScriptsInDocument");
+            JCObject objGetClientScriptsInDocument = (JCObject)retObjectGetClientScriptsInDocument;
             return new ClientScriptItemCollection(objGetClientScriptsInDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetClientScriptsInDocument != null ? retObjectGetClientScriptsInDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +240,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void AddClientScriptToDocument(ClientScriptItem scriptItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClientScriptToDocument", scriptItem == null ? null : scriptItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +250,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +260,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void RemoveClientScriptFromDocument(java.lang.String clientScriptId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveClientScriptFromDocument", clientScriptId);
         } catch (JCNativeException jcne) {
@@ -250,7 +270,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void RemoveControlFromDocument(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveControlFromDocument", control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +280,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void SetControlID(Control control, java.lang.String id) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetControlID", control == null ? null : control.getJCOInstance(), id);
         } catch (JCNativeException jcne) {
@@ -274,7 +294,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public NetObject GetView(ViewTechnology technology) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
 
     /**
@@ -283,7 +303,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void DoDefaultAction() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesigner to obtain the full interface.");
     }
 
     /**
@@ -292,7 +312,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     /**
@@ -301,7 +321,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -310,7 +330,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PostFilterEvents(IDictionary events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -319,7 +339,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PostFilterProperties(IDictionary properties) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -328,7 +348,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -337,7 +357,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PreFilterEvents(IDictionary events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -346,13 +366,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
      */
     @Deprecated 
     public void PreFilterProperties(IDictionary properties) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -368,9 +388,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
     
     public boolean getIsDesignerViewLocked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDesignerViewLocked = null;
         try {
-            return (boolean)classInstance.Get("IsDesignerViewLocked");
+            retObjectIsDesignerViewLocked = classInstance.Get("IsDesignerViewLocked");
+            return (boolean)retObjectIsDesignerViewLocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDesignerViewLocked != null ? retObjectIsDesignerViewLocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +402,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public boolean getIsLoading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLoading = null;
         try {
-            return (boolean)classInstance.Get("IsLoading");
+            retObjectIsLoading = classInstance.Get("IsLoading");
+            return (boolean)retObjectIsLoading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLoading != null ? retObjectIsLoading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,10 +416,14 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public IComponent getComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Component");
+            retObjectComponent = classInstance.Get("Component");
+            JCObject val = (JCObject)retObjectComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponent != null ? retObjectComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +431,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void setComponent(IComponent Component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Component", Component == null ? null : Component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,10 +441,14 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public CultureInfo getCurrentCulture() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentCulture");
+            retObjectCurrentCulture = classInstance.Get("CurrentCulture");
+            JCObject val = (JCObject)retObjectCurrentCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCulture != null ? retObjectCurrentCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,9 +456,13 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public java.lang.String getDocumentUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentUrl");
+            retObjectDocumentUrl = classInstance.Get("DocumentUrl");
+            return (java.lang.String)retObjectDocumentUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentUrl != null ? retObjectDocumentUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +470,14 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public WebFormsReferenceManager getReferenceManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceManager");
+            retObjectReferenceManager = classInstance.Get("ReferenceManager");
+            JCObject val = (JCObject)retObjectReferenceManager;
             return new WebFormsReferenceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceManager != null ? retObjectReferenceManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +490,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void addLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {
@@ -456,7 +500,7 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
 
     public void removeLoadComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadComplete", handler);
         } catch (JCNativeException jcne) {

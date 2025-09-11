@@ -186,10 +186,12 @@ public class AlgorithmIdentifier extends NetObject  {
     
     public byte[] getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject resultingObjects = (JCObject)retObjectParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -198,6 +200,8 @@ public class AlgorithmIdentifier extends NetObject  {
 				resultingArray[indexParameters] = (byte)resultingArrayList.get(indexParameters);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +209,7 @@ public class AlgorithmIdentifier extends NetObject  {
 
     public void setParameters(byte[] Parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parameters", Parameters);
         } catch (JCNativeException jcne) {
@@ -215,9 +219,13 @@ public class AlgorithmIdentifier extends NetObject  {
 
     public int getKeyLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyLength = null;
         try {
-            return (int)classInstance.Get("KeyLength");
+            retObjectKeyLength = classInstance.Get("KeyLength");
+            return (int)retObjectKeyLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeyLength != null ? retObjectKeyLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +233,7 @@ public class AlgorithmIdentifier extends NetObject  {
 
     public void setKeyLength(int KeyLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyLength", KeyLength);
         } catch (JCNativeException jcne) {
@@ -235,10 +243,14 @@ public class AlgorithmIdentifier extends NetObject  {
 
     public Oid getOid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            JCObject val = (JCObject)retObjectOid;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +258,7 @@ public class AlgorithmIdentifier extends NetObject  {
 
     public void setOid(Oid Oid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Oid", Oid == null ? null : Oid.getJCOInstance());
         } catch (JCNativeException jcne) {

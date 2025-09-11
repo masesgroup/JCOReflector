@@ -167,9 +167,13 @@ public class MultilineStringConverter extends TypeConverter  {
     
     public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertiesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetPropertiesSupported = classInstance.Invoke("GetPropertiesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetPropertiesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPropertiesSupported != null ? retObjectGetPropertiesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class MultilineStringConverter extends TypeConverter  {
 
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), value == null ? null : value.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class MultilineStringConverter extends TypeConverter  {
 
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

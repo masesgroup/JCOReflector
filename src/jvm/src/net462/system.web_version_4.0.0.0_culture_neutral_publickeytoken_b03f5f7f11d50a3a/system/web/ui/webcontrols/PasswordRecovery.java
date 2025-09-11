@@ -178,9 +178,13 @@ public class PasswordRecovery extends CompositeControl  {
     
     public boolean getRenderOuterTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderOuterTable = null;
         try {
-            return (boolean)classInstance.Get("RenderOuterTable");
+            retObjectRenderOuterTable = classInstance.Get("RenderOuterTable");
+            return (boolean)retObjectRenderOuterTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderOuterTable != null ? retObjectRenderOuterTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setRenderOuterTable(boolean RenderOuterTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderOuterTable", RenderOuterTable);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public int getBorderPadding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderPadding = null;
         try {
-            return (int)classInstance.Get("BorderPadding");
+            retObjectBorderPadding = classInstance.Get("BorderPadding");
+            return (int)retObjectBorderPadding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBorderPadding != null ? retObjectBorderPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setBorderPadding(int BorderPadding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderPadding", BorderPadding);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getAnswer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswer = null;
         try {
-            return (java.lang.String)classInstance.Get("Answer");
+            retObjectAnswer = classInstance.Get("Answer");
+            return (java.lang.String)retObjectAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswer != null ? retObjectAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getAnswerLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswerLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("AnswerLabelText");
+            retObjectAnswerLabelText = classInstance.Get("AnswerLabelText");
+            return (java.lang.String)retObjectAnswerLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswerLabelText != null ? retObjectAnswerLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setAnswerLabelText(java.lang.String AnswerLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnswerLabelText", AnswerLabelText);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getAnswerRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnswerRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("AnswerRequiredErrorMessage");
+            retObjectAnswerRequiredErrorMessage = classInstance.Get("AnswerRequiredErrorMessage");
+            return (java.lang.String)retObjectAnswerRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnswerRequiredErrorMessage != null ? retObjectAnswerRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setAnswerRequiredErrorMessage(java.lang.String AnswerRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnswerRequiredErrorMessage", AnswerRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getGeneralFailureText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneralFailureText = null;
         try {
-            return (java.lang.String)classInstance.Get("GeneralFailureText");
+            retObjectGeneralFailureText = classInstance.Get("GeneralFailureText");
+            return (java.lang.String)retObjectGeneralFailureText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGeneralFailureText != null ? retObjectGeneralFailureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setGeneralFailureText(java.lang.String GeneralFailureText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GeneralFailureText", GeneralFailureText);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getHelpPageIconUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageIconUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageIconUrl");
+            retObjectHelpPageIconUrl = classInstance.Get("HelpPageIconUrl");
+            return (java.lang.String)retObjectHelpPageIconUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageIconUrl != null ? retObjectHelpPageIconUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setHelpPageIconUrl(java.lang.String HelpPageIconUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageIconUrl", HelpPageIconUrl);
         } catch (JCNativeException jcne) {
@@ -308,9 +336,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getHelpPageText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageText = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageText");
+            retObjectHelpPageText = classInstance.Get("HelpPageText");
+            return (java.lang.String)retObjectHelpPageText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageText != null ? retObjectHelpPageText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +350,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setHelpPageText(java.lang.String HelpPageText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageText", HelpPageText);
         } catch (JCNativeException jcne) {
@@ -328,9 +360,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getHelpPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpPageUrl");
+            retObjectHelpPageUrl = classInstance.Get("HelpPageUrl");
+            return (java.lang.String)retObjectHelpPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpPageUrl != null ? retObjectHelpPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +374,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setHelpPageUrl(java.lang.String HelpPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpPageUrl", HelpPageUrl);
         } catch (JCNativeException jcne) {
@@ -348,9 +384,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getMembershipProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("MembershipProvider");
+            retObjectMembershipProvider = classInstance.Get("MembershipProvider");
+            return (java.lang.String)retObjectMembershipProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMembershipProvider != null ? retObjectMembershipProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +398,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setMembershipProvider(java.lang.String MembershipProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MembershipProvider", MembershipProvider);
         } catch (JCNativeException jcne) {
@@ -368,9 +408,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getQuestion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestion = null;
         try {
-            return (java.lang.String)classInstance.Get("Question");
+            retObjectQuestion = classInstance.Get("Question");
+            return (java.lang.String)retObjectQuestion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestion != null ? retObjectQuestion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +422,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestion(java.lang.String Question) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Question", Question);
         } catch (JCNativeException jcne) {
@@ -388,9 +432,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getQuestionFailureText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionFailureText = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionFailureText");
+            retObjectQuestionFailureText = classInstance.Get("QuestionFailureText");
+            return (java.lang.String)retObjectQuestionFailureText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionFailureText != null ? retObjectQuestionFailureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +446,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestionFailureText(java.lang.String QuestionFailureText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionFailureText", QuestionFailureText);
         } catch (JCNativeException jcne) {
@@ -408,9 +456,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getQuestionInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionInstructionText");
+            retObjectQuestionInstructionText = classInstance.Get("QuestionInstructionText");
+            return (java.lang.String)retObjectQuestionInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionInstructionText != null ? retObjectQuestionInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +470,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestionInstructionText(java.lang.String QuestionInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionInstructionText", QuestionInstructionText);
         } catch (JCNativeException jcne) {
@@ -428,9 +480,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getQuestionLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionLabelText");
+            retObjectQuestionLabelText = classInstance.Get("QuestionLabelText");
+            return (java.lang.String)retObjectQuestionLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionLabelText != null ? retObjectQuestionLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +494,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestionLabelText(java.lang.String QuestionLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionLabelText", QuestionLabelText);
         } catch (JCNativeException jcne) {
@@ -448,9 +504,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getQuestionTitleText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionTitleText = null;
         try {
-            return (java.lang.String)classInstance.Get("QuestionTitleText");
+            retObjectQuestionTitleText = classInstance.Get("QuestionTitleText");
+            return (java.lang.String)retObjectQuestionTitleText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQuestionTitleText != null ? retObjectQuestionTitleText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +518,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestionTitleText(java.lang.String QuestionTitleText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionTitleText", QuestionTitleText);
         } catch (JCNativeException jcne) {
@@ -468,9 +528,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getSubmitButtonImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmitButtonImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SubmitButtonImageUrl");
+            retObjectSubmitButtonImageUrl = classInstance.Get("SubmitButtonImageUrl");
+            return (java.lang.String)retObjectSubmitButtonImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubmitButtonImageUrl != null ? retObjectSubmitButtonImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +542,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSubmitButtonImageUrl(java.lang.String SubmitButtonImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubmitButtonImageUrl", SubmitButtonImageUrl);
         } catch (JCNativeException jcne) {
@@ -488,9 +552,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getSubmitButtonText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmitButtonText = null;
         try {
-            return (java.lang.String)classInstance.Get("SubmitButtonText");
+            retObjectSubmitButtonText = classInstance.Get("SubmitButtonText");
+            return (java.lang.String)retObjectSubmitButtonText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubmitButtonText != null ? retObjectSubmitButtonText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +566,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSubmitButtonText(java.lang.String SubmitButtonText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubmitButtonText", SubmitButtonText);
         } catch (JCNativeException jcne) {
@@ -508,9 +576,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getSuccessPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuccessPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SuccessPageUrl");
+            retObjectSuccessPageUrl = classInstance.Get("SuccessPageUrl");
+            return (java.lang.String)retObjectSuccessPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuccessPageUrl != null ? retObjectSuccessPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,7 +590,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSuccessPageUrl(java.lang.String SuccessPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuccessPageUrl", SuccessPageUrl);
         } catch (JCNativeException jcne) {
@@ -528,9 +600,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getSuccessText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuccessText = null;
         try {
-            return (java.lang.String)classInstance.Get("SuccessText");
+            retObjectSuccessText = classInstance.Get("SuccessText");
+            return (java.lang.String)retObjectSuccessText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuccessText != null ? retObjectSuccessText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,7 +614,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSuccessText(java.lang.String SuccessText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuccessText", SuccessText);
         } catch (JCNativeException jcne) {
@@ -548,9 +624,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,7 +638,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserName(java.lang.String UserName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserName", UserName);
         } catch (JCNativeException jcne) {
@@ -568,9 +648,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserNameFailureText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameFailureText = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameFailureText");
+            retObjectUserNameFailureText = classInstance.Get("UserNameFailureText");
+            return (java.lang.String)retObjectUserNameFailureText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameFailureText != null ? retObjectUserNameFailureText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,7 +662,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameFailureText(java.lang.String UserNameFailureText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameFailureText", UserNameFailureText);
         } catch (JCNativeException jcne) {
@@ -588,9 +672,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserNameInstructionText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameInstructionText = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameInstructionText");
+            retObjectUserNameInstructionText = classInstance.Get("UserNameInstructionText");
+            return (java.lang.String)retObjectUserNameInstructionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameInstructionText != null ? retObjectUserNameInstructionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +686,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameInstructionText(java.lang.String UserNameInstructionText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameInstructionText", UserNameInstructionText);
         } catch (JCNativeException jcne) {
@@ -608,9 +696,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserNameLabelText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameLabelText = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameLabelText");
+            retObjectUserNameLabelText = classInstance.Get("UserNameLabelText");
+            return (java.lang.String)retObjectUserNameLabelText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameLabelText != null ? retObjectUserNameLabelText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +710,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameLabelText(java.lang.String UserNameLabelText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameLabelText", UserNameLabelText);
         } catch (JCNativeException jcne) {
@@ -628,9 +720,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserNameRequiredErrorMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameRequiredErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameRequiredErrorMessage");
+            retObjectUserNameRequiredErrorMessage = classInstance.Get("UserNameRequiredErrorMessage");
+            return (java.lang.String)retObjectUserNameRequiredErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameRequiredErrorMessage != null ? retObjectUserNameRequiredErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,7 +734,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameRequiredErrorMessage(java.lang.String UserNameRequiredErrorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameRequiredErrorMessage", UserNameRequiredErrorMessage);
         } catch (JCNativeException jcne) {
@@ -648,9 +744,13 @@ public class PasswordRecovery extends CompositeControl  {
 
     public java.lang.String getUserNameTitleText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameTitleText = null;
         try {
-            return (java.lang.String)classInstance.Get("UserNameTitleText");
+            retObjectUserNameTitleText = classInstance.Get("UserNameTitleText");
+            return (java.lang.String)retObjectUserNameTitleText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserNameTitleText != null ? retObjectUserNameTitleText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,7 +758,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameTitleText(java.lang.String UserNameTitleText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameTitleText", UserNameTitleText);
         } catch (JCNativeException jcne) {
@@ -668,10 +768,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Control getQuestionTemplateContainer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionTemplateContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QuestionTemplateContainer");
+            retObjectQuestionTemplateContainer = classInstance.Get("QuestionTemplateContainer");
+            JCObject val = (JCObject)retObjectQuestionTemplateContainer;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuestionTemplateContainer != null ? retObjectQuestionTemplateContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,10 +783,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Control getSuccessTemplateContainer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuccessTemplateContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuccessTemplateContainer");
+            retObjectSuccessTemplateContainer = classInstance.Get("SuccessTemplateContainer");
+            JCObject val = (JCObject)retObjectSuccessTemplateContainer;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuccessTemplateContainer != null ? retObjectSuccessTemplateContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,10 +798,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Control getUserNameTemplateContainer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameTemplateContainer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserNameTemplateContainer");
+            retObjectUserNameTemplateContainer = classInstance.Get("UserNameTemplateContainer");
+            JCObject val = (JCObject)retObjectUserNameTemplateContainer;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserNameTemplateContainer != null ? retObjectUserNameTemplateContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,10 +813,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public ITemplate getQuestionTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuestionTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QuestionTemplate");
+            retObjectQuestionTemplate = classInstance.Get("QuestionTemplate");
+            JCObject val = (JCObject)retObjectQuestionTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuestionTemplate != null ? retObjectQuestionTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,7 +828,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setQuestionTemplate(ITemplate QuestionTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QuestionTemplate", QuestionTemplate == null ? null : QuestionTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -722,10 +838,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public ITemplate getSuccessTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuccessTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuccessTemplate");
+            retObjectSuccessTemplate = classInstance.Get("SuccessTemplate");
+            JCObject val = (JCObject)retObjectSuccessTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuccessTemplate != null ? retObjectSuccessTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,7 +853,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSuccessTemplate(ITemplate SuccessTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuccessTemplate", SuccessTemplate == null ? null : SuccessTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -743,10 +863,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public ITemplate getUserNameTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserNameTemplate");
+            retObjectUserNameTemplate = classInstance.Get("UserNameTemplate");
+            JCObject val = (JCObject)retObjectUserNameTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserNameTemplate != null ? retObjectUserNameTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -754,7 +878,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setUserNameTemplate(ITemplate UserNameTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNameTemplate", UserNameTemplate == null ? null : UserNameTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -764,10 +888,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public ButtonType getSubmitButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmitButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubmitButtonType");
+            retObjectSubmitButtonType = classInstance.Get("SubmitButtonType");
+            JCObject val = (JCObject)retObjectSubmitButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubmitButtonType != null ? retObjectSubmitButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -775,7 +903,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setSubmitButtonType(ButtonType SubmitButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubmitButtonType", SubmitButtonType == null ? null : SubmitButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -785,10 +913,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public LoginTextLayout getTextLayout() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextLayout");
+            retObjectTextLayout = classInstance.Get("TextLayout");
+            JCObject val = (JCObject)retObjectTextLayout;
             return new LoginTextLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextLayout != null ? retObjectTextLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,7 +928,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void setTextLayout(LoginTextLayout TextLayout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextLayout", TextLayout == null ? null : TextLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -806,10 +938,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public MailDefinition getMailDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMailDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MailDefinition");
+            retObjectMailDefinition = classInstance.Get("MailDefinition");
+            JCObject val = (JCObject)retObjectMailDefinition;
             return new MailDefinition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMailDefinition != null ? retObjectMailDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -817,10 +953,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Style getSubmitButtonStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmitButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubmitButtonStyle");
+            retObjectSubmitButtonStyle = classInstance.Get("SubmitButtonStyle");
+            JCObject val = (JCObject)retObjectSubmitButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubmitButtonStyle != null ? retObjectSubmitButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -828,10 +968,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Style getTextBoxStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBoxStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBoxStyle");
+            retObjectTextBoxStyle = classInstance.Get("TextBoxStyle");
+            JCObject val = (JCObject)retObjectTextBoxStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBoxStyle != null ? retObjectTextBoxStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -839,10 +983,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public Style getValidatorTextStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatorTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatorTextStyle");
+            retObjectValidatorTextStyle = classInstance.Get("ValidatorTextStyle");
+            JCObject val = (JCObject)retObjectValidatorTextStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatorTextStyle != null ? retObjectValidatorTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,10 +998,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getFailureTextStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFailureTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FailureTextStyle");
+            retObjectFailureTextStyle = classInstance.Get("FailureTextStyle");
+            JCObject val = (JCObject)retObjectFailureTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFailureTextStyle != null ? retObjectFailureTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,10 +1013,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getHyperLinkStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHyperLinkStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HyperLinkStyle");
+            retObjectHyperLinkStyle = classInstance.Get("HyperLinkStyle");
+            JCObject val = (JCObject)retObjectHyperLinkStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHyperLinkStyle != null ? retObjectHyperLinkStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -872,10 +1028,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getInstructionTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstructionTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstructionTextStyle");
+            retObjectInstructionTextStyle = classInstance.Get("InstructionTextStyle");
+            JCObject val = (JCObject)retObjectInstructionTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstructionTextStyle != null ? retObjectInstructionTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -883,10 +1043,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getLabelStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabelStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LabelStyle");
+            retObjectLabelStyle = classInstance.Get("LabelStyle");
+            JCObject val = (JCObject)retObjectLabelStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabelStyle != null ? retObjectLabelStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -894,10 +1058,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getSuccessTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuccessTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SuccessTextStyle");
+            retObjectSuccessTextStyle = classInstance.Get("SuccessTextStyle");
+            JCObject val = (JCObject)retObjectSuccessTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSuccessTextStyle != null ? retObjectSuccessTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -905,10 +1073,14 @@ public class PasswordRecovery extends CompositeControl  {
 
     public TableItemStyle getTitleTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitleTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TitleTextStyle");
+            retObjectTitleTextStyle = classInstance.Get("TitleTextStyle");
+            JCObject val = (JCObject)retObjectTitleTextStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitleTextStyle != null ? retObjectTitleTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -921,7 +1093,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addAnswerLookupError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AnswerLookupError", handler);
         } catch (JCNativeException jcne) {
@@ -931,7 +1103,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeAnswerLookupError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AnswerLookupError", handler);
         } catch (JCNativeException jcne) {
@@ -941,7 +1113,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addUserLookupError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UserLookupError", handler);
         } catch (JCNativeException jcne) {
@@ -951,7 +1123,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeUserLookupError(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UserLookupError", handler);
         } catch (JCNativeException jcne) {
@@ -961,7 +1133,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addVerifyingAnswer(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VerifyingAnswer", handler);
         } catch (JCNativeException jcne) {
@@ -971,7 +1143,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeVerifyingAnswer(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VerifyingAnswer", handler);
         } catch (JCNativeException jcne) {
@@ -981,7 +1153,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addVerifyingUser(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VerifyingUser", handler);
         } catch (JCNativeException jcne) {
@@ -991,7 +1163,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeVerifyingUser(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VerifyingUser", handler);
         } catch (JCNativeException jcne) {
@@ -1001,7 +1173,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addSendingMail(MailMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SendingMail", handler);
         } catch (JCNativeException jcne) {
@@ -1011,7 +1183,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeSendingMail(MailMessageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SendingMail", handler);
         } catch (JCNativeException jcne) {
@@ -1021,7 +1193,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void addSendMailError(SendMailErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SendMailError", handler);
         } catch (JCNativeException jcne) {
@@ -1031,7 +1203,7 @@ public class PasswordRecovery extends CompositeControl  {
 
     public void removeSendMailError(SendMailErrorEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SendMailError", handler);
         } catch (JCNativeException jcne) {

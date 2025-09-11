@@ -175,7 +175,7 @@ public class ProcessInfo extends NetObject  {
     
     public void SetAll(DateTime startTime, TimeSpan age, int processID, int requestCount, ProcessStatus status, ProcessShutdownReason shutdownReason, int peakMemoryUsed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAll", startTime == null ? null : startTime.getJCOInstance(), age == null ? null : age.getJCOInstance(), processID, requestCount, status == null ? null : status.getJCOInstance(), shutdownReason == null ? null : shutdownReason.getJCOInstance(), peakMemoryUsed);
         } catch (JCNativeException jcne) {
@@ -189,9 +189,13 @@ public class ProcessInfo extends NetObject  {
     
     public int getPeakMemoryUsed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeakMemoryUsed = null;
         try {
-            return (int)classInstance.Get("PeakMemoryUsed");
+            retObjectPeakMemoryUsed = classInstance.Get("PeakMemoryUsed");
+            return (int)retObjectPeakMemoryUsed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPeakMemoryUsed != null ? retObjectPeakMemoryUsed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +203,13 @@ public class ProcessInfo extends NetObject  {
 
     public int getProcessID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessID = null;
         try {
-            return (int)classInstance.Get("ProcessID");
+            retObjectProcessID = classInstance.Get("ProcessID");
+            return (int)retObjectProcessID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProcessID != null ? retObjectProcessID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +217,13 @@ public class ProcessInfo extends NetObject  {
 
     public int getRequestCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestCount = null;
         try {
-            return (int)classInstance.Get("RequestCount");
+            retObjectRequestCount = classInstance.Get("RequestCount");
+            return (int)retObjectRequestCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRequestCount != null ? retObjectRequestCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +231,14 @@ public class ProcessInfo extends NetObject  {
 
     public DateTime getStartTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartTime");
+            retObjectStartTime = classInstance.Get("StartTime");
+            JCObject val = (JCObject)retObjectStartTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartTime != null ? retObjectStartTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +246,14 @@ public class ProcessInfo extends NetObject  {
 
     public TimeSpan getAge() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAge = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Age");
+            retObjectAge = classInstance.Get("Age");
+            JCObject val = (JCObject)retObjectAge;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAge != null ? retObjectAge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +261,14 @@ public class ProcessInfo extends NetObject  {
 
     public ProcessShutdownReason getShutdownReason() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShutdownReason = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ShutdownReason");
+            retObjectShutdownReason = classInstance.Get("ShutdownReason");
+            JCObject val = (JCObject)retObjectShutdownReason;
             return new ProcessShutdownReason(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShutdownReason != null ? retObjectShutdownReason.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +276,14 @@ public class ProcessInfo extends NetObject  {
 
     public ProcessStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new ProcessStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

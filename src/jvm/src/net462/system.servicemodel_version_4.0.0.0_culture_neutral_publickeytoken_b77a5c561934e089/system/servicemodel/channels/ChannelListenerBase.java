@@ -159,9 +159,13 @@ public class ChannelListenerBase extends ChannelManagerBase  {
     
     public boolean EndWaitForChannel(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndWaitForChannel = null;
         try {
-            return (boolean)classInstance.Invoke("EndWaitForChannel", result == null ? null : result.getJCOInstance());
+            retObjectEndWaitForChannel = classInstance.Invoke("EndWaitForChannel", result == null ? null : result.getJCOInstance());
+            return (boolean)retObjectEndWaitForChannel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndWaitForChannel != null ? retObjectEndWaitForChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class ChannelListenerBase extends ChannelManagerBase  {
 
     public boolean WaitForChannel(TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForChannel = null;
         try {
-            return (boolean)classInstance.Invoke("WaitForChannel", timeout == null ? null : timeout.getJCOInstance());
+            retObjectWaitForChannel = classInstance.Invoke("WaitForChannel", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWaitForChannel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWaitForChannel != null ? retObjectWaitForChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class ChannelListenerBase extends ChannelManagerBase  {
 
     public IAsyncResult BeginWaitForChannel(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginWaitForChannel = null;
         try {
-            JCObject objBeginWaitForChannel = (JCObject)classInstance.Invoke("BeginWaitForChannel", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginWaitForChannel = classInstance.Invoke("BeginWaitForChannel", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginWaitForChannel = (JCObject)retObjectBeginWaitForChannel;
             return new IAsyncResultImplementation(objBeginWaitForChannel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginWaitForChannel != null ? retObjectBeginWaitForChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class ChannelListenerBase extends ChannelManagerBase  {
     
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

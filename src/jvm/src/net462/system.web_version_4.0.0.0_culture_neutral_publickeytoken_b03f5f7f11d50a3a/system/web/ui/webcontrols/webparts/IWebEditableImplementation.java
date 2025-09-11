@@ -143,10 +143,14 @@ public class IWebEditableImplementation extends NetObject implements IWebEditabl
     
     public EditorPartCollection CreateEditorParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEditorParts = null;
         try {
-            JCObject objCreateEditorParts = (JCObject)classInstance.Invoke("CreateEditorParts");
+            retObjectCreateEditorParts = classInstance.Invoke("CreateEditorParts");
+            JCObject objCreateEditorParts = (JCObject)retObjectCreateEditorParts;
             return new EditorPartCollection(objCreateEditorParts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorParts != null ? retObjectCreateEditorParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class IWebEditableImplementation extends NetObject implements IWebEditabl
     
     public NetObject getWebBrowsableObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebBrowsableObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebBrowsableObject");
+            retObjectWebBrowsableObject = classInstance.Get("WebBrowsableObject");
+            JCObject val = (JCObject)retObjectWebBrowsableObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebBrowsableObject != null ? retObjectWebBrowsableObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

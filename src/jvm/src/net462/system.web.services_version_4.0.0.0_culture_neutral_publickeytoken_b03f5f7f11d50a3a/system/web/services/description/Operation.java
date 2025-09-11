@@ -167,9 +167,13 @@ public class Operation extends NamedItem  {
     
     public boolean IsBoundBy(OperationBinding operationBinding) throws Throwable, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBoundBy = null;
         try {
-            return (boolean)classInstance.Invoke("IsBoundBy", operationBinding == null ? null : operationBinding.getJCOInstance());
+            retObjectIsBoundBy = classInstance.Invoke("IsBoundBy", operationBinding == null ? null : operationBinding.getJCOInstance());
+            return (boolean)retObjectIsBoundBy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBoundBy != null ? retObjectIsBoundBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class Operation extends NamedItem  {
     
     public java.lang.String getParameterOrderString() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterOrderString = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterOrderString");
+            retObjectParameterOrderString = classInstance.Get("ParameterOrderString");
+            return (java.lang.String)retObjectParameterOrderString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterOrderString != null ? retObjectParameterOrderString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class Operation extends NamedItem  {
 
     public void setParameterOrderString(java.lang.String ParameterOrderString) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterOrderString", ParameterOrderString);
         } catch (JCNativeException jcne) {
@@ -201,10 +209,12 @@ public class Operation extends NamedItem  {
 
     public java.lang.String[] getParameterOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterOrder = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ParameterOrder");
+            retObjectParameterOrder = classInstance.Get("ParameterOrder");
+            JCObject resultingObjects = (JCObject)retObjectParameterOrder;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -213,6 +223,8 @@ public class Operation extends NamedItem  {
 				resultingArray[indexParameterOrder] = (java.lang.String)resultingArrayList.get(indexParameterOrder);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectParameterOrder != null ? retObjectParameterOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class Operation extends NamedItem  {
 
     public void setParameterOrder(java.lang.String[] ParameterOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterOrder", ParameterOrder);
         } catch (JCNativeException jcne) {
@@ -230,10 +242,14 @@ public class Operation extends NamedItem  {
 
     public OperationFaultCollection getFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaults = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Faults");
+            retObjectFaults = classInstance.Get("Faults");
+            JCObject val = (JCObject)retObjectFaults;
             return new OperationFaultCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaults != null ? retObjectFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +257,14 @@ public class Operation extends NamedItem  {
 
     public OperationMessageCollection getMessages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Messages");
+            retObjectMessages = classInstance.Get("Messages");
+            JCObject val = (JCObject)retObjectMessages;
             return new OperationMessageCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessages != null ? retObjectMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +272,14 @@ public class Operation extends NamedItem  {
 
     public PortType getPortType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PortType");
+            retObjectPortType = classInstance.Get("PortType");
+            JCObject val = (JCObject)retObjectPortType;
             return new PortType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPortType != null ? retObjectPortType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

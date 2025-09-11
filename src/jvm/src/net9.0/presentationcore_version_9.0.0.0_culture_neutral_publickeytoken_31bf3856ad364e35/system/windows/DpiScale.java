@@ -170,9 +170,13 @@ public class DpiScale extends ValueType  {
     
     public double getDpiScaleX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiScaleX = null;
         try {
-            return (double)classInstance.Get("DpiScaleX");
+            retObjectDpiScaleX = classInstance.Get("DpiScaleX");
+            return (double)retObjectDpiScaleX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDpiScaleX != null ? retObjectDpiScaleX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class DpiScale extends ValueType  {
 
     public double getDpiScaleY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiScaleY = null;
         try {
-            return (double)classInstance.Get("DpiScaleY");
+            retObjectDpiScaleY = classInstance.Get("DpiScaleY");
+            return (double)retObjectDpiScaleY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDpiScaleY != null ? retObjectDpiScaleY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class DpiScale extends ValueType  {
 
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            return (double)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            return (double)retObjectPixelsPerDip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class DpiScale extends ValueType  {
 
     public double getPixelsPerInchX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerInchX = null;
         try {
-            return (double)classInstance.Get("PixelsPerInchX");
+            retObjectPixelsPerInchX = classInstance.Get("PixelsPerInchX");
+            return (double)retObjectPixelsPerInchX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerInchX != null ? retObjectPixelsPerInchX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +226,13 @@ public class DpiScale extends ValueType  {
 
     public double getPixelsPerInchY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerInchY = null;
         try {
-            return (double)classInstance.Get("PixelsPerInchY");
+            retObjectPixelsPerInchY = classInstance.Get("PixelsPerInchY");
+            return (double)retObjectPixelsPerInchY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerInchY != null ? retObjectPixelsPerInchY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

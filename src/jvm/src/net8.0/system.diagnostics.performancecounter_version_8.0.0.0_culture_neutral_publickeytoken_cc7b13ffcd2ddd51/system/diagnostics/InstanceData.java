@@ -170,9 +170,13 @@ public class InstanceData extends NetObject  {
     
     public long getRawValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawValue = null;
         try {
-            return (long)classInstance.Get("RawValue");
+            retObjectRawValue = classInstance.Get("RawValue");
+            return (long)retObjectRawValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class InstanceData extends NetObject  {
 
     public CounterSample getSample() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSample = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sample");
+            retObjectSample = classInstance.Get("Sample");
+            JCObject val = (JCObject)retObjectSample;
             return new CounterSample(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSample != null ? retObjectSample.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class InstanceData extends NetObject  {
 
     public java.lang.String getInstanceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceName = null;
         try {
-            return (java.lang.String)classInstance.Get("InstanceName");
+            retObjectInstanceName = classInstance.Get("InstanceName");
+            return (java.lang.String)retObjectInstanceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInstanceName != null ? retObjectInstanceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

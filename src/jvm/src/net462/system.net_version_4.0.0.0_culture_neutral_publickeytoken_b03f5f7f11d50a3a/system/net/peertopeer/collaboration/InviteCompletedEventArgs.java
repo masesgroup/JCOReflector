@@ -161,10 +161,14 @@ public class InviteCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public PeerInvitationResponse getInviteResponse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInviteResponse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InviteResponse");
+            retObjectInviteResponse = classInstance.Get("InviteResponse");
+            JCObject val = (JCObject)retObjectInviteResponse;
             return new PeerInvitationResponse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInviteResponse != null ? retObjectInviteResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,14 @@ public class TableLayoutStyle extends NetObject  {
     
     public SizeType getSizeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeType");
+            retObjectSizeType = classInstance.Get("SizeType");
+            JCObject val = (JCObject)retObjectSizeType;
             return new SizeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeType != null ? retObjectSizeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class TableLayoutStyle extends NetObject  {
 
     public void setSizeType(SizeType SizeType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeType", SizeType == null ? null : SizeType.getJCOInstance());
         } catch (JCNativeException jcne) {

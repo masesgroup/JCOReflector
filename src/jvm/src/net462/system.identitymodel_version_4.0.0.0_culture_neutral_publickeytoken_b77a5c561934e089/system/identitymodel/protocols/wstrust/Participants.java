@@ -166,10 +166,14 @@ public class Participants extends NetObject  {
     
     public EndpointReference getPrimary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimary = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Primary");
+            retObjectPrimary = classInstance.Get("Primary");
+            JCObject val = (JCObject)retObjectPrimary;
             return new EndpointReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimary != null ? retObjectPrimary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class Participants extends NetObject  {
 
     public void setPrimary(EndpointReference Primary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Primary", Primary == null ? null : Primary.getJCOInstance());
         } catch (JCNativeException jcne) {

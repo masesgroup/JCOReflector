@@ -175,10 +175,14 @@ public class InputBinding extends Freezable  {
     
     public NetObject getCommandParameter() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandParameter");
+            retObjectCommandParameter = classInstance.Get("CommandParameter");
+            JCObject val = (JCObject)retObjectCommandParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandParameter != null ? retObjectCommandParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class InputBinding extends Freezable  {
 
     public void setCommandParameter(NetObject CommandParameter) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandParameter", CommandParameter == null ? null : CommandParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,10 +200,14 @@ public class InputBinding extends Freezable  {
 
     public IInputElement getCommandTarget() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandTarget");
+            retObjectCommandTarget = classInstance.Get("CommandTarget");
+            JCObject val = (JCObject)retObjectCommandTarget;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandTarget != null ? retObjectCommandTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class InputBinding extends Freezable  {
 
     public void setCommandTarget(IInputElement CommandTarget) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTarget", CommandTarget == null ? null : CommandTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,10 +225,14 @@ public class InputBinding extends Freezable  {
 
     public ICommand getCommand() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class InputBinding extends Freezable  {
 
     public void setCommand(ICommand Command) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -238,10 +250,14 @@ public class InputBinding extends Freezable  {
 
     public InputGesture getGesture() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGesture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Gesture");
+            retObjectGesture = classInstance.Get("Gesture");
+            JCObject val = (JCObject)retObjectGesture;
             return new InputGesture(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGesture != null ? retObjectGesture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class InputBinding extends Freezable  {
 
     public void setGesture(InputGesture Gesture) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Gesture", Gesture == null ? null : Gesture.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -162,9 +162,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
     
     public int getCipherStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCipherStrength = null;
         try {
-            return (int)classInstance.Get("CipherStrength");
+            retObjectCipherStrength = classInstance.Get("CipherStrength");
+            return (int)retObjectCipherStrength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCipherStrength != null ? retObjectCipherStrength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getExchangeStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExchangeStrength = null;
         try {
-            return (int)classInstance.Get("ExchangeStrength");
+            retObjectExchangeStrength = classInstance.Get("ExchangeStrength");
+            return (int)retObjectExchangeStrength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectExchangeStrength != null ? retObjectExchangeStrength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getHashStrength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashStrength = null;
         try {
-            return (int)classInstance.Get("HashStrength");
+            retObjectHashStrength = classInstance.Get("HashStrength");
+            return (int)retObjectHashStrength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHashStrength != null ? retObjectHashStrength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public int getKeyExchangeAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExchangeAlgorithm = null;
         try {
-            return (int)classInstance.Get("KeyExchangeAlgorithm");
+            retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
+            return (int)retObjectKeyExchangeAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public SecurityProtocol getProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Protocol");
+            retObjectProtocol = classInstance.Get("Protocol");
+            JCObject val = (JCObject)retObjectProtocol;
             return new SecurityProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocol != null ? retObjectProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public CipherAlgorithmType getAlgorithmIdentifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmIdentifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmIdentifier");
+            retObjectAlgorithmIdentifier = classInstance.Get("AlgorithmIdentifier");
+            JCObject val = (JCObject)retObjectAlgorithmIdentifier;
             return new CipherAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmIdentifier != null ? retObjectAlgorithmIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class SecurityPackageContextConnectionInformation extends NetObject  {
 
     public HashAlgorithmType getHash() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHash = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Hash");
+            retObjectHash = classInstance.Get("Hash");
+            JCObject val = (JCObject)retObjectHash;
             return new HashAlgorithmType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHash != null ? retObjectHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

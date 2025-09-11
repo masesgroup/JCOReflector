@@ -163,10 +163,14 @@ public class DbProviderFactory extends NetObject  {
     
     public DbBatch CreateBatch() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBatch = null;
         try {
-            JCObject objCreateBatch = (JCObject)classInstance.Invoke("CreateBatch");
+            retObjectCreateBatch = classInstance.Invoke("CreateBatch");
+            JCObject objCreateBatch = (JCObject)retObjectCreateBatch;
             return new DbBatch(objCreateBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBatch != null ? retObjectCreateBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbBatchCommand CreateBatchCommand() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBatchCommand = null;
         try {
-            JCObject objCreateBatchCommand = (JCObject)classInstance.Invoke("CreateBatchCommand");
+            retObjectCreateBatchCommand = classInstance.Invoke("CreateBatchCommand");
+            JCObject objCreateBatchCommand = (JCObject)retObjectCreateBatchCommand;
             return new DbBatchCommand(objCreateBatchCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBatchCommand != null ? retObjectCreateBatchCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbCommand CreateCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommand = null;
         try {
-            JCObject objCreateCommand = (JCObject)classInstance.Invoke("CreateCommand");
+            retObjectCreateCommand = classInstance.Invoke("CreateCommand");
+            JCObject objCreateCommand = (JCObject)retObjectCreateCommand;
             return new DbCommand(objCreateCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommand != null ? retObjectCreateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbCommandBuilder CreateCommandBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCommandBuilder = null;
         try {
-            JCObject objCreateCommandBuilder = (JCObject)classInstance.Invoke("CreateCommandBuilder");
+            retObjectCreateCommandBuilder = classInstance.Invoke("CreateCommandBuilder");
+            JCObject objCreateCommandBuilder = (JCObject)retObjectCreateCommandBuilder;
             return new DbCommandBuilder(objCreateCommandBuilder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCommandBuilder != null ? retObjectCreateCommandBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbConnection CreateConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConnection = null;
         try {
-            JCObject objCreateConnection = (JCObject)classInstance.Invoke("CreateConnection");
+            retObjectCreateConnection = classInstance.Invoke("CreateConnection");
+            JCObject objCreateConnection = (JCObject)retObjectCreateConnection;
             return new DbConnection(objCreateConnection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConnection != null ? retObjectCreateConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbConnectionStringBuilder CreateConnectionStringBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConnectionStringBuilder = null;
         try {
-            JCObject objCreateConnectionStringBuilder = (JCObject)classInstance.Invoke("CreateConnectionStringBuilder");
+            retObjectCreateConnectionStringBuilder = classInstance.Invoke("CreateConnectionStringBuilder");
+            JCObject objCreateConnectionStringBuilder = (JCObject)retObjectCreateConnectionStringBuilder;
             return new DbConnectionStringBuilder(objCreateConnectionStringBuilder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConnectionStringBuilder != null ? retObjectCreateConnectionStringBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbDataAdapter CreateDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataAdapter = null;
         try {
-            JCObject objCreateDataAdapter = (JCObject)classInstance.Invoke("CreateDataAdapter");
+            retObjectCreateDataAdapter = classInstance.Invoke("CreateDataAdapter");
+            JCObject objCreateDataAdapter = (JCObject)retObjectCreateDataAdapter;
             return new DbDataAdapter(objCreateDataAdapter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataAdapter != null ? retObjectCreateDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbDataSource CreateDataSource(java.lang.String connectionString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataSource = null;
         try {
-            JCObject objCreateDataSource = (JCObject)classInstance.Invoke("CreateDataSource", connectionString);
+            retObjectCreateDataSource = classInstance.Invoke("CreateDataSource", connectionString);
+            JCObject objCreateDataSource = (JCObject)retObjectCreateDataSource;
             return new DbDataSource(objCreateDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataSource != null ? retObjectCreateDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +283,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbDataSourceEnumerator CreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataSourceEnumerator = null;
         try {
-            JCObject objCreateDataSourceEnumerator = (JCObject)classInstance.Invoke("CreateDataSourceEnumerator");
+            retObjectCreateDataSourceEnumerator = classInstance.Invoke("CreateDataSourceEnumerator");
+            JCObject objCreateDataSourceEnumerator = (JCObject)retObjectCreateDataSourceEnumerator;
             return new DbDataSourceEnumerator(objCreateDataSourceEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataSourceEnumerator != null ? retObjectCreateDataSourceEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +298,14 @@ public class DbProviderFactory extends NetObject  {
 
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new DbParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +317,13 @@ public class DbProviderFactory extends NetObject  {
     
     public boolean getCanCreateBatch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateBatch = null;
         try {
-            return (boolean)classInstance.Get("CanCreateBatch");
+            retObjectCanCreateBatch = classInstance.Get("CanCreateBatch");
+            return (boolean)retObjectCanCreateBatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateBatch != null ? retObjectCanCreateBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +331,13 @@ public class DbProviderFactory extends NetObject  {
 
     public boolean getCanCreateCommandBuilder() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateCommandBuilder = null;
         try {
-            return (boolean)classInstance.Get("CanCreateCommandBuilder");
+            retObjectCanCreateCommandBuilder = classInstance.Get("CanCreateCommandBuilder");
+            return (boolean)retObjectCanCreateCommandBuilder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateCommandBuilder != null ? retObjectCanCreateCommandBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +345,13 @@ public class DbProviderFactory extends NetObject  {
 
     public boolean getCanCreateDataAdapter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateDataAdapter = null;
         try {
-            return (boolean)classInstance.Get("CanCreateDataAdapter");
+            retObjectCanCreateDataAdapter = classInstance.Get("CanCreateDataAdapter");
+            return (boolean)retObjectCanCreateDataAdapter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateDataAdapter != null ? retObjectCanCreateDataAdapter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +359,13 @@ public class DbProviderFactory extends NetObject  {
 
     public boolean getCanCreateDataSourceEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCreateDataSourceEnumerator = null;
         try {
-            return (boolean)classInstance.Get("CanCreateDataSourceEnumerator");
+            retObjectCanCreateDataSourceEnumerator = classInstance.Get("CanCreateDataSourceEnumerator");
+            return (boolean)retObjectCanCreateDataSourceEnumerator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCreateDataSourceEnumerator != null ? retObjectCanCreateDataSourceEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
     
     public double getExtentHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeight = null;
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            retObjectExtentHeight = classInstance.Get("ExtentHeight");
+            return (double)retObjectExtentHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getExtentHeightChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeightChange = null;
         try {
-            return (double)classInstance.Get("ExtentHeightChange");
+            retObjectExtentHeightChange = classInstance.Get("ExtentHeightChange");
+            return (double)retObjectExtentHeightChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentHeightChange != null ? retObjectExtentHeightChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getExtentWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidth = null;
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            retObjectExtentWidth = classInstance.Get("ExtentWidth");
+            return (double)retObjectExtentWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getExtentWidthChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidthChange = null;
         try {
-            return (double)classInstance.Get("ExtentWidthChange");
+            retObjectExtentWidthChange = classInstance.Get("ExtentWidthChange");
+            return (double)retObjectExtentWidthChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentWidthChange != null ? retObjectExtentWidthChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getHorizontalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalChange = null;
         try {
-            return (double)classInstance.Get("HorizontalChange");
+            retObjectHorizontalChange = classInstance.Get("HorizontalChange");
+            return (double)retObjectHorizontalChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalChange != null ? retObjectHorizontalChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getHorizontalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +244,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getVerticalChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalChange = null;
         try {
-            return (double)classInstance.Get("VerticalChange");
+            retObjectVerticalChange = classInstance.Get("VerticalChange");
+            return (double)retObjectVerticalChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalChange != null ? retObjectVerticalChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +258,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getVerticalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +272,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getViewportHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportHeight = null;
         try {
-            return (double)classInstance.Get("ViewportHeight");
+            retObjectViewportHeight = classInstance.Get("ViewportHeight");
+            return (double)retObjectViewportHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +286,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getViewportHeightChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportHeightChange = null;
         try {
-            return (double)classInstance.Get("ViewportHeightChange");
+            retObjectViewportHeightChange = classInstance.Get("ViewportHeightChange");
+            return (double)retObjectViewportHeightChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportHeightChange != null ? retObjectViewportHeightChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +300,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getViewportWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportWidth = null;
         try {
-            return (double)classInstance.Get("ViewportWidth");
+            retObjectViewportWidth = classInstance.Get("ViewportWidth");
+            return (double)retObjectViewportWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +314,13 @@ public class ScrollChangedEventArgs extends RoutedEventArgs  {
 
     public double getViewportWidthChange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportWidthChange = null;
         try {
-            return (double)classInstance.Get("ViewportWidthChange");
+            retObjectViewportWidthChange = classInstance.Get("ViewportWidthChange");
+            return (double)retObjectViewportWidthChange;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportWidthChange != null ? retObjectViewportWidthChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

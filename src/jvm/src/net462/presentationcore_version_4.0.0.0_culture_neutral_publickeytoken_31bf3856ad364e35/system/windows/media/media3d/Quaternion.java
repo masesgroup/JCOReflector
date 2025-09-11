@@ -182,9 +182,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
     
     public boolean Equals(Quaternion value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static boolean Equals(Quaternion quaternion1, Quaternion quaternion2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", quaternion1 == null ? null : quaternion1.getJCOInstance(), quaternion2 == null ? null : quaternion2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Add(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new Quaternion(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Multiply(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Quaternion(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Parse(java.lang.String source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Quaternion(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Slerp(Quaternion from, Quaternion to, double t) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSlerp = null;
         try {
-            JCObject objSlerp = (JCObject)classType.Invoke("Slerp", from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), t);
+            retObjectSlerp = classType.Invoke("Slerp", from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), t);
+            JCObject objSlerp = (JCObject)retObjectSlerp;
             return new Quaternion(objSlerp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSlerp != null ? retObjectSlerp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Slerp(Quaternion from, Quaternion to, double t, boolean useShortestPath) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSlerp = null;
         try {
-            JCObject objSlerp = (JCObject)classType.Invoke("Slerp", from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), t, useShortestPath);
+            retObjectSlerp = classType.Invoke("Slerp", from == null ? null : from.getJCOInstance(), to == null ? null : to.getJCOInstance(), t, useShortestPath);
+            JCObject objSlerp = (JCObject)retObjectSlerp;
             return new Quaternion(objSlerp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSlerp != null ? retObjectSlerp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +299,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion Subtract(Quaternion left, Quaternion right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new Quaternion(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +314,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void Conjugate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Conjugate");
         } catch (JCNativeException jcne) {
@@ -288,7 +324,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void Invert() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invert");
         } catch (JCNativeException jcne) {
@@ -298,7 +334,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void Normalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Normalize");
         } catch (JCNativeException jcne) {
@@ -312,7 +348,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -321,9 +357,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
     
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdentity = null;
         try {
-            return (boolean)classInstance.Get("IsIdentity");
+            retObjectIsIdentity = classInstance.Get("IsIdentity");
+            return (boolean)retObjectIsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIdentity != null ? retObjectIsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +371,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public boolean getIsNormalized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNormalized = null;
         try {
-            return (boolean)classInstance.Get("IsNormalized");
+            retObjectIsNormalized = classInstance.Get("IsNormalized");
+            return (boolean)retObjectIsNormalized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNormalized != null ? retObjectIsNormalized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +385,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public double getAngle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAngle = null;
         try {
-            return (double)classInstance.Get("Angle");
+            retObjectAngle = classInstance.Get("Angle");
+            return (double)retObjectAngle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectAngle != null ? retObjectAngle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +399,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public double getW() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectW = null;
         try {
-            return (double)classInstance.Get("W");
+            retObjectW = classInstance.Get("W");
+            return (double)retObjectW;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectW != null ? retObjectW.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +413,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void setW(double W) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("W", W);
         } catch (JCNativeException jcne) {
@@ -371,9 +423,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public double getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            return (double)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            return (double)retObjectX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectX != null ? retObjectX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +437,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void setX(double X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X);
         } catch (JCNativeException jcne) {
@@ -391,9 +447,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public double getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            return (double)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            return (double)retObjectY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectY != null ? retObjectY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +461,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void setY(double Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y);
         } catch (JCNativeException jcne) {
@@ -411,9 +471,13 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public double getZ() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZ = null;
         try {
-            return (double)classInstance.Get("Z");
+            retObjectZ = classInstance.Get("Z");
+            return (double)retObjectZ;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectZ != null ? retObjectZ.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +485,7 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public void setZ(double Z) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Z", Z);
         } catch (JCNativeException jcne) {
@@ -431,10 +495,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public static Quaternion getIdentity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            retObjectIdentity = classType.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new Quaternion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +510,14 @@ public class Quaternion extends ValueType implements system.IFormattable {
 
     public Vector3D getAxis() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAxis = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Axis");
+            retObjectAxis = classInstance.Get("Axis");
+            JCObject val = (JCObject)retObjectAxis;
             return new Vector3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAxis != null ? retObjectAxis.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,10 +170,14 @@ public class WorkflowViewService extends ViewService  {
     
     public ModelItem GetModel(DependencyObject view) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModel = null;
         try {
-            JCObject objGetModel = (JCObject)classInstance.Invoke("GetModel", view == null ? null : view.getJCOInstance());
+            retObjectGetModel = classInstance.Invoke("GetModel", view == null ? null : view.getJCOInstance());
+            JCObject objGetModel = (JCObject)retObjectGetModel;
             return new ModelItem(objGetModel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModel != null ? retObjectGetModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class WorkflowViewService extends ViewService  {
 
     public WorkflowViewElement GetViewElement(ModelItem modelItem) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewElement = null;
         try {
-            JCObject objGetViewElement = (JCObject)classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance());
+            retObjectGetViewElement = classInstance.Invoke("GetViewElement", modelItem == null ? null : modelItem.getJCOInstance());
+            JCObject objGetViewElement = (JCObject)retObjectGetViewElement;
             return new WorkflowViewElement(objGetViewElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewElement != null ? retObjectGetViewElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class WorkflowViewService extends ViewService  {
 
     public DependencyObject GetView(ModelItem model) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.TypeLoadException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", model == null ? null : model.getJCOInstance());
+            retObjectGetView = classInstance.Invoke("GetView", model == null ? null : model.getJCOInstance());
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DependencyObject(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,9 +158,13 @@ public class RuntimeHelpers extends NetObject  {
     
     public static boolean Equals(NetObject o1, NetObject o2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", o1 == null ? null : o1.getJCOInstance(), o2 == null ? null : o2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,19 @@ public class RuntimeHelpers extends NetObject  {
 
     public static int GetHashCode(NetObject o) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHashCode = null;
         try {
-            return (int)classType.Invoke("GetHashCode", o == null ? null : o.getJCOInstance());
+            retObjectGetHashCode = classType.Invoke("GetHashCode", o == null ? null : o.getJCOInstance());
+            return (int)retObjectGetHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHashCodeNumber = (java.lang.Number)retObjectGetHashCode;
+                return retObjectGetHashCodeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHashCode != null ? retObjectGetHashCode.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +192,14 @@ public class RuntimeHelpers extends NetObject  {
 
     public static NetObject GetObjectValue(NetObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjectValue = null;
         try {
-            JCObject objGetObjectValue = (JCObject)classType.Invoke("GetObjectValue", obj == null ? null : obj.getJCOInstance());
+            retObjectGetObjectValue = classType.Invoke("GetObjectValue", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetObjectValue = (JCObject)retObjectGetObjectValue;
             return new NetObject(objGetObjectValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectValue != null ? retObjectGetObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +207,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void EnsureSufficientExecutionStack() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnsureSufficientExecutionStack");
         } catch (JCNativeException jcne) {
@@ -199,7 +217,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void InitializeArray(Array array, RuntimeFieldHandle fldHandle) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InitializeArray", array == null ? null : array.getJCOInstance(), fldHandle == null ? null : fldHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +227,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void PrepareConstrainedRegions() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareConstrainedRegions");
         } catch (JCNativeException jcne) {
@@ -219,7 +237,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void PrepareConstrainedRegionsNoOP() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareConstrainedRegionsNoOP");
         } catch (JCNativeException jcne) {
@@ -229,7 +247,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareMethod", method == null ? null : method.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +257,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareMethod", method == null ? null : method.getJCOInstance(), toObjectFromArray(instantiation));
         } catch (JCNativeException jcne) {
@@ -249,7 +267,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void ProbeForSufficientStack() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ProbeForSufficientStack");
         } catch (JCNativeException jcne) {
@@ -259,7 +277,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void RunClassConstructor(RuntimeTypeHandle type) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RunClassConstructor", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,7 +287,7 @@ public class RuntimeHelpers extends NetObject  {
 
     public static void RunModuleConstructor(ModuleHandle module) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RunModuleConstructor", module == null ? null : module.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,9 +301,13 @@ public class RuntimeHelpers extends NetObject  {
     
     public static int getOffsetToStringData() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOffsetToStringData = null;
         try {
-            return (int)classType.Get("OffsetToStringData");
+            retObjectOffsetToStringData = classType.Get("OffsetToStringData");
+            return (int)retObjectOffsetToStringData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffsetToStringData != null ? retObjectOffsetToStringData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

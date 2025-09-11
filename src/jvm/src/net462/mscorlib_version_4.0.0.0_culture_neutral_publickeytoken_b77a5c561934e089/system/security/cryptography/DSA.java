@@ -158,9 +158,13 @@ public class DSA extends AsymmetricAlgorithm  {
     
     public boolean VerifyData(byte[] data, byte[] signature, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", data, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", data, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifyData(JCORefOut dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifyData(byte[] data, int offset, int count, byte[] signature, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", data, offset, count, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", data, offset, count, signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifyData(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, HashAlgorithmName dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifyData(Stream data, byte[] signature, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", data == null ? null : data.getJCOInstance(), signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", data == null ? null : data.getJCOInstance(), signature, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifyData(Stream dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyData = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectVerifyData = classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (boolean)retObjectVerifyData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyData != null ? retObjectVerifyData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +242,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifySignature(byte[] rgbHash, byte[] rgbSignature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", rgbHash, rgbSignature);
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +256,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectVerifySignature = classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            return (boolean)retObjectVerifySignature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +270,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] CreateSignature(byte[] rgbHash) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (java.lang.Object)rgbHash);
+            retObjectCreateSignature = classInstance.Invoke("CreateSignature", (java.lang.Object)rgbHash);
+            JCObject resultingObjects = (JCObject)retObjectCreateSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -250,6 +284,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexCreateSignature] = (byte)resultingArrayList.get(indexCreateSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSignature != null ? retObjectCreateSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateSignature = classInstance.Invoke("CreateSignature", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectCreateSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -269,6 +307,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexCreateSignature] = (byte)resultingArrayList.get(indexCreateSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSignature != null ? retObjectCreateSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] SignData(byte[] data, int offset, int count, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", data, offset, count, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", data, offset, count, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -288,6 +330,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +339,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] SignData(JCORefOut dupParam0, int dupParam1, int dupParam2, HashAlgorithmName dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -307,6 +353,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +362,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] SignData(byte[] data, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", data, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", data, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -326,6 +376,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +385,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] SignData(JCORefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -345,6 +399,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +408,12 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public byte[] SignData(Stream data, HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", data == null ? null : data.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectSignData = classInstance.Invoke("SignData", data == null ? null : data.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectSignData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -364,6 +422,8 @@ public class DSA extends AsymmetricAlgorithm  {
 				resultingArray[indexSignData] = (byte)resultingArrayList.get(indexSignData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectSignData != null ? retObjectSignData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +431,14 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public static DSA CreateNewDSA() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DSA(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +446,14 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public static DSA Create(int keySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", keySizeInBits);
+            retObjectCreate = classType.Invoke("Create", keySizeInBits);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DSA(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +461,14 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public static DSA Create(DSAParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", parameters == null ? null : parameters.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", parameters == null ? null : parameters.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DSA(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +476,14 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public static DSA CreateNewDSA(java.lang.String algName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.TypeLoadException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algName);
+            retObjectCreate = classType.Invoke("Create", algName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DSA(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +491,14 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public DSAParameters ExportParameters(boolean includePrivateParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportParameters = null;
         try {
-            JCObject objExportParameters = (JCObject)classInstance.Invoke("ExportParameters", includePrivateParameters);
+            retObjectExportParameters = classInstance.Invoke("ExportParameters", includePrivateParameters);
+            JCObject objExportParameters = (JCObject)retObjectExportParameters;
             return new DSAParameters(objExportParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportParameters != null ? retObjectExportParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +506,13 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public java.lang.String ToXmlString(boolean includePrivateParameters) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXmlString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXmlString", includePrivateParameters);
+            retObjectToXmlString = classInstance.Invoke("ToXmlString", includePrivateParameters);
+            return (java.lang.String)retObjectToXmlString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXmlString != null ? retObjectToXmlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +520,7 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public void FromXmlString(java.lang.String xmlString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.XmlSyntaxException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXmlString", xmlString);
         } catch (JCNativeException jcne) {
@@ -446,7 +530,7 @@ public class DSA extends AsymmetricAlgorithm  {
 
     public void ImportParameters(DSAParameters parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {

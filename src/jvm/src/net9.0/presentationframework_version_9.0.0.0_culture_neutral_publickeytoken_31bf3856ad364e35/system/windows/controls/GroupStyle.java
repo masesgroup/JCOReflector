@@ -171,9 +171,13 @@ public class GroupStyle extends NetObject  {
     
     public boolean getHidesIfEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHidesIfEmpty = null;
         try {
-            return (boolean)classInstance.Get("HidesIfEmpty");
+            retObjectHidesIfEmpty = classInstance.Get("HidesIfEmpty");
+            return (boolean)retObjectHidesIfEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHidesIfEmpty != null ? retObjectHidesIfEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class GroupStyle extends NetObject  {
 
     public void setHidesIfEmpty(boolean HidesIfEmpty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HidesIfEmpty", HidesIfEmpty);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class GroupStyle extends NetObject  {
 
     public int getAlternationCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternationCount = null;
         try {
-            return (int)classInstance.Get("AlternationCount");
+            retObjectAlternationCount = classInstance.Get("AlternationCount");
+            return (int)retObjectAlternationCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class GroupStyle extends NetObject  {
 
     public void setAlternationCount(int AlternationCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternationCount", AlternationCount);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class GroupStyle extends NetObject  {
 
     public java.lang.String getHeaderStringFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderStringFormat");
+            retObjectHeaderStringFormat = classInstance.Get("HeaderStringFormat");
+            return (java.lang.String)retObjectHeaderStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderStringFormat != null ? retObjectHeaderStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class GroupStyle extends NetObject  {
 
     public void setHeaderStringFormat(java.lang.String HeaderStringFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderStringFormat", HeaderStringFormat);
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class GroupStyle extends NetObject  {
 
     public DataTemplateSelector getHeaderTemplateSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplateSelector");
+            retObjectHeaderTemplateSelector = classInstance.Get("HeaderTemplateSelector");
+            JCObject val = (JCObject)retObjectHeaderTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplateSelector != null ? retObjectHeaderTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class GroupStyle extends NetObject  {
 
     public void setHeaderTemplateSelector(DataTemplateSelector HeaderTemplateSelector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplateSelector", HeaderTemplateSelector == null ? null : HeaderTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class GroupStyle extends NetObject  {
 
     public static GroupStyle getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new GroupStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +283,14 @@ public class GroupStyle extends NetObject  {
 
     public ItemsPanelTemplate getPanel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Panel");
+            retObjectPanel = classInstance.Get("Panel");
+            JCObject val = (JCObject)retObjectPanel;
             return new ItemsPanelTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPanel != null ? retObjectPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +298,7 @@ public class GroupStyle extends NetObject  {
 
     public void setPanel(ItemsPanelTemplate Panel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Panel", Panel == null ? null : Panel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +308,14 @@ public class GroupStyle extends NetObject  {
 
     public StyleSelector getContainerStyleSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerStyleSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainerStyleSelector");
+            retObjectContainerStyleSelector = classInstance.Get("ContainerStyleSelector");
+            JCObject val = (JCObject)retObjectContainerStyleSelector;
             return new StyleSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerStyleSelector != null ? retObjectContainerStyleSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class GroupStyle extends NetObject  {
 
     public void setContainerStyleSelector(StyleSelector ContainerStyleSelector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContainerStyleSelector", ContainerStyleSelector == null ? null : ContainerStyleSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +333,14 @@ public class GroupStyle extends NetObject  {
 
     public DataTemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +348,7 @@ public class GroupStyle extends NetObject  {
 
     public void setHeaderTemplate(DataTemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +358,14 @@ public class GroupStyle extends NetObject  {
 
     public Style getContainerStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContainerStyle");
+            retObjectContainerStyle = classInstance.Get("ContainerStyle");
+            JCObject val = (JCObject)retObjectContainerStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerStyle != null ? retObjectContainerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +373,7 @@ public class GroupStyle extends NetObject  {
 
     public void setContainerStyle(Style ContainerStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContainerStyle", ContainerStyle == null ? null : ContainerStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

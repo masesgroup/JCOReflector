@@ -204,10 +204,14 @@ public class CustomBinding extends Binding  {
     
     public BindingElementCollection CreateBindingElements() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +223,14 @@ public class CustomBinding extends Binding  {
     
     public BindingElementCollection getElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Elements");
+            retObjectElements = classInstance.Get("Elements");
+            JCObject val = (JCObject)retObjectElements;
             return new BindingElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElements != null ? retObjectElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

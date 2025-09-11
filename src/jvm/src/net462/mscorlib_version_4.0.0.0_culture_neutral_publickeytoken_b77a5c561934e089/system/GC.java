@@ -156,9 +156,13 @@ public class GC extends NetObject  {
     
     public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryStartNoGCRegion = null;
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize);
+            retObjectTryStartNoGCRegion = classType.Invoke("TryStartNoGCRegion", totalSize);
+            return (boolean)retObjectTryStartNoGCRegion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryStartNoGCRegion != null ? retObjectTryStartNoGCRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class GC extends NetObject  {
 
     public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryStartNoGCRegion = null;
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, disallowFullBlockingGC);
+            retObjectTryStartNoGCRegion = classType.Invoke("TryStartNoGCRegion", totalSize, disallowFullBlockingGC);
+            return (boolean)retObjectTryStartNoGCRegion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryStartNoGCRegion != null ? retObjectTryStartNoGCRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class GC extends NetObject  {
 
     public static boolean TryStartNoGCRegion(long totalSize, long lohSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryStartNoGCRegion = null;
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize);
+            retObjectTryStartNoGCRegion = classType.Invoke("TryStartNoGCRegion", totalSize, lohSize);
+            return (boolean)retObjectTryStartNoGCRegion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryStartNoGCRegion != null ? retObjectTryStartNoGCRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class GC extends NetObject  {
 
     public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryStartNoGCRegion = null;
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
+            retObjectTryStartNoGCRegion = classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
+            return (boolean)retObjectTryStartNoGCRegion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryStartNoGCRegion != null ? retObjectTryStartNoGCRegion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,19 @@ public class GC extends NetObject  {
 
     public static int CollectionCount(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCollectionCount = null;
         try {
-            return (int)classType.Invoke("CollectionCount", generation);
+            retObjectCollectionCount = classType.Invoke("CollectionCount", generation);
+            return (int)retObjectCollectionCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCollectionCountNumber = (java.lang.Number)retObjectCollectionCount;
+                return retObjectCollectionCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCollectionCount != null ? retObjectCollectionCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +232,19 @@ public class GC extends NetObject  {
 
     public static int GetGeneration(NetObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGeneration = null;
         try {
-            return (int)classType.Invoke("GetGeneration", obj == null ? null : obj.getJCOInstance());
+            retObjectGetGeneration = classType.Invoke("GetGeneration", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectGetGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetGenerationNumber = (java.lang.Number)retObjectGetGeneration;
+                return retObjectGetGenerationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +252,19 @@ public class GC extends NetObject  {
 
     public static int GetGeneration(WeakReference wo) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGeneration = null;
         try {
-            return (int)classType.Invoke("GetGeneration", wo == null ? null : wo.getJCOInstance());
+            retObjectGetGeneration = classType.Invoke("GetGeneration", wo == null ? null : wo.getJCOInstance());
+            return (int)retObjectGetGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetGenerationNumber = (java.lang.Number)retObjectGetGeneration;
+                return retObjectGetGenerationNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetGeneration != null ? retObjectGetGeneration.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +272,19 @@ public class GC extends NetObject  {
 
     public static long GetAllocatedBytesForCurrentThread() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllocatedBytesForCurrentThread = null;
         try {
-            return (long)classType.Invoke("GetAllocatedBytesForCurrentThread");
+            retObjectGetAllocatedBytesForCurrentThread = classType.Invoke("GetAllocatedBytesForCurrentThread");
+            return (long)retObjectGetAllocatedBytesForCurrentThread;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAllocatedBytesForCurrentThreadNumber = (java.lang.Number)retObjectGetAllocatedBytesForCurrentThread;
+                return retObjectGetAllocatedBytesForCurrentThreadNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetAllocatedBytesForCurrentThread != null ? retObjectGetAllocatedBytesForCurrentThread.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +292,19 @@ public class GC extends NetObject  {
 
     public static long GetTotalMemory(boolean forceFullCollection) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTotalMemory = null;
         try {
-            return (long)classType.Invoke("GetTotalMemory", forceFullCollection);
+            retObjectGetTotalMemory = classType.Invoke("GetTotalMemory", forceFullCollection);
+            return (long)retObjectGetTotalMemory;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTotalMemoryNumber = (java.lang.Number)retObjectGetTotalMemory;
+                return retObjectGetTotalMemoryNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetTotalMemory != null ? retObjectGetTotalMemory.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +312,14 @@ public class GC extends NetObject  {
 
     public static GCNotificationStatus WaitForFullGCApproach() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitForFullGCApproach = null;
         try {
-            JCObject objWaitForFullGCApproach = (JCObject)classType.Invoke("WaitForFullGCApproach");
+            retObjectWaitForFullGCApproach = classType.Invoke("WaitForFullGCApproach");
+            JCObject objWaitForFullGCApproach = (JCObject)retObjectWaitForFullGCApproach;
             return new GCNotificationStatus(objWaitForFullGCApproach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForFullGCApproach != null ? retObjectWaitForFullGCApproach.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +327,14 @@ public class GC extends NetObject  {
 
     public static GCNotificationStatus WaitForFullGCApproach(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitForFullGCApproach = null;
         try {
-            JCObject objWaitForFullGCApproach = (JCObject)classType.Invoke("WaitForFullGCApproach", millisecondsTimeout);
+            retObjectWaitForFullGCApproach = classType.Invoke("WaitForFullGCApproach", millisecondsTimeout);
+            JCObject objWaitForFullGCApproach = (JCObject)retObjectWaitForFullGCApproach;
             return new GCNotificationStatus(objWaitForFullGCApproach);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForFullGCApproach != null ? retObjectWaitForFullGCApproach.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +342,14 @@ public class GC extends NetObject  {
 
     public static GCNotificationStatus WaitForFullGCComplete() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitForFullGCComplete = null;
         try {
-            JCObject objWaitForFullGCComplete = (JCObject)classType.Invoke("WaitForFullGCComplete");
+            retObjectWaitForFullGCComplete = classType.Invoke("WaitForFullGCComplete");
+            JCObject objWaitForFullGCComplete = (JCObject)retObjectWaitForFullGCComplete;
             return new GCNotificationStatus(objWaitForFullGCComplete);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForFullGCComplete != null ? retObjectWaitForFullGCComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +357,14 @@ public class GC extends NetObject  {
 
     public static GCNotificationStatus WaitForFullGCComplete(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWaitForFullGCComplete = null;
         try {
-            JCObject objWaitForFullGCComplete = (JCObject)classType.Invoke("WaitForFullGCComplete", millisecondsTimeout);
+            retObjectWaitForFullGCComplete = classType.Invoke("WaitForFullGCComplete", millisecondsTimeout);
+            JCObject objWaitForFullGCComplete = (JCObject)retObjectWaitForFullGCComplete;
             return new GCNotificationStatus(objWaitForFullGCComplete);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForFullGCComplete != null ? retObjectWaitForFullGCComplete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +372,7 @@ public class GC extends NetObject  {
 
     public static void AddMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddMemoryPressure", bytesAllocated);
         } catch (JCNativeException jcne) {
@@ -300,7 +382,7 @@ public class GC extends NetObject  {
 
     public static void CancelFullGCNotification() throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CancelFullGCNotification");
         } catch (JCNativeException jcne) {
@@ -310,7 +392,7 @@ public class GC extends NetObject  {
 
     public static void Collect() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Collect");
         } catch (JCNativeException jcne) {
@@ -320,7 +402,7 @@ public class GC extends NetObject  {
 
     public static void Collect(int generation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Collect", generation);
         } catch (JCNativeException jcne) {
@@ -330,7 +412,7 @@ public class GC extends NetObject  {
 
     public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +422,7 @@ public class GC extends NetObject  {
 
     public static void Collect(int generation, GCCollectionMode mode, boolean blocking) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking);
         } catch (JCNativeException jcne) {
@@ -350,7 +432,7 @@ public class GC extends NetObject  {
 
     public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking, compacting);
         } catch (JCNativeException jcne) {
@@ -360,7 +442,7 @@ public class GC extends NetObject  {
 
     public static void EndNoGCRegion() throws Throwable, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EndNoGCRegion");
         } catch (JCNativeException jcne) {
@@ -370,7 +452,7 @@ public class GC extends NetObject  {
 
     public static void KeepAlive(NetObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("KeepAlive", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,7 +462,7 @@ public class GC extends NetObject  {
 
     public static void RegisterForFullGCNotification(int maxGenerationThreshold, int largeObjectHeapThreshold) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterForFullGCNotification", maxGenerationThreshold, largeObjectHeapThreshold);
         } catch (JCNativeException jcne) {
@@ -390,7 +472,7 @@ public class GC extends NetObject  {
 
     public static void RemoveMemoryPressure(long bytesAllocated) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveMemoryPressure", bytesAllocated);
         } catch (JCNativeException jcne) {
@@ -400,7 +482,7 @@ public class GC extends NetObject  {
 
     public static void ReRegisterForFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ReRegisterForFinalize", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -410,7 +492,7 @@ public class GC extends NetObject  {
 
     public static void SuppressFinalize(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SuppressFinalize", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,7 +502,7 @@ public class GC extends NetObject  {
 
     public static void WaitForPendingFinalizers() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WaitForPendingFinalizers");
         } catch (JCNativeException jcne) {
@@ -434,9 +516,13 @@ public class GC extends NetObject  {
     
     public static int getMaxGeneration() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxGeneration = null;
         try {
-            return (int)classType.Get("MaxGeneration");
+            retObjectMaxGeneration = classType.Get("MaxGeneration");
+            return (int)retObjectMaxGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxGeneration != null ? retObjectMaxGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

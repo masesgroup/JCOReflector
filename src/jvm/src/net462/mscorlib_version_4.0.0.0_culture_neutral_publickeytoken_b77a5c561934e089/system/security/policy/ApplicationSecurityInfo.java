@@ -173,10 +173,14 @@ public class ApplicationSecurityInfo extends NetObject  {
     
     public ApplicationId getApplicationId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationId");
+            retObjectApplicationId = classInstance.Get("ApplicationId");
+            JCObject val = (JCObject)retObjectApplicationId;
             return new ApplicationId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationId != null ? retObjectApplicationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public void setApplicationId(ApplicationId ApplicationId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationId", ApplicationId == null ? null : ApplicationId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,10 +198,14 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public ApplicationId getDeploymentId() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentId");
+            retObjectDeploymentId = classInstance.Get("DeploymentId");
+            JCObject val = (JCObject)retObjectDeploymentId;
             return new ApplicationId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeploymentId != null ? retObjectDeploymentId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public void setDeploymentId(ApplicationId DeploymentId) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentId", DeploymentId == null ? null : DeploymentId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +223,14 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public PermissionSet getDefaultRequestSet() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.security.XmlSyntaxException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException, system.RankException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultRequestSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultRequestSet");
+            retObjectDefaultRequestSet = classInstance.Get("DefaultRequestSet");
+            JCObject val = (JCObject)retObjectDefaultRequestSet;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultRequestSet != null ? retObjectDefaultRequestSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public void setDefaultRequestSet(PermissionSet DefaultRequestSet) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultRequestSet", DefaultRequestSet == null ? null : DefaultRequestSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,10 +248,14 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public Evidence getApplicationEvidence() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationEvidence = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationEvidence");
+            retObjectApplicationEvidence = classInstance.Get("ApplicationEvidence");
+            JCObject val = (JCObject)retObjectApplicationEvidence;
             return new Evidence(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationEvidence != null ? retObjectApplicationEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class ApplicationSecurityInfo extends NetObject  {
 
     public void setApplicationEvidence(Evidence ApplicationEvidence) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationEvidence", ApplicationEvidence == null ? null : ApplicationEvidence.getJCOInstance());
         } catch (JCNativeException jcne) {

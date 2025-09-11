@@ -229,7 +229,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
     
     public void ResetDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDbType");
         } catch (JCNativeException jcne) {
@@ -239,7 +239,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void ResetSqlDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetSqlDbType");
         } catch (JCNativeException jcne) {
@@ -253,7 +253,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -262,9 +262,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
     
     public boolean getForceColumnEncryption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForceColumnEncryption = null;
         try {
-            return (boolean)classInstance.Get("ForceColumnEncryption");
+            retObjectForceColumnEncryption = classInstance.Get("ForceColumnEncryption");
+            return (boolean)retObjectForceColumnEncryption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForceColumnEncryption != null ? retObjectForceColumnEncryption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +276,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setForceColumnEncryption(boolean ForceColumnEncryption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForceColumnEncryption", ForceColumnEncryption);
         } catch (JCNativeException jcne) {
@@ -282,9 +286,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public byte getPrecision() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.NotSupportedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +300,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setPrecision(byte Precision) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Precision", Precision);
         } catch (JCNativeException jcne) {
@@ -302,9 +310,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public byte getScale() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.NotSupportedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +324,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setScale(byte Scale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scale", Scale);
         } catch (JCNativeException jcne) {
@@ -322,9 +334,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public int getLocaleId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocaleId = null;
         try {
-            return (int)classInstance.Get("LocaleId");
+            retObjectLocaleId = classInstance.Get("LocaleId");
+            return (int)retObjectLocaleId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLocaleId != null ? retObjectLocaleId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +348,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setLocaleId(int LocaleId) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocaleId", LocaleId);
         } catch (JCNativeException jcne) {
@@ -342,9 +358,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +372,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setOffset(int Offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -362,10 +382,14 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public SqlDbType getSqlDbType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlDbType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SqlDbType");
+            retObjectSqlDbType = classInstance.Get("SqlDbType");
+            JCObject val = (JCObject)retObjectSqlDbType;
             return new SqlDbType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqlDbType != null ? retObjectSqlDbType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +397,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setSqlDbType(SqlDbType SqlDbType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SqlDbType", SqlDbType == null ? null : SqlDbType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +407,14 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public SqlCompareOptions getCompareInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareInfo");
+            retObjectCompareInfo = classInstance.Get("CompareInfo");
+            JCObject val = (JCObject)retObjectCompareInfo;
             return new SqlCompareOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareInfo != null ? retObjectCompareInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +422,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setCompareInfo(SqlCompareOptions CompareInfo) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompareInfo", CompareInfo == null ? null : CompareInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,10 +432,14 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public NetObject getSqlValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.NotSupportedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SqlValue");
+            retObjectSqlValue = classInstance.Get("SqlValue");
+            JCObject val = (JCObject)retObjectSqlValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqlValue != null ? retObjectSqlValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +447,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setSqlValue(NetObject SqlValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SqlValue", SqlValue == null ? null : SqlValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,9 +457,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +471,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setTypeName(java.lang.String TypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {
@@ -445,9 +481,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public java.lang.String getUdtTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUdtTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("UdtTypeName");
+            retObjectUdtTypeName = classInstance.Get("UdtTypeName");
+            return (java.lang.String)retObjectUdtTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUdtTypeName != null ? retObjectUdtTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,7 +495,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setUdtTypeName(java.lang.String UdtTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UdtTypeName", UdtTypeName);
         } catch (JCNativeException jcne) {
@@ -465,9 +505,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public java.lang.String getXmlSchemaCollectionDatabase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionDatabase = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionDatabase");
+            retObjectXmlSchemaCollectionDatabase = classInstance.Get("XmlSchemaCollectionDatabase");
+            return (java.lang.String)retObjectXmlSchemaCollectionDatabase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionDatabase != null ? retObjectXmlSchemaCollectionDatabase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +519,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setXmlSchemaCollectionDatabase(java.lang.String XmlSchemaCollectionDatabase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSchemaCollectionDatabase", XmlSchemaCollectionDatabase);
         } catch (JCNativeException jcne) {
@@ -485,9 +529,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public java.lang.String getXmlSchemaCollectionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionName");
+            retObjectXmlSchemaCollectionName = classInstance.Get("XmlSchemaCollectionName");
+            return (java.lang.String)retObjectXmlSchemaCollectionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionName != null ? retObjectXmlSchemaCollectionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,7 +543,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setXmlSchemaCollectionName(java.lang.String XmlSchemaCollectionName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSchemaCollectionName", XmlSchemaCollectionName);
         } catch (JCNativeException jcne) {
@@ -505,9 +553,13 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public java.lang.String getXmlSchemaCollectionOwningSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionOwningSchema = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionOwningSchema");
+            retObjectXmlSchemaCollectionOwningSchema = classInstance.Get("XmlSchemaCollectionOwningSchema");
+            return (java.lang.String)retObjectXmlSchemaCollectionOwningSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionOwningSchema != null ? retObjectXmlSchemaCollectionOwningSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,7 +567,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
 
     public void setXmlSchemaCollectionOwningSchema(java.lang.String XmlSchemaCollectionOwningSchema) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSchemaCollectionOwningSchema", XmlSchemaCollectionOwningSchema);
         } catch (JCNativeException jcne) {

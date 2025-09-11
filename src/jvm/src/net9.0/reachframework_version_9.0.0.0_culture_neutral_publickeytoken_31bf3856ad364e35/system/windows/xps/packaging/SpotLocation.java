@@ -166,9 +166,13 @@ public class SpotLocation extends NetObject  {
     
     public double getStartX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartX = null;
         try {
-            return (double)classInstance.Get("StartX");
+            retObjectStartX = classInstance.Get("StartX");
+            return (double)retObjectStartX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStartX != null ? retObjectStartX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SpotLocation extends NetObject  {
 
     public void setStartX(double StartX) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartX", StartX);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class SpotLocation extends NetObject  {
 
     public double getStartY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartY = null;
         try {
-            return (double)classInstance.Get("StartY");
+            retObjectStartY = classInstance.Get("StartY");
+            return (double)retObjectStartY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStartY != null ? retObjectStartY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class SpotLocation extends NetObject  {
 
     public void setStartY(double StartY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartY", StartY);
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class SpotLocation extends NetObject  {
 
     public Uri getPageUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageUri");
+            retObjectPageUri = classInstance.Get("PageUri");
+            JCObject val = (JCObject)retObjectPageUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageUri != null ? retObjectPageUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class SpotLocation extends NetObject  {
 
     public void setPageUri(Uri PageUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageUri", PageUri == null ? null : PageUri.getJCOInstance());
         } catch (JCNativeException jcne) {

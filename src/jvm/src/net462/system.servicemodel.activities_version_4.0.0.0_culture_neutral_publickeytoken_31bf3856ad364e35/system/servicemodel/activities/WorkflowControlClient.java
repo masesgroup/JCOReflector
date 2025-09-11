@@ -217,10 +217,14 @@ public class WorkflowControlClient extends NetObject  {
     
     public IAsyncResult BeginAbandon(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAbandon = null;
         try {
-            JCObject objBeginAbandon = (JCObject)classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAbandon = classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAbandon = (JCObject)retObjectBeginAbandon;
             return new IAsyncResultImplementation(objBeginAbandon);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAbandon != null ? retObjectBeginAbandon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +232,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginAbandon(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAbandon = null;
         try {
-            JCObject objBeginAbandon = (JCObject)classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAbandon = classInstance.Invoke("BeginAbandon", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAbandon = (JCObject)retObjectBeginAbandon;
             return new IAsyncResultImplementation(objBeginAbandon);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAbandon != null ? retObjectBeginAbandon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +247,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginCancel(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCancel = null;
         try {
-            JCObject objBeginCancel = (JCObject)classInstance.Invoke("BeginCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginCancel = classInstance.Invoke("BeginCancel", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginCancel = (JCObject)retObjectBeginCancel;
             return new IAsyncResultImplementation(objBeginCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCancel != null ? retObjectBeginCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +262,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginRun(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRun = null;
         try {
-            JCObject objBeginRun = (JCObject)classInstance.Invoke("BeginRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginRun = classInstance.Invoke("BeginRun", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginRun = (JCObject)retObjectBeginRun;
             return new IAsyncResultImplementation(objBeginRun);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRun != null ? retObjectBeginRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +277,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginSuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSuspend = null;
         try {
-            JCObject objBeginSuspend = (JCObject)classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSuspend = classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSuspend = (JCObject)retObjectBeginSuspend;
             return new IAsyncResultImplementation(objBeginSuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSuspend != null ? retObjectBeginSuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +292,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginSuspend(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginSuspend = null;
         try {
-            JCObject objBeginSuspend = (JCObject)classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginSuspend = classInstance.Invoke("BeginSuspend", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginSuspend = (JCObject)retObjectBeginSuspend;
             return new IAsyncResultImplementation(objBeginSuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginSuspend != null ? retObjectBeginSuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +307,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginTerminate(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTerminate = null;
         try {
-            JCObject objBeginTerminate = (JCObject)classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTerminate = classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTerminate = (JCObject)retObjectBeginTerminate;
             return new IAsyncResultImplementation(objBeginTerminate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTerminate != null ? retObjectBeginTerminate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +322,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginTerminate(Guid instanceId, java.lang.String reason, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginTerminate = null;
         try {
-            JCObject objBeginTerminate = (JCObject)classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginTerminate = classInstance.Invoke("BeginTerminate", instanceId == null ? null : instanceId.getJCOInstance(), reason, callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginTerminate = (JCObject)retObjectBeginTerminate;
             return new IAsyncResultImplementation(objBeginTerminate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginTerminate != null ? retObjectBeginTerminate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +337,14 @@ public class WorkflowControlClient extends NetObject  {
 
     public IAsyncResult BeginUnsuspend(Guid instanceId, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginUnsuspend = null;
         try {
-            JCObject objBeginUnsuspend = (JCObject)classInstance.Invoke("BeginUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginUnsuspend = classInstance.Invoke("BeginUnsuspend", instanceId == null ? null : instanceId.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginUnsuspend = (JCObject)retObjectBeginUnsuspend;
             return new IAsyncResultImplementation(objBeginUnsuspend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginUnsuspend != null ? retObjectBeginUnsuspend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +352,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Abandon(Guid instanceId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +362,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Abandon(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -336,7 +372,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void AbandonAsync(Guid instanceId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbandonAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,7 +382,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void AbandonAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbandonAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,7 +392,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void AbandonAsync(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbandonAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -366,7 +402,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void AbandonAsync(Guid instanceId, java.lang.String reason, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AbandonAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason, userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,7 +412,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Cancel(Guid instanceId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,7 +422,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void CancelAsync(Guid instanceId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,7 +432,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void CancelAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -406,7 +442,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndAbandon(IAsyncResult result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAbandon", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,7 +452,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndCancel(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCancel", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -426,7 +462,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndRun(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndRun", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,7 +472,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndSuspend(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndSuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,7 +482,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndTerminate(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndTerminate", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -456,7 +492,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void EndUnsuspend(IAsyncResult result) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndUnsuspend", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,7 +502,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Run(Guid instanceId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,7 +512,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void RunAsync(Guid instanceId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -486,7 +522,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void RunAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,7 +532,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Suspend(Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Suspend", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -506,7 +542,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Suspend(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Suspend", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -516,7 +552,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void SuspendAsync(Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,7 +562,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void SuspendAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -536,7 +572,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void SuspendAsync(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -546,7 +582,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void SuspendAsync(Guid instanceId, java.lang.String reason, NetObject userState) throws Throwable, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason, userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -556,7 +592,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Terminate(Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Terminate", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -566,7 +602,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Terminate(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Terminate", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -576,7 +612,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void TerminateAsync(Guid instanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TerminateAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -586,7 +622,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void TerminateAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TerminateAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -596,7 +632,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void TerminateAsync(Guid instanceId, java.lang.String reason) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TerminateAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason);
         } catch (JCNativeException jcne) {
@@ -606,7 +642,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void TerminateAsync(Guid instanceId, java.lang.String reason, NetObject userState) throws Throwable, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TerminateAsync", instanceId == null ? null : instanceId.getJCOInstance(), reason, userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -616,7 +652,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void Unsuspend(Guid instanceId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsuspend", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -626,7 +662,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void UnsuspendAsync(Guid instanceId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsuspendAsync", instanceId == null ? null : instanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -636,7 +672,7 @@ public class WorkflowControlClient extends NetObject  {
 
     public void UnsuspendAsync(Guid instanceId, NetObject userState) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnsuspendAsync", instanceId == null ? null : instanceId.getJCOInstance(), userState == null ? null : userState.getJCOInstance());
         } catch (JCNativeException jcne) {

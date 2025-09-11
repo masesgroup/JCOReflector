@@ -170,9 +170,13 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
     
     public long getCurrentProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentProgress = null;
         try {
-            return (long)classInstance.Get("CurrentProgress");
+            retObjectCurrentProgress = classInstance.Get("CurrentProgress");
+            return (long)retObjectCurrentProgress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCurrentProgress != null ? retObjectCurrentProgress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class WebBrowserProgressChangedEventArgs extends EventArgs  {
 
     public long getMaximumProgress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumProgress = null;
         try {
-            return (long)classInstance.Get("MaximumProgress");
+            retObjectMaximumProgress = classInstance.Get("MaximumProgress");
+            return (long)retObjectMaximumProgress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumProgress != null ? retObjectMaximumProgress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

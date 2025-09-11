@@ -142,10 +142,14 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
     
     public NetObject Load(java.lang.String fileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", fileName);
+            retObjectLoad = classInstance.Invoke("Load", fileName);
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,7 +157,7 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
 
     public void Flush(NetObject documentRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush", documentRoot == null ? null : documentRoot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -163,7 +167,7 @@ public class IDocumentPersistenceServiceImplementation extends NetObject impleme
 
     public void OnModelChanged(NetObject documentRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnModelChanged", documentRoot == null ? null : documentRoot.getJCOInstance());
         } catch (JCNativeException jcne) {

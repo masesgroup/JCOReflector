@@ -156,10 +156,12 @@ public class PreparingEnlistment extends Enlistment  {
     
     public byte[] RecoveryInformation() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecoveryInformation = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("RecoveryInformation");
+            retObjectRecoveryInformation = classInstance.Invoke("RecoveryInformation");
+            JCObject resultingObjects = (JCObject)retObjectRecoveryInformation;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -168,6 +170,8 @@ public class PreparingEnlistment extends Enlistment  {
 				resultingArray[indexRecoveryInformation] = (byte)resultingArrayList.get(indexRecoveryInformation);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectRecoveryInformation != null ? retObjectRecoveryInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class PreparingEnlistment extends Enlistment  {
 
     public void ForceRollback() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceRollback");
         } catch (JCNativeException jcne) {
@@ -185,7 +189,7 @@ public class PreparingEnlistment extends Enlistment  {
 
     public void ForceRollback(NetException e) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceRollback", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +199,7 @@ public class PreparingEnlistment extends Enlistment  {
 
     public void Prepared() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepared");
         } catch (JCNativeException jcne) {

@@ -170,9 +170,13 @@ public class GridViewColumn extends DependencyObject  {
     
     public double getActualWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActualWidth = null;
         try {
-            return (double)classInstance.Get("ActualWidth");
+            retObjectActualWidth = classInstance.Get("ActualWidth");
+            return (double)retObjectActualWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectActualWidth != null ? retObjectActualWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setActualWidth(double ActualWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActualWidth", ActualWidth);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class GridViewColumn extends DependencyObject  {
 
     public double getWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (double)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (double)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setWidth(double Width) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -210,10 +218,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public NetObject getHeader() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Header");
+            retObjectHeader = classInstance.Get("Header");
+            JCObject val = (JCObject)retObjectHeader;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeader != null ? retObjectHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setHeader(NetObject Header) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Header", Header == null ? null : Header.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,9 +243,13 @@ public class GridViewColumn extends DependencyObject  {
 
     public java.lang.String getHeaderStringFormat() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderStringFormat");
+            retObjectHeaderStringFormat = classInstance.Get("HeaderStringFormat");
+            return (java.lang.String)retObjectHeaderStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderStringFormat != null ? retObjectHeaderStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setHeaderStringFormat(java.lang.String HeaderStringFormat) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderStringFormat", HeaderStringFormat);
         } catch (JCNativeException jcne) {
@@ -251,10 +267,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public DataTemplateSelector getCellTemplateSelector() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellTemplateSelector");
+            retObjectCellTemplateSelector = classInstance.Get("CellTemplateSelector");
+            JCObject val = (JCObject)retObjectCellTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellTemplateSelector != null ? retObjectCellTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setCellTemplateSelector(DataTemplateSelector CellTemplateSelector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellTemplateSelector", CellTemplateSelector == null ? null : CellTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -272,10 +292,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public DataTemplateSelector getHeaderTemplateSelector() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplateSelector");
+            retObjectHeaderTemplateSelector = classInstance.Get("HeaderTemplateSelector");
+            JCObject val = (JCObject)retObjectHeaderTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplateSelector != null ? retObjectHeaderTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +307,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setHeaderTemplateSelector(DataTemplateSelector HeaderTemplateSelector) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplateSelector", HeaderTemplateSelector == null ? null : HeaderTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,10 +317,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public BindingBase getDisplayMemberBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMemberBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayMemberBinding");
+            retObjectDisplayMemberBinding = classInstance.Get("DisplayMemberBinding");
+            JCObject val = (JCObject)retObjectDisplayMemberBinding;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayMemberBinding != null ? retObjectDisplayMemberBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +332,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setDisplayMemberBinding(BindingBase DisplayMemberBinding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMemberBinding", DisplayMemberBinding == null ? null : DisplayMemberBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -314,10 +342,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public DataTemplate getCellTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellTemplate");
+            retObjectCellTemplate = classInstance.Get("CellTemplate");
+            JCObject val = (JCObject)retObjectCellTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellTemplate != null ? retObjectCellTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +357,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setCellTemplate(DataTemplate CellTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellTemplate", CellTemplate == null ? null : CellTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,10 +367,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public DataTemplate getHeaderTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +382,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setHeaderTemplate(DataTemplate HeaderTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -356,10 +392,14 @@ public class GridViewColumn extends DependencyObject  {
 
     public Style getHeaderContainerStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderContainerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderContainerStyle");
+            retObjectHeaderContainerStyle = classInstance.Get("HeaderContainerStyle");
+            JCObject val = (JCObject)retObjectHeaderContainerStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderContainerStyle != null ? retObjectHeaderContainerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,7 +407,7 @@ public class GridViewColumn extends DependencyObject  {
 
     public void setHeaderContainerStyle(Style HeaderContainerStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderContainerStyle", HeaderContainerStyle == null ? null : HeaderContainerStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

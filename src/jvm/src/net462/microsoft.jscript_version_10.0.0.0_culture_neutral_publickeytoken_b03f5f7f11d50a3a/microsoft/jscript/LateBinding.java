@@ -176,9 +176,13 @@ public class LateBinding extends NetObject  {
     
     public boolean Delete() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelete = null;
         try {
-            return (boolean)classInstance.Invoke("Delete");
+            retObjectDelete = classInstance.Invoke("Delete");
+            return (boolean)retObjectDelete;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDelete != null ? retObjectDelete.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class LateBinding extends NetObject  {
 
     public static boolean DeleteMember(NetObject obj, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDeleteMember = null;
         try {
-            return (boolean)classType.Invoke("DeleteMember", obj == null ? null : obj.getJCOInstance(), name);
+            retObjectDeleteMember = classType.Invoke("DeleteMember", obj == null ? null : obj.getJCOInstance(), name);
+            return (boolean)retObjectDeleteMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDeleteMember != null ? retObjectDeleteMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class LateBinding extends NetObject  {
 
     public NetObject Call(NetObject[] arguments, boolean construct, boolean brackets, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArithmeticException, microsoft.jscript.vsa.JSVsaException, system.reflection.AmbiguousMatchException, system.reflection.TargetInvocationException, system.MissingMemberException, system.security.SecurityException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classInstance.Invoke("Call", toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            retObjectCall = classInstance.Invoke("Call", toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new NetObject(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class LateBinding extends NetObject  {
 
     public static NetObject CallValue(NetObject thisob, NetObject val, NetObject[] arguments, boolean construct, boolean brackets, VsaEngine engine) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArithmeticException, microsoft.jscript.vsa.JSVsaException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.security.SecurityException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCallValue = null;
         try {
-            JCObject objCallValue = (JCObject)classType.Invoke("CallValue", thisob == null ? null : thisob.getJCOInstance(), val == null ? null : val.getJCOInstance(), toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            retObjectCallValue = classType.Invoke("CallValue", thisob == null ? null : thisob.getJCOInstance(), val == null ? null : val.getJCOInstance(), toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            JCObject objCallValue = (JCObject)retObjectCallValue;
             return new NetObject(objCallValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallValue != null ? retObjectCallValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +234,14 @@ public class LateBinding extends NetObject  {
 
     public static NetObject CallValue2(NetObject val, NetObject thisob, NetObject[] arguments, boolean construct, boolean brackets, VsaEngine engine) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArithmeticException, microsoft.jscript.vsa.JSVsaException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.security.SecurityException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCallValue2 = null;
         try {
-            JCObject objCallValue2 = (JCObject)classType.Invoke("CallValue2", val == null ? null : val.getJCOInstance(), thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            retObjectCallValue2 = classType.Invoke("CallValue2", val == null ? null : val.getJCOInstance(), thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(arguments), construct, brackets, engine == null ? null : engine.getJCOInstance());
+            JCObject objCallValue2 = (JCObject)retObjectCallValue2;
             return new NetObject(objCallValue2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallValue2 != null ? retObjectCallValue2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class LateBinding extends NetObject  {
 
     public NetObject GetNonMissingValue() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, microsoft.jscript.vsa.JSVsaException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonMissingValue = null;
         try {
-            JCObject objGetNonMissingValue = (JCObject)classInstance.Invoke("GetNonMissingValue");
+            retObjectGetNonMissingValue = classInstance.Invoke("GetNonMissingValue");
+            JCObject objGetNonMissingValue = (JCObject)retObjectGetNonMissingValue;
             return new NetObject(objGetNonMissingValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNonMissingValue != null ? retObjectGetNonMissingValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +264,14 @@ public class LateBinding extends NetObject  {
 
     public NetObject GetValue2() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, microsoft.jscript.vsa.JSVsaException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue2 = null;
         try {
-            JCObject objGetValue2 = (JCObject)classInstance.Invoke("GetValue2");
+            retObjectGetValue2 = classInstance.Invoke("GetValue2");
+            JCObject objGetValue2 = (JCObject)retObjectGetValue2;
             return new NetObject(objGetValue2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue2 != null ? retObjectGetValue2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +279,7 @@ public class LateBinding extends NetObject  {
 
     public static void SetIndexedPropertyValueStatic(NetObject obj, NetObject[] arguments, NetObject value) throws Throwable, microsoft.jscript.JScriptException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.ArithmeticException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIndexedPropertyValueStatic", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(arguments), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,7 +289,7 @@ public class LateBinding extends NetObject  {
 
     public void SetValue(NetObject value) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, microsoft.jscript.JScriptException, system.NotImplementedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.vsa.JSVsaException, microsoft.jscript.EndOfFile {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

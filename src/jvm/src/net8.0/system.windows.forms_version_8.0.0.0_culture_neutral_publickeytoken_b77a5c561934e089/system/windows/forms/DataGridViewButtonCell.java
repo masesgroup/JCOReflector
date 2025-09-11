@@ -163,10 +163,14 @@ public class DataGridViewButtonCell extends DataGridViewCell  {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.InvalidOperationException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class DataGridViewButtonCell extends DataGridViewCell  {
     
     public boolean getUseColumnTextForButtonValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseColumnTextForButtonValue = null;
         try {
-            return (boolean)classInstance.Get("UseColumnTextForButtonValue");
+            retObjectUseColumnTextForButtonValue = classInstance.Get("UseColumnTextForButtonValue");
+            return (boolean)retObjectUseColumnTextForButtonValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseColumnTextForButtonValue != null ? retObjectUseColumnTextForButtonValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class DataGridViewButtonCell extends DataGridViewCell  {
 
     public void setUseColumnTextForButtonValue(boolean UseColumnTextForButtonValue) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseColumnTextForButtonValue", UseColumnTextForButtonValue);
         } catch (JCNativeException jcne) {
@@ -198,10 +206,14 @@ public class DataGridViewButtonCell extends DataGridViewCell  {
 
     public FlatStyle getFlatStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlatStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlatStyle");
+            retObjectFlatStyle = classInstance.Get("FlatStyle");
+            JCObject val = (JCObject)retObjectFlatStyle;
             return new FlatStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlatStyle != null ? retObjectFlatStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class DataGridViewButtonCell extends DataGridViewCell  {
 
     public void setFlatStyle(FlatStyle FlatStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlatStyle", FlatStyle == null ? null : FlatStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

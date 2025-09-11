@@ -171,9 +171,13 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
     
     public boolean getParsingApplied() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParsingApplied = null;
         try {
-            return (boolean)classInstance.Get("ParsingApplied");
+            retObjectParsingApplied = classInstance.Get("ParsingApplied");
+            return (boolean)retObjectParsingApplied;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectParsingApplied != null ? retObjectParsingApplied.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
 
     public void setParsingApplied(boolean ParsingApplied) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParsingApplied", ParsingApplied);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
 
     public int getColumnIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnIndex = null;
         try {
-            return (int)classInstance.Get("ColumnIndex");
+            retObjectColumnIndex = classInstance.Get("ColumnIndex");
+            return (int)retObjectColumnIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnIndex != null ? retObjectColumnIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +209,13 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
 
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
 
     public DataGridViewCellStyle getInheritedCellStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritedCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritedCellStyle");
+            retObjectInheritedCellStyle = classInstance.Get("InheritedCellStyle");
+            JCObject val = (JCObject)retObjectInheritedCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritedCellStyle != null ? retObjectInheritedCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +238,7 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
 
     public void setInheritedCellStyle(DataGridViewCellStyle InheritedCellStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InheritedCellStyle", InheritedCellStyle == null ? null : InheritedCellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

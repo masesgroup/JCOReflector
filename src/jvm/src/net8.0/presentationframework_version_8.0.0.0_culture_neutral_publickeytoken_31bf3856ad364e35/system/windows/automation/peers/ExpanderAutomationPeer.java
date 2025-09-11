@@ -168,10 +168,14 @@ public class ExpanderAutomationPeer extends FrameworkElementAutomationPeer  {
     
     public NetObject GetPattern(PatternInterface pattern) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", pattern == null ? null : pattern.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", pattern == null ? null : pattern.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class ExpanderAutomationPeer extends FrameworkElementAutomationPeer  {
      */
     @Deprecated 
     public void Collapse() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }
 
     /**
@@ -192,7 +196,7 @@ public class ExpanderAutomationPeer extends FrameworkElementAutomationPeer  {
      */
     @Deprecated 
     public void Expand() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
     }
 
 

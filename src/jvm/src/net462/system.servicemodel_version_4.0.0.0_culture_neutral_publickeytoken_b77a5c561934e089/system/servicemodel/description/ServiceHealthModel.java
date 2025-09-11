@@ -187,10 +187,14 @@ public class ServiceHealthModel extends NetObject  {
     
     public DateTimeOffset getDate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Date");
+            retObjectDate = classInstance.Get("Date");
+            JCObject val = (JCObject)retObjectDate;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDate != null ? retObjectDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class ServiceHealthModel extends NetObject  {
 
     public void setDate(DateTimeOffset Date) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Date", Date == null ? null : Date.getJCOInstance());
         } catch (JCNativeException jcne) {

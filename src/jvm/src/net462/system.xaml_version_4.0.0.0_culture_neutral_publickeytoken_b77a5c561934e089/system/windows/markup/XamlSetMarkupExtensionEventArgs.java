@@ -170,7 +170,7 @@ public class XamlSetMarkupExtensionEventArgs extends XamlSetValueEventArgs  {
     
     public void CallBase() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CallBase");
         } catch (JCNativeException jcne) {
@@ -184,10 +184,14 @@ public class XamlSetMarkupExtensionEventArgs extends XamlSetValueEventArgs  {
     
     public IServiceProvider getServiceProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceProvider");
+            retObjectServiceProvider = classInstance.Get("ServiceProvider");
+            JCObject val = (JCObject)retObjectServiceProvider;
             return new IServiceProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceProvider != null ? retObjectServiceProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class XamlSetMarkupExtensionEventArgs extends XamlSetValueEventArgs  {
 
     public void setServiceProvider(IServiceProvider ServiceProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceProvider", ServiceProvider == null ? null : ServiceProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,10 +209,14 @@ public class XamlSetMarkupExtensionEventArgs extends XamlSetValueEventArgs  {
 
     public MarkupExtension getMarkupExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarkupExtension = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MarkupExtension");
+            retObjectMarkupExtension = classInstance.Get("MarkupExtension");
+            JCObject val = (JCObject)retObjectMarkupExtension;
             return new MarkupExtension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarkupExtension != null ? retObjectMarkupExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

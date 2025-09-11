@@ -163,9 +163,13 @@ public class TextBoxBase extends Control  {
     
     public char GetCharFromPosition(Point pt) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharFromPosition = null;
         try {
-            return (char)classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharFromPosition = classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (char)retObjectGetCharFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetCharFromPosition != null ? retObjectGetCharFromPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,19 @@ public class TextBoxBase extends Control  {
 
     public int GetCharIndexFromPosition(Point pt) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharIndexFromPosition = null;
         try {
-            return (int)classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharIndexFromPosition = classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (int)retObjectGetCharIndexFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharIndexFromPositionNumber = (java.lang.Number)retObjectGetCharIndexFromPosition;
+                return retObjectGetCharIndexFromPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +197,19 @@ public class TextBoxBase extends Control  {
 
     public int GetFirstCharIndexFromLine(int lineNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexFromLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            retObjectGetFirstCharIndexFromLine = classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            return (int)retObjectGetFirstCharIndexFromLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexFromLineNumber = (java.lang.Number)retObjectGetFirstCharIndexFromLine;
+                return retObjectGetFirstCharIndexFromLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexFromLine != null ? retObjectGetFirstCharIndexFromLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +217,19 @@ public class TextBoxBase extends Control  {
 
     public int GetFirstCharIndexOfCurrentLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexOfCurrentLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            retObjectGetFirstCharIndexOfCurrentLine = classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            return (int)retObjectGetFirstCharIndexOfCurrentLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexOfCurrentLineNumber = (java.lang.Number)retObjectGetFirstCharIndexOfCurrentLine;
+                return retObjectGetFirstCharIndexOfCurrentLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexOfCurrentLine != null ? retObjectGetFirstCharIndexOfCurrentLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +237,19 @@ public class TextBoxBase extends Control  {
 
     public int GetLineFromCharIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineFromCharIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLineFromCharIndex", index);
+            retObjectGetLineFromCharIndex = classInstance.Invoke("GetLineFromCharIndex", index);
+            return (int)retObjectGetLineFromCharIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineFromCharIndexNumber = (java.lang.Number)retObjectGetLineFromCharIndex;
+                return retObjectGetLineFromCharIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +257,14 @@ public class TextBoxBase extends Control  {
 
     public Point GetPositionFromCharIndex(int index) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromCharIndex = null;
         try {
-            JCObject objGetPositionFromCharIndex = (JCObject)classInstance.Invoke("GetPositionFromCharIndex", index);
+            retObjectGetPositionFromCharIndex = classInstance.Invoke("GetPositionFromCharIndex", index);
+            JCObject objGetPositionFromCharIndex = (JCObject)retObjectGetPositionFromCharIndex;
             return new Point(objGetPositionFromCharIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromCharIndex != null ? retObjectGetPositionFromCharIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +272,7 @@ public class TextBoxBase extends Control  {
 
     public void AppendText(java.lang.String text) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendText", text);
         } catch (JCNativeException jcne) {
@@ -234,7 +282,7 @@ public class TextBoxBase extends Control  {
 
     public void Clear() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -244,7 +292,7 @@ public class TextBoxBase extends Control  {
 
     public void ClearUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearUndo");
         } catch (JCNativeException jcne) {
@@ -254,7 +302,7 @@ public class TextBoxBase extends Control  {
 
     public void Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Copy");
         } catch (JCNativeException jcne) {
@@ -264,7 +312,7 @@ public class TextBoxBase extends Control  {
 
     public void Cut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cut");
         } catch (JCNativeException jcne) {
@@ -274,7 +322,7 @@ public class TextBoxBase extends Control  {
 
     public void DeselectAll() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeselectAll");
         } catch (JCNativeException jcne) {
@@ -284,7 +332,7 @@ public class TextBoxBase extends Control  {
 
     public void Paste() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paste");
         } catch (JCNativeException jcne) {
@@ -294,7 +342,7 @@ public class TextBoxBase extends Control  {
 
     public void ScrollToCaret() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollToCaret");
         } catch (JCNativeException jcne) {
@@ -304,7 +352,7 @@ public class TextBoxBase extends Control  {
 
     public void Select(int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", start, length);
         } catch (JCNativeException jcne) {
@@ -314,7 +362,7 @@ public class TextBoxBase extends Control  {
 
     public void SelectAll() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -324,7 +372,7 @@ public class TextBoxBase extends Control  {
 
     public void Undo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Undo");
         } catch (JCNativeException jcne) {
@@ -338,9 +386,13 @@ public class TextBoxBase extends Control  {
     
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +400,7 @@ public class TextBoxBase extends Control  {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -358,9 +410,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getCanUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUndo = null;
         try {
-            return (boolean)classInstance.Get("CanUndo");
+            retObjectCanUndo = classInstance.Get("CanUndo");
+            return (boolean)retObjectCanUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUndo != null ? retObjectCanUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +424,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getHideSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHideSelection = null;
         try {
-            return (boolean)classInstance.Get("HideSelection");
+            retObjectHideSelection = classInstance.Get("HideSelection");
+            return (boolean)retObjectHideSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHideSelection != null ? retObjectHideSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +438,7 @@ public class TextBoxBase extends Control  {
 
     public void setHideSelection(boolean HideSelection) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HideSelection", HideSelection);
         } catch (JCNativeException jcne) {
@@ -388,9 +448,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModified = null;
         try {
-            return (boolean)classInstance.Get("Modified");
+            retObjectModified = classInstance.Get("Modified");
+            return (boolean)retObjectModified;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectModified != null ? retObjectModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +462,7 @@ public class TextBoxBase extends Control  {
 
     public void setModified(boolean Modified) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Modified", Modified);
         } catch (JCNativeException jcne) {
@@ -408,9 +472,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getMultiline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiline = null;
         try {
-            return (boolean)classInstance.Get("Multiline");
+            retObjectMultiline = classInstance.Get("Multiline");
+            return (boolean)retObjectMultiline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiline != null ? retObjectMultiline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +486,7 @@ public class TextBoxBase extends Control  {
 
     public void setMultiline(boolean Multiline) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Multiline", Multiline);
         } catch (JCNativeException jcne) {
@@ -428,9 +496,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +510,7 @@ public class TextBoxBase extends Control  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -448,9 +520,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getShortcutsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortcutsEnabled = null;
         try {
-            return (boolean)classInstance.Get("ShortcutsEnabled");
+            retObjectShortcutsEnabled = classInstance.Get("ShortcutsEnabled");
+            return (boolean)retObjectShortcutsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShortcutsEnabled != null ? retObjectShortcutsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,7 +534,7 @@ public class TextBoxBase extends Control  {
 
     public void setShortcutsEnabled(boolean ShortcutsEnabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortcutsEnabled", ShortcutsEnabled);
         } catch (JCNativeException jcne) {
@@ -468,9 +544,13 @@ public class TextBoxBase extends Control  {
 
     public boolean getWordWrap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWordWrap = null;
         try {
-            return (boolean)classInstance.Get("WordWrap");
+            retObjectWordWrap = classInstance.Get("WordWrap");
+            return (boolean)retObjectWordWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWordWrap != null ? retObjectWordWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +558,7 @@ public class TextBoxBase extends Control  {
 
     public void setWordWrap(boolean WordWrap) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WordWrap", WordWrap);
         } catch (JCNativeException jcne) {
@@ -488,9 +568,13 @@ public class TextBoxBase extends Control  {
 
     public int getMaxLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +582,7 @@ public class TextBoxBase extends Control  {
 
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -508,9 +592,13 @@ public class TextBoxBase extends Control  {
 
     public int getPreferredHeight() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredHeight = null;
         try {
-            return (int)classInstance.Get("PreferredHeight");
+            retObjectPreferredHeight = classInstance.Get("PreferredHeight");
+            return (int)retObjectPreferredHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +606,13 @@ public class TextBoxBase extends Control  {
 
     public int getSelectionLength() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionLength = null;
         try {
-            return (int)classInstance.Get("SelectionLength");
+            retObjectSelectionLength = classInstance.Get("SelectionLength");
+            return (int)retObjectSelectionLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionLength != null ? retObjectSelectionLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,7 +620,7 @@ public class TextBoxBase extends Control  {
 
     public void setSelectionLength(int SelectionLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionLength", SelectionLength);
         } catch (JCNativeException jcne) {
@@ -538,9 +630,13 @@ public class TextBoxBase extends Control  {
 
     public int getSelectionStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionStart = null;
         try {
-            return (int)classInstance.Get("SelectionStart");
+            retObjectSelectionStart = classInstance.Get("SelectionStart");
+            return (int)retObjectSelectionStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,7 +644,7 @@ public class TextBoxBase extends Control  {
 
     public void setSelectionStart(int SelectionStart) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionStart", SelectionStart);
         } catch (JCNativeException jcne) {
@@ -558,9 +654,13 @@ public class TextBoxBase extends Control  {
 
     public int getTextLength() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextLength = null;
         try {
-            return (int)classInstance.Get("TextLength");
+            retObjectTextLength = classInstance.Get("TextLength");
+            return (int)retObjectTextLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTextLength != null ? retObjectTextLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,9 +668,13 @@ public class TextBoxBase extends Control  {
 
     public java.lang.String getSelectedText() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedText");
+            retObjectSelectedText = classInstance.Get("SelectedText");
+            return (java.lang.String)retObjectSelectedText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedText != null ? retObjectSelectedText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,7 +682,7 @@ public class TextBoxBase extends Control  {
 
     public void setSelectedText(java.lang.String SelectedText) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedText", SelectedText);
         } catch (JCNativeException jcne) {
@@ -588,10 +692,12 @@ public class TextBoxBase extends Control  {
 
     public java.lang.String[] getLines() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLines = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Lines");
+            retObjectLines = classInstance.Get("Lines");
+            JCObject resultingObjects = (JCObject)retObjectLines;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -600,6 +706,8 @@ public class TextBoxBase extends Control  {
 				resultingArray[indexLines] = (java.lang.String)resultingArrayList.get(indexLines);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectLines != null ? retObjectLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,7 +715,7 @@ public class TextBoxBase extends Control  {
 
     public void setLines(java.lang.String[] Lines) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lines", Lines);
         } catch (JCNativeException jcne) {
@@ -617,10 +725,14 @@ public class TextBoxBase extends Control  {
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,7 +740,7 @@ public class TextBoxBase extends Control  {
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -638,10 +750,14 @@ public class TextBoxBase extends Control  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -649,7 +765,7 @@ public class TextBoxBase extends Control  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -664,7 +780,7 @@ public class TextBoxBase extends Control  {
 
     public void addAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -674,7 +790,7 @@ public class TextBoxBase extends Control  {
 
     public void removeAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -684,7 +800,7 @@ public class TextBoxBase extends Control  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -694,7 +810,7 @@ public class TextBoxBase extends Control  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -704,7 +820,7 @@ public class TextBoxBase extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -714,7 +830,7 @@ public class TextBoxBase extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -724,7 +840,7 @@ public class TextBoxBase extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -734,7 +850,7 @@ public class TextBoxBase extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -744,7 +860,7 @@ public class TextBoxBase extends Control  {
 
     public void addBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -754,7 +870,7 @@ public class TextBoxBase extends Control  {
 
     public void removeBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -764,7 +880,7 @@ public class TextBoxBase extends Control  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -774,7 +890,7 @@ public class TextBoxBase extends Control  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -784,7 +900,7 @@ public class TextBoxBase extends Control  {
 
     public void addHideSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HideSelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -794,7 +910,7 @@ public class TextBoxBase extends Control  {
 
     public void removeHideSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HideSelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -804,7 +920,7 @@ public class TextBoxBase extends Control  {
 
     public void addModifiedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ModifiedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -814,7 +930,7 @@ public class TextBoxBase extends Control  {
 
     public void removeModifiedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ModifiedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -824,7 +940,7 @@ public class TextBoxBase extends Control  {
 
     public void addMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -834,7 +950,7 @@ public class TextBoxBase extends Control  {
 
     public void removeMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -844,7 +960,7 @@ public class TextBoxBase extends Control  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -854,7 +970,7 @@ public class TextBoxBase extends Control  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -864,7 +980,7 @@ public class TextBoxBase extends Control  {
 
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -874,7 +990,7 @@ public class TextBoxBase extends Control  {
 
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -884,7 +1000,7 @@ public class TextBoxBase extends Control  {
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -894,7 +1010,7 @@ public class TextBoxBase extends Control  {
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -904,7 +1020,7 @@ public class TextBoxBase extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -914,7 +1030,7 @@ public class TextBoxBase extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {

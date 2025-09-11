@@ -173,9 +173,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
     
     public boolean TryEnterReadLock(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterReadLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterReadLock", millisecondsTimeout);
+            retObjectTryEnterReadLock = classInstance.Invoke("TryEnterReadLock", millisecondsTimeout);
+            return (boolean)retObjectTryEnterReadLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterReadLock != null ? retObjectTryEnterReadLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean TryEnterReadLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterReadLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterReadLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryEnterReadLock = classInstance.Invoke("TryEnterReadLock", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryEnterReadLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterReadLock != null ? retObjectTryEnterReadLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean TryEnterUpgradeableReadLock(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterUpgradeableReadLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterUpgradeableReadLock", millisecondsTimeout);
+            retObjectTryEnterUpgradeableReadLock = classInstance.Invoke("TryEnterUpgradeableReadLock", millisecondsTimeout);
+            return (boolean)retObjectTryEnterUpgradeableReadLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterUpgradeableReadLock != null ? retObjectTryEnterUpgradeableReadLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean TryEnterUpgradeableReadLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterUpgradeableReadLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterUpgradeableReadLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryEnterUpgradeableReadLock = classInstance.Invoke("TryEnterUpgradeableReadLock", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryEnterUpgradeableReadLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterUpgradeableReadLock != null ? retObjectTryEnterUpgradeableReadLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean TryEnterWriteLock(int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterWriteLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterWriteLock", millisecondsTimeout);
+            retObjectTryEnterWriteLock = classInstance.Invoke("TryEnterWriteLock", millisecondsTimeout);
+            return (boolean)retObjectTryEnterWriteLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterWriteLock != null ? retObjectTryEnterWriteLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +243,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean TryEnterWriteLock(TimeSpan timeout) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnterWriteLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnterWriteLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryEnterWriteLock = classInstance.Invoke("TryEnterWriteLock", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryEnterWriteLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnterWriteLock != null ? retObjectTryEnterWriteLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +257,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void EnterReadLock() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterReadLock");
         } catch (JCNativeException jcne) {
@@ -253,7 +277,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void EnterUpgradeableReadLock() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterUpgradeableReadLock");
         } catch (JCNativeException jcne) {
@@ -263,7 +287,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void EnterWriteLock() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnterWriteLock");
         } catch (JCNativeException jcne) {
@@ -273,7 +297,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void ExitReadLock() throws Throwable, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitReadLock");
         } catch (JCNativeException jcne) {
@@ -283,7 +307,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void ExitUpgradeableReadLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitUpgradeableReadLock");
         } catch (JCNativeException jcne) {
@@ -293,7 +317,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public void ExitWriteLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExitWriteLock");
         } catch (JCNativeException jcne) {
@@ -304,7 +328,7 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -320,9 +344,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
     
     public boolean getIsReadLockHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadLockHeld = null;
         try {
-            return (boolean)classInstance.Get("IsReadLockHeld");
+            retObjectIsReadLockHeld = classInstance.Get("IsReadLockHeld");
+            return (boolean)retObjectIsReadLockHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadLockHeld != null ? retObjectIsReadLockHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,9 +358,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean getIsUpgradeableReadLockHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUpgradeableReadLockHeld = null;
         try {
-            return (boolean)classInstance.Get("IsUpgradeableReadLockHeld");
+            retObjectIsUpgradeableReadLockHeld = classInstance.Get("IsUpgradeableReadLockHeld");
+            return (boolean)retObjectIsUpgradeableReadLockHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUpgradeableReadLockHeld != null ? retObjectIsUpgradeableReadLockHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +372,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public boolean getIsWriteLockHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWriteLockHeld = null;
         try {
-            return (boolean)classInstance.Get("IsWriteLockHeld");
+            retObjectIsWriteLockHeld = classInstance.Get("IsWriteLockHeld");
+            return (boolean)retObjectIsWriteLockHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWriteLockHeld != null ? retObjectIsWriteLockHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +386,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getCurrentReadCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentReadCount = null;
         try {
-            return (int)classInstance.Get("CurrentReadCount");
+            retObjectCurrentReadCount = classInstance.Get("CurrentReadCount");
+            return (int)retObjectCurrentReadCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrentReadCount != null ? retObjectCurrentReadCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +400,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getRecursiveReadCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecursiveReadCount = null;
         try {
-            return (int)classInstance.Get("RecursiveReadCount");
+            retObjectRecursiveReadCount = classInstance.Get("RecursiveReadCount");
+            return (int)retObjectRecursiveReadCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRecursiveReadCount != null ? retObjectRecursiveReadCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,9 +414,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getRecursiveUpgradeCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecursiveUpgradeCount = null;
         try {
-            return (int)classInstance.Get("RecursiveUpgradeCount");
+            retObjectRecursiveUpgradeCount = classInstance.Get("RecursiveUpgradeCount");
+            return (int)retObjectRecursiveUpgradeCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRecursiveUpgradeCount != null ? retObjectRecursiveUpgradeCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +428,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getRecursiveWriteCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecursiveWriteCount = null;
         try {
-            return (int)classInstance.Get("RecursiveWriteCount");
+            retObjectRecursiveWriteCount = classInstance.Get("RecursiveWriteCount");
+            return (int)retObjectRecursiveWriteCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRecursiveWriteCount != null ? retObjectRecursiveWriteCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +442,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getWaitingReadCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitingReadCount = null;
         try {
-            return (int)classInstance.Get("WaitingReadCount");
+            retObjectWaitingReadCount = classInstance.Get("WaitingReadCount");
+            return (int)retObjectWaitingReadCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWaitingReadCount != null ? retObjectWaitingReadCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,9 +456,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getWaitingUpgradeCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitingUpgradeCount = null;
         try {
-            return (int)classInstance.Get("WaitingUpgradeCount");
+            retObjectWaitingUpgradeCount = classInstance.Get("WaitingUpgradeCount");
+            return (int)retObjectWaitingUpgradeCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWaitingUpgradeCount != null ? retObjectWaitingUpgradeCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,9 +470,13 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public int getWaitingWriteCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitingWriteCount = null;
         try {
-            return (int)classInstance.Get("WaitingWriteCount");
+            retObjectWaitingWriteCount = classInstance.Get("WaitingWriteCount");
+            return (int)retObjectWaitingWriteCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWaitingWriteCount != null ? retObjectWaitingWriteCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +484,14 @@ public class ReaderWriterLockSlim extends NetObject implements AutoCloseable {
 
     public LockRecursionPolicy getRecursionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecursionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecursionPolicy");
+            retObjectRecursionPolicy = classInstance.Get("RecursionPolicy");
+            JCObject val = (JCObject)retObjectRecursionPolicy;
             return new LockRecursionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecursionPolicy != null ? retObjectRecursionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

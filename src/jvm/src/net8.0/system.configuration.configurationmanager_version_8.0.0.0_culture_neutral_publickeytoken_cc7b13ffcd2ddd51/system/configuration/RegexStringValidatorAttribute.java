@@ -171,9 +171,13 @@ public class RegexStringValidatorAttribute extends ConfigurationValidatorAttribu
     
     public java.lang.String getRegex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegex = null;
         try {
-            return (java.lang.String)classInstance.Get("Regex");
+            retObjectRegex = classInstance.Get("Regex");
+            return (java.lang.String)retObjectRegex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRegex != null ? retObjectRegex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

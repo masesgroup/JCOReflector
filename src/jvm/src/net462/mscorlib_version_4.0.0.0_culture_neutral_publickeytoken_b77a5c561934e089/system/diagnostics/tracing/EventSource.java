@@ -194,9 +194,13 @@ public class EventSource extends NetObject implements AutoCloseable {
     
     public boolean IsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled");
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public boolean IsEnabled(EventLevel level, EventKeywords keywords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled", level == null ? null : level.getJCOInstance(), keywords == null ? null : keywords.getJCOInstance());
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled", level == null ? null : level.getJCOInstance(), keywords == null ? null : keywords.getJCOInstance());
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public boolean IsEnabled(EventLevel level, EventKeywords keywords, EventChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Invoke("IsEnabled", level == null ? null : level.getJCOInstance(), keywords == null ? null : keywords.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            retObjectIsEnabled = classInstance.Invoke("IsEnabled", level == null ? null : level.getJCOInstance(), keywords == null ? null : keywords.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static Guid GetGuid(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classType.Invoke("GetGuid", eventSourceType == null ? null : eventSourceType.getJCOInstance());
+            retObjectGetGuid = classType.Invoke("GetGuid", eventSourceType == null ? null : eventSourceType.getJCOInstance());
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +251,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateManifest = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateManifest", eventSourceType == null ? null : eventSourceType.getJCOInstance(), assemblyPathToIncludeInManifest);
+            retObjectGenerateManifest = classType.Invoke("GenerateManifest", eventSourceType == null ? null : eventSourceType.getJCOInstance(), assemblyPathToIncludeInManifest);
+            return (java.lang.String)retObjectGenerateManifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateManifest != null ? retObjectGenerateManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +265,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static java.lang.String GenerateManifest(NetType eventSourceType, java.lang.String assemblyPathToIncludeInManifest, EventManifestOptions flags) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.io.EndOfStreamException, system.io.IOException, system.BadImageFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateManifest = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateManifest", eventSourceType == null ? null : eventSourceType.getJCOInstance(), assemblyPathToIncludeInManifest, flags == null ? null : flags.getJCOInstance());
+            retObjectGenerateManifest = classType.Invoke("GenerateManifest", eventSourceType == null ? null : eventSourceType.getJCOInstance(), assemblyPathToIncludeInManifest, flags == null ? null : flags.getJCOInstance());
+            return (java.lang.String)retObjectGenerateManifest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateManifest != null ? retObjectGenerateManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +279,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static java.lang.String GetName(NetType eventSourceType) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetName", eventSourceType == null ? null : eventSourceType.getJCOInstance());
+            retObjectGetName = classType.Invoke("GetName", eventSourceType == null ? null : eventSourceType.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +293,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public java.lang.String GetTrait(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTrait = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTrait", key);
+            retObjectGetTrait = classInstance.Invoke("GetTrait", key);
+            return (java.lang.String)retObjectGetTrait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTrait != null ? retObjectGetTrait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +307,7 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -285,7 +317,7 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static void SetCurrentThreadActivityId(Guid activityId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCurrentThreadActivityId", activityId == null ? null : activityId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,7 +327,7 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static void SetCurrentThreadActivityId(Guid activityId, JCORefOut<Guid> oldActivityThatWillContinue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCurrentThreadActivityId", activityId == null ? null : activityId.getJCOInstance(), oldActivityThatWillContinue.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -305,7 +337,7 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public void Write(java.lang.String eventName) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", eventName);
         } catch (JCNativeException jcne) {
@@ -315,7 +347,7 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public void Write(java.lang.String eventName, EventSourceOptions options) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", eventName, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +358,7 @@ public class EventSource extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -342,10 +374,14 @@ public class EventSource extends NetObject implements AutoCloseable {
     
     public EventSourceSettings getSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Settings");
+            retObjectSettings = classInstance.Get("Settings");
+            JCObject val = (JCObject)retObjectSettings;
             return new EventSourceSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSettings != null ? retObjectSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +389,14 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public NetException getConstructionException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstructionException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConstructionException");
+            retObjectConstructionException = classInstance.Get("ConstructionException");
+            JCObject val = (JCObject)retObjectConstructionException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructionException != null ? retObjectConstructionException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +404,14 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public static Guid getCurrentThreadActivityId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentThreadActivityId = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentThreadActivityId");
+            retObjectCurrentThreadActivityId = classType.Get("CurrentThreadActivityId");
+            JCObject val = (JCObject)retObjectCurrentThreadActivityId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentThreadActivityId != null ? retObjectCurrentThreadActivityId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +419,14 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public Guid getGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Guid");
+            retObjectGuid = classInstance.Get("Guid");
+            JCObject val = (JCObject)retObjectGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGuid != null ? retObjectGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +434,13 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

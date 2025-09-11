@@ -190,9 +190,13 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
     
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatchesKeyIdentifierClause = classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatchesKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +204,12 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
 
     public byte[] GetRequest() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequest = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequest");
+            retObjectGetRequest = classInstance.Invoke("GetRequest");
+            JCObject resultingObjects = (JCObject)retObjectGetRequest;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -212,6 +218,8 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
 				resultingArray[indexGetRequest] = (byte)resultingArrayList.get(indexGetRequest);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetRequest != null ? retObjectGetRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +231,14 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
     
     public SymmetricSecurityKey getSecurityKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.AccessViolationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityKey");
+            retObjectSecurityKey = classInstance.Get("SecurityKey");
+            JCObject val = (JCObject)retObjectSecurityKey;
             return new SymmetricSecurityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityKey != null ? retObjectSecurityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +246,13 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
 
     public java.lang.String getValueTypeUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueTypeUri = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueTypeUri");
+            retObjectValueTypeUri = classInstance.Get("ValueTypeUri");
+            return (java.lang.String)retObjectValueTypeUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueTypeUri != null ? retObjectValueTypeUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

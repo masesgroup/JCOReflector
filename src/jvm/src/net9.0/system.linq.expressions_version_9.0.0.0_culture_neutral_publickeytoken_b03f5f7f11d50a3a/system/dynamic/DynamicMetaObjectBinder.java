@@ -156,10 +156,14 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
     
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectBind = classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objBind = (JCObject)retObjectBind;
             return new DynamicMetaObject(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
 
     public DynamicMetaObject Defer(DynamicMetaObject target, DynamicMetaObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefer = null;
         try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectDefer = classInstance.Invoke("Defer", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objDefer = (JCObject)retObjectDefer;
             return new DynamicMetaObject(objDefer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefer != null ? retObjectDefer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
 
     public DynamicMetaObject Defer(DynamicMetaObject... args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefer = null;
         try {
-            JCObject objDefer = (JCObject)classInstance.Invoke("Defer", (java.lang.Object)toObjectFromArray(args));
+            retObjectDefer = classInstance.Invoke("Defer", (java.lang.Object)toObjectFromArray(args));
+            JCObject objDefer = (JCObject)retObjectDefer;
             return new DynamicMetaObject(objDefer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefer != null ? retObjectDefer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
 
     public Expression GetUpdateExpression(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpdateExpression = null;
         try {
-            JCObject objGetUpdateExpression = (JCObject)classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
+            retObjectGetUpdateExpression = classInstance.Invoke("GetUpdateExpression", type == null ? null : type.getJCOInstance());
+            JCObject objGetUpdateExpression = (JCObject)retObjectGetUpdateExpression;
             return new Expression(objGetUpdateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUpdateExpression != null ? retObjectGetUpdateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
     
     public NetType getReturnType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            retObjectReturnType = classInstance.Get("ReturnType");
+            JCObject val = (JCObject)retObjectReturnType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnType != null ? retObjectReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

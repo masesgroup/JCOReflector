@@ -181,9 +181,13 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
     
     public boolean CanReadToken(XmlReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReadToken = null;
         try {
-            return (boolean)classInstance.Invoke("CanReadToken", reader == null ? null : reader.getJCOInstance());
+            retObjectCanReadToken = classInstance.Invoke("CanReadToken", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanReadToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanReadToken != null ? retObjectCanReadToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public SecurityKeyIdentifierClause CreateSecurityTokenReference(SecurityToken token, boolean attached) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenReference = null;
         try {
-            JCObject objCreateSecurityTokenReference = (JCObject)classInstance.Invoke("CreateSecurityTokenReference", token == null ? null : token.getJCOInstance(), attached);
+            retObjectCreateSecurityTokenReference = classInstance.Invoke("CreateSecurityTokenReference", token == null ? null : token.getJCOInstance(), attached);
+            JCObject objCreateSecurityTokenReference = (JCObject)retObjectCreateSecurityTokenReference;
             return new SecurityKeyIdentifierClause(objCreateSecurityTokenReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenReference != null ? retObjectCreateSecurityTokenReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public SecurityToken CreateToken(SecurityTokenDescriptor tokenDescriptor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateToken = null;
         try {
-            JCObject objCreateToken = (JCObject)classInstance.Invoke("CreateToken", tokenDescriptor == null ? null : tokenDescriptor.getJCOInstance());
+            retObjectCreateToken = classInstance.Invoke("CreateToken", tokenDescriptor == null ? null : tokenDescriptor.getJCOInstance());
+            JCObject objCreateToken = (JCObject)retObjectCreateToken;
             return new SecurityToken(objCreateToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateToken != null ? retObjectCreateToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public SecurityToken ReadToken(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadToken = null;
         try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance());
+            retObjectReadToken = classInstance.Invoke("ReadToken", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadToken = (JCObject)retObjectReadToken;
             return new SecurityToken(objReadToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadToken != null ? retObjectReadToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +240,12 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public java.lang.String[] GetTokenTypeIdentifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTokenTypeIdentifiers = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTokenTypeIdentifiers");
+            retObjectGetTokenTypeIdentifiers = classInstance.Invoke("GetTokenTypeIdentifiers");
+            JCObject resultingObjects = (JCObject)retObjectGetTokenTypeIdentifiers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -236,6 +254,8 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 				resultingArray[indexGetTokenTypeIdentifiers] = (java.lang.String)resultingArrayList.get(indexGetTokenTypeIdentifiers);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetTokenTypeIdentifiers != null ? retObjectGetTokenTypeIdentifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +263,7 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void LoadCustomConfiguration(XmlNodeList customConfigElements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadCustomConfiguration", customConfigElements == null ? null : customConfigElements.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +273,7 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void WriteToken(XmlWriter writer, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.ApplicationException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteToken", writer == null ? null : writer.getJCOInstance(), token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +287,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
     
     public SecurityTokenSerializer getKeyInfoSerializer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyInfoSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyInfoSerializer");
+            retObjectKeyInfoSerializer = classInstance.Get("KeyInfoSerializer");
+            JCObject val = (JCObject)retObjectKeyInfoSerializer;
             return new SecurityTokenSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyInfoSerializer != null ? retObjectKeyInfoSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void setKeyInfoSerializer(SecurityTokenSerializer KeyInfoSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyInfoSerializer", KeyInfoSerializer == null ? null : KeyInfoSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +312,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public X509CertificateValidator getCertificateValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidator");
+            retObjectCertificateValidator = classInstance.Get("CertificateValidator");
+            JCObject val = (JCObject)retObjectCertificateValidator;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateValidator != null ? retObjectCertificateValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void setCertificateValidator(X509CertificateValidator CertificateValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateValidator", CertificateValidator == null ? null : CertificateValidator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +337,14 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public SamlSecurityTokenRequirement getSamlSecurityTokenRequirement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSamlSecurityTokenRequirement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SamlSecurityTokenRequirement");
+            retObjectSamlSecurityTokenRequirement = classInstance.Get("SamlSecurityTokenRequirement");
+            JCObject val = (JCObject)retObjectSamlSecurityTokenRequirement;
             return new SamlSecurityTokenRequirement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSamlSecurityTokenRequirement != null ? retObjectSamlSecurityTokenRequirement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +352,7 @@ public class SamlSecurityTokenHandler extends SecurityTokenHandler  {
 
     public void setSamlSecurityTokenRequirement(SamlSecurityTokenRequirement SamlSecurityTokenRequirement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SamlSecurityTokenRequirement", SamlSecurityTokenRequirement == null ? null : SamlSecurityTokenRequirement.getJCOInstance());
         } catch (JCNativeException jcne) {

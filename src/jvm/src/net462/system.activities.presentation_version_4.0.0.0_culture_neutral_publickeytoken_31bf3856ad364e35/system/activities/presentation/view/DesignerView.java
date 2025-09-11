@@ -166,10 +166,14 @@ public class DesignerView extends UserControl  {
     
     public static CommandMenuMode GetCommandMenuMode(DependencyObject obj) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCommandMenuMode = null;
         try {
-            JCObject objGetCommandMenuMode = (JCObject)classType.Invoke("GetCommandMenuMode", obj == null ? null : obj.getJCOInstance());
+            retObjectGetCommandMenuMode = classType.Invoke("GetCommandMenuMode", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetCommandMenuMode = (JCObject)retObjectGetCommandMenuMode;
             return new CommandMenuMode(objGetCommandMenuMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCommandMenuMode != null ? retObjectGetCommandMenuMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class DesignerView extends UserControl  {
 
     public void FlushState() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FlushState");
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class DesignerView extends UserControl  {
 
     public void InitializeComponent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeComponent");
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class DesignerView extends UserControl  {
 
     public void MakeRootDesigner(ModelItem modelItem) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeRootDesigner", modelItem == null ? null : modelItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +211,7 @@ public class DesignerView extends UserControl  {
 
     public void OnReferenceUpdated(AssemblyName updatedReference, boolean isAdded) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnReferenceUpdated", updatedReference == null ? null : updatedReference.getJCOInstance(), isAdded);
         } catch (JCNativeException jcne) {
@@ -217,7 +221,7 @@ public class DesignerView extends UserControl  {
 
     public void RegisterViewElement(WorkflowViewElement viewElement) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterViewElement", viewElement == null ? null : viewElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +231,7 @@ public class DesignerView extends UserControl  {
 
     public static void SetCommandMenuMode(DependencyObject obj, CommandMenuMode value) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCommandMenuMode", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +241,7 @@ public class DesignerView extends UserControl  {
 
     public void UnregisterViewElement(WorkflowViewElement viewElement) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterViewElement", viewElement == null ? null : viewElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -251,7 +255,7 @@ public class DesignerView extends UserControl  {
      */
     @Deprecated 
     public void Connect(int connectionId, NetObject target) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
     }
 
 
@@ -260,9 +264,13 @@ public class DesignerView extends UserControl  {
     
     public boolean getIsMultipleSelectionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMultipleSelectionMode = null;
         try {
-            return (boolean)classInstance.Get("IsMultipleSelectionMode");
+            retObjectIsMultipleSelectionMode = classInstance.Get("IsMultipleSelectionMode");
+            return (boolean)retObjectIsMultipleSelectionMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMultipleSelectionMode != null ? retObjectIsMultipleSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +278,7 @@ public class DesignerView extends UserControl  {
 
     public void setIsMultipleSelectionMode(boolean IsMultipleSelectionMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMultipleSelectionMode", IsMultipleSelectionMode);
         } catch (JCNativeException jcne) {
@@ -280,9 +288,13 @@ public class DesignerView extends UserControl  {
 
     public boolean getIsReadOnly() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +302,7 @@ public class DesignerView extends UserControl  {
 
     public void setIsReadOnly(boolean IsReadOnly) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReadOnly", IsReadOnly);
         } catch (JCNativeException jcne) {
@@ -300,9 +312,13 @@ public class DesignerView extends UserControl  {
 
     public boolean getShouldCollapseAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldCollapseAll = null;
         try {
-            return (boolean)classInstance.Get("ShouldCollapseAll");
+            retObjectShouldCollapseAll = classInstance.Get("ShouldCollapseAll");
+            return (boolean)retObjectShouldCollapseAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldCollapseAll != null ? retObjectShouldCollapseAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +326,7 @@ public class DesignerView extends UserControl  {
 
     public void setShouldCollapseAll(boolean ShouldCollapseAll) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldCollapseAll", ShouldCollapseAll);
         } catch (JCNativeException jcne) {
@@ -320,9 +336,13 @@ public class DesignerView extends UserControl  {
 
     public boolean getShouldExpandAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldExpandAll = null;
         try {
-            return (boolean)classInstance.Get("ShouldExpandAll");
+            retObjectShouldExpandAll = classInstance.Get("ShouldExpandAll");
+            return (boolean)retObjectShouldExpandAll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldExpandAll != null ? retObjectShouldExpandAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +350,7 @@ public class DesignerView extends UserControl  {
 
     public void setShouldExpandAll(boolean ShouldExpandAll) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldExpandAll", ShouldExpandAll);
         } catch (JCNativeException jcne) {
@@ -340,9 +360,13 @@ public class DesignerView extends UserControl  {
 
     public double getZoomFactor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoomFactor = null;
         try {
-            return (double)classInstance.Get("ZoomFactor");
+            retObjectZoomFactor = classInstance.Get("ZoomFactor");
+            return (double)retObjectZoomFactor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectZoomFactor != null ? retObjectZoomFactor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +374,14 @@ public class DesignerView extends UserControl  {
 
     public EditingContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new EditingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,10 +389,14 @@ public class DesignerView extends UserControl  {
 
     public ModelItem getActivitySchema() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivitySchema = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivitySchema");
+            retObjectActivitySchema = classInstance.Get("ActivitySchema");
+            JCObject val = (JCObject)retObjectActivitySchema;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivitySchema != null ? retObjectActivitySchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +404,7 @@ public class DesignerView extends UserControl  {
 
     public void setActivitySchema(ModelItem ActivitySchema) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivitySchema", ActivitySchema == null ? null : ActivitySchema.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,10 +414,14 @@ public class DesignerView extends UserControl  {
 
     public ShellBarItemVisibility getWorkflowShellBarItemVisibility() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowShellBarItemVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowShellBarItemVisibility");
+            retObjectWorkflowShellBarItemVisibility = classInstance.Get("WorkflowShellBarItemVisibility");
+            JCObject val = (JCObject)retObjectWorkflowShellBarItemVisibility;
             return new ShellBarItemVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowShellBarItemVisibility != null ? retObjectWorkflowShellBarItemVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +429,7 @@ public class DesignerView extends UserControl  {
 
     public void setWorkflowShellBarItemVisibility(ShellBarItemVisibility WorkflowShellBarItemVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowShellBarItemVisibility", WorkflowShellBarItemVisibility == null ? null : WorkflowShellBarItemVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -403,10 +439,14 @@ public class DesignerView extends UserControl  {
 
     public ShellHeaderItemsVisibility getWorkflowShellHeaderItemsVisibility() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowShellHeaderItemsVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowShellHeaderItemsVisibility");
+            retObjectWorkflowShellHeaderItemsVisibility = classInstance.Get("WorkflowShellHeaderItemsVisibility");
+            JCObject val = (JCObject)retObjectWorkflowShellHeaderItemsVisibility;
             return new ShellHeaderItemsVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowShellHeaderItemsVisibility != null ? retObjectWorkflowShellHeaderItemsVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +454,7 @@ public class DesignerView extends UserControl  {
 
     public void setWorkflowShellHeaderItemsVisibility(ShellHeaderItemsVisibility WorkflowShellHeaderItemsVisibility) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowShellHeaderItemsVisibility", WorkflowShellHeaderItemsVisibility == null ? null : WorkflowShellHeaderItemsVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,10 +464,14 @@ public class DesignerView extends UserControl  {
 
     public WorkflowViewElement getFocusedViewElement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusedViewElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusedViewElement");
+            retObjectFocusedViewElement = classInstance.Get("FocusedViewElement");
+            JCObject val = (JCObject)retObjectFocusedViewElement;
             return new WorkflowViewElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusedViewElement != null ? retObjectFocusedViewElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +479,7 @@ public class DesignerView extends UserControl  {
 
     public void setFocusedViewElement(WorkflowViewElement FocusedViewElement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FocusedViewElement", FocusedViewElement == null ? null : FocusedViewElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -445,10 +489,14 @@ public class DesignerView extends UserControl  {
 
     public Style getMenuItemStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuItemStyle");
+            retObjectMenuItemStyle = classInstance.Get("MenuItemStyle");
+            JCObject val = (JCObject)retObjectMenuItemStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuItemStyle != null ? retObjectMenuItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +504,7 @@ public class DesignerView extends UserControl  {
 
     public void setMenuItemStyle(Style MenuItemStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MenuItemStyle", MenuItemStyle == null ? null : MenuItemStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,10 +514,14 @@ public class DesignerView extends UserControl  {
 
     public Style getMenuSeparatorStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenuSeparatorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MenuSeparatorStyle");
+            retObjectMenuSeparatorStyle = classInstance.Get("MenuSeparatorStyle");
+            JCObject val = (JCObject)retObjectMenuSeparatorStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuSeparatorStyle != null ? retObjectMenuSeparatorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +529,7 @@ public class DesignerView extends UserControl  {
 
     public void setMenuSeparatorStyle(Style MenuSeparatorStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MenuSeparatorStyle", MenuSeparatorStyle == null ? null : MenuSeparatorStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,10 +539,14 @@ public class DesignerView extends UserControl  {
 
     public UIElement getRootDesigner() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootDesigner");
+            retObjectRootDesigner = classInstance.Get("RootDesigner");
+            JCObject val = (JCObject)retObjectRootDesigner;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootDesigner != null ? retObjectRootDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +554,7 @@ public class DesignerView extends UserControl  {
 
     public void setRootDesigner(UIElement RootDesigner) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootDesigner", RootDesigner == null ? null : RootDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {

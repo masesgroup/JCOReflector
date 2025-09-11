@@ -177,10 +177,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
     
     public HttpResponseMessage EnsureSuccessStatusCode() throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.ThreadAbortException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.OperationCanceledException, system.AggregateException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.http.HttpRequestException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsureSuccessStatusCode = null;
         try {
-            JCObject objEnsureSuccessStatusCode = (JCObject)classInstance.Invoke("EnsureSuccessStatusCode");
+            retObjectEnsureSuccessStatusCode = classInstance.Invoke("EnsureSuccessStatusCode");
+            JCObject objEnsureSuccessStatusCode = (JCObject)retObjectEnsureSuccessStatusCode;
             return new HttpResponseMessage(objEnsureSuccessStatusCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnsureSuccessStatusCode != null ? retObjectEnsureSuccessStatusCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.ThreadAbortException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ObjectDisposedException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -199,7 +203,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -215,9 +219,13 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
     
     public boolean getIsSuccessStatusCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSuccessStatusCode = null;
         try {
-            return (boolean)classInstance.Get("IsSuccessStatusCode");
+            retObjectIsSuccessStatusCode = classInstance.Get("IsSuccessStatusCode");
+            return (boolean)retObjectIsSuccessStatusCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSuccessStatusCode != null ? retObjectIsSuccessStatusCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +233,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public HttpResponseHeaders getHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new HttpResponseHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +248,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public HttpContent getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new HttpContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void setContent(HttpContent Content) throws Throwable, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,10 +273,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public HttpRequestMessage getRequestMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestMessage");
+            retObjectRequestMessage = classInstance.Get("RequestMessage");
+            JCObject val = (JCObject)retObjectRequestMessage;
             return new HttpRequestMessage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestMessage != null ? retObjectRequestMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void setRequestMessage(HttpRequestMessage RequestMessage) throws Throwable, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestMessage", RequestMessage == null ? null : RequestMessage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,10 +298,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public HttpStatusCode getStatusCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusCode");
+            retObjectStatusCode = classInstance.Get("StatusCode");
+            JCObject val = (JCObject)retObjectStatusCode;
             return new HttpStatusCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +313,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void setStatusCode(HttpStatusCode StatusCode) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StatusCode", StatusCode == null ? null : StatusCode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -299,9 +323,13 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public java.lang.String getReasonPhrase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReasonPhrase = null;
         try {
-            return (java.lang.String)classInstance.Get("ReasonPhrase");
+            retObjectReasonPhrase = classInstance.Get("ReasonPhrase");
+            return (java.lang.String)retObjectReasonPhrase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReasonPhrase != null ? retObjectReasonPhrase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +337,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void setReasonPhrase(java.lang.String ReasonPhrase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReasonPhrase", ReasonPhrase);
         } catch (JCNativeException jcne) {
@@ -319,10 +347,14 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public Version getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            JCObject val = (JCObject)retObjectVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +362,7 @@ public class HttpResponseMessage extends NetObject implements AutoCloseable {
 
     public void setVersion(Version Version) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version == null ? null : Version.getJCOInstance());
         } catch (JCNativeException jcne) {

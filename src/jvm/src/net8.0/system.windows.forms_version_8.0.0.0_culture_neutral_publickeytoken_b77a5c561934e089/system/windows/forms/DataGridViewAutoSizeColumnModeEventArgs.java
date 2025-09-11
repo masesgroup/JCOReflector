@@ -172,10 +172,14 @@ public class DataGridViewAutoSizeColumnModeEventArgs extends EventArgs  {
     
     public DataGridViewAutoSizeColumnMode getPreviousMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousMode");
+            retObjectPreviousMode = classInstance.Get("PreviousMode");
+            JCObject val = (JCObject)retObjectPreviousMode;
             return new DataGridViewAutoSizeColumnMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousMode != null ? retObjectPreviousMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DataGridViewAutoSizeColumnModeEventArgs extends EventArgs  {
 
     public DataGridViewColumn getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            JCObject val = (JCObject)retObjectColumn;
             return new DataGridViewColumn(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,9 +170,13 @@ public class StylusPointProperty extends NetObject  {
     
     public boolean getIsButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsButton = null;
         try {
-            return (boolean)classInstance.Get("IsButton");
+            retObjectIsButton = classInstance.Get("IsButton");
+            return (boolean)retObjectIsButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsButton != null ? retObjectIsButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class StylusPointProperty extends NetObject  {
 
     public Guid getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

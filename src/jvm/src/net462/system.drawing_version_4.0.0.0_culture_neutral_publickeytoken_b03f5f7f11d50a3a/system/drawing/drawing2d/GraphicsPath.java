@@ -226,9 +226,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
     
     public boolean IsOutlineVisible(int x, int y, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +240,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(int x, int y, Pen pen, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +254,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(Single x, Single y, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +268,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(Single x, Single y, Pen pen, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +282,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(Point point, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +296,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(Point pt, Pen pen, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", pt == null ? null : pt.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", pt == null ? null : pt.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +310,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(PointF point, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +324,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsOutlineVisible(PointF pt, Pen pen, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOutlineVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", pt == null ? null : pt.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsOutlineVisible = classInstance.Invoke("IsOutlineVisible", pt == null ? null : pt.getJCOInstance(), pen == null ? null : pen.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsOutlineVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOutlineVisible != null ? retObjectIsOutlineVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +338,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y);
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y);
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +352,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y, graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y, graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,9 +366,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,9 +380,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,9 +394,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +408,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Point pt, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", pt == null ? null : pt.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", pt == null ? null : pt.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +422,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +436,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(PointF pt, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", pt == null ? null : pt.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", pt == null ? null : pt.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +450,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public PointF GetLastPoint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLastPoint = null;
         try {
-            JCObject objGetLastPoint = (JCObject)classInstance.Invoke("GetLastPoint");
+            retObjectGetLastPoint = classInstance.Invoke("GetLastPoint");
+            JCObject objGetLastPoint = (JCObject)retObjectGetLastPoint;
             return new PointF(objGetLastPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastPoint != null ? retObjectGetLastPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +465,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF GetBounds() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds");
+            retObjectGetBounds = classInstance.Invoke("GetBounds");
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new RectangleF(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +480,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF GetBounds(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance());
+            retObjectGetBounds = classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new RectangleF(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +495,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF GetBounds(Matrix matrix, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            retObjectGetBounds = classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new RectangleF(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +510,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +525,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddArc(int x, int y, int width, int height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArc", x, y, width, height, startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -451,7 +535,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddArc(Single x, Single y, Single width, Single height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArc", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -461,7 +545,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddArc(Rectangle rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArc", rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -471,7 +555,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddArc(RectangleF rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddArc", rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -481,7 +565,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBezier(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBezier", x1, y1, x2, y2, x3, y3, x4, y4);
         } catch (JCNativeException jcne) {
@@ -491,7 +575,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBezier(Single x1, Single y1, Single x2, Single y2, Single x3, Single y3, Single x4, Single y4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBezier", x1 == null ? null : x1.getJCOInstance(), y1 == null ? null : y1.getJCOInstance(), x2 == null ? null : x2.getJCOInstance(), y2 == null ? null : y2.getJCOInstance(), x3 == null ? null : x3.getJCOInstance(), y3 == null ? null : y3.getJCOInstance(), x4 == null ? null : x4.getJCOInstance(), y4 == null ? null : y4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,7 +585,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBezier(Point pt1, Point pt2, Point pt3, Point pt4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBezier", pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance(), pt3 == null ? null : pt3.getJCOInstance(), pt4 == null ? null : pt4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,7 +595,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBezier(PointF pt1, PointF pt2, PointF pt3, PointF pt4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBezier", pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance(), pt3 == null ? null : pt3.getJCOInstance(), pt4 == null ? null : pt4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,7 +605,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBeziers(Point... points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBeziers", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -531,7 +615,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddBeziers(PointF[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBeziers", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -541,7 +625,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddClosedCurve(Point[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -551,7 +635,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddClosedCurve(Point[] points, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClosedCurve", toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -561,7 +645,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddClosedCurve(PointF[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -571,7 +655,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddClosedCurve(PointF[] points, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddClosedCurve", toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -581,7 +665,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(Point[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -591,7 +675,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(Point[] points, int offset, int numberOfSegments, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", toObjectFromArray(points), offset, numberOfSegments, tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -601,7 +685,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(Point[] points, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -611,7 +695,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(PointF[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -621,7 +705,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(PointF[] points, int offset, int numberOfSegments, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", toObjectFromArray(points), offset, numberOfSegments, tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -631,7 +715,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddCurve(PointF[] points, Single tension) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -641,7 +725,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddEllipse(int x, int y, int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEllipse", x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -651,7 +735,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddEllipse(Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEllipse", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -661,7 +745,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddEllipse(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEllipse", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -671,7 +755,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddEllipse(RectangleF rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEllipse", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -681,7 +765,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLine(int x1, int y1, int x2, int y2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLine", x1, y1, x2, y2);
         } catch (JCNativeException jcne) {
@@ -691,7 +775,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLine(Single x1, Single y1, Single x2, Single y2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLine", x1 == null ? null : x1.getJCOInstance(), y1 == null ? null : y1.getJCOInstance(), x2 == null ? null : x2.getJCOInstance(), y2 == null ? null : y2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -701,7 +785,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLine(Point pt1, Point pt2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLine", pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -711,7 +795,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLine(PointF pt1, PointF pt2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLine", pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -721,7 +805,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLines(Point[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLines", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -731,7 +815,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddLines(PointF[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLines", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -741,7 +825,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPath(GraphicsPath addingPath, boolean connect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPath", addingPath == null ? null : addingPath.getJCOInstance(), connect);
         } catch (JCNativeException jcne) {
@@ -751,7 +835,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPie(int x, int y, int width, int height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPie", x, y, width, height, startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -761,7 +845,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPie(Single x, Single y, Single width, Single height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPie", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -771,7 +855,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPie(Rectangle rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPie", rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -781,7 +865,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPolygon(Point[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPolygon", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -791,7 +875,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddPolygon(PointF[] points) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddPolygon", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -801,7 +885,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddRectangle(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRectangle", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -811,7 +895,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddRectangle(RectangleF rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRectangle", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -821,7 +905,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddRectangles(Rectangle[] rects) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRectangles", (java.lang.Object)toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -831,7 +915,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddRectangles(RectangleF[] rects) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRectangles", (java.lang.Object)toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -841,7 +925,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddString(java.lang.String s, FontFamily family, int style, Single emSize, Point origin, StringFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddString", s, family == null ? null : family.getJCOInstance(), style, emSize == null ? null : emSize.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -851,7 +935,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddString(java.lang.String s, FontFamily family, int style, Single emSize, PointF origin, StringFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddString", s, family == null ? null : family.getJCOInstance(), style, emSize == null ? null : emSize.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -861,7 +945,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddString(java.lang.String s, FontFamily family, int style, Single emSize, Rectangle layoutRect, StringFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddString", s, family == null ? null : family.getJCOInstance(), style, emSize == null ? null : emSize.getJCOInstance(), layoutRect == null ? null : layoutRect.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -871,7 +955,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void AddString(java.lang.String s, FontFamily family, int style, Single emSize, RectangleF layoutRect, StringFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddString", s, family == null ? null : family.getJCOInstance(), style, emSize == null ? null : emSize.getJCOInstance(), layoutRect == null ? null : layoutRect.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -881,7 +965,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void ClearMarkers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearMarkers");
         } catch (JCNativeException jcne) {
@@ -891,7 +975,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void CloseAllFigures() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseAllFigures");
         } catch (JCNativeException jcne) {
@@ -901,7 +985,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void CloseFigure() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseFigure");
         } catch (JCNativeException jcne) {
@@ -911,7 +995,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -921,7 +1005,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Flatten() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flatten");
         } catch (JCNativeException jcne) {
@@ -931,7 +1015,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Flatten(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flatten", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -941,7 +1025,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Flatten(Matrix matrix, Single flatness) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flatten", matrix == null ? null : matrix.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -951,7 +1035,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Reset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -961,7 +1045,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Reverse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reverse");
         } catch (JCNativeException jcne) {
@@ -971,7 +1055,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void SetMarkers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMarkers");
         } catch (JCNativeException jcne) {
@@ -981,7 +1065,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void StartFigure() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartFigure");
         } catch (JCNativeException jcne) {
@@ -991,7 +1075,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Transform(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1001,7 +1085,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Warp(PointF[] destPoints, RectangleF srcRect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1011,7 +1095,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1021,7 +1105,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix, WarpMode warpMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), warpMode == null ? null : warpMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1031,7 +1115,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix, WarpMode warpMode, Single flatness) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), warpMode == null ? null : warpMode.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1041,7 +1125,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Widen(Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1051,7 +1135,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Widen(Pen pen, Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1061,7 +1145,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void Widen(Pen pen, Matrix matrix, Single flatness) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1072,7 +1156,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -1088,10 +1172,12 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
     
     public byte[] getPathTypes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathTypes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PathTypes");
+            retObjectPathTypes = classInstance.Get("PathTypes");
+            JCObject resultingObjects = (JCObject)retObjectPathTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -1100,6 +1186,8 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 				resultingArray[indexPathTypes] = (byte)resultingArrayList.get(indexPathTypes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectPathTypes != null ? retObjectPathTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1107,9 +1195,13 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public int getPointCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointCount = null;
         try {
-            return (int)classInstance.Get("PointCount");
+            retObjectPointCount = classInstance.Get("PointCount");
+            return (int)retObjectPointCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPointCount != null ? retObjectPointCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1117,10 +1209,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public FillMode getFillMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FillMode");
+            retObjectFillMode = classInstance.Get("FillMode");
+            JCObject val = (JCObject)retObjectFillMode;
             return new FillMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillMode != null ? retObjectFillMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1128,7 +1224,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public void setFillMode(FillMode FillMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FillMode", FillMode == null ? null : FillMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1138,10 +1234,14 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public PathData getPathData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PathData");
+            retObjectPathData = classInstance.Get("PathData");
+            JCObject val = (JCObject)retObjectPathData;
             return new PathData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathData != null ? retObjectPathData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1149,16 +1249,20 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
 
     public final PointF[] getPathPoints() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathPoints = null;
         try {
             ArrayList<PointF> resultingArrayList = new ArrayList<PointF>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PathPoints");
+            retObjectPathPoints = classInstance.Get("PathPoints");
+            JCObject resultingObjects = (JCObject)retObjectPathPoints;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PointF(resultingObject));
             }
             PointF[] resultingArray = new PointF[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPathPoints != null ? retObjectPathPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

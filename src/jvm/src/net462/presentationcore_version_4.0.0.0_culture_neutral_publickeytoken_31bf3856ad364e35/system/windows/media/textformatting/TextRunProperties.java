@@ -165,9 +165,13 @@ public class TextRunProperties extends NetObject  {
     
     public double getFontHintingEmSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontHintingEmSize = null;
         try {
-            return (double)classInstance.Get("FontHintingEmSize");
+            retObjectFontHintingEmSize = classInstance.Get("FontHintingEmSize");
+            return (double)retObjectFontHintingEmSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectFontHintingEmSize != null ? retObjectFontHintingEmSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class TextRunProperties extends NetObject  {
 
     public double getFontRenderingEmSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontRenderingEmSize = null;
         try {
-            return (double)classInstance.Get("FontRenderingEmSize");
+            retObjectFontRenderingEmSize = classInstance.Get("FontRenderingEmSize");
+            return (double)retObjectFontRenderingEmSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectFontRenderingEmSize != null ? retObjectFontRenderingEmSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class TextRunProperties extends NetObject  {
 
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            return (double)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            return (double)retObjectPixelsPerDip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class TextRunProperties extends NetObject  {
 
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip);
         } catch (JCNativeException jcne) {
@@ -205,10 +217,14 @@ public class TextRunProperties extends NetObject  {
 
     public CultureInfo getCultureInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureInfo");
+            retObjectCultureInfo = classInstance.Get("CultureInfo");
+            JCObject val = (JCObject)retObjectCultureInfo;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureInfo != null ? retObjectCultureInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class TextRunProperties extends NetObject  {
 
     public BaselineAlignment getBaselineAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaselineAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaselineAlignment");
+            retObjectBaselineAlignment = classInstance.Get("BaselineAlignment");
+            JCObject val = (JCObject)retObjectBaselineAlignment;
             return new BaselineAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaselineAlignment != null ? retObjectBaselineAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class TextRunProperties extends NetObject  {
 
     public Brush getBackgroundBrush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundBrush");
+            retObjectBackgroundBrush = classInstance.Get("BackgroundBrush");
+            JCObject val = (JCObject)retObjectBackgroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundBrush != null ? retObjectBackgroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class TextRunProperties extends NetObject  {
 
     public Brush getForegroundBrush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForegroundBrush = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForegroundBrush");
+            retObjectForegroundBrush = classInstance.Get("ForegroundBrush");
+            JCObject val = (JCObject)retObjectForegroundBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForegroundBrush != null ? retObjectForegroundBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class TextRunProperties extends NetObject  {
 
     public NumberSubstitution getNumberSubstitution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberSubstitution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NumberSubstitution");
+            retObjectNumberSubstitution = classInstance.Get("NumberSubstitution");
+            JCObject val = (JCObject)retObjectNumberSubstitution;
             return new NumberSubstitution(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNumberSubstitution != null ? retObjectNumberSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +292,14 @@ public class TextRunProperties extends NetObject  {
 
     public TextEffectCollection getTextEffects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextEffects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextEffects");
+            retObjectTextEffects = classInstance.Get("TextEffects");
+            JCObject val = (JCObject)retObjectTextEffects;
             return new TextEffectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextEffects != null ? retObjectTextEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +307,14 @@ public class TextRunProperties extends NetObject  {
 
     public TextRunTypographyProperties getTypographyProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypographyProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypographyProperties");
+            retObjectTypographyProperties = classInstance.Get("TypographyProperties");
+            JCObject val = (JCObject)retObjectTypographyProperties;
             return new TextRunTypographyProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypographyProperties != null ? retObjectTypographyProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +322,14 @@ public class TextRunProperties extends NetObject  {
 
     public Typeface getTypeface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Typeface");
+            retObjectTypeface = classInstance.Get("Typeface");
+            JCObject val = (JCObject)retObjectTypeface;
             return new Typeface(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeface != null ? retObjectTypeface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +337,14 @@ public class TextRunProperties extends NetObject  {
 
     public TextDecorationCollection getTextDecorations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDecorations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDecorations");
+            retObjectTextDecorations = classInstance.Get("TextDecorations");
+            JCObject val = (JCObject)retObjectTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDecorations != null ? retObjectTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -143,10 +143,14 @@ public class IStreamProviderImplementation extends NetObject implements IStreamP
     
     public Stream GetStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream");
+            retObjectGetStream = classInstance.Invoke("GetStream");
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IStreamProviderImplementation extends NetObject implements IStreamP
 
     public void ReleaseStream(Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseStream", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -183,9 +183,13 @@ public class AsnWriter extends NetObject  {
     
     public boolean EncodedValueEquals(AsnWriter other) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedValueEquals = null;
         try {
-            return (boolean)classInstance.Invoke("EncodedValueEquals", other == null ? null : other.getJCOInstance());
+            retObjectEncodedValueEquals = classInstance.Invoke("EncodedValueEquals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEncodedValueEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEncodedValueEquals != null ? retObjectEncodedValueEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,12 @@ public class AsnWriter extends NetObject  {
 
     public byte[] Encode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode");
+            retObjectEncode = classInstance.Invoke("Encode");
+            JCObject resultingObjects = (JCObject)retObjectEncode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +211,8 @@ public class AsnWriter extends NetObject  {
 				resultingArray[indexEncode] = (byte)resultingArrayList.get(indexEncode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +220,19 @@ public class AsnWriter extends NetObject  {
 
     public int GetEncodedLength() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEncodedLength = null;
         try {
-            return (int)classInstance.Invoke("GetEncodedLength");
+            retObjectGetEncodedLength = classInstance.Invoke("GetEncodedLength");
+            return (int)retObjectGetEncodedLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetEncodedLengthNumber = (java.lang.Number)retObjectGetEncodedLength;
+                return retObjectGetEncodedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetEncodedLength != null ? retObjectGetEncodedLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +240,7 @@ public class AsnWriter extends NetObject  {
 
     public void CopyTo(AsnWriter destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", destination == null ? null : destination.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,7 +250,7 @@ public class AsnWriter extends NetObject  {
 
     public void Reset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -246,10 +264,14 @@ public class AsnWriter extends NetObject  {
     
     public AsnEncodingRules getRuleSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRuleSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RuleSet");
+            retObjectRuleSet = classInstance.Get("RuleSet");
+            JCObject val = (JCObject)retObjectRuleSet;
             return new AsnEncodingRules(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRuleSet != null ? retObjectRuleSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

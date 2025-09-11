@@ -163,10 +163,14 @@ public class AssemblyNameProxy extends MarshalByRefObject  {
     
     public AssemblyName GetAssemblyName(java.lang.String assemblyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblyName = null;
         try {
-            JCObject objGetAssemblyName = (JCObject)classInstance.Invoke("GetAssemblyName", assemblyFile);
+            retObjectGetAssemblyName = classInstance.Invoke("GetAssemblyName", assemblyFile);
+            JCObject objGetAssemblyName = (JCObject)retObjectGetAssemblyName;
             return new AssemblyName(objGetAssemblyName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblyName != null ? retObjectGetAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

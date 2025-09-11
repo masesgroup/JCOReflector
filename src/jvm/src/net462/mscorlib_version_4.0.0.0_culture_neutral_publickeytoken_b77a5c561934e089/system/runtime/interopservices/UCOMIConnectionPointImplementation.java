@@ -147,7 +147,7 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
     
     public void Advise(NetObject pUnkSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwCookie) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Advise", pUnkSink == null ? null : pUnkSink.getJCOInstance(), pdwCookie.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
 
     public void EnumConnections(JCORefOut<UCOMIEnumConnections> ppEnum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumConnections", ppEnum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
 
     public void GetConnectionInterface(JCORefOut<Guid> pIID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetConnectionInterface", pIID.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
 
     public void GetConnectionPointContainer(JCORefOut<UCOMIConnectionPointContainer> ppCPC) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetConnectionPointContainer", ppCPC.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
 
     public void Unadvise(int dwCookie) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unadvise", dwCookie);
         } catch (JCNativeException jcne) {

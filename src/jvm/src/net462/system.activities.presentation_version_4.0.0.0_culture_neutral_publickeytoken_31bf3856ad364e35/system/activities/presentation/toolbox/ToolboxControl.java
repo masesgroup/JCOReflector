@@ -169,7 +169,7 @@ public class ToolboxControl extends Control  {
     
     public void OnApplyTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -183,10 +183,14 @@ public class ToolboxControl extends Control  {
     
     public ToolboxCategoryItems getCategories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategories = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Categories");
+            retObjectCategories = classInstance.Get("Categories");
+            JCObject val = (JCObject)retObjectCategories;
             return new ToolboxCategoryItems(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategories != null ? retObjectCategories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class ToolboxControl extends Control  {
 
     public void setCategories(ToolboxCategoryItems Categories) throws Throwable, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Categories", Categories == null ? null : Categories.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +208,14 @@ public class ToolboxControl extends Control  {
 
     public WorkflowDesigner getAssociatedDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
+            retObjectAssociatedDesigner = classInstance.Get("AssociatedDesigner");
+            JCObject val = (JCObject)retObjectAssociatedDesigner;
             return new WorkflowDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedDesigner != null ? retObjectAssociatedDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class ToolboxControl extends Control  {
 
     public void setAssociatedDesigner(WorkflowDesigner AssociatedDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssociatedDesigner", AssociatedDesigner == null ? null : AssociatedDesigner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +233,14 @@ public class ToolboxControl extends Control  {
 
     public ToolboxItem getSelectedTool() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedTool = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedTool");
+            retObjectSelectedTool = classInstance.Get("SelectedTool");
+            JCObject val = (JCObject)retObjectSelectedTool;
             return new ToolboxItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedTool != null ? retObjectSelectedTool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class ToolboxControl extends Control  {
 
     public void setSelectedTool(ToolboxItem SelectedTool) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedTool", SelectedTool == null ? null : SelectedTool.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,9 +258,13 @@ public class ToolboxControl extends Control  {
 
     public java.lang.String getToolboxFile() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolboxFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolboxFile");
+            retObjectToolboxFile = classInstance.Get("ToolboxFile");
+            return (java.lang.String)retObjectToolboxFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolboxFile != null ? retObjectToolboxFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +272,7 @@ public class ToolboxControl extends Control  {
 
     public void setToolboxFile(java.lang.String ToolboxFile) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolboxFile", ToolboxFile);
         } catch (JCNativeException jcne) {
@@ -266,10 +282,14 @@ public class ToolboxControl extends Control  {
 
     public DataTemplate getCategoryTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryTemplate");
+            retObjectCategoryTemplate = classInstance.Get("CategoryTemplate");
+            JCObject val = (JCObject)retObjectCategoryTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryTemplate != null ? retObjectCategoryTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +297,7 @@ public class ToolboxControl extends Control  {
 
     public void setCategoryTemplate(DataTemplate CategoryTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryTemplate", CategoryTemplate == null ? null : CategoryTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,10 +307,14 @@ public class ToolboxControl extends Control  {
 
     public DataTemplate getToolTemplate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolTemplate");
+            retObjectToolTemplate = classInstance.Get("ToolTemplate");
+            JCObject val = (JCObject)retObjectToolTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTemplate != null ? retObjectToolTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +322,7 @@ public class ToolboxControl extends Control  {
 
     public void setToolTemplate(DataTemplate ToolTemplate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTemplate", ToolTemplate == null ? null : ToolTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,10 +332,14 @@ public class ToolboxControl extends Control  {
 
     public Style getCategoryItemStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryItemStyle");
+            retObjectCategoryItemStyle = classInstance.Get("CategoryItemStyle");
+            JCObject val = (JCObject)retObjectCategoryItemStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryItemStyle != null ? retObjectCategoryItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +347,7 @@ public class ToolboxControl extends Control  {
 
     public void setCategoryItemStyle(Style CategoryItemStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryItemStyle", CategoryItemStyle == null ? null : CategoryItemStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +357,14 @@ public class ToolboxControl extends Control  {
 
     public Style getToolItemStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolItemStyle");
+            retObjectToolItemStyle = classInstance.Get("ToolItemStyle");
+            JCObject val = (JCObject)retObjectToolItemStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolItemStyle != null ? retObjectToolItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +372,7 @@ public class ToolboxControl extends Control  {
 
     public void setToolItemStyle(Style ToolItemStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolItemStyle", ToolItemStyle == null ? null : ToolItemStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -355,7 +387,7 @@ public class ToolboxControl extends Control  {
 
     public void addToolCreated(ToolCreatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ToolCreated", handler);
         } catch (JCNativeException jcne) {
@@ -365,7 +397,7 @@ public class ToolboxControl extends Control  {
 
     public void removeToolCreated(ToolCreatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ToolCreated", handler);
         } catch (JCNativeException jcne) {
@@ -375,7 +407,7 @@ public class ToolboxControl extends Control  {
 
     public void addToolSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ToolSelected", handler);
         } catch (JCNativeException jcne) {
@@ -385,7 +417,7 @@ public class ToolboxControl extends Control  {
 
     public void removeToolSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ToolSelected", handler);
         } catch (JCNativeException jcne) {

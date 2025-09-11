@@ -162,10 +162,14 @@ public class SupportingTokenSpecification extends SecurityTokenSpecification  {
     
     public SecurityTokenAttachmentMode getSecurityTokenAttachmentMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenAttachmentMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenAttachmentMode");
+            retObjectSecurityTokenAttachmentMode = classInstance.Get("SecurityTokenAttachmentMode");
+            JCObject val = (JCObject)retObjectSecurityTokenAttachmentMode;
             return new SecurityTokenAttachmentMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenAttachmentMode != null ? retObjectSecurityTokenAttachmentMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

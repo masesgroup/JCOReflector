@@ -156,7 +156,7 @@ public class CounterSetInstance extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class CounterSetInstance extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -183,10 +183,14 @@ public class CounterSetInstance extends NetObject implements AutoCloseable {
     
     public CounterSetInstanceCounterDataSet getCounters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCounters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Counters");
+            retObjectCounters = classInstance.Get("Counters");
+            JCObject val = (JCObject)retObjectCounters;
             return new CounterSetInstanceCounterDataSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCounters != null ? retObjectCounters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +198,7 @@ public class CounterSetInstance extends NetObject implements AutoCloseable {
 
     public void setCounters(CounterSetInstanceCounterDataSet Counters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Counters", Counters == null ? null : Counters.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -156,10 +156,14 @@ public class SharedPropertyGroup extends NetObject  {
     
     public SharedProperty CreateProperty(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProperty = null;
         try {
-            JCObject objCreateProperty = (JCObject)classInstance.Invoke("CreateProperty", name, fExists.getJCRefOut());
+            retObjectCreateProperty = classInstance.Invoke("CreateProperty", name, fExists.getJCRefOut());
+            JCObject objCreateProperty = (JCObject)retObjectCreateProperty;
             return new SharedProperty(objCreateProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProperty != null ? retObjectCreateProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class SharedPropertyGroup extends NetObject  {
 
     public SharedProperty CreatePropertyByPosition(int position, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePropertyByPosition = null;
         try {
-            JCObject objCreatePropertyByPosition = (JCObject)classInstance.Invoke("CreatePropertyByPosition", position, fExists.getJCRefOut());
+            retObjectCreatePropertyByPosition = classInstance.Invoke("CreatePropertyByPosition", position, fExists.getJCRefOut());
+            JCObject objCreatePropertyByPosition = (JCObject)retObjectCreatePropertyByPosition;
             return new SharedProperty(objCreatePropertyByPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePropertyByPosition != null ? retObjectCreatePropertyByPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class SharedPropertyGroup extends NetObject  {
 
     public SharedProperty Property(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classInstance.Invoke("Property", name);
+            retObjectProperty = classInstance.Invoke("Property", name);
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new SharedProperty(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class SharedPropertyGroup extends NetObject  {
 
     public SharedProperty PropertyByPosition(int position) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyByPosition = null;
         try {
-            JCObject objPropertyByPosition = (JCObject)classInstance.Invoke("PropertyByPosition", position);
+            retObjectPropertyByPosition = classInstance.Invoke("PropertyByPosition", position);
+            JCObject objPropertyByPosition = (JCObject)retObjectPropertyByPosition;
             return new SharedProperty(objPropertyByPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyByPosition != null ? retObjectPropertyByPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,10 +171,14 @@ public class KeyboardEventArgs extends InputEventArgs  {
     
     public KeyboardDevice getKeyboardDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyboardDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyboardDevice");
+            retObjectKeyboardDevice = classInstance.Get("KeyboardDevice");
+            JCObject val = (JCObject)retObjectKeyboardDevice;
             return new KeyboardDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyboardDevice != null ? retObjectKeyboardDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

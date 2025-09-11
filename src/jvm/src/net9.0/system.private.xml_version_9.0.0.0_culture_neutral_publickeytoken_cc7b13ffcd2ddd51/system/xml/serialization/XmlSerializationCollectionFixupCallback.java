@@ -166,8 +166,8 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -180,7 +180,7 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
 
     public void DynamicInvoke(NetObject collection, NetObject collectionItems) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", collection == null ? null : collection.getJCOInstance(), collectionItems == null ? null : collectionItems.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -142,7 +142,7 @@ public class IPartImportsSatisfiedNotificationImplementation extends NetObject i
     
     public void OnImportsSatisfied() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnImportsSatisfied");
         } catch (JCNativeException jcne) {

@@ -161,10 +161,14 @@ public class AdornerHitTestResult extends PointHitTestResult  {
     
     public Adorner getAdorner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdorner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Adorner");
+            retObjectAdorner = classInstance.Get("Adorner");
+            JCObject val = (JCObject)retObjectAdorner;
             return new Adorner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdorner != null ? retObjectAdorner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

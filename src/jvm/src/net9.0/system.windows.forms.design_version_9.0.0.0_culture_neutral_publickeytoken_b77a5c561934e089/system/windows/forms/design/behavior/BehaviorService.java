@@ -164,10 +164,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
     
     public Point AdornerWindowPointToScreen(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerWindowPointToScreen = null;
         try {
-            JCObject objAdornerWindowPointToScreen = (JCObject)classInstance.Invoke("AdornerWindowPointToScreen", p == null ? null : p.getJCOInstance());
+            retObjectAdornerWindowPointToScreen = classInstance.Invoke("AdornerWindowPointToScreen", p == null ? null : p.getJCOInstance());
+            JCObject objAdornerWindowPointToScreen = (JCObject)retObjectAdornerWindowPointToScreen;
             return new Point(objAdornerWindowPointToScreen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerWindowPointToScreen != null ? retObjectAdornerWindowPointToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Point AdornerWindowToScreen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerWindowToScreen = null;
         try {
-            JCObject objAdornerWindowToScreen = (JCObject)classInstance.Invoke("AdornerWindowToScreen");
+            retObjectAdornerWindowToScreen = classInstance.Invoke("AdornerWindowToScreen");
+            JCObject objAdornerWindowToScreen = (JCObject)retObjectAdornerWindowToScreen;
             return new Point(objAdornerWindowToScreen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerWindowToScreen != null ? retObjectAdornerWindowToScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Point ControlToAdornerWindow(Control c) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlToAdornerWindow = null;
         try {
-            JCObject objControlToAdornerWindow = (JCObject)classInstance.Invoke("ControlToAdornerWindow", c == null ? null : c.getJCOInstance());
+            retObjectControlToAdornerWindow = classInstance.Invoke("ControlToAdornerWindow", c == null ? null : c.getJCOInstance());
+            JCObject objControlToAdornerWindow = (JCObject)retObjectControlToAdornerWindow;
             return new Point(objControlToAdornerWindow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlToAdornerWindow != null ? retObjectControlToAdornerWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Point ScreenToAdornerWindow(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScreenToAdornerWindow = null;
         try {
-            JCObject objScreenToAdornerWindow = (JCObject)classInstance.Invoke("ScreenToAdornerWindow", p == null ? null : p.getJCOInstance());
+            retObjectScreenToAdornerWindow = classInstance.Invoke("ScreenToAdornerWindow", p == null ? null : p.getJCOInstance());
+            JCObject objScreenToAdornerWindow = (JCObject)retObjectScreenToAdornerWindow;
             return new Point(objScreenToAdornerWindow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScreenToAdornerWindow != null ? retObjectScreenToAdornerWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Rectangle ControlRectInAdornerWindow(Control c) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlRectInAdornerWindow = null;
         try {
-            JCObject objControlRectInAdornerWindow = (JCObject)classInstance.Invoke("ControlRectInAdornerWindow", c == null ? null : c.getJCOInstance());
+            retObjectControlRectInAdornerWindow = classInstance.Invoke("ControlRectInAdornerWindow", c == null ? null : c.getJCOInstance());
+            JCObject objControlRectInAdornerWindow = (JCObject)retObjectControlRectInAdornerWindow;
             return new Rectangle(objControlRectInAdornerWindow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlRectInAdornerWindow != null ? retObjectControlRectInAdornerWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Behavior GetNextBehavior(Behavior behavior) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextBehavior = null;
         try {
-            JCObject objGetNextBehavior = (JCObject)classInstance.Invoke("GetNextBehavior", behavior == null ? null : behavior.getJCOInstance());
+            retObjectGetNextBehavior = classInstance.Invoke("GetNextBehavior", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objGetNextBehavior = (JCObject)retObjectGetNextBehavior;
             return new Behavior(objGetNextBehavior);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextBehavior != null ? retObjectGetNextBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +254,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Behavior PopBehavior(Behavior behavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopBehavior = null;
         try {
-            JCObject objPopBehavior = (JCObject)classInstance.Invoke("PopBehavior", behavior == null ? null : behavior.getJCOInstance());
+            retObjectPopBehavior = classInstance.Invoke("PopBehavior", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objPopBehavior = (JCObject)retObjectPopBehavior;
             return new Behavior(objPopBehavior);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopBehavior != null ? retObjectPopBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +269,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -251,7 +279,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void Invalidate() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {
@@ -261,7 +289,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void Invalidate(Rectangle rect) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,7 +299,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void Invalidate(Region r) throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", r == null ? null : r.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +309,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void PushBehavior(Behavior behavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushBehavior", behavior == null ? null : behavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,7 +319,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void PushCaptureBehavior(Behavior behavior) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushCaptureBehavior", behavior == null ? null : behavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,7 +329,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void SyncSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SyncSelection");
         } catch (JCNativeException jcne) {
@@ -312,7 +340,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -328,10 +356,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
     
     public Graphics getAdornerWindowGraphics() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerWindowGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdornerWindowGraphics");
+            retObjectAdornerWindowGraphics = classInstance.Get("AdornerWindowGraphics");
+            JCObject val = (JCObject)retObjectAdornerWindowGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerWindowGraphics != null ? retObjectAdornerWindowGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,10 +371,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public Behavior getCurrentBehavior() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentBehavior");
+            retObjectCurrentBehavior = classInstance.Get("CurrentBehavior");
+            JCObject val = (JCObject)retObjectCurrentBehavior;
             return new Behavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentBehavior != null ? retObjectCurrentBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,10 +386,14 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public BehaviorServiceAdornerCollection getAdorners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdorners = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Adorners");
+            retObjectAdorners = classInstance.Get("Adorners");
+            JCObject val = (JCObject)retObjectAdorners;
             return new BehaviorServiceAdornerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdorners != null ? retObjectAdorners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +406,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void addSynchronize(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Synchronize", handler);
         } catch (JCNativeException jcne) {
@@ -376,7 +416,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void removeSynchronize(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Synchronize", handler);
         } catch (JCNativeException jcne) {
@@ -386,7 +426,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void addBeginDrag(BehaviorDragDropEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeginDrag", handler);
         } catch (JCNativeException jcne) {
@@ -396,7 +436,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void removeBeginDrag(BehaviorDragDropEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeginDrag", handler);
         } catch (JCNativeException jcne) {
@@ -406,7 +446,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void addEndDrag(BehaviorDragDropEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EndDrag", handler);
         } catch (JCNativeException jcne) {
@@ -416,7 +456,7 @@ public class BehaviorService extends NetObject implements AutoCloseable {
 
     public void removeEndDrag(BehaviorDragDropEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EndDrag", handler);
         } catch (JCNativeException jcne) {

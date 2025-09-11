@@ -190,10 +190,14 @@ public class JsonDerivedType extends ValueType  {
     
     public NetObject getTypeDiscriminator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeDiscriminator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeDiscriminator");
+            retObjectTypeDiscriminator = classInstance.Get("TypeDiscriminator");
+            JCObject val = (JCObject)retObjectTypeDiscriminator;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeDiscriminator != null ? retObjectTypeDiscriminator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +205,14 @@ public class JsonDerivedType extends ValueType  {
 
     public NetType getDerivedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDerivedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DerivedType");
+            retObjectDerivedType = classInstance.Get("DerivedType");
+            JCObject val = (JCObject)retObjectDerivedType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDerivedType != null ? retObjectDerivedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

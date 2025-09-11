@@ -200,16 +200,20 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
     
     public Single[] GetTabStops(JCORefOut<Single> firstTabOffset) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTabStops = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTabStops", firstTabOffset.getJCRefOut());
+            retObjectGetTabStops = classInstance.Invoke("GetTabStops", firstTabOffset.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectGetTabStops;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTabStops != null ? retObjectGetTabStops.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +221,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +236,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -238,7 +246,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void SetDigitSubstitution(int language, StringDigitSubstitute substitute) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDigitSubstitution", language, substitute == null ? null : substitute.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +256,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void SetMeasurableCharacterRanges(CharacterRange[] ranges) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMeasurableCharacterRanges", (java.lang.Object)toObjectFromArray(ranges));
         } catch (JCNativeException jcne) {
@@ -258,7 +266,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void SetTabStops(Single firstTabOffset, Single[] tabStops) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTabStops", firstTabOffset == null ? null : firstTabOffset.getJCOInstance(), toObjectFromArray(tabStops));
         } catch (JCNativeException jcne) {
@@ -269,7 +277,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -285,9 +293,13 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
     
     public int getDigitSubstitutionLanguage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigitSubstitutionLanguage = null;
         try {
-            return (int)classInstance.Get("DigitSubstitutionLanguage");
+            retObjectDigitSubstitutionLanguage = classInstance.Get("DigitSubstitutionLanguage");
+            return (int)retObjectDigitSubstitutionLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDigitSubstitutionLanguage != null ? retObjectDigitSubstitutionLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +307,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public StringAlignment getAlignment() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
+            retObjectAlignment = classInstance.Get("Alignment");
+            JCObject val = (JCObject)retObjectAlignment;
             return new StringAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignment != null ? retObjectAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +322,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void setAlignment(StringAlignment Alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Alignment", Alignment == null ? null : Alignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,10 +332,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public StringAlignment getLineAlignment() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineAlignment");
+            retObjectLineAlignment = classInstance.Get("LineAlignment");
+            JCObject val = (JCObject)retObjectLineAlignment;
             return new StringAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineAlignment != null ? retObjectLineAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +347,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void setLineAlignment(StringAlignment LineAlignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineAlignment", LineAlignment == null ? null : LineAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,10 +357,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public StringDigitSubstitute getDigitSubstitutionMethod() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigitSubstitutionMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DigitSubstitutionMethod");
+            retObjectDigitSubstitutionMethod = classInstance.Get("DigitSubstitutionMethod");
+            JCObject val = (JCObject)retObjectDigitSubstitutionMethod;
             return new StringDigitSubstitute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDigitSubstitutionMethod != null ? retObjectDigitSubstitutionMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +372,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public static StringFormat getGenericDefault() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericDefault");
+            retObjectGenericDefault = classType.Get("GenericDefault");
+            JCObject val = (JCObject)retObjectGenericDefault;
             return new StringFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericDefault != null ? retObjectGenericDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +387,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public static StringFormat getGenericTypographic() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericTypographic = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericTypographic");
+            retObjectGenericTypographic = classType.Get("GenericTypographic");
+            JCObject val = (JCObject)retObjectGenericTypographic;
             return new StringFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericTypographic != null ? retObjectGenericTypographic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +402,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public StringFormatFlags getFormatFlags() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatFlags");
+            retObjectFormatFlags = classInstance.Get("FormatFlags");
+            JCObject val = (JCObject)retObjectFormatFlags;
             return new StringFormatFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatFlags != null ? retObjectFormatFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +417,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void setFormatFlags(StringFormatFlags FormatFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatFlags", FormatFlags == null ? null : FormatFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +427,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public StringTrimming getTrimming() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrimming = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trimming");
+            retObjectTrimming = classInstance.Get("Trimming");
+            JCObject val = (JCObject)retObjectTrimming;
             return new StringTrimming(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimming != null ? retObjectTrimming.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +442,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void setTrimming(StringTrimming Trimming) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Trimming", Trimming == null ? null : Trimming.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,10 +452,14 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public HotkeyPrefix getHotkeyPrefix() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHotkeyPrefix = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HotkeyPrefix");
+            retObjectHotkeyPrefix = classInstance.Get("HotkeyPrefix");
+            JCObject val = (JCObject)retObjectHotkeyPrefix;
             return new HotkeyPrefix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHotkeyPrefix != null ? retObjectHotkeyPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +467,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
 
     public void setHotkeyPrefix(HotkeyPrefix HotkeyPrefix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HotkeyPrefix", HotkeyPrefix == null ? null : HotkeyPrefix.getJCOInstance());
         } catch (JCNativeException jcne) {

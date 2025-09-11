@@ -172,9 +172,13 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
     
     public java.lang.String getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            return (java.lang.String)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            return (java.lang.String)retObjectNewValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
 
     public java.lang.String getOldValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldValue = null;
         try {
-            return (java.lang.String)classInstance.Get("OldValue");
+            retObjectOldValue = classInstance.Get("OldValue");
+            return (java.lang.String)retObjectOldValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldValue != null ? retObjectOldValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
 
     public XmlNode getNewParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewParent");
+            retObjectNewParent = classInstance.Get("NewParent");
+            JCObject val = (JCObject)retObjectNewParent;
             return new XmlNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewParent != null ? retObjectNewParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
 
     public XmlNode getNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Node");
+            retObjectNode = classInstance.Get("Node");
+            JCObject val = (JCObject)retObjectNode;
             return new XmlNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNode != null ? retObjectNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
 
     public XmlNode getOldParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldParent");
+            retObjectOldParent = classInstance.Get("OldParent");
+            JCObject val = (JCObject)retObjectOldParent;
             return new XmlNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldParent != null ? retObjectOldParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class XmlNodeChangedEventArgs extends EventArgs  {
 
     public XmlNodeChangedAction getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            JCObject val = (JCObject)retObjectAction;
             return new XmlNodeChangedAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

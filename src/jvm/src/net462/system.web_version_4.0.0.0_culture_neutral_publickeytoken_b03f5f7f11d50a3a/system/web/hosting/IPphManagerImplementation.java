@@ -144,7 +144,7 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
     
     public void StartProcessProtocolListenerChannel(java.lang.String protocolId, IListenerChannelCallback listenerChannelCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartProcessProtocolListenerChannel", protocolId, listenerChannelCallback == null ? null : listenerChannelCallback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
 
     public void StopProcessProtocol(java.lang.String protocolId, boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessProtocol", protocolId, immediate);
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
 
     public void StopProcessProtocolListenerChannel(java.lang.String protocolId, int listenerChannelId, boolean immediate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StopProcessProtocolListenerChannel", protocolId, listenerChannelId, immediate);
         } catch (JCNativeException jcne) {

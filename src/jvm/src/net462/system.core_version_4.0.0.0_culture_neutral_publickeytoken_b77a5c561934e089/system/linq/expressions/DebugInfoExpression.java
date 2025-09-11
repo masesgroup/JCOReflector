@@ -162,9 +162,13 @@ public class DebugInfoExpression extends Expression  {
     
     public boolean getIsClear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClear = null;
         try {
-            return (boolean)classInstance.Get("IsClear");
+            retObjectIsClear = classInstance.Get("IsClear");
+            return (boolean)retObjectIsClear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClear != null ? retObjectIsClear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class DebugInfoExpression extends Expression  {
 
     public int getEndColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumn = null;
         try {
-            return (int)classInstance.Get("EndColumn");
+            retObjectEndColumn = classInstance.Get("EndColumn");
+            return (int)retObjectEndColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndColumn != null ? retObjectEndColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class DebugInfoExpression extends Expression  {
 
     public int getEndLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndLine = null;
         try {
-            return (int)classInstance.Get("EndLine");
+            retObjectEndLine = classInstance.Get("EndLine");
+            return (int)retObjectEndLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndLine != null ? retObjectEndLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class DebugInfoExpression extends Expression  {
 
     public int getStartColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumn = null;
         try {
-            return (int)classInstance.Get("StartColumn");
+            retObjectStartColumn = classInstance.Get("StartColumn");
+            return (int)retObjectStartColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartColumn != null ? retObjectStartColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class DebugInfoExpression extends Expression  {
 
     public int getStartLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartLine = null;
         try {
-            return (int)classInstance.Get("StartLine");
+            retObjectStartLine = classInstance.Get("StartLine");
+            return (int)retObjectStartLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartLine != null ? retObjectStartLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class DebugInfoExpression extends Expression  {
 
     public SymbolDocumentInfo getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new SymbolDocumentInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

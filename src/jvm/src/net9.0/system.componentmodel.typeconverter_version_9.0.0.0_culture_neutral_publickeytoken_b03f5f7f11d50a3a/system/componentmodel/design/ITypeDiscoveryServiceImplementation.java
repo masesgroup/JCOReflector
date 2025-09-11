@@ -144,10 +144,14 @@ public class ITypeDiscoveryServiceImplementation extends NetObject implements IT
     
     public ICollection GetTypes(NetType baseType, boolean excludeGlobalTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypes = null;
         try {
-            JCObject objGetTypes = (JCObject)classInstance.Invoke("GetTypes", baseType == null ? null : baseType.getJCOInstance(), excludeGlobalTypes);
+            retObjectGetTypes = classInstance.Invoke("GetTypes", baseType == null ? null : baseType.getJCOInstance(), excludeGlobalTypes);
+            JCObject objGetTypes = (JCObject)retObjectGetTypes;
             return new ICollectionImplementation(objGetTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypes != null ? retObjectGetTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

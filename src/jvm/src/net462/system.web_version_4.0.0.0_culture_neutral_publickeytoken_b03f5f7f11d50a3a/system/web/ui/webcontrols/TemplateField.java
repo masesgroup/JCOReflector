@@ -170,7 +170,7 @@ public class TemplateField extends DataControlField  {
     
     public void ExtractValuesFromCell(IOrderedDictionary dictionary, DataControlFieldCell cell, DataControlRowState rowState, boolean includeReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractValuesFromCell", dictionary == null ? null : dictionary.getJCOInstance(), cell == null ? null : cell.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), includeReadOnly);
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class TemplateField extends DataControlField  {
 
     public void InitializeCell(DataControlFieldCell cell, DataControlCellType cellType, DataControlRowState rowState, int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeCell", cell == null ? null : cell.getJCOInstance(), cellType == null ? null : cellType.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), rowIndex);
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class TemplateField extends DataControlField  {
 
     public void ValidateSupportsCallback() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateSupportsCallback");
         } catch (JCNativeException jcne) {
@@ -204,9 +204,13 @@ public class TemplateField extends DataControlField  {
     
     public boolean getConvertEmptyStringToNull() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertEmptyStringToNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertEmptyStringToNull");
+            retObjectConvertEmptyStringToNull = classInstance.Get("ConvertEmptyStringToNull");
+            return (boolean)retObjectConvertEmptyStringToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertEmptyStringToNull != null ? retObjectConvertEmptyStringToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +218,7 @@ public class TemplateField extends DataControlField  {
 
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertEmptyStringToNull", ConvertEmptyStringToNull);
         } catch (JCNativeException jcne) {
@@ -224,10 +228,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getAlternatingItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingItemTemplate");
+            retObjectAlternatingItemTemplate = classInstance.Get("AlternatingItemTemplate");
+            JCObject val = (JCObject)retObjectAlternatingItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingItemTemplate != null ? retObjectAlternatingItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +243,7 @@ public class TemplateField extends DataControlField  {
 
     public void setAlternatingItemTemplate(ITemplate AlternatingItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternatingItemTemplate", AlternatingItemTemplate == null ? null : AlternatingItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,10 +253,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getEditItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditItemTemplate");
+            retObjectEditItemTemplate = classInstance.Get("EditItemTemplate");
+            JCObject val = (JCObject)retObjectEditItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditItemTemplate != null ? retObjectEditItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +268,7 @@ public class TemplateField extends DataControlField  {
 
     public void setEditItemTemplate(ITemplate EditItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditItemTemplate", EditItemTemplate == null ? null : EditItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,10 +278,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getFooterTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterTemplate");
+            retObjectFooterTemplate = classInstance.Get("FooterTemplate");
+            JCObject val = (JCObject)retObjectFooterTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterTemplate != null ? retObjectFooterTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +293,7 @@ public class TemplateField extends DataControlField  {
 
     public void setFooterTemplate(ITemplate FooterTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterTemplate", FooterTemplate == null ? null : FooterTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,10 +303,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +318,7 @@ public class TemplateField extends DataControlField  {
 
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,10 +328,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getInsertItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertItemTemplate");
+            retObjectInsertItemTemplate = classInstance.Get("InsertItemTemplate");
+            JCObject val = (JCObject)retObjectInsertItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertItemTemplate != null ? retObjectInsertItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +343,7 @@ public class TemplateField extends DataControlField  {
 
     public void setInsertItemTemplate(ITemplate InsertItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertItemTemplate", InsertItemTemplate == null ? null : InsertItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +353,14 @@ public class TemplateField extends DataControlField  {
 
     public ITemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +368,7 @@ public class TemplateField extends DataControlField  {
 
     public void setItemTemplate(ITemplate ItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +378,14 @@ public class TemplateField extends DataControlField  {
 
     public ValidateRequestMode getValidateRequestMode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateRequestMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidateRequestMode");
+            retObjectValidateRequestMode = classInstance.Get("ValidateRequestMode");
+            JCObject val = (JCObject)retObjectValidateRequestMode;
             return new ValidateRequestMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateRequestMode != null ? retObjectValidateRequestMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +393,7 @@ public class TemplateField extends DataControlField  {
 
     public void setValidateRequestMode(ValidateRequestMode ValidateRequestMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateRequestMode", ValidateRequestMode == null ? null : ValidateRequestMode.getJCOInstance());
         } catch (JCNativeException jcne) {

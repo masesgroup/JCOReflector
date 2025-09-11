@@ -162,9 +162,13 @@ public class PipeReader extends NetObject  {
     
     public boolean TryRead(JCORefOut<ReadResult> result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryRead = null;
         try {
-            return (boolean)classInstance.Invoke("TryRead", result.getJCRefOut());
+            retObjectTryRead = classInstance.Invoke("TryRead", result.getJCRefOut());
+            return (boolean)retObjectTryRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryRead != null ? retObjectTryRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class PipeReader extends NetObject  {
 
     public static PipeReader Create(Stream stream, StreamPipeReaderOptions readerOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", stream == null ? null : stream.getJCOInstance(), readerOptions == null ? null : readerOptions.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", stream == null ? null : stream.getJCOInstance(), readerOptions == null ? null : readerOptions.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new PipeReader(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class PipeReader extends NetObject  {
 
     public Stream AsStream(boolean leaveOpen) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsStream = null;
         try {
-            JCObject objAsStream = (JCObject)classInstance.Invoke("AsStream", leaveOpen);
+            retObjectAsStream = classInstance.Invoke("AsStream", leaveOpen);
+            JCObject objAsStream = (JCObject)retObjectAsStream;
             return new Stream(objAsStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsStream != null ? retObjectAsStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class PipeReader extends NetObject  {
 
     public Task CopyToAsync(PipeWriter destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyToAsync = null;
         try {
-            JCObject objCopyToAsync = (JCObject)classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCopyToAsync = classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCopyToAsync = (JCObject)retObjectCopyToAsync;
             return new Task(objCopyToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToAsync != null ? retObjectCopyToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class PipeReader extends NetObject  {
 
     public Task CopyToAsync(Stream destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyToAsync = null;
         try {
-            JCObject objCopyToAsync = (JCObject)classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCopyToAsync = classInstance.Invoke("CopyToAsync", destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCopyToAsync = (JCObject)retObjectCopyToAsync;
             return new Task(objCopyToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToAsync != null ? retObjectCopyToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class PipeReader extends NetObject  {
 
     public ValueTask CompleteAsync(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompleteAsync = null;
         try {
-            JCObject objCompleteAsync = (JCObject)classInstance.Invoke("CompleteAsync", exception == null ? null : exception.getJCOInstance());
+            retObjectCompleteAsync = classInstance.Invoke("CompleteAsync", exception == null ? null : exception.getJCOInstance());
+            JCObject objCompleteAsync = (JCObject)retObjectCompleteAsync;
             return new ValueTask(objCompleteAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompleteAsync != null ? retObjectCompleteAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +251,7 @@ public class PipeReader extends NetObject  {
 
     public void AdvanceTo(SequencePosition consumed, SequencePosition examined) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdvanceTo", consumed == null ? null : consumed.getJCOInstance(), examined == null ? null : examined.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,7 +261,7 @@ public class PipeReader extends NetObject  {
 
     public void AdvanceTo(SequencePosition consumed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdvanceTo", consumed == null ? null : consumed.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +271,7 @@ public class PipeReader extends NetObject  {
 
     public void CancelPendingRead() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelPendingRead");
         } catch (JCNativeException jcne) {
@@ -257,7 +281,7 @@ public class PipeReader extends NetObject  {
 
     public void Complete(NetException exception) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -159,10 +159,14 @@ public class Binder extends NetObject  {
     
     public NetObject ChangeType(NetObject value, NetType type, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectChangeType = classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objChangeType = (JCObject)retObjectChangeType;
             return new NetObject(objChangeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class Binder extends NetObject  {
 
     public FieldInfo BindToField(BindingFlags bindingAttr, FieldInfo[] match, NetObject value, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindToField = null;
         try {
-            JCObject objBindToField = (JCObject)classInstance.Invoke("BindToField", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectBindToField = classInstance.Invoke("BindToField", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objBindToField = (JCObject)retObjectBindToField;
             return new FieldInfo(objBindToField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindToField != null ? retObjectBindToField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class Binder extends NetObject  {
 
     public MethodBase BindToMethod(BindingFlags bindingAttr, MethodBase[] match, JCORefOut<NetObject[]> args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] names, JCORefOut<NetObject> state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindToMethod = null;
         try {
-            JCObject objBindToMethod = (JCObject)classInstance.Invoke("BindToMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), args.getJCRefOut(), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), names, state.getJCRefOut());
+            retObjectBindToMethod = classInstance.Invoke("BindToMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), args.getJCRefOut(), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), names, state.getJCRefOut());
+            JCObject objBindToMethod = (JCObject)retObjectBindToMethod;
             return new MethodBase(objBindToMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindToMethod != null ? retObjectBindToMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class Binder extends NetObject  {
 
     public MethodBase SelectMethod(BindingFlags bindingAttr, MethodBase[] match, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            JCObject objSelectMethod = (JCObject)classInstance.Invoke("SelectMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), toObjectFromArray(types), toObjectFromArray(modifiers));
+            retObjectSelectMethod = classInstance.Invoke("SelectMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), toObjectFromArray(types), toObjectFromArray(modifiers));
+            JCObject objSelectMethod = (JCObject)retObjectSelectMethod;
             return new MethodBase(objSelectMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class Binder extends NetObject  {
 
     public PropertyInfo SelectProperty(BindingFlags bindingAttr, PropertyInfo[] match, NetType returnType, NetType[] indexes, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectProperty = null;
         try {
-            JCObject objSelectProperty = (JCObject)classInstance.Invoke("SelectProperty", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(indexes), toObjectFromArray(modifiers));
+            retObjectSelectProperty = classInstance.Invoke("SelectProperty", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(indexes), toObjectFromArray(modifiers));
+            JCObject objSelectProperty = (JCObject)retObjectSelectProperty;
             return new PropertyInfo(objSelectProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectProperty != null ? retObjectSelectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +234,7 @@ public class Binder extends NetObject  {
 
     public void ReorderArgumentArray(JCORefOut<NetObject[]> args, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReorderArgumentArray", args.getJCRefOut(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {

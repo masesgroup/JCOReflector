@@ -168,10 +168,14 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
     
     public ICollection GetViewNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewNames = null;
         try {
-            JCObject objGetViewNames = (JCObject)classInstance.Invoke("GetViewNames");
+            retObjectGetViewNames = classInstance.Invoke("GetViewNames");
+            JCObject objGetViewNames = (JCObject)retObjectGetViewNames;
             return new ICollectionImplementation(objGetViewNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewNames != null ? retObjectGetViewNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public IList GetList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetList = null;
         try {
-            JCObject objGetList = (JCObject)classInstance.Invoke("GetList");
+            retObjectGetList = classInstance.Invoke("GetList");
+            JCObject objGetList = (JCObject)retObjectGetList;
             return new IListImplementation(objGetList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetList != null ? retObjectGetList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public DataSourceView GetView(java.lang.String viewName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            retObjectGetView = classInstance.Invoke("GetView", viewName);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
     
     public boolean getContainsListCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsListCollection = null;
         try {
-            return (boolean)classInstance.Get("ContainsListCollection");
+            retObjectContainsListCollection = classInstance.Get("ContainsListCollection");
+            return (boolean)retObjectContainsListCollection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContainsListCollection != null ? retObjectContainsListCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +231,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public boolean getShowStartingNode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowStartingNode = null;
         try {
-            return (boolean)classInstance.Get("ShowStartingNode");
+            retObjectShowStartingNode = classInstance.Get("ShowStartingNode");
+            return (boolean)retObjectShowStartingNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowStartingNode != null ? retObjectShowStartingNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +245,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setShowStartingNode(boolean ShowStartingNode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowStartingNode", ShowStartingNode);
         } catch (JCNativeException jcne) {
@@ -235,9 +255,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public boolean getStartFromCurrentNode() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartFromCurrentNode = null;
         try {
-            return (boolean)classInstance.Get("StartFromCurrentNode");
+            retObjectStartFromCurrentNode = classInstance.Get("StartFromCurrentNode");
+            return (boolean)retObjectStartFromCurrentNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStartFromCurrentNode != null ? retObjectStartFromCurrentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +269,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setStartFromCurrentNode(boolean StartFromCurrentNode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartFromCurrentNode", StartFromCurrentNode);
         } catch (JCNativeException jcne) {
@@ -255,9 +279,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public int getStartingNodeOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartingNodeOffset = null;
         try {
-            return (int)classInstance.Get("StartingNodeOffset");
+            retObjectStartingNodeOffset = classInstance.Get("StartingNodeOffset");
+            return (int)retObjectStartingNodeOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartingNodeOffset != null ? retObjectStartingNodeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +293,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setStartingNodeOffset(int StartingNodeOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartingNodeOffset", StartingNodeOffset);
         } catch (JCNativeException jcne) {
@@ -275,9 +303,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public java.lang.String getSiteMapProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSiteMapProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("SiteMapProvider");
+            retObjectSiteMapProvider = classInstance.Get("SiteMapProvider");
+            return (java.lang.String)retObjectSiteMapProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSiteMapProvider != null ? retObjectSiteMapProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +317,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setSiteMapProvider(java.lang.String SiteMapProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SiteMapProvider", SiteMapProvider);
         } catch (JCNativeException jcne) {
@@ -295,9 +327,13 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public java.lang.String getStartingNodeUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartingNodeUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("StartingNodeUrl");
+            retObjectStartingNodeUrl = classInstance.Get("StartingNodeUrl");
+            return (java.lang.String)retObjectStartingNodeUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStartingNodeUrl != null ? retObjectStartingNodeUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +341,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setStartingNodeUrl(java.lang.String StartingNodeUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartingNodeUrl", StartingNodeUrl);
         } catch (JCNativeException jcne) {
@@ -315,10 +351,14 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public SiteMapProvider getProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new SiteMapProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +366,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
 
     public void setProvider(SiteMapProvider Provider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
         } catch (JCNativeException jcne) {

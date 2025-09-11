@@ -163,7 +163,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
     
     public void ExpandSubtree() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.xaml.XamlException, system.NotImplementedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExpandSubtree");
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class TreeViewItem extends HeaderedItemsControl  {
     
     public boolean getIsExpanded() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsExpanded = null;
         try {
-            return (boolean)classInstance.Get("IsExpanded");
+            retObjectIsExpanded = classInstance.Get("IsExpanded");
+            return (boolean)retObjectIsExpanded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsExpanded != null ? retObjectIsExpanded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void setIsExpanded(boolean IsExpanded) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsExpanded", IsExpanded);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public boolean getIsSelected() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelected = null;
         try {
-            return (boolean)classInstance.Get("IsSelected");
+            retObjectIsSelected = classInstance.Get("IsSelected");
+            return (boolean)retObjectIsSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelected != null ? retObjectIsSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void setIsSelected(boolean IsSelected) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSelected", IsSelected);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public boolean getIsSelectionActive() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionActive = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionActive");
+            retObjectIsSelectionActive = classInstance.Get("IsSelectionActive");
+            return (boolean)retObjectIsSelectionActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionActive != null ? retObjectIsSelectionActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void addCollapsed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Collapsed", handler);
         } catch (JCNativeException jcne) {
@@ -242,7 +254,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void removeCollapsed(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Collapsed", handler);
         } catch (JCNativeException jcne) {
@@ -252,7 +264,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void addExpanded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Expanded", handler);
         } catch (JCNativeException jcne) {
@@ -262,7 +274,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void removeExpanded(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Expanded", handler);
         } catch (JCNativeException jcne) {
@@ -272,7 +284,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void addSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -282,7 +294,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void removeSelected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Selected", handler);
         } catch (JCNativeException jcne) {
@@ -292,7 +304,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void addUnselected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Unselected", handler);
         } catch (JCNativeException jcne) {
@@ -302,7 +314,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
 
     public void removeUnselected(RoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Unselected", handler);
         } catch (JCNativeException jcne) {

@@ -156,10 +156,14 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
     
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectBind = classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objBind = (JCObject)retObjectBind;
             return new DynamicMetaObject(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackBinaryOperation = null;
         try {
-            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            retObjectFallbackBinaryOperation = classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackBinaryOperation = (JCObject)retObjectFallbackBinaryOperation;
             return new DynamicMetaObject(objFallbackBinaryOperation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackBinaryOperation != null ? retObjectFallbackBinaryOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackBinaryOperation = null;
         try {
-            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+            retObjectFallbackBinaryOperation = classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+            JCObject objFallbackBinaryOperation = (JCObject)retObjectFallbackBinaryOperation;
             return new DynamicMetaObject(objFallbackBinaryOperation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackBinaryOperation != null ? retObjectFallbackBinaryOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
     
     public ExpressionType getOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
+            retObjectOperation = classInstance.Get("Operation");
+            JCObject val = (JCObject)retObjectOperation;
             return new ExpressionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperation != null ? retObjectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

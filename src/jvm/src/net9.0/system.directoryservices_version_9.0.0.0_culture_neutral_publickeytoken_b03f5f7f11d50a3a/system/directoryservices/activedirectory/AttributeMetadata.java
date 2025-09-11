@@ -161,9 +161,13 @@ public class AttributeMetadata extends NetObject  {
     
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class AttributeMetadata extends NetObject  {
 
     public long getLocalChangeUsn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalChangeUsn = null;
         try {
-            return (long)classInstance.Get("LocalChangeUsn");
+            retObjectLocalChangeUsn = classInstance.Get("LocalChangeUsn");
+            return (long)retObjectLocalChangeUsn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectLocalChangeUsn != null ? retObjectLocalChangeUsn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class AttributeMetadata extends NetObject  {
 
     public long getOriginatingChangeUsn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginatingChangeUsn = null;
         try {
-            return (long)classInstance.Get("OriginatingChangeUsn");
+            retObjectOriginatingChangeUsn = classInstance.Get("OriginatingChangeUsn");
+            return (long)retObjectOriginatingChangeUsn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOriginatingChangeUsn != null ? retObjectOriginatingChangeUsn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class AttributeMetadata extends NetObject  {
 
     public DateTime getLastOriginatingChangeTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastOriginatingChangeTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastOriginatingChangeTime");
+            retObjectLastOriginatingChangeTime = classInstance.Get("LastOriginatingChangeTime");
+            JCObject val = (JCObject)retObjectLastOriginatingChangeTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOriginatingChangeTime != null ? retObjectLastOriginatingChangeTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class AttributeMetadata extends NetObject  {
 
     public Guid getLastOriginatingInvocationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastOriginatingInvocationId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastOriginatingInvocationId");
+            retObjectLastOriginatingInvocationId = classInstance.Get("LastOriginatingInvocationId");
+            JCObject val = (JCObject)retObjectLastOriginatingInvocationId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOriginatingInvocationId != null ? retObjectLastOriginatingInvocationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class AttributeMetadata extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class AttributeMetadata extends NetObject  {
 
     public java.lang.String getOriginatingServer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginatingServer = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginatingServer");
+            retObjectOriginatingServer = classInstance.Get("OriginatingServer");
+            return (java.lang.String)retObjectOriginatingServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginatingServer != null ? retObjectOriginatingServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

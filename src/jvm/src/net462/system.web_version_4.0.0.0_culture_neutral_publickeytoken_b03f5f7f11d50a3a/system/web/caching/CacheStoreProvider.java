@@ -161,9 +161,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
     
     public boolean AddDependent(java.lang.String key, CacheDependency dependency, JCORefOut<DateTime> utcLastUpdated) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDependent = null;
         try {
-            return (boolean)classInstance.Invoke("AddDependent", key, dependency == null ? null : dependency.getJCOInstance(), utcLastUpdated.getJCRefOut());
+            retObjectAddDependent = classInstance.Invoke("AddDependent", key, dependency == null ? null : dependency.getJCOInstance(), utcLastUpdated.getJCRefOut());
+            return (boolean)retObjectAddDependent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAddDependent != null ? retObjectAddDependent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,19 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public long Trim(int percent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrim = null;
         try {
-            return (long)classInstance.Invoke("Trim", percent);
+            retObjectTrim = classInstance.Invoke("Trim", percent);
+            return (long)retObjectTrim;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectTrimNumber = (java.lang.Number)retObjectTrim;
+                return retObjectTrimNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectTrim != null ? retObjectTrim.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +195,14 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public IDictionaryEnumerator GetEnumerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnumerator = null;
         try {
-            JCObject objGetEnumerator = (JCObject)classInstance.Invoke("GetEnumerator");
+            retObjectGetEnumerator = classInstance.Invoke("GetEnumerator");
+            JCObject objGetEnumerator = (JCObject)retObjectGetEnumerator;
             return new IDictionaryEnumeratorImplementation(objGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnumerator != null ? retObjectGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +210,14 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public NetObject Add(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, item == null ? null : item.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", key, item == null ? null : item.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new NetObject(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +225,14 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public NetObject Get(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
+            retObjectGet = classInstance.Invoke("Get", key);
+            JCObject objGet = (JCObject)retObjectGet;
             return new NetObject(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +240,14 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public NetObject Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key);
+            retObjectRemove = classInstance.Invoke("Remove", key);
+            JCObject objRemove = (JCObject)retObjectRemove;
             return new NetObject(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +255,14 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public NetObject Remove(java.lang.String key, CacheItemRemovedReason reason) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", key, reason == null ? null : reason.getJCOInstance());
+            JCObject objRemove = (JCObject)retObjectRemove;
             return new NetObject(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +270,7 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -246,7 +280,7 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public void InitializeNewCacheStoreProvider(java.lang.String name, NameValueCollection config) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +290,7 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public void Insert(java.lang.String key, NetObject item, CacheInsertOptions options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", key, item == null ? null : item.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +300,7 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public void RemoveDependent(java.lang.String key, CacheDependency dependency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveDependent", key, dependency == null ? null : dependency.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +311,7 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -293,9 +327,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
     
     public long getItemCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemCount = null;
         try {
-            return (long)classInstance.Get("ItemCount");
+            retObjectItemCount = classInstance.Get("ItemCount");
+            return (long)retObjectItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectItemCount != null ? retObjectItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +341,13 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
 
     public long getSizeInBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeInBytes = null;
         try {
-            return (long)classInstance.Get("SizeInBytes");
+            retObjectSizeInBytes = classInstance.Get("SizeInBytes");
+            return (long)retObjectSizeInBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSizeInBytes != null ? retObjectSizeInBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

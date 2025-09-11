@@ -199,10 +199,14 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
     
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +214,14 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
 
     public PeerResolver CreatePeerResolver() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePeerResolver = null;
         try {
-            JCObject objCreatePeerResolver = (JCObject)classInstance.Invoke("CreatePeerResolver");
+            retObjectCreatePeerResolver = classInstance.Invoke("CreatePeerResolver");
+            JCObject objCreatePeerResolver = (JCObject)retObjectCreatePeerResolver;
             return new PeerResolver(objCreatePeerResolver);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePeerResolver != null ? retObjectCreatePeerResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +233,14 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
     
     public system.servicemodel.channels.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
 
     public void setBinding(system.servicemodel.channels.Binding Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding == null ? null : Binding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +258,14 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
 
     public EndpointAddress getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            JCObject val = (JCObject)retObjectAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class PeerCustomResolverBindingElement extends PeerResolverBindingElement
 
     public void setAddress(EndpointAddress Address) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address == null ? null : Address.getJCOInstance());
         } catch (JCNativeException jcne) {

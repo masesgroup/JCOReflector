@@ -155,10 +155,14 @@ public class CommonObjectSecurity extends ObjectSecurity  {
     
     public AuthorizationRuleCollection GetAccessRules(boolean includeExplicit, boolean includeInherited, NetType targetType) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAccessRules = null;
         try {
-            JCObject objGetAccessRules = (JCObject)classInstance.Invoke("GetAccessRules", includeExplicit, includeInherited, targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetAccessRules = classInstance.Invoke("GetAccessRules", includeExplicit, includeInherited, targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetAccessRules = (JCObject)retObjectGetAccessRules;
             return new AuthorizationRuleCollection(objGetAccessRules);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessRules != null ? retObjectGetAccessRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class CommonObjectSecurity extends ObjectSecurity  {
 
     public AuthorizationRuleCollection GetAuditRules(boolean includeExplicit, boolean includeInherited, NetType targetType) throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.ArgumentException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAuditRules = null;
         try {
-            JCObject objGetAuditRules = (JCObject)classInstance.Invoke("GetAuditRules", includeExplicit, includeInherited, targetType == null ? null : targetType.getJCOInstance());
+            retObjectGetAuditRules = classInstance.Invoke("GetAuditRules", includeExplicit, includeInherited, targetType == null ? null : targetType.getJCOInstance());
+            JCObject objGetAuditRules = (JCObject)retObjectGetAuditRules;
             return new AuthorizationRuleCollection(objGetAuditRules);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAuditRules != null ? retObjectGetAuditRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

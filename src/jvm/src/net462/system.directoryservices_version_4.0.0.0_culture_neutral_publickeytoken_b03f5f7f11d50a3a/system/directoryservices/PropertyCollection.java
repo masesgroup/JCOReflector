@@ -159,9 +159,13 @@ public class PropertyCollection extends NetObjectEnumerable  {
     
     public boolean Contains(java.lang.String propertyName) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", propertyName);
+            retObjectContains = classInstance.Invoke("Contains", propertyName);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
 
     public void CopyTo(PropertyValueCollection[] array, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -183,7 +187,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public boolean Contains(NetObject key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
 
     /**
@@ -192,7 +196,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void Add(NetObject key, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
 
     /**
@@ -201,7 +205,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
 
     /**
@@ -210,7 +214,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void Remove(NetObject key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
 
     /**
@@ -219,7 +223,7 @@ public class PropertyCollection extends NetObjectEnumerable  {
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 
@@ -228,9 +232,13 @@ public class PropertyCollection extends NetObjectEnumerable  {
     
     public int getCount() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +246,14 @@ public class PropertyCollection extends NetObjectEnumerable  {
 
     public ICollection getPropertyNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyNames");
+            retObjectPropertyNames = classInstance.Get("PropertyNames");
+            JCObject val = (JCObject)retObjectPropertyNames;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyNames != null ? retObjectPropertyNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +261,14 @@ public class PropertyCollection extends NetObjectEnumerable  {
 
     public ICollection getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

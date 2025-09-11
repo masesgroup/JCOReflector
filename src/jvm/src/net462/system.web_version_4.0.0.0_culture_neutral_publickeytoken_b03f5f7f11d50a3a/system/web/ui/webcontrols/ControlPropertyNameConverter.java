@@ -164,9 +164,13 @@ public class ControlPropertyNameConverter extends StringConverter  {
     
     public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesExclusive = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesExclusive = classInstance.Invoke("GetStandardValuesExclusive", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesExclusive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesExclusive != null ? retObjectGetStandardValuesExclusive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class ControlPropertyNameConverter extends StringConverter  {
 
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesSupported = classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesSupported != null ? retObjectGetStandardValuesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

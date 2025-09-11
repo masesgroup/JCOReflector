@@ -156,10 +156,14 @@ public class ConfigurationLocation extends NetObject  {
     
     public Configuration OpenConfiguration() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.threading.AbandonedMutexException, system.OperationCanceledException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.RankException, system.collections.generic.KeyNotFoundException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenConfiguration = null;
         try {
-            JCObject objOpenConfiguration = (JCObject)classInstance.Invoke("OpenConfiguration");
+            retObjectOpenConfiguration = classInstance.Invoke("OpenConfiguration");
+            JCObject objOpenConfiguration = (JCObject)retObjectOpenConfiguration;
             return new Configuration(objOpenConfiguration);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenConfiguration != null ? retObjectOpenConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ConfigurationLocation extends NetObject  {
     
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

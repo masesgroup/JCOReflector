@@ -171,9 +171,13 @@ public class XmlDictionaryReader extends XmlReader  {
     
     public boolean IsLocalName(java.lang.String localName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocalName = null;
         try {
-            return (boolean)classInstance.Invoke("IsLocalName", localName);
+            retObjectIsLocalName = classInstance.Invoke("IsLocalName", localName);
+            return (boolean)retObjectIsLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLocalName != null ? retObjectIsLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean IsLocalName(XmlDictionaryString localName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocalName = null;
         try {
-            return (boolean)classInstance.Invoke("IsLocalName", localName == null ? null : localName.getJCOInstance());
+            retObjectIsLocalName = classInstance.Invoke("IsLocalName", localName == null ? null : localName.getJCOInstance());
+            return (boolean)retObjectIsLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLocalName != null ? retObjectIsLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean IsNamespaceUri(java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNamespaceUri = null;
         try {
-            return (boolean)classInstance.Invoke("IsNamespaceUri", namespaceUri);
+            retObjectIsNamespaceUri = classInstance.Invoke("IsNamespaceUri", namespaceUri);
+            return (boolean)retObjectIsNamespaceUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNamespaceUri != null ? retObjectIsNamespaceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean IsNamespaceUri(XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNamespaceUri = null;
         try {
-            return (boolean)classInstance.Invoke("IsNamespaceUri", namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectIsNamespaceUri = classInstance.Invoke("IsNamespaceUri", namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            return (boolean)retObjectIsNamespaceUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNamespaceUri != null ? retObjectIsNamespaceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +227,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean IsStartArray(JCORefOut<NetType> type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartArray = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartArray", type.getJCRefOut());
+            retObjectIsStartArray = classInstance.Invoke("IsStartArray", type.getJCRefOut());
+            return (boolean)retObjectIsStartArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartArray != null ? retObjectIsStartArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +241,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStartElement = null;
         try {
-            return (boolean)classInstance.Invoke("IsStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectIsStartElement = classInstance.Invoke("IsStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            return (boolean)retObjectIsStartElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsStartElement != null ? retObjectIsStartElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +255,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean ReadElementContentAsBoolean() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("ReadElementContentAsBoolean");
+            retObjectReadElementContentAsBoolean = classInstance.Invoke("ReadElementContentAsBoolean");
+            return (boolean)retObjectReadElementContentAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadElementContentAsBoolean != null ? retObjectReadElementContentAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +269,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean TryGetArrayLength(JCORefOut<java.util.concurrent.atomic.AtomicInteger> count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetArrayLength = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetArrayLength", count.getJCRefOut());
+            retObjectTryGetArrayLength = classInstance.Invoke("TryGetArrayLength", count.getJCRefOut());
+            return (boolean)retObjectTryGetArrayLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetArrayLength != null ? retObjectTryGetArrayLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +283,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean TryGetBase64ContentLength(JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetBase64ContentLength = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetBase64ContentLength", length.getJCRefOut());
+            retObjectTryGetBase64ContentLength = classInstance.Invoke("TryGetBase64ContentLength", length.getJCRefOut());
+            return (boolean)retObjectTryGetBase64ContentLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetBase64ContentLength != null ? retObjectTryGetBase64ContentLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +297,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean TryGetLocalNameAsDictionaryString(JCORefOut<XmlDictionaryString> localName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetLocalNameAsDictionaryString = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetLocalNameAsDictionaryString", localName.getJCRefOut());
+            retObjectTryGetLocalNameAsDictionaryString = classInstance.Invoke("TryGetLocalNameAsDictionaryString", localName.getJCRefOut());
+            return (boolean)retObjectTryGetLocalNameAsDictionaryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetLocalNameAsDictionaryString != null ? retObjectTryGetLocalNameAsDictionaryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +311,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean TryGetNamespaceUriAsDictionaryString(JCORefOut<XmlDictionaryString> namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetNamespaceUriAsDictionaryString = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetNamespaceUriAsDictionaryString", namespaceUri.getJCRefOut());
+            retObjectTryGetNamespaceUriAsDictionaryString = classInstance.Invoke("TryGetNamespaceUriAsDictionaryString", namespaceUri.getJCRefOut());
+            return (boolean)retObjectTryGetNamespaceUriAsDictionaryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetNamespaceUriAsDictionaryString != null ? retObjectTryGetNamespaceUriAsDictionaryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +325,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean TryGetValueAsDictionaryString(JCORefOut<XmlDictionaryString> value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValueAsDictionaryString = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetValueAsDictionaryString", value.getJCRefOut());
+            retObjectTryGetValueAsDictionaryString = classInstance.Invoke("TryGetValueAsDictionaryString", value.getJCRefOut());
+            return (boolean)retObjectTryGetValueAsDictionaryString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValueAsDictionaryString != null ? retObjectTryGetValueAsDictionaryString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +339,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean[] ReadBooleanArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBooleanArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBooleanArray", localName, namespaceUri);
+            retObjectReadBooleanArray = classInstance.Invoke("ReadBooleanArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadBooleanArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -303,6 +353,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadBooleanArray] = (boolean)resultingArrayList.get(indexReadBooleanArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadBooleanArray != null ? retObjectReadBooleanArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +362,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public boolean[] ReadBooleanArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadBooleanArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBooleanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadBooleanArray = classInstance.Invoke("ReadBooleanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadBooleanArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -322,6 +376,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadBooleanArray] = (boolean)resultingArrayList.get(indexReadBooleanArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadBooleanArray != null ? retObjectReadBooleanArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +385,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public byte[] ReadContentAsBase64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadContentAsBase64");
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64");
+            JCObject resultingObjects = (JCObject)retObjectReadContentAsBase64;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -341,6 +399,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadContentAsBase64] = (byte)resultingArrayList.get(indexReadContentAsBase64);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +408,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public byte[] ReadContentAsBinHex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadContentAsBinHex");
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex");
+            JCObject resultingObjects = (JCObject)retObjectReadContentAsBinHex;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -360,6 +422,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadContentAsBinHex] = (byte)resultingArrayList.get(indexReadContentAsBinHex);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +431,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public byte[] ReadElementContentAsBase64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBase64 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadElementContentAsBase64");
+            retObjectReadElementContentAsBase64 = classInstance.Invoke("ReadElementContentAsBase64");
+            JCObject resultingObjects = (JCObject)retObjectReadElementContentAsBase64;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -379,6 +445,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadElementContentAsBase64] = (byte)resultingArrayList.get(indexReadElementContentAsBase64);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadElementContentAsBase64 != null ? retObjectReadElementContentAsBase64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +454,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public byte[] ReadElementContentAsBinHex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBinHex = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadElementContentAsBinHex");
+            retObjectReadElementContentAsBinHex = classInstance.Invoke("ReadElementContentAsBinHex");
+            JCObject resultingObjects = (JCObject)retObjectReadElementContentAsBinHex;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -398,6 +468,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadElementContentAsBinHex] = (byte)resultingArrayList.get(indexReadElementContentAsBinHex);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectReadElementContentAsBinHex != null ? retObjectReadElementContentAsBinHex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,9 +477,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public double ReadElementContentAsDouble() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDouble = null;
         try {
-            return (double)classInstance.Invoke("ReadElementContentAsDouble");
+            retObjectReadElementContentAsDouble = classInstance.Invoke("ReadElementContentAsDouble");
+            return (double)retObjectReadElementContentAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsDoubleNumber = (java.lang.Number)retObjectReadElementContentAsDouble;
+                return retObjectReadElementContentAsDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsDouble != null ? retObjectReadElementContentAsDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +497,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public double[] ReadDoubleArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDoubleArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDoubleArray", localName, namespaceUri);
+            retObjectReadDoubleArray = classInstance.Invoke("ReadDoubleArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadDoubleArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -427,6 +511,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadDoubleArray] = (double)resultingArrayList.get(indexReadDoubleArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectReadDoubleArray != null ? retObjectReadDoubleArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,10 +520,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public double[] ReadDoubleArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDoubleArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDoubleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadDoubleArray = classInstance.Invoke("ReadDoubleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadDoubleArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -446,6 +534,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadDoubleArray] = (double)resultingArrayList.get(indexReadDoubleArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectReadDoubleArray != null ? retObjectReadDoubleArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +543,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public short[] ReadInt16Array(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt16Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt16Array", localName, namespaceUri);
+            retObjectReadInt16Array = classInstance.Invoke("ReadInt16Array", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadInt16Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -465,6 +557,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt16Array] = (short)resultingArrayList.get(indexReadInt16Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectReadInt16Array != null ? retObjectReadInt16Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +566,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public short[] ReadInt16Array(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt16Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt16Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadInt16Array = classInstance.Invoke("ReadInt16Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadInt16Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -484,6 +580,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt16Array] = (short)resultingArrayList.get(indexReadInt16Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectReadInt16Array != null ? retObjectReadInt16Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,9 +589,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int IndexOfLocalName(java.lang.String[] localNames, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOfLocalName = null;
         try {
-            return (int)classInstance.Invoke("IndexOfLocalName", localNames, namespaceUri);
+            retObjectIndexOfLocalName = classInstance.Invoke("IndexOfLocalName", localNames, namespaceUri);
+            return (int)retObjectIndexOfLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfLocalNameNumber = (java.lang.Number)retObjectIndexOfLocalName;
+                return retObjectIndexOfLocalNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOfLocalName != null ? retObjectIndexOfLocalName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +609,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int IndexOfLocalName(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOfLocalName = null;
         try {
-            return (int)classInstance.Invoke("IndexOfLocalName", dupParam0.getJCRefOut(), dupParam1);
+            retObjectIndexOfLocalName = classInstance.Invoke("IndexOfLocalName", dupParam0.getJCRefOut(), dupParam1);
+            return (int)retObjectIndexOfLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfLocalNameNumber = (java.lang.Number)retObjectIndexOfLocalName;
+                return retObjectIndexOfLocalNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOfLocalName != null ? retObjectIndexOfLocalName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,9 +629,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int IndexOfLocalName(XmlDictionaryString[] localNames, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndexOfLocalName = null;
         try {
-            return (int)classInstance.Invoke("IndexOfLocalName", toObjectFromArray(localNames), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectIndexOfLocalName = classInstance.Invoke("IndexOfLocalName", toObjectFromArray(localNames), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            return (int)retObjectIndexOfLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfLocalNameNumber = (java.lang.Number)retObjectIndexOfLocalName;
+                return retObjectIndexOfLocalNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOfLocalName != null ? retObjectIndexOfLocalName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,9 +649,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,9 +669,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectReadArray = classInstance.Invoke("ReadArray", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,9 +689,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, double[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,9 +709,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, short[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,9 +729,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, int[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,9 +749,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, long[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,9 +769,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, Single[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,9 +789,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,9 +809,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,9 +829,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,9 +849,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(java.lang.String localName, java.lang.String namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName, namespaceUri, toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,9 +869,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,9 +889,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString dupParam0, XmlDictionaryString dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectReadArray = classInstance.Invoke("ReadArray", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,9 +909,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, double[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,9 +929,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, short[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -671,9 +949,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, int[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,9 +969,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, long[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,9 +989,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, Single[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,9 +1009,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -711,9 +1029,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,9 +1049,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -731,9 +1069,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadArray = null;
         try {
-            return (int)classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            retObjectReadArray = classInstance.Invoke("ReadArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
+            return (int)retObjectReadArray;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadArrayNumber = (java.lang.Number)retObjectReadArray;
+                return retObjectReadArrayNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadArray != null ? retObjectReadArray.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -741,9 +1089,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadContentAsChars(char[] chars, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsChars = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsChars", chars, offset, count);
+            retObjectReadContentAsChars = classInstance.Invoke("ReadContentAsChars", chars, offset, count);
+            return (int)retObjectReadContentAsChars;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsCharsNumber = (java.lang.Number)retObjectReadContentAsChars;
+                return retObjectReadContentAsCharsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsChars != null ? retObjectReadContentAsChars.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -751,9 +1109,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadContentAsChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsChars = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsChars = classInstance.Invoke("ReadContentAsChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsChars;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsCharsNumber = (java.lang.Number)retObjectReadContentAsChars;
+                return retObjectReadContentAsCharsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsChars != null ? retObjectReadContentAsChars.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,9 +1129,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadElementContentAsInt() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsInt = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsInt");
+            retObjectReadElementContentAsInt = classInstance.Invoke("ReadElementContentAsInt");
+            return (int)retObjectReadElementContentAsInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsIntNumber = (java.lang.Number)retObjectReadElementContentAsInt;
+                return retObjectReadElementContentAsIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsInt != null ? retObjectReadElementContentAsInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -771,9 +1149,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadValueAsBase64(byte[] buffer, int offset, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadValueAsBase64", buffer, offset, count);
+            retObjectReadValueAsBase64 = classInstance.Invoke("ReadValueAsBase64", buffer, offset, count);
+            return (int)retObjectReadValueAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueAsBase64Number = (java.lang.Number)retObjectReadValueAsBase64;
+                return retObjectReadValueAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadValueAsBase64 != null ? retObjectReadValueAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,9 +1169,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int ReadValueAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadValueAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadValueAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadValueAsBase64 = classInstance.Invoke("ReadValueAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadValueAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadValueAsBase64Number = (java.lang.Number)retObjectReadValueAsBase64;
+                return retObjectReadValueAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadValueAsBase64 != null ? retObjectReadValueAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -791,10 +1189,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int[] ReadInt32Array(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt32Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt32Array", localName, namespaceUri);
+            retObjectReadInt32Array = classInstance.Invoke("ReadInt32Array", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadInt32Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -803,6 +1203,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt32Array] = (int)resultingArrayList.get(indexReadInt32Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReadInt32Array != null ? retObjectReadInt32Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -810,10 +1212,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public int[] ReadInt32Array(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt32Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt32Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadInt32Array = classInstance.Invoke("ReadInt32Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadInt32Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -822,6 +1226,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt32Array] = (int)resultingArrayList.get(indexReadInt32Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReadInt32Array != null ? retObjectReadInt32Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -829,9 +1235,19 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public long ReadElementContentAsLong() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsLong = null;
         try {
-            return (long)classInstance.Invoke("ReadElementContentAsLong");
+            retObjectReadElementContentAsLong = classInstance.Invoke("ReadElementContentAsLong");
+            return (long)retObjectReadElementContentAsLong;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsLongNumber = (java.lang.Number)retObjectReadElementContentAsLong;
+                return retObjectReadElementContentAsLongNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsLong != null ? retObjectReadElementContentAsLong.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -839,10 +1255,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public long[] ReadInt64Array(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt64Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt64Array", localName, namespaceUri);
+            retObjectReadInt64Array = classInstance.Invoke("ReadInt64Array", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadInt64Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -851,6 +1269,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt64Array] = (long)resultingArrayList.get(indexReadInt64Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReadInt64Array != null ? retObjectReadInt64Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -858,10 +1278,12 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public long[] ReadInt64Array(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadInt64Array = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt64Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadInt64Array = classInstance.Invoke("ReadInt64Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadInt64Array;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -870,6 +1292,8 @@ public class XmlDictionaryReader extends XmlReader  {
 				resultingArray[indexReadInt64Array] = (long)resultingArrayList.get(indexReadInt64Array);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReadInt64Array != null ? retObjectReadInt64Array.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -877,10 +1301,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Single ReadContentAsFloat() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsFloat = null;
         try {
-            JCObject objReadContentAsFloat = (JCObject)classInstance.Invoke("ReadContentAsFloat");
+            retObjectReadContentAsFloat = classInstance.Invoke("ReadContentAsFloat");
+            JCObject objReadContentAsFloat = (JCObject)retObjectReadContentAsFloat;
             return new Single(objReadContentAsFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsFloat != null ? retObjectReadContentAsFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -888,10 +1316,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Single ReadElementContentAsFloat() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsFloat = null;
         try {
-            JCObject objReadElementContentAsFloat = (JCObject)classInstance.Invoke("ReadElementContentAsFloat");
+            retObjectReadElementContentAsFloat = classInstance.Invoke("ReadElementContentAsFloat");
+            JCObject objReadElementContentAsFloat = (JCObject)retObjectReadElementContentAsFloat;
             return new Single(objReadElementContentAsFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsFloat != null ? retObjectReadElementContentAsFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -899,16 +1331,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Single[] ReadSingleArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSingleArray = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadSingleArray", localName, namespaceUri);
+            retObjectReadSingleArray = classInstance.Invoke("ReadSingleArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadSingleArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSingleArray != null ? retObjectReadSingleArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -916,16 +1352,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Single[] ReadSingleArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadSingleArray = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadSingleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadSingleArray = classInstance.Invoke("ReadSingleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadSingleArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadSingleArray != null ? retObjectReadSingleArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -933,10 +1373,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public DateTime ReadElementContentAsDateTime() throws Throwable, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDateTime = null;
         try {
-            JCObject objReadElementContentAsDateTime = (JCObject)classInstance.Invoke("ReadElementContentAsDateTime");
+            retObjectReadElementContentAsDateTime = classInstance.Invoke("ReadElementContentAsDateTime");
+            JCObject objReadElementContentAsDateTime = (JCObject)retObjectReadElementContentAsDateTime;
             return new DateTime(objReadElementContentAsDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDateTime != null ? retObjectReadElementContentAsDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -944,16 +1388,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public DateTime[] ReadDateTimeArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDateTimeArray = null;
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDateTimeArray", localName, namespaceUri);
+            retObjectReadDateTimeArray = classInstance.Invoke("ReadDateTimeArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadDateTimeArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDateTimeArray != null ? retObjectReadDateTimeArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -961,16 +1409,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public DateTime[] ReadDateTimeArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDateTimeArray = null;
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDateTimeArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadDateTimeArray = classInstance.Invoke("ReadDateTimeArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadDateTimeArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDateTimeArray != null ? retObjectReadDateTimeArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -978,10 +1430,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Decimal ReadContentAsDecimal() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsDecimal = null;
         try {
-            JCObject objReadContentAsDecimal = (JCObject)classInstance.Invoke("ReadContentAsDecimal");
+            retObjectReadContentAsDecimal = classInstance.Invoke("ReadContentAsDecimal");
+            JCObject objReadContentAsDecimal = (JCObject)retObjectReadContentAsDecimal;
             return new Decimal(objReadContentAsDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsDecimal != null ? retObjectReadContentAsDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -989,10 +1445,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Decimal ReadElementContentAsDecimal() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsDecimal = null;
         try {
-            JCObject objReadElementContentAsDecimal = (JCObject)classInstance.Invoke("ReadElementContentAsDecimal");
+            retObjectReadElementContentAsDecimal = classInstance.Invoke("ReadElementContentAsDecimal");
+            JCObject objReadElementContentAsDecimal = (JCObject)retObjectReadElementContentAsDecimal;
             return new Decimal(objReadElementContentAsDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsDecimal != null ? retObjectReadElementContentAsDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1000,16 +1460,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Decimal[] ReadDecimalArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDecimalArray = null;
         try {
             ArrayList<Decimal> resultingArrayList = new ArrayList<Decimal>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDecimalArray", localName, namespaceUri);
+            retObjectReadDecimalArray = classInstance.Invoke("ReadDecimalArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadDecimalArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Decimal(resultingObject));
             }
             Decimal[] resultingArray = new Decimal[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDecimalArray != null ? retObjectReadDecimalArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1017,16 +1481,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Decimal[] ReadDecimalArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDecimalArray = null;
         try {
             ArrayList<Decimal> resultingArrayList = new ArrayList<Decimal>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDecimalArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadDecimalArray = classInstance.Invoke("ReadDecimalArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadDecimalArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Decimal(resultingObject));
             }
             Decimal[] resultingArray = new Decimal[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDecimalArray != null ? retObjectReadDecimalArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1034,10 +1502,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Guid ReadContentAsGuid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsGuid = null;
         try {
-            JCObject objReadContentAsGuid = (JCObject)classInstance.Invoke("ReadContentAsGuid");
+            retObjectReadContentAsGuid = classInstance.Invoke("ReadContentAsGuid");
+            JCObject objReadContentAsGuid = (JCObject)retObjectReadContentAsGuid;
             return new Guid(objReadContentAsGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsGuid != null ? retObjectReadContentAsGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1045,10 +1517,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Guid ReadElementContentAsGuid() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsGuid = null;
         try {
-            JCObject objReadElementContentAsGuid = (JCObject)classInstance.Invoke("ReadElementContentAsGuid");
+            retObjectReadElementContentAsGuid = classInstance.Invoke("ReadElementContentAsGuid");
+            JCObject objReadElementContentAsGuid = (JCObject)retObjectReadElementContentAsGuid;
             return new Guid(objReadElementContentAsGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsGuid != null ? retObjectReadElementContentAsGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1056,16 +1532,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Guid[] ReadGuidArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadGuidArray = null;
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadGuidArray", localName, namespaceUri);
+            retObjectReadGuidArray = classInstance.Invoke("ReadGuidArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadGuidArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadGuidArray != null ? retObjectReadGuidArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,16 +1553,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public Guid[] ReadGuidArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadGuidArray = null;
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadGuidArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadGuidArray = classInstance.Invoke("ReadGuidArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadGuidArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadGuidArray != null ? retObjectReadGuidArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1090,10 +1574,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public NetObject ReadContentAs(NetType type, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.xml.XmlException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAs = null;
         try {
-            JCObject objReadContentAs = (JCObject)classInstance.Invoke("ReadContentAs", type == null ? null : type.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            retObjectReadContentAs = classInstance.Invoke("ReadContentAs", type == null ? null : type.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objReadContentAs = (JCObject)retObjectReadContentAs;
             return new NetObject(objReadContentAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAs != null ? retObjectReadContentAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1101,9 +1589,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String GetAttribute(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1111,9 +1603,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String ReadContentAsString() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadContentAsString");
+            retObjectReadContentAsString = classInstance.Invoke("ReadContentAsString");
+            return (java.lang.String)retObjectReadContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadContentAsString != null ? retObjectReadContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1121,9 +1617,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String ReadContentAsString(java.lang.String[] strings, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadContentAsString", strings, index.getJCRefOut());
+            retObjectReadContentAsString = classInstance.Invoke("ReadContentAsString", strings, index.getJCRefOut());
+            return (java.lang.String)retObjectReadContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadContentAsString != null ? retObjectReadContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1131,9 +1631,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String ReadContentAsString(XmlDictionaryString[] strings, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadContentAsString", toObjectFromArray(strings), index.getJCRefOut());
+            retObjectReadContentAsString = classInstance.Invoke("ReadContentAsString", toObjectFromArray(strings), index.getJCRefOut());
+            return (java.lang.String)retObjectReadContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadContentAsString != null ? retObjectReadContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1141,9 +1645,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String ReadElementContentAsString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadElementContentAsString");
+            retObjectReadElementContentAsString = classInstance.Invoke("ReadElementContentAsString");
+            return (java.lang.String)retObjectReadElementContentAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadElementContentAsString != null ? retObjectReadElementContentAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1151,9 +1659,13 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public java.lang.String ReadString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadString");
+            retObjectReadString = classInstance.Invoke("ReadString");
+            return (java.lang.String)retObjectReadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadString != null ? retObjectReadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1161,10 +1673,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public TimeSpan ReadContentAsTimeSpan() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsTimeSpan = null;
         try {
-            JCObject objReadContentAsTimeSpan = (JCObject)classInstance.Invoke("ReadContentAsTimeSpan");
+            retObjectReadContentAsTimeSpan = classInstance.Invoke("ReadContentAsTimeSpan");
+            JCObject objReadContentAsTimeSpan = (JCObject)retObjectReadContentAsTimeSpan;
             return new TimeSpan(objReadContentAsTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsTimeSpan != null ? retObjectReadContentAsTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1172,10 +1688,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public TimeSpan ReadElementContentAsTimeSpan() throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsTimeSpan = null;
         try {
-            JCObject objReadElementContentAsTimeSpan = (JCObject)classInstance.Invoke("ReadElementContentAsTimeSpan");
+            retObjectReadElementContentAsTimeSpan = classInstance.Invoke("ReadElementContentAsTimeSpan");
+            JCObject objReadElementContentAsTimeSpan = (JCObject)retObjectReadElementContentAsTimeSpan;
             return new TimeSpan(objReadElementContentAsTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsTimeSpan != null ? retObjectReadElementContentAsTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1183,16 +1703,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public TimeSpan[] ReadTimeSpanArray(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadTimeSpanArray = null;
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadTimeSpanArray", localName, namespaceUri);
+            retObjectReadTimeSpanArray = classInstance.Invoke("ReadTimeSpanArray", localName, namespaceUri);
+            JCObject resultingObjects = (JCObject)retObjectReadTimeSpanArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadTimeSpanArray != null ? retObjectReadTimeSpanArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1200,16 +1724,20 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public TimeSpan[] ReadTimeSpanArray(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadTimeSpanArray = null;
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadTimeSpanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            retObjectReadTimeSpanArray = classInstance.Invoke("ReadTimeSpanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectReadTimeSpanArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadTimeSpanArray != null ? retObjectReadTimeSpanArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1217,10 +1745,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public UniqueId ReadContentAsUniqueId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsUniqueId = null;
         try {
-            JCObject objReadContentAsUniqueId = (JCObject)classInstance.Invoke("ReadContentAsUniqueId");
+            retObjectReadContentAsUniqueId = classInstance.Invoke("ReadContentAsUniqueId");
+            JCObject objReadContentAsUniqueId = (JCObject)retObjectReadContentAsUniqueId;
             return new UniqueId(objReadContentAsUniqueId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadContentAsUniqueId != null ? retObjectReadContentAsUniqueId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1228,10 +1760,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public UniqueId ReadElementContentAsUniqueId() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsUniqueId = null;
         try {
-            JCObject objReadElementContentAsUniqueId = (JCObject)classInstance.Invoke("ReadElementContentAsUniqueId");
+            retObjectReadElementContentAsUniqueId = classInstance.Invoke("ReadElementContentAsUniqueId");
+            JCObject objReadElementContentAsUniqueId = (JCObject)retObjectReadElementContentAsUniqueId;
             return new UniqueId(objReadElementContentAsUniqueId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadElementContentAsUniqueId != null ? retObjectReadElementContentAsUniqueId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1239,10 +1775,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1250,10 +1790,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1261,10 +1805,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1272,10 +1820,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1283,10 +1835,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", buffer, offset, count, dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1294,10 +1850,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1305,10 +1865,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1316,10 +1880,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1327,10 +1895,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(byte[] buffer, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1338,10 +1910,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1349,10 +1925,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance(), onClose);
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1360,10 +1940,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1371,10 +1955,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1382,10 +1970,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateBinaryReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryReader = null;
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateBinaryReader = classType.Invoke("CreateBinaryReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)retObjectCreateBinaryReader;
             return new XmlDictionaryReader(objCreateBinaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryReader != null ? retObjectCreateBinaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1393,10 +1985,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateDictionaryReader(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDictionaryReader = null;
         try {
-            JCObject objCreateDictionaryReader = (JCObject)classType.Invoke("CreateDictionaryReader", reader == null ? null : reader.getJCOInstance());
+            retObjectCreateDictionaryReader = classType.Invoke("CreateDictionaryReader", reader == null ? null : reader.getJCOInstance());
+            JCObject objCreateDictionaryReader = (JCObject)retObjectCreateDictionaryReader;
             return new XmlDictionaryReader(objCreateDictionaryReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDictionaryReader != null ? retObjectCreateDictionaryReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1404,10 +2000,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1415,10 +2015,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1426,10 +2030,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(byte[] buffer, int offset, int count, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance(), maxBufferSize, onClose);
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance(), maxBufferSize, onClose);
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1437,10 +2045,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1448,10 +2060,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(byte[] buffer, int offset, int count, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1459,10 +2075,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1470,10 +2090,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(byte[] buffer, int offset, int count, Encoding[] encodings, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", buffer, offset, count, toObjectFromArray(encodings), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1481,10 +2105,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1492,10 +2120,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1503,10 +2135,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(Stream stream, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance(), maxBufferSize, onClose);
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance(), maxBufferSize, onClose);
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1514,10 +2150,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(Stream stream, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), contentType, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1525,10 +2165,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateMtomReader(Stream stream, Encoding[] encodings, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomReader = null;
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateMtomReader = classType.Invoke("CreateMtomReader", stream == null ? null : stream.getJCOInstance(), toObjectFromArray(encodings), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)retObjectCreateMtomReader;
             return new XmlDictionaryReader(objCreateMtomReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomReader != null ? retObjectCreateMtomReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1536,10 +2180,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(byte[] buffer, int offset, int count, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", buffer, offset, count, encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1547,10 +2195,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1558,10 +2210,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(byte[] buffer, int offset, int count, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", buffer, offset, count, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1569,10 +2225,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1580,10 +2240,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(byte[] buffer, XmlDictionaryReaderQuotas quotas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", buffer, quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1591,10 +2255,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1602,10 +2270,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(Stream stream, Encoding encoding, XmlDictionaryReaderQuotas quotas, OnXmlDictionaryReaderClose onClose) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance(), onClose);
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1613,10 +2285,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public static XmlDictionaryReader CreateTextReader(Stream stream, XmlDictionaryReaderQuotas quotas) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.io.IOException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextReader = null;
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            retObjectCreateTextReader = classType.Invoke("CreateTextReader", stream == null ? null : stream.getJCOInstance(), quotas == null ? null : quotas.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)retObjectCreateTextReader;
             return new XmlDictionaryReader(objCreateTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextReader != null ? retObjectCreateTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1624,7 +2300,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void EndCanonicalization() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCanonicalization");
         } catch (JCNativeException jcne) {
@@ -1634,7 +2310,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void GetNonAtomizedNames(JCORefOut localName, JCORefOut namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonAtomizedNames", localName.getJCRefOut(), namespaceUri.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1644,7 +2320,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void MoveToStartElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToStartElement");
         } catch (JCNativeException jcne) {
@@ -1654,7 +2330,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void MoveToStartElement(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToStartElement", localName, namespaceUri);
         } catch (JCNativeException jcne) {
@@ -1664,7 +2340,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void MoveToStartElement(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToStartElement", name);
         } catch (JCNativeException jcne) {
@@ -1674,7 +2350,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void MoveToStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1684,7 +2360,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadContentAsQualifiedName(JCORefOut localName, JCORefOut namespaceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadContentAsQualifiedName", localName.getJCRefOut(), namespaceUri.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1694,7 +2370,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadFullStartElement() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadFullStartElement");
         } catch (JCNativeException jcne) {
@@ -1704,7 +2380,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadFullStartElement(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadFullStartElement", localName, namespaceUri);
         } catch (JCNativeException jcne) {
@@ -1714,7 +2390,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadFullStartElement(java.lang.String name) throws Throwable, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadFullStartElement", name);
         } catch (JCNativeException jcne) {
@@ -1724,7 +2400,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadFullStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadFullStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1734,7 +2410,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void ReadStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1744,7 +2420,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void StartCanonicalization(Stream stream, boolean includeComments, java.lang.String[] inclusivePrefixes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartCanonicalization", stream == null ? null : stream.getJCOInstance(), includeComments, inclusivePrefixes);
         } catch (JCNativeException jcne) {
@@ -1754,7 +2430,7 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1768,9 +2444,13 @@ public class XmlDictionaryReader extends XmlReader  {
     
     public boolean getCanCanonicalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCanonicalize = null;
         try {
-            return (boolean)classInstance.Get("CanCanonicalize");
+            retObjectCanCanonicalize = classInstance.Get("CanCanonicalize");
+            return (boolean)retObjectCanCanonicalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCanonicalize != null ? retObjectCanCanonicalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1778,10 +2458,14 @@ public class XmlDictionaryReader extends XmlReader  {
 
     public XmlDictionaryReaderQuotas getQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Quotas");
+            retObjectQuotas = classInstance.Get("Quotas");
+            JCObject val = (JCObject)retObjectQuotas;
             return new XmlDictionaryReaderQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuotas != null ? retObjectQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

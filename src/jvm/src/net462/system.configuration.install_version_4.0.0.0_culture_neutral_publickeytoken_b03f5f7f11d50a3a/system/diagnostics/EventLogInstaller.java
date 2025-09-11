@@ -167,9 +167,13 @@ public class EventLogInstaller extends ComponentInstaller  {
     
     public boolean IsEquivalentInstaller(ComponentInstaller otherInstaller) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEquivalentInstaller = null;
         try {
-            return (boolean)classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            retObjectIsEquivalentInstaller = classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            return (boolean)retObjectIsEquivalentInstaller;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEquivalentInstaller != null ? retObjectIsEquivalentInstaller.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void CopyFromComponent(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void Install(IDictionary stateSaver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Install", stateSaver == null ? null : stateSaver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void Rollback(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +211,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void Uninstall(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.SystemException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninstall", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,9 +225,13 @@ public class EventLogInstaller extends ComponentInstaller  {
     
     public int getCategoryCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryCount = null;
         try {
-            return (int)classInstance.Get("CategoryCount");
+            retObjectCategoryCount = classInstance.Get("CategoryCount");
+            return (int)retObjectCategoryCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCategoryCount != null ? retObjectCategoryCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +239,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setCategoryCount(int CategoryCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryCount", CategoryCount);
         } catch (JCNativeException jcne) {
@@ -241,10 +249,14 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public UninstallAction getUninstallAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUninstallAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UninstallAction");
+            retObjectUninstallAction = classInstance.Get("UninstallAction");
+            JCObject val = (JCObject)retObjectUninstallAction;
             return new UninstallAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUninstallAction != null ? retObjectUninstallAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setUninstallAction(UninstallAction UninstallAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UninstallAction", UninstallAction == null ? null : UninstallAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,9 +274,13 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public java.lang.String getCategoryResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryResourceFile");
+            retObjectCategoryResourceFile = classInstance.Get("CategoryResourceFile");
+            return (java.lang.String)retObjectCategoryResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryResourceFile != null ? retObjectCategoryResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +288,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setCategoryResourceFile(java.lang.String CategoryResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryResourceFile", CategoryResourceFile);
         } catch (JCNativeException jcne) {
@@ -282,9 +298,13 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public java.lang.String getLog() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            return (java.lang.String)classInstance.Get("Log");
+            retObjectLog = classInstance.Get("Log");
+            return (java.lang.String)retObjectLog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +312,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setLog(java.lang.String Log) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Log", Log);
         } catch (JCNativeException jcne) {
@@ -302,9 +322,13 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public java.lang.String getMessageResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("MessageResourceFile");
+            retObjectMessageResourceFile = classInstance.Get("MessageResourceFile");
+            return (java.lang.String)retObjectMessageResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageResourceFile != null ? retObjectMessageResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +336,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setMessageResourceFile(java.lang.String MessageResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageResourceFile", MessageResourceFile);
         } catch (JCNativeException jcne) {
@@ -322,9 +346,13 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public java.lang.String getParameterResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterResourceFile");
+            retObjectParameterResourceFile = classInstance.Get("ParameterResourceFile");
+            return (java.lang.String)retObjectParameterResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterResourceFile != null ? retObjectParameterResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +360,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setParameterResourceFile(java.lang.String ParameterResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterResourceFile", ParameterResourceFile);
         } catch (JCNativeException jcne) {
@@ -342,9 +370,13 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +384,7 @@ public class EventLogInstaller extends ComponentInstaller  {
 
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {

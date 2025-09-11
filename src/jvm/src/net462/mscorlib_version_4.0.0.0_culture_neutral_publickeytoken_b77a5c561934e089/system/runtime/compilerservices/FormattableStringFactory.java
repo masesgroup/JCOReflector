@@ -154,10 +154,14 @@ public class FormattableStringFactory extends NetObject  {
     
     public static FormattableString Create(java.lang.String format, NetObject... arguments) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", format, toObjectFromArray(arguments));
+            retObjectCreate = classType.Invoke("Create", format, toObjectFromArray(arguments));
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new FormattableString(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

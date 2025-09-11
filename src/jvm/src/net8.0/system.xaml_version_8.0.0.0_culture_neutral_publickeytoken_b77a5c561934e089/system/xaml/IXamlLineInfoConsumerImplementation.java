@@ -142,7 +142,7 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
     
     public void SetLineInfo(int lineNumber, int linePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLineInfo", lineNumber, linePosition);
         } catch (JCNativeException jcne) {
@@ -156,9 +156,13 @@ public class IXamlLineInfoConsumerImplementation extends NetObject implements IX
     
     public boolean getShouldProvideLineInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldProvideLineInfo = null;
         try {
-            return (boolean)classInstance.Get("ShouldProvideLineInfo");
+            retObjectShouldProvideLineInfo = classInstance.Get("ShouldProvideLineInfo");
+            return (boolean)retObjectShouldProvideLineInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldProvideLineInfo != null ? retObjectShouldProvideLineInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

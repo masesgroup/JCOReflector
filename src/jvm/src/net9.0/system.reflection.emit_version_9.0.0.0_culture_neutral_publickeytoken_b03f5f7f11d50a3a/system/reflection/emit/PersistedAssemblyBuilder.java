@@ -162,10 +162,14 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
     
     public AssemblyName GetName(boolean copiedName) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            JCObject objGetName = (JCObject)classInstance.Invoke("GetName", copiedName);
+            retObjectGetName = classInstance.Invoke("GetName", copiedName);
+            JCObject objGetName = (JCObject)retObjectGetName;
             return new AssemblyName(objGetName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
 
     public MetadataBuilder GenerateMetadata(JCORefOut<BlobBuilder> ilStream, JCORefOut<BlobBuilder> mappedFieldData, JCORefOut<MetadataBuilder> pdbBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMetadata = null;
         try {
-            JCObject objGenerateMetadata = (JCObject)classInstance.Invoke("GenerateMetadata", ilStream.getJCRefOut(), mappedFieldData.getJCRefOut(), pdbBuilder.getJCRefOut());
+            retObjectGenerateMetadata = classInstance.Invoke("GenerateMetadata", ilStream.getJCRefOut(), mappedFieldData.getJCRefOut(), pdbBuilder.getJCRefOut());
+            JCObject objGenerateMetadata = (JCObject)retObjectGenerateMetadata;
             return new MetadataBuilder(objGenerateMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateMetadata != null ? retObjectGenerateMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
 
     public MetadataBuilder GenerateMetadata(JCORefOut<BlobBuilder> ilStream, JCORefOut<BlobBuilder> mappedFieldData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.security.SecurityException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateMetadata = null;
         try {
-            JCObject objGenerateMetadata = (JCObject)classInstance.Invoke("GenerateMetadata", ilStream.getJCRefOut(), mappedFieldData.getJCRefOut());
+            retObjectGenerateMetadata = classInstance.Invoke("GenerateMetadata", ilStream.getJCRefOut(), mappedFieldData.getJCRefOut());
+            JCObject objGenerateMetadata = (JCObject)retObjectGenerateMetadata;
             return new MetadataBuilder(objGenerateMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateMetadata != null ? retObjectGenerateMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +207,7 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
 
     public void Save(Stream stream) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArrayTypeMismatchException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +217,7 @@ public class PersistedAssemblyBuilder extends AssemblyBuilder  {
 
     public void Save(java.lang.String assemblyFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidCastException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", assemblyFileName);
         } catch (JCNativeException jcne) {

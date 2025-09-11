@@ -158,9 +158,13 @@ public class ListControl extends Control  {
     
     public java.lang.String GetItemText(NetObject item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetItemText", item == null ? null : item.getJCOInstance());
+            retObjectGetItemText = classInstance.Invoke("GetItemText", item == null ? null : item.getJCOInstance());
+            return (java.lang.String)retObjectGetItemText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetItemText != null ? retObjectGetItemText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ListControl extends Control  {
     
     public boolean getFormattingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormattingEnabled = null;
         try {
-            return (boolean)classInstance.Get("FormattingEnabled");
+            retObjectFormattingEnabled = classInstance.Get("FormattingEnabled");
+            return (boolean)retObjectFormattingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFormattingEnabled != null ? retObjectFormattingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class ListControl extends Control  {
 
     public void setFormattingEnabled(boolean FormattingEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormattingEnabled", FormattingEnabled);
         } catch (JCNativeException jcne) {
@@ -192,9 +200,13 @@ public class ListControl extends Control  {
 
     public int getSelectedIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class ListControl extends Control  {
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -212,10 +224,14 @@ public class ListControl extends Control  {
 
     public IFormatProvider getFormatInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatInfo");
+            retObjectFormatInfo = classInstance.Get("FormatInfo");
+            JCObject val = (JCObject)retObjectFormatInfo;
             return new IFormatProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatInfo != null ? retObjectFormatInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class ListControl extends Control  {
 
     public void setFormatInfo(IFormatProvider FormatInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatInfo", FormatInfo == null ? null : FormatInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +249,14 @@ public class ListControl extends Control  {
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class ListControl extends Control  {
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +274,14 @@ public class ListControl extends Control  {
 
     public NetObject getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            JCObject val = (JCObject)retObjectSelectedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +289,7 @@ public class ListControl extends Control  {
 
     public void setSelectedValue(NetObject SelectedValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedValue", SelectedValue == null ? null : SelectedValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,9 +299,13 @@ public class ListControl extends Control  {
 
     public java.lang.String getDisplayMember() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMember");
+            retObjectDisplayMember = classInstance.Get("DisplayMember");
+            return (java.lang.String)retObjectDisplayMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMember != null ? retObjectDisplayMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +313,7 @@ public class ListControl extends Control  {
 
     public void setDisplayMember(java.lang.String DisplayMember) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMember", DisplayMember);
         } catch (JCNativeException jcne) {
@@ -295,9 +323,13 @@ public class ListControl extends Control  {
 
     public java.lang.String getFormatString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatString");
+            retObjectFormatString = classInstance.Get("FormatString");
+            return (java.lang.String)retObjectFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatString != null ? retObjectFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +337,7 @@ public class ListControl extends Control  {
 
     public void setFormatString(java.lang.String FormatString) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatString", FormatString);
         } catch (JCNativeException jcne) {
@@ -315,9 +347,13 @@ public class ListControl extends Control  {
 
     public java.lang.String getValueMember() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueMember = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueMember");
+            retObjectValueMember = classInstance.Get("ValueMember");
+            return (java.lang.String)retObjectValueMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueMember != null ? retObjectValueMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +361,7 @@ public class ListControl extends Control  {
 
     public void setValueMember(java.lang.String ValueMember) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueMember", ValueMember);
         } catch (JCNativeException jcne) {
@@ -340,7 +376,7 @@ public class ListControl extends Control  {
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -350,7 +386,7 @@ public class ListControl extends Control  {
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -360,7 +396,7 @@ public class ListControl extends Control  {
 
     public void addDisplayMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -370,7 +406,7 @@ public class ListControl extends Control  {
 
     public void removeDisplayMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -380,7 +416,7 @@ public class ListControl extends Control  {
 
     public void addFormatInfoChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormatInfoChanged", handler);
         } catch (JCNativeException jcne) {
@@ -390,7 +426,7 @@ public class ListControl extends Control  {
 
     public void removeFormatInfoChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormatInfoChanged", handler);
         } catch (JCNativeException jcne) {
@@ -400,7 +436,7 @@ public class ListControl extends Control  {
 
     public void addFormatStringChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormatStringChanged", handler);
         } catch (JCNativeException jcne) {
@@ -410,7 +446,7 @@ public class ListControl extends Control  {
 
     public void removeFormatStringChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormatStringChanged", handler);
         } catch (JCNativeException jcne) {
@@ -420,7 +456,7 @@ public class ListControl extends Control  {
 
     public void addFormattingEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormattingEnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -430,7 +466,7 @@ public class ListControl extends Control  {
 
     public void removeFormattingEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormattingEnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -440,7 +476,7 @@ public class ListControl extends Control  {
 
     public void addSelectedValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -450,7 +486,7 @@ public class ListControl extends Control  {
 
     public void removeSelectedValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -460,7 +496,7 @@ public class ListControl extends Control  {
 
     public void addValueMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -470,7 +506,7 @@ public class ListControl extends Control  {
 
     public void removeValueMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -480,7 +516,7 @@ public class ListControl extends Control  {
 
     public void addFormat(ListControlConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Format", handler);
         } catch (JCNativeException jcne) {
@@ -490,7 +526,7 @@ public class ListControl extends Control  {
 
     public void removeFormat(ListControlConvertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Format", handler);
         } catch (JCNativeException jcne) {

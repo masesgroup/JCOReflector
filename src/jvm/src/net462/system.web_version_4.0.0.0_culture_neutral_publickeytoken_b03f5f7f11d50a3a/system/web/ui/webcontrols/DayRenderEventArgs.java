@@ -181,9 +181,13 @@ public class DayRenderEventArgs extends NetObject  {
     
     public java.lang.String getSelectUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectUrl");
+            retObjectSelectUrl = classInstance.Get("SelectUrl");
+            return (java.lang.String)retObjectSelectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectUrl != null ? retObjectSelectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class DayRenderEventArgs extends NetObject  {
 
     public CalendarDay getDay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Day");
+            retObjectDay = classInstance.Get("Day");
+            JCObject val = (JCObject)retObjectDay;
             return new CalendarDay(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class DayRenderEventArgs extends NetObject  {
 
     public TableCell getCell() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCell = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cell");
+            retObjectCell = classInstance.Get("Cell");
+            JCObject val = (JCObject)retObjectCell;
             return new TableCell(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCell != null ? retObjectCell.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

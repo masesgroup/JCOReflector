@@ -154,9 +154,13 @@ public class ComponentDispatcher extends NetObject  {
     
     public static boolean RaiseThreadMessage(JCORefOut<MSG> msg) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRaiseThreadMessage = null;
         try {
-            return (boolean)classType.Invoke("RaiseThreadMessage", msg.getJCRefOut());
+            retObjectRaiseThreadMessage = classType.Invoke("RaiseThreadMessage", msg.getJCRefOut());
+            return (boolean)retObjectRaiseThreadMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRaiseThreadMessage != null ? retObjectRaiseThreadMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class ComponentDispatcher extends NetObject  {
 
     public static void PopModal() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PopModal");
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class ComponentDispatcher extends NetObject  {
 
     public static void PushModal() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PushModal");
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class ComponentDispatcher extends NetObject  {
 
     public static void RaiseIdle() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseIdle");
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class ComponentDispatcher extends NetObject  {
     
     public static boolean getIsThreadModal() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsThreadModal = null;
         try {
-            return (boolean)classType.Get("IsThreadModal");
+            retObjectIsThreadModal = classType.Get("IsThreadModal");
+            return (boolean)retObjectIsThreadModal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsThreadModal != null ? retObjectIsThreadModal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +216,14 @@ public class ComponentDispatcher extends NetObject  {
 
     public static MSG getCurrentKeyboardMessage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentKeyboardMessage = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentKeyboardMessage");
+            retObjectCurrentKeyboardMessage = classType.Get("CurrentKeyboardMessage");
+            JCObject val = (JCObject)retObjectCurrentKeyboardMessage;
             return new MSG(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentKeyboardMessage != null ? retObjectCurrentKeyboardMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

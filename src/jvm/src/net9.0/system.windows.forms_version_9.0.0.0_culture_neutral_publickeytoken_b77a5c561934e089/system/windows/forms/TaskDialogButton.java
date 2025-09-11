@@ -174,7 +174,7 @@ public class TaskDialogButton extends TaskDialogControl  {
     
     public void PerformClick() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformClick");
         } catch (JCNativeException jcne) {
@@ -188,9 +188,13 @@ public class TaskDialogButton extends TaskDialogControl  {
     
     public boolean getAllowCloseDialog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCloseDialog = null;
         try {
-            return (boolean)classInstance.Get("AllowCloseDialog");
+            retObjectAllowCloseDialog = classInstance.Get("AllowCloseDialog");
+            return (boolean)retObjectAllowCloseDialog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCloseDialog != null ? retObjectAllowCloseDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void setAllowCloseDialog(boolean AllowCloseDialog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCloseDialog", AllowCloseDialog);
         } catch (JCNativeException jcne) {
@@ -208,9 +212,13 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -228,9 +236,13 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public boolean getShowShieldIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowShieldIcon = null;
         try {
-            return (boolean)classInstance.Get("ShowShieldIcon");
+            retObjectShowShieldIcon = classInstance.Get("ShowShieldIcon");
+            return (boolean)retObjectShowShieldIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowShieldIcon != null ? retObjectShowShieldIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +250,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void setShowShieldIcon(boolean ShowShieldIcon) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowShieldIcon", ShowShieldIcon);
         } catch (JCNativeException jcne) {
@@ -248,9 +260,13 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +274,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -268,9 +284,13 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +298,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -288,10 +308,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getAbort() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbort = null;
         try {
-            JCObject val = (JCObject)classType.Get("Abort");
+            retObjectAbort = classType.Get("Abort");
+            JCObject val = (JCObject)retObjectAbort;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbort != null ? retObjectAbort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +323,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getCancel() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cancel");
+            retObjectCancel = classType.Get("Cancel");
+            JCObject val = (JCObject)retObjectCancel;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +338,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getClose() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClose = null;
         try {
-            JCObject val = (JCObject)classType.Get("Close");
+            retObjectClose = classType.Get("Close");
+            JCObject val = (JCObject)retObjectClose;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClose != null ? retObjectClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +353,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getContinue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContinue = null;
         try {
-            JCObject val = (JCObject)classType.Get("Continue");
+            retObjectContinue = classType.Get("Continue");
+            JCObject val = (JCObject)retObjectContinue;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinue != null ? retObjectContinue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +368,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getHelp() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHelp = null;
         try {
-            JCObject val = (JCObject)classType.Get("Help");
+            retObjectHelp = classType.Get("Help");
+            JCObject val = (JCObject)retObjectHelp;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHelp != null ? retObjectHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +383,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getIgnore() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIgnore = null;
         try {
-            JCObject val = (JCObject)classType.Get("Ignore");
+            retObjectIgnore = classType.Get("Ignore");
+            JCObject val = (JCObject)retObjectIgnore;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIgnore != null ? retObjectIgnore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +398,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getNo() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNo = null;
         try {
-            JCObject val = (JCObject)classType.Get("No");
+            retObjectNo = classType.Get("No");
+            JCObject val = (JCObject)retObjectNo;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNo != null ? retObjectNo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +413,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getOK() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOK = null;
         try {
-            JCObject val = (JCObject)classType.Get("OK");
+            retObjectOK = classType.Get("OK");
+            JCObject val = (JCObject)retObjectOK;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOK != null ? retObjectOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +428,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getRetry() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRetry = null;
         try {
-            JCObject val = (JCObject)classType.Get("Retry");
+            retObjectRetry = classType.Get("Retry");
+            JCObject val = (JCObject)retObjectRetry;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRetry != null ? retObjectRetry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +443,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getTryAgain() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryAgain = null;
         try {
-            JCObject val = (JCObject)classType.Get("TryAgain");
+            retObjectTryAgain = classType.Get("TryAgain");
+            JCObject val = (JCObject)retObjectTryAgain;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryAgain != null ? retObjectTryAgain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +458,14 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public static TaskDialogButton getYes() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectYes = null;
         try {
-            JCObject val = (JCObject)classType.Get("Yes");
+            retObjectYes = classType.Get("Yes");
+            JCObject val = (JCObject)retObjectYes;
             return new TaskDialogButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYes != null ? retObjectYes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +478,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -424,7 +488,7 @@ public class TaskDialogButton extends TaskDialogControl  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {

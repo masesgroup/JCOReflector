@@ -155,10 +155,12 @@ public class MethodBody extends NetObject  {
     
     public byte[] GetILAsByteArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetILAsByteArray = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetILAsByteArray");
+            retObjectGetILAsByteArray = classInstance.Invoke("GetILAsByteArray");
+            JCObject resultingObjects = (JCObject)retObjectGetILAsByteArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -167,6 +169,8 @@ public class MethodBody extends NetObject  {
 				resultingArray[indexGetILAsByteArray] = (byte)resultingArrayList.get(indexGetILAsByteArray);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetILAsByteArray != null ? retObjectGetILAsByteArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class MethodBody extends NetObject  {
     
     public boolean getInitLocals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitLocals = null;
         try {
-            return (boolean)classInstance.Get("InitLocals");
+            retObjectInitLocals = classInstance.Get("InitLocals");
+            return (boolean)retObjectInitLocals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInitLocals != null ? retObjectInitLocals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class MethodBody extends NetObject  {
 
     public int getLocalSignatureMetadataToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalSignatureMetadataToken = null;
         try {
-            return (int)classInstance.Get("LocalSignatureMetadataToken");
+            retObjectLocalSignatureMetadataToken = classInstance.Get("LocalSignatureMetadataToken");
+            return (int)retObjectLocalSignatureMetadataToken;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLocalSignatureMetadataToken != null ? retObjectLocalSignatureMetadataToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class MethodBody extends NetObject  {
 
     public int getMaxStackSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxStackSize = null;
         try {
-            return (int)classInstance.Get("MaxStackSize");
+            retObjectMaxStackSize = classInstance.Get("MaxStackSize");
+            return (int)retObjectMaxStackSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxStackSize != null ? retObjectMaxStackSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

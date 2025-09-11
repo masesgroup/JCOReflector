@@ -182,9 +182,13 @@ public class RuleExecution extends NetObject  {
     
     public boolean getHalted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHalted = null;
         try {
-            return (boolean)classInstance.Get("Halted");
+            retObjectHalted = classInstance.Get("Halted");
+            return (boolean)retObjectHalted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHalted != null ? retObjectHalted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class RuleExecution extends NetObject  {
 
     public void setHalted(boolean Halted) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Halted", Halted);
         } catch (JCNativeException jcne) {
@@ -202,10 +206,14 @@ public class RuleExecution extends NetObject  {
 
     public NetObject getThisObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThisObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThisObject");
+            retObjectThisObject = classInstance.Get("ThisObject");
+            JCObject val = (JCObject)retObjectThisObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThisObject != null ? retObjectThisObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class RuleExecution extends NetObject  {
 
     public RuleValidation getValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Validation");
+            retObjectValidation = classInstance.Get("Validation");
+            JCObject val = (JCObject)retObjectValidation;
             return new RuleValidation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidation != null ? retObjectValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class RuleExecution extends NetObject  {
 
     public void setValidation(RuleValidation Validation) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Validation", Validation == null ? null : Validation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class RuleExecution extends NetObject  {
 
     public Activity getActivity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Activity");
+            retObjectActivity = classInstance.Get("Activity");
+            JCObject val = (JCObject)retObjectActivity;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivity != null ? retObjectActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +261,14 @@ public class RuleExecution extends NetObject  {
 
     public ActivityExecutionContext getActivityExecutionContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityExecutionContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityExecutionContext");
+            retObjectActivityExecutionContext = classInstance.Get("ActivityExecutionContext");
+            JCObject val = (JCObject)retObjectActivityExecutionContext;
             return new ActivityExecutionContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityExecutionContext != null ? retObjectActivityExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

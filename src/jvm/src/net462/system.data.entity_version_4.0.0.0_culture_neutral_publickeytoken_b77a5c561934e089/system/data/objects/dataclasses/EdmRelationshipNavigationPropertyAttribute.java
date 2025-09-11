@@ -170,9 +170,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends EdmPropertyAttri
     
     public java.lang.String getRelationshipName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipName = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipName");
+            retObjectRelationshipName = classInstance.Get("RelationshipName");
+            return (java.lang.String)retObjectRelationshipName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipName != null ? retObjectRelationshipName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends EdmPropertyAttri
 
     public java.lang.String getRelationshipNamespaceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipNamespaceName = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipNamespaceName");
+            retObjectRelationshipNamespaceName = classInstance.Get("RelationshipNamespaceName");
+            return (java.lang.String)retObjectRelationshipNamespaceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipNamespaceName != null ? retObjectRelationshipNamespaceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class EdmRelationshipNavigationPropertyAttribute extends EdmPropertyAttri
 
     public java.lang.String getTargetRoleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetRoleName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetRoleName");
+            retObjectTargetRoleName = classInstance.Get("TargetRoleName");
+            return (java.lang.String)retObjectTargetRoleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetRoleName != null ? retObjectTargetRoleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

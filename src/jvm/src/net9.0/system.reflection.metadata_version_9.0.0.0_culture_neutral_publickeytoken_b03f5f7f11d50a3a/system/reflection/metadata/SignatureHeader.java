@@ -180,9 +180,13 @@ public class SignatureHeader extends ValueType  {
     
     public boolean Equals(SignatureHeader other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +198,13 @@ public class SignatureHeader extends ValueType  {
     
     public boolean getHasExplicitThis() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasExplicitThis = null;
         try {
-            return (boolean)classInstance.Get("HasExplicitThis");
+            retObjectHasExplicitThis = classInstance.Get("HasExplicitThis");
+            return (boolean)retObjectHasExplicitThis;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasExplicitThis != null ? retObjectHasExplicitThis.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +212,13 @@ public class SignatureHeader extends ValueType  {
 
     public boolean getIsGeneric() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGeneric = null;
         try {
-            return (boolean)classInstance.Get("IsGeneric");
+            retObjectIsGeneric = classInstance.Get("IsGeneric");
+            return (boolean)retObjectIsGeneric;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGeneric != null ? retObjectIsGeneric.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +226,13 @@ public class SignatureHeader extends ValueType  {
 
     public boolean getIsInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInstance = null;
         try {
-            return (boolean)classInstance.Get("IsInstance");
+            retObjectIsInstance = classInstance.Get("IsInstance");
+            return (boolean)retObjectIsInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInstance != null ? retObjectIsInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +240,13 @@ public class SignatureHeader extends ValueType  {
 
     public byte getRawValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawValue = null;
         try {
-            return (byte)classInstance.Get("RawValue");
+            retObjectRawValue = classInstance.Get("RawValue");
+            return (byte)retObjectRawValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class SignatureHeader extends ValueType  {
 
     public SignatureAttributes getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new SignatureAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class SignatureHeader extends ValueType  {
 
     public SignatureCallingConvention getCallingConvention() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallingConvention = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallingConvention");
+            retObjectCallingConvention = classInstance.Get("CallingConvention");
+            JCObject val = (JCObject)retObjectCallingConvention;
             return new SignatureCallingConvention(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallingConvention != null ? retObjectCallingConvention.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class SignatureHeader extends ValueType  {
 
     public SignatureKind getKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
+            retObjectKind = classInstance.Get("Kind");
+            JCObject val = (JCObject)retObjectKind;
             return new SignatureKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKind != null ? retObjectKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

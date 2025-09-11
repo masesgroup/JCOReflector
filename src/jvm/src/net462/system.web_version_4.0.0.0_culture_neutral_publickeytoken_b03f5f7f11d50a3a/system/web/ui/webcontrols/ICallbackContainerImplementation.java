@@ -144,9 +144,13 @@ public class ICallbackContainerImplementation extends NetObject implements ICall
     
     public java.lang.String GetCallbackScript(IButtonControl buttonControl, java.lang.String argument) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCallbackScript = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCallbackScript", buttonControl == null ? null : buttonControl.getJCOInstance(), argument);
+            retObjectGetCallbackScript = classInstance.Invoke("GetCallbackScript", buttonControl == null ? null : buttonControl.getJCOInstance(), argument);
+            return (java.lang.String)retObjectGetCallbackScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCallbackScript != null ? retObjectGetCallbackScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

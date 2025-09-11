@@ -156,7 +156,7 @@ public class PreProcessInputEventArgs extends ProcessInputEventArgs  {
     
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -170,9 +170,13 @@ public class PreProcessInputEventArgs extends ProcessInputEventArgs  {
     
     public boolean getCanceled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanceled = null;
         try {
-            return (boolean)classInstance.Get("Canceled");
+            retObjectCanceled = classInstance.Get("Canceled");
+            return (boolean)retObjectCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanceled != null ? retObjectCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

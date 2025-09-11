@@ -200,9 +200,13 @@ public class ConnectionProviderAttribute extends Attribute  {
     
     public boolean getAllowsMultipleConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowsMultipleConnections = null;
         try {
-            return (boolean)classInstance.Get("AllowsMultipleConnections");
+            retObjectAllowsMultipleConnections = classInstance.Get("AllowsMultipleConnections");
+            return (boolean)retObjectAllowsMultipleConnections;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowsMultipleConnections != null ? retObjectAllowsMultipleConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class ConnectionProviderAttribute extends Attribute  {
 
     public void setAllowsMultipleConnections(boolean AllowsMultipleConnections) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowsMultipleConnections", AllowsMultipleConnections);
         } catch (JCNativeException jcne) {
@@ -220,9 +224,13 @@ public class ConnectionProviderAttribute extends Attribute  {
 
     public java.lang.String getDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +238,13 @@ public class ConnectionProviderAttribute extends Attribute  {
 
     public java.lang.String getID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectID = null;
         try {
-            return (java.lang.String)classInstance.Get("ID");
+            retObjectID = classInstance.Get("ID");
+            return (java.lang.String)retObjectID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectID != null ? retObjectID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +252,14 @@ public class ConnectionProviderAttribute extends Attribute  {
 
     public NetType getConnectionPointType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionPointType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionPointType");
+            retObjectConnectionPointType = classInstance.Get("ConnectionPointType");
+            JCObject val = (JCObject)retObjectConnectionPointType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionPointType != null ? retObjectConnectionPointType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,9 +158,13 @@ public class ObjectStatementCollection extends NetObjectEnumerable  {
     
     public boolean ContainsKey(NetObject statementOwner) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", statementOwner == null ? null : statementOwner.getJCOInstance());
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", statementOwner == null ? null : statementOwner.getJCOInstance());
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ObjectStatementCollection extends NetObjectEnumerable  {
 
     public void Populate(ICollection statementOwners) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Populate", statementOwners == null ? null : statementOwners.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class ObjectStatementCollection extends NetObjectEnumerable  {
 
     public void Populate(NetObject owner) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Populate", owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {

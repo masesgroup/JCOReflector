@@ -157,10 +157,14 @@ public class XPathBinder extends NetObject  {
     
     public static IEnumerable Select(NetObject container, java.lang.String xPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classType.Invoke("Select", container == null ? null : container.getJCOInstance(), xPath);
+            retObjectSelect = classType.Invoke("Select", container == null ? null : container.getJCOInstance(), xPath);
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class XPathBinder extends NetObject  {
 
     public static IEnumerable Select(NetObject container, java.lang.String xPath, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classType.Invoke("Select", container == null ? null : container.getJCOInstance(), xPath, resolver == null ? null : resolver.getJCOInstance());
+            retObjectSelect = classType.Invoke("Select", container == null ? null : container.getJCOInstance(), xPath, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new IEnumerableImplementation(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class XPathBinder extends NetObject  {
 
     public static NetObject Eval(NetObject container, java.lang.String xPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            JCObject objEval = (JCObject)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath);
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath);
+            JCObject objEval = (JCObject)retObjectEval;
             return new NetObject(objEval);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class XPathBinder extends NetObject  {
 
     public static NetObject Eval(NetObject container, java.lang.String xPath, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            JCObject objEval = (JCObject)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, resolver == null ? null : resolver.getJCOInstance());
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, resolver == null ? null : resolver.getJCOInstance());
+            JCObject objEval = (JCObject)retObjectEval;
             return new NetObject(objEval);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class XPathBinder extends NetObject  {
 
     public static java.lang.String Eval(NetObject container, java.lang.String xPath, java.lang.String format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.xpath.XPathException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            return (java.lang.String)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, format);
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, format);
+            return (java.lang.String)retObjectEval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class XPathBinder extends NetObject  {
 
     public static java.lang.String Eval(NetObject container, java.lang.String xPath, java.lang.String format, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEval = null;
         try {
-            return (java.lang.String)classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, format, resolver == null ? null : resolver.getJCOInstance());
+            retObjectEval = classType.Invoke("Eval", container == null ? null : container.getJCOInstance(), xPath, format, resolver == null ? null : resolver.getJCOInstance());
+            return (java.lang.String)retObjectEval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEval != null ? retObjectEval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

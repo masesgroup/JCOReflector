@@ -169,9 +169,13 @@ public class PageContent extends FrameworkElement implements system.windows.mark
     
     public boolean ShouldSerializeChild(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeChild = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeChild", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeChild = classInstance.Invoke("ShouldSerializeChild", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeChild != null ? retObjectShouldSerializeChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public FixedPage GetPageRoot(boolean forceReload) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.InvalidCastException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.net.CookieException, system.ApplicationException, system.NullReferenceException, system.xml.XmlException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.FormatException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPageRoot = null;
         try {
-            JCObject objGetPageRoot = (JCObject)classInstance.Invoke("GetPageRoot", forceReload);
+            retObjectGetPageRoot = classInstance.Invoke("GetPageRoot", forceReload);
+            JCObject objGetPageRoot = (JCObject)retObjectGetPageRoot;
             return new FixedPage(objGetPageRoot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPageRoot != null ? retObjectGetPageRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void GetPageRootAsync(boolean forceReload) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.net.WebException, system.NotImplementedException, system.componentmodel.Win32Exception, system.net.CookieException, system.io.IOException, system.ApplicationException, system.NullReferenceException, system.xml.XmlException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.FormatException, system.OverflowException, system.InvalidCastException, system.io.FileFormatException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageRootAsync", forceReload);
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void GetPageRootAsyncCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPageRootAsyncCancel");
         } catch (JCNativeException jcne) {
@@ -214,7 +222,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -223,7 +231,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -232,10 +240,14 @@ public class PageContent extends FrameworkElement implements system.windows.mark
     
     public Uri getSource() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +255,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void setSource(Uri Source) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,10 +265,14 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public FixedPage getChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Child");
+            retObjectChild = classInstance.Get("Child");
+            JCObject val = (JCObject)retObjectChild;
             return new FixedPage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChild != null ? retObjectChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +280,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void setChild(FixedPage Child) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Child", Child == null ? null : Child.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,10 +290,14 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public LinkTargetCollection getLinkTargets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkTargets = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkTargets");
+            retObjectLinkTargets = classInstance.Get("LinkTargets");
+            JCObject val = (JCObject)retObjectLinkTargets;
             return new LinkTargetCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkTargets != null ? retObjectLinkTargets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +310,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void addGetPageRootCompleted(GetPageRootCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GetPageRootCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -300,7 +320,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
 
     public void removeGetPageRootCompleted(GetPageRootCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GetPageRootCompleted", handler);
         } catch (JCNativeException jcne) {

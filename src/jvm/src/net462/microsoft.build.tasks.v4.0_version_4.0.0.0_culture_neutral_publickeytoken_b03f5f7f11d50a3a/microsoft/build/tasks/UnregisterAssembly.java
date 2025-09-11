@@ -164,9 +164,13 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidCastException, system.MissingMethodException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ApplicationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
     
     public ITaskItem getAssemblyListFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyListFile = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyListFile");
+            retObjectAssemblyListFile = classInstance.Get("AssemblyListFile");
+            JCObject val = (JCObject)retObjectAssemblyListFile;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyListFile != null ? retObjectAssemblyListFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
 
     public void setAssemblyListFile(ITaskItem AssemblyListFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyListFile", AssemblyListFile == null ? null : AssemblyListFile.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,16 +207,20 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblies = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Assemblies");
+            retObjectAssemblies = classInstance.Get("Assemblies");
+            JCObject resultingObjects = (JCObject)retObjectAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblies != null ? retObjectAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
 
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Assemblies", toObjectFromArray(Assemblies));
         } catch (JCNativeException jcne) {
@@ -226,16 +238,20 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
 
     public final ITaskItem[] getTypeLibFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLibFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibFiles");
+            retObjectTypeLibFiles = classInstance.Get("TypeLibFiles");
+            JCObject resultingObjects = (JCObject)retObjectTypeLibFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeLibFiles != null ? retObjectTypeLibFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class UnregisterAssembly extends AppDomainIsolatedTaskExtension  {
 
     public void setTypeLibFiles(ITaskItem[] TypeLibFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeLibFiles", toObjectFromArray(TypeLibFiles));
         } catch (JCNativeException jcne) {

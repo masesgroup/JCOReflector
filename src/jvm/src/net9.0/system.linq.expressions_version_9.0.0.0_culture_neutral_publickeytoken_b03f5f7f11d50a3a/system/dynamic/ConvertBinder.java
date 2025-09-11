@@ -155,10 +155,14 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
     
     public DynamicMetaObject Bind(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            retObjectBind = classInstance.Invoke("Bind", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objBind = (JCObject)retObjectBind;
             return new DynamicMetaObject(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackConvert = null;
         try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            retObjectFallbackConvert = classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackConvert = (JCObject)retObjectFallbackConvert;
             return new DynamicMetaObject(objFallbackConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackConvert != null ? retObjectFallbackConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
 
     public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackConvert = null;
         try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
+            retObjectFallbackConvert = classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
+            JCObject objFallbackConvert = (JCObject)retObjectFallbackConvert;
             return new DynamicMetaObject(objFallbackConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackConvert != null ? retObjectFallbackConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
     
     public boolean getExplicit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExplicit = null;
         try {
-            return (boolean)classInstance.Get("Explicit");
+            retObjectExplicit = classInstance.Get("Explicit");
+            return (boolean)retObjectExplicit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExplicit != null ? retObjectExplicit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

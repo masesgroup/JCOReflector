@@ -166,10 +166,14 @@ public class TrackingProfile extends NetObject  {
     
     public ImplementationVisibility getImplementationVisibility() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImplementationVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImplementationVisibility");
+            retObjectImplementationVisibility = classInstance.Get("ImplementationVisibility");
+            JCObject val = (JCObject)retObjectImplementationVisibility;
             return new ImplementationVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImplementationVisibility != null ? retObjectImplementationVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class TrackingProfile extends NetObject  {
 
     public void setImplementationVisibility(ImplementationVisibility ImplementationVisibility) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImplementationVisibility", ImplementationVisibility == null ? null : ImplementationVisibility.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class TrackingProfile extends NetObject  {
 
     public java.lang.String getActivityDefinitionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityDefinitionId = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityDefinitionId");
+            retObjectActivityDefinitionId = classInstance.Get("ActivityDefinitionId");
+            return (java.lang.String)retObjectActivityDefinitionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityDefinitionId != null ? retObjectActivityDefinitionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class TrackingProfile extends NetObject  {
 
     public void setActivityDefinitionId(java.lang.String ActivityDefinitionId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityDefinitionId", ActivityDefinitionId);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class TrackingProfile extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class TrackingProfile extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

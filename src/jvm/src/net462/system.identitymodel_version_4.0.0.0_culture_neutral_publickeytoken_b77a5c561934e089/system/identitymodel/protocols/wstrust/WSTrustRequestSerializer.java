@@ -157,9 +157,13 @@ public class WSTrustRequestSerializer extends NetObject  {
     
     public boolean CanRead(XmlReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            retObjectCanRead = classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public RequestSecurityToken CreateRequestSecurityToken() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateRequestSecurityToken = null;
         try {
-            JCObject objCreateRequestSecurityToken = (JCObject)classInstance.Invoke("CreateRequestSecurityToken");
+            retObjectCreateRequestSecurityToken = classInstance.Invoke("CreateRequestSecurityToken");
+            JCObject objCreateRequestSecurityToken = (JCObject)retObjectCreateRequestSecurityToken;
             return new RequestSecurityToken(objCreateRequestSecurityToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRequestSecurityToken != null ? retObjectCreateRequestSecurityToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public RequestSecurityToken ReadXml(XmlReader reader, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new RequestSecurityToken(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +201,7 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public void ReadXmlElement(XmlReader reader, RequestSecurityToken requestSecurityToken, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlElement", reader == null ? null : reader.getJCOInstance(), requestSecurityToken == null ? null : requestSecurityToken.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +211,7 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public void Validate(RequestSecurityToken requestSecurityToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", requestSecurityToken == null ? null : requestSecurityToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public void WriteKnownRequestElement(RequestSecurityToken requestSecurityToken, XmlWriter writer, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteKnownRequestElement", requestSecurityToken == null ? null : requestSecurityToken.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,7 +231,7 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public void WriteXml(RequestSecurityToken request, XmlWriter writer, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", request == null ? null : request.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,7 +241,7 @@ public class WSTrustRequestSerializer extends NetObject  {
 
     public void WriteXmlElement(XmlWriter writer, java.lang.String elementName, NetObject elementValue, RequestSecurityToken requestSecurityToken, WSTrustSerializationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlElement", writer == null ? null : writer.getJCOInstance(), elementName, elementValue == null ? null : elementValue.getJCOInstance(), requestSecurityToken == null ? null : requestSecurityToken.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

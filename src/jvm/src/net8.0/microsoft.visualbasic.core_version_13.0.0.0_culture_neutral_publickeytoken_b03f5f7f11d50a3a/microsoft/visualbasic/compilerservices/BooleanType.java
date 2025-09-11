@@ -155,9 +155,13 @@ public class BooleanType extends NetObject  {
     
     public static boolean FromObject(NetObject Value) throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromObject = null;
         try {
-            return (boolean)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            retObjectFromObject = classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return (boolean)retObjectFromObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFromObject != null ? retObjectFromObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class BooleanType extends NetObject  {
 
     public static boolean FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromString = null;
         try {
-            return (boolean)classType.Invoke("FromString", Value);
+            retObjectFromString = classType.Invoke("FromString", Value);
+            return (boolean)retObjectFromString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFromString != null ? retObjectFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

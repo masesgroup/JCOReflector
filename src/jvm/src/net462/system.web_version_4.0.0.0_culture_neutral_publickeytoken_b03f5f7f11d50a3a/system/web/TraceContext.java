@@ -168,7 +168,7 @@ public class TraceContext extends NetObject  {
     
     public void Warn(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warn", message);
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class TraceContext extends NetObject  {
 
     public void Warn(java.lang.String category, java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warn", category, message);
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class TraceContext extends NetObject  {
 
     public void Warn(java.lang.String category, java.lang.String message, NetException errorInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Warn", category, message, errorInfo == null ? null : errorInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class TraceContext extends NetObject  {
 
     public void Write(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -208,7 +208,7 @@ public class TraceContext extends NetObject  {
 
     public void Write(java.lang.String category, java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", category, message);
         } catch (JCNativeException jcne) {
@@ -218,7 +218,7 @@ public class TraceContext extends NetObject  {
 
     public void Write(java.lang.String category, java.lang.String message, NetException errorInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", category, message, errorInfo == null ? null : errorInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,9 +232,13 @@ public class TraceContext extends NetObject  {
     
     public boolean getIsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +246,7 @@ public class TraceContext extends NetObject  {
 
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.InvalidOperationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
@@ -252,10 +256,14 @@ public class TraceContext extends NetObject  {
 
     public TraceMode getTraceMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceMode");
+            retObjectTraceMode = classInstance.Get("TraceMode");
+            JCObject val = (JCObject)retObjectTraceMode;
             return new TraceMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceMode != null ? retObjectTraceMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +271,7 @@ public class TraceContext extends NetObject  {
 
     public void setTraceMode(TraceMode TraceMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.data.DataException, system.OverflowException, system.FormatException, system.IndexOutOfRangeException, system.web.HttpException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TraceMode", TraceMode == null ? null : TraceMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,7 +286,7 @@ public class TraceContext extends NetObject  {
 
     public void addTraceFinished(TraceContextEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TraceFinished", handler);
         } catch (JCNativeException jcne) {
@@ -288,7 +296,7 @@ public class TraceContext extends NetObject  {
 
     public void removeTraceFinished(TraceContextEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TraceFinished", handler);
         } catch (JCNativeException jcne) {

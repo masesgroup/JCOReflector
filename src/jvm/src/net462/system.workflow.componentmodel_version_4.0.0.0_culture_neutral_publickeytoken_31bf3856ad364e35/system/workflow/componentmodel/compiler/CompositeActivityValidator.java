@@ -167,10 +167,14 @@ public class CompositeActivityValidator extends ActivityValidator  {
     
     public ValidationError ValidateActivityChange(Activity activity, ActivityChangeAction action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateActivityChange = null;
         try {
-            JCObject objValidateActivityChange = (JCObject)classInstance.Invoke("ValidateActivityChange", activity == null ? null : activity.getJCOInstance(), action == null ? null : action.getJCOInstance());
+            retObjectValidateActivityChange = classInstance.Invoke("ValidateActivityChange", activity == null ? null : activity.getJCOInstance(), action == null ? null : action.getJCOInstance());
+            JCObject objValidateActivityChange = (JCObject)retObjectValidateActivityChange;
             return new ValidationError(objValidateActivityChange);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateActivityChange != null ? retObjectValidateActivityChange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class CompositeActivityValidator extends ActivityValidator  {
 
     public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationErrorCollection(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

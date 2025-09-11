@@ -164,10 +164,14 @@ public class ImageListCodeDomSerializer extends CodeDomSerializer  {
     
     public NetObject Deserialize(IDesignerSerializationManager manager, NetObject codeObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", manager == null ? null : manager.getJCOInstance(), codeObject == null ? null : codeObject.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", manager == null ? null : manager.getJCOInstance(), codeObject == null ? null : codeObject.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class ImageListCodeDomSerializer extends CodeDomSerializer  {
 
     public NetObject Serialize(IDesignerSerializationManager manager, NetObject value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.xml.XmlException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialize = null;
         try {
-            JCObject objSerialize = (JCObject)classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectSerialize = classInstance.Invoke("Serialize", manager == null ? null : manager.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objSerialize = (JCObject)retObjectSerialize;
             return new NetObject(objSerialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerialize != null ? retObjectSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

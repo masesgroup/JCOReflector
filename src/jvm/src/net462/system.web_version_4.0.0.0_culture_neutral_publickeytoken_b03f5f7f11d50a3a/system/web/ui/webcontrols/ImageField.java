@@ -168,9 +168,13 @@ public class ImageField extends DataControlField  {
     
     public boolean Initialize(boolean enableSorting, Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialize = null;
         try {
-            return (boolean)classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            retObjectInitialize = classInstance.Invoke("Initialize", enableSorting, control == null ? null : control.getJCOInstance());
+            return (boolean)retObjectInitialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInitialize != null ? retObjectInitialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class ImageField extends DataControlField  {
 
     public void ExtractValuesFromCell(IOrderedDictionary dictionary, DataControlFieldCell cell, DataControlRowState rowState, boolean includeReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractValuesFromCell", dictionary == null ? null : dictionary.getJCOInstance(), cell == null ? null : cell.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), includeReadOnly);
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class ImageField extends DataControlField  {
 
     public void InitializeCell(DataControlFieldCell cell, DataControlCellType cellType, DataControlRowState rowState, int rowIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeCell", cell == null ? null : cell.getJCOInstance(), cellType == null ? null : cellType.getJCOInstance(), rowState == null ? null : rowState.getJCOInstance(), rowIndex);
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class ImageField extends DataControlField  {
 
     public void ValidateSupportsCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ValidateSupportsCallback");
         } catch (JCNativeException jcne) {
@@ -212,9 +216,13 @@ public class ImageField extends DataControlField  {
     
     public boolean getConvertEmptyStringToNull() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertEmptyStringToNull = null;
         try {
-            return (boolean)classInstance.Get("ConvertEmptyStringToNull");
+            retObjectConvertEmptyStringToNull = classInstance.Get("ConvertEmptyStringToNull");
+            return (boolean)retObjectConvertEmptyStringToNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConvertEmptyStringToNull != null ? retObjectConvertEmptyStringToNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +230,7 @@ public class ImageField extends DataControlField  {
 
     public void setConvertEmptyStringToNull(boolean ConvertEmptyStringToNull) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConvertEmptyStringToNull", ConvertEmptyStringToNull);
         } catch (JCNativeException jcne) {
@@ -232,9 +240,13 @@ public class ImageField extends DataControlField  {
 
     public boolean getReadOnly() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class ImageField extends DataControlField  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -252,9 +264,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getAlternateText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternateText = null;
         try {
-            return (java.lang.String)classInstance.Get("AlternateText");
+            retObjectAlternateText = classInstance.Get("AlternateText");
+            return (java.lang.String)retObjectAlternateText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlternateText != null ? retObjectAlternateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +278,7 @@ public class ImageField extends DataControlField  {
 
     public void setAlternateText(java.lang.String AlternateText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternateText", AlternateText);
         } catch (JCNativeException jcne) {
@@ -272,9 +288,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getDataAlternateTextField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAlternateTextField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataAlternateTextField");
+            retObjectDataAlternateTextField = classInstance.Get("DataAlternateTextField");
+            return (java.lang.String)retObjectDataAlternateTextField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataAlternateTextField != null ? retObjectDataAlternateTextField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +302,7 @@ public class ImageField extends DataControlField  {
 
     public void setDataAlternateTextField(java.lang.String DataAlternateTextField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAlternateTextField", DataAlternateTextField);
         } catch (JCNativeException jcne) {
@@ -292,9 +312,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getDataAlternateTextFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataAlternateTextFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataAlternateTextFormatString");
+            retObjectDataAlternateTextFormatString = classInstance.Get("DataAlternateTextFormatString");
+            return (java.lang.String)retObjectDataAlternateTextFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataAlternateTextFormatString != null ? retObjectDataAlternateTextFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class ImageField extends DataControlField  {
 
     public void setDataAlternateTextFormatString(java.lang.String DataAlternateTextFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataAlternateTextFormatString", DataAlternateTextFormatString);
         } catch (JCNativeException jcne) {
@@ -312,9 +336,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getDataImageUrlField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataImageUrlField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataImageUrlField");
+            retObjectDataImageUrlField = classInstance.Get("DataImageUrlField");
+            return (java.lang.String)retObjectDataImageUrlField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataImageUrlField != null ? retObjectDataImageUrlField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +350,7 @@ public class ImageField extends DataControlField  {
 
     public void setDataImageUrlField(java.lang.String DataImageUrlField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataImageUrlField", DataImageUrlField);
         } catch (JCNativeException jcne) {
@@ -332,9 +360,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getDataImageUrlFormatString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataImageUrlFormatString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataImageUrlFormatString");
+            retObjectDataImageUrlFormatString = classInstance.Get("DataImageUrlFormatString");
+            return (java.lang.String)retObjectDataImageUrlFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataImageUrlFormatString != null ? retObjectDataImageUrlFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +374,7 @@ public class ImageField extends DataControlField  {
 
     public void setDataImageUrlFormatString(java.lang.String DataImageUrlFormatString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataImageUrlFormatString", DataImageUrlFormatString);
         } catch (JCNativeException jcne) {
@@ -352,9 +384,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getNullDisplayText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullDisplayText = null;
         try {
-            return (java.lang.String)classInstance.Get("NullDisplayText");
+            retObjectNullDisplayText = classInstance.Get("NullDisplayText");
+            return (java.lang.String)retObjectNullDisplayText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullDisplayText != null ? retObjectNullDisplayText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +398,7 @@ public class ImageField extends DataControlField  {
 
     public void setNullDisplayText(java.lang.String NullDisplayText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullDisplayText", NullDisplayText);
         } catch (JCNativeException jcne) {
@@ -372,9 +408,13 @@ public class ImageField extends DataControlField  {
 
     public java.lang.String getNullImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNullImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NullImageUrl");
+            retObjectNullImageUrl = classInstance.Get("NullImageUrl");
+            return (java.lang.String)retObjectNullImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNullImageUrl != null ? retObjectNullImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +422,7 @@ public class ImageField extends DataControlField  {
 
     public void setNullImageUrl(java.lang.String NullImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NullImageUrl", NullImageUrl);
         } catch (JCNativeException jcne) {

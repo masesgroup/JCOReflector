@@ -165,9 +165,13 @@ public class InertiaRotationBehavior extends NetObject  {
     
     public double getDesiredDeceleration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredDeceleration = null;
         try {
-            return (double)classInstance.Get("DesiredDeceleration");
+            retObjectDesiredDeceleration = classInstance.Get("DesiredDeceleration");
+            return (double)retObjectDesiredDeceleration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDesiredDeceleration != null ? retObjectDesiredDeceleration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setDesiredDeceleration(double DesiredDeceleration) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredDeceleration", DesiredDeceleration);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public double getDesiredRotation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredRotation = null;
         try {
-            return (double)classInstance.Get("DesiredRotation");
+            retObjectDesiredRotation = classInstance.Get("DesiredRotation");
+            return (double)retObjectDesiredRotation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDesiredRotation != null ? retObjectDesiredRotation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setDesiredRotation(double DesiredRotation) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesiredRotation", DesiredRotation);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public double getInitialVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialVelocity = null;
         try {
-            return (double)classInstance.Get("InitialVelocity");
+            retObjectInitialVelocity = classInstance.Get("InitialVelocity");
+            return (double)retObjectInitialVelocity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectInitialVelocity != null ? retObjectInitialVelocity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class InertiaRotationBehavior extends NetObject  {
 
     public void setInitialVelocity(double InitialVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialVelocity", InitialVelocity);
         } catch (JCNativeException jcne) {

@@ -164,10 +164,14 @@ public class RowToFieldTransformer extends WebPartTransformer  {
     
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new NetObject(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class RowToFieldTransformer extends WebPartTransformer  {
 
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConfigurationControl = null;
         try {
-            JCObject objCreateConfigurationControl = (JCObject)classInstance.Invoke("CreateConfigurationControl");
+            retObjectCreateConfigurationControl = classInstance.Invoke("CreateConfigurationControl");
+            JCObject objCreateConfigurationControl = (JCObject)retObjectCreateConfigurationControl;
             return new Control(objCreateConfigurationControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConfigurationControl != null ? retObjectCreateConfigurationControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class RowToFieldTransformer extends WebPartTransformer  {
      */
     @Deprecated 
     public void GetFieldValue(FieldCallback callback) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartField to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartField to obtain the full interface.");
     }
 
 
@@ -199,9 +207,13 @@ public class RowToFieldTransformer extends WebPartTransformer  {
     
     public java.lang.String getFieldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldName = null;
         try {
-            return (java.lang.String)classInstance.Get("FieldName");
+            retObjectFieldName = classInstance.Get("FieldName");
+            return (java.lang.String)retObjectFieldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFieldName != null ? retObjectFieldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class RowToFieldTransformer extends WebPartTransformer  {
 
     public void setFieldName(java.lang.String FieldName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FieldName", FieldName);
         } catch (JCNativeException jcne) {

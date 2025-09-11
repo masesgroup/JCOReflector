@@ -168,7 +168,7 @@ public class Activity extends NetObject  {
     
     public void AsynchronousCall(IServiceCall serviceCall) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsynchronousCall", serviceCall == null ? null : serviceCall.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class Activity extends NetObject  {
 
     public void BindToCurrentThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindToCurrentThread");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class Activity extends NetObject  {
 
     public void SynchronousCall(IServiceCall serviceCall) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SynchronousCall", serviceCall == null ? null : serviceCall.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class Activity extends NetObject  {
 
     public void UnbindFromThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnbindFromThread");
         } catch (JCNativeException jcne) {

@@ -155,10 +155,12 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     public byte[] ExportPkcs8PrivateKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportPkcs8PrivateKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ExportPkcs8PrivateKey");
+            retObjectExportPkcs8PrivateKey = classInstance.Invoke("ExportPkcs8PrivateKey");
+            JCObject resultingObjects = (JCObject)retObjectExportPkcs8PrivateKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -167,6 +169,8 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexExportPkcs8PrivateKey] = (byte)resultingArrayList.get(indexExportPkcs8PrivateKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExportPkcs8PrivateKey != null ? retObjectExportPkcs8PrivateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,12 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public byte[] ExportSubjectPublicKeyInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportSubjectPublicKeyInfo = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ExportSubjectPublicKeyInfo");
+            retObjectExportSubjectPublicKeyInfo = classInstance.Invoke("ExportSubjectPublicKeyInfo");
+            JCObject resultingObjects = (JCObject)retObjectExportSubjectPublicKeyInfo;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -186,6 +192,8 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 				resultingArray[indexExportSubjectPublicKeyInfo] = (byte)resultingArrayList.get(indexExportSubjectPublicKeyInfo);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExportSubjectPublicKeyInfo != null ? retObjectExportSubjectPublicKeyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public static AsymmetricAlgorithm Create() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new AsymmetricAlgorithm(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public static AsymmetricAlgorithm Create(java.lang.String algName) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algName);
+            retObjectCreate = classType.Invoke("Create", algName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new AsymmetricAlgorithm(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +231,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public java.lang.String ExportPkcs8PrivateKeyPem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportPkcs8PrivateKeyPem = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ExportPkcs8PrivateKeyPem");
+            retObjectExportPkcs8PrivateKeyPem = classInstance.Invoke("ExportPkcs8PrivateKeyPem");
+            return (java.lang.String)retObjectExportPkcs8PrivateKeyPem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExportPkcs8PrivateKeyPem != null ? retObjectExportPkcs8PrivateKeyPem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +245,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public java.lang.String ExportSubjectPublicKeyInfoPem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportSubjectPublicKeyInfoPem = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ExportSubjectPublicKeyInfoPem");
+            retObjectExportSubjectPublicKeyInfoPem = classInstance.Invoke("ExportSubjectPublicKeyInfoPem");
+            return (java.lang.String)retObjectExportSubjectPublicKeyInfoPem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExportSubjectPublicKeyInfoPem != null ? retObjectExportSubjectPublicKeyInfoPem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +259,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public java.lang.String ToXmlString(boolean includePrivateParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXmlString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXmlString", includePrivateParameters);
+            retObjectToXmlString = classInstance.Invoke("ToXmlString", includePrivateParameters);
+            return (java.lang.String)retObjectToXmlString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXmlString != null ? retObjectToXmlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +273,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void Clear() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -255,7 +283,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -265,7 +293,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void FromXmlString(java.lang.String xmlString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXmlString", xmlString);
         } catch (JCNativeException jcne) {
@@ -276,7 +304,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -292,9 +320,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
     
     public int getKeySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeySize = null;
         try {
-            return (int)classInstance.Get("KeySize");
+            retObjectKeySize = classInstance.Get("KeySize");
+            return (int)retObjectKeySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeySize != null ? retObjectKeySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +334,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public void setKeySize(int KeySize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeySize", KeySize);
         } catch (JCNativeException jcne) {
@@ -312,16 +344,20 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public final KeySizes[] getLegalKeySizes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLegalKeySizes = null;
         try {
             ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("LegalKeySizes");
+            retObjectLegalKeySizes = classInstance.Get("LegalKeySizes");
+            JCObject resultingObjects = (JCObject)retObjectLegalKeySizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new KeySizes(resultingObject));
             }
             KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLegalKeySizes != null ? retObjectLegalKeySizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,9 +365,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public java.lang.String getKeyExchangeAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyExchangeAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyExchangeAlgorithm");
+            retObjectKeyExchangeAlgorithm = classInstance.Get("KeyExchangeAlgorithm");
+            return (java.lang.String)retObjectKeyExchangeAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyExchangeAlgorithm != null ? retObjectKeyExchangeAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +379,13 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
 
     public java.lang.String getSignatureAlgorithm() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("SignatureAlgorithm");
+            retObjectSignatureAlgorithm = classInstance.Get("SignatureAlgorithm");
+            return (java.lang.String)retObjectSignatureAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSignatureAlgorithm != null ? retObjectSignatureAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

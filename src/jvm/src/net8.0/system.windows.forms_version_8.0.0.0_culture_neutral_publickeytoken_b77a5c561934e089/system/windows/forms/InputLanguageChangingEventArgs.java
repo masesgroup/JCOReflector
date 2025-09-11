@@ -182,9 +182,13 @@ public class InputLanguageChangingEventArgs extends CancelEventArgs  {
     
     public boolean getSysCharSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSysCharSet = null;
         try {
-            return (boolean)classInstance.Get("SysCharSet");
+            retObjectSysCharSet = classInstance.Get("SysCharSet");
+            return (boolean)retObjectSysCharSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSysCharSet != null ? retObjectSysCharSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class InputLanguageChangingEventArgs extends CancelEventArgs  {
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class InputLanguageChangingEventArgs extends CancelEventArgs  {
 
     public InputLanguage getInputLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputLanguage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputLanguage");
+            retObjectInputLanguage = classInstance.Get("InputLanguage");
+            JCObject val = (JCObject)retObjectInputLanguage;
             return new InputLanguage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputLanguage != null ? retObjectInputLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

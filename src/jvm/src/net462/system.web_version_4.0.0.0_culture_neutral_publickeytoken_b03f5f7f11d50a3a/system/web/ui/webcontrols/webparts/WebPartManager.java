@@ -196,9 +196,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
     
     public boolean CanConnectWebParts(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConnectWebParts = null;
         try {
-            return (boolean)classInstance.Invoke("CanConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance());
+            retObjectCanConnectWebParts = classInstance.Invoke("CanConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance());
+            return (boolean)retObjectCanConnectWebParts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConnectWebParts != null ? retObjectCanConnectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +210,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public boolean CanConnectWebParts(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint, WebPartTransformer transformer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConnectWebParts = null;
         try {
-            return (boolean)classInstance.Invoke("CanConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance(), transformer == null ? null : transformer.getJCOInstance());
+            retObjectCanConnectWebParts = classInstance.Invoke("CanConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance(), transformer == null ? null : transformer.getJCOInstance());
+            return (boolean)retObjectCanConnectWebParts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConnectWebParts != null ? retObjectCanConnectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +224,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public boolean IsAuthorized(NetType type, java.lang.String path, java.lang.String authorizationFilter, boolean isShared) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthorized = null;
         try {
-            return (boolean)classInstance.Invoke("IsAuthorized", type == null ? null : type.getJCOInstance(), path, authorizationFilter, isShared);
+            retObjectIsAuthorized = classInstance.Invoke("IsAuthorized", type == null ? null : type.getJCOInstance(), path, authorizationFilter, isShared);
+            return (boolean)retObjectIsAuthorized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAuthorized != null ? retObjectIsAuthorized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +238,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public boolean IsAuthorized(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthorized = null;
         try {
-            return (boolean)classInstance.Invoke("IsAuthorized", webPart == null ? null : webPart.getJCOInstance());
+            retObjectIsAuthorized = classInstance.Invoke("IsAuthorized", webPart == null ? null : webPart.getJCOInstance());
+            return (boolean)retObjectIsAuthorized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAuthorized != null ? retObjectIsAuthorized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +252,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public java.lang.String GetExportUrl(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetExportUrl", webPart == null ? null : webPart.getJCOInstance());
+            retObjectGetExportUrl = classInstance.Invoke("GetExportUrl", webPart == null ? null : webPart.getJCOInstance());
+            return (java.lang.String)retObjectGetExportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExportUrl != null ? retObjectGetExportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +266,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public ConsumerConnectionPointCollection GetConsumerConnectionPoints(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConsumerConnectionPoints = null;
         try {
-            JCObject objGetConsumerConnectionPoints = (JCObject)classInstance.Invoke("GetConsumerConnectionPoints", webPart == null ? null : webPart.getJCOInstance());
+            retObjectGetConsumerConnectionPoints = classInstance.Invoke("GetConsumerConnectionPoints", webPart == null ? null : webPart.getJCOInstance());
+            JCObject objGetConsumerConnectionPoints = (JCObject)retObjectGetConsumerConnectionPoints;
             return new ConsumerConnectionPointCollection(objGetConsumerConnectionPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConsumerConnectionPoints != null ? retObjectGetConsumerConnectionPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +281,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public GenericWebPart CreateWebPart(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWebPart = null;
         try {
-            JCObject objCreateWebPart = (JCObject)classInstance.Invoke("CreateWebPart", control == null ? null : control.getJCOInstance());
+            retObjectCreateWebPart = classInstance.Invoke("CreateWebPart", control == null ? null : control.getJCOInstance());
+            JCObject objCreateWebPart = (JCObject)retObjectCreateWebPart;
             return new GenericWebPart(objCreateWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWebPart != null ? retObjectCreateWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +296,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public GenericWebPart GetGenericWebPart(Control control) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericWebPart = null;
         try {
-            JCObject objGetGenericWebPart = (JCObject)classInstance.Invoke("GetGenericWebPart", control == null ? null : control.getJCOInstance());
+            retObjectGetGenericWebPart = classInstance.Invoke("GetGenericWebPart", control == null ? null : control.getJCOInstance());
+            JCObject objGetGenericWebPart = (JCObject)retObjectGetGenericWebPart;
             return new GenericWebPart(objGetGenericWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericWebPart != null ? retObjectGetGenericWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +311,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public ProviderConnectionPointCollection GetProviderConnectionPoints(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderConnectionPoints = null;
         try {
-            JCObject objGetProviderConnectionPoints = (JCObject)classInstance.Invoke("GetProviderConnectionPoints", webPart == null ? null : webPart.getJCOInstance());
+            retObjectGetProviderConnectionPoints = classInstance.Invoke("GetProviderConnectionPoints", webPart == null ? null : webPart.getJCOInstance());
+            JCObject objGetProviderConnectionPoints = (JCObject)retObjectGetProviderConnectionPoints;
             return new ProviderConnectionPointCollection(objGetProviderConnectionPoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderConnectionPoints != null ? retObjectGetProviderConnectionPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +326,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPart AddWebPart(WebPart webPart, WebPartZoneBase zone, int zoneIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddWebPart = null;
         try {
-            JCObject objAddWebPart = (JCObject)classInstance.Invoke("AddWebPart", webPart == null ? null : webPart.getJCOInstance(), zone == null ? null : zone.getJCOInstance(), zoneIndex);
+            retObjectAddWebPart = classInstance.Invoke("AddWebPart", webPart == null ? null : webPart.getJCOInstance(), zone == null ? null : zone.getJCOInstance(), zoneIndex);
+            JCObject objAddWebPart = (JCObject)retObjectAddWebPart;
             return new WebPart(objAddWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddWebPart != null ? retObjectAddWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +341,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPart ImportWebPart(XmlReader reader, JCORefOut errorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.xml.XmlException, system.TypeLoadException, system.OverflowException, system.FormatException, system.InvalidCastException, system.web.HttpRequestValidationException, system.web.HttpCompileException, system.MulticastNotSupportedException, system.reflection.AmbiguousMatchException, system.io.InvalidDataException, system.RankException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportWebPart = null;
         try {
-            JCObject objImportWebPart = (JCObject)classInstance.Invoke("ImportWebPart", reader == null ? null : reader.getJCOInstance(), errorMessage.getJCRefOut());
+            retObjectImportWebPart = classInstance.Invoke("ImportWebPart", reader == null ? null : reader.getJCOInstance(), errorMessage.getJCRefOut());
+            JCObject objImportWebPart = (JCObject)retObjectImportWebPart;
             return new WebPart(objImportWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportWebPart != null ? retObjectImportWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +356,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartConnection ConnectWebParts(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectWebParts = null;
         try {
-            JCObject objConnectWebParts = (JCObject)classInstance.Invoke("ConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance());
+            retObjectConnectWebParts = classInstance.Invoke("ConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance());
+            JCObject objConnectWebParts = (JCObject)retObjectConnectWebParts;
             return new WebPartConnection(objConnectWebParts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectWebParts != null ? retObjectConnectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +371,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartConnection ConnectWebParts(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint, WebPartTransformer transformer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectWebParts = null;
         try {
-            JCObject objConnectWebParts = (JCObject)classInstance.Invoke("ConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance(), transformer == null ? null : transformer.getJCOInstance());
+            retObjectConnectWebParts = classInstance.Invoke("ConnectWebParts", provider == null ? null : provider.getJCOInstance(), providerConnectionPoint == null ? null : providerConnectionPoint.getJCOInstance(), consumer == null ? null : consumer.getJCOInstance(), consumerConnectionPoint == null ? null : consumerConnectionPoint.getJCOInstance(), transformer == null ? null : transformer.getJCOInstance());
+            JCObject objConnectWebParts = (JCObject)retObjectConnectWebParts;
             return new WebPartConnection(objConnectWebParts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectWebParts != null ? retObjectConnectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +386,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public static WebPartManager GetCurrentWebPartManager(Page page) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentWebPartManager = null;
         try {
-            JCObject objGetCurrentWebPartManager = (JCObject)classType.Invoke("GetCurrentWebPartManager", page == null ? null : page.getJCOInstance());
+            retObjectGetCurrentWebPartManager = classType.Invoke("GetCurrentWebPartManager", page == null ? null : page.getJCOInstance());
+            JCObject objGetCurrentWebPartManager = (JCObject)retObjectGetCurrentWebPartManager;
             return new WebPartManager(objGetCurrentWebPartManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentWebPartManager != null ? retObjectGetCurrentWebPartManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +401,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void BeginWebPartConnecting(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginWebPartConnecting", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -355,7 +411,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void BeginWebPartEditing(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginWebPartEditing", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,7 +421,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void CloseWebPart(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseWebPart", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -375,7 +431,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void DeleteWebPart(WebPart webPart) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteWebPart", webPart == null ? null : webPart.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,7 +441,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void DisconnectWebParts(WebPartConnection connection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisconnectWebParts", connection == null ? null : connection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -395,7 +451,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void EndWebPartConnecting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWebPartConnecting");
         } catch (JCNativeException jcne) {
@@ -405,7 +461,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void EndWebPartEditing() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndWebPartEditing");
         } catch (JCNativeException jcne) {
@@ -415,7 +471,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void ExportWebPart(WebPart webPart, XmlWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.RankException, system.FormatException, system.reflection.AmbiguousMatchException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportWebPart", webPart == null ? null : webPart.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -425,7 +481,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -435,7 +491,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void MoveWebPart(WebPart webPart, WebPartZoneBase zone, int zoneIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveWebPart", webPart == null ? null : webPart.getJCOInstance(), zone == null ? null : zone.getJCOInstance(), zoneIndex);
         } catch (JCNativeException jcne) {
@@ -449,7 +505,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
      */
     @Deprecated 
     public void Load(PersonalizationDictionary state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersonalizable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersonalizable to obtain the full interface.");
     }
 
     /**
@@ -458,7 +514,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
      */
     @Deprecated 
     public void Save(PersonalizationDictionary state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersonalizable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersonalizable to obtain the full interface.");
     }
 
 
@@ -467,9 +523,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
     
     public boolean getEnableClientScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableClientScript = null;
         try {
-            return (boolean)classInstance.Get("EnableClientScript");
+            retObjectEnableClientScript = classInstance.Get("EnableClientScript");
+            return (boolean)retObjectEnableClientScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableClientScript != null ? retObjectEnableClientScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +537,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void setEnableClientScript(boolean EnableClientScript) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableClientScript", EnableClientScript);
         } catch (JCNativeException jcne) {
@@ -487,9 +547,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public java.lang.String getCloseProviderWarning() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloseProviderWarning = null;
         try {
-            return (java.lang.String)classInstance.Get("CloseProviderWarning");
+            retObjectCloseProviderWarning = classInstance.Get("CloseProviderWarning");
+            return (java.lang.String)retObjectCloseProviderWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCloseProviderWarning != null ? retObjectCloseProviderWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,7 +561,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void setCloseProviderWarning(java.lang.String CloseProviderWarning) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CloseProviderWarning", CloseProviderWarning);
         } catch (JCNativeException jcne) {
@@ -507,9 +571,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public java.lang.String getDeleteWarning() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteWarning = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteWarning");
+            retObjectDeleteWarning = classInstance.Get("DeleteWarning");
+            return (java.lang.String)retObjectDeleteWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteWarning != null ? retObjectDeleteWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,7 +585,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void setDeleteWarning(java.lang.String DeleteWarning) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteWarning", DeleteWarning);
         } catch (JCNativeException jcne) {
@@ -527,9 +595,13 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public java.lang.String getExportSensitiveDataWarning() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportSensitiveDataWarning = null;
         try {
-            return (java.lang.String)classInstance.Get("ExportSensitiveDataWarning");
+            retObjectExportSensitiveDataWarning = classInstance.Get("ExportSensitiveDataWarning");
+            return (java.lang.String)retObjectExportSensitiveDataWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExportSensitiveDataWarning != null ? retObjectExportSensitiveDataWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,7 +609,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void setExportSensitiveDataWarning(java.lang.String ExportSensitiveDataWarning) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExportSensitiveDataWarning", ExportSensitiveDataWarning);
         } catch (JCNativeException jcne) {
@@ -547,10 +619,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public TransformerTypeCollection getAvailableTransformers() throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailableTransformers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AvailableTransformers");
+            retObjectAvailableTransformers = classInstance.Get("AvailableTransformers");
+            JCObject val = (JCObject)retObjectAvailableTransformers;
             return new TransformerTypeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAvailableTransformers != null ? retObjectAvailableTransformers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,10 +634,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPart getSelectedWebPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedWebPart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedWebPart");
+            retObjectSelectedWebPart = classInstance.Get("SelectedWebPart");
+            JCObject val = (JCObject)retObjectSelectedWebPart;
             return new WebPart(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedWebPart != null ? retObjectSelectedWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,10 +649,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartCollection getWebParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebParts");
+            retObjectWebParts = classInstance.Get("WebParts");
+            JCObject val = (JCObject)retObjectWebParts;
             return new WebPartCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebParts != null ? retObjectWebParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,10 +664,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartConnectionCollection getConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connections");
+            retObjectConnections = classInstance.Get("Connections");
+            JCObject val = (JCObject)retObjectConnections;
             return new WebPartConnectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnections != null ? retObjectConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +679,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartConnectionCollection getStaticConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticConnections");
+            retObjectStaticConnections = classInstance.Get("StaticConnections");
+            JCObject val = (JCObject)retObjectStaticConnections;
             return new WebPartConnectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticConnections != null ? retObjectStaticConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +694,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartDisplayMode getDisplayMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayMode");
+            retObjectDisplayMode = classInstance.Get("DisplayMode");
+            JCObject val = (JCObject)retObjectDisplayMode;
             return new WebPartDisplayMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayMode != null ? retObjectDisplayMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,7 +709,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void setDisplayMode(WebPartDisplayMode DisplayMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMode", DisplayMode == null ? null : DisplayMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -623,10 +719,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartDisplayModeCollection getDisplayModes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayModes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayModes");
+            retObjectDisplayModes = classInstance.Get("DisplayModes");
+            JCObject val = (JCObject)retObjectDisplayModes;
             return new WebPartDisplayModeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayModes != null ? retObjectDisplayModes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -634,10 +734,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartDisplayModeCollection getSupportedDisplayModes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedDisplayModes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportedDisplayModes");
+            retObjectSupportedDisplayModes = classInstance.Get("SupportedDisplayModes");
+            JCObject val = (JCObject)retObjectSupportedDisplayModes;
             return new WebPartDisplayModeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedDisplayModes != null ? retObjectSupportedDisplayModes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -645,10 +749,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartPersonalization getPersonalization() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersonalization = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Personalization");
+            retObjectPersonalization = classInstance.Get("Personalization");
+            JCObject val = (JCObject)retObjectPersonalization;
             return new WebPartPersonalization(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPersonalization != null ? retObjectPersonalization.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,10 +764,14 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public WebPartZoneCollection getZones() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZones = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Zones");
+            retObjectZones = classInstance.Get("Zones");
+            JCObject val = (JCObject)retObjectZones;
             return new WebPartZoneCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZones != null ? retObjectZones.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,7 +784,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addConnectionsActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ConnectionsActivated", handler);
         } catch (JCNativeException jcne) {
@@ -682,7 +794,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeConnectionsActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ConnectionsActivated", handler);
         } catch (JCNativeException jcne) {
@@ -692,7 +804,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addConnectionsActivating(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ConnectionsActivating", handler);
         } catch (JCNativeException jcne) {
@@ -702,7 +814,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeConnectionsActivating(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ConnectionsActivating", handler);
         } catch (JCNativeException jcne) {
@@ -712,7 +824,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartAdding(WebPartAddingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartAdding", handler);
         } catch (JCNativeException jcne) {
@@ -722,7 +834,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartAdding(WebPartAddingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartAdding", handler);
         } catch (JCNativeException jcne) {
@@ -732,7 +844,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addAuthorizeWebPart(WebPartAuthorizationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AuthorizeWebPart", handler);
         } catch (JCNativeException jcne) {
@@ -742,7 +854,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeAuthorizeWebPart(WebPartAuthorizationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AuthorizeWebPart", handler);
         } catch (JCNativeException jcne) {
@@ -752,7 +864,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addSelectedWebPartChanging(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedWebPartChanging", handler);
         } catch (JCNativeException jcne) {
@@ -762,7 +874,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeSelectedWebPartChanging(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedWebPartChanging", handler);
         } catch (JCNativeException jcne) {
@@ -772,7 +884,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartClosing(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartClosing", handler);
         } catch (JCNativeException jcne) {
@@ -782,7 +894,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartClosing(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartClosing", handler);
         } catch (JCNativeException jcne) {
@@ -792,7 +904,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartDeleting(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -802,7 +914,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartDeleting(WebPartCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -812,7 +924,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartsConnecting(WebPartConnectionsCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartsConnecting", handler);
         } catch (JCNativeException jcne) {
@@ -822,7 +934,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartsConnecting(WebPartConnectionsCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartsConnecting", handler);
         } catch (JCNativeException jcne) {
@@ -832,7 +944,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartsDisconnecting(WebPartConnectionsCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartsDisconnecting", handler);
         } catch (JCNativeException jcne) {
@@ -842,7 +954,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartsDisconnecting(WebPartConnectionsCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartsDisconnecting", handler);
         } catch (JCNativeException jcne) {
@@ -852,7 +964,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartsConnected(WebPartConnectionsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartsConnected", handler);
         } catch (JCNativeException jcne) {
@@ -862,7 +974,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartsConnected(WebPartConnectionsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartsConnected", handler);
         } catch (JCNativeException jcne) {
@@ -872,7 +984,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartsDisconnected(WebPartConnectionsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartsDisconnected", handler);
         } catch (JCNativeException jcne) {
@@ -882,7 +994,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartsDisconnected(WebPartConnectionsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartsDisconnected", handler);
         } catch (JCNativeException jcne) {
@@ -892,7 +1004,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addDisplayModeChanging(WebPartDisplayModeCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayModeChanging", handler);
         } catch (JCNativeException jcne) {
@@ -902,7 +1014,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeDisplayModeChanging(WebPartDisplayModeCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayModeChanging", handler);
         } catch (JCNativeException jcne) {
@@ -912,7 +1024,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addDisplayModeChanged(WebPartDisplayModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -922,7 +1034,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeDisplayModeChanged(WebPartDisplayModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -932,7 +1044,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addSelectedWebPartChanged(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedWebPartChanged", handler);
         } catch (JCNativeException jcne) {
@@ -942,7 +1054,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeSelectedWebPartChanged(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedWebPartChanged", handler);
         } catch (JCNativeException jcne) {
@@ -952,7 +1064,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartAdded(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartAdded", handler);
         } catch (JCNativeException jcne) {
@@ -962,7 +1074,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartAdded(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartAdded", handler);
         } catch (JCNativeException jcne) {
@@ -972,7 +1084,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartClosed(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartClosed", handler);
         } catch (JCNativeException jcne) {
@@ -982,7 +1094,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartClosed(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartClosed", handler);
         } catch (JCNativeException jcne) {
@@ -992,7 +1104,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartDeleted(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1002,7 +1114,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartDeleted(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1012,7 +1124,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartMoved(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartMoved", handler);
         } catch (JCNativeException jcne) {
@@ -1022,7 +1134,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartMoved(WebPartEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartMoved", handler);
         } catch (JCNativeException jcne) {
@@ -1032,7 +1144,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void addWebPartMoving(WebPartMovingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("WebPartMoving", handler);
         } catch (JCNativeException jcne) {
@@ -1042,7 +1154,7 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
 
     public void removeWebPartMoving(WebPartMovingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("WebPartMoving", handler);
         } catch (JCNativeException jcne) {

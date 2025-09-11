@@ -142,7 +142,7 @@ public class IDebugScriptScopeImplementation extends NetObject implements IDebug
     
     public void SetThisValue(NetObject thisValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetThisValue", thisValue == null ? null : thisValue.getJCOInstance());
         } catch (JCNativeException jcne) {

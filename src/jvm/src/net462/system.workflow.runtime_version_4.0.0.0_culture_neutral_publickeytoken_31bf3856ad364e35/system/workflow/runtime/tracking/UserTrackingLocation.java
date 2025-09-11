@@ -226,9 +226,13 @@ public class UserTrackingLocation extends NetObject  {
     
     public boolean getMatchDerivedActivityTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchDerivedActivityTypes = null;
         try {
-            return (boolean)classInstance.Get("MatchDerivedActivityTypes");
+            retObjectMatchDerivedActivityTypes = classInstance.Get("MatchDerivedActivityTypes");
+            return (boolean)retObjectMatchDerivedActivityTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMatchDerivedActivityTypes != null ? retObjectMatchDerivedActivityTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +240,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setMatchDerivedActivityTypes(boolean MatchDerivedActivityTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchDerivedActivityTypes", MatchDerivedActivityTypes);
         } catch (JCNativeException jcne) {
@@ -246,9 +250,13 @@ public class UserTrackingLocation extends NetObject  {
 
     public boolean getMatchDerivedArgumentTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchDerivedArgumentTypes = null;
         try {
-            return (boolean)classInstance.Get("MatchDerivedArgumentTypes");
+            retObjectMatchDerivedArgumentTypes = classInstance.Get("MatchDerivedArgumentTypes");
+            return (boolean)retObjectMatchDerivedArgumentTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMatchDerivedArgumentTypes != null ? retObjectMatchDerivedArgumentTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +264,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setMatchDerivedArgumentTypes(boolean MatchDerivedArgumentTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchDerivedArgumentTypes", MatchDerivedArgumentTypes);
         } catch (JCNativeException jcne) {
@@ -266,9 +274,13 @@ public class UserTrackingLocation extends NetObject  {
 
     public java.lang.String getActivityTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ActivityTypeName");
+            retObjectActivityTypeName = classInstance.Get("ActivityTypeName");
+            return (java.lang.String)retObjectActivityTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActivityTypeName != null ? retObjectActivityTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +288,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setActivityTypeName(java.lang.String ActivityTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityTypeName", ActivityTypeName);
         } catch (JCNativeException jcne) {
@@ -286,9 +298,13 @@ public class UserTrackingLocation extends NetObject  {
 
     public java.lang.String getArgumentTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ArgumentTypeName");
+            retObjectArgumentTypeName = classInstance.Get("ArgumentTypeName");
+            return (java.lang.String)retObjectArgumentTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectArgumentTypeName != null ? retObjectArgumentTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +312,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setArgumentTypeName(java.lang.String ArgumentTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArgumentTypeName", ArgumentTypeName);
         } catch (JCNativeException jcne) {
@@ -306,9 +322,13 @@ public class UserTrackingLocation extends NetObject  {
 
     public java.lang.String getKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyName");
+            retObjectKeyName = classInstance.Get("KeyName");
+            return (java.lang.String)retObjectKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyName != null ? retObjectKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +336,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setKeyName(java.lang.String KeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyName", KeyName);
         } catch (JCNativeException jcne) {
@@ -326,10 +346,14 @@ public class UserTrackingLocation extends NetObject  {
 
     public NetType getActivityType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityType");
+            retObjectActivityType = classInstance.Get("ActivityType");
+            JCObject val = (JCObject)retObjectActivityType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityType != null ? retObjectActivityType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +361,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +371,14 @@ public class UserTrackingLocation extends NetObject  {
 
     public NetType getArgumentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArgumentType");
+            retObjectArgumentType = classInstance.Get("ArgumentType");
+            JCObject val = (JCObject)retObjectArgumentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgumentType != null ? retObjectArgumentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +386,7 @@ public class UserTrackingLocation extends NetObject  {
 
     public void setArgumentType(NetType ArgumentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArgumentType", ArgumentType == null ? null : ArgumentType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -368,10 +396,14 @@ public class UserTrackingLocation extends NetObject  {
 
     public TrackingConditionCollection getConditions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Conditions");
+            retObjectConditions = classInstance.Get("Conditions");
+            JCObject val = (JCObject)retObjectConditions;
             return new TrackingConditionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditions != null ? retObjectConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

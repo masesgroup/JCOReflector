@@ -177,9 +177,13 @@ public class Window extends ContentControl  {
     
     public boolean Activate() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivate = null;
         try {
-            return (boolean)classInstance.Invoke("Activate");
+            retObjectActivate = classInstance.Invoke("Activate");
+            return (boolean)retObjectActivate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectActivate != null ? retObjectActivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class Window extends ContentControl  {
 
     public static Window GetWindow(DependencyObject dependencyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWindow = null;
         try {
-            JCObject objGetWindow = (JCObject)classType.Invoke("GetWindow", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            retObjectGetWindow = classType.Invoke("GetWindow", dependencyObject == null ? null : dependencyObject.getJCOInstance());
+            JCObject objGetWindow = (JCObject)retObjectGetWindow;
             return new Window(objGetWindow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWindow != null ? retObjectGetWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class Window extends ContentControl  {
 
     public void Close() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -208,7 +216,7 @@ public class Window extends ContentControl  {
 
     public void DragMove() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DragMove");
         } catch (JCNativeException jcne) {
@@ -218,7 +226,7 @@ public class Window extends ContentControl  {
 
     public void Hide() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Hide");
         } catch (JCNativeException jcne) {
@@ -228,7 +236,7 @@ public class Window extends ContentControl  {
 
     public void Show() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.threading.ThreadStateException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show");
         } catch (JCNativeException jcne) {
@@ -242,9 +250,13 @@ public class Window extends ContentControl  {
     
     public boolean getAllowsTransparency() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowsTransparency = null;
         try {
-            return (boolean)classInstance.Get("AllowsTransparency");
+            retObjectAllowsTransparency = classInstance.Get("AllowsTransparency");
+            return (boolean)retObjectAllowsTransparency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowsTransparency != null ? retObjectAllowsTransparency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class Window extends ContentControl  {
 
     public void setAllowsTransparency(boolean AllowsTransparency) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowsTransparency", AllowsTransparency);
         } catch (JCNativeException jcne) {
@@ -262,9 +274,13 @@ public class Window extends ContentControl  {
 
     public boolean getIsActive() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActive = null;
         try {
-            return (boolean)classInstance.Get("IsActive");
+            retObjectIsActive = classInstance.Get("IsActive");
+            return (boolean)retObjectIsActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActive != null ? retObjectIsActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +288,13 @@ public class Window extends ContentControl  {
 
     public boolean getShowActivated() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowActivated = null;
         try {
-            return (boolean)classInstance.Get("ShowActivated");
+            retObjectShowActivated = classInstance.Get("ShowActivated");
+            return (boolean)retObjectShowActivated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowActivated != null ? retObjectShowActivated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +302,7 @@ public class Window extends ContentControl  {
 
     public void setShowActivated(boolean ShowActivated) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowActivated", ShowActivated);
         } catch (JCNativeException jcne) {
@@ -292,9 +312,13 @@ public class Window extends ContentControl  {
 
     public boolean getShowInTaskbar() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowInTaskbar = null;
         try {
-            return (boolean)classInstance.Get("ShowInTaskbar");
+            retObjectShowInTaskbar = classInstance.Get("ShowInTaskbar");
+            return (boolean)retObjectShowInTaskbar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowInTaskbar != null ? retObjectShowInTaskbar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class Window extends ContentControl  {
 
     public void setShowInTaskbar(boolean ShowInTaskbar) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowInTaskbar", ShowInTaskbar);
         } catch (JCNativeException jcne) {
@@ -312,9 +336,13 @@ public class Window extends ContentControl  {
 
     public boolean getTopmost() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopmost = null;
         try {
-            return (boolean)classInstance.Get("Topmost");
+            retObjectTopmost = classInstance.Get("Topmost");
+            return (boolean)retObjectTopmost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTopmost != null ? retObjectTopmost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +350,7 @@ public class Window extends ContentControl  {
 
     public void setTopmost(boolean Topmost) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Topmost", Topmost);
         } catch (JCNativeException jcne) {
@@ -332,9 +360,13 @@ public class Window extends ContentControl  {
 
     public double getLeft() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            return (double)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            return (double)retObjectLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +374,7 @@ public class Window extends ContentControl  {
 
     public void setLeft(double Left) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Left", Left);
         } catch (JCNativeException jcne) {
@@ -352,9 +384,13 @@ public class Window extends ContentControl  {
 
     public double getTop() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTop = null;
         try {
-            return (double)classInstance.Get("Top");
+            retObjectTop = classInstance.Get("Top");
+            return (double)retObjectTop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTop != null ? retObjectTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +398,7 @@ public class Window extends ContentControl  {
 
     public void setTop(double Top) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Top", Top);
         } catch (JCNativeException jcne) {
@@ -372,9 +408,13 @@ public class Window extends ContentControl  {
 
     public java.lang.String getTitle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +422,7 @@ public class Window extends ContentControl  {
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -392,10 +432,14 @@ public class Window extends ContentControl  {
 
     public ImageSource getIcon() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new ImageSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +447,7 @@ public class Window extends ContentControl  {
 
     public void setIcon(ImageSource Icon) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +457,14 @@ public class Window extends ContentControl  {
 
     public Rect getRestoreBounds() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreBounds");
+            retObjectRestoreBounds = classInstance.Get("RestoreBounds");
+            JCObject val = (JCObject)retObjectRestoreBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreBounds != null ? retObjectRestoreBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +472,14 @@ public class Window extends ContentControl  {
 
     public ResizeMode getResizeMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResizeMode");
+            retObjectResizeMode = classInstance.Get("ResizeMode");
+            JCObject val = (JCObject)retObjectResizeMode;
             return new ResizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeMode != null ? retObjectResizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,7 +487,7 @@ public class Window extends ContentControl  {
 
     public void setResizeMode(ResizeMode ResizeMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResizeMode", ResizeMode == null ? null : ResizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -445,10 +497,14 @@ public class Window extends ContentControl  {
 
     public TaskbarItemInfo getTaskbarItemInfo() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskbarItemInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskbarItemInfo");
+            retObjectTaskbarItemInfo = classInstance.Get("TaskbarItemInfo");
+            JCObject val = (JCObject)retObjectTaskbarItemInfo;
             return new TaskbarItemInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskbarItemInfo != null ? retObjectTaskbarItemInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +512,7 @@ public class Window extends ContentControl  {
 
     public void setTaskbarItemInfo(TaskbarItemInfo TaskbarItemInfo) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskbarItemInfo", TaskbarItemInfo == null ? null : TaskbarItemInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -466,10 +522,14 @@ public class Window extends ContentControl  {
 
     public SizeToContent getSizeToContent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeToContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeToContent");
+            retObjectSizeToContent = classInstance.Get("SizeToContent");
+            JCObject val = (JCObject)retObjectSizeToContent;
             return new SizeToContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeToContent != null ? retObjectSizeToContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +537,7 @@ public class Window extends ContentControl  {
 
     public void setSizeToContent(SizeToContent SizeToContent) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeToContent", SizeToContent == null ? null : SizeToContent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,10 +547,14 @@ public class Window extends ContentControl  {
 
     public ThemeMode getThemeMode() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThemeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThemeMode");
+            retObjectThemeMode = classInstance.Get("ThemeMode");
+            JCObject val = (JCObject)retObjectThemeMode;
             return new ThemeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThemeMode != null ? retObjectThemeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,7 +562,7 @@ public class Window extends ContentControl  {
 
     public void setThemeMode(ThemeMode ThemeMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.UriFormatException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.diagnostics.UnreachableException, system.net.WebException, system.net.CookieException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThemeMode", ThemeMode == null ? null : ThemeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -508,10 +572,14 @@ public class Window extends ContentControl  {
 
     public Window getOwner() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new Window(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,7 +587,7 @@ public class Window extends ContentControl  {
 
     public void setOwner(Window Owner) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -529,10 +597,14 @@ public class Window extends ContentControl  {
 
     public WindowCollection getOwnedWindows() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnedWindows = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnedWindows");
+            retObjectOwnedWindows = classInstance.Get("OwnedWindows");
+            JCObject val = (JCObject)retObjectOwnedWindows;
             return new WindowCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnedWindows != null ? retObjectOwnedWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,10 +612,14 @@ public class Window extends ContentControl  {
 
     public WindowStartupLocation getWindowStartupLocation() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowStartupLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowStartupLocation");
+            retObjectWindowStartupLocation = classInstance.Get("WindowStartupLocation");
+            JCObject val = (JCObject)retObjectWindowStartupLocation;
             return new WindowStartupLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowStartupLocation != null ? retObjectWindowStartupLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +627,7 @@ public class Window extends ContentControl  {
 
     public void setWindowStartupLocation(WindowStartupLocation WindowStartupLocation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowStartupLocation", WindowStartupLocation == null ? null : WindowStartupLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -561,10 +637,14 @@ public class Window extends ContentControl  {
 
     public WindowState getWindowState() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowState");
+            retObjectWindowState = classInstance.Get("WindowState");
+            JCObject val = (JCObject)retObjectWindowState;
             return new WindowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowState != null ? retObjectWindowState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,7 +652,7 @@ public class Window extends ContentControl  {
 
     public void setWindowState(WindowState WindowState) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowState", WindowState == null ? null : WindowState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -582,10 +662,14 @@ public class Window extends ContentControl  {
 
     public WindowStyle getWindowStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowStyle");
+            retObjectWindowStyle = classInstance.Get("WindowStyle");
+            JCObject val = (JCObject)retObjectWindowStyle;
             return new WindowStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,7 +677,7 @@ public class Window extends ContentControl  {
 
     public void setWindowStyle(WindowStyle WindowStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowStyle", WindowStyle == null ? null : WindowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -608,7 +692,7 @@ public class Window extends ContentControl  {
 
     public void addClosing(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -618,7 +702,7 @@ public class Window extends ContentControl  {
 
     public void removeClosing(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -628,7 +712,7 @@ public class Window extends ContentControl  {
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -638,7 +722,7 @@ public class Window extends ContentControl  {
 
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -648,7 +732,7 @@ public class Window extends ContentControl  {
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -658,7 +742,7 @@ public class Window extends ContentControl  {
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -668,7 +752,7 @@ public class Window extends ContentControl  {
 
     public void addContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {
@@ -678,7 +762,7 @@ public class Window extends ContentControl  {
 
     public void removeContentRendered(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ContentRendered", handler);
         } catch (JCNativeException jcne) {
@@ -688,7 +772,7 @@ public class Window extends ContentControl  {
 
     public void addDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -698,7 +782,7 @@ public class Window extends ContentControl  {
 
     public void removeDeactivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivated", handler);
         } catch (JCNativeException jcne) {
@@ -708,7 +792,7 @@ public class Window extends ContentControl  {
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -718,7 +802,7 @@ public class Window extends ContentControl  {
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -728,7 +812,7 @@ public class Window extends ContentControl  {
 
     public void addSourceInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SourceInitialized", handler);
         } catch (JCNativeException jcne) {
@@ -738,7 +822,7 @@ public class Window extends ContentControl  {
 
     public void removeSourceInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SourceInitialized", handler);
         } catch (JCNativeException jcne) {
@@ -748,7 +832,7 @@ public class Window extends ContentControl  {
 
     public void addStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -758,7 +842,7 @@ public class Window extends ContentControl  {
 
     public void removeStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -768,7 +852,7 @@ public class Window extends ContentControl  {
 
     public void addDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {
@@ -778,7 +862,7 @@ public class Window extends ContentControl  {
 
     public void removeDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {

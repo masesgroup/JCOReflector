@@ -199,9 +199,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
     
     public boolean ShouldSerializeBaselineOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeBaselineOffset = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeBaselineOffset");
+            retObjectShouldSerializeBaselineOffset = classInstance.Invoke("ShouldSerializeBaselineOffset");
+            return (boolean)retObjectShouldSerializeBaselineOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeBaselineOffset != null ? retObjectShouldSerializeBaselineOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +213,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public boolean ShouldSerializeInlines(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeInlines = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeInlines = classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeInlines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeInlines != null ? retObjectShouldSerializeInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +227,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public boolean ShouldSerializeText() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeText = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeText");
+            retObjectShouldSerializeText = classInstance.Invoke("ShouldSerializeText");
+            return (boolean)retObjectShouldSerializeText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeText != null ? retObjectShouldSerializeText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,9 +241,19 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static double GetBaselineOffset(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBaselineOffset = null;
         try {
-            return (double)classType.Invoke("GetBaselineOffset", element == null ? null : element.getJCOInstance());
+            retObjectGetBaselineOffset = classType.Invoke("GetBaselineOffset", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetBaselineOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBaselineOffsetNumber = (java.lang.Number)retObjectGetBaselineOffset;
+                return retObjectGetBaselineOffsetNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetBaselineOffset != null ? retObjectGetBaselineOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +261,19 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static double GetFontSize(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontSize = null;
         try {
-            return (double)classType.Invoke("GetFontSize", element == null ? null : element.getJCOInstance());
+            retObjectGetFontSize = classType.Invoke("GetFontSize", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFontSizeNumber = (java.lang.Number)retObjectGetFontSize;
+                return retObjectGetFontSizeNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetFontSize != null ? retObjectGetFontSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,9 +281,19 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static double GetLineHeight(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineHeight = null;
         try {
-            return (double)classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
+            retObjectGetLineHeight = classType.Invoke("GetLineHeight", element == null ? null : element.getJCOInstance());
+            return (double)retObjectGetLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineHeightNumber = (java.lang.Number)retObjectGetLineHeight;
+                return retObjectGetLineHeightNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetLineHeight != null ? retObjectGetLineHeight.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +301,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextPointer GetPositionFromPoint(Point point, boolean snapToText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromPoint = null;
         try {
-            JCObject objGetPositionFromPoint = (JCObject)classInstance.Invoke("GetPositionFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            retObjectGetPositionFromPoint = classInstance.Invoke("GetPositionFromPoint", point == null ? null : point.getJCOInstance(), snapToText);
+            JCObject objGetPositionFromPoint = (JCObject)retObjectGetPositionFromPoint;
             return new TextPointer(objGetPositionFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromPoint != null ? retObjectGetPositionFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +316,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static FontStretch GetFontStretch(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontStretch = null;
         try {
-            JCObject objGetFontStretch = (JCObject)classType.Invoke("GetFontStretch", element == null ? null : element.getJCOInstance());
+            retObjectGetFontStretch = classType.Invoke("GetFontStretch", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontStretch = (JCObject)retObjectGetFontStretch;
             return new FontStretch(objGetFontStretch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontStretch != null ? retObjectGetFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +331,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static FontStyle GetFontStyle(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontStyle = null;
         try {
-            JCObject objGetFontStyle = (JCObject)classType.Invoke("GetFontStyle", element == null ? null : element.getJCOInstance());
+            retObjectGetFontStyle = classType.Invoke("GetFontStyle", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontStyle = (JCObject)retObjectGetFontStyle;
             return new FontStyle(objGetFontStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontStyle != null ? retObjectGetFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +346,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static FontWeight GetFontWeight(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontWeight = null;
         try {
-            JCObject objGetFontWeight = (JCObject)classType.Invoke("GetFontWeight", element == null ? null : element.getJCOInstance());
+            retObjectGetFontWeight = classType.Invoke("GetFontWeight", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontWeight = (JCObject)retObjectGetFontWeight;
             return new FontWeight(objGetFontWeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontWeight != null ? retObjectGetFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +361,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static LineStackingStrategy GetLineStackingStrategy(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLineStackingStrategy = null;
         try {
-            JCObject objGetLineStackingStrategy = (JCObject)classType.Invoke("GetLineStackingStrategy", element == null ? null : element.getJCOInstance());
+            retObjectGetLineStackingStrategy = classType.Invoke("GetLineStackingStrategy", element == null ? null : element.getJCOInstance());
+            JCObject objGetLineStackingStrategy = (JCObject)retObjectGetLineStackingStrategy;
             return new LineStackingStrategy(objGetLineStackingStrategy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLineStackingStrategy != null ? retObjectGetLineStackingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +376,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static Brush GetForeground(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetForeground = null;
         try {
-            JCObject objGetForeground = (JCObject)classType.Invoke("GetForeground", element == null ? null : element.getJCOInstance());
+            retObjectGetForeground = classType.Invoke("GetForeground", element == null ? null : element.getJCOInstance());
+            JCObject objGetForeground = (JCObject)retObjectGetForeground;
             return new Brush(objGetForeground);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetForeground != null ? retObjectGetForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +391,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static FontFamily GetFontFamily(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFontFamily = null;
         try {
-            JCObject objGetFontFamily = (JCObject)classType.Invoke("GetFontFamily", element == null ? null : element.getJCOInstance());
+            retObjectGetFontFamily = classType.Invoke("GetFontFamily", element == null ? null : element.getJCOInstance());
+            JCObject objGetFontFamily = (JCObject)retObjectGetFontFamily;
             return new FontFamily(objGetFontFamily);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFontFamily != null ? retObjectGetFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +406,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static TextAlignment GetTextAlignment(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTextAlignment = null;
         try {
-            JCObject objGetTextAlignment = (JCObject)classType.Invoke("GetTextAlignment", element == null ? null : element.getJCOInstance());
+            retObjectGetTextAlignment = classType.Invoke("GetTextAlignment", element == null ? null : element.getJCOInstance());
+            JCObject objGetTextAlignment = (JCObject)retObjectGetTextAlignment;
             return new TextAlignment(objGetTextAlignment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextAlignment != null ? retObjectGetTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +421,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetBaselineOffset(DependencyObject element, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetBaselineOffset", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -357,7 +431,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetFontFamily(DependencyObject element, FontFamily value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontFamily", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,7 +441,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetFontSize(DependencyObject element, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontSize", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -377,7 +451,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetFontStretch(DependencyObject element, FontStretch value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontStretch", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -387,7 +461,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetFontStyle(DependencyObject element, FontStyle value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontStyle", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -397,7 +471,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetFontWeight(DependencyObject element, FontWeight value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFontWeight", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,7 +481,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetForeground(DependencyObject element, Brush value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetForeground", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +491,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetLineHeight(DependencyObject element, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLineHeight", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -427,7 +501,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetLineStackingStrategy(DependencyObject element, LineStackingStrategy value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLineStackingStrategy", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -437,7 +511,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public static void SetTextAlignment(DependencyObject element, TextAlignment value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTextAlignment", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -451,7 +525,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public IInputElement InputHitTest(Point point) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
     }
 
     /**
@@ -460,7 +534,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public void OnChildDesiredSizeChanged(UIElement child) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
     }
 
     /**
@@ -469,7 +543,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -478,7 +552,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -487,7 +561,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -496,9 +570,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
     
     public boolean getIsHyphenationEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHyphenationEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsHyphenationEnabled");
+            retObjectIsHyphenationEnabled = classInstance.Get("IsHyphenationEnabled");
+            return (boolean)retObjectIsHyphenationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHyphenationEnabled != null ? retObjectIsHyphenationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +584,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setIsHyphenationEnabled(boolean IsHyphenationEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsHyphenationEnabled", IsHyphenationEnabled);
         } catch (JCNativeException jcne) {
@@ -516,9 +594,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public double getBaselineOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaselineOffset = null;
         try {
-            return (double)classInstance.Get("BaselineOffset");
+            retObjectBaselineOffset = classInstance.Get("BaselineOffset");
+            return (double)retObjectBaselineOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBaselineOffset != null ? retObjectBaselineOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,7 +608,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setBaselineOffset(double BaselineOffset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaselineOffset", BaselineOffset);
         } catch (JCNativeException jcne) {
@@ -536,9 +618,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public double getFontSize() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontSize = null;
         try {
-            return (double)classInstance.Get("FontSize");
+            retObjectFontSize = classInstance.Get("FontSize");
+            return (double)retObjectFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectFontSize != null ? retObjectFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +632,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setFontSize(double FontSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontSize", FontSize);
         } catch (JCNativeException jcne) {
@@ -556,9 +642,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public double getLineHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineHeight = null;
         try {
-            return (double)classInstance.Get("LineHeight");
+            retObjectLineHeight = classInstance.Get("LineHeight");
+            return (double)retObjectLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +656,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setLineHeight(double LineHeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineHeight", LineHeight);
         } catch (JCNativeException jcne) {
@@ -576,9 +666,13 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public java.lang.String getText() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,7 +680,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setText(java.lang.String Text) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -596,10 +690,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public InlineCollection getInlines() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInlines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Inlines");
+            retObjectInlines = classInstance.Get("Inlines");
+            JCObject val = (JCObject)retObjectInlines;
             return new InlineCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInlines != null ? retObjectInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,10 +705,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextPointer getContentEnd() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEnd = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentEnd");
+            retObjectContentEnd = classInstance.Get("ContentEnd");
+            JCObject val = (JCObject)retObjectContentEnd;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentEnd != null ? retObjectContentEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,10 +720,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextPointer getContentStart() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentStart = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentStart");
+            retObjectContentStart = classInstance.Get("ContentStart");
+            JCObject val = (JCObject)retObjectContentStart;
             return new TextPointer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentStart != null ? retObjectContentStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,10 +735,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public Typography getTypography() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypography = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Typography");
+            retObjectTypography = classInstance.Get("Typography");
+            JCObject val = (JCObject)retObjectTypography;
             return new Typography(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypography != null ? retObjectTypography.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +750,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public FontStretch getFontStretch() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStretch");
+            retObjectFontStretch = classInstance.Get("FontStretch");
+            JCObject val = (JCObject)retObjectFontStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStretch != null ? retObjectFontStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,7 +765,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setFontStretch(FontStretch FontStretch) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStretch", FontStretch == null ? null : FontStretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -661,10 +775,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public FontStyle getFontStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontStyle");
+            retObjectFontStyle = classInstance.Get("FontStyle");
+            JCObject val = (JCObject)retObjectFontStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontStyle != null ? retObjectFontStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,7 +790,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setFontStyle(FontStyle FontStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontStyle", FontStyle == null ? null : FontStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -682,10 +800,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontWeight");
+            retObjectFontWeight = classInstance.Get("FontWeight");
+            JCObject val = (JCObject)retObjectFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontWeight != null ? retObjectFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,7 +815,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setFontWeight(FontWeight FontWeight) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontWeight", FontWeight == null ? null : FontWeight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -703,10 +825,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public LineBreakCondition getBreakAfter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakAfter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakAfter");
+            retObjectBreakAfter = classInstance.Get("BreakAfter");
+            JCObject val = (JCObject)retObjectBreakAfter;
             return new LineBreakCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreakAfter != null ? retObjectBreakAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,10 +840,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public LineBreakCondition getBreakBefore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakBefore = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BreakBefore");
+            retObjectBreakBefore = classInstance.Get("BreakBefore");
+            JCObject val = (JCObject)retObjectBreakBefore;
             return new LineBreakCondition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreakBefore != null ? retObjectBreakBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,10 +855,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public LineStackingStrategy getLineStackingStrategy() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineStackingStrategy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LineStackingStrategy");
+            retObjectLineStackingStrategy = classInstance.Get("LineStackingStrategy");
+            JCObject val = (JCObject)retObjectLineStackingStrategy;
             return new LineStackingStrategy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLineStackingStrategy != null ? retObjectLineStackingStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -736,7 +870,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setLineStackingStrategy(LineStackingStrategy LineStackingStrategy) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineStackingStrategy", LineStackingStrategy == null ? null : LineStackingStrategy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -746,10 +880,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public Brush getBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,7 +895,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -767,10 +905,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public Brush getForeground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Foreground");
+            retObjectForeground = classInstance.Get("Foreground");
+            JCObject val = (JCObject)retObjectForeground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeground != null ? retObjectForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -778,7 +920,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setForeground(Brush Foreground) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Foreground", Foreground == null ? null : Foreground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -788,10 +930,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -799,7 +945,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setFontFamily(FontFamily FontFamily) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontFamily", FontFamily == null ? null : FontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -809,10 +955,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextEffectCollection getTextEffects() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextEffects = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextEffects");
+            retObjectTextEffects = classInstance.Get("TextEffects");
+            JCObject val = (JCObject)retObjectTextEffects;
             return new TextEffectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextEffects != null ? retObjectTextEffects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,7 +970,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setTextEffects(TextEffectCollection TextEffects) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextEffects", TextEffects == null ? null : TextEffects.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -830,10 +980,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextAlignment getTextAlignment() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -841,7 +995,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setTextAlignment(TextAlignment TextAlignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlignment", TextAlignment == null ? null : TextAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -851,10 +1005,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextDecorationCollection getTextDecorations() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDecorations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDecorations");
+            retObjectTextDecorations = classInstance.Get("TextDecorations");
+            JCObject val = (JCObject)retObjectTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDecorations != null ? retObjectTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -862,7 +1020,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setTextDecorations(TextDecorationCollection TextDecorations) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextDecorations", TextDecorations == null ? null : TextDecorations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -872,10 +1030,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextTrimming getTextTrimming() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextTrimming = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextTrimming");
+            retObjectTextTrimming = classInstance.Get("TextTrimming");
+            JCObject val = (JCObject)retObjectTextTrimming;
             return new TextTrimming(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextTrimming != null ? retObjectTextTrimming.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -883,7 +1045,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setTextTrimming(TextTrimming TextTrimming) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextTrimming", TextTrimming == null ? null : TextTrimming.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -893,10 +1055,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public TextWrapping getTextWrapping() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextWrapping = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextWrapping");
+            retObjectTextWrapping = classInstance.Get("TextWrapping");
+            JCObject val = (JCObject)retObjectTextWrapping;
             return new TextWrapping(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextWrapping != null ? retObjectTextWrapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,7 +1070,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setTextWrapping(TextWrapping TextWrapping) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextWrapping", TextWrapping == null ? null : TextWrapping.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -914,10 +1080,14 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public Thickness getPadding() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Thickness(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -925,7 +1095,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
 
     public void setPadding(Thickness Padding) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {

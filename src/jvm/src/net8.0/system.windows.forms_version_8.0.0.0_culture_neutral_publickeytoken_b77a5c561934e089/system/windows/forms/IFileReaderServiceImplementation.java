@@ -143,10 +143,14 @@ public class IFileReaderServiceImplementation extends NetObject implements IFile
     
     public Stream OpenFileFromSource(java.lang.String relativePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFileFromSource = null;
         try {
-            JCObject objOpenFileFromSource = (JCObject)classInstance.Invoke("OpenFileFromSource", relativePath);
+            retObjectOpenFileFromSource = classInstance.Invoke("OpenFileFromSource", relativePath);
+            JCObject objOpenFileFromSource = (JCObject)retObjectOpenFileFromSource;
             return new Stream(objOpenFileFromSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFileFromSource != null ? retObjectOpenFileFromSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

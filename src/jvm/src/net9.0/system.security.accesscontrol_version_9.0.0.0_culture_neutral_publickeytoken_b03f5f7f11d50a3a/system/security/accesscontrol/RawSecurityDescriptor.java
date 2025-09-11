@@ -189,7 +189,7 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
     
     public void SetFlags(ControlFlags flags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFlags", flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,9 +203,13 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
     
     public byte getResourceManagerControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceManagerControl = null;
         try {
-            return (byte)classInstance.Get("ResourceManagerControl");
+            retObjectResourceManagerControl = classInstance.Get("ResourceManagerControl");
+            return (byte)retObjectResourceManagerControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectResourceManagerControl != null ? retObjectResourceManagerControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void setResourceManagerControl(byte ResourceManagerControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceManagerControl", ResourceManagerControl);
         } catch (JCNativeException jcne) {
@@ -223,10 +227,14 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public RawAcl getDiscretionaryAcl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscretionaryAcl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DiscretionaryAcl");
+            retObjectDiscretionaryAcl = classInstance.Get("DiscretionaryAcl");
+            JCObject val = (JCObject)retObjectDiscretionaryAcl;
             return new RawAcl(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiscretionaryAcl != null ? retObjectDiscretionaryAcl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +242,7 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void setDiscretionaryAcl(RawAcl DiscretionaryAcl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DiscretionaryAcl", DiscretionaryAcl == null ? null : DiscretionaryAcl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +252,14 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public RawAcl getSystemAcl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemAcl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SystemAcl");
+            retObjectSystemAcl = classInstance.Get("SystemAcl");
+            JCObject val = (JCObject)retObjectSystemAcl;
             return new RawAcl(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemAcl != null ? retObjectSystemAcl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +267,7 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
 
     public void setSystemAcl(RawAcl SystemAcl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemAcl", SystemAcl == null ? null : SystemAcl.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -185,9 +185,13 @@ public class DateOnly extends ValueType  {
     
     public boolean Equals(DateOnly value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +199,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, JCORefOut<DateOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +213,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<DateOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +227,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateOnly> result) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +241,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String format, JCORefOut<DateOnly> result) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, format, result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, format, result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +255,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateOnly> result) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +269,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, JCORefOut<DateOnly> result) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OverflowException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, formats, result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, formats, result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +283,13 @@ public class DateOnly extends ValueType  {
 
     public static boolean TryParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style, JCORefOut<DateOnly> result) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParseExact = null;
         try {
-            return (boolean)classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParseExact = classType.Invoke("TryParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParseExact;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParseExact != null ? retObjectTryParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +297,19 @@ public class DateOnly extends ValueType  {
 
     public int CompareTo(DateOnly value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +317,19 @@ public class DateOnly extends ValueType  {
 
     public int CompareTo(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +337,14 @@ public class DateOnly extends ValueType  {
 
     public DateOnly AddDays(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDays = null;
         try {
-            JCObject objAddDays = (JCObject)classInstance.Invoke("AddDays", value);
+            retObjectAddDays = classInstance.Invoke("AddDays", value);
+            JCObject objAddDays = (JCObject)retObjectAddDays;
             return new DateOnly(objAddDays);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDays != null ? retObjectAddDays.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +352,14 @@ public class DateOnly extends ValueType  {
 
     public DateOnly AddMonths(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMonths = null;
         try {
-            JCObject objAddMonths = (JCObject)classInstance.Invoke("AddMonths", value);
+            retObjectAddMonths = classInstance.Invoke("AddMonths", value);
+            JCObject objAddMonths = (JCObject)retObjectAddMonths;
             return new DateOnly(objAddMonths);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMonths != null ? retObjectAddMonths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +367,14 @@ public class DateOnly extends ValueType  {
 
     public DateOnly AddYears(int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddYears = null;
         try {
-            JCObject objAddYears = (JCObject)classInstance.Invoke("AddYears", value);
+            retObjectAddYears = classInstance.Invoke("AddYears", value);
+            JCObject objAddYears = (JCObject)retObjectAddYears;
             return new DateOnly(objAddYears);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddYears != null ? retObjectAddYears.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +382,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly FromDateTime(DateTime dateTime) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDateTime = null;
         try {
-            JCObject objFromDateTime = (JCObject)classType.Invoke("FromDateTime", dateTime == null ? null : dateTime.getJCOInstance());
+            retObjectFromDateTime = classType.Invoke("FromDateTime", dateTime == null ? null : dateTime.getJCOInstance());
+            JCObject objFromDateTime = (JCObject)retObjectFromDateTime;
             return new DateOnly(objFromDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDateTime != null ? retObjectFromDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +397,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly FromDayNumber(int dayNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromDayNumber = null;
         try {
-            JCObject objFromDayNumber = (JCObject)classType.Invoke("FromDayNumber", dayNumber);
+            retObjectFromDayNumber = classType.Invoke("FromDayNumber", dayNumber);
+            JCObject objFromDayNumber = (JCObject)retObjectFromDayNumber;
             return new DateOnly(objFromDayNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromDayNumber != null ? retObjectFromDayNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +412,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +427,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +442,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new DateOnly(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +457,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +472,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.TypeInitializationException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format);
+            retObjectParseExact = classType.Invoke("ParseExact", s, format);
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +487,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String s, java.lang.String[] formats, IFormatProvider provider, DateTimeStyles style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", s, formats, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +502,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +517,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String s, java.lang.String[] formats) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, formats);
+            retObjectParseExact = classType.Invoke("ParseExact", s, formats);
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +532,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly ParseExact(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParseExact = null;
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut());
+            retObjectParseExact = classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut());
+            JCObject objParseExact = (JCObject)retObjectParseExact;
             return new DateOnly(objParseExact);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseExact != null ? retObjectParseExact.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +547,14 @@ public class DateOnly extends ValueType  {
 
     public DateTime ToDateTime(TimeOnly time, DateTimeKind kind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", time == null ? null : time.getJCOInstance(), kind == null ? null : kind.getJCOInstance());
+            retObjectToDateTime = classInstance.Invoke("ToDateTime", time == null ? null : time.getJCOInstance(), kind == null ? null : kind.getJCOInstance());
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +562,14 @@ public class DateOnly extends ValueType  {
 
     public DateTime ToDateTime(TimeOnly time) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", time == null ? null : time.getJCOInstance());
+            retObjectToDateTime = classInstance.Invoke("ToDateTime", time == null ? null : time.getJCOInstance());
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,9 +577,13 @@ public class DateOnly extends ValueType  {
 
     public java.lang.String ToLongDateString() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLongDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToLongDateString");
+            retObjectToLongDateString = classInstance.Invoke("ToLongDateString");
+            return (java.lang.String)retObjectToLongDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToLongDateString != null ? retObjectToLongDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,9 +591,13 @@ public class DateOnly extends ValueType  {
 
     public java.lang.String ToShortDateString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToShortDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToShortDateString");
+            retObjectToShortDateString = classInstance.Invoke("ToShortDateString");
+            return (java.lang.String)retObjectToShortDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToShortDateString != null ? retObjectToShortDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,9 +605,13 @@ public class DateOnly extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,9 +619,13 @@ public class DateOnly extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +633,13 @@ public class DateOnly extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +647,7 @@ public class DateOnly extends ValueType  {
 
     public void Deconstruct(JCORefOut<java.util.concurrent.atomic.AtomicInteger> year, JCORefOut<java.util.concurrent.atomic.AtomicInteger> month, JCORefOut<java.util.concurrent.atomic.AtomicInteger> day) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deconstruct", year.getJCRefOut(), month.getJCRefOut(), day.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -525,9 +661,13 @@ public class DateOnly extends ValueType  {
     
     public int getDay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDay = null;
         try {
-            return (int)classInstance.Get("Day");
+            retObjectDay = classInstance.Get("Day");
+            return (int)retObjectDay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDay != null ? retObjectDay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,9 +675,13 @@ public class DateOnly extends ValueType  {
 
     public int getDayNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayNumber = null;
         try {
-            return (int)classInstance.Get("DayNumber");
+            retObjectDayNumber = classInstance.Get("DayNumber");
+            return (int)retObjectDayNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDayNumber != null ? retObjectDayNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,9 +689,13 @@ public class DateOnly extends ValueType  {
 
     public int getDayOfYear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfYear = null;
         try {
-            return (int)classInstance.Get("DayOfYear");
+            retObjectDayOfYear = classInstance.Get("DayOfYear");
+            return (int)retObjectDayOfYear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDayOfYear != null ? retObjectDayOfYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,9 +703,13 @@ public class DateOnly extends ValueType  {
 
     public int getMonth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonth = null;
         try {
-            return (int)classInstance.Get("Month");
+            retObjectMonth = classInstance.Get("Month");
+            return (int)retObjectMonth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMonth != null ? retObjectMonth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,9 +717,13 @@ public class DateOnly extends ValueType  {
 
     public int getYear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYear = null;
         try {
-            return (int)classInstance.Get("Year");
+            retObjectYear = classInstance.Get("Year");
+            return (int)retObjectYear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectYear != null ? retObjectYear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,10 +731,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly getMaxValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaxValue");
+            retObjectMaxValue = classType.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
             return new DateOnly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,10 +746,14 @@ public class DateOnly extends ValueType  {
 
     public static DateOnly getMinValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinValue");
+            retObjectMinValue = classType.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
             return new DateOnly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,10 +761,14 @@ public class DateOnly extends ValueType  {
 
     public DayOfWeek getDayOfWeek() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DayOfWeek");
+            retObjectDayOfWeek = classInstance.Get("DayOfWeek");
+            JCObject val = (JCObject)retObjectDayOfWeek;
             return new DayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDayOfWeek != null ? retObjectDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

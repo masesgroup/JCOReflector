@@ -166,7 +166,7 @@ public class IncrementalStrokeHitTester extends IncrementalHitTester  {
 
     public void addStrokeHit(StrokeHitEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StrokeHit", handler);
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class IncrementalStrokeHitTester extends IncrementalHitTester  {
 
     public void removeStrokeHit(StrokeHitEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StrokeHit", handler);
         } catch (JCNativeException jcne) {

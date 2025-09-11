@@ -147,9 +147,13 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
     
     public boolean getIsOnline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOnline = null;
         try {
-            return (boolean)classInstance.Get("IsOnline");
+            retObjectIsOnline = classInstance.Get("IsOnline");
+            return (boolean)retObjectIsOnline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnline != null ? retObjectIsOnline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,7 +166,7 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
 
     public void addOffline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Offline", handler);
         } catch (JCNativeException jcne) {
@@ -172,7 +176,7 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
 
     public void removeOffline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Offline", handler);
         } catch (JCNativeException jcne) {
@@ -182,7 +186,7 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
 
     public void addOnline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Online", handler);
         } catch (JCNativeException jcne) {
@@ -192,7 +196,7 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
 
     public void removeOnline(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Online", handler);
         } catch (JCNativeException jcne) {

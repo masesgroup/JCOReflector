@@ -163,7 +163,7 @@ public class DocumentViewer extends DocumentViewerBase  {
     
     public void DecreaseZoom() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DecreaseZoom");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void Find() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Find");
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void FitToHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToHeight");
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void FitToMaxPagesAcross() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToMaxPagesAcross");
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void FitToMaxPagesAcross(int pagesAcross) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToMaxPagesAcross", pagesAcross);
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void FitToWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FitToWidth");
         } catch (JCNativeException jcne) {
@@ -223,7 +223,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void IncreaseZoom() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IncreaseZoom");
         } catch (JCNativeException jcne) {
@@ -233,7 +233,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void MoveDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveDown");
         } catch (JCNativeException jcne) {
@@ -243,7 +243,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void MoveLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveLeft");
         } catch (JCNativeException jcne) {
@@ -253,7 +253,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void MoveRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveRight");
         } catch (JCNativeException jcne) {
@@ -263,7 +263,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void MoveUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveUp");
         } catch (JCNativeException jcne) {
@@ -273,7 +273,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentOutOfRangeException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.OverflowException, system.FormatException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.componentmodel.Win32Exception, system.ApplicationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -283,7 +283,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void ScrollPageDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollPageDown");
         } catch (JCNativeException jcne) {
@@ -293,7 +293,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void ScrollPageLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollPageLeft");
         } catch (JCNativeException jcne) {
@@ -303,7 +303,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void ScrollPageRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollPageRight");
         } catch (JCNativeException jcne) {
@@ -313,7 +313,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void ScrollPageUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollPageUp");
         } catch (JCNativeException jcne) {
@@ -323,7 +323,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void ViewThumbnails() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ViewThumbnails");
         } catch (JCNativeException jcne) {
@@ -337,9 +337,13 @@ public class DocumentViewer extends DocumentViewerBase  {
     
     public boolean getCanDecreaseZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDecreaseZoom = null;
         try {
-            return (boolean)classInstance.Get("CanDecreaseZoom");
+            retObjectCanDecreaseZoom = classInstance.Get("CanDecreaseZoom");
+            return (boolean)retObjectCanDecreaseZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanDecreaseZoom != null ? retObjectCanDecreaseZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +351,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getCanIncreaseZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanIncreaseZoom = null;
         try {
-            return (boolean)classInstance.Get("CanIncreaseZoom");
+            retObjectCanIncreaseZoom = classInstance.Get("CanIncreaseZoom");
+            return (boolean)retObjectCanIncreaseZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanIncreaseZoom != null ? retObjectCanIncreaseZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +365,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getCanMoveDown() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveDown = null;
         try {
-            return (boolean)classInstance.Get("CanMoveDown");
+            retObjectCanMoveDown = classInstance.Get("CanMoveDown");
+            return (boolean)retObjectCanMoveDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanMoveDown != null ? retObjectCanMoveDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +379,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getCanMoveLeft() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveLeft = null;
         try {
-            return (boolean)classInstance.Get("CanMoveLeft");
+            retObjectCanMoveLeft = classInstance.Get("CanMoveLeft");
+            return (boolean)retObjectCanMoveLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanMoveLeft != null ? retObjectCanMoveLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +393,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getCanMoveRight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveRight = null;
         try {
-            return (boolean)classInstance.Get("CanMoveRight");
+            retObjectCanMoveRight = classInstance.Get("CanMoveRight");
+            return (boolean)retObjectCanMoveRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanMoveRight != null ? retObjectCanMoveRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +407,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getCanMoveUp() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMoveUp = null;
         try {
-            return (boolean)classInstance.Get("CanMoveUp");
+            retObjectCanMoveUp = classInstance.Get("CanMoveUp");
+            return (boolean)retObjectCanMoveUp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanMoveUp != null ? retObjectCanMoveUp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +421,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public boolean getShowPageBorders() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowPageBorders = null;
         try {
-            return (boolean)classInstance.Get("ShowPageBorders");
+            retObjectShowPageBorders = classInstance.Get("ShowPageBorders");
+            return (boolean)retObjectShowPageBorders;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowPageBorders != null ? retObjectShowPageBorders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +435,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setShowPageBorders(boolean ShowPageBorders) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowPageBorders", ShowPageBorders);
         } catch (JCNativeException jcne) {
@@ -417,9 +445,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getExtentHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeight = null;
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            retObjectExtentHeight = classInstance.Get("ExtentHeight");
+            return (double)retObjectExtentHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +459,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getExtentWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidth = null;
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            retObjectExtentWidth = classInstance.Get("ExtentWidth");
+            return (double)retObjectExtentWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +473,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getHorizontalOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,7 +487,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setHorizontalOffset(double HorizontalOffset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalOffset", HorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -457,9 +497,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getHorizontalPageSpacing() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalPageSpacing = null;
         try {
-            return (double)classInstance.Get("HorizontalPageSpacing");
+            retObjectHorizontalPageSpacing = classInstance.Get("HorizontalPageSpacing");
+            return (double)retObjectHorizontalPageSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalPageSpacing != null ? retObjectHorizontalPageSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,7 +511,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setHorizontalPageSpacing(double HorizontalPageSpacing) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalPageSpacing", HorizontalPageSpacing);
         } catch (JCNativeException jcne) {
@@ -477,9 +521,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getVerticalOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +535,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setVerticalOffset(double VerticalOffset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalOffset", VerticalOffset);
         } catch (JCNativeException jcne) {
@@ -497,9 +545,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getVerticalPageSpacing() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalPageSpacing = null;
         try {
-            return (double)classInstance.Get("VerticalPageSpacing");
+            retObjectVerticalPageSpacing = classInstance.Get("VerticalPageSpacing");
+            return (double)retObjectVerticalPageSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalPageSpacing != null ? retObjectVerticalPageSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +559,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setVerticalPageSpacing(double VerticalPageSpacing) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalPageSpacing", VerticalPageSpacing);
         } catch (JCNativeException jcne) {
@@ -517,9 +569,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getViewportHeight() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportHeight = null;
         try {
-            return (double)classInstance.Get("ViewportHeight");
+            retObjectViewportHeight = classInstance.Get("ViewportHeight");
+            return (double)retObjectViewportHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,9 +583,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getViewportWidth() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportWidth = null;
         try {
-            return (double)classInstance.Get("ViewportWidth");
+            retObjectViewportWidth = classInstance.Get("ViewportWidth");
+            return (double)retObjectViewportWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,9 +597,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public double getZoom() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoom = null;
         try {
-            return (double)classInstance.Get("Zoom");
+            retObjectZoom = classInstance.Get("Zoom");
+            return (double)retObjectZoom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectZoom != null ? retObjectZoom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,7 +611,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setZoom(double Zoom) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Zoom", Zoom);
         } catch (JCNativeException jcne) {
@@ -557,9 +621,13 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public int getMaxPagesAcross() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPagesAcross = null;
         try {
-            return (int)classInstance.Get("MaxPagesAcross");
+            retObjectMaxPagesAcross = classInstance.Get("MaxPagesAcross");
+            return (int)retObjectMaxPagesAcross;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxPagesAcross != null ? retObjectMaxPagesAcross.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,7 +635,7 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public void setMaxPagesAcross(int MaxPagesAcross) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPagesAcross", MaxPagesAcross);
         } catch (JCNativeException jcne) {
@@ -577,10 +645,14 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public static RoutedUICommand getFitToHeightCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFitToHeightCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("FitToHeightCommand");
+            retObjectFitToHeightCommand = classType.Get("FitToHeightCommand");
+            JCObject val = (JCObject)retObjectFitToHeightCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFitToHeightCommand != null ? retObjectFitToHeightCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,10 +660,14 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public static RoutedUICommand getFitToMaxPagesAcrossCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFitToMaxPagesAcrossCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("FitToMaxPagesAcrossCommand");
+            retObjectFitToMaxPagesAcrossCommand = classType.Get("FitToMaxPagesAcrossCommand");
+            JCObject val = (JCObject)retObjectFitToMaxPagesAcrossCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFitToMaxPagesAcrossCommand != null ? retObjectFitToMaxPagesAcrossCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -599,10 +675,14 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public static RoutedUICommand getFitToWidthCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFitToWidthCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("FitToWidthCommand");
+            retObjectFitToWidthCommand = classType.Get("FitToWidthCommand");
+            JCObject val = (JCObject)retObjectFitToWidthCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFitToWidthCommand != null ? retObjectFitToWidthCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,10 +690,14 @@ public class DocumentViewer extends DocumentViewerBase  {
 
     public static RoutedUICommand getViewThumbnailsCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectViewThumbnailsCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("ViewThumbnailsCommand");
+            retObjectViewThumbnailsCommand = classType.Get("ViewThumbnailsCommand");
+            JCObject val = (JCObject)retObjectViewThumbnailsCommand;
             return new RoutedUICommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewThumbnailsCommand != null ? retObjectViewThumbnailsCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

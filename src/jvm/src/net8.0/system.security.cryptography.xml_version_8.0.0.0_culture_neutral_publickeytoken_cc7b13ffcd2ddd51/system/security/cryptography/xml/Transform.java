@@ -158,10 +158,12 @@ public class Transform extends NetObject  {
     
     public byte[] GetDigestedOutput(HashAlgorithm hash) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDigestedOutput = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
+            retObjectGetDigestedOutput = classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDigestedOutput;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -170,6 +172,8 @@ public class Transform extends NetObject  {
 				resultingArray[indexGetDigestedOutput] = (byte)resultingArrayList.get(indexGetDigestedOutput);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetDigestedOutput != null ? retObjectGetDigestedOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class Transform extends NetObject  {
 
     public NetObject GetOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput");
+            retObjectGetOutput = classInstance.Invoke("GetOutput");
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class Transform extends NetObject  {
 
     public NetObject GetOutput(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            retObjectGetOutput = classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class Transform extends NetObject  {
 
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class Transform extends NetObject  {
 
     public void LoadInnerXml(XmlNodeList nodeList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInnerXml", nodeList == null ? null : nodeList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class Transform extends NetObject  {
 
     public void LoadInput(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInput", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +250,14 @@ public class Transform extends NetObject  {
     
     public Hashtable getPropagatedNamespaces() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagatedNamespaces = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropagatedNamespaces");
+            retObjectPropagatedNamespaces = classInstance.Get("PropagatedNamespaces");
+            JCObject val = (JCObject)retObjectPropagatedNamespaces;
             return new Hashtable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropagatedNamespaces != null ? retObjectPropagatedNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +265,13 @@ public class Transform extends NetObject  {
 
     public java.lang.String getAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("Algorithm");
+            retObjectAlgorithm = classInstance.Get("Algorithm");
+            return (java.lang.String)retObjectAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAlgorithm != null ? retObjectAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +279,7 @@ public class Transform extends NetObject  {
 
     public void setAlgorithm(java.lang.String Algorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Algorithm", Algorithm);
         } catch (JCNativeException jcne) {
@@ -265,16 +289,20 @@ public class Transform extends NetObject  {
 
     public final NetType[] getInputTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("InputTypes");
+            retObjectInputTypes = classInstance.Get("InputTypes");
+            JCObject resultingObjects = (JCObject)retObjectInputTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputTypes != null ? retObjectInputTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,16 +310,20 @@ public class Transform extends NetObject  {
 
     public final NetType[] getOutputTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutputTypes");
+            retObjectOutputTypes = classInstance.Get("OutputTypes");
+            JCObject resultingObjects = (JCObject)retObjectOutputTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputTypes != null ? retObjectOutputTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +331,14 @@ public class Transform extends NetObject  {
 
     public XmlElement getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new XmlElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +346,7 @@ public class Transform extends NetObject  {
 
     public void setContext(XmlElement Context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +356,14 @@ public class Transform extends NetObject  {
 
     public XmlResolver getResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resolver");
+            retObjectResolver = classInstance.Get("Resolver");
+            JCObject val = (JCObject)retObjectResolver;
             return new XmlResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolver != null ? retObjectResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +371,7 @@ public class Transform extends NetObject  {
 
     public void setResolver(XmlResolver Resolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
         } catch (JCNativeException jcne) {

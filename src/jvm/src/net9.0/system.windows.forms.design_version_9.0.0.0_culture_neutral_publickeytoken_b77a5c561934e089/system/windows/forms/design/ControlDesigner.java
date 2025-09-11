@@ -178,9 +178,13 @@ public class ControlDesigner extends ComponentDesigner  {
     
     public boolean CanBeParentedTo(IDesigner parentDesigner) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBeParentedTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanBeParentedTo", parentDesigner == null ? null : parentDesigner.getJCOInstance());
+            retObjectCanBeParentedTo = classInstance.Invoke("CanBeParentedTo", parentDesigner == null ? null : parentDesigner.getJCOInstance());
+            return (boolean)retObjectCanBeParentedTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBeParentedTo != null ? retObjectCanBeParentedTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,19 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public int NumberOfInternalControlDesigners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfInternalControlDesigners = null;
         try {
-            return (int)classInstance.Invoke("NumberOfInternalControlDesigners");
+            retObjectNumberOfInternalControlDesigners = classInstance.Invoke("NumberOfInternalControlDesigners");
+            return (int)retObjectNumberOfInternalControlDesigners;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectNumberOfInternalControlDesignersNumber = (java.lang.Number)retObjectNumberOfInternalControlDesigners;
+                return retObjectNumberOfInternalControlDesignersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectNumberOfInternalControlDesigners != null ? retObjectNumberOfInternalControlDesigners.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +212,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public GlyphCollection GetGlyphs(GlyphSelectionType selectionType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.runtime.interopservices.ExternalException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlyphs = null;
         try {
-            JCObject objGetGlyphs = (JCObject)classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            retObjectGetGlyphs = classInstance.Invoke("GetGlyphs", selectionType == null ? null : selectionType.getJCOInstance());
+            JCObject objGetGlyphs = (JCObject)retObjectGetGlyphs;
             return new GlyphCollection(objGetGlyphs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlyphs != null ? retObjectGetGlyphs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +227,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public ControlDesigner InternalControlDesigner(int internalControlIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalControlDesigner = null;
         try {
-            JCObject objInternalControlDesigner = (JCObject)classInstance.Invoke("InternalControlDesigner", internalControlIndex);
+            retObjectInternalControlDesigner = classInstance.Invoke("InternalControlDesigner", internalControlIndex);
+            JCObject objInternalControlDesigner = (JCObject)retObjectInternalControlDesigner;
             return new ControlDesigner(objInternalControlDesigner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInternalControlDesigner != null ? retObjectInternalControlDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +242,7 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +252,7 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public void InitializeExistingComponent(IDictionary defaultValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.RankException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeExistingComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +262,7 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public void InitializeNewComponent(IDictionary defaultValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeNewComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +272,7 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public void OnSetComponentDefaults() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSetComponentDefaults");
         } catch (JCNativeException jcne) {
@@ -264,9 +286,13 @@ public class ControlDesigner extends ComponentDesigner  {
     
     public boolean getAutoResizeHandles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoResizeHandles = null;
         try {
-            return (boolean)classInstance.Get("AutoResizeHandles");
+            retObjectAutoResizeHandles = classInstance.Get("AutoResizeHandles");
+            return (boolean)retObjectAutoResizeHandles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoResizeHandles != null ? retObjectAutoResizeHandles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +300,7 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public void setAutoResizeHandles(boolean AutoResizeHandles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoResizeHandles", AutoResizeHandles);
         } catch (JCNativeException jcne) {
@@ -284,9 +310,13 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public boolean getParticipatesWithSnapLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParticipatesWithSnapLines = null;
         try {
-            return (boolean)classInstance.Get("ParticipatesWithSnapLines");
+            retObjectParticipatesWithSnapLines = classInstance.Get("ParticipatesWithSnapLines");
+            return (boolean)retObjectParticipatesWithSnapLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectParticipatesWithSnapLines != null ? retObjectParticipatesWithSnapLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +324,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public IList getSnapLines() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSnapLines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SnapLines");
+            retObjectSnapLines = classInstance.Get("SnapLines");
+            JCObject val = (JCObject)retObjectSnapLines;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnapLines != null ? retObjectSnapLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +339,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public AccessibleObject getAccessibilityObject() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibilityObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessibilityObject");
+            retObjectAccessibilityObject = classInstance.Get("AccessibilityObject");
+            JCObject val = (JCObject)retObjectAccessibilityObject;
             return new AccessibleObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessibilityObject != null ? retObjectAccessibilityObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +354,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public Control getControl() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +369,14 @@ public class ControlDesigner extends ComponentDesigner  {
 
     public SelectionRules getSelectionRules() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionRules = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionRules");
+            retObjectSelectionRules = classInstance.Get("SelectionRules");
+            JCObject val = (JCObject)retObjectSelectionRules;
             return new SelectionRules(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionRules != null ? retObjectSelectionRules.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,10 +158,14 @@ public class SecurityTokenProvider extends NetObject  {
     
     public IAsyncResult BeginCancelToken(TimeSpan timeout, SecurityToken token, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCancelToken = null;
         try {
-            JCObject objBeginCancelToken = (JCObject)classInstance.Invoke("BeginCancelToken", timeout == null ? null : timeout.getJCOInstance(), token == null ? null : token.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginCancelToken = classInstance.Invoke("BeginCancelToken", timeout == null ? null : timeout.getJCOInstance(), token == null ? null : token.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginCancelToken = (JCObject)retObjectBeginCancelToken;
             return new IAsyncResultImplementation(objBeginCancelToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCancelToken != null ? retObjectBeginCancelToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public IAsyncResult BeginGetToken(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetToken = null;
         try {
-            JCObject objBeginGetToken = (JCObject)classInstance.Invoke("BeginGetToken", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginGetToken = classInstance.Invoke("BeginGetToken", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginGetToken = (JCObject)retObjectBeginGetToken;
             return new IAsyncResultImplementation(objBeginGetToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetToken != null ? retObjectBeginGetToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public IAsyncResult BeginRenewToken(TimeSpan timeout, SecurityToken tokenToBeRenewed, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRenewToken = null;
         try {
-            JCObject objBeginRenewToken = (JCObject)classInstance.Invoke("BeginRenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginRenewToken = classInstance.Invoke("BeginRenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginRenewToken = (JCObject)retObjectBeginRenewToken;
             return new IAsyncResultImplementation(objBeginRenewToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRenewToken != null ? retObjectBeginRenewToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public SecurityToken EndGetToken(IAsyncResult result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndGetToken = null;
         try {
-            JCObject objEndGetToken = (JCObject)classInstance.Invoke("EndGetToken", result == null ? null : result.getJCOInstance());
+            retObjectEndGetToken = classInstance.Invoke("EndGetToken", result == null ? null : result.getJCOInstance());
+            JCObject objEndGetToken = (JCObject)retObjectEndGetToken;
             return new SecurityToken(objEndGetToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetToken != null ? retObjectEndGetToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public SecurityToken EndRenewToken(IAsyncResult result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRenewToken = null;
         try {
-            JCObject objEndRenewToken = (JCObject)classInstance.Invoke("EndRenewToken", result == null ? null : result.getJCOInstance());
+            retObjectEndRenewToken = classInstance.Invoke("EndRenewToken", result == null ? null : result.getJCOInstance());
+            JCObject objEndRenewToken = (JCObject)retObjectEndRenewToken;
             return new SecurityToken(objEndRenewToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndRenewToken != null ? retObjectEndRenewToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public SecurityToken GetToken(TimeSpan timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToken = null;
         try {
-            JCObject objGetToken = (JCObject)classInstance.Invoke("GetToken", timeout == null ? null : timeout.getJCOInstance());
+            retObjectGetToken = classInstance.Invoke("GetToken", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objGetToken = (JCObject)retObjectGetToken;
             return new SecurityToken(objGetToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToken != null ? retObjectGetToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class SecurityTokenProvider extends NetObject  {
 
     public SecurityToken RenewToken(TimeSpan timeout, SecurityToken tokenToBeRenewed) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewToken = null;
         try {
-            JCObject objRenewToken = (JCObject)classInstance.Invoke("RenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance());
+            retObjectRenewToken = classInstance.Invoke("RenewToken", timeout == null ? null : timeout.getJCOInstance(), tokenToBeRenewed == null ? null : tokenToBeRenewed.getJCOInstance());
+            JCObject objRenewToken = (JCObject)retObjectRenewToken;
             return new SecurityToken(objRenewToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewToken != null ? retObjectRenewToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +263,7 @@ public class SecurityTokenProvider extends NetObject  {
 
     public void CancelToken(TimeSpan timeout, SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelToken", timeout == null ? null : timeout.getJCOInstance(), token == null ? null : token.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +273,7 @@ public class SecurityTokenProvider extends NetObject  {
 
     public void EndCancelToken(IAsyncResult result) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCancelToken", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,9 +287,13 @@ public class SecurityTokenProvider extends NetObject  {
     
     public boolean getSupportsTokenCancellation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsTokenCancellation = null;
         try {
-            return (boolean)classInstance.Get("SupportsTokenCancellation");
+            retObjectSupportsTokenCancellation = classInstance.Get("SupportsTokenCancellation");
+            return (boolean)retObjectSupportsTokenCancellation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsTokenCancellation != null ? retObjectSupportsTokenCancellation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +301,13 @@ public class SecurityTokenProvider extends NetObject  {
 
     public boolean getSupportsTokenRenewal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsTokenRenewal = null;
         try {
-            return (boolean)classInstance.Get("SupportsTokenRenewal");
+            retObjectSupportsTokenRenewal = classInstance.Get("SupportsTokenRenewal");
+            return (boolean)retObjectSupportsTokenRenewal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsTokenRenewal != null ? retObjectSupportsTokenRenewal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

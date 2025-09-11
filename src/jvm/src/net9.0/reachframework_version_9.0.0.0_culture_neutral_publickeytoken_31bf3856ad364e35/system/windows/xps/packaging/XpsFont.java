@@ -157,7 +157,7 @@ public class XpsFont extends XpsResource  {
     
     public static void ObfuscateFontData(byte[] fontData, Guid guid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ObfuscateFontData", fontData, guid == null ? null : guid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class XpsFont extends XpsResource  {
 
     public static void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ObfuscateFontData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +181,13 @@ public class XpsFont extends XpsResource  {
     
     public boolean getIsObfuscated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsObfuscated = null;
         try {
-            return (boolean)classInstance.Get("IsObfuscated");
+            retObjectIsObfuscated = classInstance.Get("IsObfuscated");
+            return (boolean)retObjectIsObfuscated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsObfuscated != null ? retObjectIsObfuscated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class XpsFont extends XpsResource  {
 
     public boolean getIsRestricted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRestricted = null;
         try {
-            return (boolean)classInstance.Get("IsRestricted");
+            retObjectIsRestricted = classInstance.Get("IsRestricted");
+            return (boolean)retObjectIsRestricted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRestricted != null ? retObjectIsRestricted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class XpsFont extends XpsResource  {
 
     public void setIsRestricted(boolean IsRestricted) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsRestricted", IsRestricted);
         } catch (JCNativeException jcne) {

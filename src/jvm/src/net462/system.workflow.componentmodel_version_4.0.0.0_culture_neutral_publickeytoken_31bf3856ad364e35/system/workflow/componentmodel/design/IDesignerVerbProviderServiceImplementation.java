@@ -144,7 +144,7 @@ public class IDesignerVerbProviderServiceImplementation extends NetObject implem
     
     public void AddVerbProvider(IDesignerVerbProvider verbProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddVerbProvider", verbProvider == null ? null : verbProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDesignerVerbProviderServiceImplementation extends NetObject implem
 
     public void RemoveVerbProvider(IDesignerVerbProvider verbProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveVerbProvider", verbProvider == null ? null : verbProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -160,9 +160,13 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
     
     public long getBytesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesReceived = null;
         try {
-            return (long)classInstance.Get("BytesReceived");
+            retObjectBytesReceived = classInstance.Get("BytesReceived");
+            return (long)retObjectBytesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectBytesReceived != null ? retObjectBytesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
 
     public long getBytesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesSent = null;
         try {
-            return (long)classInstance.Get("BytesSent");
+            retObjectBytesSent = classInstance.Get("BytesSent");
+            return (long)retObjectBytesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectBytesSent != null ? retObjectBytesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
 
     public long getTotalBytesToReceive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalBytesToReceive = null;
         try {
-            return (long)classInstance.Get("TotalBytesToReceive");
+            retObjectTotalBytesToReceive = classInstance.Get("TotalBytesToReceive");
+            return (long)retObjectTotalBytesToReceive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTotalBytesToReceive != null ? retObjectTotalBytesToReceive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
 
     public long getTotalBytesToSend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalBytesToSend = null;
         try {
-            return (long)classInstance.Get("TotalBytesToSend");
+            retObjectTotalBytesToSend = classInstance.Get("TotalBytesToSend");
+            return (long)retObjectTotalBytesToSend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTotalBytesToSend != null ? retObjectTotalBytesToSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

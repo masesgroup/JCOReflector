@@ -168,7 +168,7 @@ public class PrintDocument extends Component  {
     
     public void Print() throws Throwable, system.componentmodel.Win32Exception, system.InvalidOperationException, system.drawing.printing.InvalidPrinterException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Print");
         } catch (JCNativeException jcne) {
@@ -182,9 +182,13 @@ public class PrintDocument extends Component  {
     
     public boolean getOriginAtMargins() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginAtMargins = null;
         try {
-            return (boolean)classInstance.Get("OriginAtMargins");
+            retObjectOriginAtMargins = classInstance.Get("OriginAtMargins");
+            return (boolean)retObjectOriginAtMargins;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOriginAtMargins != null ? retObjectOriginAtMargins.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +196,7 @@ public class PrintDocument extends Component  {
 
     public void setOriginAtMargins(boolean OriginAtMargins) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginAtMargins", OriginAtMargins);
         } catch (JCNativeException jcne) {
@@ -202,10 +206,14 @@ public class PrintDocument extends Component  {
 
     public PageSettings getDefaultPageSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultPageSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultPageSettings");
+            retObjectDefaultPageSettings = classInstance.Get("DefaultPageSettings");
+            JCObject val = (JCObject)retObjectDefaultPageSettings;
             return new PageSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultPageSettings != null ? retObjectDefaultPageSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class PrintDocument extends Component  {
 
     public void setDefaultPageSettings(PageSettings DefaultPageSettings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultPageSettings", DefaultPageSettings == null ? null : DefaultPageSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,10 +231,14 @@ public class PrintDocument extends Component  {
 
     public PrintController getPrintController() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintController = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintController");
+            retObjectPrintController = classInstance.Get("PrintController");
+            JCObject val = (JCObject)retObjectPrintController;
             return new PrintController(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintController != null ? retObjectPrintController.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +246,7 @@ public class PrintDocument extends Component  {
 
     public void setPrintController(PrintController PrintController) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintController", PrintController == null ? null : PrintController.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +256,14 @@ public class PrintDocument extends Component  {
 
     public PrinterSettings getPrinterSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrinterSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrinterSettings");
+            retObjectPrinterSettings = classInstance.Get("PrinterSettings");
+            JCObject val = (JCObject)retObjectPrinterSettings;
             return new PrinterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrinterSettings != null ? retObjectPrinterSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class PrintDocument extends Component  {
 
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrinterSettings", PrinterSettings == null ? null : PrinterSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,9 +281,13 @@ public class PrintDocument extends Component  {
 
     public java.lang.String getDocumentName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentName = null;
         try {
-            return (java.lang.String)classInstance.Get("DocumentName");
+            retObjectDocumentName = classInstance.Get("DocumentName");
+            return (java.lang.String)retObjectDocumentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocumentName != null ? retObjectDocumentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +295,7 @@ public class PrintDocument extends Component  {
 
     public void setDocumentName(java.lang.String DocumentName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentName", DocumentName);
         } catch (JCNativeException jcne) {
@@ -290,7 +310,7 @@ public class PrintDocument extends Component  {
 
     public void addBeginPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeginPrint", handler);
         } catch (JCNativeException jcne) {
@@ -300,7 +320,7 @@ public class PrintDocument extends Component  {
 
     public void removeBeginPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeginPrint", handler);
         } catch (JCNativeException jcne) {
@@ -310,7 +330,7 @@ public class PrintDocument extends Component  {
 
     public void addEndPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EndPrint", handler);
         } catch (JCNativeException jcne) {
@@ -320,7 +340,7 @@ public class PrintDocument extends Component  {
 
     public void removeEndPrint(PrintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EndPrint", handler);
         } catch (JCNativeException jcne) {
@@ -330,7 +350,7 @@ public class PrintDocument extends Component  {
 
     public void addPrintPage(PrintPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PrintPage", handler);
         } catch (JCNativeException jcne) {
@@ -340,7 +360,7 @@ public class PrintDocument extends Component  {
 
     public void removePrintPage(PrintPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PrintPage", handler);
         } catch (JCNativeException jcne) {
@@ -350,7 +370,7 @@ public class PrintDocument extends Component  {
 
     public void addQueryPageSettings(QueryPageSettingsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryPageSettings", handler);
         } catch (JCNativeException jcne) {
@@ -360,7 +380,7 @@ public class PrintDocument extends Component  {
 
     public void removeQueryPageSettings(QueryPageSettingsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryPageSettings", handler);
         } catch (JCNativeException jcne) {

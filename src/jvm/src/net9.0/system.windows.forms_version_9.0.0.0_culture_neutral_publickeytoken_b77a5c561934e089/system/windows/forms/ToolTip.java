@@ -182,9 +182,13 @@ public class ToolTip extends Component  {
     
     public boolean CanExtend(NetObject target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExtend = null;
         try {
-            return (boolean)classInstance.Invoke("CanExtend", target == null ? null : target.getJCOInstance());
+            retObjectCanExtend = classInstance.Invoke("CanExtend", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectCanExtend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExtend != null ? retObjectCanExtend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class ToolTip extends Component  {
 
     public java.lang.String GetToolTip(Control control) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolTip = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetToolTip", control == null ? null : control.getJCOInstance());
+            retObjectGetToolTip = classInstance.Invoke("GetToolTip", control == null ? null : control.getJCOInstance());
+            return (java.lang.String)retObjectGetToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetToolTip != null ? retObjectGetToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class ToolTip extends Component  {
 
     public void Hide(IWin32Window win) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Hide", win == null ? null : win.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class ToolTip extends Component  {
 
     public void RemoveAll() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class ToolTip extends Component  {
 
     public void SetToolTip(Control control, java.lang.String caption) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetToolTip", control == null ? null : control.getJCOInstance(), caption);
         } catch (JCNativeException jcne) {
@@ -232,7 +240,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window, int x, int y, int duration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance(), x, y, duration);
         } catch (JCNativeException jcne) {
@@ -242,7 +250,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window, int x, int y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -252,7 +260,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window, int duration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance(), duration);
         } catch (JCNativeException jcne) {
@@ -262,7 +270,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window, Point point, int duration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance(), point == null ? null : point.getJCOInstance(), duration);
         } catch (JCNativeException jcne) {
@@ -272,7 +280,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window, Point point) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,7 +290,7 @@ public class ToolTip extends Component  {
 
     public void Show(java.lang.String text, IWin32Window window) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", text, window == null ? null : window.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,9 +304,13 @@ public class ToolTip extends Component  {
     
     public boolean getActive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActive = null;
         try {
-            return (boolean)classInstance.Get("Active");
+            retObjectActive = classInstance.Get("Active");
+            return (boolean)retObjectActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectActive != null ? retObjectActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +318,7 @@ public class ToolTip extends Component  {
 
     public void setActive(boolean Active) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Active", Active);
         } catch (JCNativeException jcne) {
@@ -316,9 +328,13 @@ public class ToolTip extends Component  {
 
     public boolean getIsBalloon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBalloon = null;
         try {
-            return (boolean)classInstance.Get("IsBalloon");
+            retObjectIsBalloon = classInstance.Get("IsBalloon");
+            return (boolean)retObjectIsBalloon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBalloon != null ? retObjectIsBalloon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +342,7 @@ public class ToolTip extends Component  {
 
     public void setIsBalloon(boolean IsBalloon) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBalloon", IsBalloon);
         } catch (JCNativeException jcne) {
@@ -336,9 +352,13 @@ public class ToolTip extends Component  {
 
     public boolean getOwnerDraw() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerDraw = null;
         try {
-            return (boolean)classInstance.Get("OwnerDraw");
+            retObjectOwnerDraw = classInstance.Get("OwnerDraw");
+            return (boolean)retObjectOwnerDraw;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOwnerDraw != null ? retObjectOwnerDraw.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +366,7 @@ public class ToolTip extends Component  {
 
     public void setOwnerDraw(boolean OwnerDraw) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerDraw", OwnerDraw);
         } catch (JCNativeException jcne) {
@@ -356,9 +376,13 @@ public class ToolTip extends Component  {
 
     public boolean getShowAlways() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowAlways = null;
         try {
-            return (boolean)classInstance.Get("ShowAlways");
+            retObjectShowAlways = classInstance.Get("ShowAlways");
+            return (boolean)retObjectShowAlways;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowAlways != null ? retObjectShowAlways.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +390,7 @@ public class ToolTip extends Component  {
 
     public void setShowAlways(boolean ShowAlways) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowAlways", ShowAlways);
         } catch (JCNativeException jcne) {
@@ -376,9 +400,13 @@ public class ToolTip extends Component  {
 
     public boolean getStripAmpersands() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStripAmpersands = null;
         try {
-            return (boolean)classInstance.Get("StripAmpersands");
+            retObjectStripAmpersands = classInstance.Get("StripAmpersands");
+            return (boolean)retObjectStripAmpersands;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStripAmpersands != null ? retObjectStripAmpersands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +414,7 @@ public class ToolTip extends Component  {
 
     public void setStripAmpersands(boolean StripAmpersands) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StripAmpersands", StripAmpersands);
         } catch (JCNativeException jcne) {
@@ -396,9 +424,13 @@ public class ToolTip extends Component  {
 
     public boolean getUseAnimation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseAnimation = null;
         try {
-            return (boolean)classInstance.Get("UseAnimation");
+            retObjectUseAnimation = classInstance.Get("UseAnimation");
+            return (boolean)retObjectUseAnimation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseAnimation != null ? retObjectUseAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +438,7 @@ public class ToolTip extends Component  {
 
     public void setUseAnimation(boolean UseAnimation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseAnimation", UseAnimation);
         } catch (JCNativeException jcne) {
@@ -416,9 +448,13 @@ public class ToolTip extends Component  {
 
     public boolean getUseFading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseFading = null;
         try {
-            return (boolean)classInstance.Get("UseFading");
+            retObjectUseFading = classInstance.Get("UseFading");
+            return (boolean)retObjectUseFading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseFading != null ? retObjectUseFading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +462,7 @@ public class ToolTip extends Component  {
 
     public void setUseFading(boolean UseFading) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseFading", UseFading);
         } catch (JCNativeException jcne) {
@@ -436,9 +472,13 @@ public class ToolTip extends Component  {
 
     public int getAutomaticDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutomaticDelay = null;
         try {
-            return (int)classInstance.Get("AutomaticDelay");
+            retObjectAutomaticDelay = classInstance.Get("AutomaticDelay");
+            return (int)retObjectAutomaticDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAutomaticDelay != null ? retObjectAutomaticDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +486,7 @@ public class ToolTip extends Component  {
 
     public void setAutomaticDelay(int AutomaticDelay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutomaticDelay", AutomaticDelay);
         } catch (JCNativeException jcne) {
@@ -456,9 +496,13 @@ public class ToolTip extends Component  {
 
     public int getAutoPopDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoPopDelay = null;
         try {
-            return (int)classInstance.Get("AutoPopDelay");
+            retObjectAutoPopDelay = classInstance.Get("AutoPopDelay");
+            return (int)retObjectAutoPopDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAutoPopDelay != null ? retObjectAutoPopDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +510,7 @@ public class ToolTip extends Component  {
 
     public void setAutoPopDelay(int AutoPopDelay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoPopDelay", AutoPopDelay);
         } catch (JCNativeException jcne) {
@@ -476,9 +520,13 @@ public class ToolTip extends Component  {
 
     public int getInitialDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialDelay = null;
         try {
-            return (int)classInstance.Get("InitialDelay");
+            retObjectInitialDelay = classInstance.Get("InitialDelay");
+            return (int)retObjectInitialDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInitialDelay != null ? retObjectInitialDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +534,7 @@ public class ToolTip extends Component  {
 
     public void setInitialDelay(int InitialDelay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialDelay", InitialDelay);
         } catch (JCNativeException jcne) {
@@ -496,9 +544,13 @@ public class ToolTip extends Component  {
 
     public int getReshowDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReshowDelay = null;
         try {
-            return (int)classInstance.Get("ReshowDelay");
+            retObjectReshowDelay = classInstance.Get("ReshowDelay");
+            return (int)retObjectReshowDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReshowDelay != null ? retObjectReshowDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +558,7 @@ public class ToolTip extends Component  {
 
     public void setReshowDelay(int ReshowDelay) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReshowDelay", ReshowDelay);
         } catch (JCNativeException jcne) {
@@ -516,10 +568,14 @@ public class ToolTip extends Component  {
 
     public Color getBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,7 +583,7 @@ public class ToolTip extends Component  {
 
     public void setBackColor(Color BackColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -537,10 +593,14 @@ public class ToolTip extends Component  {
 
     public Color getForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,7 +608,7 @@ public class ToolTip extends Component  {
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -558,10 +618,14 @@ public class ToolTip extends Component  {
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,7 +633,7 @@ public class ToolTip extends Component  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,9 +643,13 @@ public class ToolTip extends Component  {
 
     public java.lang.String getToolTipTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipTitle");
+            retObjectToolTipTitle = classInstance.Get("ToolTipTitle");
+            return (java.lang.String)retObjectToolTipTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipTitle != null ? retObjectToolTipTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -589,7 +657,7 @@ public class ToolTip extends Component  {
 
     public void setToolTipTitle(java.lang.String ToolTipTitle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipTitle", ToolTipTitle);
         } catch (JCNativeException jcne) {
@@ -599,10 +667,14 @@ public class ToolTip extends Component  {
 
     public ToolTipIcon getToolTipIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolTipIcon");
+            retObjectToolTipIcon = classInstance.Get("ToolTipIcon");
+            JCObject val = (JCObject)retObjectToolTipIcon;
             return new ToolTipIcon(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolTipIcon != null ? retObjectToolTipIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,7 +682,7 @@ public class ToolTip extends Component  {
 
     public void setToolTipIcon(ToolTipIcon ToolTipIcon) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipIcon", ToolTipIcon == null ? null : ToolTipIcon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -625,7 +697,7 @@ public class ToolTip extends Component  {
 
     public void addDraw(DrawToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Draw", handler);
         } catch (JCNativeException jcne) {
@@ -635,7 +707,7 @@ public class ToolTip extends Component  {
 
     public void removeDraw(DrawToolTipEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Draw", handler);
         } catch (JCNativeException jcne) {
@@ -645,7 +717,7 @@ public class ToolTip extends Component  {
 
     public void addPopup(PopupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Popup", handler);
         } catch (JCNativeException jcne) {
@@ -655,7 +727,7 @@ public class ToolTip extends Component  {
 
     public void removePopup(PopupEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Popup", handler);
         } catch (JCNativeException jcne) {

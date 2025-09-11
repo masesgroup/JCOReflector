@@ -187,10 +187,12 @@ public class SortRequestControl extends DirectoryControl  {
     
     public byte[] GetValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.directoryservices.protocols.LdapException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
+            retObjectGetValue = classInstance.Invoke("GetValue");
+            JCObject resultingObjects = (JCObject)retObjectGetValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -199,6 +201,8 @@ public class SortRequestControl extends DirectoryControl  {
 				resultingArray[indexGetValue] = (byte)resultingArrayList.get(indexGetValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,16 +214,20 @@ public class SortRequestControl extends DirectoryControl  {
     
     public final SortKey[] getSortKeys() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortKeys = null;
         try {
             ArrayList<SortKey> resultingArrayList = new ArrayList<SortKey>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SortKeys");
+            retObjectSortKeys = classInstance.Get("SortKeys");
+            JCObject resultingObjects = (JCObject)retObjectSortKeys;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SortKey(resultingObject));
             }
             SortKey[] resultingArray = new SortKey[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortKeys != null ? retObjectSortKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class SortRequestControl extends DirectoryControl  {
 
     public void setSortKeys(SortKey[] SortKeys) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortKeys", toObjectFromArray(SortKeys));
         } catch (JCNativeException jcne) {

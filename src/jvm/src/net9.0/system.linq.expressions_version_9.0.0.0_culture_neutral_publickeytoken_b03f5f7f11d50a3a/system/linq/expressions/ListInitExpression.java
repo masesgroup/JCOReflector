@@ -159,10 +159,14 @@ public class ListInitExpression extends Expression  {
     
     public Expression Reduce() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReduce = null;
         try {
-            JCObject objReduce = (JCObject)classInstance.Invoke("Reduce");
+            retObjectReduce = classInstance.Invoke("Reduce");
+            JCObject objReduce = (JCObject)retObjectReduce;
             return new Expression(objReduce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduce != null ? retObjectReduce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class ListInitExpression extends Expression  {
     
     public NewExpression getNewExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewExpression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewExpression");
+            retObjectNewExpression = classInstance.Get("NewExpression");
+            JCObject val = (JCObject)retObjectNewExpression;
             return new NewExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewExpression != null ? retObjectNewExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

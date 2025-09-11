@@ -160,9 +160,13 @@ public class MarkupProperty extends NetObject  {
     
     public boolean getIsAttached() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAttached = null;
         try {
-            return (boolean)classInstance.Get("IsAttached");
+            retObjectIsAttached = classInstance.Get("IsAttached");
+            return (boolean)retObjectIsAttached;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAttached != null ? retObjectIsAttached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class MarkupProperty extends NetObject  {
 
     public boolean getIsComposite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsComposite = null;
         try {
-            return (boolean)classInstance.Get("IsComposite");
+            retObjectIsComposite = classInstance.Get("IsComposite");
+            return (boolean)retObjectIsComposite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsComposite != null ? retObjectIsComposite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class MarkupProperty extends NetObject  {
 
     public boolean getIsConstructorArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConstructorArgument = null;
         try {
-            return (boolean)classInstance.Get("IsConstructorArgument");
+            retObjectIsConstructorArgument = classInstance.Get("IsConstructorArgument");
+            return (boolean)retObjectIsConstructorArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsConstructorArgument != null ? retObjectIsConstructorArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class MarkupProperty extends NetObject  {
 
     public boolean getIsContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContent = null;
         try {
-            return (boolean)classInstance.Get("IsContent");
+            retObjectIsContent = classInstance.Get("IsContent");
+            return (boolean)retObjectIsContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsContent != null ? retObjectIsContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class MarkupProperty extends NetObject  {
 
     public boolean getIsKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKey = null;
         try {
-            return (boolean)classInstance.Get("IsKey");
+            retObjectIsKey = classInstance.Get("IsKey");
+            return (boolean)retObjectIsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKey != null ? retObjectIsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class MarkupProperty extends NetObject  {
 
     public boolean getIsValueAsString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValueAsString = null;
         try {
-            return (boolean)classInstance.Get("IsValueAsString");
+            retObjectIsValueAsString = classInstance.Get("IsValueAsString");
+            return (boolean)retObjectIsValueAsString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValueAsString != null ? retObjectIsValueAsString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +244,14 @@ public class MarkupProperty extends NetObject  {
 
     public AttributeCollection getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new AttributeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +259,14 @@ public class MarkupProperty extends NetObject  {
 
     public PropertyDescriptor getPropertyDescriptor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyDescriptor");
+            retObjectPropertyDescriptor = classInstance.Get("PropertyDescriptor");
+            JCObject val = (JCObject)retObjectPropertyDescriptor;
             return new PropertyDescriptor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyDescriptor != null ? retObjectPropertyDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +274,14 @@ public class MarkupProperty extends NetObject  {
 
     public NetObject getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +289,13 @@ public class MarkupProperty extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +303,13 @@ public class MarkupProperty extends NetObject  {
 
     public java.lang.String getStringValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringValue = null;
         try {
-            return (java.lang.String)classInstance.Get("StringValue");
+            retObjectStringValue = classInstance.Get("StringValue");
+            return (java.lang.String)retObjectStringValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStringValue != null ? retObjectStringValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +317,14 @@ public class MarkupProperty extends NetObject  {
 
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            retObjectPropertyType = classInstance.Get("PropertyType");
+            JCObject val = (JCObject)retObjectPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyType != null ? retObjectPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +332,14 @@ public class MarkupProperty extends NetObject  {
 
     public DependencyProperty getDependencyProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependencyProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DependencyProperty");
+            retObjectDependencyProperty = classInstance.Get("DependencyProperty");
+            JCObject val = (JCObject)retObjectDependencyProperty;
             return new DependencyProperty(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependencyProperty != null ? retObjectDependencyProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

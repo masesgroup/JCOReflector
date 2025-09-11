@@ -157,9 +157,13 @@ public class ValueProviderSourceAttribute extends Attribute  {
     
     public java.lang.String GetModelName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModelName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetModelName");
+            retObjectGetModelName = classInstance.Invoke("GetModelName");
+            return (java.lang.String)retObjectGetModelName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetModelName != null ? retObjectGetModelName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ValueProviderSourceAttribute extends Attribute  {
 
     public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueProvider = null;
         try {
-            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            retObjectGetValueProvider = classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            JCObject objGetValueProvider = (JCObject)retObjectGetValueProvider;
             return new IValueProviderImplementation(objGetValueProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueProvider != null ? retObjectGetValueProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

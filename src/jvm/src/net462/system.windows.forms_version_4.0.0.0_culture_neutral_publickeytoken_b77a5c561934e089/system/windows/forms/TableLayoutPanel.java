@@ -175,9 +175,19 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
     
     public int GetColumn(Control control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumn = null;
         try {
-            return (int)classInstance.Invoke("GetColumn", control == null ? null : control.getJCOInstance());
+            retObjectGetColumn = classInstance.Invoke("GetColumn", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetColumn;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnNumber = (java.lang.Number)retObjectGetColumn;
+                return retObjectGetColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +195,19 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int GetColumnSpan(Control control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnSpan = null;
         try {
-            return (int)classInstance.Invoke("GetColumnSpan", control == null ? null : control.getJCOInstance());
+            retObjectGetColumnSpan = classInstance.Invoke("GetColumnSpan", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetColumnSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnSpanNumber = (java.lang.Number)retObjectGetColumnSpan;
+                return retObjectGetColumnSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +215,19 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int GetRow(Control control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRow = null;
         try {
-            return (int)classInstance.Invoke("GetRow", control == null ? null : control.getJCOInstance());
+            retObjectGetRow = classInstance.Invoke("GetRow", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetRow;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowNumber = (java.lang.Number)retObjectGetRow;
+                return retObjectGetRowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +235,19 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int GetRowSpan(Control control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowSpan = null;
         try {
-            return (int)classInstance.Invoke("GetRowSpan", control == null ? null : control.getJCOInstance());
+            retObjectGetRowSpan = classInstance.Invoke("GetRowSpan", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetRowSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowSpanNumber = (java.lang.Number)retObjectGetRowSpan;
+                return retObjectGetRowSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +255,12 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int[] GetColumnWidths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnWidths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetColumnWidths");
+            retObjectGetColumnWidths = classInstance.Invoke("GetColumnWidths");
+            JCObject resultingObjects = (JCObject)retObjectGetColumnWidths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -227,6 +269,8 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 				resultingArray[indexGetColumnWidths] = (int)resultingArrayList.get(indexGetColumnWidths);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetColumnWidths != null ? retObjectGetColumnWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +278,12 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int[] GetRowHeights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowHeights = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeights");
+            retObjectGetRowHeights = classInstance.Invoke("GetRowHeights");
+            JCObject resultingObjects = (JCObject)retObjectGetRowHeights;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -246,6 +292,8 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 				resultingArray[indexGetRowHeights] = (int)resultingArrayList.get(indexGetRowHeights);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGetRowHeights != null ? retObjectGetRowHeights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +301,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public Control GetControlFromPosition(int column, int row) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetControlFromPosition = null;
         try {
-            JCObject objGetControlFromPosition = (JCObject)classInstance.Invoke("GetControlFromPosition", column, row);
+            retObjectGetControlFromPosition = classInstance.Invoke("GetControlFromPosition", column, row);
+            JCObject objGetControlFromPosition = (JCObject)retObjectGetControlFromPosition;
             return new Control(objGetControlFromPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetControlFromPosition != null ? retObjectGetControlFromPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +316,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutPanelCellPosition GetCellPosition(Control control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellPosition = null;
         try {
-            JCObject objGetCellPosition = (JCObject)classInstance.Invoke("GetCellPosition", control == null ? null : control.getJCOInstance());
+            retObjectGetCellPosition = classInstance.Invoke("GetCellPosition", control == null ? null : control.getJCOInstance());
+            JCObject objGetCellPosition = (JCObject)retObjectGetCellPosition;
             return new TableLayoutPanelCellPosition(objGetCellPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCellPosition != null ? retObjectGetCellPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +331,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutPanelCellPosition GetPositionFromControl(Control control) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromControl = null;
         try {
-            JCObject objGetPositionFromControl = (JCObject)classInstance.Invoke("GetPositionFromControl", control == null ? null : control.getJCOInstance());
+            retObjectGetPositionFromControl = classInstance.Invoke("GetPositionFromControl", control == null ? null : control.getJCOInstance());
+            JCObject objGetPositionFromControl = (JCObject)retObjectGetPositionFromControl;
             return new TableLayoutPanelCellPosition(objGetPositionFromControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromControl != null ? retObjectGetPositionFromControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +346,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void SetCellPosition(Control control, TableLayoutPanelCellPosition position) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCellPosition", control == null ? null : control.getJCOInstance(), position == null ? null : position.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,7 +356,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void SetColumn(Control control, int column) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumn", control == null ? null : control.getJCOInstance(), column);
         } catch (JCNativeException jcne) {
@@ -306,7 +366,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void SetColumnSpan(Control control, int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumnSpan", control == null ? null : control.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -316,7 +376,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void SetRow(Control control, int row) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRow", control == null ? null : control.getJCOInstance(), row);
         } catch (JCNativeException jcne) {
@@ -326,7 +386,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void SetRowSpan(Control control, int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRowSpan", control == null ? null : control.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -340,7 +400,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
      */
     @Deprecated 
     public boolean CanExtend(NetObject extendee) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
     }
 
 
@@ -349,9 +409,13 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +423,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setColumnCount(int ColumnCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnCount", ColumnCount);
         } catch (JCNativeException jcne) {
@@ -369,9 +433,13 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +447,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setRowCount(int RowCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowCount", RowCount);
         } catch (JCNativeException jcne) {
@@ -389,10 +457,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +472,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -410,10 +482,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutColumnStyleCollection getColumnStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnStyles");
+            retObjectColumnStyles = classInstance.Get("ColumnStyles");
+            JCObject val = (JCObject)retObjectColumnStyles;
             return new TableLayoutColumnStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnStyles != null ? retObjectColumnStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +497,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutControlCollection getControlsNewTableLayoutPanel() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControls = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Controls");
+            retObjectControls = classInstance.Get("Controls");
+            JCObject val = (JCObject)retObjectControls;
             return new TableLayoutControlCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControls != null ? retObjectControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +512,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutPanelCellBorderStyle getCellBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellBorderStyle");
+            retObjectCellBorderStyle = classInstance.Get("CellBorderStyle");
+            JCObject val = (JCObject)retObjectCellBorderStyle;
             return new TableLayoutPanelCellBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellBorderStyle != null ? retObjectCellBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +527,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setCellBorderStyle(TableLayoutPanelCellBorderStyle CellBorderStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellBorderStyle", CellBorderStyle == null ? null : CellBorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,10 +537,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutPanelGrowStyle getGrowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGrowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GrowStyle");
+            retObjectGrowStyle = classInstance.Get("GrowStyle");
+            JCObject val = (JCObject)retObjectGrowStyle;
             return new TableLayoutPanelGrowStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrowStyle != null ? retObjectGrowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +552,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setGrowStyle(TableLayoutPanelGrowStyle GrowStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GrowStyle", GrowStyle == null ? null : GrowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -474,10 +562,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutRowStyleCollection getRowStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyles");
+            retObjectRowStyles = classInstance.Get("RowStyles");
+            JCObject val = (JCObject)retObjectRowStyles;
             return new TableLayoutRowStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyles != null ? retObjectRowStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -485,10 +577,14 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public TableLayoutSettings getLayoutSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutSettings");
+            retObjectLayoutSettings = classInstance.Get("LayoutSettings");
+            JCObject val = (JCObject)retObjectLayoutSettings;
             return new TableLayoutSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutSettings != null ? retObjectLayoutSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +592,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void setLayoutSettings(TableLayoutSettings LayoutSettings) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LayoutSettings", LayoutSettings == null ? null : LayoutSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,7 +607,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void addCellPaint(TableLayoutCellPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CellPaint", handler);
         } catch (JCNativeException jcne) {
@@ -521,7 +617,7 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
 
     public void removeCellPaint(TableLayoutCellPaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CellPaint", handler);
         } catch (JCNativeException jcne) {

@@ -296,10 +296,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
     
     public Single GetHeight() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHeight = null;
         try {
-            JCObject objGetHeight = (JCObject)classInstance.Invoke("GetHeight");
+            retObjectGetHeight = classInstance.Invoke("GetHeight");
+            JCObject objGetHeight = (JCObject)retObjectGetHeight;
             return new Single(objGetHeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeight != null ? retObjectGetHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +311,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public Single GetHeight(Single dpi) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHeight = null;
         try {
-            JCObject objGetHeight = (JCObject)classInstance.Invoke("GetHeight", dpi == null ? null : dpi.getJCOInstance());
+            retObjectGetHeight = classInstance.Invoke("GetHeight", dpi == null ? null : dpi.getJCOInstance());
+            JCObject objGetHeight = (JCObject)retObjectGetHeight;
             return new Single(objGetHeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeight != null ? retObjectGetHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +326,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public Single GetHeight(Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHeight = null;
         try {
-            JCObject objGetHeight = (JCObject)classInstance.Invoke("GetHeight", graphics == null ? null : graphics.getJCOInstance());
+            retObjectGetHeight = classInstance.Invoke("GetHeight", graphics == null ? null : graphics.getJCOInstance());
+            JCObject objGetHeight = (JCObject)retObjectGetHeight;
             return new Single(objGetHeight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeight != null ? retObjectGetHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +341,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public static Font FromLogFont(NetObject lf) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromLogFont = null;
         try {
-            JCObject objFromLogFont = (JCObject)classType.Invoke("FromLogFont", lf == null ? null : lf.getJCOInstance());
+            retObjectFromLogFont = classType.Invoke("FromLogFont", lf == null ? null : lf.getJCOInstance());
+            JCObject objFromLogFont = (JCObject)retObjectFromLogFont;
             return new Font(objFromLogFont);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromLogFont != null ? retObjectFromLogFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +356,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +371,7 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -361,7 +381,7 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public void ToLogFont(NetObject logFont) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ToLogFont", logFont == null ? null : logFont.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,7 +391,7 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public void ToLogFont(NetObject logFont, Graphics graphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ToLogFont", logFont == null ? null : logFont.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,13 +405,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -407,9 +427,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
     
     public boolean getBold() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBold = null;
         try {
-            return (boolean)classInstance.Get("Bold");
+            retObjectBold = classInstance.Get("Bold");
+            return (boolean)retObjectBold;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBold != null ? retObjectBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +441,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public boolean getGdiVerticalFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGdiVerticalFont = null;
         try {
-            return (boolean)classInstance.Get("GdiVerticalFont");
+            retObjectGdiVerticalFont = classInstance.Get("GdiVerticalFont");
+            return (boolean)retObjectGdiVerticalFont;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGdiVerticalFont != null ? retObjectGdiVerticalFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +455,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public boolean getIsSystemFont() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystemFont = null;
         try {
-            return (boolean)classInstance.Get("IsSystemFont");
+            retObjectIsSystemFont = classInstance.Get("IsSystemFont");
+            return (boolean)retObjectIsSystemFont;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSystemFont != null ? retObjectIsSystemFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +469,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public boolean getItalic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItalic = null;
         try {
-            return (boolean)classInstance.Get("Italic");
+            retObjectItalic = classInstance.Get("Italic");
+            return (boolean)retObjectItalic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectItalic != null ? retObjectItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +483,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public boolean getStrikeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrikeout = null;
         try {
-            return (boolean)classInstance.Get("Strikeout");
+            retObjectStrikeout = classInstance.Get("Strikeout");
+            return (boolean)retObjectStrikeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStrikeout != null ? retObjectStrikeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +497,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public boolean getUnderline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderline = null;
         try {
-            return (boolean)classInstance.Get("Underline");
+            retObjectUnderline = classInstance.Get("Underline");
+            return (boolean)retObjectUnderline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnderline != null ? retObjectUnderline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +511,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public byte getGdiCharSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGdiCharSet = null;
         try {
-            return (byte)classInstance.Get("GdiCharSet");
+            retObjectGdiCharSet = classInstance.Get("GdiCharSet");
+            return (byte)retObjectGdiCharSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGdiCharSet != null ? retObjectGdiCharSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +525,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public int getHeight() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,10 +539,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public Single getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,10 +554,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public Single getSizeInPoints() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeInPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeInPoints");
+            retObjectSizeInPoints = classInstance.Get("SizeInPoints");
+            JCObject val = (JCObject)retObjectSizeInPoints;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeInPoints != null ? retObjectSizeInPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,10 +569,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public FontFamily getFontFamily() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,10 +584,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public FontStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,10 +599,14 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public GraphicsUnit getUnit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Unit");
+            retObjectUnit = classInstance.Get("Unit");
+            JCObject val = (JCObject)retObjectUnit;
             return new GraphicsUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnit != null ? retObjectUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,9 +614,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public java.lang.String getName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,9 +628,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public java.lang.String getOriginalFontName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalFontName = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalFontName");
+            retObjectOriginalFontName = classInstance.Get("OriginalFontName");
+            return (java.lang.String)retObjectOriginalFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalFontName != null ? retObjectOriginalFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,9 +642,13 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
 
     public java.lang.String getSystemFontName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemFontName = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemFontName");
+            retObjectSystemFontName = classInstance.Get("SystemFontName");
+            return (java.lang.String)retObjectSystemFontName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemFontName != null ? retObjectSystemFontName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

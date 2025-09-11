@@ -178,10 +178,14 @@ public class ColorContext extends NetObject  {
     
     public Stream OpenProfileStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenProfileStream = null;
         try {
-            JCObject objOpenProfileStream = (JCObject)classInstance.Invoke("OpenProfileStream");
+            retObjectOpenProfileStream = classInstance.Invoke("OpenProfileStream");
+            JCObject objOpenProfileStream = (JCObject)retObjectOpenProfileStream;
             return new Stream(objOpenProfileStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenProfileStream != null ? retObjectOpenProfileStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class ColorContext extends NetObject  {
     
     public Uri getProfileUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfileUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProfileUri");
+            retObjectProfileUri = classInstance.Get("ProfileUri");
+            JCObject val = (JCObject)retObjectProfileUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProfileUri != null ? retObjectProfileUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

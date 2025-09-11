@@ -210,10 +210,14 @@ public class CngUIPolicy extends NetObject  {
     
     public CngUIProtectionLevels getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new CngUIProtectionLevels(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +225,13 @@ public class CngUIPolicy extends NetObject  {
 
     public java.lang.String getCreationTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("CreationTitle");
+            retObjectCreationTitle = classInstance.Get("CreationTitle");
+            return (java.lang.String)retObjectCreationTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCreationTitle != null ? retObjectCreationTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +239,13 @@ public class CngUIPolicy extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +253,13 @@ public class CngUIPolicy extends NetObject  {
 
     public java.lang.String getFriendlyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFriendlyName = null;
         try {
-            return (java.lang.String)classInstance.Get("FriendlyName");
+            retObjectFriendlyName = classInstance.Get("FriendlyName");
+            return (java.lang.String)retObjectFriendlyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFriendlyName != null ? retObjectFriendlyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +267,13 @@ public class CngUIPolicy extends NetObject  {
 
     public java.lang.String getUseContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseContext = null;
         try {
-            return (java.lang.String)classInstance.Get("UseContext");
+            retObjectUseContext = classInstance.Get("UseContext");
+            return (java.lang.String)retObjectUseContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUseContext != null ? retObjectUseContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

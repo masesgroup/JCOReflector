@@ -166,10 +166,14 @@ public class IndexedProtocolEndpointDictionary extends NetObjectEnumerable  {
     
     public IndexedProtocolEndpoint getDefault() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Default");
+            retObjectDefault = classInstance.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new IndexedProtocolEndpoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

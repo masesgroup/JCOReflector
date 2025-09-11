@@ -157,9 +157,13 @@ public class XmlQueryContext extends NetObject  {
     
     public boolean LateBoundFunctionExists(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLateBoundFunctionExists = null;
         try {
-            return (boolean)classInstance.Invoke("LateBoundFunctionExists", name, namespaceUri);
+            retObjectLateBoundFunctionExists = classInstance.Invoke("LateBoundFunctionExists", name, namespaceUri);
+            return (boolean)retObjectLateBoundFunctionExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLateBoundFunctionExists != null ? retObjectLateBoundFunctionExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class XmlQueryContext extends NetObject  {
 
     public NetObject GetLateBoundObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLateBoundObject = null;
         try {
-            JCObject objGetLateBoundObject = (JCObject)classInstance.Invoke("GetLateBoundObject", namespaceUri);
+            retObjectGetLateBoundObject = classInstance.Invoke("GetLateBoundObject", namespaceUri);
+            JCObject objGetLateBoundObject = (JCObject)retObjectGetLateBoundObject;
             return new NetObject(objGetLateBoundObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLateBoundObject != null ? retObjectGetLateBoundObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class XmlQueryContext extends NetObject  {
 
     public NetObject GetParameter(java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParameter = null;
         try {
-            JCObject objGetParameter = (JCObject)classInstance.Invoke("GetParameter", localName, namespaceUri);
+            retObjectGetParameter = classInstance.Invoke("GetParameter", localName, namespaceUri);
+            JCObject objGetParameter = (JCObject)retObjectGetParameter;
             return new NetObject(objGetParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParameter != null ? retObjectGetParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class XmlQueryContext extends NetObject  {
 
     public XPathNavigator GetDataSource(java.lang.String uriRelative, java.lang.String uriBase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataSource = null;
         try {
-            JCObject objGetDataSource = (JCObject)classInstance.Invoke("GetDataSource", uriRelative, uriBase);
+            retObjectGetDataSource = classInstance.Invoke("GetDataSource", uriRelative, uriBase);
+            JCObject objGetDataSource = (JCObject)retObjectGetDataSource;
             return new XPathNavigator(objGetDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataSource != null ? retObjectGetDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +216,7 @@ public class XmlQueryContext extends NetObject  {
 
     public void OnXsltMessageEncountered(java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnXsltMessageEncountered", message);
         } catch (JCNativeException jcne) {
@@ -214,10 +230,14 @@ public class XmlQueryContext extends NetObject  {
     
     public XmlNameTable getDefaultNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultNameTable");
+            retObjectDefaultNameTable = classInstance.Get("DefaultNameTable");
+            JCObject val = (JCObject)retObjectDefaultNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultNameTable != null ? retObjectDefaultNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class XmlQueryContext extends NetObject  {
 
     public XmlNameTable getQueryNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QueryNameTable");
+            retObjectQueryNameTable = classInstance.Get("QueryNameTable");
+            JCObject val = (JCObject)retObjectQueryNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQueryNameTable != null ? retObjectQueryNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class XmlQueryContext extends NetObject  {
 
     public XPathNavigator getDefaultDataSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultDataSource");
+            retObjectDefaultDataSource = classInstance.Get("DefaultDataSource");
+            JCObject val = (JCObject)retObjectDefaultDataSource;
             return new XPathNavigator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultDataSource != null ? retObjectDefaultDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

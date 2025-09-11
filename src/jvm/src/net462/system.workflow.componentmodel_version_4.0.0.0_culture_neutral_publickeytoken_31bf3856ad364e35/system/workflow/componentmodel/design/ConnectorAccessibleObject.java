@@ -169,10 +169,14 @@ public class ConnectorAccessibleObject extends AccessibleObject  {
     
     public AccessibleObject HitTest(int x, int y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.runtime.interopservices.ExternalException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", x, y);
+            retObjectHitTest = classInstance.Invoke("HitTest", x, y);
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new AccessibleObject(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

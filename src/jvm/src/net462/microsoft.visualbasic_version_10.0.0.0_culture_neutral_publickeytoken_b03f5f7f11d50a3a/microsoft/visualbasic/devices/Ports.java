@@ -164,10 +164,14 @@ public class Ports extends NetObject  {
     
     public SerialPort OpenSerialPort(java.lang.String portName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSerialPort = null;
         try {
-            JCObject objOpenSerialPort = (JCObject)classInstance.Invoke("OpenSerialPort", portName);
+            retObjectOpenSerialPort = classInstance.Invoke("OpenSerialPort", portName);
+            JCObject objOpenSerialPort = (JCObject)retObjectOpenSerialPort;
             return new SerialPort(objOpenSerialPort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSerialPort != null ? retObjectOpenSerialPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class Ports extends NetObject  {
 
     public SerialPort OpenSerialPort(java.lang.String portName, int baudRate) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSerialPort = null;
         try {
-            JCObject objOpenSerialPort = (JCObject)classInstance.Invoke("OpenSerialPort", portName, baudRate);
+            retObjectOpenSerialPort = classInstance.Invoke("OpenSerialPort", portName, baudRate);
+            JCObject objOpenSerialPort = (JCObject)retObjectOpenSerialPort;
             return new SerialPort(objOpenSerialPort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSerialPort != null ? retObjectOpenSerialPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class Ports extends NetObject  {
 
     public SerialPort OpenSerialPort(java.lang.String portName, int baudRate, Parity parity) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSerialPort = null;
         try {
-            JCObject objOpenSerialPort = (JCObject)classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance());
+            retObjectOpenSerialPort = classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance());
+            JCObject objOpenSerialPort = (JCObject)retObjectOpenSerialPort;
             return new SerialPort(objOpenSerialPort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSerialPort != null ? retObjectOpenSerialPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class Ports extends NetObject  {
 
     public SerialPort OpenSerialPort(java.lang.String portName, int baudRate, Parity parity, int dataBits) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSerialPort = null;
         try {
-            JCObject objOpenSerialPort = (JCObject)classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance(), dataBits);
+            retObjectOpenSerialPort = classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance(), dataBits);
+            JCObject objOpenSerialPort = (JCObject)retObjectOpenSerialPort;
             return new SerialPort(objOpenSerialPort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSerialPort != null ? retObjectOpenSerialPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class Ports extends NetObject  {
 
     public SerialPort OpenSerialPort(java.lang.String portName, int baudRate, Parity parity, int dataBits, StopBits stopBits) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenSerialPort = null;
         try {
-            JCObject objOpenSerialPort = (JCObject)classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance(), dataBits, stopBits == null ? null : stopBits.getJCOInstance());
+            retObjectOpenSerialPort = classInstance.Invoke("OpenSerialPort", portName, baudRate, parity == null ? null : parity.getJCOInstance(), dataBits, stopBits == null ? null : stopBits.getJCOInstance());
+            JCObject objOpenSerialPort = (JCObject)retObjectOpenSerialPort;
             return new SerialPort(objOpenSerialPort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenSerialPort != null ? retObjectOpenSerialPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

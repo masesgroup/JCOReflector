@@ -179,9 +179,13 @@ public class UriTemplate extends NetObject  {
     
     public boolean IsEquivalentTo(UriTemplate other) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEquivalentTo = null;
         try {
-            return (boolean)classInstance.Invoke("IsEquivalentTo", other == null ? null : other.getJCOInstance());
+            retObjectIsEquivalentTo = classInstance.Invoke("IsEquivalentTo", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectIsEquivalentTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEquivalentTo != null ? retObjectIsEquivalentTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class UriTemplate extends NetObject  {
 
     public Uri BindByName(Uri baseAddress, NameValueCollection parameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByName = null;
         try {
-            JCObject objBindByName = (JCObject)classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
+            retObjectBindByName = classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance());
+            JCObject objBindByName = (JCObject)retObjectBindByName;
             return new Uri(objBindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByName != null ? retObjectBindByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class UriTemplate extends NetObject  {
 
     public Uri BindByName(Uri baseAddress, NameValueCollection parameters, boolean omitDefaults) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByName = null;
         try {
-            JCObject objBindByName = (JCObject)classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance(), omitDefaults);
+            retObjectBindByName = classInstance.Invoke("BindByName", baseAddress == null ? null : baseAddress.getJCOInstance(), parameters == null ? null : parameters.getJCOInstance(), omitDefaults);
+            JCObject objBindByName = (JCObject)retObjectBindByName;
             return new Uri(objBindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByName != null ? retObjectBindByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class UriTemplate extends NetObject  {
 
     public Uri BindByPosition(Uri baseAddress, java.lang.String... values) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByPosition = null;
         try {
-            JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", baseAddress == null ? null : baseAddress.getJCOInstance(), values);
+            retObjectBindByPosition = classInstance.Invoke("BindByPosition", baseAddress == null ? null : baseAddress.getJCOInstance(), values);
+            JCObject objBindByPosition = (JCObject)retObjectBindByPosition;
             return new Uri(objBindByPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByPosition != null ? retObjectBindByPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class UriTemplate extends NetObject  {
 
     public Uri BindByPosition(Uri dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindByPosition = null;
         try {
-            JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectBindByPosition = classInstance.Invoke("BindByPosition", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objBindByPosition = (JCObject)retObjectBindByPosition;
             return new Uri(objBindByPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindByPosition != null ? retObjectBindByPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +253,14 @@ public class UriTemplate extends NetObject  {
 
     public UriTemplateMatch Match(Uri baseAddress, Uri candidate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", baseAddress == null ? null : baseAddress.getJCOInstance(), candidate == null ? null : candidate.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", baseAddress == null ? null : baseAddress.getJCOInstance(), candidate == null ? null : candidate.getJCOInstance());
+            JCObject objMatch = (JCObject)retObjectMatch;
             return new UriTemplateMatch(objMatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +272,13 @@ public class UriTemplate extends NetObject  {
     
     public boolean getIgnoreTrailingSlash() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreTrailingSlash = null;
         try {
-            return (boolean)classInstance.Get("IgnoreTrailingSlash");
+            retObjectIgnoreTrailingSlash = classInstance.Get("IgnoreTrailingSlash");
+            return (boolean)retObjectIgnoreTrailingSlash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreTrailingSlash != null ? retObjectIgnoreTrailingSlash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

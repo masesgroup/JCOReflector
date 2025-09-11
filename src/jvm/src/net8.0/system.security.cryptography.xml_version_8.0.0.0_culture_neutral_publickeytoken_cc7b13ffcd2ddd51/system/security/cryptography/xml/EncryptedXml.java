@@ -193,10 +193,12 @@ public class EncryptedXml extends NetObject  {
     
     public byte[] DecryptData(EncryptedData encryptedData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptData", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            retObjectDecryptData = classInstance.Invoke("DecryptData", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +207,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptData] = (byte)resultingArrayList.get(indexDecryptData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptData != null ? retObjectDecryptData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +216,12 @@ public class EncryptedXml extends NetObject  {
 
     public byte[] DecryptEncryptedKey(EncryptedKey encryptedKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecryptEncryptedKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptEncryptedKey", encryptedKey == null ? null : encryptedKey.getJCOInstance());
+            retObjectDecryptEncryptedKey = classInstance.Invoke("DecryptEncryptedKey", encryptedKey == null ? null : encryptedKey.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptEncryptedKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -224,6 +230,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptEncryptedKey] = (byte)resultingArrayList.get(indexDecryptEncryptedKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptEncryptedKey != null ? retObjectDecryptEncryptedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +239,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] DecryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            retObjectDecryptKey = classType.Invoke("DecryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -243,6 +253,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +262,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] DecryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            retObjectDecryptKey = classType.Invoke("DecryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -262,6 +276,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +285,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] DecryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            retObjectDecryptKey = classType.Invoke("DecryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -281,6 +299,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +308,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] DecryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("DecryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectDecryptKey = classType.Invoke("DecryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDecryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -300,6 +322,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexDecryptKey] = (byte)resultingArrayList.get(indexDecryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDecryptKey != null ? retObjectDecryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +331,12 @@ public class EncryptedXml extends NetObject  {
 
     public byte[] EncryptData(byte[] plaintext, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptData", plaintext, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            retObjectEncryptData = classInstance.Invoke("EncryptData", plaintext, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -319,6 +345,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptData] = (byte)resultingArrayList.get(indexEncryptData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptData != null ? retObjectEncryptData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +354,12 @@ public class EncryptedXml extends NetObject  {
 
     public byte[] EncryptData(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectEncryptData = classInstance.Invoke("EncryptData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -338,6 +368,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptData] = (byte)resultingArrayList.get(indexEncryptData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptData != null ? retObjectEncryptData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +377,12 @@ public class EncryptedXml extends NetObject  {
 
     public byte[] EncryptData(XmlElement inputElement, SymmetricAlgorithm symmetricAlgorithm, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptData", inputElement == null ? null : inputElement.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance(), content);
+            retObjectEncryptData = classInstance.Invoke("EncryptData", inputElement == null ? null : inputElement.getJCOInstance(), symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance(), content);
+            JCObject resultingObjects = (JCObject)retObjectEncryptData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -357,6 +391,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptData] = (byte)resultingArrayList.get(indexEncryptData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptData != null ? retObjectEncryptData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +400,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] EncryptKey(byte[] keyData, RSA rsa, boolean useOAEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            retObjectEncryptKey = classType.Invoke("EncryptKey", keyData, rsa == null ? null : rsa.getJCOInstance(), useOAEP);
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -376,6 +414,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +423,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] EncryptKey(JCORefOut dupParam0, RSA dupParam1, boolean dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            retObjectEncryptKey = classType.Invoke("EncryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -395,6 +437,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +446,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] EncryptKey(byte[] keyData, SymmetricAlgorithm symmetricAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            retObjectEncryptKey = classType.Invoke("EncryptKey", keyData, symmetricAlgorithm == null ? null : symmetricAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -414,6 +460,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +469,12 @@ public class EncryptedXml extends NetObject  {
 
     public static byte[] EncryptKey(JCORefOut dupParam0, SymmetricAlgorithm dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEncryptKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("EncryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectEncryptKey = classType.Invoke("EncryptKey", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectEncryptKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -433,6 +483,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexEncryptKey] = (byte)resultingArrayList.get(indexEncryptKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncryptKey != null ? retObjectEncryptKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +492,12 @@ public class EncryptedXml extends NetObject  {
 
     public byte[] GetDecryptionIV(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecryptionIV = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDecryptionIV", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            retObjectGetDecryptionIV = classInstance.Invoke("GetDecryptionIV", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            JCObject resultingObjects = (JCObject)retObjectGetDecryptionIV;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -452,6 +506,8 @@ public class EncryptedXml extends NetObject  {
 				resultingArray[indexGetDecryptionIV] = (byte)resultingArrayList.get(indexGetDecryptionIV);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetDecryptionIV != null ? retObjectGetDecryptionIV.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +515,14 @@ public class EncryptedXml extends NetObject  {
 
     public SymmetricAlgorithm GetDecryptionKey(EncryptedData encryptedData, java.lang.String symmetricAlgorithmUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecryptionKey = null;
         try {
-            JCObject objGetDecryptionKey = (JCObject)classInstance.Invoke("GetDecryptionKey", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            retObjectGetDecryptionKey = classInstance.Invoke("GetDecryptionKey", encryptedData == null ? null : encryptedData.getJCOInstance(), symmetricAlgorithmUri);
+            JCObject objGetDecryptionKey = (JCObject)retObjectGetDecryptionKey;
             return new SymmetricAlgorithm(objGetDecryptionKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecryptionKey != null ? retObjectGetDecryptionKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +530,14 @@ public class EncryptedXml extends NetObject  {
 
     public EncryptedData Encrypt(XmlElement inputElement, X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance());
+            JCObject objEncrypt = (JCObject)retObjectEncrypt;
             return new EncryptedData(objEncrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +545,14 @@ public class EncryptedXml extends NetObject  {
 
     public EncryptedData Encrypt(XmlElement inputElement, java.lang.String keyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), keyName);
+            retObjectEncrypt = classInstance.Invoke("Encrypt", inputElement == null ? null : inputElement.getJCOInstance(), keyName);
+            JCObject objEncrypt = (JCObject)retObjectEncrypt;
             return new EncryptedData(objEncrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +560,14 @@ public class EncryptedXml extends NetObject  {
 
     public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.xml.xpath.XPathException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIdElement = null;
         try {
-            JCObject objGetIdElement = (JCObject)classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
+            retObjectGetIdElement = classInstance.Invoke("GetIdElement", document == null ? null : document.getJCOInstance(), idValue);
+            JCObject objGetIdElement = (JCObject)retObjectGetIdElement;
             return new XmlElement(objGetIdElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIdElement != null ? retObjectGetIdElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +575,7 @@ public class EncryptedXml extends NetObject  {
 
     public void AddKeyNameMapping(java.lang.String keyName, NetObject keyObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddKeyNameMapping", keyName, keyObject == null ? null : keyObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -513,7 +585,7 @@ public class EncryptedXml extends NetObject  {
 
     public void ClearKeyNameMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearKeyNameMappings");
         } catch (JCNativeException jcne) {
@@ -523,7 +595,7 @@ public class EncryptedXml extends NetObject  {
 
     public void DecryptDocument() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.cryptography.xml.CryptoSignedXmlRecursionException, system.TypeLoadException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DecryptDocument");
         } catch (JCNativeException jcne) {
@@ -533,7 +605,7 @@ public class EncryptedXml extends NetObject  {
 
     public void ReplaceData(XmlElement inputElement, byte[] decryptedData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceData", inputElement == null ? null : inputElement.getJCOInstance(), decryptedData);
         } catch (JCNativeException jcne) {
@@ -543,7 +615,7 @@ public class EncryptedXml extends NetObject  {
 
     public void ReplaceData(XmlElement dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -553,7 +625,7 @@ public class EncryptedXml extends NetObject  {
 
     public static void ReplaceElement(XmlElement inputElement, EncryptedData encryptedData, boolean content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.xml.XmlException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ReplaceElement", inputElement == null ? null : inputElement.getJCOInstance(), encryptedData == null ? null : encryptedData.getJCOInstance(), content);
         } catch (JCNativeException jcne) {
@@ -567,9 +639,13 @@ public class EncryptedXml extends NetObject  {
     
     public int getXmlDSigSearchDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlDSigSearchDepth = null;
         try {
-            return (int)classInstance.Get("XmlDSigSearchDepth");
+            retObjectXmlDSigSearchDepth = classInstance.Get("XmlDSigSearchDepth");
+            return (int)retObjectXmlDSigSearchDepth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectXmlDSigSearchDepth != null ? retObjectXmlDSigSearchDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,7 +653,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setXmlDSigSearchDepth(int XmlDSigSearchDepth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlDSigSearchDepth", XmlDSigSearchDepth);
         } catch (JCNativeException jcne) {
@@ -587,10 +663,14 @@ public class EncryptedXml extends NetObject  {
 
     public CipherMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new CipherMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,7 +678,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setMode(CipherMode Mode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -608,10 +688,14 @@ public class EncryptedXml extends NetObject  {
 
     public PaddingMode getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new PaddingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -619,7 +703,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setPadding(PaddingMode Padding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -629,10 +713,14 @@ public class EncryptedXml extends NetObject  {
 
     public Evidence getDocumentEvidence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentEvidence = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentEvidence");
+            retObjectDocumentEvidence = classInstance.Get("DocumentEvidence");
+            JCObject val = (JCObject)retObjectDocumentEvidence;
             return new Evidence(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentEvidence != null ? retObjectDocumentEvidence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,7 +728,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setDocumentEvidence(Evidence DocumentEvidence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocumentEvidence", DocumentEvidence == null ? null : DocumentEvidence.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -650,9 +738,13 @@ public class EncryptedXml extends NetObject  {
 
     public java.lang.String getRecipient() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipient = null;
         try {
-            return (java.lang.String)classInstance.Get("Recipient");
+            retObjectRecipient = classInstance.Get("Recipient");
+            return (java.lang.String)retObjectRecipient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRecipient != null ? retObjectRecipient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +752,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setRecipient(java.lang.String Recipient) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Recipient", Recipient);
         } catch (JCNativeException jcne) {
@@ -670,10 +762,14 @@ public class EncryptedXml extends NetObject  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,7 +777,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setEncoding(Encoding Encoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -691,10 +787,14 @@ public class EncryptedXml extends NetObject  {
 
     public XmlResolver getResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resolver");
+            retObjectResolver = classInstance.Get("Resolver");
+            JCObject val = (JCObject)retObjectResolver;
             return new XmlResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolver != null ? retObjectResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,7 +802,7 @@ public class EncryptedXml extends NetObject  {
 
     public void setResolver(XmlResolver Resolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resolver", Resolver == null ? null : Resolver.getJCOInstance());
         } catch (JCNativeException jcne) {

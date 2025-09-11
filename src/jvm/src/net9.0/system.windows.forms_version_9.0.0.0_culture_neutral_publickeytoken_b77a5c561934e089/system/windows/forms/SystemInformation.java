@@ -162,9 +162,19 @@ public class SystemInformation extends NetObject  {
     
     public static int GetHorizontalScrollBarArrowWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHorizontalScrollBarArrowWidthForDpi = null;
         try {
-            return (int)classType.Invoke("GetHorizontalScrollBarArrowWidthForDpi", dpi);
+            retObjectGetHorizontalScrollBarArrowWidthForDpi = classType.Invoke("GetHorizontalScrollBarArrowWidthForDpi", dpi);
+            return (int)retObjectGetHorizontalScrollBarArrowWidthForDpi;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHorizontalScrollBarArrowWidthForDpiNumber = (java.lang.Number)retObjectGetHorizontalScrollBarArrowWidthForDpi;
+                return retObjectGetHorizontalScrollBarArrowWidthForDpiNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarArrowWidthForDpi != null ? retObjectGetHorizontalScrollBarArrowWidthForDpi.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +182,19 @@ public class SystemInformation extends NetObject  {
 
     public static int GetHorizontalScrollBarHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHorizontalScrollBarHeightForDpi = null;
         try {
-            return (int)classType.Invoke("GetHorizontalScrollBarHeightForDpi", dpi);
+            retObjectGetHorizontalScrollBarHeightForDpi = classType.Invoke("GetHorizontalScrollBarHeightForDpi", dpi);
+            return (int)retObjectGetHorizontalScrollBarHeightForDpi;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHorizontalScrollBarHeightForDpiNumber = (java.lang.Number)retObjectGetHorizontalScrollBarHeightForDpi;
+                return retObjectGetHorizontalScrollBarHeightForDpiNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHorizontalScrollBarHeightForDpi != null ? retObjectGetHorizontalScrollBarHeightForDpi.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +202,19 @@ public class SystemInformation extends NetObject  {
 
     public static int GetVerticalScrollBarWidthForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVerticalScrollBarWidthForDpi = null;
         try {
-            return (int)classType.Invoke("GetVerticalScrollBarWidthForDpi", dpi);
+            retObjectGetVerticalScrollBarWidthForDpi = classType.Invoke("GetVerticalScrollBarWidthForDpi", dpi);
+            return (int)retObjectGetVerticalScrollBarWidthForDpi;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetVerticalScrollBarWidthForDpiNumber = (java.lang.Number)retObjectGetVerticalScrollBarWidthForDpi;
+                return retObjectGetVerticalScrollBarWidthForDpiNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetVerticalScrollBarWidthForDpi != null ? retObjectGetVerticalScrollBarWidthForDpi.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +222,19 @@ public class SystemInformation extends NetObject  {
 
     public static int VerticalScrollBarArrowHeightForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarArrowHeightForDpi = null;
         try {
-            return (int)classType.Invoke("VerticalScrollBarArrowHeightForDpi", dpi);
+            retObjectVerticalScrollBarArrowHeightForDpi = classType.Invoke("VerticalScrollBarArrowHeightForDpi", dpi);
+            return (int)retObjectVerticalScrollBarArrowHeightForDpi;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectVerticalScrollBarArrowHeightForDpiNumber = (java.lang.Number)retObjectVerticalScrollBarArrowHeightForDpi;
+                return retObjectVerticalScrollBarArrowHeightForDpiNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectVerticalScrollBarArrowHeightForDpi != null ? retObjectVerticalScrollBarArrowHeightForDpi.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +242,14 @@ public class SystemInformation extends NetObject  {
 
     public static Font GetMenuFontForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMenuFontForDpi = null;
         try {
-            JCObject objGetMenuFontForDpi = (JCObject)classType.Invoke("GetMenuFontForDpi", dpi);
+            retObjectGetMenuFontForDpi = classType.Invoke("GetMenuFontForDpi", dpi);
+            JCObject objGetMenuFontForDpi = (JCObject)retObjectGetMenuFontForDpi;
             return new Font(objGetMenuFontForDpi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMenuFontForDpi != null ? retObjectGetMenuFontForDpi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +257,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size GetBorderSizeForDpi(int dpi) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBorderSizeForDpi = null;
         try {
-            JCObject objGetBorderSizeForDpi = (JCObject)classType.Invoke("GetBorderSizeForDpi", dpi);
+            retObjectGetBorderSizeForDpi = classType.Invoke("GetBorderSizeForDpi", dpi);
+            JCObject objGetBorderSizeForDpi = (JCObject)retObjectGetBorderSizeForDpi;
             return new Size(objGetBorderSizeForDpi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBorderSizeForDpi != null ? retObjectGetBorderSizeForDpi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +276,13 @@ public class SystemInformation extends NetObject  {
     
     public static boolean getDbcsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDbcsEnabled = null;
         try {
-            return (boolean)classType.Get("DbcsEnabled");
+            retObjectDbcsEnabled = classType.Get("DbcsEnabled");
+            return (boolean)retObjectDbcsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDbcsEnabled != null ? retObjectDbcsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +290,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getDebugOS() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDebugOS = null;
         try {
-            return (boolean)classType.Get("DebugOS");
+            retObjectDebugOS = classType.Get("DebugOS");
+            return (boolean)retObjectDebugOS;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDebugOS != null ? retObjectDebugOS.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +304,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getDragFullWindows() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDragFullWindows = null;
         try {
-            return (boolean)classType.Get("DragFullWindows");
+            retObjectDragFullWindows = classType.Get("DragFullWindows");
+            return (boolean)retObjectDragFullWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDragFullWindows != null ? retObjectDragFullWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +318,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getHighContrast() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHighContrast = null;
         try {
-            return (boolean)classType.Get("HighContrast");
+            retObjectHighContrast = classType.Get("HighContrast");
+            return (boolean)retObjectHighContrast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHighContrast != null ? retObjectHighContrast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +332,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsActiveWindowTrackingEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsActiveWindowTrackingEnabled = null;
         try {
-            return (boolean)classType.Get("IsActiveWindowTrackingEnabled");
+            retObjectIsActiveWindowTrackingEnabled = classType.Get("IsActiveWindowTrackingEnabled");
+            return (boolean)retObjectIsActiveWindowTrackingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActiveWindowTrackingEnabled != null ? retObjectIsActiveWindowTrackingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +346,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsComboBoxAnimationEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsComboBoxAnimationEnabled = null;
         try {
-            return (boolean)classType.Get("IsComboBoxAnimationEnabled");
+            retObjectIsComboBoxAnimationEnabled = classType.Get("IsComboBoxAnimationEnabled");
+            return (boolean)retObjectIsComboBoxAnimationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsComboBoxAnimationEnabled != null ? retObjectIsComboBoxAnimationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +360,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsDropShadowEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDropShadowEnabled = null;
         try {
-            return (boolean)classType.Get("IsDropShadowEnabled");
+            retObjectIsDropShadowEnabled = classType.Get("IsDropShadowEnabled");
+            return (boolean)retObjectIsDropShadowEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDropShadowEnabled != null ? retObjectIsDropShadowEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +374,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsFlatMenuEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFlatMenuEnabled = null;
         try {
-            return (boolean)classType.Get("IsFlatMenuEnabled");
+            retObjectIsFlatMenuEnabled = classType.Get("IsFlatMenuEnabled");
+            return (boolean)retObjectIsFlatMenuEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFlatMenuEnabled != null ? retObjectIsFlatMenuEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +388,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsFontSmoothingEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFontSmoothingEnabled = null;
         try {
-            return (boolean)classType.Get("IsFontSmoothingEnabled");
+            retObjectIsFontSmoothingEnabled = classType.Get("IsFontSmoothingEnabled");
+            return (boolean)retObjectIsFontSmoothingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFontSmoothingEnabled != null ? retObjectIsFontSmoothingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +402,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsHotTrackingEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsHotTrackingEnabled = null;
         try {
-            return (boolean)classType.Get("IsHotTrackingEnabled");
+            retObjectIsHotTrackingEnabled = classType.Get("IsHotTrackingEnabled");
+            return (boolean)retObjectIsHotTrackingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHotTrackingEnabled != null ? retObjectIsHotTrackingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +416,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsIconTitleWrappingEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsIconTitleWrappingEnabled = null;
         try {
-            return (boolean)classType.Get("IsIconTitleWrappingEnabled");
+            retObjectIsIconTitleWrappingEnabled = classType.Get("IsIconTitleWrappingEnabled");
+            return (boolean)retObjectIsIconTitleWrappingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIconTitleWrappingEnabled != null ? retObjectIsIconTitleWrappingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +430,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsKeyboardPreferred() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsKeyboardPreferred = null;
         try {
-            return (boolean)classType.Get("IsKeyboardPreferred");
+            retObjectIsKeyboardPreferred = classType.Get("IsKeyboardPreferred");
+            return (boolean)retObjectIsKeyboardPreferred;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyboardPreferred != null ? retObjectIsKeyboardPreferred.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +444,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsListBoxSmoothScrollingEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsListBoxSmoothScrollingEnabled = null;
         try {
-            return (boolean)classType.Get("IsListBoxSmoothScrollingEnabled");
+            retObjectIsListBoxSmoothScrollingEnabled = classType.Get("IsListBoxSmoothScrollingEnabled");
+            return (boolean)retObjectIsListBoxSmoothScrollingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsListBoxSmoothScrollingEnabled != null ? retObjectIsListBoxSmoothScrollingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +458,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsMenuAnimationEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMenuAnimationEnabled = null;
         try {
-            return (boolean)classType.Get("IsMenuAnimationEnabled");
+            retObjectIsMenuAnimationEnabled = classType.Get("IsMenuAnimationEnabled");
+            return (boolean)retObjectIsMenuAnimationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMenuAnimationEnabled != null ? retObjectIsMenuAnimationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,9 +472,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsMenuFadeEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMenuFadeEnabled = null;
         try {
-            return (boolean)classType.Get("IsMenuFadeEnabled");
+            retObjectIsMenuFadeEnabled = classType.Get("IsMenuFadeEnabled");
+            return (boolean)retObjectIsMenuFadeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMenuFadeEnabled != null ? retObjectIsMenuFadeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,9 +486,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsMinimizeRestoreAnimationEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsMinimizeRestoreAnimationEnabled = null;
         try {
-            return (boolean)classType.Get("IsMinimizeRestoreAnimationEnabled");
+            retObjectIsMinimizeRestoreAnimationEnabled = classType.Get("IsMinimizeRestoreAnimationEnabled");
+            return (boolean)retObjectIsMinimizeRestoreAnimationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMinimizeRestoreAnimationEnabled != null ? retObjectIsMinimizeRestoreAnimationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,9 +500,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsSelectionFadeEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSelectionFadeEnabled = null;
         try {
-            return (boolean)classType.Get("IsSelectionFadeEnabled");
+            retObjectIsSelectionFadeEnabled = classType.Get("IsSelectionFadeEnabled");
+            return (boolean)retObjectIsSelectionFadeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionFadeEnabled != null ? retObjectIsSelectionFadeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,9 +514,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsSnapToDefaultEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSnapToDefaultEnabled = null;
         try {
-            return (boolean)classType.Get("IsSnapToDefaultEnabled");
+            retObjectIsSnapToDefaultEnabled = classType.Get("IsSnapToDefaultEnabled");
+            return (boolean)retObjectIsSnapToDefaultEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSnapToDefaultEnabled != null ? retObjectIsSnapToDefaultEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +528,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsTitleBarGradientEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTitleBarGradientEnabled = null;
         try {
-            return (boolean)classType.Get("IsTitleBarGradientEnabled");
+            retObjectIsTitleBarGradientEnabled = classType.Get("IsTitleBarGradientEnabled");
+            return (boolean)retObjectIsTitleBarGradientEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTitleBarGradientEnabled != null ? retObjectIsTitleBarGradientEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,9 +542,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getIsToolTipAnimationEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsToolTipAnimationEnabled = null;
         try {
-            return (boolean)classType.Get("IsToolTipAnimationEnabled");
+            retObjectIsToolTipAnimationEnabled = classType.Get("IsToolTipAnimationEnabled");
+            return (boolean)retObjectIsToolTipAnimationEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsToolTipAnimationEnabled != null ? retObjectIsToolTipAnimationEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +556,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMenuAccessKeysUnderlined() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuAccessKeysUnderlined = null;
         try {
-            return (boolean)classType.Get("MenuAccessKeysUnderlined");
+            retObjectMenuAccessKeysUnderlined = classType.Get("MenuAccessKeysUnderlined");
+            return (boolean)retObjectMenuAccessKeysUnderlined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMenuAccessKeysUnderlined != null ? retObjectMenuAccessKeysUnderlined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,9 +570,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMidEastEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMidEastEnabled = null;
         try {
-            return (boolean)classType.Get("MidEastEnabled");
+            retObjectMidEastEnabled = classType.Get("MidEastEnabled");
+            return (boolean)retObjectMidEastEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMidEastEnabled != null ? retObjectMidEastEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,9 +584,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMonitorsSameDisplayFormat() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonitorsSameDisplayFormat = null;
         try {
-            return (boolean)classType.Get("MonitorsSameDisplayFormat");
+            retObjectMonitorsSameDisplayFormat = classType.Get("MonitorsSameDisplayFormat");
+            return (boolean)retObjectMonitorsSameDisplayFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMonitorsSameDisplayFormat != null ? retObjectMonitorsSameDisplayFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,9 +598,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMouseButtonsSwapped() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseButtonsSwapped = null;
         try {
-            return (boolean)classType.Get("MouseButtonsSwapped");
+            retObjectMouseButtonsSwapped = classType.Get("MouseButtonsSwapped");
+            return (boolean)retObjectMouseButtonsSwapped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMouseButtonsSwapped != null ? retObjectMouseButtonsSwapped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,9 +612,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMousePresent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMousePresent = null;
         try {
-            return (boolean)classType.Get("MousePresent");
+            retObjectMousePresent = classType.Get("MousePresent");
+            return (boolean)retObjectMousePresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMousePresent != null ? retObjectMousePresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,9 +626,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getMouseWheelPresent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseWheelPresent = null;
         try {
-            return (boolean)classType.Get("MouseWheelPresent");
+            retObjectMouseWheelPresent = classType.Get("MouseWheelPresent");
+            return (boolean)retObjectMouseWheelPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMouseWheelPresent != null ? retObjectMouseWheelPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,9 +640,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getNativeMouseWheelSupport() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNativeMouseWheelSupport = null;
         try {
-            return (boolean)classType.Get("NativeMouseWheelSupport");
+            retObjectNativeMouseWheelSupport = classType.Get("NativeMouseWheelSupport");
+            return (boolean)retObjectNativeMouseWheelSupport;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNativeMouseWheelSupport != null ? retObjectNativeMouseWheelSupport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,9 +654,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getNetwork() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNetwork = null;
         try {
-            return (boolean)classType.Get("Network");
+            retObjectNetwork = classType.Get("Network");
+            return (boolean)retObjectNetwork;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNetwork != null ? retObjectNetwork.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,9 +668,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getPenWindows() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPenWindows = null;
         try {
-            return (boolean)classType.Get("PenWindows");
+            retObjectPenWindows = classType.Get("PenWindows");
+            return (boolean)retObjectPenWindows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPenWindows != null ? retObjectPenWindows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -518,9 +682,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getRightAlignedMenus() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightAlignedMenus = null;
         try {
-            return (boolean)classType.Get("RightAlignedMenus");
+            retObjectRightAlignedMenus = classType.Get("RightAlignedMenus");
+            return (boolean)retObjectRightAlignedMenus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightAlignedMenus != null ? retObjectRightAlignedMenus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,9 +696,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getSecure() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecure = null;
         try {
-            return (boolean)classType.Get("Secure");
+            retObjectSecure = classType.Get("Secure");
+            return (boolean)retObjectSecure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSecure != null ? retObjectSecure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,9 +710,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getShowSounds() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowSounds = null;
         try {
-            return (boolean)classType.Get("ShowSounds");
+            retObjectShowSounds = classType.Get("ShowSounds");
+            return (boolean)retObjectShowSounds;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowSounds != null ? retObjectShowSounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,9 +724,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getTerminalServerSession() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTerminalServerSession = null;
         try {
-            return (boolean)classType.Get("TerminalServerSession");
+            retObjectTerminalServerSession = classType.Get("TerminalServerSession");
+            return (boolean)retObjectTerminalServerSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTerminalServerSession != null ? retObjectTerminalServerSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +738,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getUIEffectsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUIEffectsEnabled = null;
         try {
-            return (boolean)classType.Get("UIEffectsEnabled");
+            retObjectUIEffectsEnabled = classType.Get("UIEffectsEnabled");
+            return (boolean)retObjectUIEffectsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUIEffectsEnabled != null ? retObjectUIEffectsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,9 +752,13 @@ public class SystemInformation extends NetObject  {
 
     public static boolean getUserInteractive() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserInteractive = null;
         try {
-            return (boolean)classType.Get("UserInteractive");
+            retObjectUserInteractive = classType.Get("UserInteractive");
+            return (boolean)retObjectUserInteractive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserInteractive != null ? retObjectUserInteractive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,9 +766,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getActiveWindowTrackingDelay() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveWindowTrackingDelay = null;
         try {
-            return (int)classType.Get("ActiveWindowTrackingDelay");
+            retObjectActiveWindowTrackingDelay = classType.Get("ActiveWindowTrackingDelay");
+            return (int)retObjectActiveWindowTrackingDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectActiveWindowTrackingDelay != null ? retObjectActiveWindowTrackingDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,9 +780,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getBorderMultiplierFactor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorderMultiplierFactor = null;
         try {
-            return (int)classType.Get("BorderMultiplierFactor");
+            retObjectBorderMultiplierFactor = classType.Get("BorderMultiplierFactor");
+            return (int)retObjectBorderMultiplierFactor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBorderMultiplierFactor != null ? retObjectBorderMultiplierFactor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -598,9 +794,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getCaptionHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionHeight = null;
         try {
-            return (int)classType.Get("CaptionHeight");
+            retObjectCaptionHeight = classType.Get("CaptionHeight");
+            return (int)retObjectCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCaptionHeight != null ? retObjectCaptionHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,9 +808,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getCaretBlinkTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaretBlinkTime = null;
         try {
-            return (int)classType.Get("CaretBlinkTime");
+            retObjectCaretBlinkTime = classType.Get("CaretBlinkTime");
+            return (int)retObjectCaretBlinkTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCaretBlinkTime != null ? retObjectCaretBlinkTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,9 +822,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getCaretWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaretWidth = null;
         try {
-            return (int)classType.Get("CaretWidth");
+            retObjectCaretWidth = classType.Get("CaretWidth");
+            return (int)retObjectCaretWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCaretWidth != null ? retObjectCaretWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,9 +836,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getDoubleClickTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoubleClickTime = null;
         try {
-            return (int)classType.Get("DoubleClickTime");
+            retObjectDoubleClickTime = classType.Get("DoubleClickTime");
+            return (int)retObjectDoubleClickTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDoubleClickTime != null ? retObjectDoubleClickTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -638,9 +850,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getFontSmoothingContrast() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFontSmoothingContrast = null;
         try {
-            return (int)classType.Get("FontSmoothingContrast");
+            retObjectFontSmoothingContrast = classType.Get("FontSmoothingContrast");
+            return (int)retObjectFontSmoothingContrast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFontSmoothingContrast != null ? retObjectFontSmoothingContrast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,9 +864,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getFontSmoothingType() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFontSmoothingType = null;
         try {
-            return (int)classType.Get("FontSmoothingType");
+            retObjectFontSmoothingType = classType.Get("FontSmoothingType");
+            return (int)retObjectFontSmoothingType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFontSmoothingType != null ? retObjectFontSmoothingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,9 +878,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getHorizontalFocusThickness() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalFocusThickness = null;
         try {
-            return (int)classType.Get("HorizontalFocusThickness");
+            retObjectHorizontalFocusThickness = classType.Get("HorizontalFocusThickness");
+            return (int)retObjectHorizontalFocusThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontalFocusThickness != null ? retObjectHorizontalFocusThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,9 +892,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getHorizontalResizeBorderThickness() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalResizeBorderThickness = null;
         try {
-            return (int)classType.Get("HorizontalResizeBorderThickness");
+            retObjectHorizontalResizeBorderThickness = classType.Get("HorizontalResizeBorderThickness");
+            return (int)retObjectHorizontalResizeBorderThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontalResizeBorderThickness != null ? retObjectHorizontalResizeBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -678,9 +906,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getHorizontalScrollBarArrowWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarArrowWidth = null;
         try {
-            return (int)classType.Get("HorizontalScrollBarArrowWidth");
+            retObjectHorizontalScrollBarArrowWidth = classType.Get("HorizontalScrollBarArrowWidth");
+            return (int)retObjectHorizontalScrollBarArrowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontalScrollBarArrowWidth != null ? retObjectHorizontalScrollBarArrowWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,9 +920,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getHorizontalScrollBarHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarHeight = null;
         try {
-            return (int)classType.Get("HorizontalScrollBarHeight");
+            retObjectHorizontalScrollBarHeight = classType.Get("HorizontalScrollBarHeight");
+            return (int)retObjectHorizontalScrollBarHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontalScrollBarHeight != null ? retObjectHorizontalScrollBarHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -698,9 +934,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getHorizontalScrollBarThumbWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHorizontalScrollBarThumbWidth = null;
         try {
-            return (int)classType.Get("HorizontalScrollBarThumbWidth");
+            retObjectHorizontalScrollBarThumbWidth = classType.Get("HorizontalScrollBarThumbWidth");
+            return (int)retObjectHorizontalScrollBarThumbWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHorizontalScrollBarThumbWidth != null ? retObjectHorizontalScrollBarThumbWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -708,9 +948,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getIconHorizontalSpacing() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconHorizontalSpacing = null;
         try {
-            return (int)classType.Get("IconHorizontalSpacing");
+            retObjectIconHorizontalSpacing = classType.Get("IconHorizontalSpacing");
+            return (int)retObjectIconHorizontalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIconHorizontalSpacing != null ? retObjectIconHorizontalSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -718,9 +962,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getIconVerticalSpacing() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconVerticalSpacing = null;
         try {
-            return (int)classType.Get("IconVerticalSpacing");
+            retObjectIconVerticalSpacing = classType.Get("IconVerticalSpacing");
+            return (int)retObjectIconVerticalSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIconVerticalSpacing != null ? retObjectIconVerticalSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,9 +976,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getKanjiWindowHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKanjiWindowHeight = null;
         try {
-            return (int)classType.Get("KanjiWindowHeight");
+            retObjectKanjiWindowHeight = classType.Get("KanjiWindowHeight");
+            return (int)retObjectKanjiWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKanjiWindowHeight != null ? retObjectKanjiWindowHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -738,9 +990,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getKeyboardDelay() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardDelay = null;
         try {
-            return (int)classType.Get("KeyboardDelay");
+            retObjectKeyboardDelay = classType.Get("KeyboardDelay");
+            return (int)retObjectKeyboardDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeyboardDelay != null ? retObjectKeyboardDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,9 +1004,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getKeyboardSpeed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectKeyboardSpeed = null;
         try {
-            return (int)classType.Get("KeyboardSpeed");
+            retObjectKeyboardSpeed = classType.Get("KeyboardSpeed");
+            return (int)retObjectKeyboardSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKeyboardSpeed != null ? retObjectKeyboardSpeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,9 +1018,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMenuHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuHeight = null;
         try {
-            return (int)classType.Get("MenuHeight");
+            retObjectMenuHeight = classType.Get("MenuHeight");
+            return (int)retObjectMenuHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMenuHeight != null ? retObjectMenuHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,9 +1032,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMenuShowDelay() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuShowDelay = null;
         try {
-            return (int)classType.Get("MenuShowDelay");
+            retObjectMenuShowDelay = classType.Get("MenuShowDelay");
+            return (int)retObjectMenuShowDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMenuShowDelay != null ? retObjectMenuShowDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -778,9 +1046,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMonitorCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonitorCount = null;
         try {
-            return (int)classType.Get("MonitorCount");
+            retObjectMonitorCount = classType.Get("MonitorCount");
+            return (int)retObjectMonitorCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMonitorCount != null ? retObjectMonitorCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -788,9 +1060,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMouseButtons() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseButtons = null;
         try {
-            return (int)classType.Get("MouseButtons");
+            retObjectMouseButtons = classType.Get("MouseButtons");
+            return (int)retObjectMouseButtons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMouseButtons != null ? retObjectMouseButtons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,9 +1074,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMouseHoverTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverTime = null;
         try {
-            return (int)classType.Get("MouseHoverTime");
+            retObjectMouseHoverTime = classType.Get("MouseHoverTime");
+            return (int)retObjectMouseHoverTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMouseHoverTime != null ? retObjectMouseHoverTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -808,9 +1088,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMouseSpeed() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseSpeed = null;
         try {
-            return (int)classType.Get("MouseSpeed");
+            retObjectMouseSpeed = classType.Get("MouseSpeed");
+            return (int)retObjectMouseSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMouseSpeed != null ? retObjectMouseSpeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -818,9 +1102,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMouseWheelScrollDelta() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseWheelScrollDelta = null;
         try {
-            return (int)classType.Get("MouseWheelScrollDelta");
+            retObjectMouseWheelScrollDelta = classType.Get("MouseWheelScrollDelta");
+            return (int)retObjectMouseWheelScrollDelta;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMouseWheelScrollDelta != null ? retObjectMouseWheelScrollDelta.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -828,9 +1116,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getMouseWheelScrollLines() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseWheelScrollLines = null;
         try {
-            return (int)classType.Get("MouseWheelScrollLines");
+            retObjectMouseWheelScrollLines = classType.Get("MouseWheelScrollLines");
+            return (int)retObjectMouseWheelScrollLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMouseWheelScrollLines != null ? retObjectMouseWheelScrollLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,9 +1130,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getSizingBorderWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizingBorderWidth = null;
         try {
-            return (int)classType.Get("SizingBorderWidth");
+            retObjectSizingBorderWidth = classType.Get("SizingBorderWidth");
+            return (int)retObjectSizingBorderWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizingBorderWidth != null ? retObjectSizingBorderWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -848,9 +1144,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getToolWindowCaptionHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolWindowCaptionHeight = null;
         try {
-            return (int)classType.Get("ToolWindowCaptionHeight");
+            retObjectToolWindowCaptionHeight = classType.Get("ToolWindowCaptionHeight");
+            return (int)retObjectToolWindowCaptionHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectToolWindowCaptionHeight != null ? retObjectToolWindowCaptionHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -858,9 +1158,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getVerticalFocusThickness() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalFocusThickness = null;
         try {
-            return (int)classType.Get("VerticalFocusThickness");
+            retObjectVerticalFocusThickness = classType.Get("VerticalFocusThickness");
+            return (int)retObjectVerticalFocusThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVerticalFocusThickness != null ? retObjectVerticalFocusThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -868,9 +1172,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getVerticalResizeBorderThickness() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalResizeBorderThickness = null;
         try {
-            return (int)classType.Get("VerticalResizeBorderThickness");
+            retObjectVerticalResizeBorderThickness = classType.Get("VerticalResizeBorderThickness");
+            return (int)retObjectVerticalResizeBorderThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVerticalResizeBorderThickness != null ? retObjectVerticalResizeBorderThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -878,9 +1186,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getVerticalScrollBarArrowHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarArrowHeight = null;
         try {
-            return (int)classType.Get("VerticalScrollBarArrowHeight");
+            retObjectVerticalScrollBarArrowHeight = classType.Get("VerticalScrollBarArrowHeight");
+            return (int)retObjectVerticalScrollBarArrowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVerticalScrollBarArrowHeight != null ? retObjectVerticalScrollBarArrowHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -888,9 +1200,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getVerticalScrollBarThumbHeight() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarThumbHeight = null;
         try {
-            return (int)classType.Get("VerticalScrollBarThumbHeight");
+            retObjectVerticalScrollBarThumbHeight = classType.Get("VerticalScrollBarThumbHeight");
+            return (int)retObjectVerticalScrollBarThumbHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVerticalScrollBarThumbHeight != null ? retObjectVerticalScrollBarThumbHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -898,9 +1214,13 @@ public class SystemInformation extends NetObject  {
 
     public static int getVerticalScrollBarWidth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerticalScrollBarWidth = null;
         try {
-            return (int)classType.Get("VerticalScrollBarWidth");
+            retObjectVerticalScrollBarWidth = classType.Get("VerticalScrollBarWidth");
+            return (int)retObjectVerticalScrollBarWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVerticalScrollBarWidth != null ? retObjectVerticalScrollBarWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,10 +1228,14 @@ public class SystemInformation extends NetObject  {
 
     public static Font getMenuFont() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuFont = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuFont");
+            retObjectMenuFont = classType.Get("MenuFont");
+            JCObject val = (JCObject)retObjectMenuFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuFont != null ? retObjectMenuFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,10 +1243,14 @@ public class SystemInformation extends NetObject  {
 
     public static Rectangle getVirtualScreen() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVirtualScreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("VirtualScreen");
+            retObjectVirtualScreen = classType.Get("VirtualScreen");
+            JCObject val = (JCObject)retObjectVirtualScreen;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualScreen != null ? retObjectVirtualScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,10 +1258,14 @@ public class SystemInformation extends NetObject  {
 
     public static Rectangle getWorkingArea() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkingArea = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkingArea");
+            retObjectWorkingArea = classType.Get("WorkingArea");
+            JCObject val = (JCObject)retObjectWorkingArea;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkingArea != null ? retObjectWorkingArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -941,10 +1273,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getBorder3DSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorder3DSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("Border3DSize");
+            retObjectBorder3DSize = classType.Get("Border3DSize");
+            JCObject val = (JCObject)retObjectBorder3DSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorder3DSize != null ? retObjectBorder3DSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -952,10 +1288,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getBorderSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBorderSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("BorderSize");
+            retObjectBorderSize = classType.Get("BorderSize");
+            JCObject val = (JCObject)retObjectBorderSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderSize != null ? retObjectBorderSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -963,10 +1303,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getCaptionButtonSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCaptionButtonSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("CaptionButtonSize");
+            retObjectCaptionButtonSize = classType.Get("CaptionButtonSize");
+            JCObject val = (JCObject)retObjectCaptionButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionButtonSize != null ? retObjectCaptionButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,10 +1318,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getCursorSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCursorSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("CursorSize");
+            retObjectCursorSize = classType.Get("CursorSize");
+            JCObject val = (JCObject)retObjectCursorSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursorSize != null ? retObjectCursorSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -985,10 +1333,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getDoubleClickSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDoubleClickSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("DoubleClickSize");
+            retObjectDoubleClickSize = classType.Get("DoubleClickSize");
+            JCObject val = (JCObject)retObjectDoubleClickSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoubleClickSize != null ? retObjectDoubleClickSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -996,10 +1348,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getDragSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDragSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("DragSize");
+            retObjectDragSize = classType.Get("DragSize");
+            JCObject val = (JCObject)retObjectDragSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragSize != null ? retObjectDragSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,10 +1363,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getFixedFrameBorderSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFixedFrameBorderSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("FixedFrameBorderSize");
+            retObjectFixedFrameBorderSize = classType.Get("FixedFrameBorderSize");
+            JCObject val = (JCObject)retObjectFixedFrameBorderSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFixedFrameBorderSize != null ? retObjectFixedFrameBorderSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1018,10 +1378,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getFrameBorderSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFrameBorderSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("FrameBorderSize");
+            retObjectFrameBorderSize = classType.Get("FrameBorderSize");
+            JCObject val = (JCObject)retObjectFrameBorderSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrameBorderSize != null ? retObjectFrameBorderSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,10 +1393,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getIconSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconSize");
+            retObjectIconSize = classType.Get("IconSize");
+            JCObject val = (JCObject)retObjectIconSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconSize != null ? retObjectIconSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,10 +1408,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getIconSpacingSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIconSpacingSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("IconSpacingSize");
+            retObjectIconSpacingSize = classType.Get("IconSpacingSize");
+            JCObject val = (JCObject)retObjectIconSpacingSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIconSpacingSize != null ? retObjectIconSpacingSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1051,10 +1423,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMaxWindowTrackSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxWindowTrackSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaxWindowTrackSize");
+            retObjectMaxWindowTrackSize = classType.Get("MaxWindowTrackSize");
+            JCObject val = (JCObject)retObjectMaxWindowTrackSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxWindowTrackSize != null ? retObjectMaxWindowTrackSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1062,10 +1438,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMenuBarButtonSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuBarButtonSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuBarButtonSize");
+            retObjectMenuBarButtonSize = classType.Get("MenuBarButtonSize");
+            JCObject val = (JCObject)retObjectMenuBarButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuBarButtonSize != null ? retObjectMenuBarButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,10 +1453,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMenuButtonSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuButtonSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuButtonSize");
+            retObjectMenuButtonSize = classType.Get("MenuButtonSize");
+            JCObject val = (JCObject)retObjectMenuButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuButtonSize != null ? retObjectMenuButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,10 +1468,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMenuCheckSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuCheckSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuCheckSize");
+            retObjectMenuCheckSize = classType.Get("MenuCheckSize");
+            JCObject val = (JCObject)retObjectMenuCheckSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuCheckSize != null ? retObjectMenuCheckSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1095,10 +1483,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMinimizedWindowSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedWindowSize");
+            retObjectMinimizedWindowSize = classType.Get("MinimizedWindowSize");
+            JCObject val = (JCObject)retObjectMinimizedWindowSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedWindowSize != null ? retObjectMinimizedWindowSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1106,10 +1498,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMinimizedWindowSpacingSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizedWindowSpacingSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizedWindowSpacingSize");
+            retObjectMinimizedWindowSpacingSize = classType.Get("MinimizedWindowSpacingSize");
+            JCObject val = (JCObject)retObjectMinimizedWindowSpacingSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizedWindowSpacingSize != null ? retObjectMinimizedWindowSpacingSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1117,10 +1513,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMinimumWindowSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumWindowSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumWindowSize");
+            retObjectMinimumWindowSize = classType.Get("MinimumWindowSize");
+            JCObject val = (JCObject)retObjectMinimumWindowSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumWindowSize != null ? retObjectMinimumWindowSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1128,10 +1528,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMinWindowTrackSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinWindowTrackSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinWindowTrackSize");
+            retObjectMinWindowTrackSize = classType.Get("MinWindowTrackSize");
+            JCObject val = (JCObject)retObjectMinWindowTrackSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinWindowTrackSize != null ? retObjectMinWindowTrackSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1139,10 +1543,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getMouseHoverSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMouseHoverSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MouseHoverSize");
+            retObjectMouseHoverSize = classType.Get("MouseHoverSize");
+            JCObject val = (JCObject)retObjectMouseHoverSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseHoverSize != null ? retObjectMouseHoverSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1150,10 +1558,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getPrimaryMonitorMaximizedWindowSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryMonitorMaximizedWindowSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryMonitorMaximizedWindowSize");
+            retObjectPrimaryMonitorMaximizedWindowSize = classType.Get("PrimaryMonitorMaximizedWindowSize");
+            JCObject val = (JCObject)retObjectPrimaryMonitorMaximizedWindowSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryMonitorMaximizedWindowSize != null ? retObjectPrimaryMonitorMaximizedWindowSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1161,10 +1573,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getPrimaryMonitorSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryMonitorSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryMonitorSize");
+            retObjectPrimaryMonitorSize = classType.Get("PrimaryMonitorSize");
+            JCObject val = (JCObject)retObjectPrimaryMonitorSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryMonitorSize != null ? retObjectPrimaryMonitorSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1172,10 +1588,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getSmallCaptionButtonSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallCaptionButtonSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallCaptionButtonSize");
+            retObjectSmallCaptionButtonSize = classType.Get("SmallCaptionButtonSize");
+            JCObject val = (JCObject)retObjectSmallCaptionButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallCaptionButtonSize != null ? retObjectSmallCaptionButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1183,10 +1603,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getSmallIconSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSmallIconSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("SmallIconSize");
+            retObjectSmallIconSize = classType.Get("SmallIconSize");
+            JCObject val = (JCObject)retObjectSmallIconSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmallIconSize != null ? retObjectSmallIconSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1194,10 +1618,14 @@ public class SystemInformation extends NetObject  {
 
     public static Size getToolWindowCaptionButtonSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToolWindowCaptionButtonSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToolWindowCaptionButtonSize");
+            retObjectToolWindowCaptionButtonSize = classType.Get("ToolWindowCaptionButtonSize");
+            JCObject val = (JCObject)retObjectToolWindowCaptionButtonSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolWindowCaptionButtonSize != null ? retObjectToolWindowCaptionButtonSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1205,9 +1633,13 @@ public class SystemInformation extends NetObject  {
 
     public static java.lang.String getComputerName() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComputerName = null;
         try {
-            return (java.lang.String)classType.Get("ComputerName");
+            retObjectComputerName = classType.Get("ComputerName");
+            return (java.lang.String)retObjectComputerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComputerName != null ? retObjectComputerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1215,9 +1647,13 @@ public class SystemInformation extends NetObject  {
 
     public static java.lang.String getUserDomainName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserDomainName = null;
         try {
-            return (java.lang.String)classType.Get("UserDomainName");
+            retObjectUserDomainName = classType.Get("UserDomainName");
+            return (java.lang.String)retObjectUserDomainName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserDomainName != null ? retObjectUserDomainName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1225,9 +1661,13 @@ public class SystemInformation extends NetObject  {
 
     public static java.lang.String getUserName() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classType.Get("UserName");
+            retObjectUserName = classType.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1235,10 +1675,14 @@ public class SystemInformation extends NetObject  {
 
     public static ArrangeDirection getArrangeDirection() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrangeDirection = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArrangeDirection");
+            retObjectArrangeDirection = classType.Get("ArrangeDirection");
+            JCObject val = (JCObject)retObjectArrangeDirection;
             return new ArrangeDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrangeDirection != null ? retObjectArrangeDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1246,10 +1690,14 @@ public class SystemInformation extends NetObject  {
 
     public static ArrangeStartingPosition getArrangeStartingPosition() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrangeStartingPosition = null;
         try {
-            JCObject val = (JCObject)classType.Get("ArrangeStartingPosition");
+            retObjectArrangeStartingPosition = classType.Get("ArrangeStartingPosition");
+            JCObject val = (JCObject)retObjectArrangeStartingPosition;
             return new ArrangeStartingPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrangeStartingPosition != null ? retObjectArrangeStartingPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1257,10 +1705,14 @@ public class SystemInformation extends NetObject  {
 
     public static BootMode getBootMode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBootMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("BootMode");
+            retObjectBootMode = classType.Get("BootMode");
+            JCObject val = (JCObject)retObjectBootMode;
             return new BootMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBootMode != null ? retObjectBootMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1268,10 +1720,14 @@ public class SystemInformation extends NetObject  {
 
     public static LeftRightAlignment getPopupMenuAlignment() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPopupMenuAlignment = null;
         try {
-            JCObject val = (JCObject)classType.Get("PopupMenuAlignment");
+            retObjectPopupMenuAlignment = classType.Get("PopupMenuAlignment");
+            JCObject val = (JCObject)retObjectPopupMenuAlignment;
             return new LeftRightAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopupMenuAlignment != null ? retObjectPopupMenuAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1279,10 +1735,14 @@ public class SystemInformation extends NetObject  {
 
     public static PowerStatus getPowerStatus() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerStatus = null;
         try {
-            JCObject val = (JCObject)classType.Get("PowerStatus");
+            retObjectPowerStatus = classType.Get("PowerStatus");
+            JCObject val = (JCObject)retObjectPowerStatus;
             return new PowerStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerStatus != null ? retObjectPowerStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1290,10 +1750,14 @@ public class SystemInformation extends NetObject  {
 
     public static ScreenOrientation getScreenOrientation() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScreenOrientation = null;
         try {
-            JCObject val = (JCObject)classType.Get("ScreenOrientation");
+            retObjectScreenOrientation = classType.Get("ScreenOrientation");
+            JCObject val = (JCObject)retObjectScreenOrientation;
             return new ScreenOrientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScreenOrientation != null ? retObjectScreenOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

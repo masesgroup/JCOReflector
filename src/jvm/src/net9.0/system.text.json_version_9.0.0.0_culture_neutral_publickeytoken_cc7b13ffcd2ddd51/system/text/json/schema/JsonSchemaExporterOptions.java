@@ -166,9 +166,13 @@ public class JsonSchemaExporterOptions extends NetObject  {
     
     public boolean getTreatNullObliviousAsNonNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatNullObliviousAsNonNullable = null;
         try {
-            return (boolean)classInstance.Get("TreatNullObliviousAsNonNullable");
+            retObjectTreatNullObliviousAsNonNullable = classInstance.Get("TreatNullObliviousAsNonNullable");
+            return (boolean)retObjectTreatNullObliviousAsNonNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatNullObliviousAsNonNullable != null ? retObjectTreatNullObliviousAsNonNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class JsonSchemaExporterOptions extends NetObject  {
 
     public void setTreatNullObliviousAsNonNullable(boolean TreatNullObliviousAsNonNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatNullObliviousAsNonNullable", TreatNullObliviousAsNonNullable);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class JsonSchemaExporterOptions extends NetObject  {
 
     public static JsonSchemaExporterOptions getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new JsonSchemaExporterOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

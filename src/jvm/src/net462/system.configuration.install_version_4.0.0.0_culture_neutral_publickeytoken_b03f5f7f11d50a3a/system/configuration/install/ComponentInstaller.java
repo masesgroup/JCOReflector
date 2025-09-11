@@ -157,9 +157,13 @@ public class ComponentInstaller extends Installer  {
     
     public boolean IsEquivalentInstaller(ComponentInstaller otherInstaller) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEquivalentInstaller = null;
         try {
-            return (boolean)classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            retObjectIsEquivalentInstaller = classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            return (boolean)retObjectIsEquivalentInstaller;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEquivalentInstaller != null ? retObjectIsEquivalentInstaller.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ComponentInstaller extends Installer  {
 
     public void CopyFromComponent(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {

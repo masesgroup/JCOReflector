@@ -155,10 +155,14 @@ public class ViewService extends NetObject  {
     
     public ModelItem GetModel(DependencyObject view) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModel = null;
         try {
-            JCObject objGetModel = (JCObject)classInstance.Invoke("GetModel", view == null ? null : view.getJCOInstance());
+            retObjectGetModel = classInstance.Invoke("GetModel", view == null ? null : view.getJCOInstance());
+            JCObject objGetModel = (JCObject)retObjectGetModel;
             return new ModelItem(objGetModel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModel != null ? retObjectGetModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ViewService extends NetObject  {
 
     public DependencyObject GetView(ModelItem model) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", model == null ? null : model.getJCOInstance());
+            retObjectGetView = classInstance.Invoke("GetView", model == null ? null : model.getJCOInstance());
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DependencyObject(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

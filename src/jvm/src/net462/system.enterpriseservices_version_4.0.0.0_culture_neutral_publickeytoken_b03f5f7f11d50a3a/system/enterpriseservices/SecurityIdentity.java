@@ -161,9 +161,13 @@ public class SecurityIdentity extends NetObject  {
     
     public int getAuthenticationService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationService = null;
         try {
-            return (int)classInstance.Get("AuthenticationService");
+            retObjectAuthenticationService = classInstance.Get("AuthenticationService");
+            return (int)retObjectAuthenticationService;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAuthenticationService != null ? retObjectAuthenticationService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class SecurityIdentity extends NetObject  {
 
     public AuthenticationOption getAuthenticationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationLevel");
+            retObjectAuthenticationLevel = classInstance.Get("AuthenticationLevel");
+            JCObject val = (JCObject)retObjectAuthenticationLevel;
             return new AuthenticationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationLevel != null ? retObjectAuthenticationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class SecurityIdentity extends NetObject  {
 
     public ImpersonationLevelOption getImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
+            retObjectImpersonationLevel = classInstance.Get("ImpersonationLevel");
+            JCObject val = (JCObject)retObjectImpersonationLevel;
             return new ImpersonationLevelOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonationLevel != null ? retObjectImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class SecurityIdentity extends NetObject  {
 
     public java.lang.String getAccountName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccountName = null;
         try {
-            return (java.lang.String)classInstance.Get("AccountName");
+            retObjectAccountName = classInstance.Get("AccountName");
+            return (java.lang.String)retObjectAccountName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccountName != null ? retObjectAccountName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

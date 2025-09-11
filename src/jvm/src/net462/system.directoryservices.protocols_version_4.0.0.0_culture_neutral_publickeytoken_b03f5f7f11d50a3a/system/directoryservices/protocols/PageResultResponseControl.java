@@ -160,10 +160,12 @@ public class PageResultResponseControl extends DirectoryControl  {
     
     public byte[] getCookie() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookie = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Cookie");
+            retObjectCookie = classInstance.Get("Cookie");
+            JCObject resultingObjects = (JCObject)retObjectCookie;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -172,6 +174,8 @@ public class PageResultResponseControl extends DirectoryControl  {
 				resultingArray[indexCookie] = (byte)resultingArrayList.get(indexCookie);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCookie != null ? retObjectCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class PageResultResponseControl extends DirectoryControl  {
 
     public int getTotalCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalCount = null;
         try {
-            return (int)classInstance.Get("TotalCount");
+            retObjectTotalCount = classInstance.Get("TotalCount");
+            return (int)retObjectTotalCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTotalCount != null ? retObjectTotalCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

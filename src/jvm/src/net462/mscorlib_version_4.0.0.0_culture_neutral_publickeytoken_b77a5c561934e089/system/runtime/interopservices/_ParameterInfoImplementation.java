@@ -144,7 +144,7 @@ public class _ParameterInfoImplementation extends NetObject implements _Paramete
     
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {

@@ -178,9 +178,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
     
     public boolean ContainsKey(java.lang.String keyword) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsKey = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsKey", keyword);
+            retObjectContainsKey = classInstance.Invoke("ContainsKey", keyword);
+            return (boolean)retObjectContainsKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsKey != null ? retObjectContainsKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean Remove(java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", keyword);
+            retObjectRemove = classInstance.Invoke("Remove", keyword);
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +206,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean ShouldSerialize(java.lang.String keyword) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerialize = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerialize", keyword);
+            retObjectShouldSerialize = classInstance.Invoke("ShouldSerialize", keyword);
+            return (boolean)retObjectShouldSerialize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerialize != null ? retObjectShouldSerialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +220,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean TryGetValue(java.lang.String keyword, JCORefOut<NetObject> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetValue = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetValue", keyword, value.getJCRefOut());
+            retObjectTryGetValue = classInstance.Invoke("TryGetValue", keyword, value.getJCRefOut());
+            return (boolean)retObjectTryGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetValue != null ? retObjectTryGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +234,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void Clear() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -232,9 +248,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
     
     public boolean getAsynchronousProcessing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsynchronousProcessing = null;
         try {
-            return (boolean)classInstance.Get("AsynchronousProcessing");
+            retObjectAsynchronousProcessing = classInstance.Get("AsynchronousProcessing");
+            return (boolean)retObjectAsynchronousProcessing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsynchronousProcessing != null ? retObjectAsynchronousProcessing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +262,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setAsynchronousProcessing(boolean AsynchronousProcessing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsynchronousProcessing", AsynchronousProcessing);
         } catch (JCNativeException jcne) {
@@ -252,9 +272,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getConnectionReset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionReset = null;
         try {
-            return (boolean)classInstance.Get("ConnectionReset");
+            retObjectConnectionReset = classInstance.Get("ConnectionReset");
+            return (boolean)retObjectConnectionReset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConnectionReset != null ? retObjectConnectionReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +286,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setConnectionReset(boolean ConnectionReset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectionReset", ConnectionReset);
         } catch (JCNativeException jcne) {
@@ -272,9 +296,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getContextConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextConnection = null;
         try {
-            return (boolean)classInstance.Get("ContextConnection");
+            retObjectContextConnection = classInstance.Get("ContextConnection");
+            return (boolean)retObjectContextConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextConnection != null ? retObjectContextConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +310,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setContextConnection(boolean ContextConnection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextConnection", ContextConnection);
         } catch (JCNativeException jcne) {
@@ -292,9 +320,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getEncrypt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            return (boolean)classInstance.Get("Encrypt");
+            retObjectEncrypt = classInstance.Get("Encrypt");
+            return (boolean)retObjectEncrypt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +334,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setEncrypt(boolean Encrypt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encrypt", Encrypt);
         } catch (JCNativeException jcne) {
@@ -312,9 +344,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getEnlist() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnlist = null;
         try {
-            return (boolean)classInstance.Get("Enlist");
+            retObjectEnlist = classInstance.Get("Enlist");
+            return (boolean)retObjectEnlist;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnlist != null ? retObjectEnlist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +358,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setEnlist(boolean Enlist) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enlist", Enlist);
         } catch (JCNativeException jcne) {
@@ -332,9 +368,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getIntegratedSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntegratedSecurity = null;
         try {
-            return (boolean)classInstance.Get("IntegratedSecurity");
+            retObjectIntegratedSecurity = classInstance.Get("IntegratedSecurity");
+            return (boolean)retObjectIntegratedSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIntegratedSecurity != null ? retObjectIntegratedSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +382,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setIntegratedSecurity(boolean IntegratedSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IntegratedSecurity", IntegratedSecurity);
         } catch (JCNativeException jcne) {
@@ -352,9 +392,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getMultipleActiveResultSets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultipleActiveResultSets = null;
         try {
-            return (boolean)classInstance.Get("MultipleActiveResultSets");
+            retObjectMultipleActiveResultSets = classInstance.Get("MultipleActiveResultSets");
+            return (boolean)retObjectMultipleActiveResultSets;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleActiveResultSets != null ? retObjectMultipleActiveResultSets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +406,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setMultipleActiveResultSets(boolean MultipleActiveResultSets) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultipleActiveResultSets", MultipleActiveResultSets);
         } catch (JCNativeException jcne) {
@@ -372,9 +416,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getMultiSubnetFailover() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiSubnetFailover = null;
         try {
-            return (boolean)classInstance.Get("MultiSubnetFailover");
+            retObjectMultiSubnetFailover = classInstance.Get("MultiSubnetFailover");
+            return (boolean)retObjectMultiSubnetFailover;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiSubnetFailover != null ? retObjectMultiSubnetFailover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +430,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setMultiSubnetFailover(boolean MultiSubnetFailover) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MultiSubnetFailover", MultiSubnetFailover);
         } catch (JCNativeException jcne) {
@@ -392,9 +440,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getPersistSecurityInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistSecurityInfo = null;
         try {
-            return (boolean)classInstance.Get("PersistSecurityInfo");
+            retObjectPersistSecurityInfo = classInstance.Get("PersistSecurityInfo");
+            return (boolean)retObjectPersistSecurityInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersistSecurityInfo != null ? retObjectPersistSecurityInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +454,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setPersistSecurityInfo(boolean PersistSecurityInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistSecurityInfo", PersistSecurityInfo);
         } catch (JCNativeException jcne) {
@@ -412,9 +464,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getPooling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPooling = null;
         try {
-            return (boolean)classInstance.Get("Pooling");
+            retObjectPooling = classInstance.Get("Pooling");
+            return (boolean)retObjectPooling;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPooling != null ? retObjectPooling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +478,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setPooling(boolean Pooling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Pooling", Pooling);
         } catch (JCNativeException jcne) {
@@ -432,9 +488,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getReplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplication = null;
         try {
-            return (boolean)classInstance.Get("Replication");
+            retObjectReplication = classInstance.Get("Replication");
+            return (boolean)retObjectReplication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReplication != null ? retObjectReplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,7 +502,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setReplication(boolean Replication) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Replication", Replication);
         } catch (JCNativeException jcne) {
@@ -452,9 +512,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getTransparentNetworkIPResolution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransparentNetworkIPResolution = null;
         try {
-            return (boolean)classInstance.Get("TransparentNetworkIPResolution");
+            retObjectTransparentNetworkIPResolution = classInstance.Get("TransparentNetworkIPResolution");
+            return (boolean)retObjectTransparentNetworkIPResolution;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransparentNetworkIPResolution != null ? retObjectTransparentNetworkIPResolution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -462,7 +526,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setTransparentNetworkIPResolution(boolean TransparentNetworkIPResolution) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransparentNetworkIPResolution", TransparentNetworkIPResolution);
         } catch (JCNativeException jcne) {
@@ -472,9 +536,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getTrustServerCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustServerCertificate = null;
         try {
-            return (boolean)classInstance.Get("TrustServerCertificate");
+            retObjectTrustServerCertificate = classInstance.Get("TrustServerCertificate");
+            return (boolean)retObjectTrustServerCertificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTrustServerCertificate != null ? retObjectTrustServerCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,7 +550,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setTrustServerCertificate(boolean TrustServerCertificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustServerCertificate", TrustServerCertificate);
         } catch (JCNativeException jcne) {
@@ -492,9 +560,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public boolean getUserInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserInstance = null;
         try {
-            return (boolean)classInstance.Get("UserInstance");
+            retObjectUserInstance = classInstance.Get("UserInstance");
+            return (boolean)retObjectUserInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUserInstance != null ? retObjectUserInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +574,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setUserInstance(boolean UserInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserInstance", UserInstance);
         } catch (JCNativeException jcne) {
@@ -512,9 +584,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getConnectRetryCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectRetryCount = null;
         try {
-            return (int)classInstance.Get("ConnectRetryCount");
+            retObjectConnectRetryCount = classInstance.Get("ConnectRetryCount");
+            return (int)retObjectConnectRetryCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConnectRetryCount != null ? retObjectConnectRetryCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,7 +598,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setConnectRetryCount(int ConnectRetryCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectRetryCount", ConnectRetryCount);
         } catch (JCNativeException jcne) {
@@ -532,9 +608,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getConnectRetryInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectRetryInterval = null;
         try {
-            return (int)classInstance.Get("ConnectRetryInterval");
+            retObjectConnectRetryInterval = classInstance.Get("ConnectRetryInterval");
+            return (int)retObjectConnectRetryInterval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConnectRetryInterval != null ? retObjectConnectRetryInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +622,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setConnectRetryInterval(int ConnectRetryInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectRetryInterval", ConnectRetryInterval);
         } catch (JCNativeException jcne) {
@@ -552,9 +632,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getConnectTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectTimeout = null;
         try {
-            return (int)classInstance.Get("ConnectTimeout");
+            retObjectConnectTimeout = classInstance.Get("ConnectTimeout");
+            return (int)retObjectConnectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConnectTimeout != null ? retObjectConnectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,7 +646,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setConnectTimeout(int ConnectTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConnectTimeout", ConnectTimeout);
         } catch (JCNativeException jcne) {
@@ -572,9 +656,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getLoadBalanceTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadBalanceTimeout = null;
         try {
-            return (int)classInstance.Get("LoadBalanceTimeout");
+            retObjectLoadBalanceTimeout = classInstance.Get("LoadBalanceTimeout");
+            return (int)retObjectLoadBalanceTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLoadBalanceTimeout != null ? retObjectLoadBalanceTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,7 +670,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setLoadBalanceTimeout(int LoadBalanceTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoadBalanceTimeout", LoadBalanceTimeout);
         } catch (JCNativeException jcne) {
@@ -592,9 +680,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getMaxPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPoolSize = null;
         try {
-            return (int)classInstance.Get("MaxPoolSize");
+            retObjectMaxPoolSize = classInstance.Get("MaxPoolSize");
+            return (int)retObjectMaxPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxPoolSize != null ? retObjectMaxPoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,7 +694,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setMaxPoolSize(int MaxPoolSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPoolSize", MaxPoolSize);
         } catch (JCNativeException jcne) {
@@ -612,9 +704,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getMinPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinPoolSize = null;
         try {
-            return (int)classInstance.Get("MinPoolSize");
+            retObjectMinPoolSize = classInstance.Get("MinPoolSize");
+            return (int)retObjectMinPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinPoolSize != null ? retObjectMinPoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,7 +718,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setMinPoolSize(int MinPoolSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinPoolSize", MinPoolSize);
         } catch (JCNativeException jcne) {
@@ -632,9 +728,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public int getPacketSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketSize = null;
         try {
-            return (int)classInstance.Get("PacketSize");
+            retObjectPacketSize = classInstance.Get("PacketSize");
+            return (int)retObjectPacketSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPacketSize != null ? retObjectPacketSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,7 +742,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setPacketSize(int PacketSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PacketSize", PacketSize);
         } catch (JCNativeException jcne) {
@@ -652,10 +752,14 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public ApplicationIntent getApplicationIntent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationIntent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIntent");
+            retObjectApplicationIntent = classInstance.Get("ApplicationIntent");
+            JCObject val = (JCObject)retObjectApplicationIntent;
             return new ApplicationIntent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationIntent != null ? retObjectApplicationIntent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,7 +767,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setApplicationIntent(ApplicationIntent ApplicationIntent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationIntent", ApplicationIntent == null ? null : ApplicationIntent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -673,10 +777,14 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public PoolBlockingPeriod getPoolBlockingPeriod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPoolBlockingPeriod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PoolBlockingPeriod");
+            retObjectPoolBlockingPeriod = classInstance.Get("PoolBlockingPeriod");
+            JCObject val = (JCObject)retObjectPoolBlockingPeriod;
             return new PoolBlockingPeriod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPoolBlockingPeriod != null ? retObjectPoolBlockingPeriod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,7 +792,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setPoolBlockingPeriod(PoolBlockingPeriod PoolBlockingPeriod) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PoolBlockingPeriod", PoolBlockingPeriod == null ? null : PoolBlockingPeriod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -694,10 +802,14 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public SqlAuthenticationMethod getAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Authentication");
+            retObjectAuthentication = classInstance.Get("Authentication");
+            JCObject val = (JCObject)retObjectAuthentication;
             return new SqlAuthenticationMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -705,7 +817,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setAuthentication(SqlAuthenticationMethod Authentication) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authentication", Authentication == null ? null : Authentication.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -715,10 +827,14 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public SqlConnectionColumnEncryptionSetting getColumnEncryptionSetting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnEncryptionSetting = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnEncryptionSetting");
+            retObjectColumnEncryptionSetting = classInstance.Get("ColumnEncryptionSetting");
+            JCObject val = (JCObject)retObjectColumnEncryptionSetting;
             return new SqlConnectionColumnEncryptionSetting(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnEncryptionSetting != null ? retObjectColumnEncryptionSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,7 +842,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setColumnEncryptionSetting(SqlConnectionColumnEncryptionSetting ColumnEncryptionSetting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnEncryptionSetting", ColumnEncryptionSetting == null ? null : ColumnEncryptionSetting.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -736,9 +852,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getApplicationName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationName = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationName");
+            retObjectApplicationName = classInstance.Get("ApplicationName");
+            return (java.lang.String)retObjectApplicationName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationName != null ? retObjectApplicationName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,7 +866,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setApplicationName(java.lang.String ApplicationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationName", ApplicationName);
         } catch (JCNativeException jcne) {
@@ -756,9 +876,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getAttachDBFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttachDBFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("AttachDBFilename");
+            retObjectAttachDBFilename = classInstance.Get("AttachDBFilename");
+            return (java.lang.String)retObjectAttachDBFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAttachDBFilename != null ? retObjectAttachDBFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -766,7 +890,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setAttachDBFilename(java.lang.String AttachDBFilename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttachDBFilename", AttachDBFilename);
         } catch (JCNativeException jcne) {
@@ -776,9 +900,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getCurrentLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentLanguage");
+            retObjectCurrentLanguage = classInstance.Get("CurrentLanguage");
+            return (java.lang.String)retObjectCurrentLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentLanguage != null ? retObjectCurrentLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -786,7 +914,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setCurrentLanguage(java.lang.String CurrentLanguage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentLanguage", CurrentLanguage);
         } catch (JCNativeException jcne) {
@@ -796,9 +924,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            return (java.lang.String)retObjectDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -806,7 +938,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setDataSource(java.lang.String DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource);
         } catch (JCNativeException jcne) {
@@ -816,9 +948,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getEnclaveAttestationUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnclaveAttestationUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("EnclaveAttestationUrl");
+            retObjectEnclaveAttestationUrl = classInstance.Get("EnclaveAttestationUrl");
+            return (java.lang.String)retObjectEnclaveAttestationUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEnclaveAttestationUrl != null ? retObjectEnclaveAttestationUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -826,7 +962,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setEnclaveAttestationUrl(java.lang.String EnclaveAttestationUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnclaveAttestationUrl", EnclaveAttestationUrl);
         } catch (JCNativeException jcne) {
@@ -836,9 +972,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getFailoverPartner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFailoverPartner = null;
         try {
-            return (java.lang.String)classInstance.Get("FailoverPartner");
+            retObjectFailoverPartner = classInstance.Get("FailoverPartner");
+            return (java.lang.String)retObjectFailoverPartner;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFailoverPartner != null ? retObjectFailoverPartner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -846,7 +986,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setFailoverPartner(java.lang.String FailoverPartner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FailoverPartner", FailoverPartner);
         } catch (JCNativeException jcne) {
@@ -856,9 +996,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getInitialCatalog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialCatalog = null;
         try {
-            return (java.lang.String)classInstance.Get("InitialCatalog");
+            retObjectInitialCatalog = classInstance.Get("InitialCatalog");
+            return (java.lang.String)retObjectInitialCatalog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInitialCatalog != null ? retObjectInitialCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -866,7 +1010,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setInitialCatalog(java.lang.String InitialCatalog) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialCatalog", InitialCatalog);
         } catch (JCNativeException jcne) {
@@ -876,9 +1020,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getNetworkLibrary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetworkLibrary = null;
         try {
-            return (java.lang.String)classInstance.Get("NetworkLibrary");
+            retObjectNetworkLibrary = classInstance.Get("NetworkLibrary");
+            return (java.lang.String)retObjectNetworkLibrary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNetworkLibrary != null ? retObjectNetworkLibrary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,7 +1034,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setNetworkLibrary(java.lang.String NetworkLibrary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NetworkLibrary", NetworkLibrary);
         } catch (JCNativeException jcne) {
@@ -896,9 +1044,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getPassword() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPassword = null;
         try {
-            return (java.lang.String)classInstance.Get("Password");
+            retObjectPassword = classInstance.Get("Password");
+            return (java.lang.String)retObjectPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPassword != null ? retObjectPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -906,7 +1058,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setPassword(java.lang.String Password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Password", Password);
         } catch (JCNativeException jcne) {
@@ -916,9 +1068,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getTransactionBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionBinding = null;
         try {
-            return (java.lang.String)classInstance.Get("TransactionBinding");
+            retObjectTransactionBinding = classInstance.Get("TransactionBinding");
+            return (java.lang.String)retObjectTransactionBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransactionBinding != null ? retObjectTransactionBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,7 +1082,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setTransactionBinding(java.lang.String TransactionBinding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransactionBinding", TransactionBinding);
         } catch (JCNativeException jcne) {
@@ -936,9 +1092,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getTypeSystemVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeSystemVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeSystemVersion");
+            retObjectTypeSystemVersion = classInstance.Get("TypeSystemVersion");
+            return (java.lang.String)retObjectTypeSystemVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeSystemVersion != null ? retObjectTypeSystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -946,7 +1106,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setTypeSystemVersion(java.lang.String TypeSystemVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeSystemVersion", TypeSystemVersion);
         } catch (JCNativeException jcne) {
@@ -956,9 +1116,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getUserID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserID = null;
         try {
-            return (java.lang.String)classInstance.Get("UserID");
+            retObjectUserID = classInstance.Get("UserID");
+            return (java.lang.String)retObjectUserID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserID != null ? retObjectUserID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -966,7 +1130,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setUserID(java.lang.String UserID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserID", UserID);
         } catch (JCNativeException jcne) {
@@ -976,9 +1140,13 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public java.lang.String getWorkstationID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkstationID = null;
         try {
-            return (java.lang.String)classInstance.Get("WorkstationID");
+            retObjectWorkstationID = classInstance.Get("WorkstationID");
+            return (java.lang.String)retObjectWorkstationID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWorkstationID != null ? retObjectWorkstationID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -986,7 +1154,7 @@ public class SqlConnectionStringBuilder extends DbConnectionStringBuilder  {
 
     public void setWorkstationID(java.lang.String WorkstationID) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkstationID", WorkstationID);
         } catch (JCNativeException jcne) {

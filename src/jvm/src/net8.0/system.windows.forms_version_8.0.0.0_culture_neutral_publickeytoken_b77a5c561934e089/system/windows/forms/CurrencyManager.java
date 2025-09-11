@@ -162,10 +162,14 @@ public class CurrencyManager extends BindingManagerBase  {
     
     public PropertyDescriptorCollection GetItemProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemProperties = null;
         try {
-            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties");
+            retObjectGetItemProperties = classInstance.Invoke("GetItemProperties");
+            JCObject objGetItemProperties = (JCObject)retObjectGetItemProperties;
             return new PropertyDescriptorCollection(objGetItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemProperties != null ? retObjectGetItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void AddNew() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddNew");
         } catch (JCNativeException jcne) {
@@ -183,7 +187,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void CancelCurrentEdit() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void EndCurrentEdit() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.InvalidCastException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCurrentEdit");
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void Refresh() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.MissingMemberException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void RemoveAt(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", index);
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void ResumeBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeBinding");
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void SuspendBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuspendBinding");
         } catch (JCNativeException jcne) {
@@ -247,10 +251,14 @@ public class CurrencyManager extends BindingManagerBase  {
     
     public IList getList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("List");
+            retObjectList = classInstance.Get("List");
+            JCObject val = (JCObject)retObjectList;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectList != null ? retObjectList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +271,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -273,7 +281,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -283,7 +291,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void addMetaDataChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MetaDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -293,7 +301,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void removeMetaDataChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MetaDataChanged", handler);
         } catch (JCNativeException jcne) {
@@ -303,7 +311,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void addItemChanged(ItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemChanged", handler);
         } catch (JCNativeException jcne) {
@@ -313,7 +321,7 @@ public class CurrencyManager extends BindingManagerBase  {
 
     public void removeItemChanged(ItemChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemChanged", handler);
         } catch (JCNativeException jcne) {

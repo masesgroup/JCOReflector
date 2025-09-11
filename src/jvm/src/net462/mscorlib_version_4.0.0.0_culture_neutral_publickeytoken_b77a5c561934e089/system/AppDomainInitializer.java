@@ -188,8 +188,8 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -202,7 +202,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
 
     public void DynamicInvoke(java.lang.String[] args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", (java.lang.Object)args);
         } catch (JCNativeException jcne) {

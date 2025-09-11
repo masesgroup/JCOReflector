@@ -156,7 +156,7 @@ public class Parallel extends NetObject  {
     
     public static void Invoke(Action... actions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.FormatException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Invoke", (java.lang.Object)toObjectFromArray(actions));
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class Parallel extends NetObject  {
 
     public static void Invoke(ParallelOptions parallelOptions, Action... actions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.FormatException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.AggregateException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Invoke", parallelOptions == null ? null : parallelOptions.getJCOInstance(), toObjectFromArray(actions));
         } catch (JCNativeException jcne) {

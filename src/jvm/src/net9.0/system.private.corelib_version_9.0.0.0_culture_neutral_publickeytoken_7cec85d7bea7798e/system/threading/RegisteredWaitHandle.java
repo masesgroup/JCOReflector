@@ -157,9 +157,13 @@ public class RegisteredWaitHandle extends MarshalByRefObject  {
     
     public boolean Unregister(WaitHandle waitObject) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.AbandonedMutexException, system.threading.LockRecursionException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnregister = null;
         try {
-            return (boolean)classInstance.Invoke("Unregister", waitObject == null ? null : waitObject.getJCOInstance());
+            retObjectUnregister = classInstance.Invoke("Unregister", waitObject == null ? null : waitObject.getJCOInstance());
+            return (boolean)retObjectUnregister;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnregister != null ? retObjectUnregister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

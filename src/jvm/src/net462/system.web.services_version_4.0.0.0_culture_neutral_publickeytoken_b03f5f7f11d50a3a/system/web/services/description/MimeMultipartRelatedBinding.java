@@ -167,10 +167,14 @@ public class MimeMultipartRelatedBinding extends ServiceDescriptionFormatExtensi
     
     public MimePartCollection getParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parts");
+            retObjectParts = classInstance.Get("Parts");
+            JCObject val = (JCObject)retObjectParts;
             return new MimePartCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParts != null ? retObjectParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

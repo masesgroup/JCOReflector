@@ -165,10 +165,14 @@ public class NumberFormatInfo extends NetObject  {
     
     public static NumberFormatInfo GetInstance(IFormatProvider formatProvider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetInstance = null;
         try {
-            JCObject objGetInstance = (JCObject)classType.Invoke("GetInstance", formatProvider == null ? null : formatProvider.getJCOInstance());
+            retObjectGetInstance = classType.Invoke("GetInstance", formatProvider == null ? null : formatProvider.getJCOInstance());
+            JCObject objGetInstance = (JCObject)retObjectGetInstance;
             return new NumberFormatInfo(objGetInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstance != null ? retObjectGetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public static NumberFormatInfo ReadOnly(NumberFormatInfo nfi) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            JCObject objReadOnly = (JCObject)classType.Invoke("ReadOnly", nfi == null ? null : nfi.getJCOInstance());
+            retObjectReadOnly = classType.Invoke("ReadOnly", nfi == null ? null : nfi.getJCOInstance());
+            JCObject objReadOnly = (JCObject)retObjectReadOnly;
             return new NumberFormatInfo(objReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public NetObject GetFormat(NetType formatType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormat = null;
         try {
-            JCObject objGetFormat = (JCObject)classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            retObjectGetFormat = classInstance.Invoke("GetFormat", formatType == null ? null : formatType.getJCOInstance());
+            JCObject objGetFormat = (JCObject)retObjectGetFormat;
             return new NetObject(objGetFormat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFormat != null ? retObjectGetFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class NumberFormatInfo extends NetObject  {
     
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +243,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getCurrencyDecimalDigits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyDecimalDigits = null;
         try {
-            return (int)classInstance.Get("CurrencyDecimalDigits");
+            retObjectCurrencyDecimalDigits = classInstance.Get("CurrencyDecimalDigits");
+            return (int)retObjectCurrencyDecimalDigits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrencyDecimalDigits != null ? retObjectCurrencyDecimalDigits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +257,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyDecimalDigits(int CurrencyDecimalDigits) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyDecimalDigits", CurrencyDecimalDigits);
         } catch (JCNativeException jcne) {
@@ -243,9 +267,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getCurrencyNegativePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyNegativePattern = null;
         try {
-            return (int)classInstance.Get("CurrencyNegativePattern");
+            retObjectCurrencyNegativePattern = classInstance.Get("CurrencyNegativePattern");
+            return (int)retObjectCurrencyNegativePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrencyNegativePattern != null ? retObjectCurrencyNegativePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +281,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyNegativePattern(int CurrencyNegativePattern) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyNegativePattern", CurrencyNegativePattern);
         } catch (JCNativeException jcne) {
@@ -263,9 +291,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getCurrencyPositivePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyPositivePattern = null;
         try {
-            return (int)classInstance.Get("CurrencyPositivePattern");
+            retObjectCurrencyPositivePattern = classInstance.Get("CurrencyPositivePattern");
+            return (int)retObjectCurrencyPositivePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrencyPositivePattern != null ? retObjectCurrencyPositivePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +305,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyPositivePattern(int CurrencyPositivePattern) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyPositivePattern", CurrencyPositivePattern);
         } catch (JCNativeException jcne) {
@@ -283,9 +315,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getNumberDecimalDigits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberDecimalDigits = null;
         try {
-            return (int)classInstance.Get("NumberDecimalDigits");
+            retObjectNumberDecimalDigits = classInstance.Get("NumberDecimalDigits");
+            return (int)retObjectNumberDecimalDigits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberDecimalDigits != null ? retObjectNumberDecimalDigits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +329,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNumberDecimalDigits(int NumberDecimalDigits) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberDecimalDigits", NumberDecimalDigits);
         } catch (JCNativeException jcne) {
@@ -303,9 +339,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getNumberNegativePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberNegativePattern = null;
         try {
-            return (int)classInstance.Get("NumberNegativePattern");
+            retObjectNumberNegativePattern = classInstance.Get("NumberNegativePattern");
+            return (int)retObjectNumberNegativePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberNegativePattern != null ? retObjectNumberNegativePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +353,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNumberNegativePattern(int NumberNegativePattern) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberNegativePattern", NumberNegativePattern);
         } catch (JCNativeException jcne) {
@@ -323,9 +363,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getPercentDecimalDigits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentDecimalDigits = null;
         try {
-            return (int)classInstance.Get("PercentDecimalDigits");
+            retObjectPercentDecimalDigits = classInstance.Get("PercentDecimalDigits");
+            return (int)retObjectPercentDecimalDigits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPercentDecimalDigits != null ? retObjectPercentDecimalDigits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +377,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentDecimalDigits(int PercentDecimalDigits) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentDecimalDigits", PercentDecimalDigits);
         } catch (JCNativeException jcne) {
@@ -343,9 +387,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getPercentNegativePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentNegativePattern = null;
         try {
-            return (int)classInstance.Get("PercentNegativePattern");
+            retObjectPercentNegativePattern = classInstance.Get("PercentNegativePattern");
+            return (int)retObjectPercentNegativePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPercentNegativePattern != null ? retObjectPercentNegativePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +401,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentNegativePattern(int PercentNegativePattern) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentNegativePattern", PercentNegativePattern);
         } catch (JCNativeException jcne) {
@@ -363,9 +411,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public int getPercentPositivePattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentPositivePattern = null;
         try {
-            return (int)classInstance.Get("PercentPositivePattern");
+            retObjectPercentPositivePattern = classInstance.Get("PercentPositivePattern");
+            return (int)retObjectPercentPositivePattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPercentPositivePattern != null ? retObjectPercentPositivePattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +425,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentPositivePattern(int PercentPositivePattern) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentPositivePattern", PercentPositivePattern);
         } catch (JCNativeException jcne) {
@@ -383,10 +435,12 @@ public class NumberFormatInfo extends NetObject  {
 
     public int[] getCurrencyGroupSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyGroupSizes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CurrencyGroupSizes");
+            retObjectCurrencyGroupSizes = classInstance.Get("CurrencyGroupSizes");
+            JCObject resultingObjects = (JCObject)retObjectCurrencyGroupSizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -395,6 +449,8 @@ public class NumberFormatInfo extends NetObject  {
 				resultingArray[indexCurrencyGroupSizes] = (int)resultingArrayList.get(indexCurrencyGroupSizes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCurrencyGroupSizes != null ? retObjectCurrencyGroupSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +458,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyGroupSizes(int[] CurrencyGroupSizes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyGroupSizes", CurrencyGroupSizes);
         } catch (JCNativeException jcne) {
@@ -412,10 +468,12 @@ public class NumberFormatInfo extends NetObject  {
 
     public int[] getNumberGroupSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberGroupSizes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("NumberGroupSizes");
+            retObjectNumberGroupSizes = classInstance.Get("NumberGroupSizes");
+            JCObject resultingObjects = (JCObject)retObjectNumberGroupSizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -424,6 +482,8 @@ public class NumberFormatInfo extends NetObject  {
 				resultingArray[indexNumberGroupSizes] = (int)resultingArrayList.get(indexNumberGroupSizes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectNumberGroupSizes != null ? retObjectNumberGroupSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,7 +491,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNumberGroupSizes(int[] NumberGroupSizes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberGroupSizes", NumberGroupSizes);
         } catch (JCNativeException jcne) {
@@ -441,10 +501,12 @@ public class NumberFormatInfo extends NetObject  {
 
     public int[] getPercentGroupSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentGroupSizes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PercentGroupSizes");
+            retObjectPercentGroupSizes = classInstance.Get("PercentGroupSizes");
+            JCObject resultingObjects = (JCObject)retObjectPercentGroupSizes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -453,6 +515,8 @@ public class NumberFormatInfo extends NetObject  {
 				resultingArray[indexPercentGroupSizes] = (int)resultingArrayList.get(indexPercentGroupSizes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectPercentGroupSizes != null ? retObjectPercentGroupSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +524,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentGroupSizes(int[] PercentGroupSizes) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentGroupSizes", PercentGroupSizes);
         } catch (JCNativeException jcne) {
@@ -470,10 +534,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public DigitShapes getDigitSubstitution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigitSubstitution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DigitSubstitution");
+            retObjectDigitSubstitution = classInstance.Get("DigitSubstitution");
+            JCObject val = (JCObject)retObjectDigitSubstitution;
             return new DigitShapes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDigitSubstitution != null ? retObjectDigitSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +549,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setDigitSubstitution(DigitShapes DigitSubstitution) throws Throwable, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DigitSubstitution", DigitSubstitution == null ? null : DigitSubstitution.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -491,10 +559,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public static NumberFormatInfo getCurrentInfo() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentInfo");
+            retObjectCurrentInfo = classType.Get("CurrentInfo");
+            JCObject val = (JCObject)retObjectCurrentInfo;
             return new NumberFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentInfo != null ? retObjectCurrentInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,10 +574,14 @@ public class NumberFormatInfo extends NetObject  {
 
     public static NumberFormatInfo getInvariantInfo() throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvariantInfo = null;
         try {
-            JCObject val = (JCObject)classType.Get("InvariantInfo");
+            retObjectInvariantInfo = classType.Get("InvariantInfo");
+            JCObject val = (JCObject)retObjectInvariantInfo;
             return new NumberFormatInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvariantInfo != null ? retObjectInvariantInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,9 +589,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getCurrencyDecimalSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyDecimalSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencyDecimalSeparator");
+            retObjectCurrencyDecimalSeparator = classInstance.Get("CurrencyDecimalSeparator");
+            return (java.lang.String)retObjectCurrencyDecimalSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencyDecimalSeparator != null ? retObjectCurrencyDecimalSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +603,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyDecimalSeparator(java.lang.String CurrencyDecimalSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyDecimalSeparator", CurrencyDecimalSeparator);
         } catch (JCNativeException jcne) {
@@ -533,9 +613,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getCurrencyGroupSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencyGroupSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencyGroupSeparator");
+            retObjectCurrencyGroupSeparator = classInstance.Get("CurrencyGroupSeparator");
+            return (java.lang.String)retObjectCurrencyGroupSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencyGroupSeparator != null ? retObjectCurrencyGroupSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +627,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencyGroupSeparator(java.lang.String CurrencyGroupSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencyGroupSeparator", CurrencyGroupSeparator);
         } catch (JCNativeException jcne) {
@@ -553,9 +637,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getCurrencySymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrencySymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrencySymbol");
+            retObjectCurrencySymbol = classInstance.Get("CurrencySymbol");
+            return (java.lang.String)retObjectCurrencySymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrencySymbol != null ? retObjectCurrencySymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,7 +651,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setCurrencySymbol(java.lang.String CurrencySymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrencySymbol", CurrencySymbol);
         } catch (JCNativeException jcne) {
@@ -573,9 +661,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getNaNSymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNaNSymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("NaNSymbol");
+            retObjectNaNSymbol = classInstance.Get("NaNSymbol");
+            return (java.lang.String)retObjectNaNSymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNaNSymbol != null ? retObjectNaNSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,7 +675,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNaNSymbol(java.lang.String NaNSymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NaNSymbol", NaNSymbol);
         } catch (JCNativeException jcne) {
@@ -593,9 +685,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getNegativeInfinitySymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegativeInfinitySymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("NegativeInfinitySymbol");
+            retObjectNegativeInfinitySymbol = classInstance.Get("NegativeInfinitySymbol");
+            return (java.lang.String)retObjectNegativeInfinitySymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNegativeInfinitySymbol != null ? retObjectNegativeInfinitySymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,7 +699,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNegativeInfinitySymbol(java.lang.String NegativeInfinitySymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NegativeInfinitySymbol", NegativeInfinitySymbol);
         } catch (JCNativeException jcne) {
@@ -613,9 +709,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getNegativeSign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNegativeSign = null;
         try {
-            return (java.lang.String)classInstance.Get("NegativeSign");
+            retObjectNegativeSign = classInstance.Get("NegativeSign");
+            return (java.lang.String)retObjectNegativeSign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNegativeSign != null ? retObjectNegativeSign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -623,7 +723,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNegativeSign(java.lang.String NegativeSign) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NegativeSign", NegativeSign);
         } catch (JCNativeException jcne) {
@@ -633,9 +733,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getNumberDecimalSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberDecimalSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("NumberDecimalSeparator");
+            retObjectNumberDecimalSeparator = classInstance.Get("NumberDecimalSeparator");
+            return (java.lang.String)retObjectNumberDecimalSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNumberDecimalSeparator != null ? retObjectNumberDecimalSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -643,7 +747,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNumberDecimalSeparator(java.lang.String NumberDecimalSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberDecimalSeparator", NumberDecimalSeparator);
         } catch (JCNativeException jcne) {
@@ -653,9 +757,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getNumberGroupSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberGroupSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("NumberGroupSeparator");
+            retObjectNumberGroupSeparator = classInstance.Get("NumberGroupSeparator");
+            return (java.lang.String)retObjectNumberGroupSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNumberGroupSeparator != null ? retObjectNumberGroupSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -663,7 +771,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNumberGroupSeparator(java.lang.String NumberGroupSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NumberGroupSeparator", NumberGroupSeparator);
         } catch (JCNativeException jcne) {
@@ -673,9 +781,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPercentDecimalSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentDecimalSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("PercentDecimalSeparator");
+            retObjectPercentDecimalSeparator = classInstance.Get("PercentDecimalSeparator");
+            return (java.lang.String)retObjectPercentDecimalSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPercentDecimalSeparator != null ? retObjectPercentDecimalSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,7 +795,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentDecimalSeparator(java.lang.String PercentDecimalSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentDecimalSeparator", PercentDecimalSeparator);
         } catch (JCNativeException jcne) {
@@ -693,9 +805,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPercentGroupSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentGroupSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("PercentGroupSeparator");
+            retObjectPercentGroupSeparator = classInstance.Get("PercentGroupSeparator");
+            return (java.lang.String)retObjectPercentGroupSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPercentGroupSeparator != null ? retObjectPercentGroupSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,7 +819,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentGroupSeparator(java.lang.String PercentGroupSeparator) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentGroupSeparator", PercentGroupSeparator);
         } catch (JCNativeException jcne) {
@@ -713,9 +829,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPercentSymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPercentSymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("PercentSymbol");
+            retObjectPercentSymbol = classInstance.Get("PercentSymbol");
+            return (java.lang.String)retObjectPercentSymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPercentSymbol != null ? retObjectPercentSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,7 +843,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPercentSymbol(java.lang.String PercentSymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PercentSymbol", PercentSymbol);
         } catch (JCNativeException jcne) {
@@ -733,9 +853,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPerMilleSymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPerMilleSymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("PerMilleSymbol");
+            retObjectPerMilleSymbol = classInstance.Get("PerMilleSymbol");
+            return (java.lang.String)retObjectPerMilleSymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPerMilleSymbol != null ? retObjectPerMilleSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,7 +867,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPerMilleSymbol(java.lang.String PerMilleSymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PerMilleSymbol", PerMilleSymbol);
         } catch (JCNativeException jcne) {
@@ -753,9 +877,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPositiveInfinitySymbol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositiveInfinitySymbol = null;
         try {
-            return (java.lang.String)classInstance.Get("PositiveInfinitySymbol");
+            retObjectPositiveInfinitySymbol = classInstance.Get("PositiveInfinitySymbol");
+            return (java.lang.String)retObjectPositiveInfinitySymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPositiveInfinitySymbol != null ? retObjectPositiveInfinitySymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -763,7 +891,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPositiveInfinitySymbol(java.lang.String PositiveInfinitySymbol) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositiveInfinitySymbol", PositiveInfinitySymbol);
         } catch (JCNativeException jcne) {
@@ -773,9 +901,13 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String getPositiveSign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositiveSign = null;
         try {
-            return (java.lang.String)classInstance.Get("PositiveSign");
+            retObjectPositiveSign = classInstance.Get("PositiveSign");
+            return (java.lang.String)retObjectPositiveSign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPositiveSign != null ? retObjectPositiveSign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,7 +915,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setPositiveSign(java.lang.String PositiveSign) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositiveSign", PositiveSign);
         } catch (JCNativeException jcne) {
@@ -793,10 +925,12 @@ public class NumberFormatInfo extends NetObject  {
 
     public java.lang.String[] getNativeDigits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeDigits = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("NativeDigits");
+            retObjectNativeDigits = classInstance.Get("NativeDigits");
+            JCObject resultingObjects = (JCObject)retObjectNativeDigits;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -805,6 +939,8 @@ public class NumberFormatInfo extends NetObject  {
 				resultingArray[indexNativeDigits] = (java.lang.String)resultingArrayList.get(indexNativeDigits);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectNativeDigits != null ? retObjectNativeDigits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -812,7 +948,7 @@ public class NumberFormatInfo extends NetObject  {
 
     public void setNativeDigits(java.lang.String[] NativeDigits) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NativeDigits", NativeDigits);
         } catch (JCNativeException jcne) {

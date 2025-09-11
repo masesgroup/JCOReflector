@@ -166,9 +166,13 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
     
     public boolean CanRead(XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRead = null;
         try {
-            return (boolean)classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            retObjectCanRead = classInstance.Invoke("CanRead", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanRead != null ? retObjectCanRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
 
     public RequestSecurityTokenResponse ReadXml(XmlReader reader, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadXml = null;
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectReadXml = classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objReadXml = (JCObject)retObjectReadXml;
             return new RequestSecurityTokenResponse(objReadXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadXml != null ? retObjectReadXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
 
     public void ReadXmlElement(XmlReader reader, RequestSecurityTokenResponse rstr, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.UriFormatException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXmlElement", reader == null ? null : reader.getJCOInstance(), rstr == null ? null : rstr.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +205,7 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
 
     public void WriteKnownResponseElement(RequestSecurityTokenResponse rstr, XmlWriter writer, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteKnownResponseElement", rstr == null ? null : rstr.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +215,7 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
 
     public void WriteXml(RequestSecurityTokenResponse response, XmlWriter writer, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", response == null ? null : response.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,7 +225,7 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
 
     public void WriteXmlElement(XmlWriter writer, java.lang.String elementName, NetObject elementValue, RequestSecurityTokenResponse rstr, WSTrustSerializationContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlElement", writer == null ? null : writer.getJCOInstance(), elementName, elementValue == null ? null : elementValue.getJCOInstance(), rstr == null ? null : rstr.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

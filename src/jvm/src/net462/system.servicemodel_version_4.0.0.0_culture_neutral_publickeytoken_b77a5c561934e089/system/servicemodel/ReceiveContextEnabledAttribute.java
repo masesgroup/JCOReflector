@@ -166,7 +166,7 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
     
     public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBindingParameters", operationDescription == null ? null : operationDescription.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
 
     public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyClientBehavior", operationDescription == null ? null : operationDescription.getJCOInstance(), clientOperation == null ? null : clientOperation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
 
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", operationDescription == null ? null : operationDescription.getJCOInstance(), dispatchOperation == null ? null : dispatchOperation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
 
     public void Validate(OperationDescription operationDescription) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", operationDescription == null ? null : operationDescription.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,9 +210,13 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
     
     public boolean getManualControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualControl = null;
         try {
-            return (boolean)classInstance.Get("ManualControl");
+            retObjectManualControl = classInstance.Get("ManualControl");
+            return (boolean)retObjectManualControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectManualControl != null ? retObjectManualControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +224,7 @@ public class ReceiveContextEnabledAttribute extends Attribute  {
 
     public void setManualControl(boolean ManualControl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualControl", ManualControl);
         } catch (JCNativeException jcne) {

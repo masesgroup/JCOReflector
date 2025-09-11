@@ -168,10 +168,12 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     
     public byte[] ConvertPrintTicketToDevMode(PrintTicket printTicket, BaseDevModeType baseType, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertPrintTicketToDevMode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
+            retObjectConvertPrintTicketToDevMode = classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectConvertPrintTicketToDevMode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -180,6 +182,8 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 				resultingArray[indexConvertPrintTicketToDevMode] = (byte)resultingArrayList.get(indexConvertPrintTicketToDevMode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectConvertPrintTicketToDevMode != null ? retObjectConvertPrintTicketToDevMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,12 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public byte[] ConvertPrintTicketToDevMode(PrintTicket printTicket, BaseDevModeType baseType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertPrintTicketToDevMode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
+            retObjectConvertPrintTicketToDevMode = classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectConvertPrintTicketToDevMode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -199,6 +205,8 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 				resultingArray[indexConvertPrintTicketToDevMode] = (byte)resultingArrayList.get(indexConvertPrintTicketToDevMode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectConvertPrintTicketToDevMode != null ? retObjectConvertPrintTicketToDevMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +214,14 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode, PrintTicketScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.xml.XmlException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertDevModeToPrintTicket = null;
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", devMode, scope == null ? null : scope.getJCOInstance());
+            retObjectConvertDevModeToPrintTicket = classInstance.Invoke("ConvertDevModeToPrintTicket", devMode, scope == null ? null : scope.getJCOInstance());
+            JCObject objConvertDevModeToPrintTicket = (JCObject)retObjectConvertDevModeToPrintTicket;
             return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertDevModeToPrintTicket != null ? retObjectConvertDevModeToPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +229,14 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0, PrintTicketScope dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.xml.XmlException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertDevModeToPrintTicket = null;
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            retObjectConvertDevModeToPrintTicket = classInstance.Invoke("ConvertDevModeToPrintTicket", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objConvertDevModeToPrintTicket = (JCObject)retObjectConvertDevModeToPrintTicket;
             return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertDevModeToPrintTicket != null ? retObjectConvertDevModeToPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +244,14 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public PrintTicket ConvertDevModeToPrintTicket(byte[] devMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertDevModeToPrintTicket = null;
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)devMode);
+            retObjectConvertDevModeToPrintTicket = classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)devMode);
+            JCObject objConvertDevModeToPrintTicket = (JCObject)retObjectConvertDevModeToPrintTicket;
             return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertDevModeToPrintTicket != null ? retObjectConvertDevModeToPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +259,14 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.xml.XmlException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertDevModeToPrintTicket = null;
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectConvertDevModeToPrintTicket = classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objConvertDevModeToPrintTicket = (JCObject)retObjectConvertDevModeToPrintTicket;
             return new PrintTicket(objConvertDevModeToPrintTicket);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertDevModeToPrintTicket != null ? retObjectConvertDevModeToPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +274,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -261,7 +285,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -277,9 +301,13 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     
     public static int getMaxPrintSchemaVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxPrintSchemaVersion = null;
         try {
-            return (int)classType.Get("MaxPrintSchemaVersion");
+            retObjectMaxPrintSchemaVersion = classType.Get("MaxPrintSchemaVersion");
+            return (int)retObjectMaxPrintSchemaVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxPrintSchemaVersion != null ? retObjectMaxPrintSchemaVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

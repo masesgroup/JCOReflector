@@ -156,9 +156,13 @@ public class XsltFunctions extends NetObject  {
     
     public static boolean Contains(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classType.Invoke("Contains", s1, s2);
+            retObjectContains = classType.Invoke("Contains", s1, s2);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class XsltFunctions extends NetObject  {
 
     public static boolean Lang(java.lang.String value, XPathNavigator context) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLang = null;
         try {
-            return (boolean)classType.Invoke("Lang", value, context == null ? null : context.getJCOInstance());
+            retObjectLang = classType.Invoke("Lang", value, context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLang != null ? retObjectLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class XsltFunctions extends NetObject  {
 
     public static boolean StartsWith(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStartsWith = null;
         try {
-            return (boolean)classType.Invoke("StartsWith", s1, s2);
+            retObjectStartsWith = classType.Invoke("StartsWith", s1, s2);
+            return (boolean)retObjectStartsWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStartsWith != null ? retObjectStartsWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,19 @@ public class XsltFunctions extends NetObject  {
 
     public static double MSStringCompare(java.lang.String s1, java.lang.String s2, java.lang.String lang, java.lang.String options) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSStringCompare = null;
         try {
-            return (double)classType.Invoke("MSStringCompare", s1, s2, lang, options);
+            retObjectMSStringCompare = classType.Invoke("MSStringCompare", s1, s2, lang, options);
+            return (double)retObjectMSStringCompare;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMSStringCompareNumber = (java.lang.Number)retObjectMSStringCompare;
+                return retObjectMSStringCompareNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectMSStringCompare != null ? retObjectMSStringCompare.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +218,19 @@ public class XsltFunctions extends NetObject  {
 
     public static double Round(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            return (double)classType.Invoke("Round", value);
+            retObjectRound = classType.Invoke("Round", value);
+            return (double)retObjectRound;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectRoundNumber = (java.lang.Number)retObjectRound;
+                return retObjectRoundNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +238,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String BaseUri(XPathNavigator navigator) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBaseUri = null;
         try {
-            return (java.lang.String)classType.Invoke("BaseUri", navigator == null ? null : navigator.getJCOInstance());
+            retObjectBaseUri = classType.Invoke("BaseUri", navigator == null ? null : navigator.getJCOInstance());
+            return (java.lang.String)retObjectBaseUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +252,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String MSFormatDateTime(java.lang.String dateTime, java.lang.String format, java.lang.String lang, boolean isDate) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSFormatDateTime = null;
         try {
-            return (java.lang.String)classType.Invoke("MSFormatDateTime", dateTime, format, lang, isDate);
+            retObjectMSFormatDateTime = classType.Invoke("MSFormatDateTime", dateTime, format, lang, isDate);
+            return (java.lang.String)retObjectMSFormatDateTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMSFormatDateTime != null ? retObjectMSFormatDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +266,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String MSLocalName(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSLocalName = null;
         try {
-            return (java.lang.String)classType.Invoke("MSLocalName", name);
+            retObjectMSLocalName = classType.Invoke("MSLocalName", name);
+            return (java.lang.String)retObjectMSLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMSLocalName != null ? retObjectMSLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +280,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String MSNamespaceUri(java.lang.String name, XPathNavigator currentNode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSNamespaceUri = null;
         try {
-            return (java.lang.String)classType.Invoke("MSNamespaceUri", name, currentNode == null ? null : currentNode.getJCOInstance());
+            retObjectMSNamespaceUri = classType.Invoke("MSNamespaceUri", name, currentNode == null ? null : currentNode.getJCOInstance());
+            return (java.lang.String)retObjectMSNamespaceUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMSNamespaceUri != null ? retObjectMSNamespaceUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +294,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String MSUtc(java.lang.String dateTime) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMSUtc = null;
         try {
-            return (java.lang.String)classType.Invoke("MSUtc", dateTime);
+            retObjectMSUtc = classType.Invoke("MSUtc", dateTime);
+            return (java.lang.String)retObjectMSUtc;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMSUtc != null ? retObjectMSUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +308,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String NormalizeSpace(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNormalizeSpace = null;
         try {
-            return (java.lang.String)classType.Invoke("NormalizeSpace", value);
+            retObjectNormalizeSpace = classType.Invoke("NormalizeSpace", value);
+            return (java.lang.String)retObjectNormalizeSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectNormalizeSpace != null ? retObjectNormalizeSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +322,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String OuterXml(XPathNavigator navigator) throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOuterXml = null;
         try {
-            return (java.lang.String)classType.Invoke("OuterXml", navigator == null ? null : navigator.getJCOInstance());
+            retObjectOuterXml = classType.Invoke("OuterXml", navigator == null ? null : navigator.getJCOInstance());
+            return (java.lang.String)retObjectOuterXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectOuterXml != null ? retObjectOuterXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +336,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String Substring(java.lang.String value, double startIndex, double length) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubstring = null;
         try {
-            return (java.lang.String)classType.Invoke("Substring", value, startIndex, length);
+            retObjectSubstring = classType.Invoke("Substring", value, startIndex, length);
+            return (java.lang.String)retObjectSubstring;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstring != null ? retObjectSubstring.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +350,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String Substring(java.lang.String value, double startIndex) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubstring = null;
         try {
-            return (java.lang.String)classType.Invoke("Substring", value, startIndex);
+            retObjectSubstring = classType.Invoke("Substring", value, startIndex);
+            return (java.lang.String)retObjectSubstring;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstring != null ? retObjectSubstring.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +364,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String SubstringAfter(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubstringAfter = null;
         try {
-            return (java.lang.String)classType.Invoke("SubstringAfter", s1, s2);
+            retObjectSubstringAfter = classType.Invoke("SubstringAfter", s1, s2);
+            return (java.lang.String)retObjectSubstringAfter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstringAfter != null ? retObjectSubstringAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +378,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String SubstringBefore(java.lang.String s1, java.lang.String s2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubstringBefore = null;
         try {
-            return (java.lang.String)classType.Invoke("SubstringBefore", s1, s2);
+            retObjectSubstringBefore = classType.Invoke("SubstringBefore", s1, s2);
+            return (java.lang.String)retObjectSubstringBefore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSubstringBefore != null ? retObjectSubstringBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,9 +392,13 @@ public class XsltFunctions extends NetObject  {
 
     public static java.lang.String Translate(java.lang.String arg, java.lang.String mapString, java.lang.String transString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTranslate = null;
         try {
-            return (java.lang.String)classType.Invoke("Translate", arg, mapString, transString);
+            retObjectTranslate = classType.Invoke("Translate", arg, mapString, transString);
+            return (java.lang.String)retObjectTranslate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectTranslate != null ? retObjectTranslate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +406,14 @@ public class XsltFunctions extends NetObject  {
 
     public static XPathItem SystemProperty(XmlQualifiedName name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystemProperty = null;
         try {
-            JCObject objSystemProperty = (JCObject)classType.Invoke("SystemProperty", name == null ? null : name.getJCOInstance());
+            retObjectSystemProperty = classType.Invoke("SystemProperty", name == null ? null : name.getJCOInstance());
+            JCObject objSystemProperty = (JCObject)retObjectSystemProperty;
             return new XPathItem(objSystemProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSystemProperty != null ? retObjectSystemProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

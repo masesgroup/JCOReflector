@@ -167,9 +167,13 @@ public class ContentUser extends NetObject  {
     
     public boolean IsAuthenticated() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Invoke("IsAuthenticated");
+            retObjectIsAuthenticated = classInstance.Invoke("IsAuthenticated");
+            return (boolean)retObjectIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAuthenticated != null ? retObjectIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ContentUser extends NetObject  {
     
     public AuthenticationType getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            JCObject val = (JCObject)retObjectAuthenticationType;
             return new AuthenticationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class ContentUser extends NetObject  {
 
     public static ContentUser getAnyoneUser() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnyoneUser = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnyoneUser");
+            retObjectAnyoneUser = classType.Get("AnyoneUser");
+            JCObject val = (JCObject)retObjectAnyoneUser;
             return new ContentUser(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnyoneUser != null ? retObjectAnyoneUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class ContentUser extends NetObject  {
 
     public static ContentUser getOwnerUser() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOwnerUser = null;
         try {
-            JCObject val = (JCObject)classType.Get("OwnerUser");
+            retObjectOwnerUser = classType.Get("OwnerUser");
+            JCObject val = (JCObject)retObjectOwnerUser;
             return new ContentUser(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerUser != null ? retObjectOwnerUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +230,13 @@ public class ContentUser extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

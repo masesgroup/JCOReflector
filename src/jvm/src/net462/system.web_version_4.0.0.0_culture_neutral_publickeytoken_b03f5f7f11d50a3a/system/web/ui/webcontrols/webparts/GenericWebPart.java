@@ -160,10 +160,14 @@ public class GenericWebPart extends WebPart  {
     
     public EditorPartCollection CreateEditorParts() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEditorParts = null;
         try {
-            JCObject objCreateEditorParts = (JCObject)classInstance.Invoke("CreateEditorParts");
+            retObjectCreateEditorParts = classInstance.Invoke("CreateEditorParts");
+            JCObject objCreateEditorParts = (JCObject)retObjectCreateEditorParts;
             return new EditorPartCollection(objCreateEditorParts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEditorParts != null ? retObjectCreateEditorParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class GenericWebPart extends WebPart  {
     
     public Control getChildControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChildControl");
+            retObjectChildControl = classInstance.Get("ChildControl");
+            JCObject val = (JCObject)retObjectChildControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildControl != null ? retObjectChildControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

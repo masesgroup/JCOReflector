@@ -160,10 +160,14 @@ public class PeerInvitationResponse extends NetObject  {
     
     public PeerInvitationResponseType getPeerInvitationResponseType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerInvitationResponseType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerInvitationResponseType");
+            retObjectPeerInvitationResponseType = classInstance.Get("PeerInvitationResponseType");
+            JCObject val = (JCObject)retObjectPeerInvitationResponseType;
             return new PeerInvitationResponseType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerInvitationResponseType != null ? retObjectPeerInvitationResponseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class PeerInvitationResponse extends NetObject  {
 
     public void setPeerInvitationResponseType(PeerInvitationResponseType PeerInvitationResponseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerInvitationResponseType", PeerInvitationResponseType == null ? null : PeerInvitationResponseType.getJCOInstance());
         } catch (JCNativeException jcne) {

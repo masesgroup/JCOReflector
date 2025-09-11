@@ -162,9 +162,13 @@ public class FormatVersion extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class FormatVersion extends TaskExtension  {
     
     public int getRevision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevision = null;
         try {
-            return (int)classInstance.Get("Revision");
+            retObjectRevision = classInstance.Get("Revision");
+            return (int)retObjectRevision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRevision != null ? retObjectRevision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class FormatVersion extends TaskExtension  {
 
     public void setRevision(int Revision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Revision", Revision);
         } catch (JCNativeException jcne) {
@@ -196,9 +204,13 @@ public class FormatVersion extends TaskExtension  {
 
     public java.lang.String getFormatType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatType = null;
         try {
-            return (java.lang.String)classInstance.Get("FormatType");
+            retObjectFormatType = classInstance.Get("FormatType");
+            return (java.lang.String)retObjectFormatType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormatType != null ? retObjectFormatType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +218,7 @@ public class FormatVersion extends TaskExtension  {
 
     public void setFormatType(java.lang.String FormatType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatType", FormatType);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class FormatVersion extends TaskExtension  {
 
     public java.lang.String getOutputVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("OutputVersion");
+            retObjectOutputVersion = classInstance.Get("OutputVersion");
+            return (java.lang.String)retObjectOutputVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOutputVersion != null ? retObjectOutputVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class FormatVersion extends TaskExtension  {
 
     public void setOutputVersion(java.lang.String OutputVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OutputVersion", OutputVersion);
         } catch (JCNativeException jcne) {
@@ -236,9 +252,13 @@ public class FormatVersion extends TaskExtension  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class FormatVersion extends TaskExtension  {
 
     public void setVersion(java.lang.String Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {

@@ -145,10 +145,14 @@ public class IClientMessageInspectorImplementation extends NetObject implements 
     
     public NetObject BeforeSendRequest(JCORefOut<Message> request, IClientChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeforeSendRequest = null;
         try {
-            JCObject objBeforeSendRequest = (JCObject)classInstance.Invoke("BeforeSendRequest", request.getJCRefOut(), channel == null ? null : channel.getJCOInstance());
+            retObjectBeforeSendRequest = classInstance.Invoke("BeforeSendRequest", request.getJCRefOut(), channel == null ? null : channel.getJCOInstance());
+            JCObject objBeforeSendRequest = (JCObject)retObjectBeforeSendRequest;
             return new NetObject(objBeforeSendRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeforeSendRequest != null ? retObjectBeforeSendRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IClientMessageInspectorImplementation extends NetObject implements 
 
     public void AfterReceiveReply(JCORefOut<Message> reply, NetObject correlationState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AfterReceiveReply", reply.getJCRefOut(), correlationState == null ? null : correlationState.getJCOInstance());
         } catch (JCNativeException jcne) {

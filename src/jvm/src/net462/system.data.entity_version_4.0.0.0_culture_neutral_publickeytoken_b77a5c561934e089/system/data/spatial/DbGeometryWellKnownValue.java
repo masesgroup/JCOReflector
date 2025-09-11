@@ -165,10 +165,12 @@ public class DbGeometryWellKnownValue extends NetObject  {
     
     public byte[] getWellKnownBinary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWellKnownBinary = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("WellKnownBinary");
+            retObjectWellKnownBinary = classInstance.Get("WellKnownBinary");
+            JCObject resultingObjects = (JCObject)retObjectWellKnownBinary;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -177,6 +179,8 @@ public class DbGeometryWellKnownValue extends NetObject  {
 				resultingArray[indexWellKnownBinary] = (byte)resultingArrayList.get(indexWellKnownBinary);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectWellKnownBinary != null ? retObjectWellKnownBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class DbGeometryWellKnownValue extends NetObject  {
 
     public void setWellKnownBinary(byte[] WellKnownBinary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WellKnownBinary", WellKnownBinary);
         } catch (JCNativeException jcne) {
@@ -194,9 +198,13 @@ public class DbGeometryWellKnownValue extends NetObject  {
 
     public int getCoordinateSystemId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCoordinateSystemId = null;
         try {
-            return (int)classInstance.Get("CoordinateSystemId");
+            retObjectCoordinateSystemId = classInstance.Get("CoordinateSystemId");
+            return (int)retObjectCoordinateSystemId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCoordinateSystemId != null ? retObjectCoordinateSystemId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class DbGeometryWellKnownValue extends NetObject  {
 
     public void setCoordinateSystemId(int CoordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CoordinateSystemId", CoordinateSystemId);
         } catch (JCNativeException jcne) {
@@ -214,9 +222,13 @@ public class DbGeometryWellKnownValue extends NetObject  {
 
     public java.lang.String getWellKnownText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWellKnownText = null;
         try {
-            return (java.lang.String)classInstance.Get("WellKnownText");
+            retObjectWellKnownText = classInstance.Get("WellKnownText");
+            return (java.lang.String)retObjectWellKnownText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWellKnownText != null ? retObjectWellKnownText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class DbGeometryWellKnownValue extends NetObject  {
 
     public void setWellKnownText(java.lang.String WellKnownText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WellKnownText", WellKnownText);
         } catch (JCNativeException jcne) {

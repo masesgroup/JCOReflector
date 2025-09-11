@@ -159,9 +159,13 @@ public class IsolatedStoragePermissionAttribute extends CodeAccessSecurityAttrib
     
     public long getUserQuota() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserQuota = null;
         try {
-            return (long)classInstance.Get("UserQuota");
+            retObjectUserQuota = classInstance.Get("UserQuota");
+            return (long)retObjectUserQuota;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectUserQuota != null ? retObjectUserQuota.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class IsolatedStoragePermissionAttribute extends CodeAccessSecurityAttrib
 
     public void setUserQuota(long UserQuota) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserQuota", UserQuota);
         } catch (JCNativeException jcne) {
@@ -179,10 +183,14 @@ public class IsolatedStoragePermissionAttribute extends CodeAccessSecurityAttrib
 
     public IsolatedStorageContainment getUsageAllowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsageAllowed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UsageAllowed");
+            retObjectUsageAllowed = classInstance.Get("UsageAllowed");
+            JCObject val = (JCObject)retObjectUsageAllowed;
             return new IsolatedStorageContainment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUsageAllowed != null ? retObjectUsageAllowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class IsolatedStoragePermissionAttribute extends CodeAccessSecurityAttrib
 
     public void setUsageAllowed(IsolatedStorageContainment UsageAllowed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsageAllowed", UsageAllowed == null ? null : UsageAllowed.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class AttachedPropertyBrowsableForChildrenAttribute extends AttachedPrope
     
     public boolean getIncludeDescendants() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeDescendants = null;
         try {
-            return (boolean)classInstance.Get("IncludeDescendants");
+            retObjectIncludeDescendants = classInstance.Get("IncludeDescendants");
+            return (boolean)retObjectIncludeDescendants;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeDescendants != null ? retObjectIncludeDescendants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class AttachedPropertyBrowsableForChildrenAttribute extends AttachedPrope
 
     public void setIncludeDescendants(boolean IncludeDescendants) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeDescendants", IncludeDescendants);
         } catch (JCNativeException jcne) {

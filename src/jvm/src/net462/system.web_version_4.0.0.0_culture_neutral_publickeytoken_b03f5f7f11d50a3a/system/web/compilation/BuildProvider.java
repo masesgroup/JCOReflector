@@ -159,9 +159,13 @@ public class BuildProvider extends NetObject  {
     
     public java.lang.String GetCustomString(CompilerResults results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCustomString", results == null ? null : results.getJCOInstance());
+            retObjectGetCustomString = classInstance.Invoke("GetCustomString", results == null ? null : results.getJCOInstance());
+            return (java.lang.String)retObjectGetCustomString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCustomString != null ? retObjectGetCustomString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class BuildProvider extends NetObject  {
 
     public NetType GetGeneratedType(CompilerResults results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedType = null;
         try {
-            JCObject objGetGeneratedType = (JCObject)classInstance.Invoke("GetGeneratedType", results == null ? null : results.getJCOInstance());
+            retObjectGetGeneratedType = classInstance.Invoke("GetGeneratedType", results == null ? null : results.getJCOInstance());
+            JCObject objGetGeneratedType = (JCObject)retObjectGetGeneratedType;
             return new NetType(objGetGeneratedType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeneratedType != null ? retObjectGetGeneratedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class BuildProvider extends NetObject  {
 
     public BuildProviderResultFlags GetResultFlags(CompilerResults results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResultFlags = null;
         try {
-            JCObject objGetResultFlags = (JCObject)classInstance.Invoke("GetResultFlags", results == null ? null : results.getJCOInstance());
+            retObjectGetResultFlags = classInstance.Invoke("GetResultFlags", results == null ? null : results.getJCOInstance());
+            JCObject objGetResultFlags = (JCObject)retObjectGetResultFlags;
             return new BuildProviderResultFlags(objGetResultFlags);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResultFlags != null ? retObjectGetResultFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +203,7 @@ public class BuildProvider extends NetObject  {
 
     public void GenerateCode(AssemblyBuilder assemblyBuilder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCode", assemblyBuilder == null ? null : assemblyBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +213,7 @@ public class BuildProvider extends NetObject  {
 
     public void ProcessCompileErrors(CompilerResults results) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessCompileErrors", results == null ? null : results.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +223,7 @@ public class BuildProvider extends NetObject  {
 
     public static void RegisterBuildProvider(java.lang.String extension, NetType providerType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterBuildProvider", extension, providerType == null ? null : providerType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +237,14 @@ public class BuildProvider extends NetObject  {
     
     public ICollection getVirtualPathDependencies() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPathDependencies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VirtualPathDependencies");
+            retObjectVirtualPathDependencies = classInstance.Get("VirtualPathDependencies");
+            JCObject val = (JCObject)retObjectVirtualPathDependencies;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualPathDependencies != null ? retObjectVirtualPathDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +252,14 @@ public class BuildProvider extends NetObject  {
 
     public CompilerType getCodeCompilerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeCompilerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeCompilerType");
+            retObjectCodeCompilerType = classInstance.Get("CodeCompilerType");
+            JCObject val = (JCObject)retObjectCodeCompilerType;
             return new CompilerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeCompilerType != null ? retObjectCodeCompilerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

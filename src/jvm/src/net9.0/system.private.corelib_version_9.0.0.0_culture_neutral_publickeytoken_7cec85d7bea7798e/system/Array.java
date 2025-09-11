@@ -162,9 +162,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
     
     public static int BinarySearch(Array array, int index, int length, NetObject value, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
         try {
-            return (int)classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
+                return retObjectBinarySearchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +182,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int BinarySearch(Array array, int index, int length, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
         try {
-            return (int)classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance());
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), index, length, value == null ? null : value.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
+                return retObjectBinarySearchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +202,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int BinarySearch(Array array, NetObject value, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
         try {
-            return (int)classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
+                return retObjectBinarySearchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +222,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int BinarySearch(Array array, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinarySearch = null;
         try {
-            return (int)classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectBinarySearch = classType.Invoke("BinarySearch", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (int)retObjectBinarySearch;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectBinarySearchNumber = (java.lang.Number)retObjectBinarySearch;
+                return retObjectBinarySearchNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectBinarySearch != null ? retObjectBinarySearch.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +242,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public int GetLength(int dimension) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLength = null;
         try {
-            return (int)classInstance.Invoke("GetLength", dimension);
+            retObjectGetLength = classInstance.Invoke("GetLength", dimension);
+            return (int)retObjectGetLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLengthNumber = (java.lang.Number)retObjectGetLength;
+                return retObjectGetLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLength != null ? retObjectGetLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +262,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public int GetLowerBound(int dimension) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLowerBound = null;
         try {
-            return (int)classInstance.Invoke("GetLowerBound", dimension);
+            retObjectGetLowerBound = classInstance.Invoke("GetLowerBound", dimension);
+            return (int)retObjectGetLowerBound;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLowerBoundNumber = (java.lang.Number)retObjectGetLowerBound;
+                return retObjectGetLowerBoundNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLowerBound != null ? retObjectGetLowerBound.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +282,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public int GetUpperBound(int dimension) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUpperBound = null;
         try {
-            return (int)classInstance.Invoke("GetUpperBound", dimension);
+            retObjectGetUpperBound = classInstance.Invoke("GetUpperBound", dimension);
+            return (int)retObjectGetUpperBound;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetUpperBoundNumber = (java.lang.Number)retObjectGetUpperBound;
+                return retObjectGetUpperBoundNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetUpperBound != null ? retObjectGetUpperBound.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +302,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int IndexOf(Array array, NetObject value, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
+            retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +322,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int IndexOf(Array array, NetObject value, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
+            retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +342,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int IndexOf(Array array, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndexOf = null;
         try {
-            return (int)classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectIndexOf = classType.Invoke("IndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (int)retObjectIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIndexOfNumber = (java.lang.Number)retObjectIndexOf;
+                return retObjectIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIndexOf != null ? retObjectIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +362,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int LastIndexOf(Array array, NetObject value, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
         try {
-            return (int)classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex, count);
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
+                return retObjectLastIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +382,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int LastIndexOf(Array array, NetObject value, int startIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
         try {
-            return (int)classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance(), startIndex);
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
+                return retObjectLastIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +402,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int LastIndexOf(Array array, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLastIndexOf = null;
         try {
-            return (int)classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectLastIndexOf = classType.Invoke("LastIndexOf", array == null ? null : array.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (int)retObjectLastIndexOf;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLastIndexOfNumber = (java.lang.Number)retObjectLastIndexOf;
+                return retObjectLastIndexOfNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectLastIndexOf != null ? retObjectLastIndexOf.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +422,19 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public long GetLongLength(int dimension) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLongLength = null;
         try {
-            return (long)classInstance.Invoke("GetLongLength", dimension);
+            retObjectGetLongLength = classInstance.Invoke("GetLongLength", dimension);
+            return (long)retObjectGetLongLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLongLengthNumber = (java.lang.Number)retObjectGetLongLength;
+                return retObjectGetLongLengthNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetLongLength != null ? retObjectGetLongLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +442,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, int length1, int length2, int length3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length1, length2, length3);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length1, length2, length3);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +457,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, int length1, int length2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length1, length2);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length1, length2);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +472,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), length);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +487,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, int[] lengths, int[] lowerBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths, lowerBounds);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths, lowerBounds);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,10 +502,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectCreateInstance = classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,10 +517,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, int... lengths) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,10 +532,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCreateInstance = classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,10 +547,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstance(NetType elementType, long... lengths) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths);
+            retObjectCreateInstance = classType.Invoke("CreateInstance", elementType == null ? null : elementType.getJCOInstance(), lengths);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new Array(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,10 +562,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstanceFromArrayType(NetType arrayType, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromArrayType = null;
         try {
-            JCObject objCreateInstanceFromArrayType = (JCObject)classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), length);
+            retObjectCreateInstanceFromArrayType = classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), length);
+            JCObject objCreateInstanceFromArrayType = (JCObject)retObjectCreateInstanceFromArrayType;
             return new Array(objCreateInstanceFromArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromArrayType != null ? retObjectCreateInstanceFromArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,10 +577,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstanceFromArrayType(NetType arrayType, int[] lengths, int[] lowerBounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromArrayType = null;
         try {
-            JCObject objCreateInstanceFromArrayType = (JCObject)classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), lengths, lowerBounds);
+            retObjectCreateInstanceFromArrayType = classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), lengths, lowerBounds);
+            JCObject objCreateInstanceFromArrayType = (JCObject)retObjectCreateInstanceFromArrayType;
             return new Array(objCreateInstanceFromArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromArrayType != null ? retObjectCreateInstanceFromArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,10 +592,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstanceFromArrayType(NetType dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromArrayType = null;
         try {
-            JCObject objCreateInstanceFromArrayType = (JCObject)classType.Invoke("CreateInstanceFromArrayType", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectCreateInstanceFromArrayType = classType.Invoke("CreateInstanceFromArrayType", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            JCObject objCreateInstanceFromArrayType = (JCObject)retObjectCreateInstanceFromArrayType;
             return new Array(objCreateInstanceFromArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromArrayType != null ? retObjectCreateInstanceFromArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,10 +607,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstanceFromArrayType(NetType arrayType, int... lengths) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromArrayType = null;
         try {
-            JCObject objCreateInstanceFromArrayType = (JCObject)classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), lengths);
+            retObjectCreateInstanceFromArrayType = classType.Invoke("CreateInstanceFromArrayType", arrayType == null ? null : arrayType.getJCOInstance(), lengths);
+            JCObject objCreateInstanceFromArrayType = (JCObject)retObjectCreateInstanceFromArrayType;
             return new Array(objCreateInstanceFromArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromArrayType != null ? retObjectCreateInstanceFromArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,10 +622,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static Array CreateInstanceFromArrayType(NetType dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromArrayType = null;
         try {
-            JCObject objCreateInstanceFromArrayType = (JCObject)classType.Invoke("CreateInstanceFromArrayType", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCreateInstanceFromArrayType = classType.Invoke("CreateInstanceFromArrayType", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCreateInstanceFromArrayType = (JCObject)retObjectCreateInstanceFromArrayType;
             return new Array(objCreateInstanceFromArrayType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromArrayType != null ? retObjectCreateInstanceFromArrayType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,10 +637,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject Clone() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,10 +652,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(int index1, int index2, int index3) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index1, index2, index3);
+            retObjectGetValue = classInstance.Invoke("GetValue", index1, index2, index3);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,10 +667,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(int index1, int index2) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index1, index2);
+            retObjectGetValue = classInstance.Invoke("GetValue", index1, index2);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,10 +682,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index);
+            retObjectGetValue = classInstance.Invoke("GetValue", index);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,10 +697,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(int... indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)indices);
+            retObjectGetValue = classInstance.Invoke("GetValue", (java.lang.Object)indices);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,10 +712,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGetValue = classInstance.Invoke("GetValue", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,10 +727,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(long index1, long index2, long index3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index1, index2, index3);
+            retObjectGetValue = classInstance.Invoke("GetValue", index1, index2, index3);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,10 +742,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(long index1, long index2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index1, index2);
+            retObjectGetValue = classInstance.Invoke("GetValue", index1, index2);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,10 +757,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(long index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", index);
+            retObjectGetValue = classInstance.Invoke("GetValue", index);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -544,10 +772,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject GetValue(long... indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)indices);
+            retObjectGetValue = classInstance.Invoke("GetValue", (java.lang.Object)indices);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,7 +787,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Clear(Array array, int index, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Clear", array == null ? null : array.getJCOInstance(), index, length);
         } catch (JCNativeException jcne) {
@@ -565,7 +797,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Clear(Array array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Clear", array == null ? null : array.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -575,7 +807,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void ConstrainedCopy(Array sourceArray, int sourceIndex, Array destinationArray, int destinationIndex, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConstrainedCopy", sourceArray == null ? null : sourceArray.getJCOInstance(), sourceIndex, destinationArray == null ? null : destinationArray.getJCOInstance(), destinationIndex, length);
         } catch (JCNativeException jcne) {
@@ -585,7 +817,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Copy(Array sourceArray, int sourceIndex, Array destinationArray, int destinationIndex, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceArray == null ? null : sourceArray.getJCOInstance(), sourceIndex, destinationArray == null ? null : destinationArray.getJCOInstance(), destinationIndex, length);
         } catch (JCNativeException jcne) {
@@ -595,7 +827,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Copy(Array sourceArray, long sourceIndex, Array destinationArray, long destinationIndex, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceArray == null ? null : sourceArray.getJCOInstance(), sourceIndex, destinationArray == null ? null : destinationArray.getJCOInstance(), destinationIndex, length);
         } catch (JCNativeException jcne) {
@@ -605,7 +837,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Copy(Array sourceArray, Array destinationArray, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceArray == null ? null : sourceArray.getJCOInstance(), destinationArray == null ? null : destinationArray.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -615,7 +847,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Copy(Array sourceArray, Array destinationArray, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Copy", sourceArray == null ? null : sourceArray.getJCOInstance(), destinationArray == null ? null : destinationArray.getJCOInstance(), length);
         } catch (JCNativeException jcne) {
@@ -625,7 +857,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void CopyTo(Array array, int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -635,7 +867,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void CopyTo(Array array, long index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", array == null ? null : array.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -645,7 +877,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void Initialize() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {
@@ -655,7 +887,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Reverse(Array array, int index, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Reverse", array == null ? null : array.getJCOInstance(), index, length);
         } catch (JCNativeException jcne) {
@@ -665,7 +897,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Reverse(Array array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Reverse", array == null ? null : array.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -675,7 +907,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, int index1, int index2, int index3) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index1, index2, index3);
         } catch (JCNativeException jcne) {
@@ -685,7 +917,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, int index1, int index2) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index1, index2);
         } catch (JCNativeException jcne) {
@@ -695,7 +927,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -705,7 +937,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, int... indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), indices);
         } catch (JCNativeException jcne) {
@@ -715,7 +947,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -725,7 +957,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, long index1, long index2, long index3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index1, index2, index3);
         } catch (JCNativeException jcne) {
@@ -735,7 +967,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, long index1, long index2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index1, index2);
         } catch (JCNativeException jcne) {
@@ -745,7 +977,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, long index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), index);
         } catch (JCNativeException jcne) {
@@ -755,7 +987,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public void SetValue(NetObject value, long... indices) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", value == null ? null : value.getJCOInstance(), indices);
         } catch (JCNativeException jcne) {
@@ -765,7 +997,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array array, int index, int length, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", array == null ? null : array.getJCOInstance(), index, length, comparer == null ? null : comparer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -775,7 +1007,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array array, int index, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", array == null ? null : array.getJCOInstance(), index, length);
         } catch (JCNativeException jcne) {
@@ -785,7 +1017,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array keys, Array items, int index, int length, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", keys == null ? null : keys.getJCOInstance(), items == null ? null : items.getJCOInstance(), index, length, comparer == null ? null : comparer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -795,7 +1027,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array keys, Array items, int index, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", keys == null ? null : keys.getJCOInstance(), items == null ? null : items.getJCOInstance(), index, length);
         } catch (JCNativeException jcne) {
@@ -805,7 +1037,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array keys, Array items, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", keys == null ? null : keys.getJCOInstance(), items == null ? null : items.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -815,7 +1047,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array keys, Array items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", keys == null ? null : keys.getJCOInstance(), items == null ? null : items.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -825,7 +1057,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array array, IComparer comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", array == null ? null : array.getJCOInstance(), comparer == null ? null : comparer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -835,7 +1067,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static void Sort(Array array) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Sort", array == null ? null : array.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -849,7 +1081,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -858,7 +1090,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -867,7 +1099,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -876,7 +1108,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -885,7 +1117,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -894,7 +1126,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -903,7 +1135,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public void RemoveAt(int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -912,7 +1144,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public int CompareTo(NetObject other, IComparer comparer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
     }
 
     /**
@@ -921,7 +1153,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public boolean Equals(NetObject other, IEqualityComparer comparer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
 
     /**
@@ -930,7 +1162,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
      */
     @Deprecated 
     public int GetHashCode(IEqualityComparer comparer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
 
 
@@ -939,9 +1171,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
     
     public boolean getIsFixedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixedSize = null;
         try {
-            return (boolean)classInstance.Get("IsFixedSize");
+            retObjectIsFixedSize = classInstance.Get("IsFixedSize");
+            return (boolean)retObjectIsFixedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixedSize != null ? retObjectIsFixedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -949,9 +1185,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -959,9 +1199,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public boolean getIsSynchronized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronized = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronized");
+            retObjectIsSynchronized = classInstance.Get("IsSynchronized");
+            return (boolean)retObjectIsSynchronized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronized != null ? retObjectIsSynchronized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -969,9 +1213,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public int getLength() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -979,9 +1227,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public static int getMaxLength() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classType.Get("MaxLength");
+            retObjectMaxLength = classType.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -989,9 +1241,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public int getRank() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRank = null;
         try {
-            return (int)classInstance.Get("Rank");
+            retObjectRank = classInstance.Get("Rank");
+            return (int)retObjectRank;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRank != null ? retObjectRank.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -999,9 +1255,13 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public long getLongLength() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLongLength = null;
         try {
-            return (long)classInstance.Get("LongLength");
+            retObjectLongLength = classInstance.Get("LongLength");
+            return (long)retObjectLongLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectLongLength != null ? retObjectLongLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1009,10 +1269,14 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
 
     public NetObject getSyncRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncRoot");
+            retObjectSyncRoot = classInstance.Get("SyncRoot");
+            JCObject val = (JCObject)retObjectSyncRoot;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncRoot != null ? retObjectSyncRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

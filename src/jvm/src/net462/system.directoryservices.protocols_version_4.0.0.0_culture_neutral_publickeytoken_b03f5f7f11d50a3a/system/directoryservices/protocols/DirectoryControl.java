@@ -165,10 +165,12 @@ public class DirectoryControl extends NetObject  {
     
     public byte[] GetValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
+            retObjectGetValue = classInstance.Invoke("GetValue");
+            JCObject resultingObjects = (JCObject)retObjectGetValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -177,6 +179,8 @@ public class DirectoryControl extends NetObject  {
 				resultingArray[indexGetValue] = (byte)resultingArrayList.get(indexGetValue);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class DirectoryControl extends NetObject  {
     
     public boolean getIsCritical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCritical = null;
         try {
-            return (boolean)classInstance.Get("IsCritical");
+            retObjectIsCritical = classInstance.Get("IsCritical");
+            return (boolean)retObjectIsCritical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCritical != null ? retObjectIsCritical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class DirectoryControl extends NetObject  {
 
     public void setIsCritical(boolean IsCritical) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsCritical", IsCritical);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class DirectoryControl extends NetObject  {
 
     public boolean getServerSide() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerSide = null;
         try {
-            return (boolean)classInstance.Get("ServerSide");
+            retObjectServerSide = classInstance.Get("ServerSide");
+            return (boolean)retObjectServerSide;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerSide != null ? retObjectServerSide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class DirectoryControl extends NetObject  {
 
     public void setServerSide(boolean ServerSide) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerSide", ServerSide);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class DirectoryControl extends NetObject  {
 
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

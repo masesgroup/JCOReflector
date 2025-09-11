@@ -186,9 +186,13 @@ public class LocalIdKeyIdentifierClause extends SecurityKeyIdentifierClause  {
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +200,13 @@ public class LocalIdKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public boolean Matches(java.lang.String localId, NetType ownerType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", localId, ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", localId, ownerType == null ? null : ownerType.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class LocalIdKeyIdentifierClause extends SecurityKeyIdentifierClause  {
     
     public java.lang.String getLocalId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalId = null;
         try {
-            return (java.lang.String)classInstance.Get("LocalId");
+            retObjectLocalId = classInstance.Get("LocalId");
+            return (java.lang.String)retObjectLocalId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocalId != null ? retObjectLocalId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +232,14 @@ public class LocalIdKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public NetType getOwnerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerType");
+            retObjectOwnerType = classInstance.Get("OwnerType");
+            JCObject val = (JCObject)retObjectOwnerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerType != null ? retObjectOwnerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

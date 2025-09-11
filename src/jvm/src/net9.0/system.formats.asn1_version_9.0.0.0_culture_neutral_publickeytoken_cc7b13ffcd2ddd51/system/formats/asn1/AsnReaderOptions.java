@@ -160,9 +160,13 @@ public class AsnReaderOptions extends ValueType  {
     
     public boolean getSkipSetSortOrderVerification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipSetSortOrderVerification = null;
         try {
-            return (boolean)classInstance.Get("SkipSetSortOrderVerification");
+            retObjectSkipSetSortOrderVerification = classInstance.Get("SkipSetSortOrderVerification");
+            return (boolean)retObjectSkipSetSortOrderVerification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipSetSortOrderVerification != null ? retObjectSkipSetSortOrderVerification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class AsnReaderOptions extends ValueType  {
 
     public void setSkipSetSortOrderVerification(boolean SkipSetSortOrderVerification) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipSetSortOrderVerification", SkipSetSortOrderVerification);
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class AsnReaderOptions extends ValueType  {
 
     public int getUtcTimeTwoDigitYearMax() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtcTimeTwoDigitYearMax = null;
         try {
-            return (int)classInstance.Get("UtcTimeTwoDigitYearMax");
+            retObjectUtcTimeTwoDigitYearMax = classInstance.Get("UtcTimeTwoDigitYearMax");
+            return (int)retObjectUtcTimeTwoDigitYearMax;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUtcTimeTwoDigitYearMax != null ? retObjectUtcTimeTwoDigitYearMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class AsnReaderOptions extends ValueType  {
 
     public void setUtcTimeTwoDigitYearMax(int UtcTimeTwoDigitYearMax) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UtcTimeTwoDigitYearMax", UtcTimeTwoDigitYearMax);
         } catch (JCNativeException jcne) {

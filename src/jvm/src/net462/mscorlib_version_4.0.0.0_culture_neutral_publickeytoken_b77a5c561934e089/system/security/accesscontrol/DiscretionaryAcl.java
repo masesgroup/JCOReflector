@@ -194,9 +194,13 @@ public class DiscretionaryAcl extends CommonAcl  {
     
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAccess = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance());
+            retObjectRemoveAccess = classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance());
+            return (boolean)retObjectRemoveAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAccess != null ? retObjectRemoveAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAccess = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), objectFlags == null ? null : objectFlags.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance());
+            retObjectRemoveAccess = classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), objectFlags == null ? null : objectFlags.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance());
+            return (boolean)retObjectRemoveAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAccess != null ? retObjectRemoveAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public boolean RemoveAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAccess = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
+            retObjectRemoveAccess = classInstance.Invoke("RemoveAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
+            return (boolean)retObjectRemoveAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAccess != null ? retObjectRemoveAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,7 +246,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), objectFlags == null ? null : objectFlags.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +256,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void AddAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +266,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAccessSpecific", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +276,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAccessSpecific", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), objectFlags == null ? null : objectFlags.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +286,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void RemoveAccessSpecific(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAccessSpecific", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +296,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,7 +306,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, int accessMask, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, ObjectAceFlags objectFlags, Guid objectType, Guid inheritedObjectType) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), accessMask, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), objectFlags == null ? null : objectFlags.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,7 +316,7 @@ public class DiscretionaryAcl extends CommonAcl  {
 
     public void SetAccess(AccessControlType accessType, SecurityIdentifier sid, ObjectAccessRule rule) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.SystemException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccess", accessType == null ? null : accessType.getJCOInstance(), sid == null ? null : sid.getJCOInstance(), rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {

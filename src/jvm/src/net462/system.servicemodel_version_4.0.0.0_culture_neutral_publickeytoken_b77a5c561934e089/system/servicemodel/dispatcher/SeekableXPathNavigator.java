@@ -156,9 +156,13 @@ public class SeekableXPathNavigator extends XPathNavigator  {
     
     public java.lang.String GetLocalName(long nodePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetLocalName", nodePosition);
+            retObjectGetLocalName = classInstance.Invoke("GetLocalName", nodePosition);
+            return (java.lang.String)retObjectGetLocalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetLocalName != null ? retObjectGetLocalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public java.lang.String GetName(long nodePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", nodePosition);
+            retObjectGetName = classInstance.Invoke("GetName", nodePosition);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public java.lang.String GetNamespace(long nodePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetNamespace", nodePosition);
+            retObjectGetNamespace = classInstance.Invoke("GetNamespace", nodePosition);
+            return (java.lang.String)retObjectGetNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetNamespace != null ? retObjectGetNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public java.lang.String GetValue(long nodePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetValue", nodePosition);
+            retObjectGetValue = classInstance.Invoke("GetValue", nodePosition);
+            return (java.lang.String)retObjectGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +212,14 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public XmlNodeOrder ComparePosition(long firstPosition, long secondPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComparePosition = null;
         try {
-            JCObject objComparePosition = (JCObject)classInstance.Invoke("ComparePosition", firstPosition, secondPosition);
+            retObjectComparePosition = classInstance.Invoke("ComparePosition", firstPosition, secondPosition);
+            JCObject objComparePosition = (JCObject)retObjectComparePosition;
             return new XmlNodeOrder(objComparePosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComparePosition != null ? retObjectComparePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +227,14 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public XPathNodeType GetNodeType(long nodePosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNodeType = null;
         try {
-            JCObject objGetNodeType = (JCObject)classInstance.Invoke("GetNodeType", nodePosition);
+            retObjectGetNodeType = classInstance.Invoke("GetNodeType", nodePosition);
+            JCObject objGetNodeType = (JCObject)retObjectGetNodeType;
             return new XPathNodeType(objGetNodeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNodeType != null ? retObjectGetNodeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +246,13 @@ public class SeekableXPathNavigator extends XPathNavigator  {
     
     public long getCurrentPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPosition = null;
         try {
-            return (long)classInstance.Get("CurrentPosition");
+            retObjectCurrentPosition = classInstance.Get("CurrentPosition");
+            return (long)retObjectCurrentPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCurrentPosition != null ? retObjectCurrentPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +260,7 @@ public class SeekableXPathNavigator extends XPathNavigator  {
 
     public void setCurrentPosition(long CurrentPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPosition", CurrentPosition);
         } catch (JCNativeException jcne) {

@@ -158,9 +158,13 @@ public class BrowserInteropHelper extends NetObject  {
     
     public static boolean getIsBrowserHosted() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsBrowserHosted = null;
         try {
-            return (boolean)classType.Get("IsBrowserHosted");
+            retObjectIsBrowserHosted = classType.Get("IsBrowserHosted");
+            return (boolean)retObjectIsBrowserHosted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBrowserHosted != null ? retObjectIsBrowserHosted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class BrowserInteropHelper extends NetObject  {
 
     public static NetObject getClientSite() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClientSite = null;
         try {
-            JCObject val = (JCObject)classType.Get("ClientSite");
+            retObjectClientSite = classType.Get("ClientSite");
+            JCObject val = (JCObject)retObjectClientSite;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientSite != null ? retObjectClientSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class BrowserInteropHelper extends NetObject  {
 
     public static NetObject getHostScript() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.RankException, system.OutOfMemoryException, system.reflection.TargetParameterCountException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHostScript = null;
         try {
-            JCObject val = (JCObject)classType.Get("HostScript");
+            retObjectHostScript = classType.Get("HostScript");
+            JCObject val = (JCObject)retObjectHostScript;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostScript != null ? retObjectHostScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class BrowserInteropHelper extends NetObject  {
 
     public static Uri getSource() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("Source");
+            retObjectSource = classType.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

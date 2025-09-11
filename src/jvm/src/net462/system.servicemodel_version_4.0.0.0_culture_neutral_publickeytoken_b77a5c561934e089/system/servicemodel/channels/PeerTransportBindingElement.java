@@ -174,10 +174,14 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
     
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +193,7 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -198,7 +202,7 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -207,7 +211,7 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -216,9 +220,13 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
     
     public int getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +234,7 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
 
     public void setPort(int Port) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Port", Port);
         } catch (JCNativeException jcne) {
@@ -236,10 +244,14 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
 
     public IPAddress getListenIPAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenIPAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenIPAddress");
+            retObjectListenIPAddress = classInstance.Get("ListenIPAddress");
+            JCObject val = (JCObject)retObjectListenIPAddress;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenIPAddress != null ? retObjectListenIPAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +259,7 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
 
     public void setListenIPAddress(IPAddress ListenIPAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenIPAddress", ListenIPAddress == null ? null : ListenIPAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,10 +269,14 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
 
     public PeerSecuritySettings getSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new PeerSecuritySettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

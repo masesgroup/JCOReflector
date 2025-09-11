@@ -148,9 +148,13 @@ public class IDataItemContainerImplementation extends NetObject implements IData
     
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItemIndex = null;
         try {
-            return (int)classInstance.Get("DataItemIndex");
+            retObjectDataItemIndex = classInstance.Get("DataItemIndex");
+            return (int)retObjectDataItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +162,13 @@ public class IDataItemContainerImplementation extends NetObject implements IData
 
     public int getDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayIndex = null;
         try {
-            return (int)classInstance.Get("DisplayIndex");
+            retObjectDisplayIndex = classInstance.Get("DisplayIndex");
+            return (int)retObjectDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDisplayIndex != null ? retObjectDisplayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +176,14 @@ public class IDataItemContainerImplementation extends NetObject implements IData
 
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataItem");
+            retObjectDataItem = classInstance.Get("DataItem");
+            JCObject val = (JCObject)retObjectDataItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataItem != null ? retObjectDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

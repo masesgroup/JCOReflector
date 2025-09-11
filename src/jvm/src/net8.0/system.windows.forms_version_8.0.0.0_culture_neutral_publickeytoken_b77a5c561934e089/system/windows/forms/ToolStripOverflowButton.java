@@ -157,10 +157,14 @@ public class ToolStripOverflowButton extends ToolStripDropDownButton  {
     
     public Size GetPreferredSize(Size constrainingSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ToolStripOverflowButton extends ToolStripDropDownButton  {
     
     public boolean getRightToLeftAutoMirrorImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftAutoMirrorImage = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftAutoMirrorImage");
+            retObjectRightToLeftAutoMirrorImage = classInstance.Get("RightToLeftAutoMirrorImage");
+            return (boolean)retObjectRightToLeftAutoMirrorImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftAutoMirrorImage != null ? retObjectRightToLeftAutoMirrorImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class ToolStripOverflowButton extends ToolStripDropDownButton  {
 
     public void setRightToLeftAutoMirrorImage(boolean RightToLeftAutoMirrorImage) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftAutoMirrorImage", RightToLeftAutoMirrorImage);
         } catch (JCNativeException jcne) {

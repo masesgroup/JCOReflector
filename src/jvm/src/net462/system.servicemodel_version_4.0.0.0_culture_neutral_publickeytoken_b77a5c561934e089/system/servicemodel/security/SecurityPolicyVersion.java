@@ -158,10 +158,14 @@ public class SecurityPolicyVersion extends NetObject  {
     
     public static SecurityPolicyVersion getWSSecurityPolicy11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecurityPolicy11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurityPolicy11");
+            retObjectWSSecurityPolicy11 = classType.Get("WSSecurityPolicy11");
+            JCObject val = (JCObject)retObjectWSSecurityPolicy11;
             return new SecurityPolicyVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecurityPolicy11 != null ? retObjectWSSecurityPolicy11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SecurityPolicyVersion extends NetObject  {
 
     public static SecurityPolicyVersion getWSSecurityPolicy12() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSSecurityPolicy12 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSSecurityPolicy12");
+            retObjectWSSecurityPolicy12 = classType.Get("WSSecurityPolicy12");
+            JCObject val = (JCObject)retObjectWSSecurityPolicy12;
             return new SecurityPolicyVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSSecurityPolicy12 != null ? retObjectWSSecurityPolicy12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class SecurityPolicyVersion extends NetObject  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class SecurityPolicyVersion extends NetObject  {
 
     public java.lang.String getPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("Prefix");
+            retObjectPrefix = classInstance.Get("Prefix");
+            return (java.lang.String)retObjectPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrefix != null ? retObjectPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

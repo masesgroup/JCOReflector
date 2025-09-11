@@ -157,10 +157,14 @@ public class X509CertificateLoader extends NetObject  {
     
     public static X509Certificate2 LoadCertificate(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadCertificate = null;
         try {
-            JCObject objLoadCertificate = (JCObject)classType.Invoke("LoadCertificate", (java.lang.Object)data);
+            retObjectLoadCertificate = classType.Invoke("LoadCertificate", (java.lang.Object)data);
+            JCObject objLoadCertificate = (JCObject)retObjectLoadCertificate;
             return new X509Certificate2(objLoadCertificate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadCertificate != null ? retObjectLoadCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2 LoadCertificate(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadCertificate = null;
         try {
-            JCObject objLoadCertificate = (JCObject)classType.Invoke("LoadCertificate", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectLoadCertificate = classType.Invoke("LoadCertificate", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objLoadCertificate = (JCObject)retObjectLoadCertificate;
             return new X509Certificate2(objLoadCertificate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadCertificate != null ? retObjectLoadCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2 LoadCertificateFromFile(java.lang.String path) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadCertificateFromFile = null;
         try {
-            JCObject objLoadCertificateFromFile = (JCObject)classType.Invoke("LoadCertificateFromFile", path);
+            retObjectLoadCertificateFromFile = classType.Invoke("LoadCertificateFromFile", path);
+            JCObject objLoadCertificateFromFile = (JCObject)retObjectLoadCertificateFromFile;
             return new X509Certificate2(objLoadCertificateFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadCertificateFromFile != null ? retObjectLoadCertificateFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2 LoadPkcs12(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12 = null;
         try {
-            JCObject objLoadPkcs12 = (JCObject)classType.Invoke("LoadPkcs12", data, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            retObjectLoadPkcs12 = classType.Invoke("LoadPkcs12", data, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            JCObject objLoadPkcs12 = (JCObject)retObjectLoadPkcs12;
             return new X509Certificate2(objLoadPkcs12);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12 != null ? retObjectLoadPkcs12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2 LoadPkcs12(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12 = null;
         try {
-            JCObject objLoadPkcs12 = (JCObject)classType.Invoke("LoadPkcs12", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectLoadPkcs12 = classType.Invoke("LoadPkcs12", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objLoadPkcs12 = (JCObject)retObjectLoadPkcs12;
             return new X509Certificate2(objLoadPkcs12);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12 != null ? retObjectLoadPkcs12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2 LoadPkcs12FromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12FromFile = null;
         try {
-            JCObject objLoadPkcs12FromFile = (JCObject)classType.Invoke("LoadPkcs12FromFile", path, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            retObjectLoadPkcs12FromFile = classType.Invoke("LoadPkcs12FromFile", path, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            JCObject objLoadPkcs12FromFile = (JCObject)retObjectLoadPkcs12FromFile;
             return new X509Certificate2(objLoadPkcs12FromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12FromFile != null ? retObjectLoadPkcs12FromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2Collection LoadPkcs12Collection(byte[] data, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12Collection = null;
         try {
-            JCObject objLoadPkcs12Collection = (JCObject)classType.Invoke("LoadPkcs12Collection", data, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            retObjectLoadPkcs12Collection = classType.Invoke("LoadPkcs12Collection", data, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            JCObject objLoadPkcs12Collection = (JCObject)retObjectLoadPkcs12Collection;
             return new X509Certificate2Collection(objLoadPkcs12Collection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12Collection != null ? retObjectLoadPkcs12Collection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2Collection LoadPkcs12Collection(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2, Pkcs12LoaderLimits dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12Collection = null;
         try {
-            JCObject objLoadPkcs12Collection = (JCObject)classType.Invoke("LoadPkcs12Collection", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectLoadPkcs12Collection = classType.Invoke("LoadPkcs12Collection", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objLoadPkcs12Collection = (JCObject)retObjectLoadPkcs12Collection;
             return new X509Certificate2Collection(objLoadPkcs12Collection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12Collection != null ? retObjectLoadPkcs12Collection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class X509CertificateLoader extends NetObject  {
 
     public static X509Certificate2Collection LoadPkcs12CollectionFromFile(java.lang.String path, java.lang.String password, X509KeyStorageFlags keyStorageFlags, Pkcs12LoaderLimits loaderLimits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.security.cryptography.x509certificates.Pkcs12LoadLimitExceededException, system.OverflowException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoadPkcs12CollectionFromFile = null;
         try {
-            JCObject objLoadPkcs12CollectionFromFile = (JCObject)classType.Invoke("LoadPkcs12CollectionFromFile", path, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            retObjectLoadPkcs12CollectionFromFile = classType.Invoke("LoadPkcs12CollectionFromFile", path, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance(), loaderLimits == null ? null : loaderLimits.getJCOInstance());
+            JCObject objLoadPkcs12CollectionFromFile = (JCObject)retObjectLoadPkcs12CollectionFromFile;
             return new X509Certificate2Collection(objLoadPkcs12CollectionFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadPkcs12CollectionFromFile != null ? retObjectLoadPkcs12CollectionFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,10 +175,14 @@ public class NumberSubstitution extends NetObject  {
     
     public static CultureInfo GetCultureOverride(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureOverride = null;
         try {
-            JCObject objGetCultureOverride = (JCObject)classType.Invoke("GetCultureOverride", target == null ? null : target.getJCOInstance());
+            retObjectGetCultureOverride = classType.Invoke("GetCultureOverride", target == null ? null : target.getJCOInstance());
+            JCObject objGetCultureOverride = (JCObject)retObjectGetCultureOverride;
             return new CultureInfo(objGetCultureOverride);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureOverride != null ? retObjectGetCultureOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class NumberSubstitution extends NetObject  {
 
     public static NumberCultureSource GetCultureSource(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCultureSource = null;
         try {
-            JCObject objGetCultureSource = (JCObject)classType.Invoke("GetCultureSource", target == null ? null : target.getJCOInstance());
+            retObjectGetCultureSource = classType.Invoke("GetCultureSource", target == null ? null : target.getJCOInstance());
+            JCObject objGetCultureSource = (JCObject)retObjectGetCultureSource;
             return new NumberCultureSource(objGetCultureSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCultureSource != null ? retObjectGetCultureSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class NumberSubstitution extends NetObject  {
 
     public static NumberSubstitutionMethod GetSubstitution(DependencyObject target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSubstitution = null;
         try {
-            JCObject objGetSubstitution = (JCObject)classType.Invoke("GetSubstitution", target == null ? null : target.getJCOInstance());
+            retObjectGetSubstitution = classType.Invoke("GetSubstitution", target == null ? null : target.getJCOInstance());
+            JCObject objGetSubstitution = (JCObject)retObjectGetSubstitution;
             return new NumberSubstitutionMethod(objGetSubstitution);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSubstitution != null ? retObjectGetSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class NumberSubstitution extends NetObject  {
 
     public static void SetCultureOverride(DependencyObject target, CultureInfo value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCultureOverride", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,7 +230,7 @@ public class NumberSubstitution extends NetObject  {
 
     public static void SetCultureSource(DependencyObject target, NumberCultureSource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCultureSource", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,7 +240,7 @@ public class NumberSubstitution extends NetObject  {
 
     public static void SetSubstitution(DependencyObject target, NumberSubstitutionMethod value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSubstitution", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +254,14 @@ public class NumberSubstitution extends NetObject  {
     
     public CultureInfo getCultureOverride() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureOverride = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureOverride");
+            retObjectCultureOverride = classInstance.Get("CultureOverride");
+            JCObject val = (JCObject)retObjectCultureOverride;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureOverride != null ? retObjectCultureOverride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +269,7 @@ public class NumberSubstitution extends NetObject  {
 
     public void setCultureOverride(CultureInfo CultureOverride) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureOverride", CultureOverride == null ? null : CultureOverride.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +279,14 @@ public class NumberSubstitution extends NetObject  {
 
     public NumberCultureSource getCultureSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CultureSource");
+            retObjectCultureSource = classInstance.Get("CultureSource");
+            JCObject val = (JCObject)retObjectCultureSource;
             return new NumberCultureSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCultureSource != null ? retObjectCultureSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class NumberSubstitution extends NetObject  {
 
     public void setCultureSource(NumberCultureSource CultureSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CultureSource", CultureSource == null ? null : CultureSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +304,14 @@ public class NumberSubstitution extends NetObject  {
 
     public NumberSubstitutionMethod getSubstitution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubstitution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Substitution");
+            retObjectSubstitution = classInstance.Get("Substitution");
+            JCObject val = (JCObject)retObjectSubstitution;
             return new NumberSubstitutionMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubstitution != null ? retObjectSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +319,7 @@ public class NumberSubstitution extends NetObject  {
 
     public void setSubstitution(NumberSubstitutionMethod Substitution) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Substitution", Substitution == null ? null : Substitution.getJCOInstance());
         } catch (JCNativeException jcne) {

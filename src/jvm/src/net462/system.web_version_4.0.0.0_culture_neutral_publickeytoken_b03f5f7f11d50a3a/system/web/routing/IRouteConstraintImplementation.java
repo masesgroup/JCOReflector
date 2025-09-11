@@ -146,9 +146,13 @@ public class IRouteConstraintImplementation extends NetObject implements IRouteC
     
     public boolean Match(HttpContextBase httpContext, Route route, java.lang.String parameterName, RouteValueDictionary values, RouteDirection routeDirection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", httpContext == null ? null : httpContext.getJCOInstance(), route == null ? null : route.getJCOInstance(), parameterName, values == null ? null : values.getJCOInstance(), routeDirection == null ? null : routeDirection.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", httpContext == null ? null : httpContext.getJCOInstance(), route == null ? null : route.getJCOInstance(), parameterName, values == null ? null : values.getJCOInstance(), routeDirection == null ? null : routeDirection.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

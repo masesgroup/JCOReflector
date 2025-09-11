@@ -171,9 +171,13 @@ public class FieldMetadata extends ValueType  {
     
     public int getOrdinal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrdinal = null;
         try {
-            return (int)classInstance.Get("Ordinal");
+            retObjectOrdinal = classInstance.Get("Ordinal");
+            return (int)retObjectOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOrdinal != null ? retObjectOrdinal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class FieldMetadata extends ValueType  {
 
     public EdmMember getFieldType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFieldType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FieldType");
+            retObjectFieldType = classInstance.Get("FieldType");
+            JCObject val = (JCObject)retObjectFieldType;
             return new EdmMember(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFieldType != null ? retObjectFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

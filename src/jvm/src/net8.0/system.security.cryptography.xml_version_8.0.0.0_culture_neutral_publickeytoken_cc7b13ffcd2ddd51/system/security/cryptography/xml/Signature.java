@@ -167,10 +167,14 @@ public class Signature extends NetObject  {
     
     public XmlElement GetXml() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXml = null;
         try {
-            JCObject objGetXml = (JCObject)classInstance.Invoke("GetXml");
+            retObjectGetXml = classInstance.Invoke("GetXml");
+            JCObject objGetXml = (JCObject)retObjectGetXml;
             return new XmlElement(objGetXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXml != null ? retObjectGetXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class Signature extends NetObject  {
 
     public void AddObject(DataObject dataObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddObject", dataObject == null ? null : dataObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class Signature extends NetObject  {
 
     public void LoadXml(XmlElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadXml", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +206,12 @@ public class Signature extends NetObject  {
     
     public byte[] getSignatureValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignatureValue = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SignatureValue");
+            retObjectSignatureValue = classInstance.Get("SignatureValue");
+            JCObject resultingObjects = (JCObject)retObjectSignatureValue;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -214,6 +220,8 @@ public class Signature extends NetObject  {
 				resultingArray[indexSignatureValue] = (byte)resultingArrayList.get(indexSignatureValue);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSignatureValue != null ? retObjectSignatureValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class Signature extends NetObject  {
 
     public void setSignatureValue(byte[] SignatureValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SignatureValue", SignatureValue);
         } catch (JCNativeException jcne) {
@@ -231,10 +239,14 @@ public class Signature extends NetObject  {
 
     public IList getObjectList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectList");
+            retObjectObjectList = classInstance.Get("ObjectList");
+            JCObject val = (JCObject)retObjectObjectList;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectList != null ? retObjectObjectList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class Signature extends NetObject  {
 
     public void setObjectList(IList ObjectList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectList", ObjectList == null ? null : ObjectList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +264,14 @@ public class Signature extends NetObject  {
 
     public KeyInfo getKeyInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyInfo");
+            retObjectKeyInfo = classInstance.Get("KeyInfo");
+            JCObject val = (JCObject)retObjectKeyInfo;
             return new KeyInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyInfo != null ? retObjectKeyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class Signature extends NetObject  {
 
     public void setKeyInfo(KeyInfo KeyInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyInfo", KeyInfo == null ? null : KeyInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +289,14 @@ public class Signature extends NetObject  {
 
     public SignedInfo getSignedInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignedInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SignedInfo");
+            retObjectSignedInfo = classInstance.Get("SignedInfo");
+            JCObject val = (JCObject)retObjectSignedInfo;
             return new SignedInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignedInfo != null ? retObjectSignedInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class Signature extends NetObject  {
 
     public void setSignedInfo(SignedInfo SignedInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SignedInfo", SignedInfo == null ? null : SignedInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,9 +314,13 @@ public class Signature extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +328,7 @@ public class Signature extends NetObject  {
 
     public void setId(java.lang.String Id) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id);
         } catch (JCNativeException jcne) {

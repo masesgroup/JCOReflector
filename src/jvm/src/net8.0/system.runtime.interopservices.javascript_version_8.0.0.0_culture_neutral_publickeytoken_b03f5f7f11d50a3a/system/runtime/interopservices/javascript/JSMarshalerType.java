@@ -156,10 +156,14 @@ public class JSMarshalerType extends NetObject  {
     
     public static JSMarshalerType Action() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject objAction = (JCObject)classType.Invoke("Action");
+            retObjectAction = classType.Invoke("Action");
+            JCObject objAction = (JCObject)retObjectAction;
             return new JSMarshalerType(objAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Action(JSMarshalerType arg1, JSMarshalerType arg2, JSMarshalerType arg3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject objAction = (JCObject)classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectAction = classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objAction = (JCObject)retObjectAction;
             return new JSMarshalerType(objAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Action(JSMarshalerType arg1, JSMarshalerType arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject objAction = (JCObject)classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectAction = classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objAction = (JCObject)retObjectAction;
             return new JSMarshalerType(objAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Action(JSMarshalerType arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            JCObject objAction = (JCObject)classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance());
+            retObjectAction = classType.Invoke("Action", arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objAction = (JCObject)retObjectAction;
             return new JSMarshalerType(objAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Array(JSMarshalerType element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArray = null;
         try {
-            JCObject objArray = (JCObject)classType.Invoke("Array", element == null ? null : element.getJCOInstance());
+            retObjectArray = classType.Invoke("Array", element == null ? null : element.getJCOInstance());
+            JCObject objArray = (JCObject)retObjectArray;
             return new JSMarshalerType(objArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArray != null ? retObjectArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType ArraySegment(JSMarshalerType element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArraySegment = null;
         try {
-            JCObject objArraySegment = (JCObject)classType.Invoke("ArraySegment", element == null ? null : element.getJCOInstance());
+            retObjectArraySegment = classType.Invoke("ArraySegment", element == null ? null : element.getJCOInstance());
+            JCObject objArraySegment = (JCObject)retObjectArraySegment;
             return new JSMarshalerType(objArraySegment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArraySegment != null ? retObjectArraySegment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Function(JSMarshalerType arg1, JSMarshalerType arg2, JSMarshalerType arg3, JSMarshalerType result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject objFunction = (JCObject)classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            retObjectFunction = classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            JCObject objFunction = (JCObject)retObjectFunction;
             return new JSMarshalerType(objFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +261,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Function(JSMarshalerType arg1, JSMarshalerType arg2, JSMarshalerType result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject objFunction = (JCObject)classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            retObjectFunction = classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            JCObject objFunction = (JCObject)retObjectFunction;
             return new JSMarshalerType(objFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +276,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Function(JSMarshalerType arg1, JSMarshalerType result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject objFunction = (JCObject)classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            retObjectFunction = classType.Invoke("Function", arg1 == null ? null : arg1.getJCOInstance(), result == null ? null : result.getJCOInstance());
+            JCObject objFunction = (JCObject)retObjectFunction;
             return new JSMarshalerType(objFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +291,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Function(JSMarshalerType result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFunction = null;
         try {
-            JCObject objFunction = (JCObject)classType.Invoke("Function", result == null ? null : result.getJCOInstance());
+            retObjectFunction = classType.Invoke("Function", result == null ? null : result.getJCOInstance());
+            JCObject objFunction = (JCObject)retObjectFunction;
             return new JSMarshalerType(objFunction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunction != null ? retObjectFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +306,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Nullable(JSMarshalerType primitive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNullable = null;
         try {
-            JCObject objNullable = (JCObject)classType.Invoke("Nullable", primitive == null ? null : primitive.getJCOInstance());
+            retObjectNullable = classType.Invoke("Nullable", primitive == null ? null : primitive.getJCOInstance());
+            JCObject objNullable = (JCObject)retObjectNullable;
             return new JSMarshalerType(objNullable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNullable != null ? retObjectNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +321,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Span(JSMarshalerType element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpan = null;
         try {
-            JCObject objSpan = (JCObject)classType.Invoke("Span", element == null ? null : element.getJCOInstance());
+            retObjectSpan = classType.Invoke("Span", element == null ? null : element.getJCOInstance());
+            JCObject objSpan = (JCObject)retObjectSpan;
             return new JSMarshalerType(objSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpan != null ? retObjectSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +336,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Task() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject objTask = (JCObject)classType.Invoke("Task");
+            retObjectTask = classType.Invoke("Task");
+            JCObject objTask = (JCObject)retObjectTask;
             return new JSMarshalerType(objTask);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +351,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType Task(JSMarshalerType result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject objTask = (JCObject)classType.Invoke("Task", result == null ? null : result.getJCOInstance());
+            retObjectTask = classType.Invoke("Task", result == null ? null : result.getJCOInstance());
+            JCObject objTask = (JCObject)retObjectTask;
             return new JSMarshalerType(objTask);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +370,14 @@ public class JSMarshalerType extends NetObject  {
     
     public static JSMarshalerType getBigInt64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBigInt64 = null;
         try {
-            JCObject val = (JCObject)classType.Get("BigInt64");
+            retObjectBigInt64 = classType.Get("BigInt64");
+            JCObject val = (JCObject)retObjectBigInt64;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBigInt64 != null ? retObjectBigInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +385,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getBoolean() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBoolean = null;
         try {
-            JCObject val = (JCObject)classType.Get("Boolean");
+            retObjectBoolean = classType.Get("Boolean");
+            JCObject val = (JCObject)retObjectBoolean;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoolean != null ? retObjectBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +400,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getByte() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectByte = null;
         try {
-            JCObject val = (JCObject)classType.Get("Byte");
+            retObjectByte = classType.Get("Byte");
+            JCObject val = (JCObject)retObjectByte;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectByte != null ? retObjectByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +415,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getChar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChar = null;
         try {
-            JCObject val = (JCObject)classType.Get("Char");
+            retObjectChar = classType.Get("Char");
+            JCObject val = (JCObject)retObjectChar;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChar != null ? retObjectChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +430,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getDateTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("DateTime");
+            retObjectDateTime = classType.Get("DateTime");
+            JCObject val = (JCObject)retObjectDateTime;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTime != null ? retObjectDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,10 +445,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getDateTimeOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateTimeOffset = null;
         try {
-            JCObject val = (JCObject)classType.Get("DateTimeOffset");
+            retObjectDateTimeOffset = classType.Get("DateTimeOffset");
+            JCObject val = (JCObject)retObjectDateTimeOffset;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDateTimeOffset != null ? retObjectDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,10 +460,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getDiscard() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDiscard = null;
         try {
-            JCObject val = (JCObject)classType.Get("Discard");
+            retObjectDiscard = classType.Get("Discard");
+            JCObject val = (JCObject)retObjectDiscard;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiscard != null ? retObjectDiscard.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,10 +475,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDouble = null;
         try {
-            JCObject val = (JCObject)classType.Get("Double");
+            retObjectDouble = classType.Get("Double");
+            JCObject val = (JCObject)retObjectDouble;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDouble != null ? retObjectDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +490,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getException() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classType.Get("Exception");
+            retObjectException = classType.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +505,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getInt16() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt16 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Int16");
+            retObjectInt16 = classType.Get("Int16");
+            JCObject val = (JCObject)retObjectInt16;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt16 != null ? retObjectInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +520,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getInt32() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt32 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Int32");
+            retObjectInt32 = classType.Get("Int32");
+            JCObject val = (JCObject)retObjectInt32;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt32 != null ? retObjectInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +535,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getInt52() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInt52 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Int52");
+            retObjectInt52 = classType.Get("Int52");
+            JCObject val = (JCObject)retObjectInt52;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInt52 != null ? retObjectInt52.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +550,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getIntPtr() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntPtr = null;
         try {
-            JCObject val = (JCObject)classType.Get("IntPtr");
+            retObjectIntPtr = classType.Get("IntPtr");
+            JCObject val = (JCObject)retObjectIntPtr;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntPtr != null ? retObjectIntPtr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +565,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getJSObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJSObject = null;
         try {
-            JCObject val = (JCObject)classType.Get("JSObject");
+            retObjectJSObject = classType.Get("JSObject");
+            JCObject val = (JCObject)retObjectJSObject;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJSObject != null ? retObjectJSObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +580,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectObject = null;
         try {
-            JCObject val = (JCObject)classType.Get("Object");
+            retObjectObject = classType.Get("Object");
+            JCObject val = (JCObject)retObjectObject;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObject != null ? retObjectObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +595,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getSingle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSingle = null;
         try {
-            JCObject val = (JCObject)classType.Get("Single");
+            retObjectSingle = classType.Get("Single");
+            JCObject val = (JCObject)retObjectSingle;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSingle != null ? retObjectSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +610,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectString = null;
         try {
-            JCObject val = (JCObject)classType.Get("String");
+            retObjectString = classType.Get("String");
+            JCObject val = (JCObject)retObjectString;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectString != null ? retObjectString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +625,14 @@ public class JSMarshalerType extends NetObject  {
 
     public static JSMarshalerType getVoid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVoid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Void");
+            retObjectVoid = classType.Get("Void");
+            JCObject val = (JCObject)retObjectVoid;
             return new JSMarshalerType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVoid != null ? retObjectVoid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

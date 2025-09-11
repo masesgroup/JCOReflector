@@ -151,10 +151,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
     
     public RefreshResponseInfo Refresh(RefreshInfo refreshInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRefresh = null;
         try {
-            JCObject objRefresh = (JCObject)classInstance.Invoke("Refresh", refreshInfo == null ? null : refreshInfo.getJCOInstance());
+            retObjectRefresh = classInstance.Invoke("Refresh", refreshInfo == null ? null : refreshInfo.getJCOInstance());
+            JCObject objRefresh = (JCObject)retObjectRefresh;
             return new RefreshResponseInfo(objRefresh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRefresh != null ? retObjectRefresh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +166,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     public RegisterResponseInfo Register(RegisterInfo registerInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegister = null;
         try {
-            JCObject objRegister = (JCObject)classInstance.Invoke("Register", registerInfo == null ? null : registerInfo.getJCOInstance());
+            retObjectRegister = classInstance.Invoke("Register", registerInfo == null ? null : registerInfo.getJCOInstance());
+            JCObject objRegister = (JCObject)retObjectRegister;
             return new RegisterResponseInfo(objRegister);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegister != null ? retObjectRegister.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +181,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     public RegisterResponseInfo Update(UpdateInfo updateInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdate = null;
         try {
-            JCObject objUpdate = (JCObject)classInstance.Invoke("Update", updateInfo == null ? null : updateInfo.getJCOInstance());
+            retObjectUpdate = classInstance.Invoke("Update", updateInfo == null ? null : updateInfo.getJCOInstance());
+            JCObject objUpdate = (JCObject)retObjectUpdate;
             return new RegisterResponseInfo(objUpdate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdate != null ? retObjectUpdate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +196,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     public ResolveResponseInfo Resolve(ResolveInfo resolveInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolve = null;
         try {
-            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", resolveInfo == null ? null : resolveInfo.getJCOInstance());
+            retObjectResolve = classInstance.Invoke("Resolve", resolveInfo == null ? null : resolveInfo.getJCOInstance());
+            JCObject objResolve = (JCObject)retObjectResolve;
             return new ResolveResponseInfo(objResolve);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolve != null ? retObjectResolve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +211,14 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     public ServiceSettingsResponseInfo GetServiceSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServiceSettings = null;
         try {
-            JCObject objGetServiceSettings = (JCObject)classInstance.Invoke("GetServiceSettings");
+            retObjectGetServiceSettings = classInstance.Invoke("GetServiceSettings");
+            JCObject objGetServiceSettings = (JCObject)retObjectGetServiceSettings;
             return new ServiceSettingsResponseInfo(objGetServiceSettings);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServiceSettings != null ? retObjectGetServiceSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +226,7 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
 
     public void Unregister(UnregisterInfo unregisterInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unregister", unregisterInfo == null ? null : unregisterInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

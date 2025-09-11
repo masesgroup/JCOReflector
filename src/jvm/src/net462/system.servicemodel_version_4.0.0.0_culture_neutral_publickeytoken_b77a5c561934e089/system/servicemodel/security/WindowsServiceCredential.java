@@ -159,9 +159,13 @@ public class WindowsServiceCredential extends NetObject  {
     
     public boolean getAllowAnonymousLogons() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowAnonymousLogons = null;
         try {
-            return (boolean)classInstance.Get("AllowAnonymousLogons");
+            retObjectAllowAnonymousLogons = classInstance.Get("AllowAnonymousLogons");
+            return (boolean)retObjectAllowAnonymousLogons;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowAnonymousLogons != null ? retObjectAllowAnonymousLogons.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class WindowsServiceCredential extends NetObject  {
 
     public void setAllowAnonymousLogons(boolean AllowAnonymousLogons) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowAnonymousLogons", AllowAnonymousLogons);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class WindowsServiceCredential extends NetObject  {
 
     public boolean getIncludeWindowsGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeWindowsGroups = null;
         try {
-            return (boolean)classInstance.Get("IncludeWindowsGroups");
+            retObjectIncludeWindowsGroups = classInstance.Get("IncludeWindowsGroups");
+            return (boolean)retObjectIncludeWindowsGroups;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeWindowsGroups != null ? retObjectIncludeWindowsGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class WindowsServiceCredential extends NetObject  {
 
     public void setIncludeWindowsGroups(boolean IncludeWindowsGroups) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeWindowsGroups", IncludeWindowsGroups);
         } catch (JCNativeException jcne) {

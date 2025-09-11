@@ -155,7 +155,7 @@ public class WebEventFormatter extends NetObject  {
     
     public void AppendLine(java.lang.String s) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendLine", s);
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class WebEventFormatter extends NetObject  {
     
     public int getIndentationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentationLevel = null;
         try {
-            return (int)classInstance.Get("IndentationLevel");
+            retObjectIndentationLevel = classInstance.Get("IndentationLevel");
+            return (int)retObjectIndentationLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIndentationLevel != null ? retObjectIndentationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class WebEventFormatter extends NetObject  {
 
     public void setIndentationLevel(int IndentationLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentationLevel", IndentationLevel);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class WebEventFormatter extends NetObject  {
 
     public int getTabSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabSize = null;
         try {
-            return (int)classInstance.Get("TabSize");
+            retObjectTabSize = classInstance.Get("TabSize");
+            return (int)retObjectTabSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTabSize != null ? retObjectTabSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class WebEventFormatter extends NetObject  {
 
     public void setTabSize(int TabSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabSize", TabSize);
         } catch (JCNativeException jcne) {

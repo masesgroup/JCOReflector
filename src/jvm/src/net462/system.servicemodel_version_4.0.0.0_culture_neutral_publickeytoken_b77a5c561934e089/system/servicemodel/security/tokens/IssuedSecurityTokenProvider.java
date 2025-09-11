@@ -174,10 +174,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
     
     public IAsyncResult BeginClose(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public IAsyncResult BeginClose(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginClose = null;
         try {
-            JCObject objBeginClose = (JCObject)classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginClose = classInstance.Invoke("BeginClose", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginClose = (JCObject)retObjectBeginClose;
             return new IAsyncResultImplementation(objBeginClose);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginClose != null ? retObjectBeginClose.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public IAsyncResult BeginOpen(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public IAsyncResult BeginOpen(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginOpen = null;
         try {
-            JCObject objBeginOpen = (JCObject)classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginOpen = classInstance.Invoke("BeginOpen", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginOpen = (JCObject)retObjectBeginOpen;
             return new IAsyncResultImplementation(objBeginOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginOpen != null ? retObjectBeginOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +234,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Abort() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -228,7 +244,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Close() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -238,7 +254,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Close(TimeSpan timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +264,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -258,7 +274,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void EndClose(IAsyncResult result) throws Throwable, system.MulticastNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndClose", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +284,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void EndOpen(IAsyncResult result) throws Throwable, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,7 +294,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Open() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open");
         } catch (JCNativeException jcne) {
@@ -288,7 +304,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void Open(TimeSpan timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Open", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,9 +318,13 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
     
     public boolean getCacheIssuedTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheIssuedTokens = null;
         try {
-            return (boolean)classInstance.Get("CacheIssuedTokens");
+            retObjectCacheIssuedTokens = classInstance.Get("CacheIssuedTokens");
+            return (boolean)retObjectCacheIssuedTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCacheIssuedTokens != null ? retObjectCacheIssuedTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +332,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setCacheIssuedTokens(boolean CacheIssuedTokens) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheIssuedTokens", CacheIssuedTokens);
         } catch (JCNativeException jcne) {
@@ -322,9 +342,13 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public int getIssuedTokenRenewalThresholdPercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedTokenRenewalThresholdPercentage = null;
         try {
-            return (int)classInstance.Get("IssuedTokenRenewalThresholdPercentage");
+            retObjectIssuedTokenRenewalThresholdPercentage = classInstance.Get("IssuedTokenRenewalThresholdPercentage");
+            return (int)retObjectIssuedTokenRenewalThresholdPercentage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIssuedTokenRenewalThresholdPercentage != null ? retObjectIssuedTokenRenewalThresholdPercentage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +356,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setIssuedTokenRenewalThresholdPercentage(int IssuedTokenRenewalThresholdPercentage) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuedTokenRenewalThresholdPercentage", IssuedTokenRenewalThresholdPercentage);
         } catch (JCNativeException jcne) {
@@ -342,10 +366,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public SecurityTokenSerializer getSecurityTokenSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenSerializer");
+            retObjectSecurityTokenSerializer = classInstance.Get("SecurityTokenSerializer");
+            JCObject val = (JCObject)retObjectSecurityTokenSerializer;
             return new SecurityTokenSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenSerializer != null ? retObjectSecurityTokenSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +381,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setSecurityTokenSerializer(SecurityTokenSerializer SecurityTokenSerializer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityTokenSerializer", SecurityTokenSerializer == null ? null : SecurityTokenSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,10 +391,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public system.servicemodel.channels.Binding getIssuerBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerBinding");
+            retObjectIssuerBinding = classInstance.Get("IssuerBinding");
+            JCObject val = (JCObject)retObjectIssuerBinding;
             return new system.servicemodel.channels.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerBinding != null ? retObjectIssuerBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,7 +406,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setIssuerBinding(system.servicemodel.channels.Binding IssuerBinding) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerBinding", IssuerBinding == null ? null : IssuerBinding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,10 +416,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public CommunicationState getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new CommunicationState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +431,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public EndpointAddress getIssuerAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuerAddress");
+            retObjectIssuerAddress = classInstance.Get("IssuerAddress");
+            JCObject val = (JCObject)retObjectIssuerAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuerAddress != null ? retObjectIssuerAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,7 +446,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setIssuerAddress(EndpointAddress IssuerAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerAddress", IssuerAddress == null ? null : IssuerAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -416,10 +456,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public EndpointAddress getTargetAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetAddress");
+            retObjectTargetAddress = classInstance.Get("TargetAddress");
+            JCObject val = (JCObject)retObjectTargetAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetAddress != null ? retObjectTargetAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,7 +471,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setTargetAddress(EndpointAddress TargetAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetAddress", TargetAddress == null ? null : TargetAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -437,10 +481,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public MessageSecurityVersion getMessageSecurityVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageSecurityVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageSecurityVersion");
+            retObjectMessageSecurityVersion = classInstance.Get("MessageSecurityVersion");
+            JCObject val = (JCObject)retObjectMessageSecurityVersion;
             return new MessageSecurityVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageSecurityVersion != null ? retObjectMessageSecurityVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,7 +496,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setMessageSecurityVersion(MessageSecurityVersion MessageSecurityVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageSecurityVersion", MessageSecurityVersion == null ? null : MessageSecurityVersion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -458,10 +506,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public IdentityVerifier getIdentityVerifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityVerifier = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityVerifier");
+            retObjectIdentityVerifier = classInstance.Get("IdentityVerifier");
+            JCObject val = (JCObject)retObjectIdentityVerifier;
             return new IdentityVerifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityVerifier != null ? retObjectIdentityVerifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +521,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setIdentityVerifier(IdentityVerifier IdentityVerifier) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentityVerifier", IdentityVerifier == null ? null : IdentityVerifier.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -479,10 +531,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public SecurityAlgorithmSuite getSecurityAlgorithmSuite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityAlgorithmSuite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityAlgorithmSuite");
+            retObjectSecurityAlgorithmSuite = classInstance.Get("SecurityAlgorithmSuite");
+            JCObject val = (JCObject)retObjectSecurityAlgorithmSuite;
             return new SecurityAlgorithmSuite(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityAlgorithmSuite != null ? retObjectSecurityAlgorithmSuite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +546,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setSecurityAlgorithmSuite(SecurityAlgorithmSuite SecurityAlgorithmSuite) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityAlgorithmSuite", SecurityAlgorithmSuite == null ? null : SecurityAlgorithmSuite.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -500,10 +556,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public SecurityKeyEntropyMode getKeyEntropyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyEntropyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyEntropyMode");
+            retObjectKeyEntropyMode = classInstance.Get("KeyEntropyMode");
+            JCObject val = (JCObject)retObjectKeyEntropyMode;
             return new SecurityKeyEntropyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyEntropyMode != null ? retObjectKeyEntropyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +571,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setKeyEntropyMode(SecurityKeyEntropyMode KeyEntropyMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyEntropyMode", KeyEntropyMode == null ? null : KeyEntropyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -521,10 +581,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public TimeSpan getDefaultCloseTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultCloseTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultCloseTimeout");
+            retObjectDefaultCloseTimeout = classInstance.Get("DefaultCloseTimeout");
+            JCObject val = (JCObject)retObjectDefaultCloseTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultCloseTimeout != null ? retObjectDefaultCloseTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -532,10 +596,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public TimeSpan getDefaultOpenTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultOpenTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultOpenTimeout");
+            retObjectDefaultOpenTimeout = classInstance.Get("DefaultOpenTimeout");
+            JCObject val = (JCObject)retObjectDefaultOpenTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultOpenTimeout != null ? retObjectDefaultOpenTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,10 +611,14 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public TimeSpan getMaxIssuedTokenCachingTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxIssuedTokenCachingTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxIssuedTokenCachingTime");
+            retObjectMaxIssuedTokenCachingTime = classInstance.Get("MaxIssuedTokenCachingTime");
+            JCObject val = (JCObject)retObjectMaxIssuedTokenCachingTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxIssuedTokenCachingTime != null ? retObjectMaxIssuedTokenCachingTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,7 +626,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void setMaxIssuedTokenCachingTime(TimeSpan MaxIssuedTokenCachingTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxIssuedTokenCachingTime", MaxIssuedTokenCachingTime == null ? null : MaxIssuedTokenCachingTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -569,7 +641,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -579,7 +651,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -589,7 +661,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void addClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -599,7 +671,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void removeClosing(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -609,7 +681,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void addFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -619,7 +691,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void removeFaulted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Faulted", handler);
         } catch (JCNativeException jcne) {
@@ -629,7 +701,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -639,7 +711,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -649,7 +721,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void addOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {
@@ -659,7 +731,7 @@ public class IssuedSecurityTokenProvider extends SecurityTokenProvider  {
 
     public void removeOpening(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opening", handler);
         } catch (JCNativeException jcne) {

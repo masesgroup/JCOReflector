@@ -148,10 +148,14 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
     
     public IXpsFixedDocumentWriter AddFixedDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddFixedDocument = null;
         try {
-            JCObject objAddFixedDocument = (JCObject)classInstance.Invoke("AddFixedDocument");
+            retObjectAddFixedDocument = classInstance.Invoke("AddFixedDocument");
+            JCObject objAddFixedDocument = (JCObject)retObjectAddFixedDocument;
             return new IXpsFixedDocumentWriterImplementation(objAddFixedDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddFixedDocument != null ? retObjectAddFixedDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
 
     public XpsThumbnail AddThumbnail(XpsImageType imageType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddThumbnail = null;
         try {
-            JCObject objAddThumbnail = (JCObject)classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            retObjectAddThumbnail = classInstance.Invoke("AddThumbnail", imageType == null ? null : imageType.getJCOInstance());
+            JCObject objAddThumbnail = (JCObject)retObjectAddThumbnail;
             return new XpsThumbnail(objAddThumbnail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddThumbnail != null ? retObjectAddThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +178,7 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
 
     public void Commit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -184,7 +192,7 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
     
     public void setPrintTicket(PrintTicket PrintTicket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintTicket", PrintTicket == null ? null : PrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,10 +202,14 @@ public class IXpsFixedDocumentSequenceWriterImplementation extends NetObject imp
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

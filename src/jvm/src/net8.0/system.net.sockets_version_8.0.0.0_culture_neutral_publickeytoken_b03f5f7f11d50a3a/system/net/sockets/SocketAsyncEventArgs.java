@@ -180,7 +180,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void SetBuffer(byte[] buffer, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", buffer, offset, count);
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void SetBuffer(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -210,7 +210,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void SetBuffer(int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetBuffer", offset, count);
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -237,9 +237,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
     
     public boolean getDisconnectReuseSocket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisconnectReuseSocket = null;
         try {
-            return (boolean)classInstance.Get("DisconnectReuseSocket");
+            retObjectDisconnectReuseSocket = classInstance.Get("DisconnectReuseSocket");
+            return (boolean)retObjectDisconnectReuseSocket;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisconnectReuseSocket != null ? retObjectDisconnectReuseSocket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +251,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setDisconnectReuseSocket(boolean DisconnectReuseSocket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisconnectReuseSocket", DisconnectReuseSocket);
         } catch (JCNativeException jcne) {
@@ -257,10 +261,12 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public byte[] getBuffer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
+            retObjectBuffer = classInstance.Get("Buffer");
+            JCObject resultingObjects = (JCObject)retObjectBuffer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -269,6 +275,8 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +284,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public int getBytesTransferred() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesTransferred = null;
         try {
-            return (int)classInstance.Get("BytesTransferred");
+            retObjectBytesTransferred = classInstance.Get("BytesTransferred");
+            return (int)retObjectBytesTransferred;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBytesTransferred != null ? retObjectBytesTransferred.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +298,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,9 +312,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,9 +326,13 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public int getSendPacketsSendSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPacketsSendSize = null;
         try {
-            return (int)classInstance.Get("SendPacketsSendSize");
+            retObjectSendPacketsSendSize = classInstance.Get("SendPacketsSendSize");
+            return (int)retObjectSendPacketsSendSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSendPacketsSendSize != null ? retObjectSendPacketsSendSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +340,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setSendPacketsSendSize(int SendPacketsSendSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendPacketsSendSize", SendPacketsSendSize);
         } catch (JCNativeException jcne) {
@@ -326,10 +350,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public NetException getConnectByNameError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectByNameError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectByNameError");
+            retObjectConnectByNameError = classInstance.Get("ConnectByNameError");
+            JCObject val = (JCObject)retObjectConnectByNameError;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectByNameError != null ? retObjectConnectByNameError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +365,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public EndPoint getRemoteEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoteEndPoint");
+            retObjectRemoteEndPoint = classInstance.Get("RemoteEndPoint");
+            JCObject val = (JCObject)retObjectRemoteEndPoint;
             return new EndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoteEndPoint != null ? retObjectRemoteEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +380,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setRemoteEndPoint(EndPoint RemoteEndPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoteEndPoint", RemoteEndPoint == null ? null : RemoteEndPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -358,10 +390,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public IPPacketInformation getReceiveMessageFromPacketInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceiveMessageFromPacketInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReceiveMessageFromPacketInfo");
+            retObjectReceiveMessageFromPacketInfo = classInstance.Get("ReceiveMessageFromPacketInfo");
+            JCObject val = (JCObject)retObjectReceiveMessageFromPacketInfo;
             return new IPPacketInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReceiveMessageFromPacketInfo != null ? retObjectReceiveMessageFromPacketInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,16 +405,20 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public final SendPacketsElement[] getSendPacketsElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPacketsElements = null;
         try {
             ArrayList<SendPacketsElement> resultingArrayList = new ArrayList<SendPacketsElement>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SendPacketsElements");
+            retObjectSendPacketsElements = classInstance.Get("SendPacketsElements");
+            JCObject resultingObjects = (JCObject)retObjectSendPacketsElements;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SendPacketsElement(resultingObject));
             }
             SendPacketsElement[] resultingArray = new SendPacketsElement[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPacketsElements != null ? retObjectSendPacketsElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +426,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setSendPacketsElements(SendPacketsElement[] SendPacketsElements) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendPacketsElements", toObjectFromArray(SendPacketsElements));
         } catch (JCNativeException jcne) {
@@ -396,10 +436,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public Socket getAcceptSocket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptSocket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AcceptSocket");
+            retObjectAcceptSocket = classInstance.Get("AcceptSocket");
+            JCObject val = (JCObject)retObjectAcceptSocket;
             return new Socket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptSocket != null ? retObjectAcceptSocket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +451,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setAcceptSocket(Socket AcceptSocket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptSocket", AcceptSocket == null ? null : AcceptSocket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,10 +461,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public Socket getConnectSocket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectSocket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectSocket");
+            retObjectConnectSocket = classInstance.Get("ConnectSocket");
+            JCObject val = (JCObject)retObjectConnectSocket;
             return new Socket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectSocket != null ? retObjectConnectSocket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +476,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public SocketAsyncOperation getLastOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastOperation");
+            retObjectLastOperation = classInstance.Get("LastOperation");
+            JCObject val = (JCObject)retObjectLastOperation;
             return new SocketAsyncOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastOperation != null ? retObjectLastOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +491,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public SocketError getSocketError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSocketError = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SocketError");
+            retObjectSocketError = classInstance.Get("SocketError");
+            JCObject val = (JCObject)retObjectSocketError;
             return new SocketError(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSocketError != null ? retObjectSocketError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +506,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setSocketError(SocketError SocketError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SocketError", SocketError == null ? null : SocketError.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,10 +516,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public SocketFlags getSocketFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSocketFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SocketFlags");
+            retObjectSocketFlags = classInstance.Get("SocketFlags");
+            JCObject val = (JCObject)retObjectSocketFlags;
             return new SocketFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSocketFlags != null ? retObjectSocketFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +531,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setSocketFlags(SocketFlags SocketFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SocketFlags", SocketFlags == null ? null : SocketFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -481,10 +541,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public TransmitFileOptions getSendPacketsFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendPacketsFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SendPacketsFlags");
+            retObjectSendPacketsFlags = classInstance.Get("SendPacketsFlags");
+            JCObject val = (JCObject)retObjectSendPacketsFlags;
             return new TransmitFileOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendPacketsFlags != null ? retObjectSendPacketsFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +556,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setSendPacketsFlags(TransmitFileOptions SendPacketsFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SendPacketsFlags", SendPacketsFlags == null ? null : SendPacketsFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -502,10 +566,14 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public NetObject getUserToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserToken");
+            retObjectUserToken = classInstance.Get("UserToken");
+            JCObject val = (JCObject)retObjectUserToken;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserToken != null ? retObjectUserToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,7 +581,7 @@ public class SocketAsyncEventArgs extends EventArgs implements AutoCloseable {
 
     public void setUserToken(NetObject UserToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserToken", UserToken == null ? null : UserToken.getJCOInstance());
         } catch (JCNativeException jcne) {

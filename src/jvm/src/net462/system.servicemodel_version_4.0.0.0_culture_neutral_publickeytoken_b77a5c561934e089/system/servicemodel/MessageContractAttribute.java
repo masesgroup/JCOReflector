@@ -167,9 +167,13 @@ public class MessageContractAttribute extends Attribute  {
     
     public boolean getHasProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasProtectionLevel = null;
         try {
-            return (boolean)classInstance.Get("HasProtectionLevel");
+            retObjectHasProtectionLevel = classInstance.Get("HasProtectionLevel");
+            return (boolean)retObjectHasProtectionLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasProtectionLevel != null ? retObjectHasProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class MessageContractAttribute extends Attribute  {
 
     public boolean getIsWrapped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWrapped = null;
         try {
-            return (boolean)classInstance.Get("IsWrapped");
+            retObjectIsWrapped = classInstance.Get("IsWrapped");
+            return (boolean)retObjectIsWrapped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWrapped != null ? retObjectIsWrapped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class MessageContractAttribute extends Attribute  {
 
     public void setIsWrapped(boolean IsWrapped) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsWrapped", IsWrapped);
         } catch (JCNativeException jcne) {
@@ -197,10 +205,14 @@ public class MessageContractAttribute extends Attribute  {
 
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class MessageContractAttribute extends Attribute  {
 
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionLevel", ProtectionLevel == null ? null : ProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class MessageContractAttribute extends Attribute  {
 
     public java.lang.String getWrapperName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapperName = null;
         try {
-            return (java.lang.String)classInstance.Get("WrapperName");
+            retObjectWrapperName = classInstance.Get("WrapperName");
+            return (java.lang.String)retObjectWrapperName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrapperName != null ? retObjectWrapperName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class MessageContractAttribute extends Attribute  {
 
     public void setWrapperName(java.lang.String WrapperName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapperName", WrapperName);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class MessageContractAttribute extends Attribute  {
 
     public java.lang.String getWrapperNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapperNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("WrapperNamespace");
+            retObjectWrapperNamespace = classInstance.Get("WrapperNamespace");
+            return (java.lang.String)retObjectWrapperNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrapperNamespace != null ? retObjectWrapperNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class MessageContractAttribute extends Attribute  {
 
     public void setWrapperNamespace(java.lang.String WrapperNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapperNamespace", WrapperNamespace);
         } catch (JCNativeException jcne) {

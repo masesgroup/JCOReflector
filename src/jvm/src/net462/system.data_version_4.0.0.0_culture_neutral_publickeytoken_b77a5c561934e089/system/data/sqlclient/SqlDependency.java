@@ -183,9 +183,13 @@ public class SqlDependency extends NetObject  {
     
     public static boolean Start(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.runtime.remoting.RemotingException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            return (boolean)classType.Invoke("Start", connectionString);
+            retObjectStart = classType.Invoke("Start", connectionString);
+            return (boolean)retObjectStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class SqlDependency extends NetObject  {
 
     public static boolean Start(java.lang.String connectionString, java.lang.String queue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.runtime.remoting.RemotingException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            return (boolean)classType.Invoke("Start", connectionString, queue);
+            retObjectStart = classType.Invoke("Start", connectionString, queue);
+            return (boolean)retObjectStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class SqlDependency extends NetObject  {
 
     public static boolean Stop(java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStop = null;
         try {
-            return (boolean)classType.Invoke("Stop", connectionString);
+            retObjectStop = classType.Invoke("Stop", connectionString);
+            return (boolean)retObjectStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStop != null ? retObjectStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class SqlDependency extends NetObject  {
 
     public static boolean Stop(java.lang.String connectionString, java.lang.String queue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStop = null;
         try {
-            return (boolean)classType.Invoke("Stop", connectionString, queue);
+            retObjectStop = classType.Invoke("Stop", connectionString, queue);
+            return (boolean)retObjectStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStop != null ? retObjectStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class SqlDependency extends NetObject  {
 
     public void AddCommandDependency(SqlCommand command) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCommandDependency", command == null ? null : command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -237,9 +253,13 @@ public class SqlDependency extends NetObject  {
     
     public boolean getHasChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChanges = null;
         try {
-            return (boolean)classInstance.Get("HasChanges");
+            retObjectHasChanges = classInstance.Get("HasChanges");
+            return (boolean)retObjectHasChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasChanges != null ? retObjectHasChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +267,13 @@ public class SqlDependency extends NetObject  {
 
     public java.lang.String getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +286,7 @@ public class SqlDependency extends NetObject  {
 
     public void addOnChange(OnChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OnChange", handler);
         } catch (JCNativeException jcne) {
@@ -272,7 +296,7 @@ public class SqlDependency extends NetObject  {
 
     public void removeOnChange(OnChangeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OnChange", handler);
         } catch (JCNativeException jcne) {

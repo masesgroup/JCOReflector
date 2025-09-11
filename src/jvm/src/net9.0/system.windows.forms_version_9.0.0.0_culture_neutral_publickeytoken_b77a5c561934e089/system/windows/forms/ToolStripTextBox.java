@@ -195,9 +195,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
     
     public char GetCharFromPosition(Point pt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharFromPosition = null;
         try {
-            return (char)classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharFromPosition = classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (char)retObjectGetCharFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetCharFromPosition != null ? retObjectGetCharFromPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +209,19 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int GetCharIndexFromPosition(Point pt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharIndexFromPosition = null;
         try {
-            return (int)classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharIndexFromPosition = classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (int)retObjectGetCharIndexFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharIndexFromPositionNumber = (java.lang.Number)retObjectGetCharIndexFromPosition;
+                return retObjectGetCharIndexFromPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +229,19 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int GetFirstCharIndexFromLine(int lineNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexFromLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            retObjectGetFirstCharIndexFromLine = classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            return (int)retObjectGetFirstCharIndexFromLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexFromLineNumber = (java.lang.Number)retObjectGetFirstCharIndexFromLine;
+                return retObjectGetFirstCharIndexFromLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexFromLine != null ? retObjectGetFirstCharIndexFromLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +249,19 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int GetFirstCharIndexOfCurrentLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexOfCurrentLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            retObjectGetFirstCharIndexOfCurrentLine = classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            return (int)retObjectGetFirstCharIndexOfCurrentLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexOfCurrentLineNumber = (java.lang.Number)retObjectGetFirstCharIndexOfCurrentLine;
+                return retObjectGetFirstCharIndexOfCurrentLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexOfCurrentLine != null ? retObjectGetFirstCharIndexOfCurrentLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +269,19 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int GetLineFromCharIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineFromCharIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLineFromCharIndex", index);
+            retObjectGetLineFromCharIndex = classInstance.Invoke("GetLineFromCharIndex", index);
+            return (int)retObjectGetLineFromCharIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineFromCharIndexNumber = (java.lang.Number)retObjectGetLineFromCharIndex;
+                return retObjectGetLineFromCharIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +289,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public Point GetPositionFromCharIndex(int index) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromCharIndex = null;
         try {
-            JCObject objGetPositionFromCharIndex = (JCObject)classInstance.Invoke("GetPositionFromCharIndex", index);
+            retObjectGetPositionFromCharIndex = classInstance.Invoke("GetPositionFromCharIndex", index);
+            JCObject objGetPositionFromCharIndex = (JCObject)retObjectGetPositionFromCharIndex;
             return new Point(objGetPositionFromCharIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromCharIndex != null ? retObjectGetPositionFromCharIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +304,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +319,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void AppendText(java.lang.String text) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendText", text);
         } catch (JCNativeException jcne) {
@@ -277,7 +329,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -287,7 +339,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void ClearUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearUndo");
         } catch (JCNativeException jcne) {
@@ -297,7 +349,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Copy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Copy");
         } catch (JCNativeException jcne) {
@@ -307,7 +359,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Cut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cut");
         } catch (JCNativeException jcne) {
@@ -317,7 +369,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void DeselectAll() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeselectAll");
         } catch (JCNativeException jcne) {
@@ -327,7 +379,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Paste() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paste");
         } catch (JCNativeException jcne) {
@@ -337,7 +389,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void ScrollToCaret() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollToCaret");
         } catch (JCNativeException jcne) {
@@ -347,7 +399,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Select(int start, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", start, length);
         } catch (JCNativeException jcne) {
@@ -357,7 +409,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void SelectAll() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.RankException, system.IndexOutOfRangeException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectAll");
         } catch (JCNativeException jcne) {
@@ -367,7 +419,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void Undo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Undo");
         } catch (JCNativeException jcne) {
@@ -381,9 +433,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
     
     public boolean getAcceptsReturn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsReturn = null;
         try {
-            return (boolean)classInstance.Get("AcceptsReturn");
+            retObjectAcceptsReturn = classInstance.Get("AcceptsReturn");
+            return (boolean)retObjectAcceptsReturn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsReturn != null ? retObjectAcceptsReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +447,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setAcceptsReturn(boolean AcceptsReturn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsReturn", AcceptsReturn);
         } catch (JCNativeException jcne) {
@@ -401,9 +457,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +471,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -421,9 +481,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getCanUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUndo = null;
         try {
-            return (boolean)classInstance.Get("CanUndo");
+            retObjectCanUndo = classInstance.Get("CanUndo");
+            return (boolean)retObjectCanUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUndo != null ? retObjectCanUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +495,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getHideSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHideSelection = null;
         try {
-            return (boolean)classInstance.Get("HideSelection");
+            retObjectHideSelection = classInstance.Get("HideSelection");
+            return (boolean)retObjectHideSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHideSelection != null ? retObjectHideSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +509,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setHideSelection(boolean HideSelection) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HideSelection", HideSelection);
         } catch (JCNativeException jcne) {
@@ -451,9 +519,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModified = null;
         try {
-            return (boolean)classInstance.Get("Modified");
+            retObjectModified = classInstance.Get("Modified");
+            return (boolean)retObjectModified;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectModified != null ? retObjectModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +533,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setModified(boolean Modified) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Modified", Modified);
         } catch (JCNativeException jcne) {
@@ -471,9 +543,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getMultiline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiline = null;
         try {
-            return (boolean)classInstance.Get("Multiline");
+            retObjectMultiline = classInstance.Get("Multiline");
+            return (boolean)retObjectMultiline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiline != null ? retObjectMultiline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +557,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setMultiline(boolean Multiline) throws Throwable, system.PlatformNotSupportedException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Multiline", Multiline);
         } catch (JCNativeException jcne) {
@@ -491,9 +567,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +581,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -511,9 +591,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getShortcutsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortcutsEnabled = null;
         try {
-            return (boolean)classInstance.Get("ShortcutsEnabled");
+            retObjectShortcutsEnabled = classInstance.Get("ShortcutsEnabled");
+            return (boolean)retObjectShortcutsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShortcutsEnabled != null ? retObjectShortcutsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +605,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setShortcutsEnabled(boolean ShortcutsEnabled) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShortcutsEnabled", ShortcutsEnabled);
         } catch (JCNativeException jcne) {
@@ -531,9 +615,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public boolean getWordWrap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWordWrap = null;
         try {
-            return (boolean)classInstance.Get("WordWrap");
+            retObjectWordWrap = classInstance.Get("WordWrap");
+            return (boolean)retObjectWordWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWordWrap != null ? retObjectWordWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +629,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setWordWrap(boolean WordWrap) throws Throwable, system.PlatformNotSupportedException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WordWrap", WordWrap);
         } catch (JCNativeException jcne) {
@@ -551,9 +639,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int getMaxLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (int)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (int)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,7 +653,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setMaxLength(int MaxLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLength", MaxLength);
         } catch (JCNativeException jcne) {
@@ -571,9 +663,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int getSelectionLength() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionLength = null;
         try {
-            return (int)classInstance.Get("SelectionLength");
+            retObjectSelectionLength = classInstance.Get("SelectionLength");
+            return (int)retObjectSelectionLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionLength != null ? retObjectSelectionLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,7 +677,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setSelectionLength(int SelectionLength) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionLength", SelectionLength);
         } catch (JCNativeException jcne) {
@@ -591,9 +687,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int getSelectionStart() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionStart = null;
         try {
-            return (int)classInstance.Get("SelectionStart");
+            retObjectSelectionStart = classInstance.Get("SelectionStart");
+            return (int)retObjectSelectionStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,7 +701,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setSelectionStart(int SelectionStart) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionStart", SelectionStart);
         } catch (JCNativeException jcne) {
@@ -611,9 +711,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public int getTextLength() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextLength = null;
         try {
-            return (int)classInstance.Get("TextLength");
+            retObjectTextLength = classInstance.Get("TextLength");
+            return (int)retObjectTextLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTextLength != null ? retObjectTextLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -621,9 +725,13 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public java.lang.String getSelectedText() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedText = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedText");
+            retObjectSelectedText = classInstance.Get("SelectedText");
+            return (java.lang.String)retObjectSelectedText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedText != null ? retObjectSelectedText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,7 +739,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setSelectedText(java.lang.String SelectedText) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedText", SelectedText);
         } catch (JCNativeException jcne) {
@@ -641,10 +749,12 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public java.lang.String[] getLines() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLines = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Lines");
+            retObjectLines = classInstance.Get("Lines");
+            JCObject resultingObjects = (JCObject)retObjectLines;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -653,6 +763,8 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 				resultingArray[indexLines] = (java.lang.String)resultingArrayList.get(indexLines);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectLines != null ? retObjectLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +772,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setLines(java.lang.String[] Lines) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lines", Lines);
         } catch (JCNativeException jcne) {
@@ -670,10 +782,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public AutoCompleteMode getAutoCompleteMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoCompleteMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoCompleteMode");
+            retObjectAutoCompleteMode = classInstance.Get("AutoCompleteMode");
+            JCObject val = (JCObject)retObjectAutoCompleteMode;
             return new AutoCompleteMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoCompleteMode != null ? retObjectAutoCompleteMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,7 +797,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setAutoCompleteMode(AutoCompleteMode AutoCompleteMode) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoCompleteMode", AutoCompleteMode == null ? null : AutoCompleteMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -691,10 +807,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public AutoCompleteSource getAutoCompleteSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoCompleteSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoCompleteSource");
+            retObjectAutoCompleteSource = classInstance.Get("AutoCompleteSource");
+            JCObject val = (JCObject)retObjectAutoCompleteSource;
             return new AutoCompleteSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoCompleteSource != null ? retObjectAutoCompleteSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,7 +822,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setAutoCompleteSource(AutoCompleteSource AutoCompleteSource) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoCompleteSource", AutoCompleteSource == null ? null : AutoCompleteSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -712,10 +832,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public AutoCompleteStringCollection getAutoCompleteCustomSource() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoCompleteCustomSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoCompleteCustomSource");
+            retObjectAutoCompleteCustomSource = classInstance.Get("AutoCompleteCustomSource");
+            JCObject val = (JCObject)retObjectAutoCompleteCustomSource;
             return new AutoCompleteStringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoCompleteCustomSource != null ? retObjectAutoCompleteCustomSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,7 +847,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setAutoCompleteCustomSource(AutoCompleteStringCollection AutoCompleteCustomSource) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoCompleteCustomSource", AutoCompleteCustomSource == null ? null : AutoCompleteCustomSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -733,10 +857,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -744,7 +872,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -754,10 +882,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public CharacterCasing getCharacterCasing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacterCasing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CharacterCasing");
+            retObjectCharacterCasing = classInstance.Get("CharacterCasing");
+            JCObject val = (JCObject)retObjectCharacterCasing;
             return new CharacterCasing(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharacterCasing != null ? retObjectCharacterCasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -765,7 +897,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setCharacterCasing(CharacterCasing CharacterCasing) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CharacterCasing", CharacterCasing == null ? null : CharacterCasing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -775,10 +907,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public HorizontalAlignment getTextBoxTextAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBoxTextAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBoxTextAlign");
+            retObjectTextBoxTextAlign = classInstance.Get("TextBoxTextAlign");
+            JCObject val = (JCObject)retObjectTextBoxTextAlign;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBoxTextAlign != null ? retObjectTextBoxTextAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -786,7 +922,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void setTextBoxTextAlign(HorizontalAlignment TextBoxTextAlign) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextBoxTextAlign", TextBoxTextAlign == null ? null : TextBoxTextAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -796,10 +932,14 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public TextBox getTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBox = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextBox");
+            retObjectTextBox = classInstance.Get("TextBox");
+            JCObject val = (JCObject)retObjectTextBox;
             return new TextBox(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBox != null ? retObjectTextBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -812,7 +952,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -822,7 +962,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -832,7 +972,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -842,7 +982,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeBorderStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BorderStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -852,7 +992,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addHideSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HideSelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -862,7 +1002,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeHideSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HideSelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -872,7 +1012,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addModifiedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ModifiedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -882,7 +1022,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeModifiedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ModifiedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -892,7 +1032,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -902,7 +1042,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -912,7 +1052,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -922,7 +1062,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeReadOnlyChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReadOnlyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -932,7 +1072,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void addTextBoxTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextBoxTextAlignChanged", handler);
         } catch (JCNativeException jcne) {
@@ -942,7 +1082,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
 
     public void removeTextBoxTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextBoxTextAlignChanged", handler);
         } catch (JCNativeException jcne) {

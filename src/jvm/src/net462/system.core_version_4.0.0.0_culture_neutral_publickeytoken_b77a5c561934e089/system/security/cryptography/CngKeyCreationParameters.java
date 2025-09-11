@@ -169,10 +169,14 @@ public class CngKeyCreationParameters extends NetObject  {
     
     public CngKeyCreationOptions getKeyCreationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyCreationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyCreationOptions");
+            retObjectKeyCreationOptions = classInstance.Get("KeyCreationOptions");
+            JCObject val = (JCObject)retObjectKeyCreationOptions;
             return new CngKeyCreationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyCreationOptions != null ? retObjectKeyCreationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public void setKeyCreationOptions(CngKeyCreationOptions KeyCreationOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyCreationOptions", KeyCreationOptions == null ? null : KeyCreationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public CngPropertyCollection getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new CngPropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public CngProvider getProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            JCObject val = (JCObject)retObjectProvider;
             return new CngProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public void setProvider(CngProvider Provider) throws Throwable, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Provider", Provider == null ? null : Provider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +234,14 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public CngUIPolicy getUIPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUIPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UIPolicy");
+            retObjectUIPolicy = classInstance.Get("UIPolicy");
+            JCObject val = (JCObject)retObjectUIPolicy;
             return new CngUIPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUIPolicy != null ? retObjectUIPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class CngKeyCreationParameters extends NetObject  {
 
     public void setUIPolicy(CngUIPolicy UIPolicy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UIPolicy", UIPolicy == null ? null : UIPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {

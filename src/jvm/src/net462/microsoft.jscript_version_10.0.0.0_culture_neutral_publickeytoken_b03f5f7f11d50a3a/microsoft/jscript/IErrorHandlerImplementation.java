@@ -144,9 +144,13 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
     
     public boolean OnCompilerError(IVsaFullErrorInfo error) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnCompilerError = null;
         try {
-            return (boolean)classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
+            retObjectOnCompilerError = classInstance.Invoke("OnCompilerError", error == null ? null : error.getJCOInstance());
+            return (boolean)retObjectOnCompilerError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnCompilerError != null ? retObjectOnCompilerError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

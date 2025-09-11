@@ -158,10 +158,14 @@ public class UnmanagedMarshal extends NetObject  {
     
     public static UnmanagedMarshal DefineByValArray(int elemCount) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineByValArray = null;
         try {
-            JCObject objDefineByValArray = (JCObject)classType.Invoke("DefineByValArray", elemCount);
+            retObjectDefineByValArray = classType.Invoke("DefineByValArray", elemCount);
+            JCObject objDefineByValArray = (JCObject)retObjectDefineByValArray;
             return new UnmanagedMarshal(objDefineByValArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineByValArray != null ? retObjectDefineByValArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public static UnmanagedMarshal DefineByValTStr(int elemCount) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineByValTStr = null;
         try {
-            JCObject objDefineByValTStr = (JCObject)classType.Invoke("DefineByValTStr", elemCount);
+            retObjectDefineByValTStr = classType.Invoke("DefineByValTStr", elemCount);
+            JCObject objDefineByValTStr = (JCObject)retObjectDefineByValTStr;
             return new UnmanagedMarshal(objDefineByValTStr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineByValTStr != null ? retObjectDefineByValTStr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public static UnmanagedMarshal DefineLPArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineLPArray = null;
         try {
-            JCObject objDefineLPArray = (JCObject)classType.Invoke("DefineLPArray", elemType == null ? null : elemType.getJCOInstance());
+            retObjectDefineLPArray = classType.Invoke("DefineLPArray", elemType == null ? null : elemType.getJCOInstance());
+            JCObject objDefineLPArray = (JCObject)retObjectDefineLPArray;
             return new UnmanagedMarshal(objDefineLPArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineLPArray != null ? retObjectDefineLPArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public static UnmanagedMarshal DefineSafeArray(UnmanagedType elemType) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineSafeArray = null;
         try {
-            JCObject objDefineSafeArray = (JCObject)classType.Invoke("DefineSafeArray", elemType == null ? null : elemType.getJCOInstance());
+            retObjectDefineSafeArray = classType.Invoke("DefineSafeArray", elemType == null ? null : elemType.getJCOInstance());
+            JCObject objDefineSafeArray = (JCObject)retObjectDefineSafeArray;
             return new UnmanagedMarshal(objDefineSafeArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineSafeArray != null ? retObjectDefineSafeArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public static UnmanagedMarshal DefineUnmanagedMarshal(UnmanagedType unmanagedType) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineUnmanagedMarshal = null;
         try {
-            JCObject objDefineUnmanagedMarshal = (JCObject)classType.Invoke("DefineUnmanagedMarshal", unmanagedType == null ? null : unmanagedType.getJCOInstance());
+            retObjectDefineUnmanagedMarshal = classType.Invoke("DefineUnmanagedMarshal", unmanagedType == null ? null : unmanagedType.getJCOInstance());
+            JCObject objDefineUnmanagedMarshal = (JCObject)retObjectDefineUnmanagedMarshal;
             return new UnmanagedMarshal(objDefineUnmanagedMarshal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineUnmanagedMarshal != null ? retObjectDefineUnmanagedMarshal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class UnmanagedMarshal extends NetObject  {
     
     public int getElementCount() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementCount = null;
         try {
-            return (int)classInstance.Get("ElementCount");
+            retObjectElementCount = classInstance.Get("ElementCount");
+            return (int)retObjectElementCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectElementCount != null ? retObjectElementCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public Guid getIIDGuid() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIIDGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IIDGuid");
+            retObjectIIDGuid = classInstance.Get("IIDGuid");
+            JCObject val = (JCObject)retObjectIIDGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIIDGuid != null ? retObjectIIDGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public UnmanagedType getBaseType() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseType");
+            retObjectBaseType = classInstance.Get("BaseType");
+            JCObject val = (JCObject)retObjectBaseType;
             return new UnmanagedType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseType != null ? retObjectBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class UnmanagedMarshal extends NetObject  {
 
     public UnmanagedType getGetUnmanagedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUnmanagedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GetUnmanagedType");
+            retObjectGetUnmanagedType = classInstance.Get("GetUnmanagedType");
+            JCObject val = (JCObject)retObjectGetUnmanagedType;
             return new UnmanagedType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnmanagedType != null ? retObjectGetUnmanagedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

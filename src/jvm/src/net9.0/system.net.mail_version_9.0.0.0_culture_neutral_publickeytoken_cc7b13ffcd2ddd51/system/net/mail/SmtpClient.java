@@ -191,10 +191,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
     
     public Task SendMailAsync(MailMessage message, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.MulticastNotSupportedException, system.net.mail.SmtpException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendMailAsync = null;
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSendMailAsync = classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendMailAsync = (JCObject)retObjectSendMailAsync;
             return new Task(objSendMailAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendMailAsync != null ? retObjectSendMailAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +206,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public Task SendMailAsync(MailMessage message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.OutOfMemoryException, system.FormatException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendMailAsync = null;
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance());
+            retObjectSendMailAsync = classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance());
+            JCObject objSendMailAsync = (JCObject)retObjectSendMailAsync;
             return new Task(objSendMailAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendMailAsync != null ? retObjectSendMailAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public Task SendMailAsync(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendMailAsync = null;
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", from, recipients, subject, body, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSendMailAsync = classInstance.Invoke("SendMailAsync", from, recipients, subject, body, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSendMailAsync = (JCObject)retObjectSendMailAsync;
             return new Task(objSendMailAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendMailAsync != null ? retObjectSendMailAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public Task SendMailAsync(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.InvalidOperationException, system.NullReferenceException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSendMailAsync = null;
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", from, recipients, subject, body);
+            retObjectSendMailAsync = classInstance.Invoke("SendMailAsync", from, recipients, subject, body);
+            JCObject objSendMailAsync = (JCObject)retObjectSendMailAsync;
             return new Task(objSendMailAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSendMailAsync != null ? retObjectSendMailAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -245,7 +261,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void Send(MailMessage message) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.net.mail.SmtpException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.net.sockets.SocketException, system.io.IOException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +271,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void Send(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.SynchronizationLockException, system.net.mail.SmtpException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Send", from, recipients, subject, body);
         } catch (JCNativeException jcne) {
@@ -265,7 +281,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void SendAsync(MailMessage message, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.net.mail.SmtpException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.net.sockets.SocketException, system.io.IOException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendAsync", message == null ? null : message.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +291,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void SendAsync(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body, NetObject userToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.mail.SmtpException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.OverflowException, system.NotImplementedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendAsync", from, recipients, subject, body, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +301,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void SendAsyncCancel() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SendAsyncCancel");
         } catch (JCNativeException jcne) {
@@ -296,7 +312,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -312,9 +328,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
     
     public boolean getEnableSsl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableSsl = null;
         try {
-            return (boolean)classInstance.Get("EnableSsl");
+            retObjectEnableSsl = classInstance.Get("EnableSsl");
+            return (boolean)retObjectEnableSsl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableSsl != null ? retObjectEnableSsl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +342,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setEnableSsl(boolean EnableSsl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableSsl", EnableSsl);
         } catch (JCNativeException jcne) {
@@ -332,9 +352,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public boolean getUseDefaultCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultCredentials = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultCredentials");
+            retObjectUseDefaultCredentials = classInstance.Get("UseDefaultCredentials");
+            return (boolean)retObjectUseDefaultCredentials;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultCredentials != null ? retObjectUseDefaultCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +366,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setUseDefaultCredentials(boolean UseDefaultCredentials) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCredentials", UseDefaultCredentials);
         } catch (JCNativeException jcne) {
@@ -352,9 +376,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public int getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +390,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setPort(int Port) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Port", Port);
         } catch (JCNativeException jcne) {
@@ -372,9 +400,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public int getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            return (int)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            return (int)retObjectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +414,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setTimeout(int Timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
@@ -392,10 +424,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public ICredentialsByHost getCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new ICredentialsByHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +439,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setCredentials(ICredentialsByHost Credentials) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +449,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public SmtpDeliveryFormat getDeliveryFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliveryFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeliveryFormat");
+            retObjectDeliveryFormat = classInstance.Get("DeliveryFormat");
+            JCObject val = (JCObject)retObjectDeliveryFormat;
             return new SmtpDeliveryFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeliveryFormat != null ? retObjectDeliveryFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +464,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setDeliveryFormat(SmtpDeliveryFormat DeliveryFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeliveryFormat", DeliveryFormat == null ? null : DeliveryFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -434,10 +474,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public SmtpDeliveryMethod getDeliveryMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliveryMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeliveryMethod");
+            retObjectDeliveryMethod = classInstance.Get("DeliveryMethod");
+            JCObject val = (JCObject)retObjectDeliveryMethod;
             return new SmtpDeliveryMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeliveryMethod != null ? retObjectDeliveryMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +489,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setDeliveryMethod(SmtpDeliveryMethod DeliveryMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeliveryMethod", DeliveryMethod == null ? null : DeliveryMethod.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -455,10 +499,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public ServicePoint getServicePoint() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException, system.InvalidTimeZoneException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServicePoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServicePoint");
+            retObjectServicePoint = classInstance.Get("ServicePoint");
+            JCObject val = (JCObject)retObjectServicePoint;
             return new ServicePoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServicePoint != null ? retObjectServicePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +514,14 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public X509CertificateCollection getClientCertificates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificates");
+            retObjectClientCertificates = classInstance.Get("ClientCertificates");
+            JCObject val = (JCObject)retObjectClientCertificates;
             return new X509CertificateCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificates != null ? retObjectClientCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,9 +529,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public java.lang.String getHost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            return (java.lang.String)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            return (java.lang.String)retObjectHost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +543,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setHost(java.lang.String Host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Host", Host);
         } catch (JCNativeException jcne) {
@@ -497,9 +553,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public java.lang.String getPickupDirectoryLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPickupDirectoryLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("PickupDirectoryLocation");
+            retObjectPickupDirectoryLocation = classInstance.Get("PickupDirectoryLocation");
+            return (java.lang.String)retObjectPickupDirectoryLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPickupDirectoryLocation != null ? retObjectPickupDirectoryLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +567,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setPickupDirectoryLocation(java.lang.String PickupDirectoryLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PickupDirectoryLocation", PickupDirectoryLocation);
         } catch (JCNativeException jcne) {
@@ -517,9 +577,13 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetName");
+            retObjectTargetName = classInstance.Get("TargetName");
+            return (java.lang.String)retObjectTargetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetName != null ? retObjectTargetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,7 +591,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void setTargetName(java.lang.String TargetName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetName", TargetName);
         } catch (JCNativeException jcne) {
@@ -542,7 +606,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void addSendCompleted(SendCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SendCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -552,7 +616,7 @@ public class SmtpClient extends NetObject implements AutoCloseable {
 
     public void removeSendCompleted(SendCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SendCompleted", handler);
         } catch (JCNativeException jcne) {

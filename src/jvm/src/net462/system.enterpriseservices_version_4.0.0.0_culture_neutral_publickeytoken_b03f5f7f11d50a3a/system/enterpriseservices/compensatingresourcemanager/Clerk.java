@@ -176,7 +176,7 @@ public class Clerk extends NetObject  {
     
     public void ForceLog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceLog");
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class Clerk extends NetObject  {
 
     public void ForceTransactionToAbort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForceTransactionToAbort");
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class Clerk extends NetObject  {
 
     public void ForgetLogRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ForgetLogRecord");
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class Clerk extends NetObject  {
 
     public void WriteLogRecord(NetObject record) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLogRecord", record == null ? null : record.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,9 +220,13 @@ public class Clerk extends NetObject  {
     
     public int getLogRecordCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogRecordCount = null;
         try {
-            return (int)classInstance.Get("LogRecordCount");
+            retObjectLogRecordCount = classInstance.Get("LogRecordCount");
+            return (int)retObjectLogRecordCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLogRecordCount != null ? retObjectLogRecordCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +234,13 @@ public class Clerk extends NetObject  {
 
     public java.lang.String getTransactionUOW() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionUOW = null;
         try {
-            return (java.lang.String)classInstance.Get("TransactionUOW");
+            retObjectTransactionUOW = classInstance.Get("TransactionUOW");
+            return (java.lang.String)retObjectTransactionUOW;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransactionUOW != null ? retObjectTransactionUOW.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

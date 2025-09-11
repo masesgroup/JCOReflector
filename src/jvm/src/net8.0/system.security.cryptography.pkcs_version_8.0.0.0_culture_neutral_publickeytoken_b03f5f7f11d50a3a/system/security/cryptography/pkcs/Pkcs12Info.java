@@ -157,9 +157,13 @@ public class Pkcs12Info extends NetObject  {
     
     public boolean VerifyMac(java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerifyMac = null;
         try {
-            return (boolean)classInstance.Invoke("VerifyMac", password);
+            retObjectVerifyMac = classInstance.Invoke("VerifyMac", password);
+            return (boolean)retObjectVerifyMac;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectVerifyMac != null ? retObjectVerifyMac.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class Pkcs12Info extends NetObject  {
     
     public Pkcs12IntegrityMode getIntegrityMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntegrityMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IntegrityMode");
+            retObjectIntegrityMode = classInstance.Get("IntegrityMode");
+            JCObject val = (JCObject)retObjectIntegrityMode;
             return new Pkcs12IntegrityMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntegrityMode != null ? retObjectIntegrityMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class Pkcs12Info extends NetObject  {
 
     public void setIntegrityMode(Pkcs12IntegrityMode IntegrityMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IntegrityMode", IntegrityMode == null ? null : IntegrityMode.getJCOInstance());
         } catch (JCNativeException jcne) {

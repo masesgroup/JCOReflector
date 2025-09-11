@@ -178,10 +178,14 @@ public class InstallEventArgs extends EventArgs  {
     
     public IDictionary getSavedState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSavedState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SavedState");
+            retObjectSavedState = classInstance.Get("SavedState");
+            JCObject val = (JCObject)retObjectSavedState;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSavedState != null ? retObjectSavedState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

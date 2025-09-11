@@ -196,9 +196,13 @@ public class ComClassAttribute extends Attribute  {
     
     public boolean getInterfaceShadows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceShadows = null;
         try {
-            return (boolean)classInstance.Get("InterfaceShadows");
+            retObjectInterfaceShadows = classInstance.Get("InterfaceShadows");
+            return (boolean)retObjectInterfaceShadows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInterfaceShadows != null ? retObjectInterfaceShadows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +210,7 @@ public class ComClassAttribute extends Attribute  {
 
     public void setInterfaceShadows(boolean InterfaceShadows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterfaceShadows", InterfaceShadows);
         } catch (JCNativeException jcne) {
@@ -216,9 +220,13 @@ public class ComClassAttribute extends Attribute  {
 
     public java.lang.String getClassID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassID = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassID");
+            retObjectClassID = classInstance.Get("ClassID");
+            return (java.lang.String)retObjectClassID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassID != null ? retObjectClassID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +234,13 @@ public class ComClassAttribute extends Attribute  {
 
     public java.lang.String getEventID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventID = null;
         try {
-            return (java.lang.String)classInstance.Get("EventID");
+            retObjectEventID = classInstance.Get("EventID");
+            return (java.lang.String)retObjectEventID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEventID != null ? retObjectEventID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +248,13 @@ public class ComClassAttribute extends Attribute  {
 
     public java.lang.String getInterfaceID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceID = null;
         try {
-            return (java.lang.String)classInstance.Get("InterfaceID");
+            retObjectInterfaceID = classInstance.Get("InterfaceID");
+            return (java.lang.String)retObjectInterfaceID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInterfaceID != null ? retObjectInterfaceID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

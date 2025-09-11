@@ -167,9 +167,13 @@ public class DataflowBlockOptions extends NetObject  {
     
     public boolean getEnsureOrdered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsureOrdered = null;
         try {
-            return (boolean)classInstance.Get("EnsureOrdered");
+            retObjectEnsureOrdered = classInstance.Get("EnsureOrdered");
+            return (boolean)retObjectEnsureOrdered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnsureOrdered != null ? retObjectEnsureOrdered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setEnsureOrdered(boolean EnsureOrdered) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnsureOrdered", EnsureOrdered);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class DataflowBlockOptions extends NetObject  {
 
     public int getBoundedCapacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundedCapacity = null;
         try {
-            return (int)classInstance.Get("BoundedCapacity");
+            retObjectBoundedCapacity = classInstance.Get("BoundedCapacity");
+            return (int)retObjectBoundedCapacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBoundedCapacity != null ? retObjectBoundedCapacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setBoundedCapacity(int BoundedCapacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BoundedCapacity", BoundedCapacity);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class DataflowBlockOptions extends NetObject  {
 
     public int getMaxMessagesPerTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxMessagesPerTask = null;
         try {
-            return (int)classInstance.Get("MaxMessagesPerTask");
+            retObjectMaxMessagesPerTask = classInstance.Get("MaxMessagesPerTask");
+            return (int)retObjectMaxMessagesPerTask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxMessagesPerTask != null ? retObjectMaxMessagesPerTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setMaxMessagesPerTask(int MaxMessagesPerTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxMessagesPerTask", MaxMessagesPerTask);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class DataflowBlockOptions extends NetObject  {
 
     public java.lang.String getNameFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("NameFormat");
+            retObjectNameFormat = classInstance.Get("NameFormat");
+            return (java.lang.String)retObjectNameFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNameFormat != null ? retObjectNameFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setNameFormat(java.lang.String NameFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameFormat", NameFormat);
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class DataflowBlockOptions extends NetObject  {
 
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            retObjectCancellationToken = classInstance.Get("CancellationToken");
+            JCObject val = (JCObject)retObjectCancellationToken;
             return new CancellationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancellationToken != null ? retObjectCancellationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class DataflowBlockOptions extends NetObject  {
 
     public TaskScheduler getTaskScheduler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskScheduler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskScheduler");
+            retObjectTaskScheduler = classInstance.Get("TaskScheduler");
+            JCObject val = (JCObject)retObjectTaskScheduler;
             return new TaskScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskScheduler != null ? retObjectTaskScheduler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class DataflowBlockOptions extends NetObject  {
 
     public void setTaskScheduler(TaskScheduler TaskScheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskScheduler", TaskScheduler == null ? null : TaskScheduler.getJCOInstance());
         } catch (JCNativeException jcne) {

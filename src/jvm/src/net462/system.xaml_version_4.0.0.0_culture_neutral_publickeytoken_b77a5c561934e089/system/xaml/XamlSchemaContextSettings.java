@@ -176,9 +176,13 @@ public class XamlSchemaContextSettings extends NetObject  {
     
     public boolean getFullyQualifyAssemblyNamesInClrNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullyQualifyAssemblyNamesInClrNamespaces = null;
         try {
-            return (boolean)classInstance.Get("FullyQualifyAssemblyNamesInClrNamespaces");
+            retObjectFullyQualifyAssemblyNamesInClrNamespaces = classInstance.Get("FullyQualifyAssemblyNamesInClrNamespaces");
+            return (boolean)retObjectFullyQualifyAssemblyNamesInClrNamespaces;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFullyQualifyAssemblyNamesInClrNamespaces != null ? retObjectFullyQualifyAssemblyNamesInClrNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class XamlSchemaContextSettings extends NetObject  {
 
     public void setFullyQualifyAssemblyNamesInClrNamespaces(boolean FullyQualifyAssemblyNamesInClrNamespaces) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FullyQualifyAssemblyNamesInClrNamespaces", FullyQualifyAssemblyNamesInClrNamespaces);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class XamlSchemaContextSettings extends NetObject  {
 
     public boolean getSupportMarkupExtensionsWithDuplicateArity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportMarkupExtensionsWithDuplicateArity = null;
         try {
-            return (boolean)classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
+            retObjectSupportMarkupExtensionsWithDuplicateArity = classInstance.Get("SupportMarkupExtensionsWithDuplicateArity");
+            return (boolean)retObjectSupportMarkupExtensionsWithDuplicateArity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportMarkupExtensionsWithDuplicateArity != null ? retObjectSupportMarkupExtensionsWithDuplicateArity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class XamlSchemaContextSettings extends NetObject  {
 
     public void setSupportMarkupExtensionsWithDuplicateArity(boolean SupportMarkupExtensionsWithDuplicateArity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportMarkupExtensionsWithDuplicateArity", SupportMarkupExtensionsWithDuplicateArity);
         } catch (JCNativeException jcne) {

@@ -144,7 +144,7 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
     
     public void LoadViewState(BinaryReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadViewState", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
 
     public void SaveViewState(BinaryWriter writer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveViewState", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {

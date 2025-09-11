@@ -178,9 +178,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
     
     public boolean IsItemItsOwnContainer(NetObject item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsItemItsOwnContainer = null;
         try {
-            return (boolean)classInstance.Invoke("IsItemItsOwnContainer", item == null ? null : item.getJCOInstance());
+            retObjectIsItemItsOwnContainer = classInstance.Invoke("IsItemItsOwnContainer", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectIsItemItsOwnContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsItemItsOwnContainer != null ? retObjectIsItemItsOwnContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public boolean ShouldSerializeGroupStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeGroupStyle = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeGroupStyle");
+            retObjectShouldSerializeGroupStyle = classInstance.Invoke("ShouldSerializeGroupStyle");
+            return (boolean)retObjectShouldSerializeGroupStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeGroupStyle != null ? retObjectShouldSerializeGroupStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +206,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public boolean ShouldSerializeItems() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeItems = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeItems");
+            retObjectShouldSerializeItems = classInstance.Invoke("ShouldSerializeItems");
+            return (boolean)retObjectShouldSerializeItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeItems != null ? retObjectShouldSerializeItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +220,19 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public static int GetAlternationIndex(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAlternationIndex = null;
         try {
-            return (int)classType.Invoke("GetAlternationIndex", element == null ? null : element.getJCOInstance());
+            retObjectGetAlternationIndex = classType.Invoke("GetAlternationIndex", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetAlternationIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAlternationIndexNumber = (java.lang.Number)retObjectGetAlternationIndex;
+                return retObjectGetAlternationIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetAlternationIndex != null ? retObjectGetAlternationIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +240,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public static ItemsControl GetItemsOwner(DependencyObject element) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetItemsOwner = null;
         try {
-            JCObject objGetItemsOwner = (JCObject)classType.Invoke("GetItemsOwner", element == null ? null : element.getJCOInstance());
+            retObjectGetItemsOwner = classType.Invoke("GetItemsOwner", element == null ? null : element.getJCOInstance());
+            JCObject objGetItemsOwner = (JCObject)retObjectGetItemsOwner;
             return new ItemsControl(objGetItemsOwner);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemsOwner != null ? retObjectGetItemsOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +255,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public static ItemsControl ItemsControlFromItemContainer(DependencyObject container) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectItemsControlFromItemContainer = null;
         try {
-            JCObject objItemsControlFromItemContainer = (JCObject)classType.Invoke("ItemsControlFromItemContainer", container == null ? null : container.getJCOInstance());
+            retObjectItemsControlFromItemContainer = classType.Invoke("ItemsControlFromItemContainer", container == null ? null : container.getJCOInstance());
+            JCObject objItemsControlFromItemContainer = (JCObject)retObjectItemsControlFromItemContainer;
             return new ItemsControl(objItemsControlFromItemContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsControlFromItemContainer != null ? retObjectItemsControlFromItemContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +270,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public static DependencyObject ContainerFromElement(ItemsControl itemsControl, DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContainerFromElement = null;
         try {
-            JCObject objContainerFromElement = (JCObject)classType.Invoke("ContainerFromElement", itemsControl == null ? null : itemsControl.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            retObjectContainerFromElement = classType.Invoke("ContainerFromElement", itemsControl == null ? null : itemsControl.getJCOInstance(), element == null ? null : element.getJCOInstance());
+            JCObject objContainerFromElement = (JCObject)retObjectContainerFromElement;
             return new DependencyObject(objContainerFromElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerFromElement != null ? retObjectContainerFromElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +285,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public DependencyObject ContainerFromElement(DependencyObject element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainerFromElement = null;
         try {
-            JCObject objContainerFromElement = (JCObject)classInstance.Invoke("ContainerFromElement", element == null ? null : element.getJCOInstance());
+            retObjectContainerFromElement = classInstance.Invoke("ContainerFromElement", element == null ? null : element.getJCOInstance());
+            JCObject objContainerFromElement = (JCObject)retObjectContainerFromElement;
             return new DependencyObject(objContainerFromElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContainerFromElement != null ? retObjectContainerFromElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +300,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void BeginInit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -272,7 +310,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void EndInit() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -286,7 +324,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -295,7 +333,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -304,7 +342,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -313,7 +351,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -322,7 +360,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -331,7 +369,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void ClearValue(DependencyProperty dp) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
     /**
@@ -340,7 +378,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
      */
     @Deprecated 
     public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
 
@@ -349,9 +387,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
     
     public boolean getHasItems() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasItems = null;
         try {
-            return (boolean)classInstance.Get("HasItems");
+            retObjectHasItems = classInstance.Get("HasItems");
+            return (boolean)retObjectHasItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasItems != null ? retObjectHasItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,9 +401,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public boolean getIsGrouping() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGrouping = null;
         try {
-            return (boolean)classInstance.Get("IsGrouping");
+            retObjectIsGrouping = classInstance.Get("IsGrouping");
+            return (boolean)retObjectIsGrouping;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsGrouping != null ? retObjectIsGrouping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +415,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public boolean getIsTextSearchCaseSensitive() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTextSearchCaseSensitive = null;
         try {
-            return (boolean)classInstance.Get("IsTextSearchCaseSensitive");
+            retObjectIsTextSearchCaseSensitive = classInstance.Get("IsTextSearchCaseSensitive");
+            return (boolean)retObjectIsTextSearchCaseSensitive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTextSearchCaseSensitive != null ? retObjectIsTextSearchCaseSensitive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +429,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setIsTextSearchCaseSensitive(boolean IsTextSearchCaseSensitive) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTextSearchCaseSensitive", IsTextSearchCaseSensitive);
         } catch (JCNativeException jcne) {
@@ -389,9 +439,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public boolean getIsTextSearchEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTextSearchEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsTextSearchEnabled");
+            retObjectIsTextSearchEnabled = classInstance.Get("IsTextSearchEnabled");
+            return (boolean)retObjectIsTextSearchEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTextSearchEnabled != null ? retObjectIsTextSearchEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +453,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setIsTextSearchEnabled(boolean IsTextSearchEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTextSearchEnabled", IsTextSearchEnabled);
         } catch (JCNativeException jcne) {
@@ -409,9 +463,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public int getAlternationCount() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternationCount = null;
         try {
-            return (int)classInstance.Get("AlternationCount");
+            retObjectAlternationCount = classInstance.Get("AlternationCount");
+            return (int)retObjectAlternationCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +477,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setAlternationCount(int AlternationCount) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternationCount", AlternationCount);
         } catch (JCNativeException jcne) {
@@ -429,10 +487,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public IEnumerable getItemsSource() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsSource");
+            retObjectItemsSource = classInstance.Get("ItemsSource");
+            JCObject val = (JCObject)retObjectItemsSource;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsSource != null ? retObjectItemsSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +502,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemsSource(IEnumerable ItemsSource) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsSource", ItemsSource == null ? null : ItemsSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,9 +512,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public java.lang.String getDisplayMemberPath() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMemberPath = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMemberPath");
+            retObjectDisplayMemberPath = classInstance.Get("DisplayMemberPath");
+            return (java.lang.String)retObjectDisplayMemberPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMemberPath != null ? retObjectDisplayMemberPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +526,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setDisplayMemberPath(java.lang.String DisplayMemberPath) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMemberPath", DisplayMemberPath);
         } catch (JCNativeException jcne) {
@@ -470,9 +536,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public java.lang.String getItemStringFormat() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemStringFormat");
+            retObjectItemStringFormat = classInstance.Get("ItemStringFormat");
+            return (java.lang.String)retObjectItemStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemStringFormat != null ? retObjectItemStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +550,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemStringFormat(java.lang.String ItemStringFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemStringFormat", ItemStringFormat);
         } catch (JCNativeException jcne) {
@@ -490,10 +560,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public DataTemplateSelector getItemTemplateSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplateSelector");
+            retObjectItemTemplateSelector = classInstance.Get("ItemTemplateSelector");
+            JCObject val = (JCObject)retObjectItemTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplateSelector != null ? retObjectItemTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +575,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemTemplateSelector(DataTemplateSelector ItemTemplateSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplateSelector", ItemTemplateSelector == null ? null : ItemTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,9 +585,13 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public GroupStyleSelector getGroupStyleSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupStyleSelector = null;
         try {
-            return (GroupStyleSelector)classInstance.Get("GroupStyleSelector");
+            retObjectGroupStyleSelector = classInstance.Get("GroupStyleSelector");
+            return (GroupStyleSelector)retObjectGroupStyleSelector;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into GroupStyleSelector", retObjectGroupStyleSelector != null ? retObjectGroupStyleSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +599,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setGroupStyleSelector(GroupStyleSelector GroupStyleSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupStyleSelector", GroupStyleSelector);
         } catch (JCNativeException jcne) {
@@ -531,10 +609,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public ItemCollection getItems() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new ItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,10 +624,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public ItemContainerGenerator getItemContainerGenerator() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerGenerator");
+            retObjectItemContainerGenerator = classInstance.Get("ItemContainerGenerator");
+            JCObject val = (JCObject)retObjectItemContainerGenerator;
             return new ItemContainerGenerator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerGenerator != null ? retObjectItemContainerGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -553,10 +639,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public ItemsPanelTemplate getItemsPanel() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsPanel");
+            retObjectItemsPanel = classInstance.Get("ItemsPanel");
+            JCObject val = (JCObject)retObjectItemsPanel;
             return new ItemsPanelTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsPanel != null ? retObjectItemsPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,7 +654,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemsPanel(ItemsPanelTemplate ItemsPanel) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsPanel", ItemsPanel == null ? null : ItemsPanel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -574,10 +664,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public StyleSelector getItemContainerStyleSelector() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerStyleSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerStyleSelector");
+            retObjectItemContainerStyleSelector = classInstance.Get("ItemContainerStyleSelector");
+            JCObject val = (JCObject)retObjectItemContainerStyleSelector;
             return new StyleSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerStyleSelector != null ? retObjectItemContainerStyleSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,7 +679,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemContainerStyleSelector(StyleSelector ItemContainerStyleSelector) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerStyleSelector", ItemContainerStyleSelector == null ? null : ItemContainerStyleSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -595,10 +689,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public BindingGroup getItemBindingGroup() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemBindingGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemBindingGroup");
+            retObjectItemBindingGroup = classInstance.Get("ItemBindingGroup");
+            JCObject val = (JCObject)retObjectItemBindingGroup;
             return new BindingGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemBindingGroup != null ? retObjectItemBindingGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +704,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemBindingGroup(BindingGroup ItemBindingGroup) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemBindingGroup", ItemBindingGroup == null ? null : ItemBindingGroup.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -616,10 +714,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public DataTemplate getItemTemplate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,7 +729,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemTemplate(DataTemplate ItemTemplate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -637,10 +739,14 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public Style getItemContainerStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerStyle");
+            retObjectItemContainerStyle = classInstance.Get("ItemContainerStyle");
+            JCObject val = (JCObject)retObjectItemContainerStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerStyle != null ? retObjectItemContainerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,7 +754,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
 
     public void setItemContainerStyle(Style ItemContainerStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerStyle", ItemContainerStyle == null ? null : ItemContainerStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

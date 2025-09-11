@@ -200,10 +200,14 @@ public class OdbcDataAdapter extends DbDataAdapter  {
     
     public OdbcCommand getDeleteCommandNewOdbcDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteCommand");
+            retObjectDeleteCommand = classInstance.Get("DeleteCommand");
+            JCObject val = (JCObject)retObjectDeleteCommand;
             return new OdbcCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteCommand != null ? retObjectDeleteCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +215,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void setDeleteCommand(OdbcCommand DeleteCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteCommand", DeleteCommand == null ? null : DeleteCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +225,14 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public OdbcCommand getInsertCommandNewOdbcDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertCommand");
+            retObjectInsertCommand = classInstance.Get("InsertCommand");
+            JCObject val = (JCObject)retObjectInsertCommand;
             return new OdbcCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertCommand != null ? retObjectInsertCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +240,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void setInsertCommand(OdbcCommand InsertCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertCommand", InsertCommand == null ? null : InsertCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +250,14 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public OdbcCommand getSelectCommandNewOdbcDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectCommand");
+            retObjectSelectCommand = classInstance.Get("SelectCommand");
+            JCObject val = (JCObject)retObjectSelectCommand;
             return new OdbcCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectCommand != null ? retObjectSelectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +265,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void setSelectCommand(OdbcCommand SelectCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectCommand", SelectCommand == null ? null : SelectCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +275,14 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public OdbcCommand getUpdateCommandNewOdbcDataAdapter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdateCommand");
+            retObjectUpdateCommand = classInstance.Get("UpdateCommand");
+            JCObject val = (JCObject)retObjectUpdateCommand;
             return new OdbcCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdateCommand != null ? retObjectUpdateCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +290,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void setUpdateCommand(OdbcCommand UpdateCommand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateCommand", UpdateCommand == null ? null : UpdateCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,7 +305,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void addRowUpdated(OdbcRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -299,7 +315,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void removeRowUpdated(OdbcRowUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -309,7 +325,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void addRowUpdating(OdbcRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {
@@ -319,7 +335,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
 
     public void removeRowUpdating(OdbcRowUpdatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RowUpdating", handler);
         } catch (JCNativeException jcne) {

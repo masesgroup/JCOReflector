@@ -173,9 +173,13 @@ public class Matrix extends ValueType implements system.IFormattable {
     
     public static boolean Equals(Matrix matrix1, Matrix matrix2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", matrix1 == null ? null : matrix1.getJCOInstance(), matrix2 == null ? null : matrix2.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public boolean Equals(Matrix value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public static Matrix Multiply(Matrix trans1, Matrix trans2) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", trans1 == null ? null : trans1.getJCOInstance(), trans2 == null ? null : trans2.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", trans1 == null ? null : trans1.getJCOInstance(), trans2 == null ? null : trans2.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new Matrix(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public static Matrix Parse(java.lang.String source) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Matrix(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public Point Transform(Point point) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Point(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public Vector Transform(Vector vector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", vector == null ? null : vector.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", vector == null ? null : vector.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Vector(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +275,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Append(Matrix matrix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Append", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +285,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Invert() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invert");
         } catch (JCNativeException jcne) {
@@ -267,7 +295,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Prepend(Matrix matrix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepend", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +305,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Rotate(double angle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rotate", angle);
         } catch (JCNativeException jcne) {
@@ -287,7 +315,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void RotateAt(double angle, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAt", angle, centerX, centerY);
         } catch (JCNativeException jcne) {
@@ -297,7 +325,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void RotateAtPrepend(double angle, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAtPrepend", angle, centerX, centerY);
         } catch (JCNativeException jcne) {
@@ -307,7 +335,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void RotatePrepend(double angle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotatePrepend", angle);
         } catch (JCNativeException jcne) {
@@ -317,7 +345,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Scale(double scaleX, double scaleY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", scaleX, scaleY);
         } catch (JCNativeException jcne) {
@@ -327,7 +355,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void ScaleAt(double scaleX, double scaleY, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleAt", scaleX, scaleY, centerX, centerY);
         } catch (JCNativeException jcne) {
@@ -337,7 +365,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void ScaleAtPrepend(double scaleX, double scaleY, double centerX, double centerY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleAtPrepend", scaleX, scaleY, centerX, centerY);
         } catch (JCNativeException jcne) {
@@ -347,7 +375,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void ScalePrepend(double scaleX, double scaleY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScalePrepend", scaleX, scaleY);
         } catch (JCNativeException jcne) {
@@ -357,7 +385,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void SetIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetIdentity");
         } catch (JCNativeException jcne) {
@@ -367,7 +395,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Skew(double skewX, double skewY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Skew", skewX, skewY);
         } catch (JCNativeException jcne) {
@@ -377,7 +405,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void SkewPrepend(double skewX, double skewY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SkewPrepend", skewX, skewY);
         } catch (JCNativeException jcne) {
@@ -387,7 +415,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Transform(Point[] points) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -397,7 +425,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Transform(Vector[] vectors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(vectors));
         } catch (JCNativeException jcne) {
@@ -407,7 +435,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void Translate(double offsetX, double offsetY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", offsetX, offsetY);
         } catch (JCNativeException jcne) {
@@ -417,7 +445,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void TranslatePrepend(double offsetX, double offsetY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslatePrepend", offsetX, offsetY);
         } catch (JCNativeException jcne) {
@@ -431,7 +459,7 @@ public class Matrix extends ValueType implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -440,9 +468,13 @@ public class Matrix extends ValueType implements system.IFormattable {
     
     public boolean getHasInverse() throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasInverse = null;
         try {
-            return (boolean)classInstance.Get("HasInverse");
+            retObjectHasInverse = classInstance.Get("HasInverse");
+            return (boolean)retObjectHasInverse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasInverse != null ? retObjectHasInverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,9 +482,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public boolean getIsIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdentity = null;
         try {
-            return (boolean)classInstance.Get("IsIdentity");
+            retObjectIsIdentity = classInstance.Get("IsIdentity");
+            return (boolean)retObjectIsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIdentity != null ? retObjectIsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,9 +496,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getDeterminant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeterminant = null;
         try {
-            return (double)classInstance.Get("Determinant");
+            retObjectDeterminant = classInstance.Get("Determinant");
+            return (double)retObjectDeterminant;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDeterminant != null ? retObjectDeterminant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,9 +510,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getM11() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM11 = null;
         try {
-            return (double)classInstance.Get("M11");
+            retObjectM11 = classInstance.Get("M11");
+            return (double)retObjectM11;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectM11 != null ? retObjectM11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +524,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setM11(double M11) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M11", M11);
         } catch (JCNativeException jcne) {
@@ -490,9 +534,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getM12() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM12 = null;
         try {
-            return (double)classInstance.Get("M12");
+            retObjectM12 = classInstance.Get("M12");
+            return (double)retObjectM12;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectM12 != null ? retObjectM12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +548,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setM12(double M12) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M12", M12);
         } catch (JCNativeException jcne) {
@@ -510,9 +558,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getM21() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM21 = null;
         try {
-            return (double)classInstance.Get("M21");
+            retObjectM21 = classInstance.Get("M21");
+            return (double)retObjectM21;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectM21 != null ? retObjectM21.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +572,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setM21(double M21) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M21", M21);
         } catch (JCNativeException jcne) {
@@ -530,9 +582,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getM22() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectM22 = null;
         try {
-            return (double)classInstance.Get("M22");
+            retObjectM22 = classInstance.Get("M22");
+            return (double)retObjectM22;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectM22 != null ? retObjectM22.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,7 +596,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setM22(double M22) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("M22", M22);
         } catch (JCNativeException jcne) {
@@ -550,9 +606,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getOffsetX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetX = null;
         try {
-            return (double)classInstance.Get("OffsetX");
+            retObjectOffsetX = classInstance.Get("OffsetX");
+            return (double)retObjectOffsetX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +620,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setOffsetX(double OffsetX) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetX", OffsetX);
         } catch (JCNativeException jcne) {
@@ -570,9 +630,13 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public double getOffsetY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetY = null;
         try {
-            return (double)classInstance.Get("OffsetY");
+            retObjectOffsetY = classInstance.Get("OffsetY");
+            return (double)retObjectOffsetY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +644,7 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public void setOffsetY(double OffsetY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetY", OffsetY);
         } catch (JCNativeException jcne) {
@@ -590,10 +654,14 @@ public class Matrix extends ValueType implements system.IFormattable {
 
     public static Matrix getIdentity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classType.Get("Identity");
+            retObjectIdentity = classType.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new Matrix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

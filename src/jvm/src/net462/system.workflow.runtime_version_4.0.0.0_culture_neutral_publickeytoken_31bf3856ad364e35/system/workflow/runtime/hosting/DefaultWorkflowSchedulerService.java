@@ -187,9 +187,13 @@ public class DefaultWorkflowSchedulerService extends WorkflowSchedulerService  {
     
     public int getMaxSimultaneousWorkflows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSimultaneousWorkflows = null;
         try {
-            return (int)classInstance.Get("MaxSimultaneousWorkflows");
+            retObjectMaxSimultaneousWorkflows = classInstance.Get("MaxSimultaneousWorkflows");
+            return (int)retObjectMaxSimultaneousWorkflows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxSimultaneousWorkflows != null ? retObjectMaxSimultaneousWorkflows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

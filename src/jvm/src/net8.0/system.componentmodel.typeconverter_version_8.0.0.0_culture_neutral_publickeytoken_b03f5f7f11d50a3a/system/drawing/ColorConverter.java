@@ -165,9 +165,13 @@ public class ColorConverter extends TypeConverter  {
     
     public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertFrom = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            retObjectCanConvertFrom = classInstance.Invoke("CanConvertFrom", context == null ? null : context.getJCOInstance(), sourceType == null ? null : sourceType.getJCOInstance());
+            return (boolean)retObjectCanConvertFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertFrom != null ? retObjectCanConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class ColorConverter extends TypeConverter  {
 
     public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConvertTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectCanConvertTo = classInstance.Invoke("CanConvertTo", context == null ? null : context.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            return (boolean)retObjectCanConvertTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanConvertTo != null ? retObjectCanConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class ColorConverter extends TypeConverter  {
 
     public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStandardValuesSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetStandardValuesSupported = classInstance.Invoke("GetStandardValuesSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetStandardValuesSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStandardValuesSupported != null ? retObjectGetStandardValuesSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class ColorConverter extends TypeConverter  {
 
     public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMemberException, system.NotSupportedException, system.runtime.interopservices.ExternalException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertFrom = null;
         try {
-            JCObject objConvertFrom = (JCObject)classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectConvertFrom = classInstance.Invoke("ConvertFrom", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objConvertFrom = (JCObject)retObjectConvertFrom;
             return new NetObject(objConvertFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertFrom != null ? retObjectConvertFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class ColorConverter extends TypeConverter  {
 
     public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertTo = null;
         try {
-            JCObject objConvertTo = (JCObject)classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            retObjectConvertTo = classInstance.Invoke("ConvertTo", context == null ? null : context.getJCOInstance(), culture == null ? null : culture.getJCOInstance(), value == null ? null : value.getJCOInstance(), destinationType == null ? null : destinationType.getJCOInstance());
+            JCObject objConvertTo = (JCObject)retObjectConvertTo;
             return new NetObject(objConvertTo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertTo != null ? retObjectConvertTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

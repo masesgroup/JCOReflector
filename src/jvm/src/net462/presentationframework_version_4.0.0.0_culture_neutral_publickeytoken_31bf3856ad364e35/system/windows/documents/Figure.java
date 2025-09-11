@@ -192,9 +192,13 @@ public class Figure extends AnchoredBlock  {
     
     public boolean getCanDelayPlacement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanDelayPlacement = null;
         try {
-            return (boolean)classInstance.Get("CanDelayPlacement");
+            retObjectCanDelayPlacement = classInstance.Get("CanDelayPlacement");
+            return (boolean)retObjectCanDelayPlacement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanDelayPlacement != null ? retObjectCanDelayPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +206,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setCanDelayPlacement(boolean CanDelayPlacement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanDelayPlacement", CanDelayPlacement);
         } catch (JCNativeException jcne) {
@@ -212,9 +216,13 @@ public class Figure extends AnchoredBlock  {
 
     public double getHorizontalOffset() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +230,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setHorizontalOffset(double HorizontalOffset) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalOffset", HorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -232,9 +240,13 @@ public class Figure extends AnchoredBlock  {
 
     public double getVerticalOffset() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setVerticalOffset(double VerticalOffset) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalOffset", VerticalOffset);
         } catch (JCNativeException jcne) {
@@ -252,10 +264,14 @@ public class Figure extends AnchoredBlock  {
 
     public FigureHorizontalAnchor getHorizontalAnchor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalAnchor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalAnchor");
+            retObjectHorizontalAnchor = classInstance.Get("HorizontalAnchor");
+            JCObject val = (JCObject)retObjectHorizontalAnchor;
             return new FigureHorizontalAnchor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalAnchor != null ? retObjectHorizontalAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setHorizontalAnchor(FigureHorizontalAnchor HorizontalAnchor) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalAnchor", HorizontalAnchor == null ? null : HorizontalAnchor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +289,14 @@ public class Figure extends AnchoredBlock  {
 
     public FigureLength getHeight() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            JCObject val = (JCObject)retObjectHeight;
             return new FigureLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +304,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setHeight(FigureLength Height) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height == null ? null : Height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +314,14 @@ public class Figure extends AnchoredBlock  {
 
     public FigureLength getWidth() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            JCObject val = (JCObject)retObjectWidth;
             return new FigureLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +329,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setWidth(FigureLength Width) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,10 +339,14 @@ public class Figure extends AnchoredBlock  {
 
     public FigureVerticalAnchor getVerticalAnchor() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalAnchor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalAnchor");
+            retObjectVerticalAnchor = classInstance.Get("VerticalAnchor");
+            JCObject val = (JCObject)retObjectVerticalAnchor;
             return new FigureVerticalAnchor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalAnchor != null ? retObjectVerticalAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,7 +354,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setVerticalAnchor(FigureVerticalAnchor VerticalAnchor) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalAnchor", VerticalAnchor == null ? null : VerticalAnchor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -336,10 +364,14 @@ public class Figure extends AnchoredBlock  {
 
     public WrapDirection getWrapDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WrapDirection");
+            retObjectWrapDirection = classInstance.Get("WrapDirection");
+            JCObject val = (JCObject)retObjectWrapDirection;
             return new WrapDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWrapDirection != null ? retObjectWrapDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +379,7 @@ public class Figure extends AnchoredBlock  {
 
     public void setWrapDirection(WrapDirection WrapDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapDirection", WrapDirection == null ? null : WrapDirection.getJCOInstance());
         } catch (JCNativeException jcne) {

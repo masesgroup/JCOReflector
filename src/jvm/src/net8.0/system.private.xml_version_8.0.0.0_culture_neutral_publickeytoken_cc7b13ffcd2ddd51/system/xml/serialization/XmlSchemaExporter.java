@@ -169,9 +169,13 @@ public class XmlSchemaExporter extends NetObject  {
     
     public java.lang.String ExportAnyType(java.lang.String ns) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.OutOfMemoryException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportAnyType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ExportAnyType", ns);
+            retObjectExportAnyType = classInstance.Invoke("ExportAnyType", ns);
+            return (java.lang.String)retObjectExportAnyType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExportAnyType != null ? retObjectExportAnyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class XmlSchemaExporter extends NetObject  {
 
     public java.lang.String ExportAnyType(XmlMembersMapping members) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.InvalidOperationException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportAnyType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ExportAnyType", members == null ? null : members.getJCOInstance());
+            retObjectExportAnyType = classInstance.Invoke("ExportAnyType", members == null ? null : members.getJCOInstance());
+            return (java.lang.String)retObjectExportAnyType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExportAnyType != null ? retObjectExportAnyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class XmlSchemaExporter extends NetObject  {
 
     public XmlQualifiedName ExportTypeMapping(XmlMembersMapping xmlMembersMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportTypeMapping = null;
         try {
-            JCObject objExportTypeMapping = (JCObject)classInstance.Invoke("ExportTypeMapping", xmlMembersMapping == null ? null : xmlMembersMapping.getJCOInstance());
+            retObjectExportTypeMapping = classInstance.Invoke("ExportTypeMapping", xmlMembersMapping == null ? null : xmlMembersMapping.getJCOInstance());
+            JCObject objExportTypeMapping = (JCObject)retObjectExportTypeMapping;
             return new XmlQualifiedName(objExportTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportTypeMapping != null ? retObjectExportTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class XmlSchemaExporter extends NetObject  {
 
     public void ExportMembersMapping(XmlMembersMapping xmlMembersMapping, boolean exportEnclosingType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportMembersMapping", xmlMembersMapping == null ? null : xmlMembersMapping.getJCOInstance(), exportEnclosingType);
         } catch (JCNativeException jcne) {
@@ -210,7 +222,7 @@ public class XmlSchemaExporter extends NetObject  {
 
     public void ExportMembersMapping(XmlMembersMapping xmlMembersMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportMembersMapping", xmlMembersMapping == null ? null : xmlMembersMapping.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +232,7 @@ public class XmlSchemaExporter extends NetObject  {
 
     public void ExportTypeMapping(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportTypeMapping", xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance());
         } catch (JCNativeException jcne) {

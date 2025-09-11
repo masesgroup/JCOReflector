@@ -143,10 +143,14 @@ public class IHasXmlNodeImplementation extends NetObject implements IHasXmlNode 
     
     public XmlNode GetNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNode = null;
         try {
-            JCObject objGetNode = (JCObject)classInstance.Invoke("GetNode");
+            retObjectGetNode = classInstance.Invoke("GetNode");
+            JCObject objGetNode = (JCObject)retObjectGetNode;
             return new XmlNode(objGetNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNode != null ? retObjectGetNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

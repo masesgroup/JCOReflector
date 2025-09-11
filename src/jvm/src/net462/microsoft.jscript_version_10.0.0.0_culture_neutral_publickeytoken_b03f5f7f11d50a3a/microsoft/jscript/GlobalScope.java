@@ -173,10 +173,14 @@ public class GlobalScope extends ActivationObject  {
     
     public GlobalScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalScope = null;
         try {
-            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
+            retObjectGetGlobalScope = classInstance.Invoke("GetGlobalScope");
+            JCObject objGetGlobalScope = (JCObject)retObjectGetGlobalScope;
             return new GlobalScope(objGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalScope != null ? retObjectGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +188,14 @@ public class GlobalScope extends ActivationObject  {
 
     public NetObject GetDefaultThisObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultThisObject = null;
         try {
-            JCObject objGetDefaultThisObject = (JCObject)classInstance.Invoke("GetDefaultThisObject");
+            retObjectGetDefaultThisObject = classInstance.Invoke("GetDefaultThisObject");
+            JCObject objGetDefaultThisObject = (JCObject)retObjectGetDefaultThisObject;
             return new NetObject(objGetDefaultThisObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultThisObject != null ? retObjectGetDefaultThisObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class GlobalScope extends ActivationObject  {
 
     public FieldInfo AddField(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddField = null;
         try {
-            JCObject objAddField = (JCObject)classInstance.Invoke("AddField", name);
+            retObjectAddField = classInstance.Invoke("AddField", name);
+            JCObject objAddField = (JCObject)retObjectAddField;
             return new FieldInfo(objAddField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddField != null ? retObjectAddField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class GlobalScope extends ActivationObject  {
 
     public FieldInfo GetField(java.lang.String name, int lexLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetField = null;
         try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name, lexLevel);
+            retObjectGetField = classInstance.Invoke("GetField", name, lexLevel);
+            JCObject objGetField = (JCObject)retObjectGetField;
             return new FieldInfo(objGetField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetField != null ? retObjectGetField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class GlobalScope extends ActivationObject  {
 
     public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalField = null;
         try {
-            JCObject objGetLocalField = (JCObject)classInstance.Invoke("GetLocalField", name);
+            retObjectGetLocalField = classInstance.Invoke("GetLocalField", name);
+            JCObject objGetLocalField = (JCObject)retObjectGetLocalField;
             return new FieldInfo(objGetLocalField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalField != null ? retObjectGetLocalField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,16 +248,20 @@ public class GlobalScope extends ActivationObject  {
 
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFields = null;
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetFields = classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFields;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFields != null ? retObjectGetFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,16 +269,20 @@ public class GlobalScope extends ActivationObject  {
 
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMember = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMember = classInstance.Invoke("GetMember", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMember;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMember != null ? retObjectGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,16 +290,20 @@ public class GlobalScope extends ActivationObject  {
 
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMembers = null;
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMembers = classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMembers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMembers != null ? retObjectGetMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,16 +311,20 @@ public class GlobalScope extends ActivationObject  {
 
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetMethods = classInstance.Invoke("GetMethods", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethods != null ? retObjectGetMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,16 +332,20 @@ public class GlobalScope extends ActivationObject  {
 
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetProperties", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            retObjectGetProperties = classInstance.Invoke("GetProperties", bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +357,7 @@ public class GlobalScope extends ActivationObject  {
      */
     @Deprecated 
     public PropertyInfo AddProperty(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
     }
 
     /**
@@ -326,7 +366,7 @@ public class GlobalScope extends ActivationObject  {
      */
     @Deprecated 
     public void RemoveMember(MemberInfo m) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
     }
 
 

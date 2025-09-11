@@ -160,9 +160,13 @@ public class ArrayShape extends ValueType  {
     
     public int getRank() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRank = null;
         try {
-            return (int)classInstance.Get("Rank");
+            retObjectRank = classInstance.Get("Rank");
+            return (int)retObjectRank;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRank != null ? retObjectRank.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

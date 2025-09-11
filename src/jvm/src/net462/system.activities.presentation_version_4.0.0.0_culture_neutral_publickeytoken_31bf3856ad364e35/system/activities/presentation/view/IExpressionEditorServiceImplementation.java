@@ -146,7 +146,7 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
     
     public void CloseExpressionEditors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CloseExpressionEditors");
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
 
     public void UpdateContext(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateContext", assemblies == null ? null : assemblies.getJCOInstance(), importedNamespaces == null ? null : importedNamespaces.getJCOInstance());
         } catch (JCNativeException jcne) {

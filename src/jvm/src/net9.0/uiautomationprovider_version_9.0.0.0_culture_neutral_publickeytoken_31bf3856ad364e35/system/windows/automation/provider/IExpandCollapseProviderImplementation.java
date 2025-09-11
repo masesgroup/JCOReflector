@@ -143,7 +143,7 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
     
     public void Collapse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Collapse");
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
 
     public void Expand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Expand");
         } catch (JCNativeException jcne) {
@@ -167,10 +167,14 @@ public class IExpandCollapseProviderImplementation extends NetObject implements 
     
     public ExpandCollapseState getExpandCollapseState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandCollapseState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpandCollapseState");
+            retObjectExpandCollapseState = classInstance.Get("ExpandCollapseState");
+            JCObject val = (JCObject)retObjectExpandCollapseState;
             return new ExpandCollapseState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpandCollapseState != null ? retObjectExpandCollapseState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

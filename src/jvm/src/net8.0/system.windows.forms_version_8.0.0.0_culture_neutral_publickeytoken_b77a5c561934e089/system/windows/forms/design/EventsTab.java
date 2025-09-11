@@ -173,9 +173,13 @@ public class EventsTab extends PropertyTab  {
     
     public boolean CanExtend(NetObject extendee) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExtend = null;
         try {
-            return (boolean)classInstance.Invoke("CanExtend", extendee == null ? null : extendee.getJCOInstance());
+            retObjectCanExtend = classInstance.Invoke("CanExtend", extendee == null ? null : extendee.getJCOInstance());
+            return (boolean)retObjectCanExtend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExtend != null ? retObjectCanExtend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class EventsTab extends PropertyTab  {
 
     public PropertyDescriptor GetDefaultProperty(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultProperty = null;
         try {
-            JCObject objGetDefaultProperty = (JCObject)classInstance.Invoke("GetDefaultProperty", obj == null ? null : obj.getJCOInstance());
+            retObjectGetDefaultProperty = classInstance.Invoke("GetDefaultProperty", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetDefaultProperty = (JCObject)retObjectGetDefaultProperty;
             return new PropertyDescriptor(objGetDefaultProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultProperty != null ? retObjectGetDefaultProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class EventsTab extends PropertyTab  {
 
     public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", context == null ? null : context.getJCOInstance(), component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class EventsTab extends PropertyTab  {
 
     public PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperties = null;
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            retObjectGetProperties = classInstance.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)retObjectGetProperties;
             return new PropertyDescriptorCollection(objGetProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperties != null ? retObjectGetProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

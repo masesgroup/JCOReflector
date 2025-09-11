@@ -143,10 +143,14 @@ public class IProvideCustomContentStateImplementation extends NetObject implemen
     
     public CustomContentState GetContentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContentState = null;
         try {
-            JCObject objGetContentState = (JCObject)classInstance.Invoke("GetContentState");
+            retObjectGetContentState = classInstance.Invoke("GetContentState");
+            JCObject objGetContentState = (JCObject)retObjectGetContentState;
             return new CustomContentState(objGetContentState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContentState != null ? retObjectGetContentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

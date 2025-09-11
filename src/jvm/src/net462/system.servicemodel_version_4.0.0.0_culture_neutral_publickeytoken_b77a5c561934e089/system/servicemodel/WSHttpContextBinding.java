@@ -196,10 +196,14 @@ public class WSHttpContextBinding extends WSHttpBinding  {
     
     public BindingElementCollection CreateBindingElements() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +215,13 @@ public class WSHttpContextBinding extends WSHttpBinding  {
     
     public boolean getContextManagementEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextManagementEnabled = null;
         try {
-            return (boolean)classInstance.Get("ContextManagementEnabled");
+            retObjectContextManagementEnabled = classInstance.Get("ContextManagementEnabled");
+            return (boolean)retObjectContextManagementEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContextManagementEnabled != null ? retObjectContextManagementEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class WSHttpContextBinding extends WSHttpBinding  {
 
     public void setContextManagementEnabled(boolean ContextManagementEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextManagementEnabled", ContextManagementEnabled);
         } catch (JCNativeException jcne) {
@@ -231,10 +239,14 @@ public class WSHttpContextBinding extends WSHttpBinding  {
 
     public ProtectionLevel getContextProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextProtectionLevel");
+            retObjectContextProtectionLevel = classInstance.Get("ContextProtectionLevel");
+            JCObject val = (JCObject)retObjectContextProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextProtectionLevel != null ? retObjectContextProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class WSHttpContextBinding extends WSHttpBinding  {
 
     public void setContextProtectionLevel(ProtectionLevel ContextProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextProtectionLevel", ContextProtectionLevel == null ? null : ContextProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +264,14 @@ public class WSHttpContextBinding extends WSHttpBinding  {
 
     public Uri getClientCallbackAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCallbackAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCallbackAddress");
+            retObjectClientCallbackAddress = classInstance.Get("ClientCallbackAddress");
+            JCObject val = (JCObject)retObjectClientCallbackAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCallbackAddress != null ? retObjectClientCallbackAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class WSHttpContextBinding extends WSHttpBinding  {
 
     public void setClientCallbackAddress(Uri ClientCallbackAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCallbackAddress", ClientCallbackAddress == null ? null : ClientCallbackAddress.getJCOInstance());
         } catch (JCNativeException jcne) {

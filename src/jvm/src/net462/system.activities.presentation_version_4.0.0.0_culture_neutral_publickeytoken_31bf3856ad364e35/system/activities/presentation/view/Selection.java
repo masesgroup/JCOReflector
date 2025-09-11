@@ -185,10 +185,14 @@ public class Selection extends ContextItem  {
     
     public static Selection Select(EditingContext context, ModelItem itemToSelect) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelect = null;
         try {
-            JCObject objSelect = (JCObject)classType.Invoke("Select", context == null ? null : context.getJCOInstance(), itemToSelect == null ? null : itemToSelect.getJCOInstance());
+            retObjectSelect = classType.Invoke("Select", context == null ? null : context.getJCOInstance(), itemToSelect == null ? null : itemToSelect.getJCOInstance());
+            JCObject objSelect = (JCObject)retObjectSelect;
             return new Selection(objSelect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelect != null ? retObjectSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +200,14 @@ public class Selection extends ContextItem  {
 
     public static Selection SelectOnly(EditingContext context, ModelItem itemToSelect) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSelectOnly = null;
         try {
-            JCObject objSelectOnly = (JCObject)classType.Invoke("SelectOnly", context == null ? null : context.getJCOInstance(), itemToSelect == null ? null : itemToSelect.getJCOInstance());
+            retObjectSelectOnly = classType.Invoke("SelectOnly", context == null ? null : context.getJCOInstance(), itemToSelect == null ? null : itemToSelect.getJCOInstance());
+            JCObject objSelectOnly = (JCObject)retObjectSelectOnly;
             return new Selection(objSelectOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectOnly != null ? retObjectSelectOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +215,14 @@ public class Selection extends ContextItem  {
 
     public static Selection Toggle(EditingContext context, ModelItem itemToToggle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggle = null;
         try {
-            JCObject objToggle = (JCObject)classType.Invoke("Toggle", context == null ? null : context.getJCOInstance(), itemToToggle == null ? null : itemToToggle.getJCOInstance());
+            retObjectToggle = classType.Invoke("Toggle", context == null ? null : context.getJCOInstance(), itemToToggle == null ? null : itemToToggle.getJCOInstance());
+            JCObject objToggle = (JCObject)retObjectToggle;
             return new Selection(objToggle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggle != null ? retObjectToggle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +230,14 @@ public class Selection extends ContextItem  {
 
     public static Selection Union(EditingContext context, ModelItem itemToAdd) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classType.Invoke("Union", context == null ? null : context.getJCOInstance(), itemToAdd == null ? null : itemToAdd.getJCOInstance());
+            retObjectUnion = classType.Invoke("Union", context == null ? null : context.getJCOInstance(), itemToAdd == null ? null : itemToAdd.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new Selection(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +249,13 @@ public class Selection extends ContextItem  {
     
     public int getSelectionCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionCount = null;
         try {
-            return (int)classInstance.Get("SelectionCount");
+            retObjectSelectionCount = classInstance.Get("SelectionCount");
+            return (int)retObjectSelectionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +263,14 @@ public class Selection extends ContextItem  {
 
     public ModelItem getPrimarySelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimarySelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimarySelection");
+            retObjectPrimarySelection = classInstance.Get("PrimarySelection");
+            JCObject val = (JCObject)retObjectPrimarySelection;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimarySelection != null ? retObjectPrimarySelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

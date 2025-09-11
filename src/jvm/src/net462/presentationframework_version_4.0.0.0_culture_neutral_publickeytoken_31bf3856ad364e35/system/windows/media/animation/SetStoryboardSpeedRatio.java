@@ -166,9 +166,13 @@ public class SetStoryboardSpeedRatio extends ControllableStoryboardAction  {
     
     public double getSpeedRatio() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpeedRatio = null;
         try {
-            return (double)classInstance.Get("SpeedRatio");
+            retObjectSpeedRatio = classInstance.Get("SpeedRatio");
+            return (double)retObjectSpeedRatio;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectSpeedRatio != null ? retObjectSpeedRatio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SetStoryboardSpeedRatio extends ControllableStoryboardAction  {
 
     public void setSpeedRatio(double SpeedRatio) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpeedRatio", SpeedRatio);
         } catch (JCNativeException jcne) {

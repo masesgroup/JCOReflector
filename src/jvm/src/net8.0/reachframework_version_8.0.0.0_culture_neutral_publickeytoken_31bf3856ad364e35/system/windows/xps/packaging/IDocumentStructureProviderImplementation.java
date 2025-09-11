@@ -143,10 +143,14 @@ public class IDocumentStructureProviderImplementation extends NetObject implemen
     
     public XpsStructure AddDocumentStructure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDocumentStructure = null;
         try {
-            JCObject objAddDocumentStructure = (JCObject)classInstance.Invoke("AddDocumentStructure");
+            retObjectAddDocumentStructure = classInstance.Invoke("AddDocumentStructure");
+            JCObject objAddDocumentStructure = (JCObject)retObjectAddDocumentStructure;
             return new XpsStructure(objAddDocumentStructure);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDocumentStructure != null ? retObjectAddDocumentStructure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

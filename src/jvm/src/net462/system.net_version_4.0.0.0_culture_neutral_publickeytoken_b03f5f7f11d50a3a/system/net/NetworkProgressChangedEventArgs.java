@@ -170,9 +170,13 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
     
     public int getProcessedBytes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessedBytes = null;
         try {
-            return (int)classInstance.Get("ProcessedBytes");
+            retObjectProcessedBytes = classInstance.Get("ProcessedBytes");
+            return (int)retObjectProcessedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProcessedBytes != null ? retObjectProcessedBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
 
     public int getTotalBytes() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalBytes = null;
         try {
-            return (int)classInstance.Get("TotalBytes");
+            retObjectTotalBytes = classInstance.Get("TotalBytes");
+            return (int)retObjectTotalBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTotalBytes != null ? retObjectTotalBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

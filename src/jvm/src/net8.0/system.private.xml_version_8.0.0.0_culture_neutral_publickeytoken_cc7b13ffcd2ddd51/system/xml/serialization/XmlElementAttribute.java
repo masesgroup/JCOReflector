@@ -197,9 +197,13 @@ public class XmlElementAttribute extends Attribute  {
     
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullable = null;
         try {
-            return (boolean)classInstance.Get("IsNullable");
+            retObjectIsNullable = classInstance.Get("IsNullable");
+            return (boolean)retObjectIsNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullable != null ? retObjectIsNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNullable", IsNullable);
         } catch (JCNativeException jcne) {
@@ -217,9 +221,13 @@ public class XmlElementAttribute extends Attribute  {
 
     public int getOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrder = null;
         try {
-            return (int)classInstance.Get("Order");
+            retObjectOrder = classInstance.Get("Order");
+            return (int)retObjectOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOrder != null ? retObjectOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setOrder(int Order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Order", Order);
         } catch (JCNativeException jcne) {
@@ -237,9 +245,13 @@ public class XmlElementAttribute extends Attribute  {
 
     public java.lang.String getDataType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataType = null;
         try {
-            return (java.lang.String)classInstance.Get("DataType");
+            retObjectDataType = classInstance.Get("DataType");
+            return (java.lang.String)retObjectDataType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataType != null ? retObjectDataType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +259,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setDataType(java.lang.String DataType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataType", DataType);
         } catch (JCNativeException jcne) {
@@ -257,9 +269,13 @@ public class XmlElementAttribute extends Attribute  {
 
     public java.lang.String getElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("ElementName");
+            retObjectElementName = classInstance.Get("ElementName");
+            return (java.lang.String)retObjectElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectElementName != null ? retObjectElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +283,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setElementName(java.lang.String ElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElementName", ElementName);
         } catch (JCNativeException jcne) {
@@ -277,9 +293,13 @@ public class XmlElementAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +307,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -297,10 +317,14 @@ public class XmlElementAttribute extends Attribute  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +332,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setType(NetType Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,10 +342,14 @@ public class XmlElementAttribute extends Attribute  {
 
     public XmlSchemaForm getForm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Form");
+            retObjectForm = classInstance.Get("Form");
+            JCObject val = (JCObject)retObjectForm;
             return new XmlSchemaForm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForm != null ? retObjectForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +357,7 @@ public class XmlElementAttribute extends Attribute  {
 
     public void setForm(XmlSchemaForm Form) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Form", Form == null ? null : Form.getJCOInstance());
         } catch (JCNativeException jcne) {

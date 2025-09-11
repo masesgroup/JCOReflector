@@ -171,10 +171,14 @@ public class CalendarModeChangedEventArgs extends RoutedEventArgs  {
     
     public CalendarMode getNewMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewMode");
+            retObjectNewMode = classInstance.Get("NewMode");
+            JCObject val = (JCObject)retObjectNewMode;
             return new CalendarMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewMode != null ? retObjectNewMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class CalendarModeChangedEventArgs extends RoutedEventArgs  {
 
     public void setNewMode(CalendarMode NewMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewMode", NewMode == null ? null : NewMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class CalendarModeChangedEventArgs extends RoutedEventArgs  {
 
     public CalendarMode getOldMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldMode");
+            retObjectOldMode = classInstance.Get("OldMode");
+            JCObject val = (JCObject)retObjectOldMode;
             return new CalendarMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldMode != null ? retObjectOldMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class CalendarModeChangedEventArgs extends RoutedEventArgs  {
 
     public void setOldMode(CalendarMode OldMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldMode", OldMode == null ? null : OldMode.getJCOInstance());
         } catch (JCNativeException jcne) {

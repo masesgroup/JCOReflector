@@ -158,10 +158,14 @@ public class ModelBinders extends NetObject  {
     
     public static ModelBinderDictionary getBinders() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinders = null;
         try {
-            JCObject val = (JCObject)classType.Get("Binders");
+            retObjectBinders = classType.Get("Binders");
+            JCObject val = (JCObject)retObjectBinders;
             return new ModelBinderDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinders != null ? retObjectBinders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

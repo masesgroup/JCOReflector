@@ -171,10 +171,14 @@ public class ModelDataSourceMethod extends NetObject  {
     
     public OrderedDictionary getParameters() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new OrderedDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ModelDataSourceMethod extends NetObject  {
 
     public NetObject getInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Instance");
+            retObjectInstance = classInstance.Get("Instance");
+            JCObject val = (JCObject)retObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstance != null ? retObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class ModelDataSourceMethod extends NetObject  {
 
     public void setInstance(NetObject Instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Instance", Instance == null ? null : Instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class ModelDataSourceMethod extends NetObject  {
 
     public MethodInfo getMethodInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodInfo");
+            retObjectMethodInfo = classInstance.Get("MethodInfo");
+            JCObject val = (JCObject)retObjectMethodInfo;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodInfo != null ? retObjectMethodInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class ModelDataSourceMethod extends NetObject  {
 
     public void setMethodInfo(MethodInfo MethodInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodInfo", MethodInfo == null ? null : MethodInfo.getJCOInstance());
         } catch (JCNativeException jcne) {

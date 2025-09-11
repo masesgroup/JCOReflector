@@ -143,10 +143,14 @@ public class IObjectReferenceImplementation extends NetObject implements IObject
     
     public NetObject GetRealObject(StreamingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRealObject = null;
         try {
-            JCObject objGetRealObject = (JCObject)classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
+            retObjectGetRealObject = classInstance.Invoke("GetRealObject", context == null ? null : context.getJCOInstance());
+            JCObject objGetRealObject = (JCObject)retObjectGetRealObject;
             return new NetObject(objGetRealObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRealObject != null ? retObjectGetRealObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

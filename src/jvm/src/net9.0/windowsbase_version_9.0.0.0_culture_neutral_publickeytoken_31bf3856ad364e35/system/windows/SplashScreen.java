@@ -177,7 +177,7 @@ public class SplashScreen extends NetObject  {
     
     public void Close(TimeSpan fadeoutDuration) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close", fadeoutDuration == null ? null : fadeoutDuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class SplashScreen extends NetObject  {
 
     public void Show(boolean autoClose, boolean topMost) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.OverflowException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", autoClose, topMost);
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class SplashScreen extends NetObject  {
 
     public void Show(boolean autoClose) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.TimeoutException, system.FormatException, system.OverflowException, system.MulticastNotSupportedException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", autoClose);
         } catch (JCNativeException jcne) {

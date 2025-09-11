@@ -156,10 +156,14 @@ public class ExceptionDispatchInfo extends NetObject  {
     
     public static ExceptionDispatchInfo Capture(NetException source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            JCObject objCapture = (JCObject)classType.Invoke("Capture", source == null ? null : source.getJCOInstance());
+            retObjectCapture = classType.Invoke("Capture", source == null ? null : source.getJCOInstance());
+            JCObject objCapture = (JCObject)retObjectCapture;
             return new ExceptionDispatchInfo(objCapture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class ExceptionDispatchInfo extends NetObject  {
 
     public void Throw() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Throw");
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class ExceptionDispatchInfo extends NetObject  {
     
     public NetException getSourceException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceException");
+            retObjectSourceException = classInstance.Get("SourceException");
+            JCObject val = (JCObject)retObjectSourceException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceException != null ? retObjectSourceException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

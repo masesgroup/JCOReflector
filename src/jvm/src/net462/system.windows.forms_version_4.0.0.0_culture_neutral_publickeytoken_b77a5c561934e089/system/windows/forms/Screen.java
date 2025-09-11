@@ -159,10 +159,14 @@ public class Screen extends NetObject  {
     
     public static Rectangle GetBounds(Point pt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", pt == null ? null : pt.getJCOInstance());
+            retObjectGetBounds = classType.Invoke("GetBounds", pt == null ? null : pt.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class Screen extends NetObject  {
 
     public static Rectangle GetBounds(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", rect == null ? null : rect.getJCOInstance());
+            retObjectGetBounds = classType.Invoke("GetBounds", rect == null ? null : rect.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class Screen extends NetObject  {
 
     public static Rectangle GetBounds(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetBounds = null;
         try {
-            JCObject objGetBounds = (JCObject)classType.Invoke("GetBounds", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetBounds = classType.Invoke("GetBounds", ctl == null ? null : ctl.getJCOInstance());
+            JCObject objGetBounds = (JCObject)retObjectGetBounds;
             return new Rectangle(objGetBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBounds != null ? retObjectGetBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class Screen extends NetObject  {
 
     public static Rectangle GetWorkingArea(Point pt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWorkingArea = null;
         try {
-            JCObject objGetWorkingArea = (JCObject)classType.Invoke("GetWorkingArea", pt == null ? null : pt.getJCOInstance());
+            retObjectGetWorkingArea = classType.Invoke("GetWorkingArea", pt == null ? null : pt.getJCOInstance());
+            JCObject objGetWorkingArea = (JCObject)retObjectGetWorkingArea;
             return new Rectangle(objGetWorkingArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkingArea != null ? retObjectGetWorkingArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class Screen extends NetObject  {
 
     public static Rectangle GetWorkingArea(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWorkingArea = null;
         try {
-            JCObject objGetWorkingArea = (JCObject)classType.Invoke("GetWorkingArea", rect == null ? null : rect.getJCOInstance());
+            retObjectGetWorkingArea = classType.Invoke("GetWorkingArea", rect == null ? null : rect.getJCOInstance());
+            JCObject objGetWorkingArea = (JCObject)retObjectGetWorkingArea;
             return new Rectangle(objGetWorkingArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkingArea != null ? retObjectGetWorkingArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class Screen extends NetObject  {
 
     public static Rectangle GetWorkingArea(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MemberAccessException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWorkingArea = null;
         try {
-            JCObject objGetWorkingArea = (JCObject)classType.Invoke("GetWorkingArea", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetWorkingArea = classType.Invoke("GetWorkingArea", ctl == null ? null : ctl.getJCOInstance());
+            JCObject objGetWorkingArea = (JCObject)retObjectGetWorkingArea;
             return new Rectangle(objGetWorkingArea);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWorkingArea != null ? retObjectGetWorkingArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class Screen extends NetObject  {
 
     public static Screen FromControl(Control control) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromControl = null;
         try {
-            JCObject objFromControl = (JCObject)classType.Invoke("FromControl", control == null ? null : control.getJCOInstance());
+            retObjectFromControl = classType.Invoke("FromControl", control == null ? null : control.getJCOInstance());
+            JCObject objFromControl = (JCObject)retObjectFromControl;
             return new Screen(objFromControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromControl != null ? retObjectFromControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +264,14 @@ public class Screen extends NetObject  {
 
     public static Screen FromPoint(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromPoint = null;
         try {
-            JCObject objFromPoint = (JCObject)classType.Invoke("FromPoint", point == null ? null : point.getJCOInstance());
+            retObjectFromPoint = classType.Invoke("FromPoint", point == null ? null : point.getJCOInstance());
+            JCObject objFromPoint = (JCObject)retObjectFromPoint;
             return new Screen(objFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromPoint != null ? retObjectFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +279,14 @@ public class Screen extends NetObject  {
 
     public static Screen FromRectangle(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromRectangle = null;
         try {
-            JCObject objFromRectangle = (JCObject)classType.Invoke("FromRectangle", rect == null ? null : rect.getJCOInstance());
+            retObjectFromRectangle = classType.Invoke("FromRectangle", rect == null ? null : rect.getJCOInstance());
+            JCObject objFromRectangle = (JCObject)retObjectFromRectangle;
             return new Screen(objFromRectangle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromRectangle != null ? retObjectFromRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +298,13 @@ public class Screen extends NetObject  {
     
     public boolean getPrimary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimary = null;
         try {
-            return (boolean)classInstance.Get("Primary");
+            retObjectPrimary = classInstance.Get("Primary");
+            return (boolean)retObjectPrimary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrimary != null ? retObjectPrimary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +312,13 @@ public class Screen extends NetObject  {
 
     public int getBitsPerPixel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitsPerPixel = null;
         try {
-            return (int)classInstance.Get("BitsPerPixel");
+            retObjectBitsPerPixel = classInstance.Get("BitsPerPixel");
+            return (int)retObjectBitsPerPixel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBitsPerPixel != null ? retObjectBitsPerPixel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +326,14 @@ public class Screen extends NetObject  {
 
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +341,14 @@ public class Screen extends NetObject  {
 
     public Rectangle getWorkingArea() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkingArea = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkingArea");
+            retObjectWorkingArea = classInstance.Get("WorkingArea");
+            JCObject val = (JCObject)retObjectWorkingArea;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkingArea != null ? retObjectWorkingArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,9 +356,13 @@ public class Screen extends NetObject  {
 
     public java.lang.String getDeviceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeviceName = null;
         try {
-            return (java.lang.String)classInstance.Get("DeviceName");
+            retObjectDeviceName = classInstance.Get("DeviceName");
+            return (java.lang.String)retObjectDeviceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeviceName != null ? retObjectDeviceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +370,14 @@ public class Screen extends NetObject  {
 
     public static Screen getPrimaryScreen() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPrimaryScreen = null;
         try {
-            JCObject val = (JCObject)classType.Get("PrimaryScreen");
+            retObjectPrimaryScreen = classType.Get("PrimaryScreen");
+            JCObject val = (JCObject)retObjectPrimaryScreen;
             return new Screen(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryScreen != null ? retObjectPrimaryScreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,16 +385,20 @@ public class Screen extends NetObject  {
 
     public final static Screen[] getAllScreens() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAllScreens = null;
         try {
             ArrayList<Screen> resultingArrayList = new ArrayList<Screen>();
-            JCObject resultingObjects = (JCObject)classType.Get("AllScreens");
+            retObjectAllScreens = classType.Get("AllScreens");
+            JCObject resultingObjects = (JCObject)retObjectAllScreens;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Screen(resultingObject));
             }
             Screen[] resultingArray = new Screen[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllScreens != null ? retObjectAllScreens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

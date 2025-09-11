@@ -163,7 +163,7 @@ public class FormsAuthenticationModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class FormsAuthenticationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.ApplicationException, system.threading.ThreadAbortException, system.ObjectDisposedException, system.io.EndOfStreamException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class FormsAuthenticationModule extends NetObject  {
 
     public void addAuthenticate(FormsAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class FormsAuthenticationModule extends NetObject  {
 
     public void removeAuthenticate(FormsAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {

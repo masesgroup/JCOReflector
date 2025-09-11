@@ -158,10 +158,14 @@ public class BitmapPalettes extends NetObject  {
     
     public static BitmapPalette getBlackAndWhite() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlackAndWhite = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlackAndWhite");
+            retObjectBlackAndWhite = classType.Get("BlackAndWhite");
+            JCObject val = (JCObject)retObjectBlackAndWhite;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlackAndWhite != null ? retObjectBlackAndWhite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getBlackAndWhiteTransparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlackAndWhiteTransparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("BlackAndWhiteTransparent");
+            retObjectBlackAndWhiteTransparent = classType.Get("BlackAndWhiteTransparent");
+            JCObject val = (JCObject)retObjectBlackAndWhiteTransparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlackAndWhiteTransparent != null ? retObjectBlackAndWhiteTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray16() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray16 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray16");
+            retObjectGray16 = classType.Get("Gray16");
+            JCObject val = (JCObject)retObjectGray16;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray16 != null ? retObjectGray16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray16Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray16Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray16Transparent");
+            retObjectGray16Transparent = classType.Get("Gray16Transparent");
+            JCObject val = (JCObject)retObjectGray16Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray16Transparent != null ? retObjectGray16Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray256() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray256");
+            retObjectGray256 = classType.Get("Gray256");
+            JCObject val = (JCObject)retObjectGray256;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray256 != null ? retObjectGray256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray256Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray256Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray256Transparent");
+            retObjectGray256Transparent = classType.Get("Gray256Transparent");
+            JCObject val = (JCObject)retObjectGray256Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray256Transparent != null ? retObjectGray256Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray4() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray4 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray4");
+            retObjectGray4 = classType.Get("Gray4");
+            JCObject val = (JCObject)retObjectGray4;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray4 != null ? retObjectGray4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getGray4Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGray4Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Gray4Transparent");
+            retObjectGray4Transparent = classType.Get("Gray4Transparent");
+            JCObject val = (JCObject)retObjectGray4Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGray4Transparent != null ? retObjectGray4Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone125() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone125 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone125");
+            retObjectHalftone125 = classType.Get("Halftone125");
+            JCObject val = (JCObject)retObjectHalftone125;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone125 != null ? retObjectHalftone125.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +293,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone125Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone125Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone125Transparent");
+            retObjectHalftone125Transparent = classType.Get("Halftone125Transparent");
+            JCObject val = (JCObject)retObjectHalftone125Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone125Transparent != null ? retObjectHalftone125Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +308,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone216() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone216 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone216");
+            retObjectHalftone216 = classType.Get("Halftone216");
+            JCObject val = (JCObject)retObjectHalftone216;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone216 != null ? retObjectHalftone216.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +323,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone216Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone216Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone216Transparent");
+            retObjectHalftone216Transparent = classType.Get("Halftone216Transparent");
+            JCObject val = (JCObject)retObjectHalftone216Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone216Transparent != null ? retObjectHalftone216Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +338,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone252() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone252 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone252");
+            retObjectHalftone252 = classType.Get("Halftone252");
+            JCObject val = (JCObject)retObjectHalftone252;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone252 != null ? retObjectHalftone252.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +353,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone252Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone252Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone252Transparent");
+            retObjectHalftone252Transparent = classType.Get("Halftone252Transparent");
+            JCObject val = (JCObject)retObjectHalftone252Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone252Transparent != null ? retObjectHalftone252Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +368,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone256() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone256 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone256");
+            retObjectHalftone256 = classType.Get("Halftone256");
+            JCObject val = (JCObject)retObjectHalftone256;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone256 != null ? retObjectHalftone256.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +383,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone256Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone256Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone256Transparent");
+            retObjectHalftone256Transparent = classType.Get("Halftone256Transparent");
+            JCObject val = (JCObject)retObjectHalftone256Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone256Transparent != null ? retObjectHalftone256Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +398,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone27() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone27 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone27");
+            retObjectHalftone27 = classType.Get("Halftone27");
+            JCObject val = (JCObject)retObjectHalftone27;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone27 != null ? retObjectHalftone27.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +413,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone27Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone27Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone27Transparent");
+            retObjectHalftone27Transparent = classType.Get("Halftone27Transparent");
+            JCObject val = (JCObject)retObjectHalftone27Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone27Transparent != null ? retObjectHalftone27Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +428,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone64() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone64 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone64");
+            retObjectHalftone64 = classType.Get("Halftone64");
+            JCObject val = (JCObject)retObjectHalftone64;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone64 != null ? retObjectHalftone64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +443,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone64Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone64Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone64Transparent");
+            retObjectHalftone64Transparent = classType.Get("Halftone64Transparent");
+            JCObject val = (JCObject)retObjectHalftone64Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone64Transparent != null ? retObjectHalftone64Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +458,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone8() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone8 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone8");
+            retObjectHalftone8 = classType.Get("Halftone8");
+            JCObject val = (JCObject)retObjectHalftone8;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone8 != null ? retObjectHalftone8.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +473,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getHalftone8Transparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHalftone8Transparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Halftone8Transparent");
+            retObjectHalftone8Transparent = classType.Get("Halftone8Transparent");
+            JCObject val = (JCObject)retObjectHalftone8Transparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHalftone8Transparent != null ? retObjectHalftone8Transparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +488,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getWebPalette() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWebPalette = null;
         try {
-            JCObject val = (JCObject)classType.Get("WebPalette");
+            retObjectWebPalette = classType.Get("WebPalette");
+            JCObject val = (JCObject)retObjectWebPalette;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPalette != null ? retObjectWebPalette.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +503,14 @@ public class BitmapPalettes extends NetObject  {
 
     public static BitmapPalette getWebPaletteTransparent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWebPaletteTransparent = null;
         try {
-            JCObject val = (JCObject)classType.Get("WebPaletteTransparent");
+            retObjectWebPaletteTransparent = classType.Get("WebPaletteTransparent");
+            JCObject val = (JCObject)retObjectWebPaletteTransparent;
             return new BitmapPalette(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPaletteTransparent != null ? retObjectWebPaletteTransparent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

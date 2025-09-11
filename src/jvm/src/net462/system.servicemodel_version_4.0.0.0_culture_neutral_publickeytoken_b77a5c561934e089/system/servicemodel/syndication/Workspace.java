@@ -168,10 +168,14 @@ public class Workspace extends NetObject  {
     
     public SyndicationElementExtensionCollection getElementExtensions() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementExtensions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementExtensions");
+            retObjectElementExtensions = classInstance.Get("ElementExtensions");
+            JCObject val = (JCObject)retObjectElementExtensions;
             return new SyndicationElementExtensionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementExtensions != null ? retObjectElementExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class Workspace extends NetObject  {
 
     public TextSyndicationContent getTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            JCObject val = (JCObject)retObjectTitle;
             return new TextSyndicationContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class Workspace extends NetObject  {
 
     public void setTitle(TextSyndicationContent Title) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title == null ? null : Title.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,10 +208,14 @@ public class Workspace extends NetObject  {
 
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            retObjectBaseUri = classInstance.Get("BaseUri");
+            JCObject val = (JCObject)retObjectBaseUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class Workspace extends NetObject  {
 
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {

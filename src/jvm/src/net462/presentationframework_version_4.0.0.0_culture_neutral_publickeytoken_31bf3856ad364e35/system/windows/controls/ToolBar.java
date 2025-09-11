@@ -166,9 +166,13 @@ public class ToolBar extends HeaderedItemsControl  {
     
     public static boolean GetIsOverflowItem(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsOverflowItem = null;
         try {
-            return (boolean)classType.Invoke("GetIsOverflowItem", element == null ? null : element.getJCOInstance());
+            retObjectGetIsOverflowItem = classType.Invoke("GetIsOverflowItem", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsOverflowItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsOverflowItem != null ? retObjectGetIsOverflowItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static OverflowMode GetOverflowMode(DependencyObject element) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOverflowMode = null;
         try {
-            JCObject objGetOverflowMode = (JCObject)classType.Invoke("GetOverflowMode", element == null ? null : element.getJCOInstance());
+            retObjectGetOverflowMode = classType.Invoke("GetOverflowMode", element == null ? null : element.getJCOInstance());
+            JCObject objGetOverflowMode = (JCObject)retObjectGetOverflowMode;
             return new OverflowMode(objGetOverflowMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOverflowMode != null ? retObjectGetOverflowMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static void SetOverflowMode(DependencyObject element, OverflowMode mode) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetOverflowMode", element == null ? null : element.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,9 +209,13 @@ public class ToolBar extends HeaderedItemsControl  {
     
     public boolean getHasOverflowItems() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasOverflowItems = null;
         try {
-            return (boolean)classInstance.Get("HasOverflowItems");
+            retObjectHasOverflowItems = classInstance.Get("HasOverflowItems");
+            return (boolean)retObjectHasOverflowItems;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasOverflowItems != null ? retObjectHasOverflowItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +223,13 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public boolean getIsOverflowOpen() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOverflowOpen = null;
         try {
-            return (boolean)classInstance.Get("IsOverflowOpen");
+            retObjectIsOverflowOpen = classInstance.Get("IsOverflowOpen");
+            return (boolean)retObjectIsOverflowOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOverflowOpen != null ? retObjectIsOverflowOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +237,7 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public void setIsOverflowOpen(boolean IsOverflowOpen) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOverflowOpen", IsOverflowOpen);
         } catch (JCNativeException jcne) {
@@ -231,9 +247,13 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public int getBand() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBand = null;
         try {
-            return (int)classInstance.Get("Band");
+            retObjectBand = classInstance.Get("Band");
+            return (int)retObjectBand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBand != null ? retObjectBand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +261,7 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public void setBand(int Band) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Band", Band);
         } catch (JCNativeException jcne) {
@@ -251,9 +271,13 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public int getBandIndex() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBandIndex = null;
         try {
-            return (int)classInstance.Get("BandIndex");
+            retObjectBandIndex = classInstance.Get("BandIndex");
+            return (int)retObjectBandIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBandIndex != null ? retObjectBandIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +285,7 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public void setBandIndex(int BandIndex) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BandIndex", BandIndex);
         } catch (JCNativeException jcne) {
@@ -271,10 +295,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public Orientation getOrientation() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Orientation");
+            retObjectOrientation = classInstance.Get("Orientation");
+            JCObject val = (JCObject)retObjectOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientation != null ? retObjectOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +310,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getButtonStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectButtonStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ButtonStyleKey");
+            retObjectButtonStyleKey = classType.Get("ButtonStyleKey");
+            JCObject val = (JCObject)retObjectButtonStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectButtonStyleKey != null ? retObjectButtonStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +325,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getCheckBoxStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckBoxStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("CheckBoxStyleKey");
+            retObjectCheckBoxStyleKey = classType.Get("CheckBoxStyleKey");
+            JCObject val = (JCObject)retObjectCheckBoxStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckBoxStyleKey != null ? retObjectCheckBoxStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +340,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getComboBoxStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectComboBoxStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ComboBoxStyleKey");
+            retObjectComboBoxStyleKey = classType.Get("ComboBoxStyleKey");
+            JCObject val = (JCObject)retObjectComboBoxStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComboBoxStyleKey != null ? retObjectComboBoxStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +355,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getMenuStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMenuStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("MenuStyleKey");
+            retObjectMenuStyleKey = classType.Get("MenuStyleKey");
+            JCObject val = (JCObject)retObjectMenuStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenuStyleKey != null ? retObjectMenuStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +370,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getRadioButtonStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRadioButtonStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("RadioButtonStyleKey");
+            retObjectRadioButtonStyleKey = classType.Get("RadioButtonStyleKey");
+            JCObject val = (JCObject)retObjectRadioButtonStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRadioButtonStyleKey != null ? retObjectRadioButtonStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +385,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getSeparatorStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeparatorStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("SeparatorStyleKey");
+            retObjectSeparatorStyleKey = classType.Get("SeparatorStyleKey");
+            JCObject val = (JCObject)retObjectSeparatorStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeparatorStyleKey != null ? retObjectSeparatorStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +400,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getTextBoxStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTextBoxStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("TextBoxStyleKey");
+            retObjectTextBoxStyleKey = classType.Get("TextBoxStyleKey");
+            JCObject val = (JCObject)retObjectTextBoxStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextBoxStyleKey != null ? retObjectTextBoxStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +415,14 @@ public class ToolBar extends HeaderedItemsControl  {
 
     public static ResourceKey getToggleButtonStyleKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToggleButtonStyleKey = null;
         try {
-            JCObject val = (JCObject)classType.Get("ToggleButtonStyleKey");
+            retObjectToggleButtonStyleKey = classType.Get("ToggleButtonStyleKey");
+            JCObject val = (JCObject)retObjectToggleButtonStyleKey;
             return new ResourceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToggleButtonStyleKey != null ? retObjectToggleButtonStyleKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

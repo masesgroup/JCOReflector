@@ -214,10 +214,12 @@ public class CertificateRequest extends NetObject  {
     
     public byte[] CreateSigningRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSigningRequest = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSigningRequest");
+            retObjectCreateSigningRequest = classInstance.Invoke("CreateSigningRequest");
+            JCObject resultingObjects = (JCObject)retObjectCreateSigningRequest;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -226,6 +228,8 @@ public class CertificateRequest extends NetObject  {
 				resultingArray[indexCreateSigningRequest] = (byte)resultingArrayList.get(indexCreateSigningRequest);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSigningRequest != null ? retObjectCreateSigningRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +237,12 @@ public class CertificateRequest extends NetObject  {
 
     public byte[] CreateSigningRequest(X509SignatureGenerator signatureGenerator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSigningRequest = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSigningRequest", signatureGenerator == null ? null : signatureGenerator.getJCOInstance());
+            retObjectCreateSigningRequest = classInstance.Invoke("CreateSigningRequest", signatureGenerator == null ? null : signatureGenerator.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateSigningRequest;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -245,6 +251,8 @@ public class CertificateRequest extends NetObject  {
 				resultingArray[indexCreateSigningRequest] = (byte)resultingArrayList.get(indexCreateSigningRequest);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectCreateSigningRequest != null ? retObjectCreateSigningRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +260,14 @@ public class CertificateRequest extends NetObject  {
 
     public X509Certificate2 Create(X500DistinguishedName issuerName, X509SignatureGenerator generator, DateTimeOffset notBefore, DateTimeOffset notAfter, byte[] serialNumber) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", issuerName == null ? null : issuerName.getJCOInstance(), generator == null ? null : generator.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
+            retObjectCreate = classInstance.Invoke("Create", issuerName == null ? null : issuerName.getJCOInstance(), generator == null ? null : generator.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509Certificate2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +275,14 @@ public class CertificateRequest extends NetObject  {
 
     public X509Certificate2 Create(X500DistinguishedName dupParam0, X509SignatureGenerator dupParam1, DateTimeOffset dupParam2, DateTimeOffset dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut());
+            retObjectCreate = classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509Certificate2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +290,14 @@ public class CertificateRequest extends NetObject  {
 
     public X509Certificate2 Create(X509Certificate2 issuerCertificate, DateTimeOffset notBefore, DateTimeOffset notAfter, byte[] serialNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.io.IOException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", issuerCertificate == null ? null : issuerCertificate.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
+            retObjectCreate = classInstance.Invoke("Create", issuerCertificate == null ? null : issuerCertificate.getJCOInstance(), notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance(), serialNumber);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509Certificate2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +305,14 @@ public class CertificateRequest extends NetObject  {
 
     public X509Certificate2 Create(X509Certificate2 dupParam0, DateTimeOffset dupParam1, DateTimeOffset dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.OverflowException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.io.IOException, system.AccessViolationException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NullReferenceException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut());
+            retObjectCreate = classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509Certificate2(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +320,14 @@ public class CertificateRequest extends NetObject  {
 
     public X509Certificate2 CreateSelfSigned(DateTimeOffset notBefore, DateTimeOffset notAfter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ApplicationException, system.io.IOException, system.security.cryptography.CryptographicException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.AccessViolationException, system.NullReferenceException, system.PlatformNotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSelfSigned = null;
         try {
-            JCObject objCreateSelfSigned = (JCObject)classInstance.Invoke("CreateSelfSigned", notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance());
+            retObjectCreateSelfSigned = classInstance.Invoke("CreateSelfSigned", notBefore == null ? null : notBefore.getJCOInstance(), notAfter == null ? null : notAfter.getJCOInstance());
+            JCObject objCreateSelfSigned = (JCObject)retObjectCreateSelfSigned;
             return new X509Certificate2(objCreateSelfSigned);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSelfSigned != null ? retObjectCreateSelfSigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +339,14 @@ public class CertificateRequest extends NetObject  {
     
     public HashAlgorithmName getHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            JCObject val = (JCObject)retObjectHashAlgorithm;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +354,14 @@ public class CertificateRequest extends NetObject  {
 
     public PublicKey getPublicKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PublicKey");
+            retObjectPublicKey = classInstance.Get("PublicKey");
+            JCObject val = (JCObject)retObjectPublicKey;
             return new PublicKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPublicKey != null ? retObjectPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +369,14 @@ public class CertificateRequest extends NetObject  {
 
     public X500DistinguishedName getSubjectName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectName");
+            retObjectSubjectName = classInstance.Get("SubjectName");
+            JCObject val = (JCObject)retObjectSubjectName;
             return new X500DistinguishedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectName != null ? retObjectSubjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

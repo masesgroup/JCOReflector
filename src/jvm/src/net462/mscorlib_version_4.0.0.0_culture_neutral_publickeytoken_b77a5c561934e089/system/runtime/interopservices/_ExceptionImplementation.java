@@ -145,10 +145,14 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
     
     public NetException GetBaseException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBaseException = null;
         try {
-            JCObject objGetBaseException = (JCObject)classInstance.Invoke("GetBaseException");
+            retObjectGetBaseException = classInstance.Invoke("GetBaseException");
+            JCObject objGetBaseException = (JCObject)retObjectGetBaseException;
             return new NetException(objGetBaseException);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBaseException != null ? retObjectGetBaseException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,10 +174,14 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
     
     public NetException getInnerException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInnerException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InnerException");
+            retObjectInnerException = classInstance.Get("InnerException");
+            JCObject val = (JCObject)retObjectInnerException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInnerException != null ? retObjectInnerException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public MethodBase getTargetSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetSite");
+            retObjectTargetSite = classInstance.Get("TargetSite");
+            JCObject val = (JCObject)retObjectTargetSite;
             return new MethodBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetSite != null ? retObjectTargetSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public java.lang.String getHelpLink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpLink = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpLink");
+            retObjectHelpLink = classInstance.Get("HelpLink");
+            return (java.lang.String)retObjectHelpLink;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpLink != null ? retObjectHelpLink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public void setHelpLink(java.lang.String HelpLink) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpLink", HelpLink);
         } catch (JCNativeException jcne) {
@@ -212,9 +228,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +242,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +256,7 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {
@@ -242,9 +266,13 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
 
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStackTrace = null;
         try {
-            return (java.lang.String)classInstance.Get("StackTrace");
+            retObjectStackTrace = classInstance.Get("StackTrace");
+            return (java.lang.String)retObjectStackTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStackTrace != null ? retObjectStackTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

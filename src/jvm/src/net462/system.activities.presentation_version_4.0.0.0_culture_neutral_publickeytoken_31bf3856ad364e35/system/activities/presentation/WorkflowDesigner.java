@@ -168,9 +168,13 @@ public class WorkflowDesigner extends NetObject  {
     
     public boolean IsInErrorState() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInErrorState = null;
         try {
-            return (boolean)classInstance.Invoke("IsInErrorState");
+            retObjectIsInErrorState = classInstance.Invoke("IsInErrorState");
+            return (boolean)retObjectIsInErrorState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInErrorState != null ? retObjectIsInErrorState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void Flush() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.xaml.XamlException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void Load() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.MulticastNotSupportedException, system.xaml.XamlException, system.threading.ThreadAbortException, system.xaml.XamlSchemaException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.EndOfStreamException, system.io.IOException, system.OutOfMemoryException, system.OverflowException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load");
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void Load(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.MissingMethodException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.threading.ThreadAbortException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void Load(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.XmlSyntaxException, system.NullReferenceException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.threading.ThreadAbortException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.xaml.XamlException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", fileName);
         } catch (JCNativeException jcne) {
@@ -218,7 +222,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void Save(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.OutOfMemoryException, system.io.PathTooLongException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", fileName);
         } catch (JCNativeException jcne) {
@@ -232,10 +236,14 @@ public class WorkflowDesigner extends NetObject  {
     
     public IDesignerDebugView getDebugManagerView() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugManagerView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DebugManagerView");
+            retObjectDebugManagerView = classInstance.Get("DebugManagerView");
+            JCObject val = (JCObject)retObjectDebugManagerView;
             return new IDesignerDebugViewImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugManagerView != null ? retObjectDebugManagerView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +251,14 @@ public class WorkflowDesigner extends NetObject  {
 
     public EditingContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new EditingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +266,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void setPropertyInspectorFontAndColorData(java.lang.String PropertyInspectorFontAndColorData) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyInspectorFontAndColorData", PropertyInspectorFontAndColorData);
         } catch (JCNativeException jcne) {
@@ -264,9 +276,13 @@ public class WorkflowDesigner extends NetObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +290,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void setText(java.lang.String Text) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -284,10 +300,14 @@ public class WorkflowDesigner extends NetObject  {
 
     public ContextMenu getContextMenu() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextMenu");
+            retObjectContextMenu = classInstance.Get("ContextMenu");
+            JCObject val = (JCObject)retObjectContextMenu;
             return new ContextMenu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenu != null ? retObjectContextMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +315,14 @@ public class WorkflowDesigner extends NetObject  {
 
     public UIElement getOutlineView() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.ObjectDisposedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutlineView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutlineView");
+            retObjectOutlineView = classInstance.Get("OutlineView");
+            JCObject val = (JCObject)retObjectOutlineView;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineView != null ? retObjectOutlineView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +330,14 @@ public class WorkflowDesigner extends NetObject  {
 
     public UIElement getPropertyInspectorView() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.OverflowException, system.ObjectDisposedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyInspectorView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyInspectorView");
+            retObjectPropertyInspectorView = classInstance.Get("PropertyInspectorView");
+            JCObject val = (JCObject)retObjectPropertyInspectorView;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyInspectorView != null ? retObjectPropertyInspectorView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +345,14 @@ public class WorkflowDesigner extends NetObject  {
 
     public UIElement getView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectView = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("View");
+            retObjectView = classInstance.Get("View");
+            JCObject val = (JCObject)retObjectView;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectView != null ? retObjectView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +365,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void addModelChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ModelChanged", handler);
         } catch (JCNativeException jcne) {
@@ -343,7 +375,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void removeModelChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ModelChanged", handler);
         } catch (JCNativeException jcne) {
@@ -353,7 +385,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void addTextChanged(TextChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -363,7 +395,7 @@ public class WorkflowDesigner extends NetObject  {
 
     public void removeTextChanged(TextChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {

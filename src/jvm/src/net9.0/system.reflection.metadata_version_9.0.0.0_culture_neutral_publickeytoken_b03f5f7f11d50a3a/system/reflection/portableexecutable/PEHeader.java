@@ -166,9 +166,13 @@ public class PEHeader extends NetObject  {
     
     public byte getMajorLinkerVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorLinkerVersion = null;
         try {
-            return (byte)classInstance.Get("MajorLinkerVersion");
+            retObjectMajorLinkerVersion = classInstance.Get("MajorLinkerVersion");
+            return (byte)retObjectMajorLinkerVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectMajorLinkerVersion != null ? retObjectMajorLinkerVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class PEHeader extends NetObject  {
 
     public byte getMinorLinkerVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorLinkerVersion = null;
         try {
-            return (byte)classInstance.Get("MinorLinkerVersion");
+            retObjectMinorLinkerVersion = classInstance.Get("MinorLinkerVersion");
+            return (byte)retObjectMinorLinkerVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectMinorLinkerVersion != null ? retObjectMinorLinkerVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class PEHeader extends NetObject  {
 
     public int getAddressOfEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressOfEntryPoint = null;
         try {
-            return (int)classInstance.Get("AddressOfEntryPoint");
+            retObjectAddressOfEntryPoint = classInstance.Get("AddressOfEntryPoint");
+            return (int)retObjectAddressOfEntryPoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAddressOfEntryPoint != null ? retObjectAddressOfEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class PEHeader extends NetObject  {
 
     public int getBaseOfCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseOfCode = null;
         try {
-            return (int)classInstance.Get("BaseOfCode");
+            retObjectBaseOfCode = classInstance.Get("BaseOfCode");
+            return (int)retObjectBaseOfCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBaseOfCode != null ? retObjectBaseOfCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class PEHeader extends NetObject  {
 
     public int getBaseOfData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseOfData = null;
         try {
-            return (int)classInstance.Get("BaseOfData");
+            retObjectBaseOfData = classInstance.Get("BaseOfData");
+            return (int)retObjectBaseOfData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBaseOfData != null ? retObjectBaseOfData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +236,13 @@ public class PEHeader extends NetObject  {
 
     public int getFileAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileAlignment = null;
         try {
-            return (int)classInstance.Get("FileAlignment");
+            retObjectFileAlignment = classInstance.Get("FileAlignment");
+            return (int)retObjectFileAlignment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFileAlignment != null ? retObjectFileAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,13 @@ public class PEHeader extends NetObject  {
 
     public int getNumberOfRvaAndSizes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfRvaAndSizes = null;
         try {
-            return (int)classInstance.Get("NumberOfRvaAndSizes");
+            retObjectNumberOfRvaAndSizes = classInstance.Get("NumberOfRvaAndSizes");
+            return (int)retObjectNumberOfRvaAndSizes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberOfRvaAndSizes != null ? retObjectNumberOfRvaAndSizes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +264,13 @@ public class PEHeader extends NetObject  {
 
     public int getSectionAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSectionAlignment = null;
         try {
-            return (int)classInstance.Get("SectionAlignment");
+            retObjectSectionAlignment = classInstance.Get("SectionAlignment");
+            return (int)retObjectSectionAlignment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSectionAlignment != null ? retObjectSectionAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +278,13 @@ public class PEHeader extends NetObject  {
 
     public int getSizeOfCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfCode = null;
         try {
-            return (int)classInstance.Get("SizeOfCode");
+            retObjectSizeOfCode = classInstance.Get("SizeOfCode");
+            return (int)retObjectSizeOfCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfCode != null ? retObjectSizeOfCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +292,13 @@ public class PEHeader extends NetObject  {
 
     public int getSizeOfHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfHeaders = null;
         try {
-            return (int)classInstance.Get("SizeOfHeaders");
+            retObjectSizeOfHeaders = classInstance.Get("SizeOfHeaders");
+            return (int)retObjectSizeOfHeaders;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfHeaders != null ? retObjectSizeOfHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +306,13 @@ public class PEHeader extends NetObject  {
 
     public int getSizeOfImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfImage = null;
         try {
-            return (int)classInstance.Get("SizeOfImage");
+            retObjectSizeOfImage = classInstance.Get("SizeOfImage");
+            return (int)retObjectSizeOfImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfImage != null ? retObjectSizeOfImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +320,13 @@ public class PEHeader extends NetObject  {
 
     public int getSizeOfInitializedData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfInitializedData = null;
         try {
-            return (int)classInstance.Get("SizeOfInitializedData");
+            retObjectSizeOfInitializedData = classInstance.Get("SizeOfInitializedData");
+            return (int)retObjectSizeOfInitializedData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfInitializedData != null ? retObjectSizeOfInitializedData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +334,13 @@ public class PEHeader extends NetObject  {
 
     public int getSizeOfUninitializedData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfUninitializedData = null;
         try {
-            return (int)classInstance.Get("SizeOfUninitializedData");
+            retObjectSizeOfUninitializedData = classInstance.Get("SizeOfUninitializedData");
+            return (int)retObjectSizeOfUninitializedData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfUninitializedData != null ? retObjectSizeOfUninitializedData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +348,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getBaseRelocationTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseRelocationTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseRelocationTableDirectory");
+            retObjectBaseRelocationTableDirectory = classInstance.Get("BaseRelocationTableDirectory");
+            JCObject val = (JCObject)retObjectBaseRelocationTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseRelocationTableDirectory != null ? retObjectBaseRelocationTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +363,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getBoundImportTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBoundImportTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundImportTableDirectory");
+            retObjectBoundImportTableDirectory = classInstance.Get("BoundImportTableDirectory");
+            JCObject val = (JCObject)retObjectBoundImportTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBoundImportTableDirectory != null ? retObjectBoundImportTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +378,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getCertificateTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateTableDirectory");
+            retObjectCertificateTableDirectory = classInstance.Get("CertificateTableDirectory");
+            JCObject val = (JCObject)retObjectCertificateTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateTableDirectory != null ? retObjectCertificateTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +393,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getCopyrightTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopyrightTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CopyrightTableDirectory");
+            retObjectCopyrightTableDirectory = classInstance.Get("CopyrightTableDirectory");
+            JCObject val = (JCObject)retObjectCopyrightTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyrightTableDirectory != null ? retObjectCopyrightTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +408,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getCorHeaderTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorHeaderTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorHeaderTableDirectory");
+            retObjectCorHeaderTableDirectory = classInstance.Get("CorHeaderTableDirectory");
+            JCObject val = (JCObject)retObjectCorHeaderTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorHeaderTableDirectory != null ? retObjectCorHeaderTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +423,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getDebugTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDebugTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DebugTableDirectory");
+            retObjectDebugTableDirectory = classInstance.Get("DebugTableDirectory");
+            JCObject val = (JCObject)retObjectDebugTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugTableDirectory != null ? retObjectDebugTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +438,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getDelayImportTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelayImportTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DelayImportTableDirectory");
+            retObjectDelayImportTableDirectory = classInstance.Get("DelayImportTableDirectory");
+            JCObject val = (JCObject)retObjectDelayImportTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelayImportTableDirectory != null ? retObjectDelayImportTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +453,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getExceptionTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionTableDirectory");
+            retObjectExceptionTableDirectory = classInstance.Get("ExceptionTableDirectory");
+            JCObject val = (JCObject)retObjectExceptionTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionTableDirectory != null ? retObjectExceptionTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +468,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getExportTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExportTableDirectory");
+            retObjectExportTableDirectory = classInstance.Get("ExportTableDirectory");
+            JCObject val = (JCObject)retObjectExportTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportTableDirectory != null ? retObjectExportTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +483,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getGlobalPointerTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalPointerTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalPointerTableDirectory");
+            retObjectGlobalPointerTableDirectory = classInstance.Get("GlobalPointerTableDirectory");
+            JCObject val = (JCObject)retObjectGlobalPointerTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalPointerTableDirectory != null ? retObjectGlobalPointerTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +498,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getImportAddressTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportAddressTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportAddressTableDirectory");
+            retObjectImportAddressTableDirectory = classInstance.Get("ImportAddressTableDirectory");
+            JCObject val = (JCObject)retObjectImportAddressTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportAddressTableDirectory != null ? retObjectImportAddressTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +513,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getImportTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportTableDirectory");
+            retObjectImportTableDirectory = classInstance.Get("ImportTableDirectory");
+            JCObject val = (JCObject)retObjectImportTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportTableDirectory != null ? retObjectImportTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +528,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getLoadConfigTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadConfigTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoadConfigTableDirectory");
+            retObjectLoadConfigTableDirectory = classInstance.Get("LoadConfigTableDirectory");
+            JCObject val = (JCObject)retObjectLoadConfigTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadConfigTableDirectory != null ? retObjectLoadConfigTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +543,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getResourceTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceTableDirectory");
+            retObjectResourceTableDirectory = classInstance.Get("ResourceTableDirectory");
+            JCObject val = (JCObject)retObjectResourceTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceTableDirectory != null ? retObjectResourceTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +558,14 @@ public class PEHeader extends NetObject  {
 
     public DirectoryEntry getThreadLocalStorageTableDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadLocalStorageTableDirectory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ThreadLocalStorageTableDirectory");
+            retObjectThreadLocalStorageTableDirectory = classInstance.Get("ThreadLocalStorageTableDirectory");
+            JCObject val = (JCObject)retObjectThreadLocalStorageTableDirectory;
             return new DirectoryEntry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadLocalStorageTableDirectory != null ? retObjectThreadLocalStorageTableDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +573,14 @@ public class PEHeader extends NetObject  {
 
     public DllCharacteristics getDllCharacteristics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDllCharacteristics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DllCharacteristics");
+            retObjectDllCharacteristics = classInstance.Get("DllCharacteristics");
+            JCObject val = (JCObject)retObjectDllCharacteristics;
             return new DllCharacteristics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDllCharacteristics != null ? retObjectDllCharacteristics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +588,14 @@ public class PEHeader extends NetObject  {
 
     public PEMagic getMagic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMagic = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Magic");
+            retObjectMagic = classInstance.Get("Magic");
+            JCObject val = (JCObject)retObjectMagic;
             return new PEMagic(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMagic != null ? retObjectMagic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +603,14 @@ public class PEHeader extends NetObject  {
 
     public Subsystem getSubsystem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubsystem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Subsystem");
+            retObjectSubsystem = classInstance.Get("Subsystem");
+            JCObject val = (JCObject)retObjectSubsystem;
             return new Subsystem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubsystem != null ? retObjectSubsystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +618,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMajorImageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorImageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorImageVersion");
+            retObjectMajorImageVersion = classInstance.Get("MajorImageVersion");
+            JCObject val = (JCObject)retObjectMajorImageVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorImageVersion != null ? retObjectMajorImageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +633,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMajorOperatingSystemVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorOperatingSystemVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorOperatingSystemVersion");
+            retObjectMajorOperatingSystemVersion = classInstance.Get("MajorOperatingSystemVersion");
+            JCObject val = (JCObject)retObjectMajorOperatingSystemVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorOperatingSystemVersion != null ? retObjectMajorOperatingSystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +648,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMajorSubsystemVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorSubsystemVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MajorSubsystemVersion");
+            retObjectMajorSubsystemVersion = classInstance.Get("MajorSubsystemVersion");
+            JCObject val = (JCObject)retObjectMajorSubsystemVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMajorSubsystemVersion != null ? retObjectMajorSubsystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +663,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMinorImageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorImageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorImageVersion");
+            retObjectMinorImageVersion = classInstance.Get("MinorImageVersion");
+            JCObject val = (JCObject)retObjectMinorImageVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorImageVersion != null ? retObjectMinorImageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +678,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMinorOperatingSystemVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorOperatingSystemVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorOperatingSystemVersion");
+            retObjectMinorOperatingSystemVersion = classInstance.Get("MinorOperatingSystemVersion");
+            JCObject val = (JCObject)retObjectMinorOperatingSystemVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorOperatingSystemVersion != null ? retObjectMinorOperatingSystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +693,14 @@ public class PEHeader extends NetObject  {
 
     public UInt16 getMinorSubsystemVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorSubsystemVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinorSubsystemVersion");
+            retObjectMinorSubsystemVersion = classInstance.Get("MinorSubsystemVersion");
+            JCObject val = (JCObject)retObjectMinorSubsystemVersion;
             return new UInt16(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinorSubsystemVersion != null ? retObjectMinorSubsystemVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +708,14 @@ public class PEHeader extends NetObject  {
 
     public UInt32 getCheckSum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckSum = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckSum");
+            retObjectCheckSum = classInstance.Get("CheckSum");
+            JCObject val = (JCObject)retObjectCheckSum;
             return new UInt32(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckSum != null ? retObjectCheckSum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +723,14 @@ public class PEHeader extends NetObject  {
 
     public UInt64 getImageBase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageBase = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageBase");
+            retObjectImageBase = classInstance.Get("ImageBase");
+            JCObject val = (JCObject)retObjectImageBase;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageBase != null ? retObjectImageBase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +738,14 @@ public class PEHeader extends NetObject  {
 
     public UInt64 getSizeOfHeapCommit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfHeapCommit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfHeapCommit");
+            retObjectSizeOfHeapCommit = classInstance.Get("SizeOfHeapCommit");
+            JCObject val = (JCObject)retObjectSizeOfHeapCommit;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeOfHeapCommit != null ? retObjectSizeOfHeapCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +753,14 @@ public class PEHeader extends NetObject  {
 
     public UInt64 getSizeOfHeapReserve() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfHeapReserve = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfHeapReserve");
+            retObjectSizeOfHeapReserve = classInstance.Get("SizeOfHeapReserve");
+            JCObject val = (JCObject)retObjectSizeOfHeapReserve;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeOfHeapReserve != null ? retObjectSizeOfHeapReserve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -604,10 +768,14 @@ public class PEHeader extends NetObject  {
 
     public UInt64 getSizeOfStackCommit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfStackCommit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfStackCommit");
+            retObjectSizeOfStackCommit = classInstance.Get("SizeOfStackCommit");
+            JCObject val = (JCObject)retObjectSizeOfStackCommit;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeOfStackCommit != null ? retObjectSizeOfStackCommit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +783,14 @@ public class PEHeader extends NetObject  {
 
     public UInt64 getSizeOfStackReserve() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfStackReserve = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeOfStackReserve");
+            retObjectSizeOfStackReserve = classInstance.Get("SizeOfStackReserve");
+            JCObject val = (JCObject)retObjectSizeOfStackReserve;
             return new UInt64(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeOfStackReserve != null ? retObjectSizeOfStackReserve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -154,9 +154,13 @@ public class EditorPart extends Part  {
     
     public boolean ApplyChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyChanges = null;
         try {
-            return (boolean)classInstance.Invoke("ApplyChanges");
+            retObjectApplyChanges = classInstance.Invoke("ApplyChanges");
+            return (boolean)retObjectApplyChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectApplyChanges != null ? retObjectApplyChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class EditorPart extends Part  {
 
     public void SyncChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SyncChanges");
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class EditorPart extends Part  {
     
     public boolean getDisplay() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplay = null;
         try {
-            return (boolean)classInstance.Get("Display");
+            retObjectDisplay = classInstance.Get("Display");
+            return (boolean)retObjectDisplay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisplay != null ? retObjectDisplay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class EditorPart extends Part  {
 
     public java.lang.String getDisplayTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayTitle");
+            retObjectDisplayTitle = classInstance.Get("DisplayTitle");
+            return (java.lang.String)retObjectDisplayTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayTitle != null ? retObjectDisplayTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

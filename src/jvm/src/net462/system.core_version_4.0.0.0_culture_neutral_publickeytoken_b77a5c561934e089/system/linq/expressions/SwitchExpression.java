@@ -163,10 +163,14 @@ public class SwitchExpression extends Expression  {
     
     public Expression getDefaultBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultBody");
+            retObjectDefaultBody = classInstance.Get("DefaultBody");
+            JCObject val = (JCObject)retObjectDefaultBody;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultBody != null ? retObjectDefaultBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class SwitchExpression extends Expression  {
 
     public Expression getSwitchValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitchValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SwitchValue");
+            retObjectSwitchValue = classInstance.Get("SwitchValue");
+            JCObject val = (JCObject)retObjectSwitchValue;
             return new Expression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitchValue != null ? retObjectSwitchValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class SwitchExpression extends Expression  {
 
     public MethodInfo getComparison() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComparison = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Comparison");
+            retObjectComparison = classInstance.Get("Comparison");
+            JCObject val = (JCObject)retObjectComparison;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComparison != null ? retObjectComparison.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

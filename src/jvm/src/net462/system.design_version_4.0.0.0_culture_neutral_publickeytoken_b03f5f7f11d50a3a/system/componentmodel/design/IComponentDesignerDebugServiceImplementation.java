@@ -143,7 +143,7 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
     
     public void Assert(boolean condition, java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Assert", condition, message);
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
 
     public void Fail(java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fail", message);
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
 
     public void Trace(java.lang.String message, java.lang.String category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Trace", message, category);
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
     
     public int getIndentLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentLevel = null;
         try {
-            return (int)classInstance.Get("IndentLevel");
+            retObjectIndentLevel = classInstance.Get("IndentLevel");
+            return (int)retObjectIndentLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
 
     public void setIndentLevel(int IndentLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentLevel", IndentLevel);
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
 
     public TraceListenerCollection getListeners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListeners = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Listeners");
+            retObjectListeners = classInstance.Get("Listeners");
+            JCObject val = (JCObject)retObjectListeners;
             return new TraceListenerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListeners != null ? retObjectListeners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

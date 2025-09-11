@@ -165,7 +165,7 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
     
     public void Add(BlockElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -188,7 +188,7 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -197,9 +197,13 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
     
     public java.lang.String getMarker() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarker = null;
         try {
-            return (java.lang.String)classInstance.Get("Marker");
+            retObjectMarker = classInstance.Get("Marker");
+            return (java.lang.String)retObjectMarker;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMarker != null ? retObjectMarker.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
 
     public void setMarker(java.lang.String Marker) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Marker", Marker);
         } catch (JCNativeException jcne) {

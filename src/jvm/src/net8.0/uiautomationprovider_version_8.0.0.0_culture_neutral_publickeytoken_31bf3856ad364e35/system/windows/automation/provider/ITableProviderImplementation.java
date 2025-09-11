@@ -147,10 +147,14 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
     
     public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", row, column);
+            retObjectGetItem = classInstance.Invoke("GetItem", row, column);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new IRawElementProviderSimpleImplementation(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,16 +162,20 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnHeaders = null;
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetColumnHeaders");
+            retObjectGetColumnHeaders = classInstance.Invoke("GetColumnHeaders");
+            JCObject resultingObjects = (JCObject)retObjectGetColumnHeaders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnHeaders != null ? retObjectGetColumnHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,16 +183,20 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowHeaders = null;
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaders");
+            retObjectGetRowHeaders = classInstance.Invoke("GetRowHeaders");
+            JCObject resultingObjects = (JCObject)retObjectGetRowHeaders;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRowHeaders != null ? retObjectGetRowHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
 
     public RowOrColumnMajor getRowOrColumnMajor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowOrColumnMajor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowOrColumnMajor");
+            retObjectRowOrColumnMajor = classInstance.Get("RowOrColumnMajor");
+            JCObject val = (JCObject)retObjectRowOrColumnMajor;
             return new RowOrColumnMajor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowOrColumnMajor != null ? retObjectRowOrColumnMajor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

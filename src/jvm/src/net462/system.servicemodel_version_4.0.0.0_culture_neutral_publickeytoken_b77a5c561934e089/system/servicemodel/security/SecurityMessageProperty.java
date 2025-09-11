@@ -167,10 +167,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
     
     public IMessageProperty CreateCopy() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCopy = null;
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            retObjectCreateCopy = classInstance.Invoke("CreateCopy");
+            JCObject objCreateCopy = (JCObject)retObjectCreateCopy;
             return new IMessagePropertyImplementation(objCreateCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public static SecurityMessageProperty GetOrCreate(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetOrCreate = null;
         try {
-            JCObject objGetOrCreate = (JCObject)classType.Invoke("GetOrCreate", message == null ? null : message.getJCOInstance());
+            retObjectGetOrCreate = classType.Invoke("GetOrCreate", message == null ? null : message.getJCOInstance());
+            JCObject objGetOrCreate = (JCObject)retObjectGetOrCreate;
             return new SecurityMessageProperty(objGetOrCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOrCreate != null ? retObjectGetOrCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -200,7 +208,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -216,9 +224,13 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
     
     public boolean getHasIncomingSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasIncomingSupportingTokens = null;
         try {
-            return (boolean)classInstance.Get("HasIncomingSupportingTokens");
+            retObjectHasIncomingSupportingTokens = classInstance.Get("HasIncomingSupportingTokens");
+            return (boolean)retObjectHasIncomingSupportingTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasIncomingSupportingTokens != null ? retObjectHasIncomingSupportingTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +238,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public SecurityTokenSpecification getInitiatorToken() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitiatorToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitiatorToken");
+            retObjectInitiatorToken = classInstance.Get("InitiatorToken");
+            JCObject val = (JCObject)retObjectInitiatorToken;
             return new SecurityTokenSpecification(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitiatorToken != null ? retObjectInitiatorToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setInitiatorToken(SecurityTokenSpecification InitiatorToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitiatorToken", InitiatorToken == null ? null : InitiatorToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public SecurityTokenSpecification getProtectionToken() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionToken");
+            retObjectProtectionToken = classInstance.Get("ProtectionToken");
+            JCObject val = (JCObject)retObjectProtectionToken;
             return new SecurityTokenSpecification(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionToken != null ? retObjectProtectionToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setProtectionToken(SecurityTokenSpecification ProtectionToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionToken", ProtectionToken == null ? null : ProtectionToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public SecurityTokenSpecification getRecipientToken() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipientToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecipientToken");
+            retObjectRecipientToken = classInstance.Get("RecipientToken");
+            JCObject val = (JCObject)retObjectRecipientToken;
             return new SecurityTokenSpecification(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecipientToken != null ? retObjectRecipientToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setRecipientToken(SecurityTokenSpecification RecipientToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RecipientToken", RecipientToken == null ? null : RecipientToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +313,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public SecurityTokenSpecification getTransportToken() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportToken");
+            retObjectTransportToken = classInstance.Get("TransportToken");
+            JCObject val = (JCObject)retObjectTransportToken;
             return new SecurityTokenSpecification(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportToken != null ? retObjectTransportToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +328,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setTransportToken(SecurityTokenSpecification TransportToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransportToken", TransportToken == null ? null : TransportToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +338,14 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public ServiceSecurityContext getServiceSecurityContext() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceSecurityContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceSecurityContext");
+            retObjectServiceSecurityContext = classInstance.Get("ServiceSecurityContext");
+            JCObject val = (JCObject)retObjectServiceSecurityContext;
             return new ServiceSecurityContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceSecurityContext != null ? retObjectServiceSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +353,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setServiceSecurityContext(ServiceSecurityContext ServiceSecurityContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServiceSecurityContext", ServiceSecurityContext == null ? null : ServiceSecurityContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,9 +363,13 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public java.lang.String getSenderIdPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSenderIdPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("SenderIdPrefix");
+            retObjectSenderIdPrefix = classInstance.Get("SenderIdPrefix");
+            return (java.lang.String)retObjectSenderIdPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSenderIdPrefix != null ? retObjectSenderIdPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +377,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
 
     public void setSenderIdPrefix(java.lang.String SenderIdPrefix) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SenderIdPrefix", SenderIdPrefix);
         } catch (JCNativeException jcne) {

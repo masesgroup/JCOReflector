@@ -178,9 +178,13 @@ public class NetPeerTcpBinding extends Binding  {
     
     public boolean ShouldSerializeReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeReaderQuotas = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeReaderQuotas");
+            retObjectShouldSerializeReaderQuotas = classInstance.Invoke("ShouldSerializeReaderQuotas");
+            return (boolean)retObjectShouldSerializeReaderQuotas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReaderQuotas != null ? retObjectShouldSerializeReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class NetPeerTcpBinding extends Binding  {
 
     public boolean ShouldSerializeSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSecurity = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSecurity");
+            retObjectShouldSerializeSecurity = classInstance.Invoke("ShouldSerializeSecurity");
+            return (boolean)retObjectShouldSerializeSecurity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSecurity != null ? retObjectShouldSerializeSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public BindingElementCollection CreateBindingElements() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateBindingElements = null;
         try {
-            JCObject objCreateBindingElements = (JCObject)classInstance.Invoke("CreateBindingElements");
+            retObjectCreateBindingElements = classInstance.Invoke("CreateBindingElements");
+            JCObject objCreateBindingElements = (JCObject)retObjectCreateBindingElements;
             return new BindingElementCollection(objCreateBindingElements);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBindingElements != null ? retObjectCreateBindingElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class NetPeerTcpBinding extends Binding  {
     
     public static boolean getIsPnrpAvailable() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPnrpAvailable = null;
         try {
-            return (boolean)classType.Get("IsPnrpAvailable");
+            retObjectIsPnrpAvailable = classType.Get("IsPnrpAvailable");
+            return (boolean)retObjectIsPnrpAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPnrpAvailable != null ? retObjectIsPnrpAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +239,13 @@ public class NetPeerTcpBinding extends Binding  {
 
     public int getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            return (int)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            return (int)retObjectPort;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +253,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setPort(int Port) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Port", Port);
         } catch (JCNativeException jcne) {
@@ -243,9 +263,13 @@ public class NetPeerTcpBinding extends Binding  {
 
     public long getMaxBufferPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferPoolSize = null;
         try {
-            return (long)classInstance.Get("MaxBufferPoolSize");
+            retObjectMaxBufferPoolSize = classInstance.Get("MaxBufferPoolSize");
+            return (long)retObjectMaxBufferPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxBufferPoolSize != null ? retObjectMaxBufferPoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +277,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setMaxBufferPoolSize(long MaxBufferPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferPoolSize", MaxBufferPoolSize);
         } catch (JCNativeException jcne) {
@@ -263,9 +287,13 @@ public class NetPeerTcpBinding extends Binding  {
 
     public long getMaxReceivedMessageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReceivedMessageSize = null;
         try {
-            return (long)classInstance.Get("MaxReceivedMessageSize");
+            retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
+            return (long)retObjectMaxReceivedMessageSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +301,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReceivedMessageSize", MaxReceivedMessageSize);
         } catch (JCNativeException jcne) {
@@ -283,10 +311,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public IPAddress getListenIPAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenIPAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenIPAddress");
+            retObjectListenIPAddress = classInstance.Get("ListenIPAddress");
+            JCObject val = (JCObject)retObjectListenIPAddress;
             return new IPAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenIPAddress != null ? retObjectListenIPAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +326,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setListenIPAddress(IPAddress ListenIPAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenIPAddress", ListenIPAddress == null ? null : ListenIPAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +336,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public EnvelopeVersion getEnvelopeVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvelopeVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EnvelopeVersion");
+            retObjectEnvelopeVersion = classInstance.Get("EnvelopeVersion");
+            JCObject val = (JCObject)retObjectEnvelopeVersion;
             return new EnvelopeVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvelopeVersion != null ? retObjectEnvelopeVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +351,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public PeerResolverSettings getResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resolver");
+            retObjectResolver = classInstance.Get("Resolver");
+            JCObject val = (JCObject)retObjectResolver;
             return new PeerResolverSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolver != null ? retObjectResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +366,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public PeerSecuritySettings getSecurity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Security");
+            retObjectSecurity = classInstance.Get("Security");
+            JCObject val = (JCObject)retObjectSecurity;
             return new PeerSecuritySettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurity != null ? retObjectSecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +381,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setSecurity(PeerSecuritySettings Security) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Security", Security == null ? null : Security.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +391,14 @@ public class NetPeerTcpBinding extends Binding  {
 
     public XmlDictionaryReaderQuotas getReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReaderQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReaderQuotas");
+            retObjectReaderQuotas = classInstance.Get("ReaderQuotas");
+            JCObject val = (JCObject)retObjectReaderQuotas;
             return new XmlDictionaryReaderQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReaderQuotas != null ? retObjectReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +406,7 @@ public class NetPeerTcpBinding extends Binding  {
 
     public void setReaderQuotas(XmlDictionaryReaderQuotas ReaderQuotas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReaderQuotas", ReaderQuotas == null ? null : ReaderQuotas.getJCOInstance());
         } catch (JCNativeException jcne) {

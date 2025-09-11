@@ -170,9 +170,13 @@ public class ObfuscateAssemblyAttribute extends Attribute  {
     
     public boolean getAssemblyIsPrivate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyIsPrivate = null;
         try {
-            return (boolean)classInstance.Get("AssemblyIsPrivate");
+            retObjectAssemblyIsPrivate = classInstance.Get("AssemblyIsPrivate");
+            return (boolean)retObjectAssemblyIsPrivate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAssemblyIsPrivate != null ? retObjectAssemblyIsPrivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class ObfuscateAssemblyAttribute extends Attribute  {
 
     public boolean getStripAfterObfuscation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStripAfterObfuscation = null;
         try {
-            return (boolean)classInstance.Get("StripAfterObfuscation");
+            retObjectStripAfterObfuscation = classInstance.Get("StripAfterObfuscation");
+            return (boolean)retObjectStripAfterObfuscation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStripAfterObfuscation != null ? retObjectStripAfterObfuscation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class ObfuscateAssemblyAttribute extends Attribute  {
 
     public void setStripAfterObfuscation(boolean StripAfterObfuscation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StripAfterObfuscation", StripAfterObfuscation);
         } catch (JCNativeException jcne) {

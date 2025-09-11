@@ -153,7 +153,7 @@ public class BaseEvent extends NetObject  {
     
     public void Fire() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.management.ManagementException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Fire");
         } catch (JCNativeException jcne) {

@@ -181,9 +181,13 @@ public class TintEffect extends Effect  {
     
     public int getAmount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAmount = null;
         try {
-            return (int)classInstance.Get("Amount");
+            retObjectAmount = classInstance.Get("Amount");
+            return (int)retObjectAmount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAmount != null ? retObjectAmount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class TintEffect extends Effect  {
 
     public int getHue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHue = null;
         try {
-            return (int)classInstance.Get("Hue");
+            retObjectHue = classInstance.Get("Hue");
+            return (int)retObjectHue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHue != null ? retObjectHue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

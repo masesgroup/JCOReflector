@@ -166,9 +166,13 @@ public class CngProvider extends NetObject  {
     
     public boolean Equals(CngProvider other) throws Throwable, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class CngProvider extends NetObject  {
     
     public static CngProvider getMicrosoftSmartCardKeyStorageProvider() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMicrosoftSmartCardKeyStorageProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("MicrosoftSmartCardKeyStorageProvider");
+            retObjectMicrosoftSmartCardKeyStorageProvider = classType.Get("MicrosoftSmartCardKeyStorageProvider");
+            JCObject val = (JCObject)retObjectMicrosoftSmartCardKeyStorageProvider;
             return new CngProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMicrosoftSmartCardKeyStorageProvider != null ? retObjectMicrosoftSmartCardKeyStorageProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class CngProvider extends NetObject  {
 
     public static CngProvider getMicrosoftSoftwareKeyStorageProvider() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMicrosoftSoftwareKeyStorageProvider = null;
         try {
-            JCObject val = (JCObject)classType.Get("MicrosoftSoftwareKeyStorageProvider");
+            retObjectMicrosoftSoftwareKeyStorageProvider = classType.Get("MicrosoftSoftwareKeyStorageProvider");
+            JCObject val = (JCObject)retObjectMicrosoftSoftwareKeyStorageProvider;
             return new CngProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMicrosoftSoftwareKeyStorageProvider != null ? retObjectMicrosoftSoftwareKeyStorageProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class CngProvider extends NetObject  {
 
     public java.lang.String getProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvider = null;
         try {
-            return (java.lang.String)classInstance.Get("Provider");
+            retObjectProvider = classInstance.Get("Provider");
+            return (java.lang.String)retObjectProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProvider != null ? retObjectProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

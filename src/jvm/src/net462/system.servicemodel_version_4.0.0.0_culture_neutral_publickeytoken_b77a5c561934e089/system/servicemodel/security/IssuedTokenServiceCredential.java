@@ -165,9 +165,13 @@ public class IssuedTokenServiceCredential extends NetObject  {
     
     public boolean getAllowUntrustedRsaIssuers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUntrustedRsaIssuers = null;
         try {
-            return (boolean)classInstance.Get("AllowUntrustedRsaIssuers");
+            retObjectAllowUntrustedRsaIssuers = classInstance.Get("AllowUntrustedRsaIssuers");
+            return (boolean)retObjectAllowUntrustedRsaIssuers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUntrustedRsaIssuers != null ? retObjectAllowUntrustedRsaIssuers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setAllowUntrustedRsaIssuers(boolean AllowUntrustedRsaIssuers) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowUntrustedRsaIssuers", AllowUntrustedRsaIssuers);
         } catch (JCNativeException jcne) {
@@ -185,10 +189,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public AudienceUriMode getAudienceUriMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAudienceUriMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AudienceUriMode");
+            retObjectAudienceUriMode = classInstance.Get("AudienceUriMode");
+            JCObject val = (JCObject)retObjectAudienceUriMode;
             return new AudienceUriMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAudienceUriMode != null ? retObjectAudienceUriMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setAudienceUriMode(AudienceUriMode AudienceUriMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AudienceUriMode", AudienceUriMode == null ? null : AudienceUriMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public X509CertificateValidator getCustomCertificateValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomCertificateValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomCertificateValidator");
+            retObjectCustomCertificateValidator = classInstance.Get("CustomCertificateValidator");
+            JCObject val = (JCObject)retObjectCustomCertificateValidator;
             return new X509CertificateValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomCertificateValidator != null ? retObjectCustomCertificateValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setCustomCertificateValidator(X509CertificateValidator CustomCertificateValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomCertificateValidator", CustomCertificateValidator == null ? null : CustomCertificateValidator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,10 +239,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public SamlSerializer getSamlSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSamlSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SamlSerializer");
+            retObjectSamlSerializer = classInstance.Get("SamlSerializer");
+            JCObject val = (JCObject)retObjectSamlSerializer;
             return new SamlSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSamlSerializer != null ? retObjectSamlSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setSamlSerializer(SamlSerializer SamlSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SamlSerializer", SamlSerializer == null ? null : SamlSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,10 +264,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public StoreLocation getTrustedStoreLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustedStoreLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustedStoreLocation");
+            retObjectTrustedStoreLocation = classInstance.Get("TrustedStoreLocation");
+            JCObject val = (JCObject)retObjectTrustedStoreLocation;
             return new StoreLocation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustedStoreLocation != null ? retObjectTrustedStoreLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setTrustedStoreLocation(StoreLocation TrustedStoreLocation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustedStoreLocation", TrustedStoreLocation == null ? null : TrustedStoreLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public X509RevocationMode getRevocationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRevocationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RevocationMode");
+            retObjectRevocationMode = classInstance.Get("RevocationMode");
+            JCObject val = (JCObject)retObjectRevocationMode;
             return new X509RevocationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRevocationMode != null ? retObjectRevocationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setRevocationMode(X509RevocationMode RevocationMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RevocationMode", RevocationMode == null ? null : RevocationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,10 +314,14 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public X509CertificateValidationMode getCertificateValidationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificateValidationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CertificateValidationMode");
+            retObjectCertificateValidationMode = classInstance.Get("CertificateValidationMode");
+            JCObject val = (JCObject)retObjectCertificateValidationMode;
             return new X509CertificateValidationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificateValidationMode != null ? retObjectCertificateValidationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +329,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
 
     public void setCertificateValidationMode(X509CertificateValidationMode CertificateValidationMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CertificateValidationMode", CertificateValidationMode == null ? null : CertificateValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {

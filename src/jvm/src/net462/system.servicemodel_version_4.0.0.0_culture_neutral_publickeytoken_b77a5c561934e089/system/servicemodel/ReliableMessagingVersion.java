@@ -158,10 +158,14 @@ public class ReliableMessagingVersion extends NetObject  {
     
     public static ReliableMessagingVersion getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new ReliableMessagingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class ReliableMessagingVersion extends NetObject  {
 
     public static ReliableMessagingVersion getWSReliableMessaging11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSReliableMessaging11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSReliableMessaging11");
+            retObjectWSReliableMessaging11 = classType.Get("WSReliableMessaging11");
+            JCObject val = (JCObject)retObjectWSReliableMessaging11;
             return new ReliableMessagingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSReliableMessaging11 != null ? retObjectWSReliableMessaging11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class ReliableMessagingVersion extends NetObject  {
 
     public static ReliableMessagingVersion getWSReliableMessagingFebruary2005() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWSReliableMessagingFebruary2005 = null;
         try {
-            JCObject val = (JCObject)classType.Get("WSReliableMessagingFebruary2005");
+            retObjectWSReliableMessagingFebruary2005 = classType.Get("WSReliableMessagingFebruary2005");
+            JCObject val = (JCObject)retObjectWSReliableMessagingFebruary2005;
             return new ReliableMessagingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSReliableMessagingFebruary2005 != null ? retObjectWSReliableMessagingFebruary2005.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -202,9 +202,19 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
     
     public int ExecuteNonQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteNonQuery = null;
         try {
-            return (int)classInstance.Invoke("ExecuteNonQuery");
+            retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
+            return (int)retObjectExecuteNonQuery;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
+                return retObjectExecuteNonQueryNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +222,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public OdbcDataReader ExecuteReaderNewOdbcCommand() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader");
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new OdbcDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +237,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public OdbcDataReader ExecuteReaderNewOdbcCommand(CommandBehavior behavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new OdbcDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +252,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public OdbcParameter CreateParameterNewOdbcCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new OdbcParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +267,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public NetObject ExecuteScalar() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteScalar = null;
         try {
-            JCObject objExecuteScalar = (JCObject)classInstance.Invoke("ExecuteScalar");
+            retObjectExecuteScalar = classInstance.Invoke("ExecuteScalar");
+            JCObject objExecuteScalar = (JCObject)retObjectExecuteScalar;
             return new NetObject(objExecuteScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalar != null ? retObjectExecuteScalar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +282,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public void Cancel() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -266,7 +292,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public void Prepare() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
@@ -276,7 +302,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public void ResetCommandTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetCommandTimeout");
         } catch (JCNativeException jcne) {
@@ -290,7 +316,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -299,10 +325,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
     
     public OdbcConnection getConnectionNewOdbcCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new OdbcConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +340,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public void setConnection(OdbcConnection Connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection == null ? null : Connection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +350,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public OdbcParameterCollection getParametersNewOdbcCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new OdbcParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +365,14 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public OdbcTransaction getTransactionNewOdbcCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
+            retObjectTransaction = classInstance.Get("Transaction");
+            JCObject val = (JCObject)retObjectTransaction;
             return new OdbcTransaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransaction != null ? retObjectTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +380,7 @@ public class OdbcCommand extends DbCommand implements system.ICloneable {
 
     public void setTransaction(OdbcTransaction Transaction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {

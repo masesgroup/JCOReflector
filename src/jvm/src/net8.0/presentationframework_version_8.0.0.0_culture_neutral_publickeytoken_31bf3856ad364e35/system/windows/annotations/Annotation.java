@@ -189,10 +189,14 @@ public class Annotation extends NetObject  {
     
     public XmlSchema GetSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchema = null;
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema");
+            retObjectGetSchema = classInstance.Invoke("GetSchema");
+            JCObject objGetSchema = (JCObject)retObjectGetSchema;
             return new XmlSchema(objGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchema != null ? retObjectGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class Annotation extends NetObject  {
 
     public void ReadXml(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidCastException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +214,7 @@ public class Annotation extends NetObject  {
 
     public void WriteXml(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +228,14 @@ public class Annotation extends NetObject  {
     
     public DateTime getCreationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationTime");
+            retObjectCreationTime = classInstance.Get("CreationTime");
+            JCObject val = (JCObject)retObjectCreationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationTime != null ? retObjectCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +243,14 @@ public class Annotation extends NetObject  {
 
     public DateTime getLastModificationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastModificationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastModificationTime");
+            retObjectLastModificationTime = classInstance.Get("LastModificationTime");
+            JCObject val = (JCObject)retObjectLastModificationTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastModificationTime != null ? retObjectLastModificationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +258,14 @@ public class Annotation extends NetObject  {
 
     public Guid getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +273,14 @@ public class Annotation extends NetObject  {
 
     public XmlQualifiedName getAnnotationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AnnotationType");
+            retObjectAnnotationType = classInstance.Get("AnnotationType");
+            JCObject val = (JCObject)retObjectAnnotationType;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationType != null ? retObjectAnnotationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +293,7 @@ public class Annotation extends NetObject  {
 
     public void addAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AuthorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -283,7 +303,7 @@ public class Annotation extends NetObject  {
 
     public void removeAuthorChanged(AnnotationAuthorChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AuthorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -293,7 +313,7 @@ public class Annotation extends NetObject  {
 
     public void addAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AnchorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -303,7 +323,7 @@ public class Annotation extends NetObject  {
 
     public void removeAnchorChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AnchorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -313,7 +333,7 @@ public class Annotation extends NetObject  {
 
     public void addCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CargoChanged", handler);
         } catch (JCNativeException jcne) {
@@ -323,7 +343,7 @@ public class Annotation extends NetObject  {
 
     public void removeCargoChanged(AnnotationResourceChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CargoChanged", handler);
         } catch (JCNativeException jcne) {

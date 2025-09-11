@@ -159,10 +159,14 @@ public class ThreadingAclExtensions extends NetObject  {
     
     public static EventWaitHandleSecurity GetAccessControl(EventWaitHandle handle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", handle == null ? null : handle.getJCOInstance());
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", handle == null ? null : handle.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new EventWaitHandleSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ThreadingAclExtensions extends NetObject  {
 
     public static MutexSecurity GetAccessControl(Mutex mutex) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", mutex == null ? null : mutex.getJCOInstance());
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", mutex == null ? null : mutex.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new MutexSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ThreadingAclExtensions extends NetObject  {
 
     public static SemaphoreSecurity GetAccessControl(Semaphore semaphore) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", semaphore == null ? null : semaphore.getJCOInstance());
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", semaphore == null ? null : semaphore.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new SemaphoreSecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +204,7 @@ public class ThreadingAclExtensions extends NetObject  {
 
     public static void SetAccessControl(EventWaitHandle handle, EventWaitHandleSecurity eventSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessControl", handle == null ? null : handle.getJCOInstance(), eventSecurity == null ? null : eventSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,7 +214,7 @@ public class ThreadingAclExtensions extends NetObject  {
 
     public static void SetAccessControl(Mutex mutex, MutexSecurity mutexSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessControl", mutex == null ? null : mutex.getJCOInstance(), mutexSecurity == null ? null : mutexSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,7 +224,7 @@ public class ThreadingAclExtensions extends NetObject  {
 
     public static void SetAccessControl(Semaphore semaphore, SemaphoreSecurity semaphoreSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessControl", semaphore == null ? null : semaphore.getJCOInstance(), semaphoreSecurity == null ? null : semaphoreSecurity.getJCOInstance());
         } catch (JCNativeException jcne) {

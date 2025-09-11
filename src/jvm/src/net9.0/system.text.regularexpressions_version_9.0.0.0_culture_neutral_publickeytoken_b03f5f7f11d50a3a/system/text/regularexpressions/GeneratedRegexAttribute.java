@@ -211,9 +211,13 @@ public class GeneratedRegexAttribute extends Attribute  {
     
     public int getMatchTimeoutMilliseconds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchTimeoutMilliseconds = null;
         try {
-            return (int)classInstance.Get("MatchTimeoutMilliseconds");
+            retObjectMatchTimeoutMilliseconds = classInstance.Get("MatchTimeoutMilliseconds");
+            return (int)retObjectMatchTimeoutMilliseconds;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMatchTimeoutMilliseconds != null ? retObjectMatchTimeoutMilliseconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +225,13 @@ public class GeneratedRegexAttribute extends Attribute  {
 
     public java.lang.String getCultureName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureName = null;
         try {
-            return (java.lang.String)classInstance.Get("CultureName");
+            retObjectCultureName = classInstance.Get("CultureName");
+            return (java.lang.String)retObjectCultureName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCultureName != null ? retObjectCultureName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +239,13 @@ public class GeneratedRegexAttribute extends Attribute  {
 
     public java.lang.String getPattern() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPattern = null;
         try {
-            return (java.lang.String)classInstance.Get("Pattern");
+            retObjectPattern = classInstance.Get("Pattern");
+            return (java.lang.String)retObjectPattern;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPattern != null ? retObjectPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +253,14 @@ public class GeneratedRegexAttribute extends Attribute  {
 
     public RegexOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new RegexOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

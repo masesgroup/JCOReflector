@@ -157,9 +157,13 @@ public class SoapHeader extends NetObject  {
     
     public boolean getDidUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDidUnderstand = null;
         try {
-            return (boolean)classInstance.Get("DidUnderstand");
+            retObjectDidUnderstand = classInstance.Get("DidUnderstand");
+            return (boolean)retObjectDidUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDidUnderstand != null ? retObjectDidUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class SoapHeader extends NetObject  {
 
     public void setDidUnderstand(boolean DidUnderstand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DidUnderstand", DidUnderstand);
         } catch (JCNativeException jcne) {
@@ -177,9 +181,13 @@ public class SoapHeader extends NetObject  {
 
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMustUnderstand = null;
         try {
-            return (boolean)classInstance.Get("MustUnderstand");
+            retObjectMustUnderstand = classInstance.Get("MustUnderstand");
+            return (boolean)retObjectMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMustUnderstand != null ? retObjectMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +195,7 @@ public class SoapHeader extends NetObject  {
 
     public void setMustUnderstand(boolean MustUnderstand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MustUnderstand", MustUnderstand);
         } catch (JCNativeException jcne) {
@@ -197,9 +205,13 @@ public class SoapHeader extends NetObject  {
 
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelay = null;
         try {
-            return (boolean)classInstance.Get("Relay");
+            retObjectRelay = classInstance.Get("Relay");
+            return (boolean)retObjectRelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRelay != null ? retObjectRelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class SoapHeader extends NetObject  {
 
     public void setRelay(boolean Relay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Relay", Relay);
         } catch (JCNativeException jcne) {
@@ -217,9 +229,13 @@ public class SoapHeader extends NetObject  {
 
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActor = null;
         try {
-            return (java.lang.String)classInstance.Get("Actor");
+            retObjectActor = classInstance.Get("Actor");
+            return (java.lang.String)retObjectActor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActor != null ? retObjectActor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +243,7 @@ public class SoapHeader extends NetObject  {
 
     public void setActor(java.lang.String Actor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Actor", Actor);
         } catch (JCNativeException jcne) {
@@ -237,9 +253,13 @@ public class SoapHeader extends NetObject  {
 
     public java.lang.String getEncodedMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedMustUnderstand = null;
         try {
-            return (java.lang.String)classInstance.Get("EncodedMustUnderstand");
+            retObjectEncodedMustUnderstand = classInstance.Get("EncodedMustUnderstand");
+            return (java.lang.String)retObjectEncodedMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncodedMustUnderstand != null ? retObjectEncodedMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class SoapHeader extends NetObject  {
 
     public void setEncodedMustUnderstand(java.lang.String EncodedMustUnderstand) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncodedMustUnderstand", EncodedMustUnderstand);
         } catch (JCNativeException jcne) {
@@ -257,9 +277,13 @@ public class SoapHeader extends NetObject  {
 
     public java.lang.String getEncodedMustUnderstand12() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedMustUnderstand12 = null;
         try {
-            return (java.lang.String)classInstance.Get("EncodedMustUnderstand12");
+            retObjectEncodedMustUnderstand12 = classInstance.Get("EncodedMustUnderstand12");
+            return (java.lang.String)retObjectEncodedMustUnderstand12;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncodedMustUnderstand12 != null ? retObjectEncodedMustUnderstand12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class SoapHeader extends NetObject  {
 
     public void setEncodedMustUnderstand12(java.lang.String EncodedMustUnderstand12) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncodedMustUnderstand12", EncodedMustUnderstand12);
         } catch (JCNativeException jcne) {
@@ -277,9 +301,13 @@ public class SoapHeader extends NetObject  {
 
     public java.lang.String getEncodedRelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedRelay = null;
         try {
-            return (java.lang.String)classInstance.Get("EncodedRelay");
+            retObjectEncodedRelay = classInstance.Get("EncodedRelay");
+            return (java.lang.String)retObjectEncodedRelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEncodedRelay != null ? retObjectEncodedRelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +315,7 @@ public class SoapHeader extends NetObject  {
 
     public void setEncodedRelay(java.lang.String EncodedRelay) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncodedRelay", EncodedRelay);
         } catch (JCNativeException jcne) {
@@ -297,9 +325,13 @@ public class SoapHeader extends NetObject  {
 
     public java.lang.String getRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole = null;
         try {
-            return (java.lang.String)classInstance.Get("Role");
+            retObjectRole = classInstance.Get("Role");
+            return (java.lang.String)retObjectRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRole != null ? retObjectRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +339,7 @@ public class SoapHeader extends NetObject  {
 
     public void setRole(java.lang.String Role) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Role", Role);
         } catch (JCNativeException jcne) {

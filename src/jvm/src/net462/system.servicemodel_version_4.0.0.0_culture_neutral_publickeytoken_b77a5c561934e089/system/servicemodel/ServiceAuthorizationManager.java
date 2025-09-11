@@ -163,9 +163,13 @@ public class ServiceAuthorizationManager extends NetObject  {
     
     public boolean CheckAccess(OperationContext operationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckAccess = null;
         try {
-            return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance());
+            retObjectCheckAccess = classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance());
+            return (boolean)retObjectCheckAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckAccess != null ? retObjectCheckAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class ServiceAuthorizationManager extends NetObject  {
 
     public boolean CheckAccess(OperationContext operationContext, JCORefOut<Message> message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckAccess = null;
         try {
-            return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance(), message.getJCRefOut());
+            retObjectCheckAccess = classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance(), message.getJCRefOut());
+            return (boolean)retObjectCheckAccess;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckAccess != null ? retObjectCheckAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

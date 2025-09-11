@@ -172,10 +172,14 @@ public class ReliabilityContractAttribute extends Attribute  {
     
     public Cer getCer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cer");
+            retObjectCer = classInstance.Get("Cer");
+            JCObject val = (JCObject)retObjectCer;
             return new Cer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCer != null ? retObjectCer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class ReliabilityContractAttribute extends Attribute  {
 
     public Consistency getConsistencyGuarantee() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsistencyGuarantee = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConsistencyGuarantee");
+            retObjectConsistencyGuarantee = classInstance.Get("ConsistencyGuarantee");
+            JCObject val = (JCObject)retObjectConsistencyGuarantee;
             return new Consistency(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConsistencyGuarantee != null ? retObjectConsistencyGuarantee.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

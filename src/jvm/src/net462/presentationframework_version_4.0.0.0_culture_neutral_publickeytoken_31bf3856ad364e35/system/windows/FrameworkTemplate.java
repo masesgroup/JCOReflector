@@ -162,9 +162,13 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
     
     public boolean ShouldSerializeResources(XamlDesignerSerializationManager manager) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeResources = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeResources", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeResources = classInstance.Invoke("ShouldSerializeResources", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeResources;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeResources != null ? retObjectShouldSerializeResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public boolean ShouldSerializeVisualTree() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeVisualTree = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeVisualTree");
+            retObjectShouldSerializeVisualTree = classInstance.Invoke("ShouldSerializeVisualTree");
+            return (boolean)retObjectShouldSerializeVisualTree;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeVisualTree != null ? retObjectShouldSerializeVisualTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public NetObject FindName(java.lang.String name, FrameworkElement templatedParent) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindName = null;
         try {
-            JCObject objFindName = (JCObject)classInstance.Invoke("FindName", name, templatedParent == null ? null : templatedParent.getJCOInstance());
+            retObjectFindName = classInstance.Invoke("FindName", name, templatedParent == null ? null : templatedParent.getJCOInstance());
+            JCObject objFindName = (JCObject)retObjectFindName;
             return new NetObject(objFindName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindName != null ? retObjectFindName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public DependencyObject LoadContent() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.xaml.XamlException, system.xaml.XamlSchemaException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadContent = null;
         try {
-            JCObject objLoadContent = (JCObject)classInstance.Invoke("LoadContent");
+            retObjectLoadContent = classInstance.Invoke("LoadContent");
+            JCObject objLoadContent = (JCObject)retObjectLoadContent;
             return new DependencyObject(objLoadContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadContent != null ? retObjectLoadContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void RegisterName(java.lang.String name, NetObject scopedElement) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterName", name, scopedElement == null ? null : scopedElement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +230,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void Seal() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Seal");
         } catch (JCNativeException jcne) {
@@ -224,7 +240,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void UnregisterName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnregisterName", name);
         } catch (JCNativeException jcne) {
@@ -238,7 +254,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
      */
     @Deprecated 
     public NetObject FindName(java.lang.String name) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameScope to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameScope to obtain the full interface.");
     }
 
     /**
@@ -247,7 +263,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
      */
     @Deprecated 
     public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 
@@ -256,9 +272,13 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
     
     public boolean getHasContent() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasContent = null;
         try {
-            return (boolean)classInstance.Get("HasContent");
+            retObjectHasContent = classInstance.Get("HasContent");
+            return (boolean)retObjectHasContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasContent != null ? retObjectHasContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +286,13 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public boolean getIsSealed() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSealed = null;
         try {
-            return (boolean)classInstance.Get("IsSealed");
+            retObjectIsSealed = classInstance.Get("IsSealed");
+            return (boolean)retObjectIsSealed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSealed != null ? retObjectIsSealed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +300,14 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public FrameworkElementFactory getVisualTree() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisualTree = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisualTree");
+            retObjectVisualTree = classInstance.Get("VisualTree");
+            JCObject val = (JCObject)retObjectVisualTree;
             return new FrameworkElementFactory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisualTree != null ? retObjectVisualTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +315,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void setVisualTree(FrameworkElementFactory VisualTree) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VisualTree", VisualTree == null ? null : VisualTree.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,10 +325,14 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public ResourceDictionary getResources() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Resources");
+            retObjectResources = classInstance.Get("Resources");
+            JCObject val = (JCObject)retObjectResources;
             return new ResourceDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResources != null ? retObjectResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +340,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void setResources(ResourceDictionary Resources) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Resources", Resources == null ? null : Resources.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,10 +350,14 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public TemplateContent getTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Template");
+            retObjectTemplate = classInstance.Get("Template");
+            JCObject val = (JCObject)retObjectTemplate;
             return new TemplateContent(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplate != null ? retObjectTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +365,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
 
     public void setTemplate(TemplateContent Template) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.xaml.XamlException, system.IndexOutOfRangeException, system.xaml.XamlSchemaException, system.NotSupportedException, system.threading.ThreadAbortException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Template", Template == null ? null : Template.getJCOInstance());
         } catch (JCNativeException jcne) {

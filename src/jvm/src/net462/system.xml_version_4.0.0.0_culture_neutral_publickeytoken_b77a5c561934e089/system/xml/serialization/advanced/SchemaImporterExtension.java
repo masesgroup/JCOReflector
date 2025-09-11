@@ -163,10 +163,14 @@ public class SchemaImporterExtension extends NetObject  {
     
     public CodeExpression ImportDefaultValue(java.lang.String value, java.lang.String type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportDefaultValue = null;
         try {
-            JCObject objImportDefaultValue = (JCObject)classInstance.Invoke("ImportDefaultValue", value, type);
+            retObjectImportDefaultValue = classInstance.Invoke("ImportDefaultValue", value, type);
+            JCObject objImportDefaultValue = (JCObject)retObjectImportDefaultValue;
             return new CodeExpression(objImportDefaultValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportDefaultValue != null ? retObjectImportDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class SchemaImporterExtension extends NetObject  {
 
     public java.lang.String ImportAnyElement(XmlSchemaAny any, boolean mixed, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportAnyElement = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ImportAnyElement", any == null ? null : any.getJCOInstance(), mixed, schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            retObjectImportAnyElement = classInstance.Invoke("ImportAnyElement", any == null ? null : any.getJCOInstance(), mixed, schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            return (java.lang.String)retObjectImportAnyElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectImportAnyElement != null ? retObjectImportAnyElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class SchemaImporterExtension extends NetObject  {
 
     public java.lang.String ImportSchemaType(java.lang.String name, java.lang.String ns, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportSchemaType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ImportSchemaType", name, ns, context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            retObjectImportSchemaType = classInstance.Invoke("ImportSchemaType", name, ns, context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            return (java.lang.String)retObjectImportSchemaType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectImportSchemaType != null ? retObjectImportSchemaType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class SchemaImporterExtension extends NetObject  {
 
     public java.lang.String ImportSchemaType(XmlSchemaType type, XmlSchemaObject context, XmlSchemas schemas, XmlSchemaImporter importer, CodeCompileUnit compileUnit, CodeNamespace mainNamespace, CodeGenerationOptions options, CodeDomProvider codeProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportSchemaType = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ImportSchemaType", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            retObjectImportSchemaType = classInstance.Invoke("ImportSchemaType", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), importer == null ? null : importer.getJCOInstance(), compileUnit == null ? null : compileUnit.getJCOInstance(), mainNamespace == null ? null : mainNamespace.getJCOInstance(), options == null ? null : options.getJCOInstance(), codeProvider == null ? null : codeProvider.getJCOInstance());
+            return (java.lang.String)retObjectImportSchemaType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectImportSchemaType != null ? retObjectImportSchemaType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

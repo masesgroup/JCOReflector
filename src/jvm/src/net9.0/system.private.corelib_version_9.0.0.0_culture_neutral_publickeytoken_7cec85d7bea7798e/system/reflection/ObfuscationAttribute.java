@@ -166,9 +166,13 @@ public class ObfuscationAttribute extends Attribute  {
     
     public boolean getApplyToMembers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyToMembers = null;
         try {
-            return (boolean)classInstance.Get("ApplyToMembers");
+            retObjectApplyToMembers = classInstance.Get("ApplyToMembers");
+            return (boolean)retObjectApplyToMembers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectApplyToMembers != null ? retObjectApplyToMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ObfuscationAttribute extends Attribute  {
 
     public void setApplyToMembers(boolean ApplyToMembers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplyToMembers", ApplyToMembers);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class ObfuscationAttribute extends Attribute  {
 
     public boolean getExclude() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExclude = null;
         try {
-            return (boolean)classInstance.Get("Exclude");
+            retObjectExclude = classInstance.Get("Exclude");
+            return (boolean)retObjectExclude;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExclude != null ? retObjectExclude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class ObfuscationAttribute extends Attribute  {
 
     public void setExclude(boolean Exclude) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Exclude", Exclude);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class ObfuscationAttribute extends Attribute  {
 
     public boolean getStripAfterObfuscation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStripAfterObfuscation = null;
         try {
-            return (boolean)classInstance.Get("StripAfterObfuscation");
+            retObjectStripAfterObfuscation = classInstance.Get("StripAfterObfuscation");
+            return (boolean)retObjectStripAfterObfuscation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStripAfterObfuscation != null ? retObjectStripAfterObfuscation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class ObfuscationAttribute extends Attribute  {
 
     public void setStripAfterObfuscation(boolean StripAfterObfuscation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StripAfterObfuscation", StripAfterObfuscation);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class ObfuscationAttribute extends Attribute  {
 
     public java.lang.String getFeature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFeature = null;
         try {
-            return (java.lang.String)classInstance.Get("Feature");
+            retObjectFeature = classInstance.Get("Feature");
+            return (java.lang.String)retObjectFeature;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFeature != null ? retObjectFeature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class ObfuscationAttribute extends Attribute  {
 
     public void setFeature(java.lang.String Feature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Feature", Feature);
         } catch (JCNativeException jcne) {

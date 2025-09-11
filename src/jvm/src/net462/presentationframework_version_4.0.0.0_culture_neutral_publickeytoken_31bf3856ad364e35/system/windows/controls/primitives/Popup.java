@@ -171,7 +171,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
     
     public static void CreateRootPopup(Popup popup, UIElement child) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateRootPopup", popup == null ? null : popup.getJCOInstance(), child == null ? null : child.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -203,9 +203,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
     
     public boolean getAllowsTransparency() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowsTransparency = null;
         try {
-            return (boolean)classInstance.Get("AllowsTransparency");
+            retObjectAllowsTransparency = classInstance.Get("AllowsTransparency");
+            return (boolean)retObjectAllowsTransparency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowsTransparency != null ? retObjectAllowsTransparency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setAllowsTransparency(boolean AllowsTransparency) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowsTransparency", AllowsTransparency);
         } catch (JCNativeException jcne) {
@@ -223,9 +227,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public boolean getHasDropShadow() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasDropShadow = null;
         try {
-            return (boolean)classInstance.Get("HasDropShadow");
+            retObjectHasDropShadow = classInstance.Get("HasDropShadow");
+            return (boolean)retObjectHasDropShadow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasDropShadow != null ? retObjectHasDropShadow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +241,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public boolean getIsOpen() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOpen = null;
         try {
-            return (boolean)classInstance.Get("IsOpen");
+            retObjectIsOpen = classInstance.Get("IsOpen");
+            return (boolean)retObjectIsOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOpen != null ? retObjectIsOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +255,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setIsOpen(boolean IsOpen) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsOpen", IsOpen);
         } catch (JCNativeException jcne) {
@@ -253,9 +265,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public boolean getStaysOpen() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaysOpen = null;
         try {
-            return (boolean)classInstance.Get("StaysOpen");
+            retObjectStaysOpen = classInstance.Get("StaysOpen");
+            return (boolean)retObjectStaysOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStaysOpen != null ? retObjectStaysOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setStaysOpen(boolean StaysOpen) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StaysOpen", StaysOpen);
         } catch (JCNativeException jcne) {
@@ -273,9 +289,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public double getHorizontalOffset() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +303,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setHorizontalOffset(double HorizontalOffset) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalOffset", HorizontalOffset);
         } catch (JCNativeException jcne) {
@@ -293,9 +313,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public double getVerticalOffset() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +327,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setVerticalOffset(double VerticalOffset) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerticalOffset", VerticalOffset);
         } catch (JCNativeException jcne) {
@@ -313,9 +337,13 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public CustomPopupPlacementCallback getCustomPopupPlacementCallback() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomPopupPlacementCallback = null;
         try {
-            return (CustomPopupPlacementCallback)classInstance.Get("CustomPopupPlacementCallback");
+            retObjectCustomPopupPlacementCallback = classInstance.Get("CustomPopupPlacementCallback");
+            return (CustomPopupPlacementCallback)retObjectCustomPopupPlacementCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into CustomPopupPlacementCallback", retObjectCustomPopupPlacementCallback != null ? retObjectCustomPopupPlacementCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +351,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setCustomPopupPlacementCallback(CustomPopupPlacementCallback CustomPopupPlacementCallback) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomPopupPlacementCallback", CustomPopupPlacementCallback);
         } catch (JCNativeException jcne) {
@@ -333,10 +361,14 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public PlacementMode getPlacement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Placement");
+            retObjectPlacement = classInstance.Get("Placement");
+            JCObject val = (JCObject)retObjectPlacement;
             return new PlacementMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlacement != null ? retObjectPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +376,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setPlacement(PlacementMode Placement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Placement", Placement == null ? null : Placement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,10 +386,14 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public PopupAnimation getPopupAnimation() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopupAnimation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PopupAnimation");
+            retObjectPopupAnimation = classInstance.Get("PopupAnimation");
+            JCObject val = (JCObject)retObjectPopupAnimation;
             return new PopupAnimation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopupAnimation != null ? retObjectPopupAnimation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +401,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setPopupAnimation(PopupAnimation PopupAnimation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PopupAnimation", PopupAnimation == null ? null : PopupAnimation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -375,10 +411,14 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public Rect getPlacementRectangle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlacementRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PlacementRectangle");
+            retObjectPlacementRectangle = classInstance.Get("PlacementRectangle");
+            JCObject val = (JCObject)retObjectPlacementRectangle;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlacementRectangle != null ? retObjectPlacementRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,7 +426,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setPlacementRectangle(Rect PlacementRectangle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PlacementRectangle", PlacementRectangle == null ? null : PlacementRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -396,10 +436,14 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public UIElement getChild() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Child");
+            retObjectChild = classInstance.Get("Child");
+            JCObject val = (JCObject)retObjectChild;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChild != null ? retObjectChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +451,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setChild(UIElement Child) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Child", Child == null ? null : Child.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,10 +461,14 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public UIElement getPlacementTarget() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlacementTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PlacementTarget");
+            retObjectPlacementTarget = classInstance.Get("PlacementTarget");
+            JCObject val = (JCObject)retObjectPlacementTarget;
             return new UIElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlacementTarget != null ? retObjectPlacementTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,7 +476,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void setPlacementTarget(UIElement PlacementTarget) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PlacementTarget", PlacementTarget == null ? null : PlacementTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -443,7 +491,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -453,7 +501,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -463,7 +511,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void addOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {
@@ -473,7 +521,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
 
     public void removeOpened(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opened", handler);
         } catch (JCNativeException jcne) {

@@ -171,7 +171,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
     
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -181,7 +181,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void DoDefaultAction() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoDefaultAction");
         } catch (JCNativeException jcne) {
@@ -191,7 +191,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void Initialize(IComponent component) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +201,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void InitializeExistingComponent(IDictionary defaultValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeExistingComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void InitializeNewComponent(IDictionary defaultValues) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeNewComponent", defaultValues == null ? null : defaultValues.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +221,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void InitializeNonDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeNonDefault");
         } catch (JCNativeException jcne) {
@@ -231,7 +231,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public void OnSetComponentDefaults() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnSetComponentDefaults");
         } catch (JCNativeException jcne) {
@@ -245,7 +245,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PostFilterAttributes(IDictionary attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -254,7 +254,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PostFilterEvents(IDictionary events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -263,7 +263,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PostFilterProperties(IDictionary properties) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -272,7 +272,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PreFilterAttributes(IDictionary attributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -281,7 +281,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PreFilterEvents(IDictionary events) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     /**
@@ -290,13 +290,13 @@ public class ComponentDesigner extends NetObject implements system.componentmode
      */
     @Deprecated 
     public void PreFilterProperties(IDictionary properties) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -312,10 +312,14 @@ public class ComponentDesigner extends NetObject implements system.componentmode
     
     public ICollection getAssociatedComponents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedComponents = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedComponents");
+            retObjectAssociatedComponents = classInstance.Get("AssociatedComponents");
+            JCObject val = (JCObject)retObjectAssociatedComponents;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedComponents != null ? retObjectAssociatedComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +327,14 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public DesignerActionListCollection getActionLists() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActionLists = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActionLists");
+            retObjectActionLists = classInstance.Get("ActionLists");
+            JCObject val = (JCObject)retObjectActionLists;
             return new DesignerActionListCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActionLists != null ? retObjectActionLists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +342,14 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public DesignerVerbCollection getVerbs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Verbs");
+            retObjectVerbs = classInstance.Get("Verbs");
+            JCObject val = (JCObject)retObjectVerbs;
             return new DesignerVerbCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbs != null ? retObjectVerbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +357,14 @@ public class ComponentDesigner extends NetObject implements system.componentmode
 
     public IComponent getComponent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Component");
+            retObjectComponent = classInstance.Get("Component");
+            JCObject val = (JCObject)retObjectComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponent != null ? retObjectComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

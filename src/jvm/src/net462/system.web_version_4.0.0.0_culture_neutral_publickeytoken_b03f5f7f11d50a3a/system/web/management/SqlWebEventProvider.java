@@ -159,7 +159,7 @@ public class SqlWebEventProvider extends BufferedWebEventProvider  {
     
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class SqlWebEventProvider extends BufferedWebEventProvider  {
 
     public void ProcessEvent(WebBaseEvent eventRaised) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEvent", eventRaised == null ? null : eventRaised.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class SqlWebEventProvider extends BufferedWebEventProvider  {
 
     public void ProcessEventFlush(WebEventBufferFlushInfo flushInfo) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.MemberAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.io.PathTooLongException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessEventFlush", flushInfo == null ? null : flushInfo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class SqlWebEventProvider extends BufferedWebEventProvider  {
 
     public void Shutdown() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {

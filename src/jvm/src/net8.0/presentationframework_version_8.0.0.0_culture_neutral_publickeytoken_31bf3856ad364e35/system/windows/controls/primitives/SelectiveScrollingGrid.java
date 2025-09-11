@@ -164,10 +164,14 @@ public class SelectiveScrollingGrid extends Grid  {
     
     public static SelectiveScrollingOrientation GetSelectiveScrollingOrientation(DependencyObject obj) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSelectiveScrollingOrientation = null;
         try {
-            JCObject objGetSelectiveScrollingOrientation = (JCObject)classType.Invoke("GetSelectiveScrollingOrientation", obj == null ? null : obj.getJCOInstance());
+            retObjectGetSelectiveScrollingOrientation = classType.Invoke("GetSelectiveScrollingOrientation", obj == null ? null : obj.getJCOInstance());
+            JCObject objGetSelectiveScrollingOrientation = (JCObject)retObjectGetSelectiveScrollingOrientation;
             return new SelectiveScrollingOrientation(objGetSelectiveScrollingOrientation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectiveScrollingOrientation != null ? retObjectGetSelectiveScrollingOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class SelectiveScrollingGrid extends Grid  {
 
     public static void SetSelectiveScrollingOrientation(DependencyObject obj, SelectiveScrollingOrientation value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSelectiveScrollingOrientation", obj == null ? null : obj.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -163,10 +163,14 @@ public class ReceiveCompletedEventArgs extends EventArgs  {
     
     public IAsyncResult getAsyncResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsyncResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AsyncResult");
+            retObjectAsyncResult = classInstance.Get("AsyncResult");
+            JCObject val = (JCObject)retObjectAsyncResult;
             return new IAsyncResultImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsyncResult != null ? retObjectAsyncResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class ReceiveCompletedEventArgs extends EventArgs  {
 
     public void setAsyncResult(IAsyncResult AsyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsyncResult", AsyncResult == null ? null : AsyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,10 +188,14 @@ public class ReceiveCompletedEventArgs extends EventArgs  {
 
     public Message getMessage() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

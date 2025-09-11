@@ -162,9 +162,19 @@ public class FieldDefinition extends ValueType  {
     
     public int GetOffset() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOffset = null;
         try {
-            return (int)classInstance.Invoke("GetOffset");
+            retObjectGetOffset = classInstance.Invoke("GetOffset");
+            return (int)retObjectGetOffset;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOffsetNumber = (java.lang.Number)retObjectGetOffset;
+                return retObjectGetOffsetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetOffset != null ? retObjectGetOffset.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +182,19 @@ public class FieldDefinition extends ValueType  {
 
     public int GetRelativeVirtualAddress() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelativeVirtualAddress = null;
         try {
-            return (int)classInstance.Invoke("GetRelativeVirtualAddress");
+            retObjectGetRelativeVirtualAddress = classInstance.Invoke("GetRelativeVirtualAddress");
+            return (int)retObjectGetRelativeVirtualAddress;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRelativeVirtualAddressNumber = (java.lang.Number)retObjectGetRelativeVirtualAddress;
+                return retObjectGetRelativeVirtualAddressNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRelativeVirtualAddress != null ? retObjectGetRelativeVirtualAddress.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +202,14 @@ public class FieldDefinition extends ValueType  {
 
     public BlobHandle GetMarshallingDescriptor() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMarshallingDescriptor = null;
         try {
-            JCObject objGetMarshallingDescriptor = (JCObject)classInstance.Invoke("GetMarshallingDescriptor");
+            retObjectGetMarshallingDescriptor = classInstance.Invoke("GetMarshallingDescriptor");
+            JCObject objGetMarshallingDescriptor = (JCObject)retObjectGetMarshallingDescriptor;
             return new BlobHandle(objGetMarshallingDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMarshallingDescriptor != null ? retObjectGetMarshallingDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +217,14 @@ public class FieldDefinition extends ValueType  {
 
     public ConstantHandle GetDefaultValue() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultValue = null;
         try {
-            JCObject objGetDefaultValue = (JCObject)classInstance.Invoke("GetDefaultValue");
+            retObjectGetDefaultValue = classInstance.Invoke("GetDefaultValue");
+            JCObject objGetDefaultValue = (JCObject)retObjectGetDefaultValue;
             return new ConstantHandle(objGetDefaultValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultValue != null ? retObjectGetDefaultValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +232,14 @@ public class FieldDefinition extends ValueType  {
 
     public CustomAttributeHandleCollection GetCustomAttributes() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
-            JCObject objGetCustomAttributes = (JCObject)classInstance.Invoke("GetCustomAttributes");
+            retObjectGetCustomAttributes = classInstance.Invoke("GetCustomAttributes");
+            JCObject objGetCustomAttributes = (JCObject)retObjectGetCustomAttributes;
             return new CustomAttributeHandleCollection(objGetCustomAttributes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +247,14 @@ public class FieldDefinition extends ValueType  {
 
     public TypeDefinitionHandle GetDeclaringType() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDeclaringType = null;
         try {
-            JCObject objGetDeclaringType = (JCObject)classInstance.Invoke("GetDeclaringType");
+            retObjectGetDeclaringType = classInstance.Invoke("GetDeclaringType");
+            JCObject objGetDeclaringType = (JCObject)retObjectGetDeclaringType;
             return new TypeDefinitionHandle(objGetDeclaringType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDeclaringType != null ? retObjectGetDeclaringType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +266,14 @@ public class FieldDefinition extends ValueType  {
     
     public FieldAttributes getAttributes() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new FieldAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +281,14 @@ public class FieldDefinition extends ValueType  {
 
     public BlobHandle getSignature() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Signature");
+            retObjectSignature = classInstance.Get("Signature");
+            JCObject val = (JCObject)retObjectSignature;
             return new BlobHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSignature != null ? retObjectSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +296,14 @@ public class FieldDefinition extends ValueType  {
 
     public StringHandle getName() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            JCObject val = (JCObject)retObjectName;
             return new StringHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

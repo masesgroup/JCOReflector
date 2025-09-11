@@ -176,9 +176,13 @@ public class CodeGotoStatement extends CodeStatement  {
     
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class CodeGotoStatement extends CodeStatement  {
 
     public void setLabel(java.lang.String Label) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {

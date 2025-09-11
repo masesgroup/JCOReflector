@@ -161,10 +161,14 @@ public class TrustRelationshipInformation extends NetObject  {
     
     public TrustDirection getTrustDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustDirection");
+            retObjectTrustDirection = classInstance.Get("TrustDirection");
+            JCObject val = (JCObject)retObjectTrustDirection;
             return new TrustDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustDirection != null ? retObjectTrustDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class TrustRelationshipInformation extends NetObject  {
 
     public TrustType getTrustType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustType");
+            retObjectTrustType = classInstance.Get("TrustType");
+            JCObject val = (JCObject)retObjectTrustType;
             return new TrustType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustType != null ? retObjectTrustType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class TrustRelationshipInformation extends NetObject  {
 
     public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceName = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceName");
+            retObjectSourceName = classInstance.Get("SourceName");
+            return (java.lang.String)retObjectSourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceName != null ? retObjectSourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class TrustRelationshipInformation extends NetObject  {
 
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetName");
+            retObjectTargetName = classInstance.Get("TargetName");
+            return (java.lang.String)retObjectTargetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetName != null ? retObjectTargetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

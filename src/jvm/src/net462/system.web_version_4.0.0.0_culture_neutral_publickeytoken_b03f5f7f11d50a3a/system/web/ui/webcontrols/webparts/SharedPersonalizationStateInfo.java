@@ -171,9 +171,13 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
     
     public int getCountOfPersonalizations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCountOfPersonalizations = null;
         try {
-            return (int)classInstance.Get("CountOfPersonalizations");
+            retObjectCountOfPersonalizations = classInstance.Get("CountOfPersonalizations");
+            return (int)retObjectCountOfPersonalizations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCountOfPersonalizations != null ? retObjectCountOfPersonalizations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +185,13 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
 
     public int getSizeOfPersonalizations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeOfPersonalizations = null;
         try {
-            return (int)classInstance.Get("SizeOfPersonalizations");
+            retObjectSizeOfPersonalizations = classInstance.Get("SizeOfPersonalizations");
+            return (int)retObjectSizeOfPersonalizations;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSizeOfPersonalizations != null ? retObjectSizeOfPersonalizations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

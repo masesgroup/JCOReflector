@@ -172,9 +172,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
     
     public BeginEventHandler getBeginEventHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEventHandler = null;
         try {
-            return (BeginEventHandler)classInstance.Get("BeginEventHandler");
+            retObjectBeginEventHandler = classInstance.Get("BeginEventHandler");
+            return (BeginEventHandler)retObjectBeginEventHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into BeginEventHandler", retObjectBeginEventHandler != null ? retObjectBeginEventHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
 
     public void setBeginEventHandler(BeginEventHandler BeginEventHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BeginEventHandler", BeginEventHandler);
         } catch (JCNativeException jcne) {
@@ -192,9 +196,13 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
 
     public EndEventHandler getEndEventHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndEventHandler = null;
         try {
-            return (EndEventHandler)classInstance.Get("EndEventHandler");
+            retObjectEndEventHandler = classInstance.Get("EndEventHandler");
+            return (EndEventHandler)retObjectEndEventHandler;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EndEventHandler", retObjectEndEventHandler != null ? retObjectEndEventHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
 
     public void setEndEventHandler(EndEventHandler EndEventHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndEventHandler", EndEventHandler);
         } catch (JCNativeException jcne) {

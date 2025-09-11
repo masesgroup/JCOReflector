@@ -177,10 +177,14 @@ public class PrintTicket extends NetObject  {
     
     public MemoryStream GetXmlStream() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXmlStream = null;
         try {
-            JCObject objGetXmlStream = (JCObject)classInstance.Invoke("GetXmlStream");
+            retObjectGetXmlStream = classInstance.Invoke("GetXmlStream");
+            JCObject objGetXmlStream = (JCObject)retObjectGetXmlStream;
             return new MemoryStream(objGetXmlStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlStream != null ? retObjectGetXmlStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class PrintTicket extends NetObject  {
 
     public PrintTicket Clone() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OverflowException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new PrintTicket(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class PrintTicket extends NetObject  {
 
     public void SaveTo(Stream outStream) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveTo", outStream == null ? null : outStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class PrintTicket extends NetObject  {
     
     public PageMediaSize getPageMediaSize() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageMediaSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageMediaSize");
+            retObjectPageMediaSize = classInstance.Get("PageMediaSize");
+            JCObject val = (JCObject)retObjectPageMediaSize;
             return new PageMediaSize(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageMediaSize != null ? retObjectPageMediaSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class PrintTicket extends NetObject  {
 
     public void setPageMediaSize(PageMediaSize PageMediaSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageMediaSize", PageMediaSize == null ? null : PageMediaSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class PrintTicket extends NetObject  {
 
     public PageResolution getPageResolution() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageResolution = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageResolution");
+            retObjectPageResolution = classInstance.Get("PageResolution");
+            JCObject val = (JCObject)retObjectPageResolution;
             return new PageResolution(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageResolution != null ? retObjectPageResolution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class PrintTicket extends NetObject  {
 
     public void setPageResolution(PageResolution PageResolution) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageResolution", PageResolution == null ? null : PageResolution.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +276,7 @@ public class PrintTicket extends NetObject  {
 
     public void addPropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {
@@ -270,7 +286,7 @@ public class PrintTicket extends NetObject  {
 
     public void removePropertyChanged(PropertyChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
         } catch (JCNativeException jcne) {

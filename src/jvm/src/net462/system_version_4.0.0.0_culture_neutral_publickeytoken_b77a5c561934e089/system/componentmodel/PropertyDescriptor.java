@@ -159,9 +159,13 @@ public class PropertyDescriptor extends MemberDescriptor  {
     
     public boolean CanResetValue(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanResetValue = null;
         try {
-            return (boolean)classInstance.Invoke("CanResetValue", component == null ? null : component.getJCOInstance());
+            retObjectCanResetValue = classInstance.Invoke("CanResetValue", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectCanResetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanResetValue != null ? retObjectCanResetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public boolean ShouldSerializeValue(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeValue = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeValue", component == null ? null : component.getJCOInstance());
+            retObjectShouldSerializeValue = classInstance.Invoke("ShouldSerializeValue", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectShouldSerializeValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeValue != null ? retObjectShouldSerializeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public PropertyDescriptorCollection GetChildProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildProperties = null;
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties");
+            retObjectGetChildProperties = classInstance.Invoke("GetChildProperties");
+            JCObject objGetChildProperties = (JCObject)retObjectGetChildProperties;
             return new PropertyDescriptorCollection(objGetChildProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildProperties != null ? retObjectGetChildProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public PropertyDescriptorCollection GetChildProperties(Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildProperties = null;
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", (java.lang.Object)toObjectFromArray(filter));
+            retObjectGetChildProperties = classInstance.Invoke("GetChildProperties", (java.lang.Object)toObjectFromArray(filter));
+            JCObject objGetChildProperties = (JCObject)retObjectGetChildProperties;
             return new PropertyDescriptorCollection(objGetChildProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildProperties != null ? retObjectGetChildProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public PropertyDescriptorCollection GetChildProperties(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildProperties = null;
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance());
+            retObjectGetChildProperties = classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetChildProperties = (JCObject)retObjectGetChildProperties;
             return new PropertyDescriptorCollection(objGetChildProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildProperties != null ? retObjectGetChildProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public PropertyDescriptorCollection GetChildProperties(NetObject instance, Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildProperties = null;
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(filter));
+            retObjectGetChildProperties = classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(filter));
+            JCObject objGetChildProperties = (JCObject)retObjectGetChildProperties;
             return new PropertyDescriptorCollection(objGetChildProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildProperties != null ? retObjectGetChildProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public NetObject GetEditor(NetType editorBaseType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.NotImplementedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditor = null;
         try {
-            JCObject objGetEditor = (JCObject)classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            retObjectGetEditor = classInstance.Invoke("GetEditor", editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            JCObject objGetEditor = (JCObject)retObjectGetEditor;
             return new NetObject(objGetEditor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditor != null ? retObjectGetEditor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public NetObject GetValue(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", component == null ? null : component.getJCOInstance());
+            retObjectGetValue = classInstance.Invoke("GetValue", component == null ? null : component.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +277,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public void AddValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddValueChanged", component == null ? null : component.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -255,7 +287,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public void RemoveValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveValueChanged", component == null ? null : component.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +297,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public void ResetValue(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetValue", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +307,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public void SetValue(NetObject component, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetValue", component == null ? null : component.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,9 +321,13 @@ public class PropertyDescriptor extends MemberDescriptor  {
     
     public boolean getIsLocalizable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLocalizable = null;
         try {
-            return (boolean)classInstance.Get("IsLocalizable");
+            retObjectIsLocalizable = classInstance.Get("IsLocalizable");
+            return (boolean)retObjectIsLocalizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLocalizable != null ? retObjectIsLocalizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +335,13 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +349,13 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public boolean getSupportsChangeEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsChangeEvents = null;
         try {
-            return (boolean)classInstance.Get("SupportsChangeEvents");
+            retObjectSupportsChangeEvents = classInstance.Get("SupportsChangeEvents");
+            return (boolean)retObjectSupportsChangeEvents;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsChangeEvents != null ? retObjectSupportsChangeEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +363,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public DesignerSerializationVisibility getSerializationVisibility() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializationVisibility = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SerializationVisibility");
+            retObjectSerializationVisibility = classInstance.Get("SerializationVisibility");
+            JCObject val = (JCObject)retObjectSerializationVisibility;
             return new DesignerSerializationVisibility(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationVisibility != null ? retObjectSerializationVisibility.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +378,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public TypeConverter getConverter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConverter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Converter");
+            retObjectConverter = classInstance.Get("Converter");
+            JCObject val = (JCObject)retObjectConverter;
             return new TypeConverter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConverter != null ? retObjectConverter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +393,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public NetType getComponentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ComponentType");
+            retObjectComponentType = classInstance.Get("ComponentType");
+            JCObject val = (JCObject)retObjectComponentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponentType != null ? retObjectComponentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +408,14 @@ public class PropertyDescriptor extends MemberDescriptor  {
 
     public NetType getPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropertyType");
+            retObjectPropertyType = classInstance.Get("PropertyType");
+            JCObject val = (JCObject)retObjectPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyType != null ? retObjectPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

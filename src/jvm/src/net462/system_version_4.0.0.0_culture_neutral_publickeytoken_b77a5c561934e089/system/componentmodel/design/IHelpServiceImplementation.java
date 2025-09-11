@@ -146,10 +146,14 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
     
     public IHelpService CreateLocalContext(HelpContextType contextType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateLocalContext = null;
         try {
-            JCObject objCreateLocalContext = (JCObject)classInstance.Invoke("CreateLocalContext", contextType == null ? null : contextType.getJCOInstance());
+            retObjectCreateLocalContext = classInstance.Invoke("CreateLocalContext", contextType == null ? null : contextType.getJCOInstance());
+            JCObject objCreateLocalContext = (JCObject)retObjectCreateLocalContext;
             return new IHelpServiceImplementation(objCreateLocalContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateLocalContext != null ? retObjectCreateLocalContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void AddContextAttribute(java.lang.String name, java.lang.String value, HelpKeywordType keywordType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddContextAttribute", name, value, keywordType == null ? null : keywordType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +171,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void ClearContextAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearContextAttributes");
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void RemoveContextAttribute(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveContextAttribute", name, value);
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void RemoveLocalContext(IHelpService localContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveLocalContext", localContext == null ? null : localContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void ShowHelpFromKeyword(java.lang.String helpKeyword) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowHelpFromKeyword", helpKeyword);
         } catch (JCNativeException jcne) {
@@ -207,7 +211,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
 
     public void ShowHelpFromUrl(java.lang.String helpUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowHelpFromUrl", helpUrl);
         } catch (JCNativeException jcne) {

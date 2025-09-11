@@ -202,10 +202,14 @@ public class RelationshipQuery extends WqlObjectQuery  {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +221,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
     
     public boolean getClassDefinitionsOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassDefinitionsOnly = null;
         try {
-            return (boolean)classInstance.Get("ClassDefinitionsOnly");
+            retObjectClassDefinitionsOnly = classInstance.Get("ClassDefinitionsOnly");
+            return (boolean)retObjectClassDefinitionsOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClassDefinitionsOnly != null ? retObjectClassDefinitionsOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setClassDefinitionsOnly(boolean ClassDefinitionsOnly) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassDefinitionsOnly", ClassDefinitionsOnly);
         } catch (JCNativeException jcne) {
@@ -237,9 +245,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public boolean getIsSchemaQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSchemaQuery = null;
         try {
-            return (boolean)classInstance.Get("IsSchemaQuery");
+            retObjectIsSchemaQuery = classInstance.Get("IsSchemaQuery");
+            return (boolean)retObjectIsSchemaQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSchemaQuery != null ? retObjectIsSchemaQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +259,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setIsSchemaQuery(boolean IsSchemaQuery) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSchemaQuery", IsSchemaQuery);
         } catch (JCNativeException jcne) {
@@ -257,9 +269,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public java.lang.String getRelationshipClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipClass = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipClass");
+            retObjectRelationshipClass = classInstance.Get("RelationshipClass");
+            return (java.lang.String)retObjectRelationshipClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipClass != null ? retObjectRelationshipClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +283,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setRelationshipClass(java.lang.String RelationshipClass) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelationshipClass", RelationshipClass);
         } catch (JCNativeException jcne) {
@@ -277,9 +293,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public java.lang.String getRelationshipQualifier() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipQualifier = null;
         try {
-            return (java.lang.String)classInstance.Get("RelationshipQualifier");
+            retObjectRelationshipQualifier = classInstance.Get("RelationshipQualifier");
+            return (java.lang.String)retObjectRelationshipQualifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelationshipQualifier != null ? retObjectRelationshipQualifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +307,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setRelationshipQualifier(java.lang.String RelationshipQualifier) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelationshipQualifier", RelationshipQualifier);
         } catch (JCNativeException jcne) {
@@ -297,9 +317,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public java.lang.String getSourceObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceObject = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceObject");
+            retObjectSourceObject = classInstance.Get("SourceObject");
+            return (java.lang.String)retObjectSourceObject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceObject != null ? retObjectSourceObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +331,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setSourceObject(java.lang.String SourceObject) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceObject", SourceObject);
         } catch (JCNativeException jcne) {
@@ -317,9 +341,13 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public java.lang.String getThisRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThisRole = null;
         try {
-            return (java.lang.String)classInstance.Get("ThisRole");
+            retObjectThisRole = classInstance.Get("ThisRole");
+            return (java.lang.String)retObjectThisRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThisRole != null ? retObjectThisRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +355,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
 
     public void setThisRole(java.lang.String ThisRole) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThisRole", ThisRole);
         } catch (JCNativeException jcne) {

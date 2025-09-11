@@ -183,10 +183,14 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
     
     public DataView CreateDataView(DataTable table) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDataView = null;
         try {
-            JCObject objCreateDataView = (JCObject)classInstance.Invoke("CreateDataView", table == null ? null : table.getJCOInstance());
+            retObjectCreateDataView = classInstance.Invoke("CreateDataView", table == null ? null : table.getJCOInstance());
+            JCObject objCreateDataView = (JCObject)retObjectCreateDataView;
             return new DataView(objCreateDataView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDataView != null ? retObjectCreateDataView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -207,7 +211,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public NetObject AddNew() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -216,7 +220,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void AddIndex(PropertyDescriptor property) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -225,7 +229,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -234,7 +238,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void RemoveIndex(PropertyDescriptor property) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -243,7 +247,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void RemoveSort() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
     }
 
     /**
@@ -252,7 +256,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public boolean Contains(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -261,7 +265,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public int Add(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -270,7 +274,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public int IndexOf(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -279,7 +283,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void Clear() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -288,7 +292,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void Insert(int index, NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -297,7 +301,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void Remove(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -306,7 +310,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void RemoveAt(int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
     /**
@@ -315,7 +319,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
     /**
@@ -324,7 +328,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
 
     /**
@@ -333,7 +337,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
      */
     @Deprecated 
     public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
 
 
@@ -342,10 +346,14 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
     
     public DataSet getDataSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSet");
+            retObjectDataSet = classInstance.Get("DataSet");
+            JCObject val = (JCObject)retObjectDataSet;
             return new DataSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSet != null ? retObjectDataSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +361,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public void setDataSet(DataSet DataSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSet", DataSet == null ? null : DataSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,10 +371,14 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public DataViewSettingCollection getDataViewSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataViewSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataViewSettings");
+            retObjectDataViewSettings = classInstance.Get("DataViewSettings");
+            JCObject val = (JCObject)retObjectDataViewSettings;
             return new DataViewSettingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataViewSettings != null ? retObjectDataViewSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,9 +386,13 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public java.lang.String getDataViewSettingCollectionString() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataViewSettingCollectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("DataViewSettingCollectionString");
+            retObjectDataViewSettingCollectionString = classInstance.Get("DataViewSettingCollectionString");
+            return (java.lang.String)retObjectDataViewSettingCollectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataViewSettingCollectionString != null ? retObjectDataViewSettingCollectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +400,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public void setDataViewSettingCollectionString(java.lang.String DataViewSettingCollectionString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.OutOfMemoryException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataViewSettingCollectionString", DataViewSettingCollectionString);
         } catch (JCNativeException jcne) {
@@ -399,7 +415,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public void addListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {
@@ -409,7 +425,7 @@ public class DataViewManager extends MarshalByValueComponent implements system.c
 
     public void removeListChanged(ListChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ListChanged", handler);
         } catch (JCNativeException jcne) {

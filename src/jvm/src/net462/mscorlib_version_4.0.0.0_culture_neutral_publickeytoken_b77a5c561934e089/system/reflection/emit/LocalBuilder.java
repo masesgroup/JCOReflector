@@ -158,7 +158,7 @@ public class LocalBuilder extends LocalVariableInfo  {
     
     public void SetLocalSymInfo(java.lang.String name) throws Throwable, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalSymInfo", name);
         } catch (JCNativeException jcne) {
@@ -168,7 +168,7 @@ public class LocalBuilder extends LocalVariableInfo  {
 
     public void SetLocalSymInfo(java.lang.String name, int startOffset, int endOffset) throws Throwable, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalSymInfo", name, startOffset, endOffset);
         } catch (JCNativeException jcne) {
@@ -182,7 +182,7 @@ public class LocalBuilder extends LocalVariableInfo  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_LocalBuilder to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_LocalBuilder to obtain the full interface.");
     }
 
 

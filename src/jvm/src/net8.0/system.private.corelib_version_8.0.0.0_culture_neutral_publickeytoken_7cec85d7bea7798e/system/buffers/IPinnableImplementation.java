@@ -143,10 +143,14 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
     
     public MemoryHandle Pin(int elementIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPin = null;
         try {
-            JCObject objPin = (JCObject)classInstance.Invoke("Pin", elementIndex);
+            retObjectPin = classInstance.Invoke("Pin", elementIndex);
+            JCObject objPin = (JCObject)retObjectPin;
             return new MemoryHandle(objPin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPin != null ? retObjectPin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
 
     public void Unpin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unpin");
         } catch (JCNativeException jcne) {

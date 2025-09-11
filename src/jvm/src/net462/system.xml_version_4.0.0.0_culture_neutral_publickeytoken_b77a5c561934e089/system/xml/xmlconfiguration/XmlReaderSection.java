@@ -166,9 +166,13 @@ public class XmlReaderSection extends ConfigurationSection  {
     
     public java.lang.String getCollapseWhiteSpaceIntoEmptyStringString() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapseWhiteSpaceIntoEmptyStringString = null;
         try {
-            return (java.lang.String)classInstance.Get("CollapseWhiteSpaceIntoEmptyStringString");
+            retObjectCollapseWhiteSpaceIntoEmptyStringString = classInstance.Get("CollapseWhiteSpaceIntoEmptyStringString");
+            return (java.lang.String)retObjectCollapseWhiteSpaceIntoEmptyStringString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCollapseWhiteSpaceIntoEmptyStringString != null ? retObjectCollapseWhiteSpaceIntoEmptyStringString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class XmlReaderSection extends ConfigurationSection  {
 
     public void setCollapseWhiteSpaceIntoEmptyStringString(java.lang.String CollapseWhiteSpaceIntoEmptyStringString) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollapseWhiteSpaceIntoEmptyStringString", CollapseWhiteSpaceIntoEmptyStringString);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class XmlReaderSection extends ConfigurationSection  {
 
     public java.lang.String getProhibitDefaultResolverString() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProhibitDefaultResolverString = null;
         try {
-            return (java.lang.String)classInstance.Get("ProhibitDefaultResolverString");
+            retObjectProhibitDefaultResolverString = classInstance.Get("ProhibitDefaultResolverString");
+            return (java.lang.String)retObjectProhibitDefaultResolverString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProhibitDefaultResolverString != null ? retObjectProhibitDefaultResolverString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class XmlReaderSection extends ConfigurationSection  {
 
     public void setProhibitDefaultResolverString(java.lang.String ProhibitDefaultResolverString) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProhibitDefaultResolverString", ProhibitDefaultResolverString);
         } catch (JCNativeException jcne) {

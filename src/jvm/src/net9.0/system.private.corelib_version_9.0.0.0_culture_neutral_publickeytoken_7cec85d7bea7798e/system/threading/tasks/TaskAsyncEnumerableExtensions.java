@@ -156,10 +156,14 @@ public class TaskAsyncEnumerableExtensions extends NetObject  {
     
     public static ConfiguredAsyncDisposable ConfigureAwait(IAsyncDisposable source, boolean continueOnCapturedContext) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConfigureAwait = null;
         try {
-            JCObject objConfigureAwait = (JCObject)classType.Invoke("ConfigureAwait", source == null ? null : source.getJCOInstance(), continueOnCapturedContext);
+            retObjectConfigureAwait = classType.Invoke("ConfigureAwait", source == null ? null : source.getJCOInstance(), continueOnCapturedContext);
+            JCObject objConfigureAwait = (JCObject)retObjectConfigureAwait;
             return new ConfiguredAsyncDisposable(objConfigureAwait);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfigureAwait != null ? retObjectConfigureAwait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

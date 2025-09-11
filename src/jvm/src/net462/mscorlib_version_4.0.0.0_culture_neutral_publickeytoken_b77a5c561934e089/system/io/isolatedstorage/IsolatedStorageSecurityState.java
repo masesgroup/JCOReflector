@@ -157,7 +157,7 @@ public class IsolatedStorageSecurityState extends SecurityState  {
     
     public void EnsureState() throws Throwable, system.io.isolatedstorage.IsolatedStorageException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnsureState");
         } catch (JCNativeException jcne) {
@@ -171,9 +171,13 @@ public class IsolatedStorageSecurityState extends SecurityState  {
     
     public long getQuota() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuota = null;
         try {
-            return (long)classInstance.Get("Quota");
+            retObjectQuota = classInstance.Get("Quota");
+            return (long)retObjectQuota;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectQuota != null ? retObjectQuota.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class IsolatedStorageSecurityState extends SecurityState  {
 
     public void setQuota(long Quota) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Quota", Quota);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class IsolatedStorageSecurityState extends SecurityState  {
 
     public long getUsedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsedSize = null;
         try {
-            return (long)classInstance.Get("UsedSize");
+            retObjectUsedSize = classInstance.Get("UsedSize");
+            return (long)retObjectUsedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectUsedSize != null ? retObjectUsedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class IsolatedStorageSecurityState extends SecurityState  {
 
     public IsolatedStorageSecurityOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new IsolatedStorageSecurityOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

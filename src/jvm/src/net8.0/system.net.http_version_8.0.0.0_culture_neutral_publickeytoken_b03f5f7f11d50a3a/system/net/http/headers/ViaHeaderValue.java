@@ -188,9 +188,13 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
     
     public static boolean TryParse(java.lang.String input, JCORefOut<ViaHeaderValue> parsedValue) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +202,14 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
 
     public static ViaHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new ViaHeaderValue(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -222,9 +230,13 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
     
     public java.lang.String getComment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +244,13 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
 
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            retObjectProtocolName = classInstance.Get("ProtocolName");
+            return (java.lang.String)retObjectProtocolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolName != null ? retObjectProtocolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +258,13 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
 
     public java.lang.String getProtocolVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolVersion");
+            retObjectProtocolVersion = classInstance.Get("ProtocolVersion");
+            return (java.lang.String)retObjectProtocolVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +272,13 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
 
     public java.lang.String getReceivedBy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedBy = null;
         try {
-            return (java.lang.String)classInstance.Get("ReceivedBy");
+            retObjectReceivedBy = classInstance.Get("ReceivedBy");
+            return (java.lang.String)retObjectReceivedBy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReceivedBy != null ? retObjectReceivedBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -175,10 +175,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
     
     public static ActiveDirectorySchemaClass FindByName(DirectoryContext context, java.lang.String ldapDisplayName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AccessViolationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.net.sockets.SocketException, system.FormatException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindByName = null;
         try {
-            JCObject objFindByName = (JCObject)classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), ldapDisplayName);
+            retObjectFindByName = classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), ldapDisplayName);
+            JCObject objFindByName = (JCObject)retObjectFindByName;
             return new ActiveDirectorySchemaClass(objFindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindByName != null ? retObjectFindByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ReadOnlyActiveDirectorySchemaPropertyCollection GetAllProperties() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAllProperties = null;
         try {
-            JCObject objGetAllProperties = (JCObject)classInstance.Invoke("GetAllProperties");
+            retObjectGetAllProperties = classInstance.Invoke("GetAllProperties");
+            JCObject objGetAllProperties = (JCObject)retObjectGetAllProperties;
             return new ReadOnlyActiveDirectorySchemaPropertyCollection(objGetAllProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllProperties != null ? retObjectGetAllProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public DirectoryEntry GetDirectoryEntry() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryEntry = null;
         try {
-            JCObject objGetDirectoryEntry = (JCObject)classInstance.Invoke("GetDirectoryEntry");
+            retObjectGetDirectoryEntry = classInstance.Invoke("GetDirectoryEntry");
+            JCObject objGetDirectoryEntry = (JCObject)retObjectGetDirectoryEntry;
             return new DirectoryEntry(objGetDirectoryEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectoryEntry != null ? retObjectGetDirectoryEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -218,7 +230,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void Save() throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.PlatformNotSupportedException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -229,7 +241,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -245,9 +257,13 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
     
     public boolean getIsDefunct() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefunct = null;
         try {
-            return (boolean)classInstance.Get("IsDefunct");
+            retObjectIsDefunct = classInstance.Get("IsDefunct");
+            return (boolean)retObjectIsDefunct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDefunct != null ? retObjectIsDefunct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setIsDefunct(boolean IsDefunct) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDefunct", IsDefunct);
         } catch (JCNativeException jcne) {
@@ -265,10 +281,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySchemaClass getSubClassOf() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubClassOf = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubClassOf");
+            retObjectSubClassOf = classInstance.Get("SubClassOf");
+            JCObject val = (JCObject)retObjectSubClassOf;
             return new ActiveDirectorySchemaClass(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubClassOf != null ? retObjectSubClassOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +296,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setSubClassOf(ActiveDirectorySchemaClass SubClassOf) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubClassOf", SubClassOf == null ? null : SubClassOf.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +306,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySchemaClassCollection getAuxiliaryClasses() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuxiliaryClasses = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuxiliaryClasses");
+            retObjectAuxiliaryClasses = classInstance.Get("AuxiliaryClasses");
+            JCObject val = (JCObject)retObjectAuxiliaryClasses;
             return new ActiveDirectorySchemaClassCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuxiliaryClasses != null ? retObjectAuxiliaryClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +321,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySchemaClassCollection getPossibleSuperiors() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPossibleSuperiors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PossibleSuperiors");
+            retObjectPossibleSuperiors = classInstance.Get("PossibleSuperiors");
+            JCObject val = (JCObject)retObjectPossibleSuperiors;
             return new ActiveDirectorySchemaClassCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPossibleSuperiors != null ? retObjectPossibleSuperiors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +336,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySchemaPropertyCollection getMandatoryProperties() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMandatoryProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MandatoryProperties");
+            retObjectMandatoryProperties = classInstance.Get("MandatoryProperties");
+            JCObject val = (JCObject)retObjectMandatoryProperties;
             return new ActiveDirectorySchemaPropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMandatoryProperties != null ? retObjectMandatoryProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +351,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySchemaPropertyCollection getOptionalProperties() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptionalProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OptionalProperties");
+            retObjectOptionalProperties = classInstance.Get("OptionalProperties");
+            JCObject val = (JCObject)retObjectOptionalProperties;
             return new ActiveDirectorySchemaPropertyCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptionalProperties != null ? retObjectOptionalProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +366,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ReadOnlyActiveDirectorySchemaClassCollection getPossibleInferiors() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPossibleInferiors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PossibleInferiors");
+            retObjectPossibleInferiors = classInstance.Get("PossibleInferiors");
+            JCObject val = (JCObject)retObjectPossibleInferiors;
             return new ReadOnlyActiveDirectorySchemaClassCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPossibleInferiors != null ? retObjectPossibleInferiors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +381,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public SchemaClassType getType() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new SchemaClassType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +396,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setType(SchemaClassType Type) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type == null ? null : Type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,10 +406,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public ActiveDirectorySecurity getDefaultObjectSecurityDescriptor() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultObjectSecurityDescriptor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultObjectSecurityDescriptor");
+            retObjectDefaultObjectSecurityDescriptor = classInstance.Get("DefaultObjectSecurityDescriptor");
+            JCObject val = (JCObject)retObjectDefaultObjectSecurityDescriptor;
             return new ActiveDirectorySecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultObjectSecurityDescriptor != null ? retObjectDefaultObjectSecurityDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,7 +421,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setDefaultObjectSecurityDescriptor(ActiveDirectorySecurity DefaultObjectSecurityDescriptor) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultObjectSecurityDescriptor", DefaultObjectSecurityDescriptor == null ? null : DefaultObjectSecurityDescriptor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -383,10 +431,14 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public Guid getSchemaGuid() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaGuid");
+            retObjectSchemaGuid = classInstance.Get("SchemaGuid");
+            JCObject val = (JCObject)retObjectSchemaGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaGuid != null ? retObjectSchemaGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +446,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setSchemaGuid(Guid SchemaGuid) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SchemaGuid", SchemaGuid == null ? null : SchemaGuid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -404,9 +456,13 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public java.lang.String getCommonName() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommonName = null;
         try {
-            return (java.lang.String)classInstance.Get("CommonName");
+            retObjectCommonName = classInstance.Get("CommonName");
+            return (java.lang.String)retObjectCommonName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommonName != null ? retObjectCommonName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +470,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setCommonName(java.lang.String CommonName) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommonName", CommonName);
         } catch (JCNativeException jcne) {
@@ -424,9 +480,13 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public java.lang.String getDescription() throws Throwable, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +494,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setDescription(java.lang.String Description) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -444,9 +504,13 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public java.lang.String getName() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,9 +518,13 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public java.lang.String getOid() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.net.sockets.SocketException, system.AccessViolationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            return (java.lang.String)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            return (java.lang.String)retObjectOid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +532,7 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
 
     public void setOid(java.lang.String Oid) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Oid", Oid);
         } catch (JCNativeException jcne) {

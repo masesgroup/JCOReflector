@@ -161,9 +161,13 @@ public class DataSourceProviderService extends NetObject  {
     
     public boolean InvokeConfigureDataSource(IWin32Window parentWindow, FormStartPosition startPosition, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeConfigureDataSource = null;
         try {
-            return (boolean)classInstance.Invoke("InvokeConfigureDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
+            retObjectInvokeConfigureDataSource = classInstance.Invoke("InvokeConfigureDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
+            return (boolean)retObjectInvokeConfigureDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectInvokeConfigureDataSource != null ? retObjectInvokeConfigureDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class DataSourceProviderService extends NetObject  {
 
     public DataSourceGroup InvokeAddNewDataSource(IWin32Window parentWindow, FormStartPosition startPosition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeAddNewDataSource = null;
         try {
-            JCObject objInvokeAddNewDataSource = (JCObject)classInstance.Invoke("InvokeAddNewDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance());
+            retObjectInvokeAddNewDataSource = classInstance.Invoke("InvokeAddNewDataSource", parentWindow == null ? null : parentWindow.getJCOInstance(), startPosition == null ? null : startPosition.getJCOInstance());
+            JCObject objInvokeAddNewDataSource = (JCObject)retObjectInvokeAddNewDataSource;
             return new DataSourceGroup(objInvokeAddNewDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeAddNewDataSource != null ? retObjectInvokeAddNewDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class DataSourceProviderService extends NetObject  {
 
     public DataSourceGroupCollection GetDataSources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataSources = null;
         try {
-            JCObject objGetDataSources = (JCObject)classInstance.Invoke("GetDataSources");
+            retObjectGetDataSources = classInstance.Invoke("GetDataSources");
+            JCObject objGetDataSources = (JCObject)retObjectGetDataSources;
             return new DataSourceGroupCollection(objGetDataSources);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataSources != null ? retObjectGetDataSources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class DataSourceProviderService extends NetObject  {
 
     public NetObject AddDataSourceInstance(IDesignerHost host, DataSourceDescriptor dataSourceDescriptor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddDataSourceInstance = null;
         try {
-            JCObject objAddDataSourceInstance = (JCObject)classInstance.Invoke("AddDataSourceInstance", host == null ? null : host.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
+            retObjectAddDataSourceInstance = classInstance.Invoke("AddDataSourceInstance", host == null ? null : host.getJCOInstance(), dataSourceDescriptor == null ? null : dataSourceDescriptor.getJCOInstance());
+            JCObject objAddDataSourceInstance = (JCObject)retObjectAddDataSourceInstance;
             return new NetObject(objAddDataSourceInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddDataSourceInstance != null ? retObjectAddDataSourceInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class DataSourceProviderService extends NetObject  {
 
     public void NotifyDataSourceComponentAdded(NetObject dsc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyDataSourceComponentAdded", dsc == null ? null : dsc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,9 +234,13 @@ public class DataSourceProviderService extends NetObject  {
     
     public boolean getSupportsAddNewDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsAddNewDataSource = null;
         try {
-            return (boolean)classInstance.Get("SupportsAddNewDataSource");
+            retObjectSupportsAddNewDataSource = classInstance.Get("SupportsAddNewDataSource");
+            return (boolean)retObjectSupportsAddNewDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsAddNewDataSource != null ? retObjectSupportsAddNewDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +248,13 @@ public class DataSourceProviderService extends NetObject  {
 
     public boolean getSupportsConfigureDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsConfigureDataSource = null;
         try {
-            return (boolean)classInstance.Get("SupportsConfigureDataSource");
+            retObjectSupportsConfigureDataSource = classInstance.Get("SupportsConfigureDataSource");
+            return (boolean)retObjectSupportsConfigureDataSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsConfigureDataSource != null ? retObjectSupportsConfigureDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

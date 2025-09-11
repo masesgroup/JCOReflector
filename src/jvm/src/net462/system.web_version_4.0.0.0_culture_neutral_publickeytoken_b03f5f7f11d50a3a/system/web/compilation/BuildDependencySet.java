@@ -159,10 +159,14 @@ public class BuildDependencySet extends NetObject  {
     
     public IEnumerable getVirtualPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualPaths = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VirtualPaths");
+            retObjectVirtualPaths = classInstance.Get("VirtualPaths");
+            JCObject val = (JCObject)retObjectVirtualPaths;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVirtualPaths != null ? retObjectVirtualPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class BuildDependencySet extends NetObject  {
 
     public java.lang.String getHashCode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.RankException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashCode = null;
         try {
-            return (java.lang.String)classInstance.Get("HashCode");
+            retObjectHashCode = classInstance.Get("HashCode");
+            return (java.lang.String)retObjectHashCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHashCode != null ? retObjectHashCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

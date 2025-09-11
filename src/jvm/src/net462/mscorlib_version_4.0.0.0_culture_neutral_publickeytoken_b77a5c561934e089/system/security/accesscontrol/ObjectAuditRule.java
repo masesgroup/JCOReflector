@@ -160,10 +160,14 @@ public class ObjectAuditRule extends AuditRule  {
     
     public Guid getInheritedObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritedObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritedObjectType");
+            retObjectInheritedObjectType = classInstance.Get("InheritedObjectType");
+            JCObject val = (JCObject)retObjectInheritedObjectType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritedObjectType != null ? retObjectInheritedObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class ObjectAuditRule extends AuditRule  {
 
     public Guid getObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            retObjectObjectType = classInstance.Get("ObjectType");
+            JCObject val = (JCObject)retObjectObjectType;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectType != null ? retObjectObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class ObjectAuditRule extends AuditRule  {
 
     public ObjectAceFlags getObjectFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectFlags");
+            retObjectObjectFlags = classInstance.Get("ObjectFlags");
+            JCObject val = (JCObject)retObjectObjectFlags;
             return new ObjectAceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectFlags != null ? retObjectObjectFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

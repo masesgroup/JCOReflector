@@ -154,9 +154,13 @@ public class CallSiteHelpers extends NetObject  {
     
     public static boolean IsInternalFrame(MethodBase mb) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInternalFrame = null;
         try {
-            return (boolean)classType.Invoke("IsInternalFrame", mb == null ? null : mb.getJCOInstance());
+            retObjectIsInternalFrame = classType.Invoke("IsInternalFrame", mb == null ? null : mb.getJCOInstance());
+            return (boolean)retObjectIsInternalFrame;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInternalFrame != null ? retObjectIsInternalFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

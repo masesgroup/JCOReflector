@@ -194,10 +194,14 @@ public class HttpClient extends HttpMessageInvoker  {
     
     public HttpResponseMessage Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OverflowException, system.FormatException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSend = (JCObject)retObjectSend;
             return new HttpResponseMessage(objSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +209,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public HttpResponseMessage Send(HttpRequestMessage request, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), completionOption == null ? null : completionOption.getJCOInstance());
+            JCObject objSend = (JCObject)retObjectSend;
             return new HttpResponseMessage(objSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +224,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public HttpResponseMessage Send(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", request == null ? null : request.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objSend = (JCObject)retObjectSend;
             return new HttpResponseMessage(objSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +239,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public HttpResponseMessage Send(HttpRequestMessage request) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSend = null;
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", request == null ? null : request.getJCOInstance());
+            retObjectSend = classInstance.Invoke("Send", request == null ? null : request.getJCOInstance());
+            JCObject objSend = (JCObject)retObjectSend;
             return new HttpResponseMessage(objSend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSend != null ? retObjectSend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void CancelPendingRequests() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelPendingRequests");
         } catch (JCNativeException jcne) {
@@ -252,9 +268,13 @@ public class HttpClient extends HttpMessageInvoker  {
     
     public long getMaxResponseContentBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxResponseContentBufferSize = null;
         try {
-            return (long)classInstance.Get("MaxResponseContentBufferSize");
+            retObjectMaxResponseContentBufferSize = classInstance.Get("MaxResponseContentBufferSize");
+            return (long)retObjectMaxResponseContentBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxResponseContentBufferSize != null ? retObjectMaxResponseContentBufferSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void setMaxResponseContentBufferSize(long MaxResponseContentBufferSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxResponseContentBufferSize", MaxResponseContentBufferSize);
         } catch (JCNativeException jcne) {
@@ -272,10 +292,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public HttpRequestHeaders getDefaultRequestHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultRequestHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultRequestHeaders");
+            retObjectDefaultRequestHeaders = classInstance.Get("DefaultRequestHeaders");
+            JCObject val = (JCObject)retObjectDefaultRequestHeaders;
             return new HttpRequestHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultRequestHeaders != null ? retObjectDefaultRequestHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +307,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public HttpVersionPolicy getDefaultVersionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultVersionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultVersionPolicy");
+            retObjectDefaultVersionPolicy = classInstance.Get("DefaultVersionPolicy");
+            JCObject val = (JCObject)retObjectDefaultVersionPolicy;
             return new HttpVersionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultVersionPolicy != null ? retObjectDefaultVersionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +322,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void setDefaultVersionPolicy(HttpVersionPolicy DefaultVersionPolicy) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultVersionPolicy", DefaultVersionPolicy == null ? null : DefaultVersionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,10 +332,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public static IWebProxy getDefaultProxy() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultProxy = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultProxy");
+            retObjectDefaultProxy = classType.Get("DefaultProxy");
+            JCObject val = (JCObject)retObjectDefaultProxy;
             return new IWebProxyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultProxy != null ? retObjectDefaultProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public static void setDefaultProxy(IWebProxy DefaultProxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultProxy", DefaultProxy == null ? null : DefaultProxy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,10 +357,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public TimeSpan getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            JCObject val = (JCObject)retObjectTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +372,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void setTimeout(TimeSpan Timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout == null ? null : Timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,10 +382,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public Uri getBaseAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseAddress");
+            retObjectBaseAddress = classInstance.Get("BaseAddress");
+            JCObject val = (JCObject)retObjectBaseAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseAddress != null ? retObjectBaseAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +397,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void setBaseAddress(Uri BaseAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseAddress", BaseAddress == null ? null : BaseAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +407,14 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public Version getDefaultRequestVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultRequestVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultRequestVersion");
+            retObjectDefaultRequestVersion = classInstance.Get("DefaultRequestVersion");
+            JCObject val = (JCObject)retObjectDefaultRequestVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultRequestVersion != null ? retObjectDefaultRequestVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +422,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     public void setDefaultRequestVersion(Version DefaultRequestVersion) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultRequestVersion", DefaultRequestVersion == null ? null : DefaultRequestVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

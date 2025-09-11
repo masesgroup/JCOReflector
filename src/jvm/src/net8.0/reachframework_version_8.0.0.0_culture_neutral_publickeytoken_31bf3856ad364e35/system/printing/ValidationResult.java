@@ -162,10 +162,14 @@ public class ValidationResult extends ValueType  {
     
     public ConflictStatus getConflictStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflictStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConflictStatus");
+            retObjectConflictStatus = classInstance.Get("ConflictStatus");
+            JCObject val = (JCObject)retObjectConflictStatus;
             return new ConflictStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConflictStatus != null ? retObjectConflictStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ValidationResult extends ValueType  {
 
     public PrintTicket getValidatedPrintTicket() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatedPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatedPrintTicket");
+            retObjectValidatedPrintTicket = classInstance.Get("ValidatedPrintTicket");
+            JCObject val = (JCObject)retObjectValidatedPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatedPrintTicket != null ? retObjectValidatedPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

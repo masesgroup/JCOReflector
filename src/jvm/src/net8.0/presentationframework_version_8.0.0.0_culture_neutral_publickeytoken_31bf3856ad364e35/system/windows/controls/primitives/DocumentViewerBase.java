@@ -162,9 +162,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
     
     public boolean CanGoToPage(int pageNumber) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToPage = null;
         try {
-            return (boolean)classInstance.Invoke("CanGoToPage", pageNumber);
+            retObjectCanGoToPage = classInstance.Invoke("CanGoToPage", pageNumber);
+            return (boolean)retObjectCanGoToPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanGoToPage != null ? retObjectCanGoToPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public static boolean GetIsMasterPage(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsMasterPage = null;
         try {
-            return (boolean)classType.Invoke("GetIsMasterPage", element == null ? null : element.getJCOInstance());
+            retObjectGetIsMasterPage = classType.Invoke("GetIsMasterPage", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsMasterPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsMasterPage != null ? retObjectGetIsMasterPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void CancelPrint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelPrint");
         } catch (JCNativeException jcne) {
@@ -192,7 +200,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void FirstPage() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FirstPage");
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void GoToPage(int pageNumber) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GoToPage", pageNumber);
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void LastPage() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LastPage");
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void NextPage() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NextPage");
         } catch (JCNativeException jcne) {
@@ -232,7 +240,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void OnApplyTemplate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.NotSupportedException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -242,7 +250,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void PreviousPage() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PreviousPage");
         } catch (JCNativeException jcne) {
@@ -252,7 +260,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void Print() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Print");
         } catch (JCNativeException jcne) {
@@ -262,7 +270,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public static void SetIsMasterPage(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsMasterPage", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -276,7 +284,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -285,7 +293,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -294,7 +302,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
      */
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 
@@ -303,9 +311,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
     
     public boolean getCanGoToNextPage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToNextPage = null;
         try {
-            return (boolean)classInstance.Get("CanGoToNextPage");
+            retObjectCanGoToNextPage = classInstance.Get("CanGoToNextPage");
+            return (boolean)retObjectCanGoToNextPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoToNextPage != null ? retObjectCanGoToNextPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +325,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public boolean getCanGoToPreviousPage() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanGoToPreviousPage = null;
         try {
-            return (boolean)classInstance.Get("CanGoToPreviousPage");
+            retObjectCanGoToPreviousPage = classInstance.Get("CanGoToPreviousPage");
+            return (boolean)retObjectCanGoToPreviousPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanGoToPreviousPage != null ? retObjectCanGoToPreviousPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +339,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public int getMasterPageNumber() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMasterPageNumber = null;
         try {
-            return (int)classInstance.Get("MasterPageNumber");
+            retObjectMasterPageNumber = classInstance.Get("MasterPageNumber");
+            return (int)retObjectMasterPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMasterPageNumber != null ? retObjectMasterPageNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +353,13 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public int getPageCount() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +367,14 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public IDocumentPaginatorSource getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new IDocumentPaginatorSourceImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +382,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void setDocument(IDocumentPaginatorSource Document) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -369,7 +397,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void addPageViewsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageViewsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -379,7 +407,7 @@ public class DocumentViewerBase extends Control implements system.windows.markup
 
     public void removePageViewsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageViewsChanged", handler);
         } catch (JCNativeException jcne) {

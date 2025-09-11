@@ -166,9 +166,13 @@ public class ManagementReferenceAttribute extends Attribute  {
     
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ManagementReferenceAttribute extends Attribute  {
 
     public void setType(java.lang.String Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {

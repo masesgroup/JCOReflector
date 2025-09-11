@@ -145,9 +145,13 @@ public class IContextAttributeImplementation extends NetObject implements IConte
     
     public boolean IsContextOK(Context ctx, IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContextOK = null;
         try {
-            return (boolean)classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            retObjectIsContextOK = classInstance.Invoke("IsContextOK", ctx == null ? null : ctx.getJCOInstance(), msg == null ? null : msg.getJCOInstance());
+            return (boolean)retObjectIsContextOK;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsContextOK != null ? retObjectIsContextOK.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IContextAttributeImplementation extends NetObject implements IConte
 
     public void GetPropertiesForNewContext(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetPropertiesForNewContext", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {

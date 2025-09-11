@@ -170,10 +170,14 @@ public class DirectoryInfo extends FileSystemInfo  {
     
     public DirectoryInfo CreateSubdirectory(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSubdirectory = null;
         try {
-            JCObject objCreateSubdirectory = (JCObject)classInstance.Invoke("CreateSubdirectory", path);
+            retObjectCreateSubdirectory = classInstance.Invoke("CreateSubdirectory", path);
+            JCObject objCreateSubdirectory = (JCObject)retObjectCreateSubdirectory;
             return new DirectoryInfo(objCreateSubdirectory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSubdirectory != null ? retObjectCreateSubdirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,16 +185,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public DirectoryInfo[] GetDirectories() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories");
+            retObjectGetDirectories = classInstance.Invoke("GetDirectories");
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,16 +206,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            retObjectGetDirectories = classInstance.Invoke("GetDirectories", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,16 +227,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetDirectories = classInstance.Invoke("GetDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,16 +248,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public DirectoryInfo[] GetDirectories(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
+            retObjectGetDirectories = classInstance.Invoke("GetDirectories", searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,16 +269,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileInfo[] GetFiles() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
+            retObjectGetFiles = classInstance.Invoke("GetFiles");
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,16 +290,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileInfo[] GetFiles(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            retObjectGetFiles = classInstance.Invoke("GetFiles", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,16 +311,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileInfo[] GetFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetFiles = classInstance.Invoke("GetFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,16 +332,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileInfo[] GetFiles(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern);
+            retObjectGetFiles = classInstance.Invoke("GetFiles", searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,16 +353,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileSystemInfo[] GetFileSystemInfos() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileSystemInfos = null;
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos");
+            retObjectGetFileSystemInfos = classInstance.Invoke("GetFileSystemInfos");
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemInfos;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileSystemInfos != null ? retObjectGetFileSystemInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,16 +374,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileSystemInfos = null;
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            retObjectGetFileSystemInfos = classInstance.Invoke("GetFileSystemInfos", searchPattern, enumerationOptions == null ? null : enumerationOptions.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemInfos;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileSystemInfos != null ? retObjectGetFileSystemInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,16 +395,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileSystemInfos = null;
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetFileSystemInfos = classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemInfos;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileSystemInfos != null ? retObjectGetFileSystemInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,16 +416,20 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileSystemInfos = null;
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern);
+            retObjectGetFileSystemInfos = classInstance.Invoke("GetFileSystemInfos", searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemInfos;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileSystemInfos != null ? retObjectGetFileSystemInfos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,7 +437,7 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public void Create() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
@@ -395,7 +447,7 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public void Delete() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -405,7 +457,7 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public void Delete(boolean recursive) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.io.IOException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete", recursive);
         } catch (JCNativeException jcne) {
@@ -415,7 +467,7 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public void MoveTo(java.lang.String destDirName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", destDirName);
         } catch (JCNativeException jcne) {
@@ -429,10 +481,14 @@ public class DirectoryInfo extends FileSystemInfo  {
     
     public DirectoryInfo getParent() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DirectoryInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,10 +496,14 @@ public class DirectoryInfo extends FileSystemInfo  {
 
     public DirectoryInfo getRoot() throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Root");
+            retObjectRoot = classInstance.Get("Root");
+            JCObject val = (JCObject)retObjectRoot;
             return new DirectoryInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoot != null ? retObjectRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

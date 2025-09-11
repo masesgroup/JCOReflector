@@ -166,9 +166,13 @@ public class FileSystem extends NetObject  {
     
     public static boolean EOF(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEOF = null;
         try {
-            return (boolean)classType.Invoke("EOF", FileNumber);
+            retObjectEOF = classType.Invoke("EOF", FileNumber);
+            return (boolean)retObjectEOF;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEOF != null ? retObjectEOF.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,19 @@ public class FileSystem extends NetObject  {
 
     public static int FreeFile() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFreeFile = null;
         try {
-            return (int)classType.Invoke("FreeFile");
+            retObjectFreeFile = classType.Invoke("FreeFile");
+            return (int)retObjectFreeFile;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFreeFileNumber = (java.lang.Number)retObjectFreeFile;
+                return retObjectFreeFileNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFreeFile != null ? retObjectFreeFile.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +200,19 @@ public class FileSystem extends NetObject  {
 
     public static long FileLen(java.lang.String PathName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFileLen = null;
         try {
-            return (long)classType.Invoke("FileLen", PathName);
+            retObjectFileLen = classType.Invoke("FileLen", PathName);
+            return (long)retObjectFileLen;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFileLenNumber = (java.lang.Number)retObjectFileLen;
+                return retObjectFileLenNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectFileLen != null ? retObjectFileLen.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +220,19 @@ public class FileSystem extends NetObject  {
 
     public static long Loc(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoc = null;
         try {
-            return (long)classType.Invoke("Loc", FileNumber);
+            retObjectLoc = classType.Invoke("Loc", FileNumber);
+            return (long)retObjectLoc;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLocNumber = (java.lang.Number)retObjectLoc;
+                return retObjectLocNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLoc != null ? retObjectLoc.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +240,19 @@ public class FileSystem extends NetObject  {
 
     public static long LOF(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLOF = null;
         try {
-            return (long)classType.Invoke("LOF", FileNumber);
+            retObjectLOF = classType.Invoke("LOF", FileNumber);
+            return (long)retObjectLOF;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectLOFNumber = (java.lang.Number)retObjectLOF;
+                return retObjectLOFNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectLOF != null ? retObjectLOF.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +260,19 @@ public class FileSystem extends NetObject  {
 
     public static long Seek(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classType.Invoke("Seek", FileNumber);
+            retObjectSeek = classType.Invoke("Seek", FileNumber);
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +280,14 @@ public class FileSystem extends NetObject  {
 
     public static FileAttribute GetAttr(java.lang.String PathName) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAttr = null;
         try {
-            JCObject objGetAttr = (JCObject)classType.Invoke("GetAttr", PathName);
+            retObjectGetAttr = classType.Invoke("GetAttr", PathName);
+            JCObject objGetAttr = (JCObject)retObjectGetAttr;
             return new FileAttribute(objGetAttr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttr != null ? retObjectGetAttr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +295,14 @@ public class FileSystem extends NetObject  {
 
     public static OpenMode FileAttr(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFileAttr = null;
         try {
-            JCObject objFileAttr = (JCObject)classType.Invoke("FileAttr", FileNumber);
+            retObjectFileAttr = classType.Invoke("FileAttr", FileNumber);
+            JCObject objFileAttr = (JCObject)retObjectFileAttr;
             return new OpenMode(objFileAttr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileAttr != null ? retObjectFileAttr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +310,14 @@ public class FileSystem extends NetObject  {
 
     public static SpcInfo SPC(short Count) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSPC = null;
         try {
-            JCObject objSPC = (JCObject)classType.Invoke("SPC", Count);
+            retObjectSPC = classType.Invoke("SPC", Count);
+            JCObject objSPC = (JCObject)retObjectSPC;
             return new SpcInfo(objSPC);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSPC != null ? retObjectSPC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +325,14 @@ public class FileSystem extends NetObject  {
 
     public static TabInfo TAB() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTAB = null;
         try {
-            JCObject objTAB = (JCObject)classType.Invoke("TAB");
+            retObjectTAB = classType.Invoke("TAB");
+            JCObject objTAB = (JCObject)retObjectTAB;
             return new TabInfo(objTAB);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTAB != null ? retObjectTAB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +340,14 @@ public class FileSystem extends NetObject  {
 
     public static TabInfo TAB(short Column) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTAB = null;
         try {
-            JCObject objTAB = (JCObject)classType.Invoke("TAB", Column);
+            retObjectTAB = classType.Invoke("TAB", Column);
+            JCObject objTAB = (JCObject)retObjectTAB;
             return new TabInfo(objTAB);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTAB != null ? retObjectTAB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +355,14 @@ public class FileSystem extends NetObject  {
 
     public static DateTime FileDateTime(java.lang.String PathName) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.OverflowException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFileDateTime = null;
         try {
-            JCObject objFileDateTime = (JCObject)classType.Invoke("FileDateTime", PathName);
+            retObjectFileDateTime = classType.Invoke("FileDateTime", PathName);
+            JCObject objFileDateTime = (JCObject)retObjectFileDateTime;
             return new DateTime(objFileDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileDateTime != null ? retObjectFileDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +370,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String CurDir() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurDir = null;
         try {
-            return (java.lang.String)classType.Invoke("CurDir");
+            retObjectCurDir = classType.Invoke("CurDir");
+            return (java.lang.String)retObjectCurDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCurDir != null ? retObjectCurDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +384,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String CurDir(char Drive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurDir = null;
         try {
-            return (java.lang.String)classType.Invoke("CurDir", Drive);
+            retObjectCurDir = classType.Invoke("CurDir", Drive);
+            return (java.lang.String)retObjectCurDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCurDir != null ? retObjectCurDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +398,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String Dir() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDir = null;
         try {
-            return (java.lang.String)classType.Invoke("Dir");
+            retObjectDir = classType.Invoke("Dir");
+            return (java.lang.String)retObjectDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDir != null ? retObjectDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +412,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String Dir(java.lang.String PathName, FileAttribute Attributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDir = null;
         try {
-            return (java.lang.String)classType.Invoke("Dir", PathName, Attributes == null ? null : Attributes.getJCOInstance());
+            retObjectDir = classType.Invoke("Dir", PathName, Attributes == null ? null : Attributes.getJCOInstance());
+            return (java.lang.String)retObjectDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectDir != null ? retObjectDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +426,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String InputString(int FileNumber, int CharCount) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInputString = null;
         try {
-            return (java.lang.String)classType.Invoke("InputString", FileNumber, CharCount);
+            retObjectInputString = classType.Invoke("InputString", FileNumber, CharCount);
+            return (java.lang.String)retObjectInputString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectInputString != null ? retObjectInputString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +440,13 @@ public class FileSystem extends NetObject  {
 
     public static java.lang.String LineInput(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLineInput = null;
         try {
-            return (java.lang.String)classType.Invoke("LineInput", FileNumber);
+            retObjectLineInput = classType.Invoke("LineInput", FileNumber);
+            return (java.lang.String)retObjectLineInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLineInput != null ? retObjectLineInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +454,7 @@ public class FileSystem extends NetObject  {
 
     public static void ChDir(java.lang.String Path) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ChDir", Path);
         } catch (JCNativeException jcne) {
@@ -362,7 +464,7 @@ public class FileSystem extends NetObject  {
 
     public static void ChDrive(char Drive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ChDrive", Drive);
         } catch (JCNativeException jcne) {
@@ -372,7 +474,7 @@ public class FileSystem extends NetObject  {
 
     public static void ChDrive(java.lang.String Drive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ChDrive", Drive);
         } catch (JCNativeException jcne) {
@@ -382,7 +484,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileClose(int... FileNumbers) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileClose", (java.lang.Object)FileNumbers);
         } catch (JCNativeException jcne) {
@@ -392,7 +494,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileClose(JCORefOut dupParam0) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileClose", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -402,7 +504,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileCopy(java.lang.String Source, java.lang.String Destination) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.io.PathTooLongException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileCopy", Source, Destination);
         } catch (JCNativeException jcne) {
@@ -412,7 +514,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileGetObject(int FileNumber, JCORefOut<NetObject> Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileGetObject", FileNumber, Value.getJCRefOut(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -422,7 +524,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileOpen(int FileNumber, java.lang.String FileName, OpenMode Mode, OpenAccess Access, OpenShare Share, int RecordLength) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileOpen", FileNumber, FileName, Mode == null ? null : Mode.getJCOInstance(), Access == null ? null : Access.getJCOInstance(), Share == null ? null : Share.getJCOInstance(), RecordLength);
         } catch (JCNativeException jcne) {
@@ -432,7 +534,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, boolean Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -442,7 +544,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, byte Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -452,7 +554,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, char Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -462,7 +564,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, double Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -472,7 +574,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, short Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -482,7 +584,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, int Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -492,7 +594,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, long Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber);
         } catch (JCNativeException jcne) {
@@ -502,7 +604,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, Single Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -512,7 +614,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, Array Value, long RecordNumber, boolean ArrayIsDynamic, boolean StringIsFixedLength) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber, ArrayIsDynamic, StringIsFixedLength);
         } catch (JCNativeException jcne) {
@@ -522,7 +624,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, DateTime Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -532,7 +634,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, Decimal Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -542,7 +644,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, java.lang.String Value, long RecordNumber, boolean StringIsFixedLength) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value, RecordNumber, StringIsFixedLength);
         } catch (JCNativeException jcne) {
@@ -552,7 +654,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(int FileNumber, ValueType Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -562,7 +664,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePut(NetObject FileNumber, NetObject Value, NetObject RecordNumber) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePut", FileNumber == null ? null : FileNumber.getJCOInstance(), Value == null ? null : Value.getJCOInstance(), RecordNumber == null ? null : RecordNumber.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -572,7 +674,7 @@ public class FileSystem extends NetObject  {
 
     public static void FilePutObject(int FileNumber, NetObject Value, long RecordNumber) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FilePutObject", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
         } catch (JCNativeException jcne) {
@@ -582,7 +684,7 @@ public class FileSystem extends NetObject  {
 
     public static void FileWidth(int FileNumber, int RecordWidth) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileWidth", FileNumber, RecordWidth);
         } catch (JCNativeException jcne) {
@@ -592,7 +694,7 @@ public class FileSystem extends NetObject  {
 
     public static void Kill(java.lang.String PathName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NullReferenceException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Kill", PathName);
         } catch (JCNativeException jcne) {
@@ -602,7 +704,7 @@ public class FileSystem extends NetObject  {
 
     public static void Lock(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Lock", FileNumber);
         } catch (JCNativeException jcne) {
@@ -612,7 +714,7 @@ public class FileSystem extends NetObject  {
 
     public static void Lock(int FileNumber, long Record) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Lock", FileNumber, Record);
         } catch (JCNativeException jcne) {
@@ -622,7 +724,7 @@ public class FileSystem extends NetObject  {
 
     public static void Lock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Lock", FileNumber, FromRecord, ToRecord);
         } catch (JCNativeException jcne) {
@@ -632,7 +734,7 @@ public class FileSystem extends NetObject  {
 
     public static void MkDir(java.lang.String Path) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MkDir", Path);
         } catch (JCNativeException jcne) {
@@ -642,7 +744,7 @@ public class FileSystem extends NetObject  {
 
     public static void Print(int FileNumber, NetObject... Output) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Print", FileNumber, toObjectFromArray(Output));
         } catch (JCNativeException jcne) {
@@ -652,7 +754,7 @@ public class FileSystem extends NetObject  {
 
     public static void PrintLine(int FileNumber, NetObject... Output) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrintLine", FileNumber, toObjectFromArray(Output));
         } catch (JCNativeException jcne) {
@@ -662,7 +764,7 @@ public class FileSystem extends NetObject  {
 
     public static void Rename(java.lang.String OldPath, java.lang.String NewPath) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Rename", OldPath, NewPath);
         } catch (JCNativeException jcne) {
@@ -672,7 +774,7 @@ public class FileSystem extends NetObject  {
 
     public static void Reset() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -682,7 +784,7 @@ public class FileSystem extends NetObject  {
 
     public static void RmDir(java.lang.String Path) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RmDir", Path);
         } catch (JCNativeException jcne) {
@@ -692,7 +794,7 @@ public class FileSystem extends NetObject  {
 
     public static void Seek(int FileNumber, long Position) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OutOfMemoryException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.io.EndOfStreamException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Seek", FileNumber, Position);
         } catch (JCNativeException jcne) {
@@ -702,7 +804,7 @@ public class FileSystem extends NetObject  {
 
     public static void SetAttr(java.lang.String PathName, FileAttribute Attributes) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAttr", PathName, Attributes == null ? null : Attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -712,7 +814,7 @@ public class FileSystem extends NetObject  {
 
     public static void Unlock(int FileNumber) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unlock", FileNumber);
         } catch (JCNativeException jcne) {
@@ -722,7 +824,7 @@ public class FileSystem extends NetObject  {
 
     public static void Unlock(int FileNumber, long Record) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unlock", FileNumber, Record);
         } catch (JCNativeException jcne) {
@@ -732,7 +834,7 @@ public class FileSystem extends NetObject  {
 
     public static void Unlock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unlock", FileNumber, FromRecord, ToRecord);
         } catch (JCNativeException jcne) {
@@ -742,7 +844,7 @@ public class FileSystem extends NetObject  {
 
     public static void Write(int FileNumber, NetObject... Output) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", FileNumber, toObjectFromArray(Output));
         } catch (JCNativeException jcne) {
@@ -752,7 +854,7 @@ public class FileSystem extends NetObject  {
 
     public static void WriteLine(int FileNumber, NetObject... Output) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", FileNumber, toObjectFromArray(Output));
         } catch (JCNativeException jcne) {

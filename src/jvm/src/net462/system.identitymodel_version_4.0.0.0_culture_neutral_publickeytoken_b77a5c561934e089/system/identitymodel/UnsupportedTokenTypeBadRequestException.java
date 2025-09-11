@@ -172,7 +172,7 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,9 +186,13 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
     
     public java.lang.String getTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenType");
+            retObjectTokenType = classInstance.Get("TokenType");
+            return (java.lang.String)retObjectTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenType != null ? retObjectTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +200,7 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
 
     public void setTokenType(java.lang.String TokenType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenType", TokenType);
         } catch (JCNativeException jcne) {

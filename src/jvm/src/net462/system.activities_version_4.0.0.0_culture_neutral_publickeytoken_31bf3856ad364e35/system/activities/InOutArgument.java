@@ -155,10 +155,14 @@ public class InOutArgument extends Argument  {
     
     public static InOutArgument CreateReference(InOutArgument argumentToReference, java.lang.String referencedArgumentName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateReference = null;
         try {
-            JCObject objCreateReference = (JCObject)classType.Invoke("CreateReference", argumentToReference == null ? null : argumentToReference.getJCOInstance(), referencedArgumentName);
+            retObjectCreateReference = classType.Invoke("CreateReference", argumentToReference == null ? null : argumentToReference.getJCOInstance(), referencedArgumentName);
+            JCObject objCreateReference = (JCObject)retObjectCreateReference;
             return new InOutArgument(objCreateReference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateReference != null ? retObjectCreateReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

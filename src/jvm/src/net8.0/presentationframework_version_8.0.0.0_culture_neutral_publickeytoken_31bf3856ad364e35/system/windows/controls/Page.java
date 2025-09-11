@@ -168,9 +168,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
     
     public boolean ShouldSerializeShowsNavigationUI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeShowsNavigationUI = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeShowsNavigationUI");
+            retObjectShouldSerializeShowsNavigationUI = classInstance.Invoke("ShouldSerializeShowsNavigationUI");
+            return (boolean)retObjectShouldSerializeShowsNavigationUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeShowsNavigationUI != null ? retObjectShouldSerializeShowsNavigationUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public boolean ShouldSerializeTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTitle = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTitle");
+            retObjectShouldSerializeTitle = classInstance.Invoke("ShouldSerializeTitle");
+            return (boolean)retObjectShouldSerializeTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTitle != null ? retObjectShouldSerializeTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public boolean ShouldSerializeWindowHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeWindowHeight = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeWindowHeight");
+            retObjectShouldSerializeWindowHeight = classInstance.Invoke("ShouldSerializeWindowHeight");
+            return (boolean)retObjectShouldSerializeWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeWindowHeight != null ? retObjectShouldSerializeWindowHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public boolean ShouldSerializeWindowTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeWindowTitle = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeWindowTitle");
+            retObjectShouldSerializeWindowTitle = classInstance.Invoke("ShouldSerializeWindowTitle");
+            return (boolean)retObjectShouldSerializeWindowTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeWindowTitle != null ? retObjectShouldSerializeWindowTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public boolean ShouldSerializeWindowWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeWindowWidth = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeWindowWidth");
+            retObjectShouldSerializeWindowWidth = classInstance.Invoke("ShouldSerializeWindowWidth");
+            return (boolean)retObjectShouldSerializeWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeWindowWidth != null ? retObjectShouldSerializeWindowWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +242,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -231,7 +251,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -240,9 +260,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
     
     public boolean getKeepAlive() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAlive = null;
         try {
-            return (boolean)classInstance.Get("KeepAlive");
+            retObjectKeepAlive = classInstance.Get("KeepAlive");
+            return (boolean)retObjectKeepAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepAlive != null ? retObjectKeepAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +274,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setKeepAlive(boolean KeepAlive) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAlive", KeepAlive);
         } catch (JCNativeException jcne) {
@@ -260,9 +284,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public boolean getShowsNavigationUI() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowsNavigationUI = null;
         try {
-            return (boolean)classInstance.Get("ShowsNavigationUI");
+            retObjectShowsNavigationUI = classInstance.Get("ShowsNavigationUI");
+            return (boolean)retObjectShowsNavigationUI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowsNavigationUI != null ? retObjectShowsNavigationUI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +298,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setShowsNavigationUI(boolean ShowsNavigationUI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowsNavigationUI", ShowsNavigationUI);
         } catch (JCNativeException jcne) {
@@ -280,9 +308,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public double getFontSize() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontSize = null;
         try {
-            return (double)classInstance.Get("FontSize");
+            retObjectFontSize = classInstance.Get("FontSize");
+            return (double)retObjectFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectFontSize != null ? retObjectFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +322,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setFontSize(double FontSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontSize", FontSize);
         } catch (JCNativeException jcne) {
@@ -300,9 +332,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public double getWindowHeight() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowHeight = null;
         try {
-            return (double)classInstance.Get("WindowHeight");
+            retObjectWindowHeight = classInstance.Get("WindowHeight");
+            return (double)retObjectWindowHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWindowHeight != null ? retObjectWindowHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +346,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setWindowHeight(double WindowHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowHeight", WindowHeight);
         } catch (JCNativeException jcne) {
@@ -320,9 +356,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public double getWindowWidth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowWidth = null;
         try {
-            return (double)classInstance.Get("WindowWidth");
+            retObjectWindowWidth = classInstance.Get("WindowWidth");
+            return (double)retObjectWindowWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWindowWidth != null ? retObjectWindowWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +370,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setWindowWidth(double WindowWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowWidth", WindowWidth);
         } catch (JCNativeException jcne) {
@@ -340,10 +380,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public NetObject getContent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +395,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setContent(NetObject Content) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Content", Content == null ? null : Content.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,9 +405,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public java.lang.String getTitle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +419,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setTitle(java.lang.String Title) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Title", Title);
         } catch (JCNativeException jcne) {
@@ -381,9 +429,13 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public java.lang.String getWindowTitle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("WindowTitle");
+            retObjectWindowTitle = classInstance.Get("WindowTitle");
+            return (java.lang.String)retObjectWindowTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWindowTitle != null ? retObjectWindowTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +443,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setWindowTitle(java.lang.String WindowTitle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowTitle", WindowTitle);
         } catch (JCNativeException jcne) {
@@ -401,10 +453,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public ControlTemplate getTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Template");
+            retObjectTemplate = classInstance.Get("Template");
+            JCObject val = (JCObject)retObjectTemplate;
             return new ControlTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTemplate != null ? retObjectTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +468,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setTemplate(ControlTemplate Template) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Template", Template == null ? null : Template.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,10 +478,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public Brush getBackground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Background");
+            retObjectBackground = classInstance.Get("Background");
+            JCObject val = (JCObject)retObjectBackground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackground != null ? retObjectBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,7 +493,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setBackground(Brush Background) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Background", Background == null ? null : Background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -443,10 +503,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public Brush getForeground() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Foreground");
+            retObjectForeground = classInstance.Get("Foreground");
+            JCObject val = (JCObject)retObjectForeground;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeground != null ? retObjectForeground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +518,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setForeground(Brush Foreground) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Foreground", Foreground == null ? null : Foreground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -464,10 +528,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,7 +543,7 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public void setFontFamily(FontFamily FontFamily) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FontFamily", FontFamily == null ? null : FontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -485,10 +553,14 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
 
     public NavigationService getNavigationService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationService");
+            retObjectNavigationService = classInstance.Get("NavigationService");
+            JCObject val = (JCObject)retObjectNavigationService;
             return new NavigationService(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationService != null ? retObjectNavigationService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,9 +162,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
     
     public double getVertexWeight1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexWeight1 = null;
         try {
-            return (double)classInstance.Get("VertexWeight1");
+            retObjectVertexWeight1 = classInstance.Get("VertexWeight1");
+            return (double)retObjectVertexWeight1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVertexWeight1 != null ? retObjectVertexWeight1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public double getVertexWeight2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexWeight2 = null;
         try {
-            return (double)classInstance.Get("VertexWeight2");
+            retObjectVertexWeight2 = classInstance.Get("VertexWeight2");
+            return (double)retObjectVertexWeight2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVertexWeight2 != null ? retObjectVertexWeight2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public double getVertexWeight3() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexWeight3 = null;
         try {
-            return (double)classInstance.Get("VertexWeight3");
+            retObjectVertexWeight3 = classInstance.Get("VertexWeight3");
+            return (double)retObjectVertexWeight3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVertexWeight3 != null ? retObjectVertexWeight3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public int getVertexIndex1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexIndex1 = null;
         try {
-            return (int)classInstance.Get("VertexIndex1");
+            retObjectVertexIndex1 = classInstance.Get("VertexIndex1");
+            return (int)retObjectVertexIndex1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVertexIndex1 != null ? retObjectVertexIndex1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public int getVertexIndex2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexIndex2 = null;
         try {
-            return (int)classInstance.Get("VertexIndex2");
+            retObjectVertexIndex2 = classInstance.Get("VertexIndex2");
+            return (int)retObjectVertexIndex2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVertexIndex2 != null ? retObjectVertexIndex2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public int getVertexIndex3() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVertexIndex3 = null;
         try {
-            return (int)classInstance.Get("VertexIndex3");
+            retObjectVertexIndex3 = classInstance.Get("VertexIndex3");
+            return (int)retObjectVertexIndex3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVertexIndex3 != null ? retObjectVertexIndex3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +246,14 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
 
     public MeshGeometry3D getMeshHit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeshHit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MeshHit");
+            retObjectMeshHit = classInstance.Get("MeshHit");
+            JCObject val = (JCObject)retObjectMeshHit;
             return new MeshGeometry3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeshHit != null ? retObjectMeshHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

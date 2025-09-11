@@ -161,10 +161,14 @@ public class StructuralComparisons extends NetObject  {
     
     public static IComparer getStructuralComparer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStructuralComparer = null;
         try {
-            JCObject val = (JCObject)classType.Get("StructuralComparer");
+            retObjectStructuralComparer = classType.Get("StructuralComparer");
+            JCObject val = (JCObject)retObjectStructuralComparer;
             return new IComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStructuralComparer != null ? retObjectStructuralComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class StructuralComparisons extends NetObject  {
 
     public static IEqualityComparer getStructuralEqualityComparer() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStructuralEqualityComparer = null;
         try {
-            JCObject val = (JCObject)classType.Get("StructuralEqualityComparer");
+            retObjectStructuralEqualityComparer = classType.Get("StructuralEqualityComparer");
+            JCObject val = (JCObject)retObjectStructuralEqualityComparer;
             return new IEqualityComparerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStructuralEqualityComparer != null ? retObjectStructuralEqualityComparer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

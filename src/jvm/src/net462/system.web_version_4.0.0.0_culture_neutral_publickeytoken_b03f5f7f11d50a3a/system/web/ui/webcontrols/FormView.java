@@ -189,9 +189,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
     
     public boolean IsBindableType(NetType type) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBindableType = null;
         try {
-            return (boolean)classInstance.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            retObjectIsBindableType = classInstance.Invoke("IsBindableType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsBindableType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsBindableType != null ? retObjectIsBindableType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void ChangeMode(FormViewMode newMode) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChangeMode", newMode == null ? null : newMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +213,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void DataBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -219,7 +223,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void DeleteItem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteItem");
         } catch (JCNativeException jcne) {
@@ -229,7 +233,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void InsertItem(boolean causesValidation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InsertItem", causesValidation);
         } catch (JCNativeException jcne) {
@@ -239,7 +243,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void SetPageIndex(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPageIndex", index);
         } catch (JCNativeException jcne) {
@@ -249,7 +253,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void UpdateItem(boolean causesValidation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateItem", causesValidation);
         } catch (JCNativeException jcne) {
@@ -263,7 +267,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
     /**
@@ -272,7 +276,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
      */
     @Deprecated 
     public PostBackOptions GetPostBackOptions(IButtonControl buttonControl) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
     }
 
 
@@ -281,9 +285,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
     
     public boolean getAllowPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowPaging");
+            retObjectAllowPaging = classInstance.Get("AllowPaging");
+            return (boolean)retObjectAllowPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPaging != null ? retObjectAllowPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +299,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setAllowPaging(boolean AllowPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPaging", AllowPaging);
         } catch (JCNativeException jcne) {
@@ -301,9 +309,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getEnableModelValidation() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableModelValidation = null;
         try {
-            return (boolean)classInstance.Get("EnableModelValidation");
+            retObjectEnableModelValidation = classInstance.Get("EnableModelValidation");
+            return (boolean)retObjectEnableModelValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableModelValidation != null ? retObjectEnableModelValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +323,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEnableModelValidation(boolean EnableModelValidation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableModelValidation", EnableModelValidation);
         } catch (JCNativeException jcne) {
@@ -321,9 +333,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public boolean getRenderOuterTable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderOuterTable = null;
         try {
-            return (boolean)classInstance.Get("RenderOuterTable");
+            retObjectRenderOuterTable = classInstance.Get("RenderOuterTable");
+            return (boolean)retObjectRenderOuterTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRenderOuterTable != null ? retObjectRenderOuterTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +347,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setRenderOuterTable(boolean RenderOuterTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderOuterTable", RenderOuterTable);
         } catch (JCNativeException jcne) {
@@ -341,9 +357,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getCellPadding() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellPadding = null;
         try {
-            return (int)classInstance.Get("CellPadding");
+            retObjectCellPadding = classInstance.Get("CellPadding");
+            return (int)retObjectCellPadding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellPadding != null ? retObjectCellPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +371,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCellPadding(int CellPadding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellPadding", CellPadding);
         } catch (JCNativeException jcne) {
@@ -361,9 +381,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getCellSpacing() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellSpacing = null;
         try {
-            return (int)classInstance.Get("CellSpacing");
+            retObjectCellSpacing = classInstance.Get("CellSpacing");
+            return (int)retObjectCellSpacing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCellSpacing != null ? retObjectCellSpacing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +395,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCellSpacing(int CellSpacing) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellSpacing", CellSpacing);
         } catch (JCNativeException jcne) {
@@ -381,9 +405,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getDataItemCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItemCount = null;
         try {
-            return (int)classInstance.Get("DataItemCount");
+            retObjectDataItemCount = classInstance.Get("DataItemCount");
+            return (int)retObjectDataItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDataItemCount != null ? retObjectDataItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +419,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItemIndex = null;
         try {
-            return (int)classInstance.Get("DataItemIndex");
+            retObjectDataItemIndex = classInstance.Get("DataItemIndex");
+            return (int)retObjectDataItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +433,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getPageCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +447,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public int getPageIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageIndex = null;
         try {
-            return (int)classInstance.Get("PageIndex");
+            retObjectPageIndex = classInstance.Get("PageIndex");
+            return (int)retObjectPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageIndex != null ? retObjectPageIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +461,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setPageIndex(int PageIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageIndex", PageIndex);
         } catch (JCNativeException jcne) {
@@ -431,10 +471,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataItem");
+            retObjectDataItem = classInstance.Get("DataItem");
+            JCObject val = (JCObject)retObjectDataItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataItem != null ? retObjectDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +486,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public NetObject getSelectedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            JCObject val = (JCObject)retObjectSelectedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +501,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getBackImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("BackImageUrl");
+            retObjectBackImageUrl = classInstance.Get("BackImageUrl");
+            return (java.lang.String)retObjectBackImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBackImageUrl != null ? retObjectBackImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,7 +515,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setBackImageUrl(java.lang.String BackImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackImageUrl", BackImageUrl);
         } catch (JCNativeException jcne) {
@@ -473,9 +525,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getCaption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaption = null;
         try {
-            return (java.lang.String)classInstance.Get("Caption");
+            retObjectCaption = classInstance.Get("Caption");
+            return (java.lang.String)retObjectCaption;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCaption != null ? retObjectCaption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,7 +539,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCaption(java.lang.String Caption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Caption", Caption);
         } catch (JCNativeException jcne) {
@@ -493,9 +549,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteMethod");
+            retObjectDeleteMethod = classInstance.Get("DeleteMethod");
+            return (java.lang.String)retObjectDeleteMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteMethod != null ? retObjectDeleteMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,7 +563,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteMethod", DeleteMethod);
         } catch (JCNativeException jcne) {
@@ -513,9 +573,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getEmptyDataText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataText = null;
         try {
-            return (java.lang.String)classInstance.Get("EmptyDataText");
+            retObjectEmptyDataText = classInstance.Get("EmptyDataText");
+            return (java.lang.String)retObjectEmptyDataText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmptyDataText != null ? retObjectEmptyDataText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,7 +587,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEmptyDataText(java.lang.String EmptyDataText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmptyDataText", EmptyDataText);
         } catch (JCNativeException jcne) {
@@ -533,9 +597,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getFooterText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterText = null;
         try {
-            return (java.lang.String)classInstance.Get("FooterText");
+            retObjectFooterText = classInstance.Get("FooterText");
+            return (java.lang.String)retObjectFooterText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFooterText != null ? retObjectFooterText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +611,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setFooterText(java.lang.String FooterText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterText", FooterText);
         } catch (JCNativeException jcne) {
@@ -553,9 +621,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getHeaderText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderText = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderText");
+            retObjectHeaderText = classInstance.Get("HeaderText");
+            return (java.lang.String)retObjectHeaderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderText != null ? retObjectHeaderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,7 +635,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setHeaderText(java.lang.String HeaderText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderText", HeaderText);
         } catch (JCNativeException jcne) {
@@ -573,9 +645,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getInsertMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("InsertMethod");
+            retObjectInsertMethod = classInstance.Get("InsertMethod");
+            return (java.lang.String)retObjectInsertMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInsertMethod != null ? retObjectInsertMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -583,7 +659,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertMethod", InsertMethod);
         } catch (JCNativeException jcne) {
@@ -593,9 +669,13 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateMethod");
+            retObjectUpdateMethod = classInstance.Get("UpdateMethod");
+            return (java.lang.String)retObjectUpdateMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateMethod != null ? retObjectUpdateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,7 +683,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMethod", UpdateMethod);
         } catch (JCNativeException jcne) {
@@ -613,10 +693,12 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public java.lang.String[] getDataKeyNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeyNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DataKeyNames");
+            retObjectDataKeyNames = classInstance.Get("DataKeyNames");
+            JCObject resultingObjects = (JCObject)retObjectDataKeyNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -625,6 +707,8 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 				resultingArray[indexDataKeyNames] = (java.lang.String)resultingArrayList.get(indexDataKeyNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectDataKeyNames != null ? retObjectDataKeyNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -632,7 +716,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setDataKeyNames(java.lang.String[] DataKeyNames) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKeyNames", DataKeyNames);
         } catch (JCNativeException jcne) {
@@ -642,10 +726,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getEditItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditItemTemplate");
+            retObjectEditItemTemplate = classInstance.Get("EditItemTemplate");
+            JCObject val = (JCObject)retObjectEditItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditItemTemplate != null ? retObjectEditItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -653,7 +741,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEditItemTemplate(ITemplate EditItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditItemTemplate", EditItemTemplate == null ? null : EditItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -663,10 +751,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getEmptyDataTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmptyDataTemplate");
+            retObjectEmptyDataTemplate = classInstance.Get("EmptyDataTemplate");
+            JCObject val = (JCObject)retObjectEmptyDataTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptyDataTemplate != null ? retObjectEmptyDataTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -674,7 +766,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setEmptyDataTemplate(ITemplate EmptyDataTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmptyDataTemplate", EmptyDataTemplate == null ? null : EmptyDataTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -684,10 +776,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getFooterTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterTemplate");
+            retObjectFooterTemplate = classInstance.Get("FooterTemplate");
+            JCObject val = (JCObject)retObjectFooterTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterTemplate != null ? retObjectFooterTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,7 +791,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setFooterTemplate(ITemplate FooterTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FooterTemplate", FooterTemplate == null ? null : FooterTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -705,10 +801,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getHeaderTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderTemplate");
+            retObjectHeaderTemplate = classInstance.Get("HeaderTemplate");
+            JCObject val = (JCObject)retObjectHeaderTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderTemplate != null ? retObjectHeaderTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,7 +816,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setHeaderTemplate(ITemplate HeaderTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderTemplate", HeaderTemplate == null ? null : HeaderTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -726,10 +826,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getInsertItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertItemTemplate");
+            retObjectInsertItemTemplate = classInstance.Get("InsertItemTemplate");
+            JCObject val = (JCObject)retObjectInsertItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertItemTemplate != null ? retObjectInsertItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,7 +841,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setInsertItemTemplate(ITemplate InsertItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertItemTemplate", InsertItemTemplate == null ? null : InsertItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -747,10 +851,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,7 +866,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setItemTemplate(ITemplate ItemTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -768,10 +876,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public ITemplate getPagerTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerTemplate");
+            retObjectPagerTemplate = classInstance.Get("PagerTemplate");
+            JCObject val = (JCObject)retObjectPagerTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerTemplate != null ? retObjectPagerTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,7 +891,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setPagerTemplate(ITemplate PagerTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PagerTemplate", PagerTemplate == null ? null : PagerTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -789,10 +901,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public DataKey getDataKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataKey");
+            retObjectDataKey = classInstance.Get("DataKey");
+            JCObject val = (JCObject)retObjectDataKey;
             return new DataKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataKey != null ? retObjectDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,10 +916,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewMode getCurrentMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentMode");
+            retObjectCurrentMode = classInstance.Get("CurrentMode");
+            JCObject val = (JCObject)retObjectCurrentMode;
             return new FormViewMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentMode != null ? retObjectCurrentMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -811,10 +931,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewMode getDefaultMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultMode");
+            retObjectDefaultMode = classInstance.Get("DefaultMode");
+            JCObject val = (JCObject)retObjectDefaultMode;
             return new FormViewMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultMode != null ? retObjectDefaultMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -822,7 +946,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setDefaultMode(FormViewMode DefaultMode) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultMode", DefaultMode == null ? null : DefaultMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -832,10 +956,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewRow getBottomPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomPagerRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BottomPagerRow");
+            retObjectBottomPagerRow = classInstance.Get("BottomPagerRow");
+            JCObject val = (JCObject)retObjectBottomPagerRow;
             return new FormViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBottomPagerRow != null ? retObjectBottomPagerRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -843,10 +971,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewRow getFooterRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterRow");
+            retObjectFooterRow = classInstance.Get("FooterRow");
+            JCObject val = (JCObject)retObjectFooterRow;
             return new FormViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterRow != null ? retObjectFooterRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -854,10 +986,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewRow getHeaderRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderRow");
+            retObjectHeaderRow = classInstance.Get("HeaderRow");
+            JCObject val = (JCObject)retObjectHeaderRow;
             return new FormViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderRow != null ? retObjectHeaderRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -865,10 +1001,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewRow getRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            JCObject val = (JCObject)retObjectRow;
             return new FormViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -876,10 +1016,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public FormViewRow getTopPagerRow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopPagerRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TopPagerRow");
+            retObjectTopPagerRow = classInstance.Get("TopPagerRow");
+            JCObject val = (JCObject)retObjectTopPagerRow;
             return new FormViewRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTopPagerRow != null ? retObjectTopPagerRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -887,10 +1031,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public GridLines getGridLines() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGridLines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GridLines");
+            retObjectGridLines = classInstance.Get("GridLines");
+            JCObject val = (JCObject)retObjectGridLines;
             return new GridLines(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridLines != null ? retObjectGridLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -898,7 +1046,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setGridLines(GridLines GridLines) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GridLines", GridLines == null ? null : GridLines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -908,10 +1056,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public HorizontalAlign getHorizontalAlign() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalAlign");
+            retObjectHorizontalAlign = classInstance.Get("HorizontalAlign");
+            JCObject val = (JCObject)retObjectHorizontalAlign;
             return new HorizontalAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalAlign != null ? retObjectHorizontalAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,7 +1071,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setHorizontalAlign(HorizontalAlign HorizontalAlign) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HorizontalAlign", HorizontalAlign == null ? null : HorizontalAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -929,10 +1081,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public PagerSettings getPagerSettings() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerSettings");
+            retObjectPagerSettings = classInstance.Get("PagerSettings");
+            JCObject val = (JCObject)retObjectPagerSettings;
             return new PagerSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerSettings != null ? retObjectPagerSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -940,10 +1096,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableCaptionAlign getCaptionAlign() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptionAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CaptionAlign");
+            retObjectCaptionAlign = classInstance.Get("CaptionAlign");
+            JCObject val = (JCObject)retObjectCaptionAlign;
             return new TableCaptionAlign(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptionAlign != null ? retObjectCaptionAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -951,7 +1111,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void setCaptionAlign(TableCaptionAlign CaptionAlign) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CaptionAlign", CaptionAlign == null ? null : CaptionAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -961,10 +1121,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getEditRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditRowStyle");
+            retObjectEditRowStyle = classInstance.Get("EditRowStyle");
+            JCObject val = (JCObject)retObjectEditRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditRowStyle != null ? retObjectEditRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -972,10 +1136,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getEmptyDataRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyDataRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmptyDataRowStyle");
+            retObjectEmptyDataRowStyle = classInstance.Get("EmptyDataRowStyle");
+            JCObject val = (JCObject)retObjectEmptyDataRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptyDataRowStyle != null ? retObjectEmptyDataRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -983,10 +1151,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getFooterStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterStyle");
+            retObjectFooterStyle = classInstance.Get("FooterStyle");
+            JCObject val = (JCObject)retObjectFooterStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterStyle != null ? retObjectFooterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -994,10 +1166,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1005,10 +1181,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getInsertRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertRowStyle");
+            retObjectInsertRowStyle = classInstance.Get("InsertRowStyle");
+            JCObject val = (JCObject)retObjectInsertRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertRowStyle != null ? retObjectInsertRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1016,10 +1196,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getPagerStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerStyle");
+            retObjectPagerStyle = classInstance.Get("PagerStyle");
+            JCObject val = (JCObject)retObjectPagerStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerStyle != null ? retObjectPagerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1027,10 +1211,14 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public TableItemStyle getRowStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyle");
+            retObjectRowStyle = classInstance.Get("RowStyle");
+            JCObject val = (JCObject)retObjectRowStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyle != null ? retObjectRowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1043,7 +1231,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -1053,7 +1241,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemCreated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -1063,7 +1251,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1073,7 +1261,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1083,7 +1271,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addPageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1093,7 +1281,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removePageIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1103,7 +1291,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemCommand(FormViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -1113,7 +1301,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemCommand(FormViewCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -1123,7 +1311,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemDeleted(FormViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1133,7 +1321,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemDeleted(FormViewDeletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDeleted", handler);
         } catch (JCNativeException jcne) {
@@ -1143,7 +1331,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemDeleting(FormViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -1153,7 +1341,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemDeleting(FormViewDeleteEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDeleting", handler);
         } catch (JCNativeException jcne) {
@@ -1163,7 +1351,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemInserted(FormViewInsertedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemInserted", handler);
         } catch (JCNativeException jcne) {
@@ -1173,7 +1361,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemInserted(FormViewInsertedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemInserted", handler);
         } catch (JCNativeException jcne) {
@@ -1183,7 +1371,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemInserting(FormViewInsertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemInserting", handler);
         } catch (JCNativeException jcne) {
@@ -1193,7 +1381,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemInserting(FormViewInsertEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemInserting", handler);
         } catch (JCNativeException jcne) {
@@ -1203,7 +1391,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addModeChanging(FormViewModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ModeChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1213,7 +1401,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeModeChanging(FormViewModeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ModeChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1223,7 +1411,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addPageIndexChanging(FormViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1233,7 +1421,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removePageIndexChanging(FormViewPageEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageIndexChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1243,7 +1431,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemUpdated(FormViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -1253,7 +1441,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemUpdated(FormViewUpdatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemUpdated", handler);
         } catch (JCNativeException jcne) {
@@ -1263,7 +1451,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void addItemUpdating(FormViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemUpdating", handler);
         } catch (JCNativeException jcne) {
@@ -1273,7 +1461,7 @@ public class FormView extends CompositeDataBoundControl implements system.web.ui
 
     public void removeItemUpdating(FormViewUpdateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemUpdating", handler);
         } catch (JCNativeException jcne) {

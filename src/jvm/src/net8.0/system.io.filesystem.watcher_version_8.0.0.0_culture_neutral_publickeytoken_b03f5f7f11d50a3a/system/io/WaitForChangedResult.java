@@ -161,9 +161,13 @@ public class WaitForChangedResult extends ValueType  {
     
     public boolean getTimedOut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimedOut = null;
         try {
-            return (boolean)classInstance.Get("TimedOut");
+            retObjectTimedOut = classInstance.Get("TimedOut");
+            return (boolean)retObjectTimedOut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTimedOut != null ? retObjectTimedOut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class WaitForChangedResult extends ValueType  {
 
     public void setTimedOut(boolean TimedOut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimedOut", TimedOut);
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class WaitForChangedResult extends ValueType  {
 
     public WatcherChangeTypes getChangeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChangeType");
+            retObjectChangeType = classInstance.Get("ChangeType");
+            JCObject val = (JCObject)retObjectChangeType;
             return new WatcherChangeTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class WaitForChangedResult extends ValueType  {
 
     public void setChangeType(WatcherChangeTypes ChangeType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChangeType", ChangeType == null ? null : ChangeType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class WaitForChangedResult extends ValueType  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class WaitForChangedResult extends ValueType  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class WaitForChangedResult extends ValueType  {
 
     public java.lang.String getOldName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldName = null;
         try {
-            return (java.lang.String)classInstance.Get("OldName");
+            retObjectOldName = classInstance.Get("OldName");
+            return (java.lang.String)retObjectOldName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOldName != null ? retObjectOldName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class WaitForChangedResult extends ValueType  {
 
     public void setOldName(java.lang.String OldName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OldName", OldName);
         } catch (JCNativeException jcne) {

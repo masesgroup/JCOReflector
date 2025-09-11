@@ -221,9 +221,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
     
     public boolean ContainsAudio() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsAudio = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsAudio");
+            retObjectContainsAudio = classInstance.Invoke("ContainsAudio");
+            return (boolean)retObjectContainsAudio;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsAudio != null ? retObjectContainsAudio.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +235,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean ContainsFileDropList() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsFileDropList = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsFileDropList");
+            retObjectContainsFileDropList = classInstance.Invoke("ContainsFileDropList");
+            return (boolean)retObjectContainsFileDropList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsFileDropList != null ? retObjectContainsFileDropList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +249,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean ContainsImage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsImage = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsImage");
+            retObjectContainsImage = classInstance.Invoke("ContainsImage");
+            return (boolean)retObjectContainsImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsImage != null ? retObjectContainsImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +263,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean ContainsText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsText = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsText");
+            retObjectContainsText = classInstance.Invoke("ContainsText");
+            return (boolean)retObjectContainsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsText != null ? retObjectContainsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +277,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsText = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsText", format == null ? null : format.getJCOInstance());
+            retObjectContainsText = classInstance.Invoke("ContainsText", format == null ? null : format.getJCOInstance());
+            return (boolean)retObjectContainsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsText != null ? retObjectContainsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +291,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean GetDataPresent(java.lang.String format, boolean autoConvert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataPresent = null;
         try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format, autoConvert);
+            retObjectGetDataPresent = classInstance.Invoke("GetDataPresent", format, autoConvert);
+            return (boolean)retObjectGetDataPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetDataPresent != null ? retObjectGetDataPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +305,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean GetDataPresent(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataPresent = null;
         try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format);
+            retObjectGetDataPresent = classInstance.Invoke("GetDataPresent", format);
+            return (boolean)retObjectGetDataPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetDataPresent != null ? retObjectGetDataPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +319,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public boolean GetDataPresent(NetType format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataPresent = null;
         try {
-            return (boolean)classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
+            retObjectGetDataPresent = classInstance.Invoke("GetDataPresent", format == null ? null : format.getJCOInstance());
+            return (boolean)retObjectGetDataPresent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetDataPresent != null ? retObjectGetDataPresent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +333,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public StringCollection GetFileDropList() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileDropList = null;
         try {
-            JCObject objGetFileDropList = (JCObject)classInstance.Invoke("GetFileDropList");
+            retObjectGetFileDropList = classInstance.Invoke("GetFileDropList");
+            JCObject objGetFileDropList = (JCObject)retObjectGetFileDropList;
             return new StringCollection(objGetFileDropList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileDropList != null ? retObjectGetFileDropList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +348,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public Stream GetAudioStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAudioStream = null;
         try {
-            JCObject objGetAudioStream = (JCObject)classInstance.Invoke("GetAudioStream");
+            retObjectGetAudioStream = classInstance.Invoke("GetAudioStream");
+            JCObject objGetAudioStream = (JCObject)retObjectGetAudioStream;
             return new Stream(objGetAudioStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAudioStream != null ? retObjectGetAudioStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +363,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public NetObject GetData(java.lang.String format, boolean autoConvert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format, autoConvert);
+            retObjectGetData = classInstance.Invoke("GetData", format, autoConvert);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +378,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public NetObject GetData(java.lang.String format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format);
+            retObjectGetData = classInstance.Invoke("GetData", format);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,10 +393,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public NetObject GetData(NetType format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance());
+            retObjectGetData = classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance());
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +408,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public java.lang.String GetText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetText");
+            retObjectGetText = classInstance.Invoke("GetText");
+            return (java.lang.String)retObjectGetText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetText != null ? retObjectGetText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +422,13 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetText", format == null ? null : format.getJCOInstance());
+            retObjectGetText = classInstance.Invoke("GetText", format == null ? null : format.getJCOInstance());
+            return (java.lang.String)retObjectGetText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetText != null ? retObjectGetText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +436,12 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public java.lang.String[] GetFormats() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats");
+            retObjectGetFormats = classInstance.Invoke("GetFormats");
+            JCObject resultingObjects = (JCObject)retObjectGetFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -388,6 +450,8 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFormats != null ? retObjectGetFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +459,12 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public java.lang.String[] GetFormats(boolean autoConvert) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormats = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats", autoConvert);
+            retObjectGetFormats = classInstance.Invoke("GetFormats", autoConvert);
+            JCObject resultingObjects = (JCObject)retObjectGetFormats;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -407,6 +473,8 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 				resultingArray[indexGetFormats] = (java.lang.String)resultingArrayList.get(indexGetFormats);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFormats != null ? retObjectGetFormats.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,10 +482,14 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public BitmapSource GetImage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImage = null;
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage");
+            retObjectGetImage = classInstance.Invoke("GetImage");
+            JCObject objGetImage = (JCObject)retObjectGetImage;
             return new BitmapSource(objGetImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImage != null ? retObjectGetImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +497,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void AddCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddCopyingHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -435,7 +507,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void AddPastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddPastingHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -445,7 +517,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void AddSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddSettingDataHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -455,7 +527,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void RemoveCopyingHandler(DependencyObject element, DataObjectCopyingEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveCopyingHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -465,7 +537,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void RemovePastingHandler(DependencyObject element, DataObjectPastingEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemovePastingHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -475,7 +547,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public static void RemoveSettingDataHandler(DependencyObject element, DataObjectSettingDataEventHandler handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveSettingDataHandler", element == null ? null : element.getJCOInstance(), handler);
         } catch (JCNativeException jcne) {
@@ -485,7 +557,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetAudio(byte[] audioBytes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", (java.lang.Object)audioBytes);
         } catch (JCNativeException jcne) {
@@ -495,7 +567,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetAudio(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -505,7 +577,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetAudio(Stream audioStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAudio", audioStream == null ? null : audioStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -515,7 +587,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetData(NetObject data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -525,7 +597,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetData(java.lang.String format, NetObject data, boolean autoConvert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format, data == null ? null : data.getJCOInstance(), autoConvert);
         } catch (JCNativeException jcne) {
@@ -535,7 +607,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetData(java.lang.String format, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -545,7 +617,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetData(NetType format, NetObject data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", format == null ? null : format.getJCOInstance(), data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -555,7 +627,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetFileDropList(StringCollection fileDropList) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFileDropList", fileDropList == null ? null : fileDropList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -565,7 +637,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetImage(BitmapSource image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetImage", image == null ? null : image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -575,7 +647,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetText(java.lang.String textData, TextDataFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetText", textData, format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -585,7 +657,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
 
     public void SetText(java.lang.String textData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetText", textData);
         } catch (JCNativeException jcne) {
@@ -599,7 +671,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -608,7 +680,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -617,7 +689,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -626,7 +698,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -635,7 +707,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -644,7 +716,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public void DUnadvise(int connection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -653,7 +725,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -662,7 +734,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
     /**
@@ -671,7 +743,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      */
     @Deprecated 
     public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
 

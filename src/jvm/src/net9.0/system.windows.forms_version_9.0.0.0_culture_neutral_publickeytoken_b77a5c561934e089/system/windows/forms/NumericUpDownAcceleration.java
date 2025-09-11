@@ -170,9 +170,13 @@ public class NumericUpDownAcceleration extends NetObject  {
     
     public int getSeconds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeconds = null;
         try {
-            return (int)classInstance.Get("Seconds");
+            retObjectSeconds = classInstance.Get("Seconds");
+            return (int)retObjectSeconds;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSeconds != null ? retObjectSeconds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class NumericUpDownAcceleration extends NetObject  {
 
     public void setSeconds(int Seconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Seconds", Seconds);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class NumericUpDownAcceleration extends NetObject  {
 
     public Decimal getIncrement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Increment");
+            retObjectIncrement = classInstance.Get("Increment");
+            JCObject val = (JCObject)retObjectIncrement;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncrement != null ? retObjectIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class NumericUpDownAcceleration extends NetObject  {
 
     public void setIncrement(Decimal Increment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Increment", Increment == null ? null : Increment.getJCOInstance());
         } catch (JCNativeException jcne) {

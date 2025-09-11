@@ -332,9 +332,13 @@ public class SqlMetaData extends NetObject  {
     
     public boolean Adjust(boolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (boolean)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (boolean)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +346,19 @@ public class SqlMetaData extends NetObject  {
 
     public byte Adjust(byte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (byte)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (byte)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
+                return retObjectAdjustNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +366,12 @@ public class SqlMetaData extends NetObject  {
 
     public byte[] Adjust(byte[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (java.lang.Object)value);
+            retObjectAdjust = classInstance.Invoke("Adjust", (java.lang.Object)value);
+            JCObject resultingObjects = (JCObject)retObjectAdjust;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -364,6 +380,8 @@ public class SqlMetaData extends NetObject  {
 				resultingArray[indexAdjust] = (byte)resultingArrayList.get(indexAdjust);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +389,12 @@ public class SqlMetaData extends NetObject  {
 
     public byte[] Adjust(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectAdjust = classInstance.Invoke("Adjust", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectAdjust;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -383,6 +403,8 @@ public class SqlMetaData extends NetObject  {
 				resultingArray[indexAdjust] = (byte)resultingArrayList.get(indexAdjust);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +412,13 @@ public class SqlMetaData extends NetObject  {
 
     public char Adjust(char value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (char)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (char)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +426,12 @@ public class SqlMetaData extends NetObject  {
 
     public char[] Adjust(char[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Adjust", (java.lang.Object)value);
+            retObjectAdjust = classInstance.Invoke("Adjust", (java.lang.Object)value);
+            JCObject resultingObjects = (JCObject)retObjectAdjust;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -412,6 +440,8 @@ public class SqlMetaData extends NetObject  {
 				resultingArray[indexAdjust] = (char)resultingArrayList.get(indexAdjust);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,9 +449,19 @@ public class SqlMetaData extends NetObject  {
 
     public double Adjust(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (double)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (double)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
+                return retObjectAdjustNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,9 +469,19 @@ public class SqlMetaData extends NetObject  {
 
     public short Adjust(short value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (short)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (short)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
+                return retObjectAdjustNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,9 +489,19 @@ public class SqlMetaData extends NetObject  {
 
     public int Adjust(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (int)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (int)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
+                return retObjectAdjustNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,9 +509,19 @@ public class SqlMetaData extends NetObject  {
 
     public long Adjust(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (long)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (long)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectAdjustNumber = (java.lang.Number)retObjectAdjust;
+                return retObjectAdjustNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +529,14 @@ public class SqlMetaData extends NetObject  {
 
     public static SqlMetaData InferFromValue(NetObject value, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInferFromValue = null;
         try {
-            JCObject objInferFromValue = (JCObject)classType.Invoke("InferFromValue", value == null ? null : value.getJCOInstance(), name);
+            retObjectInferFromValue = classType.Invoke("InferFromValue", value == null ? null : value.getJCOInstance(), name);
+            JCObject objInferFromValue = (JCObject)retObjectInferFromValue;
             return new SqlMetaData(objInferFromValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInferFromValue != null ? retObjectInferFromValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +544,14 @@ public class SqlMetaData extends NetObject  {
 
     public Single Adjust(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new Single(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +559,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlBinary Adjust(SqlBinary value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlBinary(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +574,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlBoolean Adjust(SqlBoolean value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlBoolean(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +589,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlByte Adjust(SqlByte value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlByte(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +604,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlBytes Adjust(SqlBytes value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlBytes(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +619,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlChars Adjust(SqlChars value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlChars(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +634,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlDateTime Adjust(SqlDateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlDateTime(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,10 +649,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlDecimal Adjust(SqlDecimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlDecimal(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,10 +664,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlDouble Adjust(SqlDouble value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlDouble(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,10 +679,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlGuid Adjust(SqlGuid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlGuid(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,10 +694,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlInt16 Adjust(SqlInt16 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlInt16(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +709,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlInt32 Adjust(SqlInt32 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlInt32(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +724,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlInt64 Adjust(SqlInt64 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlInt64(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,10 +739,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlMoney Adjust(SqlMoney value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlMoney(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,10 +754,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlSingle Adjust(SqlSingle value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlSingle(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -635,10 +769,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlString Adjust(SqlString value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlString(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,10 +784,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlXml Adjust(SqlXml value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new SqlXml(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +799,14 @@ public class SqlMetaData extends NetObject  {
 
     public DateTime Adjust(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new DateTime(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,10 +814,14 @@ public class SqlMetaData extends NetObject  {
 
     public DateTimeOffset Adjust(DateTimeOffset value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new DateTimeOffset(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,10 +829,14 @@ public class SqlMetaData extends NetObject  {
 
     public Decimal Adjust(Decimal value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new Decimal(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,10 +844,14 @@ public class SqlMetaData extends NetObject  {
 
     public Guid Adjust(Guid value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new Guid(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,10 +859,14 @@ public class SqlMetaData extends NetObject  {
 
     public NetObject Adjust(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new NetObject(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,9 +874,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String Adjust(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Adjust", value);
+            retObjectAdjust = classInstance.Invoke("Adjust", value);
+            return (java.lang.String)retObjectAdjust;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -722,10 +888,14 @@ public class SqlMetaData extends NetObject  {
 
     public TimeSpan Adjust(TimeSpan value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjust = null;
         try {
-            JCObject objAdjust = (JCObject)classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            retObjectAdjust = classInstance.Invoke("Adjust", value == null ? null : value.getJCOInstance());
+            JCObject objAdjust = (JCObject)retObjectAdjust;
             return new TimeSpan(objAdjust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjust != null ? retObjectAdjust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,9 +907,13 @@ public class SqlMetaData extends NetObject  {
     
     public boolean getIsUniqueKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUniqueKey = null;
         try {
-            return (boolean)classInstance.Get("IsUniqueKey");
+            retObjectIsUniqueKey = classInstance.Get("IsUniqueKey");
+            return (boolean)retObjectIsUniqueKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUniqueKey != null ? retObjectIsUniqueKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -747,9 +921,13 @@ public class SqlMetaData extends NetObject  {
 
     public boolean getUseServerDefault() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseServerDefault = null;
         try {
-            return (boolean)classInstance.Get("UseServerDefault");
+            retObjectUseServerDefault = classInstance.Get("UseServerDefault");
+            return (boolean)retObjectUseServerDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseServerDefault != null ? retObjectUseServerDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,9 +935,13 @@ public class SqlMetaData extends NetObject  {
 
     public byte getPrecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -767,9 +949,13 @@ public class SqlMetaData extends NetObject  {
 
     public byte getScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -777,9 +963,13 @@ public class SqlMetaData extends NetObject  {
 
     public int getSortOrdinal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortOrdinal = null;
         try {
-            return (int)classInstance.Get("SortOrdinal");
+            retObjectSortOrdinal = classInstance.Get("SortOrdinal");
+            return (int)retObjectSortOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSortOrdinal != null ? retObjectSortOrdinal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,9 +977,13 @@ public class SqlMetaData extends NetObject  {
 
     public long getLocaleId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocaleId = null;
         try {
-            return (long)classInstance.Get("LocaleId");
+            retObjectLocaleId = classInstance.Get("LocaleId");
+            return (long)retObjectLocaleId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectLocaleId != null ? retObjectLocaleId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -797,9 +991,13 @@ public class SqlMetaData extends NetObject  {
 
     public static long getMax() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            return (long)classType.Get("Max");
+            retObjectMax = classType.Get("Max");
+            return (long)retObjectMax;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,9 +1005,13 @@ public class SqlMetaData extends NetObject  {
 
     public long getMaxLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLength = null;
         try {
-            return (long)classInstance.Get("MaxLength");
+            retObjectMaxLength = classInstance.Get("MaxLength");
+            return (long)retObjectMaxLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxLength != null ? retObjectMaxLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -817,10 +1019,14 @@ public class SqlMetaData extends NetObject  {
 
     public DbType getDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDbType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DbType");
+            retObjectDbType = classInstance.Get("DbType");
+            JCObject val = (JCObject)retObjectDbType;
             return new DbType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDbType != null ? retObjectDbType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -828,10 +1034,14 @@ public class SqlMetaData extends NetObject  {
 
     public SortOrder getSortOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortOrder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SortOrder");
+            retObjectSortOrder = classInstance.Get("SortOrder");
+            JCObject val = (JCObject)retObjectSortOrder;
             return new SortOrder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSortOrder != null ? retObjectSortOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -839,10 +1049,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlDbType getSqlDbType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlDbType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SqlDbType");
+            retObjectSqlDbType = classInstance.Get("SqlDbType");
+            JCObject val = (JCObject)retObjectSqlDbType;
             return new SqlDbType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqlDbType != null ? retObjectSqlDbType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -850,10 +1064,14 @@ public class SqlMetaData extends NetObject  {
 
     public SqlCompareOptions getCompareOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompareOptions");
+            retObjectCompareOptions = classInstance.Get("CompareOptions");
+            JCObject val = (JCObject)retObjectCompareOptions;
             return new SqlCompareOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompareOptions != null ? retObjectCompareOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,9 +1079,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -871,9 +1093,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String getTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -881,9 +1107,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String getXmlSchemaCollectionDatabase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionDatabase = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionDatabase");
+            retObjectXmlSchemaCollectionDatabase = classInstance.Get("XmlSchemaCollectionDatabase");
+            return (java.lang.String)retObjectXmlSchemaCollectionDatabase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionDatabase != null ? retObjectXmlSchemaCollectionDatabase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -891,9 +1121,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String getXmlSchemaCollectionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionName");
+            retObjectXmlSchemaCollectionName = classInstance.Get("XmlSchemaCollectionName");
+            return (java.lang.String)retObjectXmlSchemaCollectionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionName != null ? retObjectXmlSchemaCollectionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -901,9 +1135,13 @@ public class SqlMetaData extends NetObject  {
 
     public java.lang.String getXmlSchemaCollectionOwningSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSchemaCollectionOwningSchema = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlSchemaCollectionOwningSchema");
+            retObjectXmlSchemaCollectionOwningSchema = classInstance.Get("XmlSchemaCollectionOwningSchema");
+            return (java.lang.String)retObjectXmlSchemaCollectionOwningSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlSchemaCollectionOwningSchema != null ? retObjectXmlSchemaCollectionOwningSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -911,10 +1149,14 @@ public class SqlMetaData extends NetObject  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

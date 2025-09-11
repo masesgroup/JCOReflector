@@ -163,9 +163,13 @@ public class TextParagraphProperties extends NetObject  {
     
     public boolean getAlwaysCollapsible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysCollapsible = null;
         try {
-            return (boolean)classInstance.Get("AlwaysCollapsible");
+            retObjectAlwaysCollapsible = classInstance.Get("AlwaysCollapsible");
+            return (boolean)retObjectAlwaysCollapsible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlwaysCollapsible != null ? retObjectAlwaysCollapsible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class TextParagraphProperties extends NetObject  {
 
     public boolean getFirstLineInParagraph() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstLineInParagraph = null;
         try {
-            return (boolean)classInstance.Get("FirstLineInParagraph");
+            retObjectFirstLineInParagraph = classInstance.Get("FirstLineInParagraph");
+            return (boolean)retObjectFirstLineInParagraph;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFirstLineInParagraph != null ? retObjectFirstLineInParagraph.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class TextParagraphProperties extends NetObject  {
 
     public double getDefaultIncrementalTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultIncrementalTab = null;
         try {
-            return (double)classInstance.Get("DefaultIncrementalTab");
+            retObjectDefaultIncrementalTab = classInstance.Get("DefaultIncrementalTab");
+            return (double)retObjectDefaultIncrementalTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDefaultIncrementalTab != null ? retObjectDefaultIncrementalTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class TextParagraphProperties extends NetObject  {
 
     public double getIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndent = null;
         try {
-            return (double)classInstance.Get("Indent");
+            retObjectIndent = classInstance.Get("Indent");
+            return (double)retObjectIndent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectIndent != null ? retObjectIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class TextParagraphProperties extends NetObject  {
 
     public double getLineHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineHeight = null;
         try {
-            return (double)classInstance.Get("LineHeight");
+            retObjectLineHeight = classInstance.Get("LineHeight");
+            return (double)retObjectLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class TextParagraphProperties extends NetObject  {
 
     public double getParagraphIndent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParagraphIndent = null;
         try {
-            return (double)classInstance.Get("ParagraphIndent");
+            retObjectParagraphIndent = classInstance.Get("ParagraphIndent");
+            return (double)retObjectParagraphIndent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectParagraphIndent != null ? retObjectParagraphIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public TextMarkerProperties getTextMarkerProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextMarkerProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextMarkerProperties");
+            retObjectTextMarkerProperties = classInstance.Get("TextMarkerProperties");
+            JCObject val = (JCObject)retObjectTextMarkerProperties;
             return new TextMarkerProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextMarkerProperties != null ? retObjectTextMarkerProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public TextRunProperties getDefaultTextRunProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultTextRunProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultTextRunProperties");
+            retObjectDefaultTextRunProperties = classInstance.Get("DefaultTextRunProperties");
+            JCObject val = (JCObject)retObjectDefaultTextRunProperties;
             return new TextRunProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultTextRunProperties != null ? retObjectDefaultTextRunProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public TextAlignment getTextAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public TextDecorationCollection getTextDecorations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDecorations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDecorations");
+            retObjectTextDecorations = classInstance.Get("TextDecorations");
+            JCObject val = (JCObject)retObjectTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDecorations != null ? retObjectTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +322,14 @@ public class TextParagraphProperties extends NetObject  {
 
     public TextWrapping getTextWrapping() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextWrapping = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextWrapping");
+            retObjectTextWrapping = classInstance.Get("TextWrapping");
+            JCObject val = (JCObject)retObjectTextWrapping;
             return new TextWrapping(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextWrapping != null ? retObjectTextWrapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

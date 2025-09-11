@@ -168,7 +168,7 @@ public class WorkflowWebHostingModule extends NetObject implements system.web.IH
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
     }
 
     /**
@@ -177,7 +177,7 @@ public class WorkflowWebHostingModule extends NetObject implements system.web.IH
      */
     @Deprecated 
     public void Init(HttpApplication context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
     }
 
 

@@ -145,10 +145,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
     
     public NetObject GetPatternProvider(int patternId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPatternProvider = null;
         try {
-            JCObject objGetPatternProvider = (JCObject)classInstance.Invoke("GetPatternProvider", patternId);
+            retObjectGetPatternProvider = classInstance.Invoke("GetPatternProvider", patternId);
+            JCObject objGetPatternProvider = (JCObject)retObjectGetPatternProvider;
             return new NetObject(objGetPatternProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPatternProvider != null ? retObjectGetPatternProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public NetObject GetPropertyValue(int propertyId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPropertyValue = null;
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", propertyId);
+            retObjectGetPropertyValue = classInstance.Invoke("GetPropertyValue", propertyId);
+            JCObject objGetPropertyValue = (JCObject)retObjectGetPropertyValue;
             return new NetObject(objGetPropertyValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPropertyValue != null ? retObjectGetPropertyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +175,7 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public void AdviseEventAdded(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdviseEventAdded", eventId, properties);
         } catch (JCNativeException jcne) {
@@ -177,7 +185,7 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public void AdviseEventAdded(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdviseEventAdded", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -187,7 +195,7 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdviseEventRemoved", eventId, properties);
         } catch (JCNativeException jcne) {
@@ -197,7 +205,7 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public void AdviseEventRemoved(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdviseEventRemoved", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
     
     public IRawElementProviderSimple getHostRawElementProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostRawElementProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostRawElementProvider");
+            retObjectHostRawElementProvider = classInstance.Get("HostRawElementProvider");
+            JCObject val = (JCObject)retObjectHostRawElementProvider;
             return new IRawElementProviderSimpleImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostRawElementProvider != null ? retObjectHostRawElementProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +234,14 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
 
     public ProviderOptions getProviderOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderOptions");
+            retObjectProviderOptions = classInstance.Get("ProviderOptions");
+            JCObject val = (JCObject)retObjectProviderOptions;
             return new ProviderOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderOptions != null ? retObjectProviderOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

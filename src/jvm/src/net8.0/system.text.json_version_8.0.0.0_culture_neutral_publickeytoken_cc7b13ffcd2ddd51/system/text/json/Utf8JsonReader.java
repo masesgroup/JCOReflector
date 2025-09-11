@@ -168,9 +168,13 @@ public class Utf8JsonReader extends ValueType  {
     
     public boolean GetBoolean() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean");
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean");
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean Read() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.text.json.JsonException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +196,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetByte(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetByte = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetByte", value.getJCRefOut());
+            retObjectTryGetByte = classInstance.Invoke("TryGetByte", value.getJCRefOut());
+            return (boolean)retObjectTryGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetByte != null ? retObjectTryGetByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +210,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetBytesFromBase64(JCORefOut value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetBytesFromBase64 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetBytesFromBase64", value.getJCRefOut());
+            retObjectTryGetBytesFromBase64 = classInstance.Invoke("TryGetBytesFromBase64", value.getJCRefOut());
+            return (boolean)retObjectTryGetBytesFromBase64;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetBytesFromBase64 != null ? retObjectTryGetBytesFromBase64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetDateTime(JCORefOut<DateTime> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetDateTime = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetDateTime", value.getJCRefOut());
+            retObjectTryGetDateTime = classInstance.Invoke("TryGetDateTime", value.getJCRefOut());
+            return (boolean)retObjectTryGetDateTime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetDateTime != null ? retObjectTryGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +238,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetDateTimeOffset(JCORefOut<DateTimeOffset> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetDateTimeOffset = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetDateTimeOffset", value.getJCRefOut());
+            retObjectTryGetDateTimeOffset = classInstance.Invoke("TryGetDateTimeOffset", value.getJCRefOut());
+            return (boolean)retObjectTryGetDateTimeOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetDateTimeOffset != null ? retObjectTryGetDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +252,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetDecimal(JCORefOut<Decimal> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetDecimal = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetDecimal", value.getJCRefOut());
+            retObjectTryGetDecimal = classInstance.Invoke("TryGetDecimal", value.getJCRefOut());
+            return (boolean)retObjectTryGetDecimal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetDecimal != null ? retObjectTryGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +266,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetDouble(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetDouble = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetDouble", value.getJCRefOut());
+            retObjectTryGetDouble = classInstance.Invoke("TryGetDouble", value.getJCRefOut());
+            return (boolean)retObjectTryGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetDouble != null ? retObjectTryGetDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +280,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetGuid(JCORefOut<Guid> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetGuid = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetGuid", value.getJCRefOut());
+            retObjectTryGetGuid = classInstance.Invoke("TryGetGuid", value.getJCRefOut());
+            return (boolean)retObjectTryGetGuid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetGuid != null ? retObjectTryGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +294,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetInt16(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetInt16 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetInt16", value.getJCRefOut());
+            retObjectTryGetInt16 = classInstance.Invoke("TryGetInt16", value.getJCRefOut());
+            return (boolean)retObjectTryGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetInt16 != null ? retObjectTryGetInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +308,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetInt32(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetInt32 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetInt32", value.getJCRefOut());
+            retObjectTryGetInt32 = classInstance.Invoke("TryGetInt32", value.getJCRefOut());
+            return (boolean)retObjectTryGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetInt32 != null ? retObjectTryGetInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +322,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetInt64(JCORefOut<java.util.concurrent.atomic.AtomicLong> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetInt64 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetInt64", value.getJCRefOut());
+            retObjectTryGetInt64 = classInstance.Invoke("TryGetInt64", value.getJCRefOut());
+            return (boolean)retObjectTryGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetInt64 != null ? retObjectTryGetInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +336,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetSByte(JCORefOut<SByte> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetSByte = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetSByte", value.getJCRefOut());
+            retObjectTryGetSByte = classInstance.Invoke("TryGetSByte", value.getJCRefOut());
+            return (boolean)retObjectTryGetSByte;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetSByte != null ? retObjectTryGetSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +350,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetSingle(JCORefOut<Single> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetSingle = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetSingle", value.getJCRefOut());
+            retObjectTryGetSingle = classInstance.Invoke("TryGetSingle", value.getJCRefOut());
+            return (boolean)retObjectTryGetSingle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetSingle != null ? retObjectTryGetSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +364,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetUInt16(JCORefOut<UInt16> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetUInt16 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetUInt16", value.getJCRefOut());
+            retObjectTryGetUInt16 = classInstance.Invoke("TryGetUInt16", value.getJCRefOut());
+            return (boolean)retObjectTryGetUInt16;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetUInt16 != null ? retObjectTryGetUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +378,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetUInt32(JCORefOut<UInt32> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetUInt32 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetUInt32", value.getJCRefOut());
+            retObjectTryGetUInt32 = classInstance.Invoke("TryGetUInt32", value.getJCRefOut());
+            return (boolean)retObjectTryGetUInt32;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetUInt32 != null ? retObjectTryGetUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +392,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TryGetUInt64(JCORefOut<UInt64> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetUInt64 = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetUInt64", value.getJCRefOut());
+            retObjectTryGetUInt64 = classInstance.Invoke("TryGetUInt64", value.getJCRefOut());
+            return (boolean)retObjectTryGetUInt64;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetUInt64 != null ? retObjectTryGetUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +406,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean TrySkip() throws Throwable, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySkip = null;
         try {
-            return (boolean)classInstance.Invoke("TrySkip");
+            retObjectTrySkip = classInstance.Invoke("TrySkip");
+            return (boolean)retObjectTrySkip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySkip != null ? retObjectTrySkip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +420,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean ValueTextEquals(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueTextEquals = null;
         try {
-            return (boolean)classInstance.Invoke("ValueTextEquals", text);
+            retObjectValueTextEquals = classInstance.Invoke("ValueTextEquals", text);
+            return (boolean)retObjectValueTextEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValueTextEquals != null ? retObjectValueTextEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,9 +434,19 @@ public class Utf8JsonReader extends ValueType  {
 
     public byte GetByte() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte");
+            retObjectGetByte = classInstance.Invoke("GetByte");
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,10 +454,12 @@ public class Utf8JsonReader extends ValueType  {
 
     public byte[] GetBytesFromBase64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytesFromBase64 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBytesFromBase64");
+            retObjectGetBytesFromBase64 = classInstance.Invoke("GetBytesFromBase64");
+            JCObject resultingObjects = (JCObject)retObjectGetBytesFromBase64;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -380,6 +468,8 @@ public class Utf8JsonReader extends ValueType  {
 				resultingArray[indexGetBytesFromBase64] = (byte)resultingArrayList.get(indexGetBytesFromBase64);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetBytesFromBase64 != null ? retObjectGetBytesFromBase64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +477,19 @@ public class Utf8JsonReader extends ValueType  {
 
     public double GetDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble");
+            retObjectGetDouble = classInstance.Invoke("GetDouble");
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +497,19 @@ public class Utf8JsonReader extends ValueType  {
 
     public short GetInt16() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16");
+            retObjectGetInt16 = classInstance.Invoke("GetInt16");
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +517,19 @@ public class Utf8JsonReader extends ValueType  {
 
     public int GetInt32() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32");
+            retObjectGetInt32 = classInstance.Invoke("GetInt32");
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +537,19 @@ public class Utf8JsonReader extends ValueType  {
 
     public long GetInt64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64");
+            retObjectGetInt64 = classInstance.Invoke("GetInt64");
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +557,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public SByte GetSByte() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSByte = null;
         try {
-            JCObject objGetSByte = (JCObject)classInstance.Invoke("GetSByte");
+            retObjectGetSByte = classInstance.Invoke("GetSByte");
+            JCObject objGetSByte = (JCObject)retObjectGetSByte;
             return new SByte(objGetSByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSByte != null ? retObjectGetSByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +572,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public Single GetSingle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSingle = null;
         try {
-            JCObject objGetSingle = (JCObject)classInstance.Invoke("GetSingle");
+            retObjectGetSingle = classInstance.Invoke("GetSingle");
+            JCObject objGetSingle = (JCObject)retObjectGetSingle;
             return new Single(objGetSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSingle != null ? retObjectGetSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +587,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public DateTime GetDateTime() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime");
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime");
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +602,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public DateTimeOffset GetDateTimeOffset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeOffset = null;
         try {
-            JCObject objGetDateTimeOffset = (JCObject)classInstance.Invoke("GetDateTimeOffset");
+            retObjectGetDateTimeOffset = classInstance.Invoke("GetDateTimeOffset");
+            JCObject objGetDateTimeOffset = (JCObject)retObjectGetDateTimeOffset;
             return new DateTimeOffset(objGetDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTimeOffset != null ? retObjectGetDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +617,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public Decimal GetDecimal() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal");
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal");
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +632,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public Guid GetGuid() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid");
+            retObjectGetGuid = classInstance.Invoke("GetGuid");
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,9 +647,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public java.lang.String GetComment() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComment = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetComment");
+            retObjectGetComment = classInstance.Invoke("GetComment");
+            return (java.lang.String)retObjectGetComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetComment != null ? retObjectGetComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,9 +661,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public java.lang.String GetString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString");
+            retObjectGetString = classInstance.Invoke("GetString");
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,10 +675,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public UInt16 GetUInt16() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt16 = null;
         try {
-            JCObject objGetUInt16 = (JCObject)classInstance.Invoke("GetUInt16");
+            retObjectGetUInt16 = classInstance.Invoke("GetUInt16");
+            JCObject objGetUInt16 = (JCObject)retObjectGetUInt16;
             return new UInt16(objGetUInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt16 != null ? retObjectGetUInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,10 +690,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public UInt32 GetUInt32() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt32 = null;
         try {
-            JCObject objGetUInt32 = (JCObject)classInstance.Invoke("GetUInt32");
+            retObjectGetUInt32 = classInstance.Invoke("GetUInt32");
+            JCObject objGetUInt32 = (JCObject)retObjectGetUInt32;
             return new UInt32(objGetUInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt32 != null ? retObjectGetUInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,10 +705,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public UInt64 GetUInt64() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUInt64 = null;
         try {
-            JCObject objGetUInt64 = (JCObject)classInstance.Invoke("GetUInt64");
+            retObjectGetUInt64 = classInstance.Invoke("GetUInt64");
+            JCObject objGetUInt64 = (JCObject)retObjectGetUInt64;
             return new UInt64(objGetUInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUInt64 != null ? retObjectGetUInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,7 +720,7 @@ public class Utf8JsonReader extends ValueType  {
 
     public void Skip() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Skip");
         } catch (JCNativeException jcne) {
@@ -560,9 +734,13 @@ public class Utf8JsonReader extends ValueType  {
     
     public boolean getHasValueSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasValueSequence = null;
         try {
-            return (boolean)classInstance.Get("HasValueSequence");
+            retObjectHasValueSequence = classInstance.Get("HasValueSequence");
+            return (boolean)retObjectHasValueSequence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasValueSequence != null ? retObjectHasValueSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,7 +748,7 @@ public class Utf8JsonReader extends ValueType  {
 
     public void setHasValueSequence(boolean HasValueSequence) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasValueSequence", HasValueSequence);
         } catch (JCNativeException jcne) {
@@ -580,9 +758,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean getIsFinalBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFinalBlock = null;
         try {
-            return (boolean)classInstance.Get("IsFinalBlock");
+            retObjectIsFinalBlock = classInstance.Get("IsFinalBlock");
+            return (boolean)retObjectIsFinalBlock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFinalBlock != null ? retObjectIsFinalBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,9 +772,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public boolean getValueIsEscaped() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueIsEscaped = null;
         try {
-            return (boolean)classInstance.Get("ValueIsEscaped");
+            retObjectValueIsEscaped = classInstance.Get("ValueIsEscaped");
+            return (boolean)retObjectValueIsEscaped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValueIsEscaped != null ? retObjectValueIsEscaped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,7 +786,7 @@ public class Utf8JsonReader extends ValueType  {
 
     public void setValueIsEscaped(boolean ValueIsEscaped) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueIsEscaped", ValueIsEscaped);
         } catch (JCNativeException jcne) {
@@ -610,9 +796,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public int getCurrentDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentDepth = null;
         try {
-            return (int)classInstance.Get("CurrentDepth");
+            retObjectCurrentDepth = classInstance.Get("CurrentDepth");
+            return (int)retObjectCurrentDepth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrentDepth != null ? retObjectCurrentDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,9 +810,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public long getBytesConsumed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBytesConsumed = null;
         try {
-            return (long)classInstance.Get("BytesConsumed");
+            retObjectBytesConsumed = classInstance.Get("BytesConsumed");
+            return (long)retObjectBytesConsumed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectBytesConsumed != null ? retObjectBytesConsumed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,9 +824,13 @@ public class Utf8JsonReader extends ValueType  {
 
     public long getTokenStartIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenStartIndex = null;
         try {
-            return (long)classInstance.Get("TokenStartIndex");
+            retObjectTokenStartIndex = classInstance.Get("TokenStartIndex");
+            return (long)retObjectTokenStartIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTokenStartIndex != null ? retObjectTokenStartIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,7 +838,7 @@ public class Utf8JsonReader extends ValueType  {
 
     public void setTokenStartIndex(long TokenStartIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenStartIndex", TokenStartIndex);
         } catch (JCNativeException jcne) {
@@ -650,10 +848,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public SequencePosition getPosition() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Position");
+            retObjectPosition = classInstance.Get("Position");
+            JCObject val = (JCObject)retObjectPosition;
             return new SequencePosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPosition != null ? retObjectPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -661,10 +863,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public JsonReaderState getCurrentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentState");
+            retObjectCurrentState = classInstance.Get("CurrentState");
+            JCObject val = (JCObject)retObjectCurrentState;
             return new JsonReaderState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentState != null ? retObjectCurrentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,10 +878,14 @@ public class Utf8JsonReader extends ValueType  {
 
     public JsonTokenType getTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenType");
+            retObjectTokenType = classInstance.Get("TokenType");
+            JCObject val = (JCObject)retObjectTokenType;
             return new JsonTokenType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenType != null ? retObjectTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

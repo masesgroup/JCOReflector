@@ -163,9 +163,13 @@ public class Behavior extends NetObject  {
     
     public boolean OnMouseDoubleClick(Glyph g, MouseButtons button, Point mouseLoc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseDoubleClick = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseDoubleClick", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            retObjectOnMouseDoubleClick = classInstance.Invoke("OnMouseDoubleClick", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            return (boolean)retObjectOnMouseDoubleClick;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseDoubleClick != null ? retObjectOnMouseDoubleClick.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseDown(Glyph g, MouseButtons button, Point mouseLoc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseDown = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseDown", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            retObjectOnMouseDown = classInstance.Invoke("OnMouseDown", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            return (boolean)retObjectOnMouseDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseDown != null ? retObjectOnMouseDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseEnter(Glyph g) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseEnter = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseEnter", g == null ? null : g.getJCOInstance());
+            retObjectOnMouseEnter = classInstance.Invoke("OnMouseEnter", g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectOnMouseEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseEnter != null ? retObjectOnMouseEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseHover(Glyph g, Point mouseLoc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseHover = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseHover", g == null ? null : g.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            retObjectOnMouseHover = classInstance.Invoke("OnMouseHover", g == null ? null : g.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            return (boolean)retObjectOnMouseHover;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseHover != null ? retObjectOnMouseHover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseLeave(Glyph g) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseLeave = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseLeave", g == null ? null : g.getJCOInstance());
+            retObjectOnMouseLeave = classInstance.Invoke("OnMouseLeave", g == null ? null : g.getJCOInstance());
+            return (boolean)retObjectOnMouseLeave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseLeave != null ? retObjectOnMouseLeave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseMove(Glyph g, MouseButtons button, Point mouseLoc) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseMove = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseMove", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            retObjectOnMouseMove = classInstance.Invoke("OnMouseMove", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance(), mouseLoc == null ? null : mouseLoc.getJCOInstance());
+            return (boolean)retObjectOnMouseMove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseMove != null ? retObjectOnMouseMove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class Behavior extends NetObject  {
 
     public boolean OnMouseUp(Glyph g, MouseButtons button) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnMouseUp = null;
         try {
-            return (boolean)classInstance.Invoke("OnMouseUp", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance());
+            retObjectOnMouseUp = classInstance.Invoke("OnMouseUp", g == null ? null : g.getJCOInstance(), button == null ? null : button.getJCOInstance());
+            return (boolean)retObjectOnMouseUp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnMouseUp != null ? retObjectOnMouseUp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +261,14 @@ public class Behavior extends NetObject  {
 
     public MenuCommand FindCommand(CommandID commandId) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindCommand = null;
         try {
-            JCObject objFindCommand = (JCObject)classInstance.Invoke("FindCommand", commandId == null ? null : commandId.getJCOInstance());
+            retObjectFindCommand = classInstance.Invoke("FindCommand", commandId == null ? null : commandId.getJCOInstance());
+            JCObject objFindCommand = (JCObject)retObjectFindCommand;
             return new MenuCommand(objFindCommand);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindCommand != null ? retObjectFindCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +276,7 @@ public class Behavior extends NetObject  {
 
     public void OnDragDrop(Glyph g, DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragDrop", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +286,7 @@ public class Behavior extends NetObject  {
 
     public void OnDragEnter(Glyph g, DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragEnter", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +296,7 @@ public class Behavior extends NetObject  {
 
     public void OnDragLeave(Glyph g, EventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragLeave", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +306,7 @@ public class Behavior extends NetObject  {
 
     public void OnDragOver(Glyph g, DragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDragOver", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +316,7 @@ public class Behavior extends NetObject  {
 
     public void OnGiveFeedback(Glyph g, GiveFeedbackEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnGiveFeedback", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,7 +326,7 @@ public class Behavior extends NetObject  {
 
     public void OnLoseCapture(Glyph g, EventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnLoseCapture", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -304,7 +336,7 @@ public class Behavior extends NetObject  {
 
     public void OnQueryContinueDrag(Glyph g, QueryContinueDragEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnQueryContinueDrag", g == null ? null : g.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -318,9 +350,13 @@ public class Behavior extends NetObject  {
     
     public boolean getDisableAllCommands() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableAllCommands = null;
         try {
-            return (boolean)classInstance.Get("DisableAllCommands");
+            retObjectDisableAllCommands = classInstance.Get("DisableAllCommands");
+            return (boolean)retObjectDisableAllCommands;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisableAllCommands != null ? retObjectDisableAllCommands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +364,14 @@ public class Behavior extends NetObject  {
 
     public Cursor getCursor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cursor");
+            retObjectCursor = classInstance.Get("Cursor");
+            JCObject val = (JCObject)retObjectCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursor != null ? retObjectCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

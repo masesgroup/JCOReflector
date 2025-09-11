@@ -181,10 +181,14 @@ public class SoapFaultSubCode extends NetObject  {
     
     public SoapFaultSubCode getSubCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubCode");
+            retObjectSubCode = classInstance.Get("SubCode");
+            JCObject val = (JCObject)retObjectSubCode;
             return new SoapFaultSubCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubCode != null ? retObjectSubCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class SoapFaultSubCode extends NetObject  {
 
     public XmlQualifiedName getCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Code");
+            retObjectCode = classInstance.Get("Code");
+            JCObject val = (JCObject)retObjectCode;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCode != null ? retObjectCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

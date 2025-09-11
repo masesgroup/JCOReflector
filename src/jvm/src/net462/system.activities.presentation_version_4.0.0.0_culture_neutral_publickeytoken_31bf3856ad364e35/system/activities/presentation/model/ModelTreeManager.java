@@ -167,10 +167,14 @@ public class ModelTreeManager extends NetObject  {
     
     public ModelItem CreateModelItem(ModelItem parent, NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateModelItem = null;
         try {
-            JCObject objCreateModelItem = (JCObject)classInstance.Invoke("CreateModelItem", parent == null ? null : parent.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            retObjectCreateModelItem = classInstance.Invoke("CreateModelItem", parent == null ? null : parent.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objCreateModelItem = (JCObject)retObjectCreateModelItem;
             return new ModelItem(objCreateModelItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateModelItem != null ? retObjectCreateModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class ModelTreeManager extends NetObject  {
 
     public ModelItem GetModelItem(NetObject instance, boolean shouldExpandModelTree) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModelItem = null;
         try {
-            JCObject objGetModelItem = (JCObject)classInstance.Invoke("GetModelItem", instance == null ? null : instance.getJCOInstance(), shouldExpandModelTree);
+            retObjectGetModelItem = classInstance.Invoke("GetModelItem", instance == null ? null : instance.getJCOInstance(), shouldExpandModelTree);
+            JCObject objGetModelItem = (JCObject)retObjectGetModelItem;
             return new ModelItem(objGetModelItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModelItem != null ? retObjectGetModelItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ModelTreeManager extends NetObject  {
 
     public void Load(NetObject rootInstance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", rootInstance == null ? null : rootInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class ModelTreeManager extends NetObject  {
     
     public ModelItem getRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoot = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Root");
+            retObjectRoot = classInstance.Get("Root");
+            JCObject val = (JCObject)retObjectRoot;
             return new ModelItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoot != null ? retObjectRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

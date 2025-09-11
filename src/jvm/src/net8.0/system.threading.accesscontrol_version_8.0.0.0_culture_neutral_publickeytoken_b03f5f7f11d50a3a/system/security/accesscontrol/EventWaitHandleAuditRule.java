@@ -173,10 +173,14 @@ public class EventWaitHandleAuditRule extends AuditRule  {
     
     public EventWaitHandleRights getEventWaitHandleRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventWaitHandleRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventWaitHandleRights");
+            retObjectEventWaitHandleRights = classInstance.Get("EventWaitHandleRights");
+            JCObject val = (JCObject)retObjectEventWaitHandleRights;
             return new EventWaitHandleRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventWaitHandleRights != null ? retObjectEventWaitHandleRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

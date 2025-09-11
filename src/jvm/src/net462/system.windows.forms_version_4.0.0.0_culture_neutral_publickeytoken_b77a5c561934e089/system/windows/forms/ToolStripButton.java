@@ -216,10 +216,14 @@ public class ToolStripButton extends ToolStripItem  {
     
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +235,13 @@ public class ToolStripButton extends ToolStripItem  {
     
     public boolean getAutoToolTip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoToolTip = null;
         try {
-            return (boolean)classInstance.Get("AutoToolTip");
+            retObjectAutoToolTip = classInstance.Get("AutoToolTip");
+            return (boolean)retObjectAutoToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoToolTip != null ? retObjectAutoToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +249,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void setAutoToolTip(boolean AutoToolTip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoToolTip", AutoToolTip);
         } catch (JCNativeException jcne) {
@@ -251,9 +259,13 @@ public class ToolStripButton extends ToolStripItem  {
 
     public boolean getChecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecked = null;
         try {
-            return (boolean)classInstance.Get("Checked");
+            retObjectChecked = classInstance.Get("Checked");
+            return (boolean)retObjectChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChecked != null ? retObjectChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +273,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void setChecked(boolean Checked) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Checked", Checked);
         } catch (JCNativeException jcne) {
@@ -271,9 +283,13 @@ public class ToolStripButton extends ToolStripItem  {
 
     public boolean getCheckOnClick() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckOnClick = null;
         try {
-            return (boolean)classInstance.Get("CheckOnClick");
+            retObjectCheckOnClick = classInstance.Get("CheckOnClick");
+            return (boolean)retObjectCheckOnClick;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckOnClick != null ? retObjectCheckOnClick.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +297,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void setCheckOnClick(boolean CheckOnClick) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckOnClick", CheckOnClick);
         } catch (JCNativeException jcne) {
@@ -291,10 +307,14 @@ public class ToolStripButton extends ToolStripItem  {
 
     public CheckState getCheckState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckState");
+            retObjectCheckState = classInstance.Get("CheckState");
+            JCObject val = (JCObject)retObjectCheckState;
             return new CheckState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckState != null ? retObjectCheckState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +322,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void setCheckState(CheckState CheckState) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckState", CheckState == null ? null : CheckState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,7 +337,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void addCheckedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CheckedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -327,7 +347,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void removeCheckedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CheckedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -337,7 +357,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void addCheckStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CheckStateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -347,7 +367,7 @@ public class ToolStripButton extends ToolStripItem  {
 
     public void removeCheckStateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CheckStateChanged", handler);
         } catch (JCNativeException jcne) {

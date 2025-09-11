@@ -170,7 +170,7 @@ public class ConnectionPoint extends NetObject  {
     
     public void OnPaint(ActivityDesignerPaintEventArgs e, boolean drawHighlighted) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnPaint", e == null ? null : e.getJCOInstance(), drawHighlighted);
         } catch (JCNativeException jcne) {
@@ -184,9 +184,13 @@ public class ConnectionPoint extends NetObject  {
     
     public int getConnectionIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionIndex = null;
         try {
-            return (int)classInstance.Get("ConnectionIndex");
+            retObjectConnectionIndex = classInstance.Get("ConnectionIndex");
+            return (int)retObjectConnectionIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConnectionIndex != null ? retObjectConnectionIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class ConnectionPoint extends NetObject  {
 
     public Point getLocation() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +213,14 @@ public class ConnectionPoint extends NetObject  {
 
     public Rectangle getBounds() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class ConnectionPoint extends NetObject  {
 
     public ActivityDesigner getAssociatedDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociatedDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociatedDesigner");
+            retObjectAssociatedDesigner = classInstance.Get("AssociatedDesigner");
+            JCObject val = (JCObject)retObjectAssociatedDesigner;
             return new ActivityDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociatedDesigner != null ? retObjectAssociatedDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class ConnectionPoint extends NetObject  {
 
     public DesignerEdges getConnectionEdge() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionEdge = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionEdge");
+            retObjectConnectionEdge = classInstance.Get("ConnectionEdge");
+            JCObject val = (JCObject)retObjectConnectionEdge;
             return new DesignerEdges(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionEdge != null ? retObjectConnectionEdge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

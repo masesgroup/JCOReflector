@@ -176,9 +176,13 @@ public class ModifyDNRequest extends DirectoryRequest  {
     
     public boolean getDeleteOldRdn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteOldRdn = null;
         try {
-            return (boolean)classInstance.Get("DeleteOldRdn");
+            retObjectDeleteOldRdn = classInstance.Get("DeleteOldRdn");
+            return (boolean)retObjectDeleteOldRdn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDeleteOldRdn != null ? retObjectDeleteOldRdn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public void setDeleteOldRdn(boolean DeleteOldRdn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteOldRdn", DeleteOldRdn);
         } catch (JCNativeException jcne) {
@@ -196,9 +200,13 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public java.lang.String getDistinguishedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistinguishedName = null;
         try {
-            return (java.lang.String)classInstance.Get("DistinguishedName");
+            retObjectDistinguishedName = classInstance.Get("DistinguishedName");
+            return (java.lang.String)retObjectDistinguishedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDistinguishedName != null ? retObjectDistinguishedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public void setDistinguishedName(java.lang.String DistinguishedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DistinguishedName", DistinguishedName);
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public java.lang.String getNewName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewName = null;
         try {
-            return (java.lang.String)classInstance.Get("NewName");
+            retObjectNewName = classInstance.Get("NewName");
+            return (java.lang.String)retObjectNewName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewName != null ? retObjectNewName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public void setNewName(java.lang.String NewName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewName", NewName);
         } catch (JCNativeException jcne) {
@@ -236,9 +248,13 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public java.lang.String getNewParentDistinguishedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewParentDistinguishedName = null;
         try {
-            return (java.lang.String)classInstance.Get("NewParentDistinguishedName");
+            retObjectNewParentDistinguishedName = classInstance.Get("NewParentDistinguishedName");
+            return (java.lang.String)retObjectNewParentDistinguishedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNewParentDistinguishedName != null ? retObjectNewParentDistinguishedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class ModifyDNRequest extends DirectoryRequest  {
 
     public void setNewParentDistinguishedName(java.lang.String NewParentDistinguishedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NewParentDistinguishedName", NewParentDistinguishedName);
         } catch (JCNativeException jcne) {

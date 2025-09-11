@@ -165,10 +165,14 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
     
     public PrintProperty GetProperty(java.lang.String attribName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProperty = null;
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", attribName);
+            retObjectGetProperty = classInstance.Invoke("GetProperty", attribName);
+            JCObject objGetProperty = (JCObject)retObjectGetProperty;
             return new PrintProperty(objGetProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProperty != null ? retObjectGetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
 
     public void Add(PrintProperty attributeValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", attributeValue == null ? null : attributeValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -196,7 +200,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -206,7 +210,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
 
     public void OnDeserialization(NetObject sender) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserialization", sender == null ? null : sender.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +220,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
 
     public void SetProperty(java.lang.String attribName, PrintProperty attribValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetProperty", attribName, attribValue == null ? null : attribValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +231,7 @@ public class PrintPropertyDictionary extends Hashtable implements AutoCloseable 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

@@ -183,7 +183,7 @@ public class DBConcurrencyException extends SystemException {
     
     public void CopyToRows(DataRow[] array) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyToRows", (java.lang.Object)toObjectFromArray(array));
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class DBConcurrencyException extends SystemException {
 
     public void CopyToRows(DataRow[] array, int arrayIndex) throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyToRows", toObjectFromArray(array), arrayIndex);
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class DBConcurrencyException extends SystemException {
 
     public void GetObjectData(SerializationInfo si, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", si == null ? null : si.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -217,9 +217,13 @@ public class DBConcurrencyException extends SystemException {
     
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +231,14 @@ public class DBConcurrencyException extends SystemException {
 
     public DataRow getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            JCObject val = (JCObject)retObjectRow;
             return new DataRow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +246,7 @@ public class DBConcurrencyException extends SystemException {
 
     public void setRow(DataRow Row) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Row", Row == null ? null : Row.getJCOInstance());
         } catch (JCNativeException jcne) {

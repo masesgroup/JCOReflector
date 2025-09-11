@@ -170,9 +170,13 @@ public class ListViewGroupEventArgs extends EventArgs  {
     
     public int getGroupIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupIndex = null;
         try {
-            return (int)classInstance.Get("GroupIndex");
+            retObjectGroupIndex = classInstance.Get("GroupIndex");
+            return (int)retObjectGroupIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGroupIndex != null ? retObjectGroupIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

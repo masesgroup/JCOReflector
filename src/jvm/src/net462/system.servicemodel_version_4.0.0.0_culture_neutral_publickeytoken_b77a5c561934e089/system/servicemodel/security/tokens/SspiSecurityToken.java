@@ -183,9 +183,13 @@ public class SspiSecurityToken extends SecurityToken  {
     
     public boolean getAllowNtlm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowNtlm = null;
         try {
-            return (boolean)classInstance.Get("AllowNtlm");
+            retObjectAllowNtlm = classInstance.Get("AllowNtlm");
+            return (boolean)retObjectAllowNtlm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowNtlm != null ? retObjectAllowNtlm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class SspiSecurityToken extends SecurityToken  {
 
     public boolean getAllowUnauthenticatedCallers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowUnauthenticatedCallers = null;
         try {
-            return (boolean)classInstance.Get("AllowUnauthenticatedCallers");
+            retObjectAllowUnauthenticatedCallers = classInstance.Get("AllowUnauthenticatedCallers");
+            return (boolean)retObjectAllowUnauthenticatedCallers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowUnauthenticatedCallers != null ? retObjectAllowUnauthenticatedCallers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class SspiSecurityToken extends SecurityToken  {
 
     public boolean getExtractGroupsForWindowsAccounts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractGroupsForWindowsAccounts = null;
         try {
-            return (boolean)classInstance.Get("ExtractGroupsForWindowsAccounts");
+            retObjectExtractGroupsForWindowsAccounts = classInstance.Get("ExtractGroupsForWindowsAccounts");
+            return (boolean)retObjectExtractGroupsForWindowsAccounts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExtractGroupsForWindowsAccounts != null ? retObjectExtractGroupsForWindowsAccounts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class SspiSecurityToken extends SecurityToken  {
 
     public NetworkCredential getNetworkCredential() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetworkCredential = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetworkCredential");
+            retObjectNetworkCredential = classInstance.Get("NetworkCredential");
+            JCObject val = (JCObject)retObjectNetworkCredential;
             return new NetworkCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetworkCredential != null ? retObjectNetworkCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +240,14 @@ public class SspiSecurityToken extends SecurityToken  {
 
     public TokenImpersonationLevel getImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImpersonationLevel");
+            retObjectImpersonationLevel = classInstance.Get("ImpersonationLevel");
+            JCObject val = (JCObject)retObjectImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImpersonationLevel != null ? retObjectImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

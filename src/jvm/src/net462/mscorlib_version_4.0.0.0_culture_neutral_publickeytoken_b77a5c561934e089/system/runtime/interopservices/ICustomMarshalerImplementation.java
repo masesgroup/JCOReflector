@@ -142,9 +142,19 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
     
     public int GetNativeDataSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNativeDataSize = null;
         try {
-            return (int)classInstance.Invoke("GetNativeDataSize");
+            retObjectGetNativeDataSize = classInstance.Invoke("GetNativeDataSize");
+            return (int)retObjectGetNativeDataSize;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNativeDataSizeNumber = (java.lang.Number)retObjectGetNativeDataSize;
+                return retObjectGetNativeDataSizeNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetNativeDataSize != null ? retObjectGetNativeDataSize.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,7 +162,7 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
 
     public void CleanUpManagedData(NetObject ManagedObj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CleanUpManagedData", ManagedObj == null ? null : ManagedObj.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,9 +166,13 @@ public class QuicListenerOptions extends NetObject  {
     
     public int getListenBacklog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenBacklog = null;
         try {
-            return (int)classInstance.Get("ListenBacklog");
+            retObjectListenBacklog = classInstance.Get("ListenBacklog");
+            return (int)retObjectListenBacklog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectListenBacklog != null ? retObjectListenBacklog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class QuicListenerOptions extends NetObject  {
 
     public void setListenBacklog(int ListenBacklog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenBacklog", ListenBacklog);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class QuicListenerOptions extends NetObject  {
 
     public IPEndPoint getListenEndPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenEndPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ListenEndPoint");
+            retObjectListenEndPoint = classInstance.Get("ListenEndPoint");
+            JCObject val = (JCObject)retObjectListenEndPoint;
             return new IPEndPoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListenEndPoint != null ? retObjectListenEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class QuicListenerOptions extends NetObject  {
 
     public void setListenEndPoint(IPEndPoint ListenEndPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenEndPoint", ListenEndPoint == null ? null : ListenEndPoint.getJCOInstance());
         } catch (JCNativeException jcne) {

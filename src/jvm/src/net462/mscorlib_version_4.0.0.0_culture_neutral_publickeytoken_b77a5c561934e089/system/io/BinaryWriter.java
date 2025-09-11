@@ -194,9 +194,19 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     
     public long Seek(int offset, SeekOrigin origin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeek = null;
         try {
-            return (long)classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            retObjectSeek = classInstance.Invoke("Seek", offset, origin == null ? null : origin.getJCOInstance());
+            return (long)retObjectSeek;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSeekNumber = (java.lang.Number)retObjectSeek;
+                return retObjectSeekNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectSeek != null ? retObjectSeek.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +214,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -214,7 +224,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -224,7 +234,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Flush() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -234,7 +244,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(boolean value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -244,7 +254,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(byte value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -254,7 +264,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(byte[] buffer) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
@@ -264,7 +274,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -274,7 +284,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", buffer, index, count);
         } catch (JCNativeException jcne) {
@@ -284,7 +294,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -294,7 +304,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(char ch) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", ch);
         } catch (JCNativeException jcne) {
@@ -304,7 +314,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(char[] chars) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", (java.lang.Object)chars);
         } catch (JCNativeException jcne) {
@@ -314,7 +324,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(char[] chars, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", chars, index, count);
         } catch (JCNativeException jcne) {
@@ -324,7 +334,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(double value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -334,7 +344,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(short value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -344,7 +354,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(int value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -354,7 +364,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -364,7 +374,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(SByte value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -374,7 +384,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(Single value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,7 +394,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(Decimal value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -394,7 +404,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value);
         } catch (JCNativeException jcne) {
@@ -404,7 +414,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(UInt16 value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -414,7 +424,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(UInt32 value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,7 +434,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
 
     public void Write(UInt64 value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,7 +445,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -451,10 +461,14 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
     
     public Stream getBaseStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseStream");
+            retObjectBaseStream = classInstance.Get("BaseStream");
+            JCObject val = (JCObject)retObjectBaseStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseStream != null ? retObjectBaseStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

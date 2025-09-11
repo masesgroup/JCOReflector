@@ -170,9 +170,13 @@ public class DebuggableAttribute extends Attribute  {
     
     public boolean getIsJITOptimizerDisabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsJITOptimizerDisabled = null;
         try {
-            return (boolean)classInstance.Get("IsJITOptimizerDisabled");
+            retObjectIsJITOptimizerDisabled = classInstance.Get("IsJITOptimizerDisabled");
+            return (boolean)retObjectIsJITOptimizerDisabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsJITOptimizerDisabled != null ? retObjectIsJITOptimizerDisabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class DebuggableAttribute extends Attribute  {
 
     public boolean getIsJITTrackingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsJITTrackingEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsJITTrackingEnabled");
+            retObjectIsJITTrackingEnabled = classInstance.Get("IsJITTrackingEnabled");
+            return (boolean)retObjectIsJITTrackingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsJITTrackingEnabled != null ? retObjectIsJITTrackingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

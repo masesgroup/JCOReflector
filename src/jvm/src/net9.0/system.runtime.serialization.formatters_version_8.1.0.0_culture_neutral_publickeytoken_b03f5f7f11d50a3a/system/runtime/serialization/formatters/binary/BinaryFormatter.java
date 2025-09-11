@@ -179,10 +179,14 @@ public class BinaryFormatter extends NetObject  {
     
     public NetObject Deserialize(Stream serializationStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserialize = null;
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance());
+            retObjectDeserialize = classInstance.Invoke("Deserialize", serializationStream == null ? null : serializationStream.getJCOInstance());
+            JCObject objDeserialize = (JCObject)retObjectDeserialize;
             return new NetObject(objDeserialize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserialize != null ? retObjectDeserialize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void Serialize(Stream serializationStream, NetObject graph) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Serialize", serializationStream == null ? null : serializationStream.getJCOInstance(), graph == null ? null : graph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,10 +208,14 @@ public class BinaryFormatter extends NetObject  {
     
     public FormatterAssemblyStyle getAssemblyFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyFormat");
+            retObjectAssemblyFormat = classInstance.Get("AssemblyFormat");
+            JCObject val = (JCObject)retObjectAssemblyFormat;
             return new FormatterAssemblyStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyFormat != null ? retObjectAssemblyFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setAssemblyFormat(FormatterAssemblyStyle AssemblyFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyFormat", AssemblyFormat == null ? null : AssemblyFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,10 +233,14 @@ public class BinaryFormatter extends NetObject  {
 
     public FormatterTypeStyle getTypeFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeFormat");
+            retObjectTypeFormat = classInstance.Get("TypeFormat");
+            JCObject val = (JCObject)retObjectTypeFormat;
             return new FormatterTypeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeFormat != null ? retObjectTypeFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +248,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setTypeFormat(FormatterTypeStyle TypeFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeFormat", TypeFormat == null ? null : TypeFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -246,10 +258,14 @@ public class BinaryFormatter extends NetObject  {
 
     public TypeFilterLevel getFilterLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FilterLevel");
+            retObjectFilterLevel = classInstance.Get("FilterLevel");
+            JCObject val = (JCObject)retObjectFilterLevel;
             return new TypeFilterLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilterLevel != null ? retObjectFilterLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +273,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setFilterLevel(TypeFilterLevel FilterLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterLevel", FilterLevel == null ? null : FilterLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +283,14 @@ public class BinaryFormatter extends NetObject  {
 
     public ISurrogateSelector getSurrogateSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSurrogateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SurrogateSelector");
+            retObjectSurrogateSelector = classInstance.Get("SurrogateSelector");
+            JCObject val = (JCObject)retObjectSurrogateSelector;
             return new ISurrogateSelectorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSurrogateSelector != null ? retObjectSurrogateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +298,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setSurrogateSelector(ISurrogateSelector SurrogateSelector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SurrogateSelector", SurrogateSelector == null ? null : SurrogateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +308,14 @@ public class BinaryFormatter extends NetObject  {
 
     public SerializationBinder getBinder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binder");
+            retObjectBinder = classInstance.Get("Binder");
+            JCObject val = (JCObject)retObjectBinder;
             return new SerializationBinder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinder != null ? retObjectBinder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +323,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setBinder(SerializationBinder Binder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binder", Binder == null ? null : Binder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +333,14 @@ public class BinaryFormatter extends NetObject  {
 
     public StreamingContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new StreamingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class BinaryFormatter extends NetObject  {
 
     public void setContext(StreamingContext Context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {

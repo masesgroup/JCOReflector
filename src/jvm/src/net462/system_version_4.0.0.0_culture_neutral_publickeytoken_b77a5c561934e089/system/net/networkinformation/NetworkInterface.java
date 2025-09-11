@@ -161,9 +161,13 @@ public class NetworkInterface extends NetObject  {
     
     public static boolean GetIsNetworkAvailable() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.net.sockets.SocketException, system.NotImplementedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsNetworkAvailable = null;
         try {
-            return (boolean)classType.Invoke("GetIsNetworkAvailable");
+            retObjectGetIsNetworkAvailable = classType.Invoke("GetIsNetworkAvailable");
+            return (boolean)retObjectGetIsNetworkAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsNetworkAvailable != null ? retObjectGetIsNetworkAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class NetworkInterface extends NetObject  {
 
     public boolean Supports(NetworkInterfaceComponent networkInterfaceComponent) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupports = null;
         try {
-            return (boolean)classInstance.Invoke("Supports", networkInterfaceComponent == null ? null : networkInterfaceComponent.getJCOInstance());
+            retObjectSupports = classInstance.Invoke("Supports", networkInterfaceComponent == null ? null : networkInterfaceComponent.getJCOInstance());
+            return (boolean)retObjectSupports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupports != null ? retObjectSupports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class NetworkInterface extends NetObject  {
 
     public IPInterfaceProperties GetIPProperties() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIPProperties = null;
         try {
-            JCObject objGetIPProperties = (JCObject)classInstance.Invoke("GetIPProperties");
+            retObjectGetIPProperties = classInstance.Invoke("GetIPProperties");
+            JCObject objGetIPProperties = (JCObject)retObjectGetIPProperties;
             return new IPInterfaceProperties(objGetIPProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIPProperties != null ? retObjectGetIPProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class NetworkInterface extends NetObject  {
 
     public IPInterfaceStatistics GetIPStatistics() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIPStatistics = null;
         try {
-            JCObject objGetIPStatistics = (JCObject)classInstance.Invoke("GetIPStatistics");
+            retObjectGetIPStatistics = classInstance.Invoke("GetIPStatistics");
+            JCObject objGetIPStatistics = (JCObject)retObjectGetIPStatistics;
             return new IPInterfaceStatistics(objGetIPStatistics);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIPStatistics != null ? retObjectGetIPStatistics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class NetworkInterface extends NetObject  {
 
     public IPv4InterfaceStatistics GetIPv4Statistics() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIPv4Statistics = null;
         try {
-            JCObject objGetIPv4Statistics = (JCObject)classInstance.Invoke("GetIPv4Statistics");
+            retObjectGetIPv4Statistics = classInstance.Invoke("GetIPv4Statistics");
+            JCObject objGetIPv4Statistics = (JCObject)retObjectGetIPv4Statistics;
             return new IPv4InterfaceStatistics(objGetIPv4Statistics);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIPv4Statistics != null ? retObjectGetIPv4Statistics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,16 +234,20 @@ public class NetworkInterface extends NetObject  {
 
     public static NetworkInterface[] GetAllNetworkInterfaces() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.networkinformation.NetworkInformationException, system.resources.MissingManifestResourceException, system.net.sockets.SocketException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAllNetworkInterfaces = null;
         try {
             ArrayList<NetworkInterface> resultingArrayList = new ArrayList<NetworkInterface>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetAllNetworkInterfaces");
+            retObjectGetAllNetworkInterfaces = classType.Invoke("GetAllNetworkInterfaces");
+            JCObject resultingObjects = (JCObject)retObjectGetAllNetworkInterfaces;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetworkInterface(resultingObject));
             }
             NetworkInterface[] resultingArray = new NetworkInterface[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAllNetworkInterfaces != null ? retObjectGetAllNetworkInterfaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +255,14 @@ public class NetworkInterface extends NetObject  {
 
     public PhysicalAddress GetPhysicalAddress() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPhysicalAddress = null;
         try {
-            JCObject objGetPhysicalAddress = (JCObject)classInstance.Invoke("GetPhysicalAddress");
+            retObjectGetPhysicalAddress = classInstance.Invoke("GetPhysicalAddress");
+            JCObject objGetPhysicalAddress = (JCObject)retObjectGetPhysicalAddress;
             return new PhysicalAddress(objGetPhysicalAddress);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPhysicalAddress != null ? retObjectGetPhysicalAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +274,13 @@ public class NetworkInterface extends NetObject  {
     
     public boolean getIsReceiveOnly() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReceiveOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReceiveOnly");
+            retObjectIsReceiveOnly = classInstance.Get("IsReceiveOnly");
+            return (boolean)retObjectIsReceiveOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReceiveOnly != null ? retObjectIsReceiveOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +288,13 @@ public class NetworkInterface extends NetObject  {
 
     public boolean getSupportsMulticast() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsMulticast = null;
         try {
-            return (boolean)classInstance.Get("SupportsMulticast");
+            retObjectSupportsMulticast = classInstance.Get("SupportsMulticast");
+            return (boolean)retObjectSupportsMulticast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsMulticast != null ? retObjectSupportsMulticast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +302,13 @@ public class NetworkInterface extends NetObject  {
 
     public static int getIPv6LoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIPv6LoopbackInterfaceIndex = null;
         try {
-            return (int)classType.Get("IPv6LoopbackInterfaceIndex");
+            retObjectIPv6LoopbackInterfaceIndex = classType.Get("IPv6LoopbackInterfaceIndex");
+            return (int)retObjectIPv6LoopbackInterfaceIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIPv6LoopbackInterfaceIndex != null ? retObjectIPv6LoopbackInterfaceIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +316,13 @@ public class NetworkInterface extends NetObject  {
 
     public static int getLoopbackInterfaceIndex() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.net.sockets.SocketException, system.net.networkinformation.NetworkInformationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoopbackInterfaceIndex = null;
         try {
-            return (int)classType.Get("LoopbackInterfaceIndex");
+            retObjectLoopbackInterfaceIndex = classType.Get("LoopbackInterfaceIndex");
+            return (int)retObjectLoopbackInterfaceIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLoopbackInterfaceIndex != null ? retObjectLoopbackInterfaceIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,9 +330,13 @@ public class NetworkInterface extends NetObject  {
 
     public long getSpeed() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpeed = null;
         try {
-            return (long)classInstance.Get("Speed");
+            retObjectSpeed = classInstance.Get("Speed");
+            return (long)retObjectSpeed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSpeed != null ? retObjectSpeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +344,14 @@ public class NetworkInterface extends NetObject  {
 
     public NetworkInterfaceType getNetworkInterfaceType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetworkInterfaceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetworkInterfaceType");
+            retObjectNetworkInterfaceType = classInstance.Get("NetworkInterfaceType");
+            JCObject val = (JCObject)retObjectNetworkInterfaceType;
             return new NetworkInterfaceType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetworkInterfaceType != null ? retObjectNetworkInterfaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +359,14 @@ public class NetworkInterface extends NetObject  {
 
     public OperationalStatus getOperationalStatus() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationalStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationalStatus");
+            retObjectOperationalStatus = classInstance.Get("OperationalStatus");
+            JCObject val = (JCObject)retObjectOperationalStatus;
             return new OperationalStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationalStatus != null ? retObjectOperationalStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +374,13 @@ public class NetworkInterface extends NetObject  {
 
     public java.lang.String getDescription() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +388,13 @@ public class NetworkInterface extends NetObject  {
 
     public java.lang.String getId() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (java.lang.String)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (java.lang.String)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +402,13 @@ public class NetworkInterface extends NetObject  {
 
     public java.lang.String getName() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

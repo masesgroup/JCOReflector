@@ -166,9 +166,13 @@ public class CngKeyBlobFormat extends NetObject  {
     
     public boolean Equals(CngKeyBlobFormat other) throws Throwable, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class CngKeyBlobFormat extends NetObject  {
     
     public static CngKeyBlobFormat getEccFullPrivateBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEccFullPrivateBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("EccFullPrivateBlob");
+            retObjectEccFullPrivateBlob = classType.Get("EccFullPrivateBlob");
+            JCObject val = (JCObject)retObjectEccFullPrivateBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEccFullPrivateBlob != null ? retObjectEccFullPrivateBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getEccFullPublicBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEccFullPublicBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("EccFullPublicBlob");
+            retObjectEccFullPublicBlob = classType.Get("EccFullPublicBlob");
+            JCObject val = (JCObject)retObjectEccFullPublicBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEccFullPublicBlob != null ? retObjectEccFullPublicBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +214,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getEccPrivateBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEccPrivateBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("EccPrivateBlob");
+            retObjectEccPrivateBlob = classType.Get("EccPrivateBlob");
+            JCObject val = (JCObject)retObjectEccPrivateBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEccPrivateBlob != null ? retObjectEccPrivateBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getEccPublicBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEccPublicBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("EccPublicBlob");
+            retObjectEccPublicBlob = classType.Get("EccPublicBlob");
+            JCObject val = (JCObject)retObjectEccPublicBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEccPublicBlob != null ? retObjectEccPublicBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getGenericPrivateBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericPrivateBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericPrivateBlob");
+            retObjectGenericPrivateBlob = classType.Get("GenericPrivateBlob");
+            JCObject val = (JCObject)retObjectGenericPrivateBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericPrivateBlob != null ? retObjectGenericPrivateBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getGenericPublicBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenericPublicBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("GenericPublicBlob");
+            retObjectGenericPublicBlob = classType.Get("GenericPublicBlob");
+            JCObject val = (JCObject)retObjectGenericPublicBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericPublicBlob != null ? retObjectGenericPublicBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getOpaqueTransportBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpaqueTransportBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("OpaqueTransportBlob");
+            retObjectOpaqueTransportBlob = classType.Get("OpaqueTransportBlob");
+            JCObject val = (JCObject)retObjectOpaqueTransportBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpaqueTransportBlob != null ? retObjectOpaqueTransportBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +289,14 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public static CngKeyBlobFormat getPkcs8PrivateBlob() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPkcs8PrivateBlob = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pkcs8PrivateBlob");
+            retObjectPkcs8PrivateBlob = classType.Get("Pkcs8PrivateBlob");
+            JCObject val = (JCObject)retObjectPkcs8PrivateBlob;
             return new CngKeyBlobFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPkcs8PrivateBlob != null ? retObjectPkcs8PrivateBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +304,13 @@ public class CngKeyBlobFormat extends NetObject  {
 
     public java.lang.String getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            return (java.lang.String)retObjectFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -157,10 +157,14 @@ public class BooleanPrototype extends BooleanObject  {
     
     public static NetObject valueOf(NetObject thisob) throws Throwable, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectvalueOf = null;
         try {
-            JCObject objvalueOf = (JCObject)classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            retObjectvalueOf = classType.Invoke("valueOf", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objvalueOf = (JCObject)retObjectvalueOf;
             return new NetObject(objvalueOf);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectvalueOf != null ? retObjectvalueOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class BooleanPrototype extends BooleanObject  {
 
     public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, microsoft.jscript.JScriptException, system.NotImplementedException, system.MissingMethodException, system.NullReferenceException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class BooleanPrototype extends BooleanObject  {
     
     public static BooleanConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new BooleanConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

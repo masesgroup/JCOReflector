@@ -170,7 +170,7 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
     
     public void RenderItem(HtmlTextWriter writer, boolean extractRows, boolean tableLayout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderItem", writer == null ? null : writer.getJCOInstance(), extractRows, tableLayout);
         } catch (JCNativeException jcne) {
@@ -184,9 +184,13 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
     
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemIndex = null;
         try {
-            return (int)classInstance.Get("ItemIndex");
+            retObjectItemIndex = classInstance.Get("ItemIndex");
+            return (int)retObjectItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +198,14 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
 
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataItem");
+            retObjectDataItem = classInstance.Get("DataItem");
+            JCObject val = (JCObject)retObjectDataItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataItem != null ? retObjectDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
 
     public void setDataItem(NetObject DataItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataItem", DataItem == null ? null : DataItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +223,14 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
 
     public ListItemType getItemType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemType");
+            retObjectItemType = classInstance.Get("ItemType");
+            JCObject val = (JCObject)retObjectItemType;
             return new ListItemType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemType != null ? retObjectItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

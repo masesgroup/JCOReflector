@@ -177,9 +177,13 @@ public class TrustManagerContext extends NetObject  {
     
     public boolean getIgnorePersistedDecision() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnorePersistedDecision = null;
         try {
-            return (boolean)classInstance.Get("IgnorePersistedDecision");
+            retObjectIgnorePersistedDecision = classInstance.Get("IgnorePersistedDecision");
+            return (boolean)retObjectIgnorePersistedDecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnorePersistedDecision != null ? retObjectIgnorePersistedDecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setIgnorePersistedDecision(boolean IgnorePersistedDecision) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnorePersistedDecision", IgnorePersistedDecision);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class TrustManagerContext extends NetObject  {
 
     public boolean getKeepAlive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAlive = null;
         try {
-            return (boolean)classInstance.Get("KeepAlive");
+            retObjectKeepAlive = classInstance.Get("KeepAlive");
+            return (boolean)retObjectKeepAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepAlive != null ? retObjectKeepAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setKeepAlive(boolean KeepAlive) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAlive", KeepAlive);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class TrustManagerContext extends NetObject  {
 
     public boolean getNoPrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoPrompt = null;
         try {
-            return (boolean)classInstance.Get("NoPrompt");
+            retObjectNoPrompt = classInstance.Get("NoPrompt");
+            return (boolean)retObjectNoPrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNoPrompt != null ? retObjectNoPrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setNoPrompt(boolean NoPrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoPrompt", NoPrompt);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class TrustManagerContext extends NetObject  {
 
     public boolean getPersist() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersist = null;
         try {
-            return (boolean)classInstance.Get("Persist");
+            retObjectPersist = classInstance.Get("Persist");
+            return (boolean)retObjectPersist;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersist != null ? retObjectPersist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setPersist(boolean Persist) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Persist", Persist);
         } catch (JCNativeException jcne) {
@@ -257,10 +273,14 @@ public class TrustManagerContext extends NetObject  {
 
     public ApplicationIdentity getPreviousApplicationIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousApplicationIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousApplicationIdentity");
+            retObjectPreviousApplicationIdentity = classInstance.Get("PreviousApplicationIdentity");
+            JCObject val = (JCObject)retObjectPreviousApplicationIdentity;
             return new ApplicationIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousApplicationIdentity != null ? retObjectPreviousApplicationIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setPreviousApplicationIdentity(ApplicationIdentity PreviousApplicationIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviousApplicationIdentity", PreviousApplicationIdentity == null ? null : PreviousApplicationIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,10 +298,14 @@ public class TrustManagerContext extends NetObject  {
 
     public TrustManagerUIContext getUIContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUIContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UIContext");
+            retObjectUIContext = classInstance.Get("UIContext");
+            JCObject val = (JCObject)retObjectUIContext;
             return new TrustManagerUIContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUIContext != null ? retObjectUIContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +313,7 @@ public class TrustManagerContext extends NetObject  {
 
     public void setUIContext(TrustManagerUIContext UIContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UIContext", UIContext == null ? null : UIContext.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -155,10 +155,14 @@ public class DiscoveryReference extends NetObject  {
     
     public NetObject ReadDocument(Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadDocument = null;
         try {
-            JCObject objReadDocument = (JCObject)classInstance.Invoke("ReadDocument", stream == null ? null : stream.getJCOInstance());
+            retObjectReadDocument = classInstance.Invoke("ReadDocument", stream == null ? null : stream.getJCOInstance());
+            JCObject objReadDocument = (JCObject)retObjectReadDocument;
             return new NetObject(objReadDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadDocument != null ? retObjectReadDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class DiscoveryReference extends NetObject  {
 
     public static java.lang.String FilenameFromUrl(java.lang.String url) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFilenameFromUrl = null;
         try {
-            return (java.lang.String)classType.Invoke("FilenameFromUrl", url);
+            retObjectFilenameFromUrl = classType.Invoke("FilenameFromUrl", url);
+            return (java.lang.String)retObjectFilenameFromUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFilenameFromUrl != null ? retObjectFilenameFromUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +184,7 @@ public class DiscoveryReference extends NetObject  {
 
     public void Resolve() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Resolve");
         } catch (JCNativeException jcne) {
@@ -186,7 +194,7 @@ public class DiscoveryReference extends NetObject  {
 
     public void WriteDocument(NetObject document, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteDocument", document == null ? null : document.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class DiscoveryReference extends NetObject  {
     
     public java.lang.String getDefaultFilename() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultFilename");
+            retObjectDefaultFilename = classInstance.Get("DefaultFilename");
+            return (java.lang.String)retObjectDefaultFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultFilename != null ? retObjectDefaultFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +222,13 @@ public class DiscoveryReference extends NetObject  {
 
     public java.lang.String getUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("Url");
+            retObjectUrl = classInstance.Get("Url");
+            return (java.lang.String)retObjectUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUrl != null ? retObjectUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +236,7 @@ public class DiscoveryReference extends NetObject  {
 
     public void setUrl(java.lang.String Url) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Url", Url);
         } catch (JCNativeException jcne) {
@@ -230,10 +246,14 @@ public class DiscoveryReference extends NetObject  {
 
     public DiscoveryClientProtocol getClientProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientProtocol = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientProtocol");
+            retObjectClientProtocol = classInstance.Get("ClientProtocol");
+            JCObject val = (JCObject)retObjectClientProtocol;
             return new DiscoveryClientProtocol(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientProtocol != null ? retObjectClientProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +261,7 @@ public class DiscoveryReference extends NetObject  {
 
     public void setClientProtocol(DiscoveryClientProtocol ClientProtocol) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientProtocol", ClientProtocol == null ? null : ClientProtocol.getJCOInstance());
         } catch (JCNativeException jcne) {

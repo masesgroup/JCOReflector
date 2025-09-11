@@ -158,9 +158,13 @@ public class UiSynchronizationContext extends NetObject  {
     
     public static int getManagedUiThreadId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectManagedUiThreadId = null;
         try {
-            return (int)classType.Get("ManagedUiThreadId");
+            retObjectManagedUiThreadId = classType.Get("ManagedUiThreadId");
+            return (int)retObjectManagedUiThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectManagedUiThreadId != null ? retObjectManagedUiThreadId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class UiSynchronizationContext extends NetObject  {
 
     public static void setManagedUiThreadId(int ManagedUiThreadId) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ManagedUiThreadId", ManagedUiThreadId);
         } catch (JCNativeException jcne) {
@@ -178,10 +182,14 @@ public class UiSynchronizationContext extends NetObject  {
 
     public static SynchronizationContext getCurrent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new SynchronizationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class UiSynchronizationContext extends NetObject  {
 
     public static void setCurrent(SynchronizationContext Current) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -164,10 +164,12 @@ public class HttpContentHeaders extends HttpHeaders  {
     
     public byte[] getContentMD5() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentMD5 = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ContentMD5");
+            retObjectContentMD5 = classInstance.Get("ContentMD5");
+            JCObject resultingObjects = (JCObject)retObjectContentMD5;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -176,6 +178,8 @@ public class HttpContentHeaders extends HttpHeaders  {
 				resultingArray[indexContentMD5] = (byte)resultingArrayList.get(indexContentMD5);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectContentMD5 != null ? retObjectContentMD5.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public void setContentMD5(byte[] ContentMD5) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentMD5", ContentMD5);
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public ContentDispositionHeaderValue getContentDisposition() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentDisposition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentDisposition");
+            retObjectContentDisposition = classInstance.Get("ContentDisposition");
+            JCObject val = (JCObject)retObjectContentDisposition;
             return new ContentDispositionHeaderValue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentDisposition != null ? retObjectContentDisposition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public void setContentDisposition(ContentDispositionHeaderValue ContentDisposition) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentDisposition", ContentDisposition == null ? null : ContentDisposition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +222,14 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public ContentRangeHeaderValue getContentRange() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentRange");
+            retObjectContentRange = classInstance.Get("ContentRange");
+            JCObject val = (JCObject)retObjectContentRange;
             return new ContentRangeHeaderValue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentRange != null ? retObjectContentRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +237,7 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public void setContentRange(ContentRangeHeaderValue ContentRange) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentRange", ContentRange == null ? null : ContentRange.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,10 +247,14 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public MediaTypeHeaderValue getContentType() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            JCObject val = (JCObject)retObjectContentType;
             return new MediaTypeHeaderValue(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public void setContentType(MediaTypeHeaderValue ContentType) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentType", ContentType == null ? null : ContentType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,10 +272,14 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public Uri getContentLocation() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentLocation");
+            retObjectContentLocation = classInstance.Get("ContentLocation");
+            JCObject val = (JCObject)retObjectContentLocation;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentLocation != null ? retObjectContentLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class HttpContentHeaders extends HttpHeaders  {
 
     public void setContentLocation(Uri ContentLocation) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentLocation", ContentLocation == null ? null : ContentLocation.getJCOInstance());
         } catch (JCNativeException jcne) {

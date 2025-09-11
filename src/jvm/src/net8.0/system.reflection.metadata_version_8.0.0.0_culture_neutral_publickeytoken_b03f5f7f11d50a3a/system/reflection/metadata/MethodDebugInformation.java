@@ -161,10 +161,14 @@ public class MethodDebugInformation extends ValueType  {
     
     public MethodDefinitionHandle GetStateMachineKickoffMethod() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStateMachineKickoffMethod = null;
         try {
-            JCObject objGetStateMachineKickoffMethod = (JCObject)classInstance.Invoke("GetStateMachineKickoffMethod");
+            retObjectGetStateMachineKickoffMethod = classInstance.Invoke("GetStateMachineKickoffMethod");
+            JCObject objGetStateMachineKickoffMethod = (JCObject)retObjectGetStateMachineKickoffMethod;
             return new MethodDefinitionHandle(objGetStateMachineKickoffMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStateMachineKickoffMethod != null ? retObjectGetStateMachineKickoffMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class MethodDebugInformation extends ValueType  {
 
     public SequencePointCollection GetSequencePoints() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSequencePoints = null;
         try {
-            JCObject objGetSequencePoints = (JCObject)classInstance.Invoke("GetSequencePoints");
+            retObjectGetSequencePoints = classInstance.Invoke("GetSequencePoints");
+            JCObject objGetSequencePoints = (JCObject)retObjectGetSequencePoints;
             return new SequencePointCollection(objGetSequencePoints);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSequencePoints != null ? retObjectGetSequencePoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class MethodDebugInformation extends ValueType  {
     
     public BlobHandle getSequencePointsBlob() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSequencePointsBlob = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SequencePointsBlob");
+            retObjectSequencePointsBlob = classInstance.Get("SequencePointsBlob");
+            JCObject val = (JCObject)retObjectSequencePointsBlob;
             return new BlobHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSequencePointsBlob != null ? retObjectSequencePointsBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +210,14 @@ public class MethodDebugInformation extends ValueType  {
 
     public DocumentHandle getDocument() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new DocumentHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +225,14 @@ public class MethodDebugInformation extends ValueType  {
 
     public StandaloneSignatureHandle getLocalSignature() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalSignature");
+            retObjectLocalSignature = classInstance.Get("LocalSignature");
+            JCObject val = (JCObject)retObjectLocalSignature;
             return new StandaloneSignatureHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalSignature != null ? retObjectLocalSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

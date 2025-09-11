@@ -144,10 +144,14 @@ public class IProcessHostFactoryHelperImplementation extends NetObject implement
     
     public NetObject GetProcessHost(IProcessHostSupportFunctions functions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProcessHost = null;
         try {
-            JCObject objGetProcessHost = (JCObject)classInstance.Invoke("GetProcessHost", functions == null ? null : functions.getJCOInstance());
+            retObjectGetProcessHost = classInstance.Invoke("GetProcessHost", functions == null ? null : functions.getJCOInstance());
+            JCObject objGetProcessHost = (JCObject)retObjectGetProcessHost;
             return new NetObject(objGetProcessHost);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProcessHost != null ? retObjectGetProcessHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

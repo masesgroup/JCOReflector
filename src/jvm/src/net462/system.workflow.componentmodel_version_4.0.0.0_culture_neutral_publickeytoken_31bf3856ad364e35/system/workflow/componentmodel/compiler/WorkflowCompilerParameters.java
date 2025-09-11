@@ -208,9 +208,13 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
     
     public boolean getGenerateCodeCompileUnitOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateCodeCompileUnitOnly = null;
         try {
-            return (boolean)classInstance.Get("GenerateCodeCompileUnitOnly");
+            retObjectGenerateCodeCompileUnitOnly = classInstance.Get("GenerateCodeCompileUnitOnly");
+            return (boolean)retObjectGenerateCodeCompileUnitOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGenerateCodeCompileUnitOnly != null ? retObjectGenerateCodeCompileUnitOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +222,7 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public void setGenerateCodeCompileUnitOnly(boolean GenerateCodeCompileUnitOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerateCodeCompileUnitOnly", GenerateCodeCompileUnitOnly);
         } catch (JCNativeException jcne) {
@@ -228,10 +232,14 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public StringCollection getLibraryPaths() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLibraryPaths = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LibraryPaths");
+            retObjectLibraryPaths = classInstance.Get("LibraryPaths");
+            JCObject val = (JCObject)retObjectLibraryPaths;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLibraryPaths != null ? retObjectLibraryPaths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +247,13 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public java.lang.String getCompilerOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilerOptions = null;
         try {
-            return (java.lang.String)classInstance.Get("CompilerOptions");
+            retObjectCompilerOptions = classInstance.Get("CompilerOptions");
+            return (java.lang.String)retObjectCompilerOptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompilerOptions != null ? retObjectCompilerOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +261,7 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public void setCompilerOptions(java.lang.String CompilerOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompilerOptions", CompilerOptions);
         } catch (JCNativeException jcne) {
@@ -259,9 +271,13 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public java.lang.String getLanguageToUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguageToUse = null;
         try {
-            return (java.lang.String)classInstance.Get("LanguageToUse");
+            retObjectLanguageToUse = classInstance.Get("LanguageToUse");
+            return (java.lang.String)retObjectLanguageToUse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguageToUse != null ? retObjectLanguageToUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +285,7 @@ public class WorkflowCompilerParameters extends CompilerParameters  {
 
     public void setLanguageToUse(java.lang.String LanguageToUse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LanguageToUse", LanguageToUse);
         } catch (JCNativeException jcne) {

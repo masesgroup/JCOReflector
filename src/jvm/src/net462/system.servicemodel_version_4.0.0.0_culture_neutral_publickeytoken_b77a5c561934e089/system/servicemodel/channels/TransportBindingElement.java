@@ -158,9 +158,13 @@ public class TransportBindingElement extends BindingElement  {
     
     public boolean getManualAddressing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualAddressing = null;
         try {
-            return (boolean)classInstance.Get("ManualAddressing");
+            retObjectManualAddressing = classInstance.Get("ManualAddressing");
+            return (boolean)retObjectManualAddressing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectManualAddressing != null ? retObjectManualAddressing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class TransportBindingElement extends BindingElement  {
 
     public void setManualAddressing(boolean ManualAddressing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualAddressing", ManualAddressing);
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class TransportBindingElement extends BindingElement  {
 
     public long getMaxBufferPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferPoolSize = null;
         try {
-            return (long)classInstance.Get("MaxBufferPoolSize");
+            retObjectMaxBufferPoolSize = classInstance.Get("MaxBufferPoolSize");
+            return (long)retObjectMaxBufferPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxBufferPoolSize != null ? retObjectMaxBufferPoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class TransportBindingElement extends BindingElement  {
 
     public void setMaxBufferPoolSize(long MaxBufferPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferPoolSize", MaxBufferPoolSize);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class TransportBindingElement extends BindingElement  {
 
     public long getMaxReceivedMessageSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReceivedMessageSize = null;
         try {
-            return (long)classInstance.Get("MaxReceivedMessageSize");
+            retObjectMaxReceivedMessageSize = classInstance.Get("MaxReceivedMessageSize");
+            return (long)retObjectMaxReceivedMessageSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxReceivedMessageSize != null ? retObjectMaxReceivedMessageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class TransportBindingElement extends BindingElement  {
 
     public void setMaxReceivedMessageSize(long MaxReceivedMessageSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReceivedMessageSize", MaxReceivedMessageSize);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class TransportBindingElement extends BindingElement  {
 
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("Scheme");
+            retObjectScheme = classInstance.Get("Scheme");
+            return (java.lang.String)retObjectScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScheme != null ? retObjectScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

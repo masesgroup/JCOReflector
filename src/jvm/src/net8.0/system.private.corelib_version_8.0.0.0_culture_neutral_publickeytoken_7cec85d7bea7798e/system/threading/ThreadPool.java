@@ -162,9 +162,13 @@ public class ThreadPool extends NetObject  {
     
     public static boolean BindHandle(SafeHandle osHandle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ApplicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBindHandle = null;
         try {
-            return (boolean)classType.Invoke("BindHandle", osHandle == null ? null : osHandle.getJCOInstance());
+            retObjectBindHandle = classType.Invoke("BindHandle", osHandle == null ? null : osHandle.getJCOInstance());
+            return (boolean)retObjectBindHandle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBindHandle != null ? retObjectBindHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean QueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectQueueUserWorkItem = null;
         try {
-            return (boolean)classType.Invoke("QueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
+            retObjectQueueUserWorkItem = classType.Invoke("QueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectQueueUserWorkItem != null ? retObjectQueueUserWorkItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean QueueUserWorkItem(WaitCallback callBack) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectQueueUserWorkItem = null;
         try {
-            return (boolean)classType.Invoke("QueueUserWorkItem", callBack);
+            retObjectQueueUserWorkItem = classType.Invoke("QueueUserWorkItem", callBack);
+            return (boolean)retObjectQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectQueueUserWorkItem != null ? retObjectQueueUserWorkItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean SetMaxThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetMaxThreads = null;
         try {
-            return (boolean)classType.Invoke("SetMaxThreads", workerThreads, completionPortThreads);
+            retObjectSetMaxThreads = classType.Invoke("SetMaxThreads", workerThreads, completionPortThreads);
+            return (boolean)retObjectSetMaxThreads;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetMaxThreads != null ? retObjectSetMaxThreads.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean SetMinThreads(int workerThreads, int completionPortThreads) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSetMinThreads = null;
         try {
-            return (boolean)classType.Invoke("SetMinThreads", workerThreads, completionPortThreads);
+            retObjectSetMinThreads = classType.Invoke("SetMinThreads", workerThreads, completionPortThreads);
+            return (boolean)retObjectSetMinThreads;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetMinThreads != null ? retObjectSetMinThreads.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean UnsafeQueueUserWorkItem(IThreadPoolWorkItem callBack, boolean preferLocal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
         try {
-            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack == null ? null : callBack.getJCOInstance(), preferLocal);
+            retObjectUnsafeQueueUserWorkItem = classType.Invoke("UnsafeQueueUserWorkItem", callBack == null ? null : callBack.getJCOInstance(), preferLocal);
+            return (boolean)retObjectUnsafeQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnsafeQueueUserWorkItem != null ? retObjectUnsafeQueueUserWorkItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +246,13 @@ public class ThreadPool extends NetObject  {
 
     public static boolean UnsafeQueueUserWorkItem(WaitCallback callBack, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeQueueUserWorkItem = null;
         try {
-            return (boolean)classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
+            retObjectUnsafeQueueUserWorkItem = classType.Invoke("UnsafeQueueUserWorkItem", callBack, state == null ? null : state.getJCOInstance());
+            return (boolean)retObjectUnsafeQueueUserWorkItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnsafeQueueUserWorkItem != null ? retObjectUnsafeQueueUserWorkItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +260,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterWaitForSingleObject = null;
         try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            retObjectRegisterWaitForSingleObject = classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            JCObject objRegisterWaitForSingleObject = (JCObject)retObjectRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterWaitForSingleObject != null ? retObjectRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +275,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterWaitForSingleObject = null;
         try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            retObjectRegisterWaitForSingleObject = classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            JCObject objRegisterWaitForSingleObject = (JCObject)retObjectRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterWaitForSingleObject != null ? retObjectRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +290,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterWaitForSingleObject = null;
         try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
+            retObjectRegisterWaitForSingleObject = classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
+            JCObject objRegisterWaitForSingleObject = (JCObject)retObjectRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterWaitForSingleObject != null ? retObjectRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +305,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle RegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterWaitForSingleObject = null;
         try {
-            JCObject objRegisterWaitForSingleObject = (JCObject)classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
+            retObjectRegisterWaitForSingleObject = classType.Invoke("RegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
+            JCObject objRegisterWaitForSingleObject = (JCObject)retObjectRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterWaitForSingleObject != null ? retObjectRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +320,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, int millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
         try {
-            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            retObjectUnsafeRegisterWaitForSingleObject = classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)retObjectUnsafeRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsafeRegisterWaitForSingleObject != null ? retObjectUnsafeRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +335,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, long millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
         try {
-            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            retObjectUnsafeRegisterWaitForSingleObject = classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval, executeOnlyOnce);
+            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)retObjectUnsafeRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsafeRegisterWaitForSingleObject != null ? retObjectUnsafeRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +350,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, TimeSpan timeout, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
         try {
-            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
+            retObjectUnsafeRegisterWaitForSingleObject = classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), executeOnlyOnce);
+            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)retObjectUnsafeRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsafeRegisterWaitForSingleObject != null ? retObjectUnsafeRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +365,14 @@ public class ThreadPool extends NetObject  {
 
     public static RegisteredWaitHandle UnsafeRegisterWaitForSingleObject(WaitHandle waitObject, WaitOrTimerCallback callBack, NetObject state, UInt32 millisecondsTimeOutInterval, boolean executeOnlyOnce) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnsafeRegisterWaitForSingleObject = null;
         try {
-            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
+            retObjectUnsafeRegisterWaitForSingleObject = classType.Invoke("UnsafeRegisterWaitForSingleObject", waitObject == null ? null : waitObject.getJCOInstance(), callBack, state == null ? null : state.getJCOInstance(), millisecondsTimeOutInterval == null ? null : millisecondsTimeOutInterval.getJCOInstance(), executeOnlyOnce);
+            JCObject objUnsafeRegisterWaitForSingleObject = (JCObject)retObjectUnsafeRegisterWaitForSingleObject;
             return new RegisteredWaitHandle(objUnsafeRegisterWaitForSingleObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnsafeRegisterWaitForSingleObject != null ? retObjectUnsafeRegisterWaitForSingleObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +380,7 @@ public class ThreadPool extends NetObject  {
 
     public static void GetAvailableThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetAvailableThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -330,7 +390,7 @@ public class ThreadPool extends NetObject  {
 
     public static void GetMaxThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetMaxThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -340,7 +400,7 @@ public class ThreadPool extends NetObject  {
 
     public static void GetMinThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("GetMinThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -354,9 +414,13 @@ public class ThreadPool extends NetObject  {
     
     public static int getThreadCount() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThreadCount = null;
         try {
-            return (int)classType.Get("ThreadCount");
+            retObjectThreadCount = classType.Get("ThreadCount");
+            return (int)retObjectThreadCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectThreadCount != null ? retObjectThreadCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,9 +428,13 @@ public class ThreadPool extends NetObject  {
 
     public static long getCompletedWorkItemCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCompletedWorkItemCount = null;
         try {
-            return (long)classType.Get("CompletedWorkItemCount");
+            retObjectCompletedWorkItemCount = classType.Get("CompletedWorkItemCount");
+            return (long)retObjectCompletedWorkItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectCompletedWorkItemCount != null ? retObjectCompletedWorkItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,9 +442,13 @@ public class ThreadPool extends NetObject  {
 
     public static long getPendingWorkItemCount() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPendingWorkItemCount = null;
         try {
-            return (long)classType.Get("PendingWorkItemCount");
+            retObjectPendingWorkItemCount = classType.Get("PendingWorkItemCount");
+            return (long)retObjectPendingWorkItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPendingWorkItemCount != null ? retObjectPendingWorkItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

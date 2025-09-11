@@ -233,9 +233,13 @@ public class ManagementClass extends ManagementObject  {
     
     public boolean GetStronglyTypedClassCode(CodeLanguage lang, java.lang.String filePath, java.lang.String classNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.RankException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStronglyTypedClassCode = null;
         try {
-            return (boolean)classInstance.Invoke("GetStronglyTypedClassCode", lang == null ? null : lang.getJCOInstance(), filePath, classNamespace);
+            retObjectGetStronglyTypedClassCode = classInstance.Invoke("GetStronglyTypedClassCode", lang == null ? null : lang.getJCOInstance(), filePath, classNamespace);
+            return (boolean)retObjectGetStronglyTypedClassCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetStronglyTypedClassCode != null ? retObjectGetStronglyTypedClassCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +247,14 @@ public class ManagementClass extends ManagementObject  {
 
     public CodeTypeDeclaration GetStronglyTypedClassCode(boolean includeSystemClassInClassDef, boolean systemPropertyClass) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.TypeLoadException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStronglyTypedClassCode = null;
         try {
-            JCObject objGetStronglyTypedClassCode = (JCObject)classInstance.Invoke("GetStronglyTypedClassCode", includeSystemClassInClassDef, systemPropertyClass);
+            retObjectGetStronglyTypedClassCode = classInstance.Invoke("GetStronglyTypedClassCode", includeSystemClassInClassDef, systemPropertyClass);
+            JCObject objGetStronglyTypedClassCode = (JCObject)retObjectGetStronglyTypedClassCode;
             return new CodeTypeDeclaration(objGetStronglyTypedClassCode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStronglyTypedClassCode != null ? retObjectGetStronglyTypedClassCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +262,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementClass Derive(java.lang.String newClassName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDerive = null;
         try {
-            JCObject objDerive = (JCObject)classInstance.Invoke("Derive", newClassName);
+            retObjectDerive = classInstance.Invoke("Derive", newClassName);
+            JCObject objDerive = (JCObject)retObjectDerive;
             return new ManagementClass(objDerive);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDerive != null ? retObjectDerive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +277,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObject CreateInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance");
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance");
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ManagementObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +292,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetInstances() throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstances = null;
         try {
-            JCObject objGetInstances = (JCObject)classInstance.Invoke("GetInstances");
+            retObjectGetInstances = classInstance.Invoke("GetInstances");
+            JCObject objGetInstances = (JCObject)retObjectGetInstances;
             return new ManagementObjectCollection(objGetInstances);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstances != null ? retObjectGetInstances.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +307,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetInstances(EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInstances = null;
         try {
-            JCObject objGetInstances = (JCObject)classInstance.Invoke("GetInstances", options == null ? null : options.getJCOInstance());
+            retObjectGetInstances = classInstance.Invoke("GetInstances", options == null ? null : options.getJCOInstance());
+            JCObject objGetInstances = (JCObject)retObjectGetInstances;
             return new ManagementObjectCollection(objGetInstances);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInstances != null ? retObjectGetInstances.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +322,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelatedClasses() throws Throwable, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedClasses = null;
         try {
-            JCObject objGetRelatedClasses = (JCObject)classInstance.Invoke("GetRelatedClasses");
+            retObjectGetRelatedClasses = classInstance.Invoke("GetRelatedClasses");
+            JCObject objGetRelatedClasses = (JCObject)retObjectGetRelatedClasses;
             return new ManagementObjectCollection(objGetRelatedClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedClasses != null ? retObjectGetRelatedClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +337,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelatedClasses(java.lang.String relatedClass) throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedClasses = null;
         try {
-            JCObject objGetRelatedClasses = (JCObject)classInstance.Invoke("GetRelatedClasses", relatedClass);
+            retObjectGetRelatedClasses = classInstance.Invoke("GetRelatedClasses", relatedClass);
+            JCObject objGetRelatedClasses = (JCObject)retObjectGetRelatedClasses;
             return new ManagementObjectCollection(objGetRelatedClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedClasses != null ? retObjectGetRelatedClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +352,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelatedClasses(java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String relatedQualifier, java.lang.String relatedRole, java.lang.String thisRole, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelatedClasses = null;
         try {
-            JCObject objGetRelatedClasses = (JCObject)classInstance.Invoke("GetRelatedClasses", relatedClass, relationshipClass, relationshipQualifier, relatedQualifier, relatedRole, thisRole, options == null ? null : options.getJCOInstance());
+            retObjectGetRelatedClasses = classInstance.Invoke("GetRelatedClasses", relatedClass, relationshipClass, relationshipQualifier, relatedQualifier, relatedRole, thisRole, options == null ? null : options.getJCOInstance());
+            JCObject objGetRelatedClasses = (JCObject)retObjectGetRelatedClasses;
             return new ManagementObjectCollection(objGetRelatedClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelatedClasses != null ? retObjectGetRelatedClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +367,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelationshipClasses() throws Throwable, system.management.ManagementException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipClasses = null;
         try {
-            JCObject objGetRelationshipClasses = (JCObject)classInstance.Invoke("GetRelationshipClasses");
+            retObjectGetRelationshipClasses = classInstance.Invoke("GetRelationshipClasses");
+            JCObject objGetRelationshipClasses = (JCObject)retObjectGetRelationshipClasses;
             return new ManagementObjectCollection(objGetRelationshipClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipClasses != null ? retObjectGetRelationshipClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +382,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelationshipClasses(java.lang.String relationshipClass) throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipClasses = null;
         try {
-            JCObject objGetRelationshipClasses = (JCObject)classInstance.Invoke("GetRelationshipClasses", relationshipClass);
+            retObjectGetRelationshipClasses = classInstance.Invoke("GetRelationshipClasses", relationshipClass);
+            JCObject objGetRelationshipClasses = (JCObject)retObjectGetRelationshipClasses;
             return new ManagementObjectCollection(objGetRelationshipClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipClasses != null ? retObjectGetRelationshipClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +397,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetRelationshipClasses(java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipClasses = null;
         try {
-            JCObject objGetRelationshipClasses = (JCObject)classInstance.Invoke("GetRelationshipClasses", relationshipClass, relationshipQualifier, thisRole, options == null ? null : options.getJCOInstance());
+            retObjectGetRelationshipClasses = classInstance.Invoke("GetRelationshipClasses", relationshipClass, relationshipQualifier, thisRole, options == null ? null : options.getJCOInstance());
+            JCObject objGetRelationshipClasses = (JCObject)retObjectGetRelationshipClasses;
             return new ManagementObjectCollection(objGetRelationshipClasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipClasses != null ? retObjectGetRelationshipClasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +412,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetSubclasses() throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSubclasses = null;
         try {
-            JCObject objGetSubclasses = (JCObject)classInstance.Invoke("GetSubclasses");
+            retObjectGetSubclasses = classInstance.Invoke("GetSubclasses");
+            JCObject objGetSubclasses = (JCObject)retObjectGetSubclasses;
             return new ManagementObjectCollection(objGetSubclasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSubclasses != null ? retObjectGetSubclasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +427,14 @@ public class ManagementClass extends ManagementObject  {
 
     public ManagementObjectCollection GetSubclasses(EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSubclasses = null;
         try {
-            JCObject objGetSubclasses = (JCObject)classInstance.Invoke("GetSubclasses", options == null ? null : options.getJCOInstance());
+            retObjectGetSubclasses = classInstance.Invoke("GetSubclasses", options == null ? null : options.getJCOInstance());
+            JCObject objGetSubclasses = (JCObject)retObjectGetSubclasses;
             return new ManagementObjectCollection(objGetSubclasses);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSubclasses != null ? retObjectGetSubclasses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +442,14 @@ public class ManagementClass extends ManagementObject  {
 
     public NetObject Clone() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +457,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetInstances(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetInstances", watcher == null ? null : watcher.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,7 +467,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetInstances(ManagementOperationObserver watcher, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetInstances", watcher == null ? null : watcher.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +477,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelatedClasses(ManagementOperationObserver watcher) throws Throwable, system.management.ManagementException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelatedClasses", watcher == null ? null : watcher.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -427,7 +487,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelatedClasses(ManagementOperationObserver watcher, java.lang.String relatedClass) throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelatedClasses", watcher == null ? null : watcher.getJCOInstance(), relatedClass);
         } catch (JCNativeException jcne) {
@@ -437,7 +497,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelatedClasses(ManagementOperationObserver watcher, java.lang.String relatedClass, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String relatedQualifier, java.lang.String relatedRole, java.lang.String thisRole, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelatedClasses", watcher == null ? null : watcher.getJCOInstance(), relatedClass, relationshipClass, relationshipQualifier, relatedQualifier, relatedRole, thisRole, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,7 +507,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelationshipClasses(ManagementOperationObserver watcher) throws Throwable, system.management.ManagementException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelationshipClasses", watcher == null ? null : watcher.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,7 +517,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelationshipClasses(ManagementOperationObserver watcher, java.lang.String relationshipClass) throws Throwable, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelationshipClasses", watcher == null ? null : watcher.getJCOInstance(), relationshipClass);
         } catch (JCNativeException jcne) {
@@ -467,7 +527,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetRelationshipClasses(ManagementOperationObserver watcher, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetRelationshipClasses", watcher == null ? null : watcher.getJCOInstance(), relationshipClass, relationshipQualifier, thisRole, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -477,7 +537,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetSubclasses(ManagementOperationObserver watcher) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.management.ManagementException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSubclasses", watcher == null ? null : watcher.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -487,7 +547,7 @@ public class ManagementClass extends ManagementObject  {
 
     public void GetSubclasses(ManagementOperationObserver watcher, EnumerationOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.management.ManagementException, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetSubclasses", watcher == null ? null : watcher.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -501,10 +561,14 @@ public class ManagementClass extends ManagementObject  {
     
     public StringCollection getDerivation() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.management.ManagementException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDerivation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Derivation");
+            retObjectDerivation = classInstance.Get("Derivation");
+            JCObject val = (JCObject)retObjectDerivation;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDerivation != null ? retObjectDerivation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +576,14 @@ public class ManagementClass extends ManagementObject  {
 
     public MethodDataCollection getMethods() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethods = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Methods");
+            retObjectMethods = classInstance.Get("Methods");
+            JCObject val = (JCObject)retObjectMethods;
             return new MethodDataCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethods != null ? retObjectMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,10 +159,14 @@ public class EventInfo extends MemberInfo  {
     
     public MethodInfo GetAddMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddMethod = null;
         try {
-            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod");
+            retObjectGetAddMethod = classInstance.Invoke("GetAddMethod");
+            JCObject objGetAddMethod = (JCObject)retObjectGetAddMethod;
             return new MethodInfo(objGetAddMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddMethod != null ? retObjectGetAddMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo GetAddMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAddMethod = null;
         try {
-            JCObject objGetAddMethod = (JCObject)classInstance.Invoke("GetAddMethod", nonPublic);
+            retObjectGetAddMethod = classInstance.Invoke("GetAddMethod", nonPublic);
+            JCObject objGetAddMethod = (JCObject)retObjectGetAddMethod;
             return new MethodInfo(objGetAddMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAddMethod != null ? retObjectGetAddMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo GetRaiseMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRaiseMethod = null;
         try {
-            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod");
+            retObjectGetRaiseMethod = classInstance.Invoke("GetRaiseMethod");
+            JCObject objGetRaiseMethod = (JCObject)retObjectGetRaiseMethod;
             return new MethodInfo(objGetRaiseMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRaiseMethod != null ? retObjectGetRaiseMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo GetRaiseMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRaiseMethod = null;
         try {
-            JCObject objGetRaiseMethod = (JCObject)classInstance.Invoke("GetRaiseMethod", nonPublic);
+            retObjectGetRaiseMethod = classInstance.Invoke("GetRaiseMethod", nonPublic);
+            JCObject objGetRaiseMethod = (JCObject)retObjectGetRaiseMethod;
             return new MethodInfo(objGetRaiseMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRaiseMethod != null ? retObjectGetRaiseMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo GetRemoveMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoveMethod = null;
         try {
-            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod");
+            retObjectGetRemoveMethod = classInstance.Invoke("GetRemoveMethod");
+            JCObject objGetRemoveMethod = (JCObject)retObjectGetRemoveMethod;
             return new MethodInfo(objGetRemoveMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoveMethod != null ? retObjectGetRemoveMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemoveMethod = null;
         try {
-            JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod", nonPublic);
+            retObjectGetRemoveMethod = classInstance.Invoke("GetRemoveMethod", nonPublic);
+            JCObject objGetRemoveMethod = (JCObject)retObjectGetRemoveMethod;
             return new MethodInfo(objGetRemoveMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRemoveMethod != null ? retObjectGetRemoveMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,16 +249,20 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo[] GetOtherMethods() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOtherMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods");
+            retObjectGetOtherMethods = classInstance.Invoke("GetOtherMethods");
+            JCObject resultingObjects = (JCObject)retObjectGetOtherMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOtherMethods != null ? retObjectGetOtherMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,16 +270,20 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo[] GetOtherMethods(boolean nonPublic) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOtherMethods = null;
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOtherMethods", nonPublic);
+            retObjectGetOtherMethods = classInstance.Invoke("GetOtherMethods", nonPublic);
+            JCObject resultingObjects = (JCObject)retObjectGetOtherMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOtherMethods != null ? retObjectGetOtherMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +295,7 @@ public class EventInfo extends MemberInfo  {
      */
     @Deprecated 
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
     }
 
     /**
@@ -272,7 +304,7 @@ public class EventInfo extends MemberInfo  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
     }
 
     /**
@@ -281,7 +313,7 @@ public class EventInfo extends MemberInfo  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
     }
 
     /**
@@ -290,7 +322,7 @@ public class EventInfo extends MemberInfo  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
     }
 
 
@@ -299,9 +331,13 @@ public class EventInfo extends MemberInfo  {
     
     public boolean getIsMulticast() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMulticast = null;
         try {
-            return (boolean)classInstance.Get("IsMulticast");
+            retObjectIsMulticast = classInstance.Get("IsMulticast");
+            return (boolean)retObjectIsMulticast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMulticast != null ? retObjectIsMulticast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +345,13 @@ public class EventInfo extends MemberInfo  {
 
     public boolean getIsSpecialName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSpecialName = null;
         try {
-            return (boolean)classInstance.Get("IsSpecialName");
+            retObjectIsSpecialName = classInstance.Get("IsSpecialName");
+            return (boolean)retObjectIsSpecialName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSpecialName != null ? retObjectIsSpecialName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,10 +359,14 @@ public class EventInfo extends MemberInfo  {
 
     public EventAttributes getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new EventAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +374,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo getAddMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddMethod");
+            retObjectAddMethod = classInstance.Get("AddMethod");
+            JCObject val = (JCObject)retObjectAddMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddMethod != null ? retObjectAddMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +389,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo getRaiseMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaiseMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RaiseMethod");
+            retObjectRaiseMethod = classInstance.Get("RaiseMethod");
+            JCObject val = (JCObject)retObjectRaiseMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRaiseMethod != null ? retObjectRaiseMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,10 +404,14 @@ public class EventInfo extends MemberInfo  {
 
     public MethodInfo getRemoveMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RemoveMethod");
+            retObjectRemoveMethod = classInstance.Get("RemoveMethod");
+            JCObject val = (JCObject)retObjectRemoveMethod;
             return new MethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveMethod != null ? retObjectRemoveMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +419,14 @@ public class EventInfo extends MemberInfo  {
 
     public NetType getEventHandlerType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventHandlerType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventHandlerType");
+            retObjectEventHandlerType = classInstance.Get("EventHandlerType");
+            JCObject val = (JCObject)retObjectEventHandlerType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventHandlerType != null ? retObjectEventHandlerType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

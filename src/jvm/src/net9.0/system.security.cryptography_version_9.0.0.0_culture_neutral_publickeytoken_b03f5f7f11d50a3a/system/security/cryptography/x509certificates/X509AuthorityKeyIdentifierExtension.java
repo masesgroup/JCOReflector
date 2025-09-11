@@ -177,10 +177,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
     
     public static X509AuthorityKeyIdentifierExtension Create(byte[] keyIdentifier, X500DistinguishedName issuerName, byte[] serialNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", keyIdentifier, issuerName == null ? null : issuerName.getJCOInstance(), serialNumber);
+            retObjectCreate = classType.Invoke("Create", keyIdentifier, issuerName == null ? null : issuerName.getJCOInstance(), serialNumber);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509AuthorityKeyIdentifierExtension(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension Create(JCORefOut dupParam0, X500DistinguishedName dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            retObjectCreate = classType.Invoke("Create", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new X509AuthorityKeyIdentifierExtension(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +207,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromCertificate(X509Certificate2 certificate, boolean includeKeyIdentifier, boolean includeIssuerAndSerial) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromCertificate = null;
         try {
-            JCObject objCreateFromCertificate = (JCObject)classType.Invoke("CreateFromCertificate", certificate == null ? null : certificate.getJCOInstance(), includeKeyIdentifier, includeIssuerAndSerial);
+            retObjectCreateFromCertificate = classType.Invoke("CreateFromCertificate", certificate == null ? null : certificate.getJCOInstance(), includeKeyIdentifier, includeIssuerAndSerial);
+            JCObject objCreateFromCertificate = (JCObject)retObjectCreateFromCertificate;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromCertificate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromCertificate != null ? retObjectCreateFromCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +222,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromIssuerNameAndSerialNumber(X500DistinguishedName issuerName, byte[] serialNumber) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromIssuerNameAndSerialNumber = null;
         try {
-            JCObject objCreateFromIssuerNameAndSerialNumber = (JCObject)classType.Invoke("CreateFromIssuerNameAndSerialNumber", issuerName == null ? null : issuerName.getJCOInstance(), serialNumber);
+            retObjectCreateFromIssuerNameAndSerialNumber = classType.Invoke("CreateFromIssuerNameAndSerialNumber", issuerName == null ? null : issuerName.getJCOInstance(), serialNumber);
+            JCObject objCreateFromIssuerNameAndSerialNumber = (JCObject)retObjectCreateFromIssuerNameAndSerialNumber;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromIssuerNameAndSerialNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromIssuerNameAndSerialNumber != null ? retObjectCreateFromIssuerNameAndSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +237,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromIssuerNameAndSerialNumber(X500DistinguishedName dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromIssuerNameAndSerialNumber = null;
         try {
-            JCObject objCreateFromIssuerNameAndSerialNumber = (JCObject)classType.Invoke("CreateFromIssuerNameAndSerialNumber", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCreateFromIssuerNameAndSerialNumber = classType.Invoke("CreateFromIssuerNameAndSerialNumber", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCreateFromIssuerNameAndSerialNumber = (JCObject)retObjectCreateFromIssuerNameAndSerialNumber;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromIssuerNameAndSerialNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromIssuerNameAndSerialNumber != null ? retObjectCreateFromIssuerNameAndSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +252,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromSubjectKeyIdentifier(byte[] subjectKeyIdentifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSubjectKeyIdentifier = null;
         try {
-            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)classType.Invoke("CreateFromSubjectKeyIdentifier", (java.lang.Object)subjectKeyIdentifier);
+            retObjectCreateFromSubjectKeyIdentifier = classType.Invoke("CreateFromSubjectKeyIdentifier", (java.lang.Object)subjectKeyIdentifier);
+            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)retObjectCreateFromSubjectKeyIdentifier;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromSubjectKeyIdentifier);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSubjectKeyIdentifier != null ? retObjectCreateFromSubjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +267,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromSubjectKeyIdentifier(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSubjectKeyIdentifier = null;
         try {
-            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)classType.Invoke("CreateFromSubjectKeyIdentifier", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectCreateFromSubjectKeyIdentifier = classType.Invoke("CreateFromSubjectKeyIdentifier", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)retObjectCreateFromSubjectKeyIdentifier;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromSubjectKeyIdentifier);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSubjectKeyIdentifier != null ? retObjectCreateFromSubjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +282,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public static X509AuthorityKeyIdentifierExtension CreateFromSubjectKeyIdentifier(X509SubjectKeyIdentifierExtension subjectKeyIdentifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSubjectKeyIdentifier = null;
         try {
-            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)classType.Invoke("CreateFromSubjectKeyIdentifier", subjectKeyIdentifier == null ? null : subjectKeyIdentifier.getJCOInstance());
+            retObjectCreateFromSubjectKeyIdentifier = classType.Invoke("CreateFromSubjectKeyIdentifier", subjectKeyIdentifier == null ? null : subjectKeyIdentifier.getJCOInstance());
+            JCObject objCreateFromSubjectKeyIdentifier = (JCObject)retObjectCreateFromSubjectKeyIdentifier;
             return new X509AuthorityKeyIdentifierExtension(objCreateFromSubjectKeyIdentifier);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSubjectKeyIdentifier != null ? retObjectCreateFromSubjectKeyIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
 
     public void CopyFrom(AsnEncodedData asnEncodedData) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFrom", asnEncodedData == null ? null : asnEncodedData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,10 +311,14 @@ public class X509AuthorityKeyIdentifierExtension extends X509Extension  {
     
     public X500DistinguishedName getNamedIssuer() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamedIssuer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamedIssuer");
+            retObjectNamedIssuer = classInstance.Get("NamedIssuer");
+            JCObject val = (JCObject)retObjectNamedIssuer;
             return new X500DistinguishedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamedIssuer != null ? retObjectNamedIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

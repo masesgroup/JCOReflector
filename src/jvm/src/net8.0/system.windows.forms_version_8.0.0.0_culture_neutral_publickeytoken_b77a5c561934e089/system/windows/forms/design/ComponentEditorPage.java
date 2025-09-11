@@ -162,9 +162,13 @@ public class ComponentEditorPage extends Panel  {
     
     public boolean IsPageMessage(JCORefOut<Message> msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPageMessage = null;
         try {
-            return (boolean)classInstance.Invoke("IsPageMessage", msg.getJCRefOut());
+            retObjectIsPageMessage = classInstance.Invoke("IsPageMessage", msg.getJCRefOut());
+            return (boolean)retObjectIsPageMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPageMessage != null ? retObjectIsPageMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ComponentEditorPage extends Panel  {
 
     public boolean SupportsHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsHelp = null;
         try {
-            return (boolean)classInstance.Invoke("SupportsHelp");
+            retObjectSupportsHelp = classInstance.Invoke("SupportsHelp");
+            return (boolean)retObjectSupportsHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSupportsHelp != null ? retObjectSupportsHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class ComponentEditorPage extends Panel  {
 
     public Control GetControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetControl = null;
         try {
-            JCObject objGetControl = (JCObject)classInstance.Invoke("GetControl");
+            retObjectGetControl = classInstance.Invoke("GetControl");
+            JCObject objGetControl = (JCObject)retObjectGetControl;
             return new Control(objGetControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetControl != null ? retObjectGetControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +205,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void Activate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {
@@ -203,7 +215,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void ApplyChanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyChanges");
         } catch (JCNativeException jcne) {
@@ -213,7 +225,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void Deactivate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Deactivate");
         } catch (JCNativeException jcne) {
@@ -223,7 +235,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void OnApplyComplete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyComplete");
         } catch (JCNativeException jcne) {
@@ -233,7 +245,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void SetComponent(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +255,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void SetSite(IComponentEditorPageSite site) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSite", site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +265,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void ShowHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowHelp");
         } catch (JCNativeException jcne) {
@@ -267,9 +279,13 @@ public class ComponentEditorPage extends Panel  {
     
     public boolean getCommitOnDeactivate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommitOnDeactivate = null;
         try {
-            return (boolean)classInstance.Get("CommitOnDeactivate");
+            retObjectCommitOnDeactivate = classInstance.Get("CommitOnDeactivate");
+            return (boolean)retObjectCommitOnDeactivate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCommitOnDeactivate != null ? retObjectCommitOnDeactivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +293,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void setCommitOnDeactivate(boolean CommitOnDeactivate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommitOnDeactivate", CommitOnDeactivate);
         } catch (JCNativeException jcne) {
@@ -287,10 +303,14 @@ public class ComponentEditorPage extends Panel  {
 
     public Icon getIcon() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new Icon(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +318,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void setIcon(Icon Icon) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -308,9 +328,13 @@ public class ComponentEditorPage extends Panel  {
 
     public java.lang.String getTitle() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("Title");
+            retObjectTitle = classInstance.Get("Title");
+            return (java.lang.String)retObjectTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTitle != null ? retObjectTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +347,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -333,7 +357,7 @@ public class ComponentEditorPage extends Panel  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {

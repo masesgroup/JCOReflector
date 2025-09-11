@@ -164,9 +164,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
     
     public boolean ShouldSerializeConstructorParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeConstructorParameters = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeConstructorParameters");
+            retObjectShouldSerializeConstructorParameters = classInstance.Invoke("ShouldSerializeConstructorParameters");
+            return (boolean)retObjectShouldSerializeConstructorParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeConstructorParameters != null ? retObjectShouldSerializeConstructorParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public boolean ShouldSerializeMethodParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeMethodParameters = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeMethodParameters");
+            retObjectShouldSerializeMethodParameters = classInstance.Invoke("ShouldSerializeMethodParameters");
+            return (boolean)retObjectShouldSerializeMethodParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeMethodParameters != null ? retObjectShouldSerializeMethodParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public boolean ShouldSerializeObjectInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeObjectInstance = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeObjectInstance");
+            retObjectShouldSerializeObjectInstance = classInstance.Invoke("ShouldSerializeObjectInstance");
+            return (boolean)retObjectShouldSerializeObjectInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeObjectInstance != null ? retObjectShouldSerializeObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public boolean ShouldSerializeObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeObjectType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeObjectType");
+            retObjectShouldSerializeObjectType = classInstance.Invoke("ShouldSerializeObjectType");
+            return (boolean)retObjectShouldSerializeObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeObjectType != null ? retObjectShouldSerializeObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +224,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
     
     public boolean getIsAsynchronous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsynchronous = null;
         try {
-            return (boolean)classInstance.Get("IsAsynchronous");
+            retObjectIsAsynchronous = classInstance.Get("IsAsynchronous");
+            return (boolean)retObjectIsAsynchronous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsynchronous != null ? retObjectIsAsynchronous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +238,7 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public void setIsAsynchronous(boolean IsAsynchronous) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAsynchronous", IsAsynchronous);
         } catch (JCNativeException jcne) {
@@ -228,10 +248,14 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public IList getConstructorParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConstructorParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConstructorParameters");
+            retObjectConstructorParameters = classInstance.Get("ConstructorParameters");
+            JCObject val = (JCObject)retObjectConstructorParameters;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstructorParameters != null ? retObjectConstructorParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +263,14 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public IList getMethodParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodParameters");
+            retObjectMethodParameters = classInstance.Get("MethodParameters");
+            JCObject val = (JCObject)retObjectMethodParameters;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodParameters != null ? retObjectMethodParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +278,14 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectInstance");
+            retObjectObjectInstance = classInstance.Get("ObjectInstance");
+            JCObject val = (JCObject)retObjectObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectInstance != null ? retObjectObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +293,7 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public void setObjectInstance(NetObject ObjectInstance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectInstance", ObjectInstance == null ? null : ObjectInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,9 +303,13 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public java.lang.String getMethodName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +317,7 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public void setMethodName(java.lang.String MethodName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {
@@ -291,10 +327,14 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public NetType getObjectType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectType");
+            retObjectObjectType = classInstance.Get("ObjectType");
+            JCObject val = (JCObject)retObjectObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectType != null ? retObjectObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +342,7 @@ public class ObjectDataProvider extends DataSourceProvider  {
 
     public void setObjectType(NetType ObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectType", ObjectType == null ? null : ObjectType.getJCOInstance());
         } catch (JCNativeException jcne) {

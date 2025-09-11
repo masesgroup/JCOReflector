@@ -182,9 +182,13 @@ public class SqlDataReader extends DbDataReader  {
     
     public boolean GetBoolean(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoolean = null;
         try {
-            return (boolean)classInstance.Invoke("GetBoolean", i);
+            retObjectGetBoolean = classInstance.Invoke("GetBoolean", i);
+            return (boolean)retObjectGetBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetBoolean != null ? retObjectGetBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public boolean IsDBNull(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.AggregateException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDBNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsDBNull", i);
+            retObjectIsDBNull = classInstance.Invoke("IsDBNull", i);
+            return (boolean)retObjectIsDBNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDBNull != null ? retObjectIsDBNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public boolean NextResult() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.AggregateException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.io.FileNotFoundException, system.TypeLoadException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextResult = null;
         try {
-            return (boolean)classInstance.Invoke("NextResult");
+            retObjectNextResult = classInstance.Invoke("NextResult");
+            return (boolean)retObjectNextResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectNextResult != null ? retObjectNextResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +224,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public boolean Read() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.FormatException, system.AggregateException, system.NotSupportedException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +238,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public byte GetByte(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetByte = null;
         try {
-            return (byte)classInstance.Invoke("GetByte", i);
+            retObjectGetByte = classInstance.Invoke("GetByte", i);
+            return (byte)retObjectGetByte;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetByteNumber = (java.lang.Number)retObjectGetByte;
+                return retObjectGetByteNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectGetByte != null ? retObjectGetByte.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +258,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public char GetChar(int i) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChar = null;
         try {
-            return (char)classInstance.Invoke("GetChar", i);
+            retObjectGetChar = classInstance.Invoke("GetChar", i);
+            return (char)retObjectGetChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetChar != null ? retObjectGetChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +272,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public double GetDouble(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDouble = null;
         try {
-            return (double)classInstance.Invoke("GetDouble", i);
+            retObjectGetDouble = classInstance.Invoke("GetDouble", i);
+            return (double)retObjectGetDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDoubleNumber = (java.lang.Number)retObjectGetDouble;
+                return retObjectGetDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDouble != null ? retObjectGetDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +292,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public short GetInt16(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt16 = null;
         try {
-            return (short)classInstance.Invoke("GetInt16", i);
+            retObjectGetInt16 = classInstance.Invoke("GetInt16", i);
+            return (short)retObjectGetInt16;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt16Number = (java.lang.Number)retObjectGetInt16;
+                return retObjectGetInt16Number.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectGetInt16 != null ? retObjectGetInt16.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +312,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public int GetInt32(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt32 = null;
         try {
-            return (int)classInstance.Invoke("GetInt32", i);
+            retObjectGetInt32 = classInstance.Invoke("GetInt32", i);
+            return (int)retObjectGetInt32;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt32Number = (java.lang.Number)retObjectGetInt32;
+                return retObjectGetInt32Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetInt32 != null ? retObjectGetInt32.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +332,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public int GetOrdinal(java.lang.String name) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOrdinal = null;
         try {
-            return (int)classInstance.Invoke("GetOrdinal", name);
+            retObjectGetOrdinal = classInstance.Invoke("GetOrdinal", name);
+            return (int)retObjectGetOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetOrdinalNumber = (java.lang.Number)retObjectGetOrdinal;
+                return retObjectGetOrdinalNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetOrdinal != null ? retObjectGetOrdinal.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +352,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public int GetProviderSpecificValues(NetObject[] values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.NotSupportedException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificValues = null;
         try {
-            return (int)classInstance.Invoke("GetProviderSpecificValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetProviderSpecificValues = classInstance.Invoke("GetProviderSpecificValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetProviderSpecificValues;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetProviderSpecificValuesNumber = (java.lang.Number)retObjectGetProviderSpecificValues;
+                return retObjectGetProviderSpecificValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetProviderSpecificValues != null ? retObjectGetProviderSpecificValues.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +372,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public int GetSqlValues(NetObject[] values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlValues = null;
         try {
-            return (int)classInstance.Invoke("GetSqlValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetSqlValues = classInstance.Invoke("GetSqlValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetSqlValues;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSqlValuesNumber = (java.lang.Number)retObjectGetSqlValues;
+                return retObjectGetSqlValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetSqlValues != null ? retObjectGetSqlValues.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +392,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public int GetValues(NetObject[] values) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.AggregateException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValues = null;
         try {
-            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            retObjectGetValues = classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
+            return (int)retObjectGetValues;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetValuesNumber = (java.lang.Number)retObjectGetValues;
+                return retObjectGetValuesNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetValues != null ? retObjectGetValues.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +412,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public long GetBytes(int i, long dataIndex, byte[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", i, dataIndex, buffer, bufferIndex, length);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", i, dataIndex, buffer, bufferIndex, length);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +432,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBytes = null;
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetBytes = classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetBytes;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetBytesNumber = (java.lang.Number)retObjectGetBytes;
+                return retObjectGetBytesNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetBytes != null ? retObjectGetBytes.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +452,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public long GetChars(int i, long dataIndex, char[] buffer, int bufferIndex, int length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.reflection.TargetInvocationException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", i, dataIndex, buffer, bufferIndex, length);
+            retObjectGetChars = classInstance.Invoke("GetChars", i, dataIndex, buffer, bufferIndex, length);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +472,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.reflection.TargetInvocationException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChars = null;
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            retObjectGetChars = classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
+            return (long)retObjectGetChars;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharsNumber = (java.lang.Number)retObjectGetChars;
+                return retObjectGetCharsNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetChars != null ? retObjectGetChars.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +492,19 @@ public class SqlDataReader extends DbDataReader  {
 
     public long GetInt64(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInt64 = null;
         try {
-            return (long)classInstance.Invoke("GetInt64", i);
+            retObjectGetInt64 = classInstance.Invoke("GetInt64", i);
+            return (long)retObjectGetInt64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetInt64Number = (java.lang.Number)retObjectGetInt64;
+                return retObjectGetInt64Number.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectGetInt64 != null ? retObjectGetInt64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +512,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public Single GetFloat(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFloat = null;
         try {
-            JCObject objGetFloat = (JCObject)classInstance.Invoke("GetFloat", i);
+            retObjectGetFloat = classInstance.Invoke("GetFloat", i);
+            JCObject objGetFloat = (JCObject)retObjectGetFloat;
             return new Single(objGetFloat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFloat != null ? retObjectGetFloat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +527,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public DataTable GetSchemaTable() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.threading.tasks.TaskSchedulerException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, microsoft.sqlserver.server.InvalidUdtException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSchemaTable = null;
         try {
-            JCObject objGetSchemaTable = (JCObject)classInstance.Invoke("GetSchemaTable");
+            retObjectGetSchemaTable = classInstance.Invoke("GetSchemaTable");
+            JCObject objGetSchemaTable = (JCObject)retObjectGetSchemaTable;
             return new DataTable(objGetSchemaTable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSchemaTable != null ? retObjectGetSchemaTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +542,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlBinary GetSqlBinary(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBinary = null;
         try {
-            JCObject objGetSqlBinary = (JCObject)classInstance.Invoke("GetSqlBinary", i);
+            retObjectGetSqlBinary = classInstance.Invoke("GetSqlBinary", i);
+            JCObject objGetSqlBinary = (JCObject)retObjectGetSqlBinary;
             return new SqlBinary(objGetSqlBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBinary != null ? retObjectGetSqlBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +557,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlBoolean GetSqlBoolean(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBoolean = null;
         try {
-            JCObject objGetSqlBoolean = (JCObject)classInstance.Invoke("GetSqlBoolean", i);
+            retObjectGetSqlBoolean = classInstance.Invoke("GetSqlBoolean", i);
+            JCObject objGetSqlBoolean = (JCObject)retObjectGetSqlBoolean;
             return new SqlBoolean(objGetSqlBoolean);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBoolean != null ? retObjectGetSqlBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +572,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlByte GetSqlByte(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlByte = null;
         try {
-            JCObject objGetSqlByte = (JCObject)classInstance.Invoke("GetSqlByte", i);
+            retObjectGetSqlByte = classInstance.Invoke("GetSqlByte", i);
+            JCObject objGetSqlByte = (JCObject)retObjectGetSqlByte;
             return new SqlByte(objGetSqlByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlByte != null ? retObjectGetSqlByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +587,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlBytes GetSqlBytes(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlBytes = null;
         try {
-            JCObject objGetSqlBytes = (JCObject)classInstance.Invoke("GetSqlBytes", i);
+            retObjectGetSqlBytes = classInstance.Invoke("GetSqlBytes", i);
+            JCObject objGetSqlBytes = (JCObject)retObjectGetSqlBytes;
             return new SqlBytes(objGetSqlBytes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlBytes != null ? retObjectGetSqlBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +602,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlChars GetSqlChars(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlChars = null;
         try {
-            JCObject objGetSqlChars = (JCObject)classInstance.Invoke("GetSqlChars", i);
+            retObjectGetSqlChars = classInstance.Invoke("GetSqlChars", i);
+            JCObject objGetSqlChars = (JCObject)retObjectGetSqlChars;
             return new SqlChars(objGetSqlChars);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlChars != null ? retObjectGetSqlChars.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +617,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlDateTime GetSqlDateTime(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDateTime = null;
         try {
-            JCObject objGetSqlDateTime = (JCObject)classInstance.Invoke("GetSqlDateTime", i);
+            retObjectGetSqlDateTime = classInstance.Invoke("GetSqlDateTime", i);
+            JCObject objGetSqlDateTime = (JCObject)retObjectGetSqlDateTime;
             return new SqlDateTime(objGetSqlDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDateTime != null ? retObjectGetSqlDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +632,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlDecimal GetSqlDecimal(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlTypeException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDecimal = null;
         try {
-            JCObject objGetSqlDecimal = (JCObject)classInstance.Invoke("GetSqlDecimal", i);
+            retObjectGetSqlDecimal = classInstance.Invoke("GetSqlDecimal", i);
+            JCObject objGetSqlDecimal = (JCObject)retObjectGetSqlDecimal;
             return new SqlDecimal(objGetSqlDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDecimal != null ? retObjectGetSqlDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +647,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlDouble GetSqlDouble(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlDouble = null;
         try {
-            JCObject objGetSqlDouble = (JCObject)classInstance.Invoke("GetSqlDouble", i);
+            retObjectGetSqlDouble = classInstance.Invoke("GetSqlDouble", i);
+            JCObject objGetSqlDouble = (JCObject)retObjectGetSqlDouble;
             return new SqlDouble(objGetSqlDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlDouble != null ? retObjectGetSqlDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +662,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlGuid GetSqlGuid(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlGuid = null;
         try {
-            JCObject objGetSqlGuid = (JCObject)classInstance.Invoke("GetSqlGuid", i);
+            retObjectGetSqlGuid = classInstance.Invoke("GetSqlGuid", i);
+            JCObject objGetSqlGuid = (JCObject)retObjectGetSqlGuid;
             return new SqlGuid(objGetSqlGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlGuid != null ? retObjectGetSqlGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +677,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlInt16 GetSqlInt16(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt16 = null;
         try {
-            JCObject objGetSqlInt16 = (JCObject)classInstance.Invoke("GetSqlInt16", i);
+            retObjectGetSqlInt16 = classInstance.Invoke("GetSqlInt16", i);
+            JCObject objGetSqlInt16 = (JCObject)retObjectGetSqlInt16;
             return new SqlInt16(objGetSqlInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt16 != null ? retObjectGetSqlInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +692,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlInt32 GetSqlInt32(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt32 = null;
         try {
-            JCObject objGetSqlInt32 = (JCObject)classInstance.Invoke("GetSqlInt32", i);
+            retObjectGetSqlInt32 = classInstance.Invoke("GetSqlInt32", i);
+            JCObject objGetSqlInt32 = (JCObject)retObjectGetSqlInt32;
             return new SqlInt32(objGetSqlInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt32 != null ? retObjectGetSqlInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +707,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlInt64 GetSqlInt64(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlInt64 = null;
         try {
-            JCObject objGetSqlInt64 = (JCObject)classInstance.Invoke("GetSqlInt64", i);
+            retObjectGetSqlInt64 = classInstance.Invoke("GetSqlInt64", i);
+            JCObject objGetSqlInt64 = (JCObject)retObjectGetSqlInt64;
             return new SqlInt64(objGetSqlInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlInt64 != null ? retObjectGetSqlInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +722,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlMoney GetSqlMoney(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlMoney = null;
         try {
-            JCObject objGetSqlMoney = (JCObject)classInstance.Invoke("GetSqlMoney", i);
+            retObjectGetSqlMoney = classInstance.Invoke("GetSqlMoney", i);
+            JCObject objGetSqlMoney = (JCObject)retObjectGetSqlMoney;
             return new SqlMoney(objGetSqlMoney);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlMoney != null ? retObjectGetSqlMoney.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +737,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlSingle GetSqlSingle(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlSingle = null;
         try {
-            JCObject objGetSqlSingle = (JCObject)classInstance.Invoke("GetSqlSingle", i);
+            retObjectGetSqlSingle = classInstance.Invoke("GetSqlSingle", i);
+            JCObject objGetSqlSingle = (JCObject)retObjectGetSqlSingle;
             return new SqlSingle(objGetSqlSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlSingle != null ? retObjectGetSqlSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +752,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlString GetSqlString(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlString = null;
         try {
-            JCObject objGetSqlString = (JCObject)classInstance.Invoke("GetSqlString", i);
+            retObjectGetSqlString = classInstance.Invoke("GetSqlString", i);
+            JCObject objGetSqlString = (JCObject)retObjectGetSqlString;
             return new SqlString(objGetSqlString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlString != null ? retObjectGetSqlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +767,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public SqlXml GetSqlXml(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlXml = null;
         try {
-            JCObject objGetSqlXml = (JCObject)classInstance.Invoke("GetSqlXml", i);
+            retObjectGetSqlXml = classInstance.Invoke("GetSqlXml", i);
+            JCObject objGetSqlXml = (JCObject)retObjectGetSqlXml;
             return new SqlXml(objGetSqlXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlXml != null ? retObjectGetSqlXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +782,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public DateTime GetDateTime(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTime = null;
         try {
-            JCObject objGetDateTime = (JCObject)classInstance.Invoke("GetDateTime", i);
+            retObjectGetDateTime = classInstance.Invoke("GetDateTime", i);
+            JCObject objGetDateTime = (JCObject)retObjectGetDateTime;
             return new DateTime(objGetDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTime != null ? retObjectGetDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +797,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public DateTimeOffset GetDateTimeOffset(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDateTimeOffset = null;
         try {
-            JCObject objGetDateTimeOffset = (JCObject)classInstance.Invoke("GetDateTimeOffset", i);
+            retObjectGetDateTimeOffset = classInstance.Invoke("GetDateTimeOffset", i);
+            JCObject objGetDateTimeOffset = (JCObject)retObjectGetDateTimeOffset;
             return new DateTimeOffset(objGetDateTimeOffset);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDateTimeOffset != null ? retObjectGetDateTimeOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +812,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public Decimal GetDecimal(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDecimal = null;
         try {
-            JCObject objGetDecimal = (JCObject)classInstance.Invoke("GetDecimal", i);
+            retObjectGetDecimal = classInstance.Invoke("GetDecimal", i);
+            JCObject objGetDecimal = (JCObject)retObjectGetDecimal;
             return new Decimal(objGetDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDecimal != null ? retObjectGetDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +827,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public Guid GetGuid(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGuid = null;
         try {
-            JCObject objGetGuid = (JCObject)classInstance.Invoke("GetGuid", i);
+            retObjectGetGuid = classInstance.Invoke("GetGuid", i);
+            JCObject objGetGuid = (JCObject)retObjectGetGuid;
             return new Guid(objGetGuid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGuid != null ? retObjectGetGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -604,10 +842,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public Stream GetStream(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStream = null;
         try {
-            JCObject objGetStream = (JCObject)classInstance.Invoke("GetStream", i);
+            retObjectGetStream = classInstance.Invoke("GetStream", i);
+            JCObject objGetStream = (JCObject)retObjectGetStream;
             return new Stream(objGetStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStream != null ? retObjectGetStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,10 +857,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public TextReader GetTextReader(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextReader = null;
         try {
-            JCObject objGetTextReader = (JCObject)classInstance.Invoke("GetTextReader", i);
+            retObjectGetTextReader = classInstance.Invoke("GetTextReader", i);
+            JCObject objGetTextReader = (JCObject)retObjectGetTextReader;
             return new TextReader(objGetTextReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextReader != null ? retObjectGetTextReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,10 +872,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public NetObject GetProviderSpecificValue(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.NotSupportedException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificValue = null;
         try {
-            JCObject objGetProviderSpecificValue = (JCObject)classInstance.Invoke("GetProviderSpecificValue", i);
+            retObjectGetProviderSpecificValue = classInstance.Invoke("GetProviderSpecificValue", i);
+            JCObject objGetProviderSpecificValue = (JCObject)retObjectGetProviderSpecificValue;
             return new NetObject(objGetProviderSpecificValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificValue != null ? retObjectGetProviderSpecificValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,10 +887,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public NetObject GetSqlValue(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSqlValue = null;
         try {
-            JCObject objGetSqlValue = (JCObject)classInstance.Invoke("GetSqlValue", i);
+            retObjectGetSqlValue = classInstance.Invoke("GetSqlValue", i);
+            JCObject objGetSqlValue = (JCObject)retObjectGetSqlValue;
             return new NetObject(objGetSqlValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSqlValue != null ? retObjectGetSqlValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,10 +902,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public NetObject GetValue(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException, system.io.FileNotFoundException, system.TypeLoadException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", i);
+            retObjectGetValue = classInstance.Invoke("GetValue", i);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -659,9 +917,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public java.lang.String GetDataTypeName(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDataTypeName", i);
+            retObjectGetDataTypeName = classInstance.Invoke("GetDataTypeName", i);
+            return (java.lang.String)retObjectGetDataTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDataTypeName != null ? retObjectGetDataTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,9 +931,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public java.lang.String GetName(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName", i);
+            retObjectGetName = classInstance.Invoke("GetName", i);
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,9 +945,13 @@ public class SqlDataReader extends DbDataReader  {
 
     public java.lang.String GetString(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", i);
+            retObjectGetString = classInstance.Invoke("GetString", i);
+            return (java.lang.String)retObjectGetString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetString != null ? retObjectGetString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -689,10 +959,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public TimeSpan GetTimeSpan(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.xml.XmlException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTimeSpan = null;
         try {
-            JCObject objGetTimeSpan = (JCObject)classInstance.Invoke("GetTimeSpan", i);
+            retObjectGetTimeSpan = classInstance.Invoke("GetTimeSpan", i);
+            JCObject objGetTimeSpan = (JCObject)retObjectGetTimeSpan;
             return new TimeSpan(objGetTimeSpan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTimeSpan != null ? retObjectGetTimeSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -700,10 +974,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public NetType GetFieldType(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFieldType = null;
         try {
-            JCObject objGetFieldType = (JCObject)classInstance.Invoke("GetFieldType", i);
+            retObjectGetFieldType = classInstance.Invoke("GetFieldType", i);
+            JCObject objGetFieldType = (JCObject)retObjectGetFieldType;
             return new NetType(objGetFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFieldType != null ? retObjectGetFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -711,10 +989,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public NetType GetProviderSpecificFieldType(int i) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetProviderSpecificFieldType = null;
         try {
-            JCObject objGetProviderSpecificFieldType = (JCObject)classInstance.Invoke("GetProviderSpecificFieldType", i);
+            retObjectGetProviderSpecificFieldType = classInstance.Invoke("GetProviderSpecificFieldType", i);
+            JCObject objGetProviderSpecificFieldType = (JCObject)retObjectGetProviderSpecificFieldType;
             return new NetType(objGetProviderSpecificFieldType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetProviderSpecificFieldType != null ? retObjectGetProviderSpecificFieldType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -722,10 +1004,14 @@ public class SqlDataReader extends DbDataReader  {
 
     public XmlReader GetXmlReader(int i) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AggregateException, system.NullReferenceException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetXmlReader = null;
         try {
-            JCObject objGetXmlReader = (JCObject)classInstance.Invoke("GetXmlReader", i);
+            retObjectGetXmlReader = classInstance.Invoke("GetXmlReader", i);
+            JCObject objGetXmlReader = (JCObject)retObjectGetXmlReader;
             return new XmlReader(objGetXmlReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXmlReader != null ? retObjectGetXmlReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,7 +1019,7 @@ public class SqlDataReader extends DbDataReader  {
 
     public void Close() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.OverflowException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.AggregateException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.resources.MissingManifestResourceException, system.data.sqlclient.SqlException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.reflection.TargetInvocationException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.NotImplementedException, system.AccessViolationException, microsoft.sqlserver.server.InvalidUdtException, system.transactions.TransactionException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {

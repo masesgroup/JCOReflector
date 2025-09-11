@@ -166,9 +166,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
     
     public java.lang.String FormatClipboardCellValues(java.lang.String format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatClipboardCellValues = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatClipboardCellValues", format);
+            retObjectFormatClipboardCellValues = classInstance.Invoke("FormatClipboardCellValues", format);
+            return (java.lang.String)retObjectFormatClipboardCellValues;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatClipboardCellValues != null ? retObjectFormatClipboardCellValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
     
     public boolean getIsColumnHeadersRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsColumnHeadersRow = null;
         try {
-            return (boolean)classInstance.Get("IsColumnHeadersRow");
+            retObjectIsColumnHeadersRow = classInstance.Get("IsColumnHeadersRow");
+            return (boolean)retObjectIsColumnHeadersRow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsColumnHeadersRow != null ? retObjectIsColumnHeadersRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public int getEndColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumnDisplayIndex = null;
         try {
-            return (int)classInstance.Get("EndColumnDisplayIndex");
+            retObjectEndColumnDisplayIndex = classInstance.Get("EndColumnDisplayIndex");
+            return (int)retObjectEndColumnDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndColumnDisplayIndex != null ? retObjectEndColumnDisplayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public int getStartColumnDisplayIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartColumnDisplayIndex = null;
         try {
-            return (int)classInstance.Get("StartColumnDisplayIndex");
+            retObjectStartColumnDisplayIndex = classInstance.Get("StartColumnDisplayIndex");
+            return (int)retObjectStartColumnDisplayIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartColumnDisplayIndex != null ? retObjectStartColumnDisplayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class DataGridRowClipboardEventArgs extends EventArgs  {
 
     public NetObject getItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

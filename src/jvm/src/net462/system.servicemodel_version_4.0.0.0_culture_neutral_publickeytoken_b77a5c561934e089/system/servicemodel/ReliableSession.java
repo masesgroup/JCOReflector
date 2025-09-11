@@ -177,9 +177,13 @@ public class ReliableSession extends NetObject  {
     
     public boolean getOrdered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrdered = null;
         try {
-            return (boolean)classInstance.Get("Ordered");
+            retObjectOrdered = classInstance.Get("Ordered");
+            return (boolean)retObjectOrdered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOrdered != null ? retObjectOrdered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ReliableSession extends NetObject  {
 
     public void setOrdered(boolean Ordered) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ordered", Ordered);
         } catch (JCNativeException jcne) {
@@ -197,10 +201,14 @@ public class ReliableSession extends NetObject  {
 
     public TimeSpan getInactivityTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInactivityTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InactivityTimeout");
+            retObjectInactivityTimeout = classInstance.Get("InactivityTimeout");
+            JCObject val = (JCObject)retObjectInactivityTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInactivityTimeout != null ? retObjectInactivityTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class ReliableSession extends NetObject  {
 
     public void setInactivityTimeout(TimeSpan InactivityTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InactivityTimeout", InactivityTimeout == null ? null : InactivityTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

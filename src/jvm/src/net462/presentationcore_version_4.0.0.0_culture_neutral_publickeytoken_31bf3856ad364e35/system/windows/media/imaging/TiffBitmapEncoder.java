@@ -167,10 +167,14 @@ public class TiffBitmapEncoder extends BitmapEncoder  {
     
     public TiffCompressOption getCompression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompression = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Compression");
+            retObjectCompression = classInstance.Get("Compression");
+            JCObject val = (JCObject)retObjectCompression;
             return new TiffCompressOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompression != null ? retObjectCompression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class TiffBitmapEncoder extends BitmapEncoder  {
 
     public void setCompression(TiffCompressOption Compression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Compression", Compression == null ? null : Compression.getJCOInstance());
         } catch (JCNativeException jcne) {

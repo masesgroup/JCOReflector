@@ -143,7 +143,7 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
     
     public void Scroll(ScrollAmount horizontalAmount, ScrollAmount verticalAmount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scroll", horizontalAmount == null ? null : horizontalAmount.getJCOInstance(), verticalAmount == null ? null : verticalAmount.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public void SetScrollPercent(double horizontalPercent, double verticalPercent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetScrollPercent", horizontalPercent, verticalPercent);
         } catch (JCNativeException jcne) {
@@ -167,9 +167,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
     
     public boolean getHorizontallyScrollable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontallyScrollable = null;
         try {
-            return (boolean)classInstance.Get("HorizontallyScrollable");
+            retObjectHorizontallyScrollable = classInstance.Get("HorizontallyScrollable");
+            return (boolean)retObjectHorizontallyScrollable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHorizontallyScrollable != null ? retObjectHorizontallyScrollable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public boolean getVerticallyScrollable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticallyScrollable = null;
         try {
-            return (boolean)classInstance.Get("VerticallyScrollable");
+            retObjectVerticallyScrollable = classInstance.Get("VerticallyScrollable");
+            return (boolean)retObjectVerticallyScrollable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVerticallyScrollable != null ? retObjectVerticallyScrollable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public double getHorizontalScrollPercent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScrollPercent = null;
         try {
-            return (double)classInstance.Get("HorizontalScrollPercent");
+            retObjectHorizontalScrollPercent = classInstance.Get("HorizontalScrollPercent");
+            return (double)retObjectHorizontalScrollPercent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalScrollPercent != null ? retObjectHorizontalScrollPercent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public double getHorizontalViewSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalViewSize = null;
         try {
-            return (double)classInstance.Get("HorizontalViewSize");
+            retObjectHorizontalViewSize = classInstance.Get("HorizontalViewSize");
+            return (double)retObjectHorizontalViewSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalViewSize != null ? retObjectHorizontalViewSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public double getVerticalScrollPercent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScrollPercent = null;
         try {
-            return (double)classInstance.Get("VerticalScrollPercent");
+            retObjectVerticalScrollPercent = classInstance.Get("VerticalScrollPercent");
+            return (double)retObjectVerticalScrollPercent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalScrollPercent != null ? retObjectVerticalScrollPercent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class IScrollProviderImplementation extends NetObject implements IScrollP
 
     public double getVerticalViewSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalViewSize = null;
         try {
-            return (double)classInstance.Get("VerticalViewSize");
+            retObjectVerticalViewSize = classInstance.Get("VerticalViewSize");
+            return (double)retObjectVerticalViewSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalViewSize != null ? retObjectVerticalViewSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

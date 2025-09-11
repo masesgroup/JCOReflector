@@ -170,9 +170,13 @@ public class ColorBalanceEffect extends Effect  {
     
     public int getCyanRed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCyanRed = null;
         try {
-            return (int)classInstance.Get("CyanRed");
+            retObjectCyanRed = classInstance.Get("CyanRed");
+            return (int)retObjectCyanRed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCyanRed != null ? retObjectCyanRed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class ColorBalanceEffect extends Effect  {
 
     public int getMagentaGreen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMagentaGreen = null;
         try {
-            return (int)classInstance.Get("MagentaGreen");
+            retObjectMagentaGreen = classInstance.Get("MagentaGreen");
+            return (int)retObjectMagentaGreen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMagentaGreen != null ? retObjectMagentaGreen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class ColorBalanceEffect extends Effect  {
 
     public int getYellowBlue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYellowBlue = null;
         try {
-            return (int)classInstance.Get("YellowBlue");
+            retObjectYellowBlue = classInstance.Get("YellowBlue");
+            return (int)retObjectYellowBlue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectYellowBlue != null ? retObjectYellowBlue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

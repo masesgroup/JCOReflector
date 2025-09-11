@@ -144,7 +144,7 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
 
     public void ReleaseHdc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHdc");
         } catch (JCNativeException jcne) {

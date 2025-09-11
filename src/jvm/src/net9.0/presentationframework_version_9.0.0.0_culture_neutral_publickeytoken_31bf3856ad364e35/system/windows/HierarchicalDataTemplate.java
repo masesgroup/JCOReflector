@@ -181,9 +181,13 @@ public class HierarchicalDataTemplate extends DataTemplate  {
     
     public int getAlternationCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternationCount = null;
         try {
-            return (int)classInstance.Get("AlternationCount");
+            retObjectAlternationCount = classInstance.Get("AlternationCount");
+            return (int)retObjectAlternationCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAlternationCount != null ? retObjectAlternationCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setAlternationCount(int AlternationCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlternationCount", AlternationCount);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public java.lang.String getItemStringFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemStringFormat");
+            retObjectItemStringFormat = classInstance.Get("ItemStringFormat");
+            return (java.lang.String)retObjectItemStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemStringFormat != null ? retObjectItemStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemStringFormat(java.lang.String ItemStringFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemStringFormat", ItemStringFormat);
         } catch (JCNativeException jcne) {
@@ -221,10 +229,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public DataTemplateSelector getItemTemplateSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplateSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplateSelector");
+            retObjectItemTemplateSelector = classInstance.Get("ItemTemplateSelector");
+            JCObject val = (JCObject)retObjectItemTemplateSelector;
             return new DataTemplateSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplateSelector != null ? retObjectItemTemplateSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +244,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemTemplateSelector(DataTemplateSelector ItemTemplateSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplateSelector", ItemTemplateSelector == null ? null : ItemTemplateSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,10 +254,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public StyleSelector getItemContainerStyleSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerStyleSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerStyleSelector");
+            retObjectItemContainerStyleSelector = classInstance.Get("ItemContainerStyleSelector");
+            JCObject val = (JCObject)retObjectItemContainerStyleSelector;
             return new StyleSelector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerStyleSelector != null ? retObjectItemContainerStyleSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +269,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemContainerStyleSelector(StyleSelector ItemContainerStyleSelector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerStyleSelector", ItemContainerStyleSelector == null ? null : ItemContainerStyleSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,10 +279,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public BindingBase getItemsSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsSource");
+            retObjectItemsSource = classInstance.Get("ItemsSource");
+            JCObject val = (JCObject)retObjectItemsSource;
             return new BindingBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsSource != null ? retObjectItemsSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +294,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemsSource(BindingBase ItemsSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsSource", ItemsSource == null ? null : ItemsSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +304,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public BindingGroup getItemBindingGroup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemBindingGroup = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemBindingGroup");
+            retObjectItemBindingGroup = classInstance.Get("ItemBindingGroup");
+            JCObject val = (JCObject)retObjectItemBindingGroup;
             return new BindingGroup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemBindingGroup != null ? retObjectItemBindingGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +319,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemBindingGroup(BindingGroup ItemBindingGroup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemBindingGroup", ItemBindingGroup == null ? null : ItemBindingGroup.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +329,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public DataTemplate getItemTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemTemplate");
+            retObjectItemTemplate = classInstance.Get("ItemTemplate");
+            JCObject val = (JCObject)retObjectItemTemplate;
             return new DataTemplate(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemTemplate != null ? retObjectItemTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +344,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemTemplate(DataTemplate ItemTemplate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemTemplate", ItemTemplate == null ? null : ItemTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +354,14 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public Style getItemContainerStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerStyle");
+            retObjectItemContainerStyle = classInstance.Get("ItemContainerStyle");
+            JCObject val = (JCObject)retObjectItemContainerStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerStyle != null ? retObjectItemContainerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +369,7 @@ public class HierarchicalDataTemplate extends DataTemplate  {
 
     public void setItemContainerStyle(Style ItemContainerStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemContainerStyle", ItemContainerStyle == null ? null : ItemContainerStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

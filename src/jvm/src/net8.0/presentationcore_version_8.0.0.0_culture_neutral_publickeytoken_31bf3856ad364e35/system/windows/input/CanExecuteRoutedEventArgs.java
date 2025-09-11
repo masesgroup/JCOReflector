@@ -162,9 +162,13 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
     
     public boolean getCanExecute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExecute = null;
         try {
-            return (boolean)classInstance.Get("CanExecute");
+            retObjectCanExecute = classInstance.Get("CanExecute");
+            return (boolean)retObjectCanExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanExecute != null ? retObjectCanExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
 
     public void setCanExecute(boolean CanExecute) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanExecute", CanExecute);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
 
     public boolean getContinueRouting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueRouting = null;
         try {
-            return (boolean)classInstance.Get("ContinueRouting");
+            retObjectContinueRouting = classInstance.Get("ContinueRouting");
+            return (boolean)retObjectContinueRouting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinueRouting != null ? retObjectContinueRouting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
 
     public void setContinueRouting(boolean ContinueRouting) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContinueRouting", ContinueRouting);
         } catch (JCNativeException jcne) {
@@ -202,10 +210,14 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
 
     public NetObject getParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameter");
+            retObjectParameter = classInstance.Get("Parameter");
+            JCObject val = (JCObject)retObjectParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameter != null ? retObjectParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class CanExecuteRoutedEventArgs extends RoutedEventArgs  {
 
     public ICommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -146,10 +146,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
     
     public IAsyncResult BeginCancel(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginCancel = null;
         try {
-            JCObject objBeginCancel = (JCObject)classInstance.Invoke("BeginCancel", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginCancel = classInstance.Invoke("BeginCancel", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginCancel = (JCObject)retObjectBeginCancel;
             return new IAsyncResultImplementation(objBeginCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginCancel != null ? retObjectBeginCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public IAsyncResult BeginIssue(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginIssue = null;
         try {
-            JCObject objBeginIssue = (JCObject)classInstance.Invoke("BeginIssue", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginIssue = classInstance.Invoke("BeginIssue", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginIssue = (JCObject)retObjectBeginIssue;
             return new IAsyncResultImplementation(objBeginIssue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginIssue != null ? retObjectBeginIssue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +176,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public IAsyncResult BeginRenew(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginRenew = null;
         try {
-            JCObject objBeginRenew = (JCObject)classInstance.Invoke("BeginRenew", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginRenew = classInstance.Invoke("BeginRenew", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginRenew = (JCObject)retObjectBeginRenew;
             return new IAsyncResultImplementation(objBeginRenew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginRenew != null ? retObjectBeginRenew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +191,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public IAsyncResult BeginValidate(Message message, AsyncCallback callback, NetObject asyncState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginValidate = null;
         try {
-            JCObject objBeginValidate = (JCObject)classInstance.Invoke("BeginValidate", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            retObjectBeginValidate = classInstance.Invoke("BeginValidate", message == null ? null : message.getJCOInstance(), callback, asyncState == null ? null : asyncState.getJCOInstance());
+            JCObject objBeginValidate = (JCObject)retObjectBeginValidate;
             return new IAsyncResultImplementation(objBeginValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginValidate != null ? retObjectBeginValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +206,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message Cancel(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            JCObject objCancel = (JCObject)classInstance.Invoke("Cancel", message == null ? null : message.getJCOInstance());
+            retObjectCancel = classInstance.Invoke("Cancel", message == null ? null : message.getJCOInstance());
+            JCObject objCancel = (JCObject)retObjectCancel;
             return new Message(objCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +221,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message EndCancel(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndCancel = null;
         try {
-            JCObject objEndCancel = (JCObject)classInstance.Invoke("EndCancel", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndCancel = classInstance.Invoke("EndCancel", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndCancel = (JCObject)retObjectEndCancel;
             return new Message(objEndCancel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndCancel != null ? retObjectEndCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +236,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message EndIssue(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndIssue = null;
         try {
-            JCObject objEndIssue = (JCObject)classInstance.Invoke("EndIssue", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndIssue = classInstance.Invoke("EndIssue", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndIssue = (JCObject)retObjectEndIssue;
             return new Message(objEndIssue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndIssue != null ? retObjectEndIssue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +251,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message EndRenew(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndRenew = null;
         try {
-            JCObject objEndRenew = (JCObject)classInstance.Invoke("EndRenew", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndRenew = classInstance.Invoke("EndRenew", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndRenew = (JCObject)retObjectEndRenew;
             return new Message(objEndRenew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndRenew != null ? retObjectEndRenew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +266,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message EndValidate(IAsyncResult asyncResult) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndValidate = null;
         try {
-            JCObject objEndValidate = (JCObject)classInstance.Invoke("EndValidate", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndValidate = classInstance.Invoke("EndValidate", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndValidate = (JCObject)retObjectEndValidate;
             return new Message(objEndValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndValidate != null ? retObjectEndValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +281,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message Issue(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssue = null;
         try {
-            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", message == null ? null : message.getJCOInstance());
+            retObjectIssue = classInstance.Invoke("Issue", message == null ? null : message.getJCOInstance());
+            JCObject objIssue = (JCObject)retObjectIssue;
             return new Message(objIssue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssue != null ? retObjectIssue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +296,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message Renew(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenew = null;
         try {
-            JCObject objRenew = (JCObject)classInstance.Invoke("Renew", message == null ? null : message.getJCOInstance());
+            retObjectRenew = classInstance.Invoke("Renew", message == null ? null : message.getJCOInstance());
+            JCObject objRenew = (JCObject)retObjectRenew;
             return new Message(objRenew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenew != null ? retObjectRenew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +311,14 @@ public class IWSTrustContractImplementation extends NetObject implements IWSTrus
 
     public Message Validate(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", message == null ? null : message.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", message == null ? null : message.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new Message(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

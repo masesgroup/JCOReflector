@@ -156,10 +156,14 @@ public class MessageDescriptionCollection extends NetObjectEnumerable  {
     
     public MessageDescription Find(java.lang.String action) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFind = null;
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", action);
+            retObjectFind = classInstance.Invoke("Find", action);
+            JCObject objFind = (JCObject)retObjectFind;
             return new MessageDescription(objFind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFind != null ? retObjectFind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

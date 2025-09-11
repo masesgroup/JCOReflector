@@ -147,7 +147,7 @@ public class IClientResponseChannelSinkStackImplementation extends NetObject imp
     
     public void AsyncProcessResponse(ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AsyncProcessResponse", headers == null ? null : headers.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -157,7 +157,7 @@ public class IClientResponseChannelSinkStackImplementation extends NetObject imp
 
     public void DispatchException(NetException e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DispatchException", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class IClientResponseChannelSinkStackImplementation extends NetObject imp
 
     public void DispatchReplyMessage(IMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DispatchReplyMessage", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {

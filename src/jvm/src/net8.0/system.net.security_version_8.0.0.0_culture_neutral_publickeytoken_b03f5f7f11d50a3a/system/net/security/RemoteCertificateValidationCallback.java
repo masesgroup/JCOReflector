@@ -180,8 +180,8 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -194,9 +194,13 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
 
     public boolean DynamicInvoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), chain == null ? null : chain.getJCOInstance(), sslPolicyErrors == null ? null : sslPolicyErrors.getJCOInstance());
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", sender == null ? null : sender.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), chain == null ? null : chain.getJCOInstance(), sslPolicyErrors == null ? null : sslPolicyErrors.getJCOInstance());
+            return (boolean)retObjectDynamicInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

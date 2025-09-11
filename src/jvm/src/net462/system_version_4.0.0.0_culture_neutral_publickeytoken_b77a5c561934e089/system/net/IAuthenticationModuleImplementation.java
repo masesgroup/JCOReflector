@@ -146,10 +146,14 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
     
     public Authorization Authenticate(java.lang.String challenge, WebRequest request, ICredentials credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticate = null;
         try {
-            JCObject objAuthenticate = (JCObject)classInstance.Invoke("Authenticate", challenge, request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            retObjectAuthenticate = classInstance.Invoke("Authenticate", challenge, request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            JCObject objAuthenticate = (JCObject)retObjectAuthenticate;
             return new Authorization(objAuthenticate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
 
     public Authorization PreAuthenticate(WebRequest request, ICredentials credentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreAuthenticate = null;
         try {
-            JCObject objPreAuthenticate = (JCObject)classInstance.Invoke("PreAuthenticate", request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            retObjectPreAuthenticate = classInstance.Invoke("PreAuthenticate", request == null ? null : request.getJCOInstance(), credentials == null ? null : credentials.getJCOInstance());
+            JCObject objPreAuthenticate = (JCObject)retObjectPreAuthenticate;
             return new Authorization(objPreAuthenticate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreAuthenticate != null ? retObjectPreAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +180,13 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
     
     public boolean getCanPreAuthenticate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanPreAuthenticate = null;
         try {
-            return (boolean)classInstance.Get("CanPreAuthenticate");
+            retObjectCanPreAuthenticate = classInstance.Get("CanPreAuthenticate");
+            return (boolean)retObjectCanPreAuthenticate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanPreAuthenticate != null ? retObjectCanPreAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +194,13 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
 
     public java.lang.String getAuthenticationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationType = null;
         try {
-            return (java.lang.String)classInstance.Get("AuthenticationType");
+            retObjectAuthenticationType = classInstance.Get("AuthenticationType");
+            return (java.lang.String)retObjectAuthenticationType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthenticationType != null ? retObjectAuthenticationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

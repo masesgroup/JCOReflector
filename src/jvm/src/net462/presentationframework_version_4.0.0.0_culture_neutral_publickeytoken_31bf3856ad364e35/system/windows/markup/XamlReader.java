@@ -166,10 +166,14 @@ public class XamlReader extends NetObject  {
     
     public static NetObject Load(Stream stream) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class XamlReader extends NetObject  {
 
     public static NetObject Load(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance(), parserContext == null ? null : parserContext.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", stream == null ? null : stream.getJCOInstance(), parserContext == null ? null : parserContext.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class XamlReader extends NetObject  {
 
     public static NetObject Load(XmlReader reader) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.NotImplementedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.FormatException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class XamlReader extends NetObject  {
 
     public NetObject LoadAsync(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.ThreadAbortException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAsync = null;
         try {
-            JCObject objLoadAsync = (JCObject)classInstance.Invoke("LoadAsync", stream == null ? null : stream.getJCOInstance());
+            retObjectLoadAsync = classInstance.Invoke("LoadAsync", stream == null ? null : stream.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
             return new NetObject(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class XamlReader extends NetObject  {
 
     public NetObject LoadAsync(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAsync = null;
         try {
-            JCObject objLoadAsync = (JCObject)classInstance.Invoke("LoadAsync", stream == null ? null : stream.getJCOInstance(), parserContext == null ? null : parserContext.getJCOInstance());
+            retObjectLoadAsync = classInstance.Invoke("LoadAsync", stream == null ? null : stream.getJCOInstance(), parserContext == null ? null : parserContext.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
             return new NetObject(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class XamlReader extends NetObject  {
 
     public NetObject LoadAsync(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.xml.XmlException, system.xaml.XamlException, system.NotSupportedException, system.windows.markup.XamlParseException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoadAsync = null;
         try {
-            JCObject objLoadAsync = (JCObject)classInstance.Invoke("LoadAsync", reader == null ? null : reader.getJCOInstance());
+            retObjectLoadAsync = classInstance.Invoke("LoadAsync", reader == null ? null : reader.getJCOInstance());
+            JCObject objLoadAsync = (JCObject)retObjectLoadAsync;
             return new NetObject(objLoadAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoadAsync != null ? retObjectLoadAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class XamlReader extends NetObject  {
 
     public static NetObject Parse(java.lang.String xamlText) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", xamlText);
+            retObjectParse = classType.Invoke("Parse", xamlText);
+            JCObject objParse = (JCObject)retObjectParse;
             return new NetObject(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class XamlReader extends NetObject  {
 
     public static NetObject Parse(java.lang.String xamlText, ParserContext parserContext) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.FormatException, system.threading.ThreadAbortException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", xamlText, parserContext == null ? null : parserContext.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", xamlText, parserContext == null ? null : parserContext.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new NetObject(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class XamlReader extends NetObject  {
 
     public static XamlSchemaContext GetWpfSchemaContext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetWpfSchemaContext = null;
         try {
-            JCObject objGetWpfSchemaContext = (JCObject)classType.Invoke("GetWpfSchemaContext");
+            retObjectGetWpfSchemaContext = classType.Invoke("GetWpfSchemaContext");
+            JCObject objGetWpfSchemaContext = (JCObject)retObjectGetWpfSchemaContext;
             return new XamlSchemaContext(objGetWpfSchemaContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWpfSchemaContext != null ? retObjectGetWpfSchemaContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +301,7 @@ public class XamlReader extends NetObject  {
 
     public void CancelAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -284,7 +320,7 @@ public class XamlReader extends NetObject  {
 
     public void addLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -294,7 +330,7 @@ public class XamlReader extends NetObject  {
 
     public void removeLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {

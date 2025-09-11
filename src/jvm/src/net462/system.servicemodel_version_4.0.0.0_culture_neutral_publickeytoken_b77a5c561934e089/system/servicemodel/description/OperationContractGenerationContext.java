@@ -204,9 +204,13 @@ public class OperationContractGenerationContext extends NetObject  {
     
     public boolean getIsAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsync = null;
         try {
-            return (boolean)classInstance.Get("IsAsync");
+            retObjectIsAsync = classInstance.Get("IsAsync");
+            return (boolean)retObjectIsAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsync != null ? retObjectIsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +218,13 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public boolean getIsTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTask = null;
         try {
-            return (boolean)classInstance.Get("IsTask");
+            retObjectIsTask = classInstance.Get("IsTask");
+            return (boolean)retObjectIsTask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTask != null ? retObjectIsTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public CodeMemberMethod getBeginMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BeginMethod");
+            retObjectBeginMethod = classInstance.Get("BeginMethod");
+            JCObject val = (JCObject)retObjectBeginMethod;
             return new CodeMemberMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginMethod != null ? retObjectBeginMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +247,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public CodeMemberMethod getEndMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndMethod");
+            retObjectEndMethod = classInstance.Get("EndMethod");
+            JCObject val = (JCObject)retObjectEndMethod;
             return new CodeMemberMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndMethod != null ? retObjectEndMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +262,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public CodeMemberMethod getSyncMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSyncMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SyncMethod");
+            retObjectSyncMethod = classInstance.Get("SyncMethod");
+            JCObject val = (JCObject)retObjectSyncMethod;
             return new CodeMemberMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSyncMethod != null ? retObjectSyncMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +277,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public CodeMemberMethod getTaskMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskMethod");
+            retObjectTaskMethod = classInstance.Get("TaskMethod");
+            JCObject val = (JCObject)retObjectTaskMethod;
             return new CodeMemberMethod(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskMethod != null ? retObjectTaskMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +292,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public CodeTypeDeclaration getDeclaringType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclaringType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeclaringType");
+            retObjectDeclaringType = classInstance.Get("DeclaringType");
+            JCObject val = (JCObject)retObjectDeclaringType;
             return new CodeTypeDeclaration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclaringType != null ? retObjectDeclaringType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +307,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public OperationDescription getOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
+            retObjectOperation = classInstance.Get("Operation");
+            JCObject val = (JCObject)retObjectOperation;
             return new OperationDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperation != null ? retObjectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +322,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public ServiceContractGenerationContext getContract() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContract = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Contract");
+            retObjectContract = classInstance.Get("Contract");
+            JCObject val = (JCObject)retObjectContract;
             return new ServiceContractGenerationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContract != null ? retObjectContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +337,14 @@ public class OperationContractGenerationContext extends NetObject  {
 
     public ServiceContractGenerator getServiceContractGenerator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceContractGenerator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceContractGenerator");
+            retObjectServiceContractGenerator = classInstance.Get("ServiceContractGenerator");
+            JCObject val = (JCObject)retObjectServiceContractGenerator;
             return new ServiceContractGenerator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceContractGenerator != null ? retObjectServiceContractGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

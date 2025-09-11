@@ -154,9 +154,13 @@ public class RenderCapability extends NetObject  {
     
     public static boolean IsPixelShaderVersionSupported(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPixelShaderVersionSupported = null;
         try {
-            return (boolean)classType.Invoke("IsPixelShaderVersionSupported", majorVersionRequested, minorVersionRequested);
+            retObjectIsPixelShaderVersionSupported = classType.Invoke("IsPixelShaderVersionSupported", majorVersionRequested, minorVersionRequested);
+            return (boolean)retObjectIsPixelShaderVersionSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPixelShaderVersionSupported != null ? retObjectIsPixelShaderVersionSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class RenderCapability extends NetObject  {
 
     public static boolean IsPixelShaderVersionSupportedInSoftware(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPixelShaderVersionSupportedInSoftware = null;
         try {
-            return (boolean)classType.Invoke("IsPixelShaderVersionSupportedInSoftware", majorVersionRequested, minorVersionRequested);
+            retObjectIsPixelShaderVersionSupportedInSoftware = classType.Invoke("IsPixelShaderVersionSupportedInSoftware", majorVersionRequested, minorVersionRequested);
+            return (boolean)retObjectIsPixelShaderVersionSupportedInSoftware;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPixelShaderVersionSupportedInSoftware != null ? retObjectIsPixelShaderVersionSupportedInSoftware.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,19 @@ public class RenderCapability extends NetObject  {
 
     public static int MaxPixelShaderInstructionSlots(short majorVersionRequested, short minorVersionRequested) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxPixelShaderInstructionSlots = null;
         try {
-            return (int)classType.Invoke("MaxPixelShaderInstructionSlots", majorVersionRequested, minorVersionRequested);
+            retObjectMaxPixelShaderInstructionSlots = classType.Invoke("MaxPixelShaderInstructionSlots", majorVersionRequested, minorVersionRequested);
+            return (int)retObjectMaxPixelShaderInstructionSlots;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectMaxPixelShaderInstructionSlotsNumber = (java.lang.Number)retObjectMaxPixelShaderInstructionSlots;
+                return retObjectMaxPixelShaderInstructionSlotsNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectMaxPixelShaderInstructionSlots != null ? retObjectMaxPixelShaderInstructionSlots.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +206,13 @@ public class RenderCapability extends NetObject  {
     
     public static boolean getIsShaderEffectSoftwareRenderingSupported() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsShaderEffectSoftwareRenderingSupported = null;
         try {
-            return (boolean)classType.Get("IsShaderEffectSoftwareRenderingSupported");
+            retObjectIsShaderEffectSoftwareRenderingSupported = classType.Get("IsShaderEffectSoftwareRenderingSupported");
+            return (boolean)retObjectIsShaderEffectSoftwareRenderingSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsShaderEffectSoftwareRenderingSupported != null ? retObjectIsShaderEffectSoftwareRenderingSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +220,13 @@ public class RenderCapability extends NetObject  {
 
     public static int getTier() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTier = null;
         try {
-            return (int)classType.Get("Tier");
+            retObjectTier = classType.Get("Tier");
+            return (int)retObjectTier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTier != null ? retObjectTier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +234,14 @@ public class RenderCapability extends NetObject  {
 
     public static Size getMaxHardwareTextureSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException, system.NotSupportedException, system.FormatException, system.ObjectDisposedException, system.RankException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxHardwareTextureSize = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaxHardwareTextureSize");
+            retObjectMaxHardwareTextureSize = classType.Get("MaxHardwareTextureSize");
+            JCObject val = (JCObject)retObjectMaxHardwareTextureSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxHardwareTextureSize != null ? retObjectMaxHardwareTextureSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

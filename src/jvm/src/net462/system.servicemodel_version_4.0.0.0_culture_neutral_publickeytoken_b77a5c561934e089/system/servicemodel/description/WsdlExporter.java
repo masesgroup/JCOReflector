@@ -167,10 +167,14 @@ public class WsdlExporter extends MetadataExporter  {
     
     public MetadataSet GetGeneratedMetadata() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedMetadata = null;
         try {
-            JCObject objGetGeneratedMetadata = (JCObject)classInstance.Invoke("GetGeneratedMetadata");
+            retObjectGetGeneratedMetadata = classInstance.Invoke("GetGeneratedMetadata");
+            JCObject objGetGeneratedMetadata = (JCObject)retObjectGetGeneratedMetadata;
             return new MetadataSet(objGetGeneratedMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGeneratedMetadata != null ? retObjectGetGeneratedMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class WsdlExporter extends MetadataExporter  {
 
     public void ExportContract(ContractDescription contract) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportContract", contract == null ? null : contract.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class WsdlExporter extends MetadataExporter  {
 
     public void ExportEndpoint(ServiceEndpoint endpoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExportEndpoint", endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +206,14 @@ public class WsdlExporter extends MetadataExporter  {
     
     public ServiceDescriptionCollection getGeneratedWsdlDocuments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedWsdlDocuments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GeneratedWsdlDocuments");
+            retObjectGeneratedWsdlDocuments = classInstance.Get("GeneratedWsdlDocuments");
+            JCObject val = (JCObject)retObjectGeneratedWsdlDocuments;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneratedWsdlDocuments != null ? retObjectGeneratedWsdlDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class WsdlExporter extends MetadataExporter  {
 
     public XmlSchemaSet getGeneratedXmlSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneratedXmlSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GeneratedXmlSchemas");
+            retObjectGeneratedXmlSchemas = classInstance.Get("GeneratedXmlSchemas");
+            JCObject val = (JCObject)retObjectGeneratedXmlSchemas;
             return new XmlSchemaSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeneratedXmlSchemas != null ? retObjectGeneratedXmlSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -168,10 +168,14 @@ public class PrintJobInfoCollection extends PrintSystemObjects  {
     
     public IEnumerator GetNonGenericEnumerator() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNonGenericEnumerator = null;
         try {
-            JCObject objGetNonGenericEnumerator = (JCObject)classInstance.Invoke("GetNonGenericEnumerator");
+            retObjectGetNonGenericEnumerator = classInstance.Invoke("GetNonGenericEnumerator");
+            JCObject objGetNonGenericEnumerator = (JCObject)retObjectGetNonGenericEnumerator;
             return new IEnumeratorImplementation(objGetNonGenericEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNonGenericEnumerator != null ? retObjectGetNonGenericEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class PrintJobInfoCollection extends PrintSystemObjects  {
 
     public void Add(PrintSystemJobInfo printObject) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", printObject == null ? null : printObject.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -182,10 +182,14 @@ public class ComponentGlyph extends Glyph  {
     
     public Cursor GetHitTest(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHitTest = null;
         try {
-            JCObject objGetHitTest = (JCObject)classInstance.Invoke("GetHitTest", p == null ? null : p.getJCOInstance());
+            retObjectGetHitTest = classInstance.Invoke("GetHitTest", p == null ? null : p.getJCOInstance());
+            JCObject objGetHitTest = (JCObject)retObjectGetHitTest;
             return new Cursor(objGetHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHitTest != null ? retObjectGetHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class ComponentGlyph extends Glyph  {
 
     public void Paint(PaintEventArgs pe) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paint", pe == null ? null : pe.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +211,14 @@ public class ComponentGlyph extends Glyph  {
     
     public IComponent getRelatedComponent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelatedComponent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelatedComponent");
+            retObjectRelatedComponent = classInstance.Get("RelatedComponent");
+            JCObject val = (JCObject)retObjectRelatedComponent;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelatedComponent != null ? retObjectRelatedComponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

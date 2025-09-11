@@ -166,7 +166,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
     
     public void PostMapRequestHandler(HttpContextBase context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostMapRequestHandler", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
 
     public void PostResolveRequestCache(HttpContextBase context) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.web.HttpException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostResolveRequestCache", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
     }
 
     /**
@@ -199,7 +199,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
      */
     @Deprecated 
     public void Init(HttpApplication context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
     }
 
 
@@ -208,10 +208,14 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
     
     public RouteCollection getRouteCollection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteCollection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RouteCollection");
+            retObjectRouteCollection = classInstance.Get("RouteCollection");
+            JCObject val = (JCObject)retObjectRouteCollection;
             return new RouteCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRouteCollection != null ? retObjectRouteCollection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +223,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
 
     public void setRouteCollection(RouteCollection RouteCollection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteCollection", RouteCollection == null ? null : RouteCollection.getJCOInstance());
         } catch (JCNativeException jcne) {

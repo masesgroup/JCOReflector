@@ -173,7 +173,7 @@ public class MultipartFormDataContent extends MultipartContent  {
     
     public void Add(HttpContent content, java.lang.String name, java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.diagnostics.UnreachableException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance(), name, fileName);
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class MultipartFormDataContent extends MultipartContent  {
 
     public void Add(HttpContent content, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.diagnostics.UnreachableException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class MultipartFormDataContent extends MultipartContent  {
 
     public void Add(HttpContent content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", content == null ? null : content.getJCOInstance());
         } catch (JCNativeException jcne) {

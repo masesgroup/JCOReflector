@@ -162,9 +162,13 @@ public class Lock extends NetObject  {
     
     public boolean TryEnter() throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnter");
+            retObjectTryEnter = classInstance.Invoke("TryEnter");
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class Lock extends NetObject  {
 
     public boolean TryEnter(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnter", millisecondsTimeout);
+            retObjectTryEnter = classInstance.Invoke("TryEnter", millisecondsTimeout);
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class Lock extends NetObject  {
 
     public boolean TryEnter(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.OutOfMemoryException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classInstance.Invoke("TryEnter", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryEnter = classInstance.Invoke("TryEnter", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +204,7 @@ public class Lock extends NetObject  {
 
     public void Enter() throws Throwable, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Enter");
         } catch (JCNativeException jcne) {
@@ -202,7 +214,7 @@ public class Lock extends NetObject  {
 
     public void Exit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exit");
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class Lock extends NetObject  {
     
     public boolean getIsHeldByCurrentThread() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHeldByCurrentThread = null;
         try {
-            return (boolean)classInstance.Get("IsHeldByCurrentThread");
+            retObjectIsHeldByCurrentThread = classInstance.Get("IsHeldByCurrentThread");
+            return (boolean)retObjectIsHeldByCurrentThread;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHeldByCurrentThread != null ? retObjectIsHeldByCurrentThread.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,7 +164,7 @@ public class PrintDialog extends CommonDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -178,9 +178,13 @@ public class PrintDialog extends CommonDialog  {
     
     public boolean getAllowCurrentPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCurrentPage = null;
         try {
-            return (boolean)classInstance.Get("AllowCurrentPage");
+            retObjectAllowCurrentPage = classInstance.Get("AllowCurrentPage");
+            return (boolean)retObjectAllowCurrentPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCurrentPage != null ? retObjectAllowCurrentPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setAllowCurrentPage(boolean AllowCurrentPage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCurrentPage", AllowCurrentPage);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getAllowPrintToFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPrintToFile = null;
         try {
-            return (boolean)classInstance.Get("AllowPrintToFile");
+            retObjectAllowPrintToFile = classInstance.Get("AllowPrintToFile");
+            return (boolean)retObjectAllowPrintToFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPrintToFile != null ? retObjectAllowPrintToFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setAllowPrintToFile(boolean AllowPrintToFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPrintToFile", AllowPrintToFile);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getAllowSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSelection = null;
         try {
-            return (boolean)classInstance.Get("AllowSelection");
+            retObjectAllowSelection = classInstance.Get("AllowSelection");
+            return (boolean)retObjectAllowSelection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSelection != null ? retObjectAllowSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setAllowSelection(boolean AllowSelection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSelection", AllowSelection);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getAllowSomePages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSomePages = null;
         try {
-            return (boolean)classInstance.Get("AllowSomePages");
+            retObjectAllowSomePages = classInstance.Get("AllowSomePages");
+            return (boolean)retObjectAllowSomePages;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSomePages != null ? retObjectAllowSomePages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setAllowSomePages(boolean AllowSomePages) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSomePages", AllowSomePages);
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getPrintToFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintToFile = null;
         try {
-            return (boolean)classInstance.Get("PrintToFile");
+            retObjectPrintToFile = classInstance.Get("PrintToFile");
+            return (boolean)retObjectPrintToFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrintToFile != null ? retObjectPrintToFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setPrintToFile(boolean PrintToFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrintToFile", PrintToFile);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHelp = null;
         try {
-            return (boolean)classInstance.Get("ShowHelp");
+            retObjectShowHelp = classInstance.Get("ShowHelp");
+            return (boolean)retObjectShowHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHelp != null ? retObjectShowHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHelp", ShowHelp);
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getShowNetwork() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowNetwork = null;
         try {
-            return (boolean)classInstance.Get("ShowNetwork");
+            retObjectShowNetwork = classInstance.Get("ShowNetwork");
+            return (boolean)retObjectShowNetwork;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowNetwork != null ? retObjectShowNetwork.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +336,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setShowNetwork(boolean ShowNetwork) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowNetwork", ShowNetwork);
         } catch (JCNativeException jcne) {
@@ -318,9 +346,13 @@ public class PrintDialog extends CommonDialog  {
 
     public boolean getUseEXDialog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseEXDialog = null;
         try {
-            return (boolean)classInstance.Get("UseEXDialog");
+            retObjectUseEXDialog = classInstance.Get("UseEXDialog");
+            return (boolean)retObjectUseEXDialog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseEXDialog != null ? retObjectUseEXDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +360,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setUseEXDialog(boolean UseEXDialog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseEXDialog", UseEXDialog);
         } catch (JCNativeException jcne) {
@@ -338,10 +370,14 @@ public class PrintDialog extends CommonDialog  {
 
     public PrintDocument getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new PrintDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +385,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setDocument(PrintDocument Document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,10 +395,14 @@ public class PrintDialog extends CommonDialog  {
 
     public PrinterSettings getPrinterSettings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrinterSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrinterSettings");
+            retObjectPrinterSettings = classInstance.Get("PrinterSettings");
+            JCObject val = (JCObject)retObjectPrinterSettings;
             return new PrinterSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrinterSettings != null ? retObjectPrinterSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +410,7 @@ public class PrintDialog extends CommonDialog  {
 
     public void setPrinterSettings(PrinterSettings PrinterSettings) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrinterSettings", PrinterSettings == null ? null : PrinterSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

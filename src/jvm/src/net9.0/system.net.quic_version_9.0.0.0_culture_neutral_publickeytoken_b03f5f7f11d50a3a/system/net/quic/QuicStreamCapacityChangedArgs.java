@@ -160,9 +160,13 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
     
     public int getBidirectionalIncrement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBidirectionalIncrement = null;
         try {
-            return (int)classInstance.Get("BidirectionalIncrement");
+            retObjectBidirectionalIncrement = classInstance.Get("BidirectionalIncrement");
+            return (int)retObjectBidirectionalIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBidirectionalIncrement != null ? retObjectBidirectionalIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
 
     public void setBidirectionalIncrement(int BidirectionalIncrement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BidirectionalIncrement", BidirectionalIncrement);
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
 
     public int getUnidirectionalIncrement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnidirectionalIncrement = null;
         try {
-            return (int)classInstance.Get("UnidirectionalIncrement");
+            retObjectUnidirectionalIncrement = classInstance.Get("UnidirectionalIncrement");
+            return (int)retObjectUnidirectionalIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUnidirectionalIncrement != null ? retObjectUnidirectionalIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class QuicStreamCapacityChangedArgs extends ValueType  {
 
     public void setUnidirectionalIncrement(int UnidirectionalIncrement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnidirectionalIncrement", UnidirectionalIncrement);
         } catch (JCNativeException jcne) {

@@ -183,9 +183,13 @@ public class GiveFeedbackEventArgs extends EventArgs  {
     
     public boolean getUseDefaultCursors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultCursors = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultCursors");
+            retObjectUseDefaultCursors = classInstance.Get("UseDefaultCursors");
+            return (boolean)retObjectUseDefaultCursors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultCursors != null ? retObjectUseDefaultCursors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public void setUseDefaultCursors(boolean UseDefaultCursors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCursors", UseDefaultCursors);
         } catch (JCNativeException jcne) {
@@ -203,9 +207,13 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public boolean getUseDefaultDragImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultDragImage = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultDragImage");
+            retObjectUseDefaultDragImage = classInstance.Get("UseDefaultDragImage");
+            return (boolean)retObjectUseDefaultDragImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultDragImage != null ? retObjectUseDefaultDragImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public void setUseDefaultDragImage(boolean UseDefaultDragImage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultDragImage", UseDefaultDragImage);
         } catch (JCNativeException jcne) {
@@ -223,10 +231,14 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public Bitmap getDragImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDragImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DragImage");
+            retObjectDragImage = classInstance.Get("DragImage");
+            JCObject val = (JCObject)retObjectDragImage;
             return new Bitmap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDragImage != null ? retObjectDragImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +246,7 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public void setDragImage(Bitmap DragImage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragImage", DragImage == null ? null : DragImage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +256,14 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public Point getCursorOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCursorOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CursorOffset");
+            retObjectCursorOffset = classInstance.Get("CursorOffset");
+            JCObject val = (JCObject)retObjectCursorOffset;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCursorOffset != null ? retObjectCursorOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public void setCursorOffset(Point CursorOffset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CursorOffset", CursorOffset == null ? null : CursorOffset.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +281,14 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public DragDropEffects getEffect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Effect");
+            retObjectEffect = classInstance.Get("Effect");
+            JCObject val = (JCObject)retObjectEffect;
             return new DragDropEffects(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEffect != null ? retObjectEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

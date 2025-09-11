@@ -193,7 +193,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
     
     public void GetBytes(byte[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetNonZeroBytes(byte[] data) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -223,7 +223,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
 
     public void GetNonZeroBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {

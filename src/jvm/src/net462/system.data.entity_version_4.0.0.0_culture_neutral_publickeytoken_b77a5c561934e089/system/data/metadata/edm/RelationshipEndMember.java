@@ -157,10 +157,14 @@ public class RelationshipEndMember extends EdmMember  {
     
     public EntityType GetEntityType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEntityType = null;
         try {
-            JCObject objGetEntityType = (JCObject)classInstance.Invoke("GetEntityType");
+            retObjectGetEntityType = classInstance.Invoke("GetEntityType");
+            JCObject objGetEntityType = (JCObject)retObjectGetEntityType;
             return new EntityType(objGetEntityType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEntityType != null ? retObjectGetEntityType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class RelationshipEndMember extends EdmMember  {
     
     public OperationAction getDeleteBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeleteBehavior");
+            retObjectDeleteBehavior = classInstance.Get("DeleteBehavior");
+            JCObject val = (JCObject)retObjectDeleteBehavior;
             return new OperationAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeleteBehavior != null ? retObjectDeleteBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +191,7 @@ public class RelationshipEndMember extends EdmMember  {
 
     public void setDeleteBehavior(OperationAction DeleteBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteBehavior", DeleteBehavior == null ? null : DeleteBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +201,14 @@ public class RelationshipEndMember extends EdmMember  {
 
     public RelationshipMultiplicity getRelationshipMultiplicity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipMultiplicity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelationshipMultiplicity");
+            retObjectRelationshipMultiplicity = classInstance.Get("RelationshipMultiplicity");
+            JCObject val = (JCObject)retObjectRelationshipMultiplicity;
             return new RelationshipMultiplicity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelationshipMultiplicity != null ? retObjectRelationshipMultiplicity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

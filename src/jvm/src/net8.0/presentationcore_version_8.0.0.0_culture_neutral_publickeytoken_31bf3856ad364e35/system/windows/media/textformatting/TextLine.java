@@ -160,9 +160,19 @@ public class TextLine extends NetObject implements AutoCloseable {
     
     public double GetDistanceFromCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDistanceFromCharacterHit = null;
         try {
-            return (double)classInstance.Invoke("GetDistanceFromCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetDistanceFromCharacterHit = classInstance.Invoke("GetDistanceFromCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            return (double)retObjectGetDistanceFromCharacterHit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDistanceFromCharacterHitNumber = (java.lang.Number)retObjectGetDistanceFromCharacterHit;
+                return retObjectGetDistanceFromCharacterHitNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetDistanceFromCharacterHit != null ? retObjectGetDistanceFromCharacterHit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +180,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public CharacterHit GetBackspaceCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBackspaceCaretCharacterHit = null;
         try {
-            JCObject objGetBackspaceCaretCharacterHit = (JCObject)classInstance.Invoke("GetBackspaceCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetBackspaceCaretCharacterHit = classInstance.Invoke("GetBackspaceCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            JCObject objGetBackspaceCaretCharacterHit = (JCObject)retObjectGetBackspaceCaretCharacterHit;
             return new CharacterHit(objGetBackspaceCaretCharacterHit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBackspaceCaretCharacterHit != null ? retObjectGetBackspaceCaretCharacterHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +195,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public CharacterHit GetCharacterHitFromDistance(double distance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharacterHitFromDistance = null;
         try {
-            JCObject objGetCharacterHitFromDistance = (JCObject)classInstance.Invoke("GetCharacterHitFromDistance", distance);
+            retObjectGetCharacterHitFromDistance = classInstance.Invoke("GetCharacterHitFromDistance", distance);
+            JCObject objGetCharacterHitFromDistance = (JCObject)retObjectGetCharacterHitFromDistance;
             return new CharacterHit(objGetCharacterHitFromDistance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCharacterHitFromDistance != null ? retObjectGetCharacterHitFromDistance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +210,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public CharacterHit GetNextCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextCaretCharacterHit = null;
         try {
-            JCObject objGetNextCaretCharacterHit = (JCObject)classInstance.Invoke("GetNextCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetNextCaretCharacterHit = classInstance.Invoke("GetNextCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            JCObject objGetNextCaretCharacterHit = (JCObject)retObjectGetNextCaretCharacterHit;
             return new CharacterHit(objGetNextCaretCharacterHit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextCaretCharacterHit != null ? retObjectGetNextCaretCharacterHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +225,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public CharacterHit GetPreviousCaretCharacterHit(CharacterHit characterHit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreviousCaretCharacterHit = null;
         try {
-            JCObject objGetPreviousCaretCharacterHit = (JCObject)classInstance.Invoke("GetPreviousCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            retObjectGetPreviousCaretCharacterHit = classInstance.Invoke("GetPreviousCaretCharacterHit", characterHit == null ? null : characterHit.getJCOInstance());
+            JCObject objGetPreviousCaretCharacterHit = (JCObject)retObjectGetPreviousCaretCharacterHit;
             return new CharacterHit(objGetPreviousCaretCharacterHit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreviousCaretCharacterHit != null ? retObjectGetPreviousCaretCharacterHit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +240,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public TextLine Collapse(TextCollapsingProperties... collapsingPropertiesList) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapse = null;
         try {
-            JCObject objCollapse = (JCObject)classInstance.Invoke("Collapse", (java.lang.Object)toObjectFromArray(collapsingPropertiesList));
+            retObjectCollapse = classInstance.Invoke("Collapse", (java.lang.Object)toObjectFromArray(collapsingPropertiesList));
+            JCObject objCollapse = (JCObject)retObjectCollapse;
             return new TextLine(objCollapse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCollapse != null ? retObjectCollapse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +255,14 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public TextLineBreak GetTextLineBreak() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTextLineBreak = null;
         try {
-            JCObject objGetTextLineBreak = (JCObject)classInstance.Invoke("GetTextLineBreak");
+            retObjectGetTextLineBreak = classInstance.Invoke("GetTextLineBreak");
+            JCObject objGetTextLineBreak = (JCObject)retObjectGetTextLineBreak;
             return new TextLineBreak(objGetTextLineBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTextLineBreak != null ? retObjectGetTextLineBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +270,7 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -246,7 +280,7 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public void Draw(DrawingContext drawingContext, Point origin, InvertAxes inversion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Draw", drawingContext == null ? null : drawingContext.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), inversion == null ? null : inversion.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +291,7 @@ public class TextLine extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -273,9 +307,13 @@ public class TextLine extends NetObject implements AutoCloseable {
     
     public boolean getHasCollapsed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasCollapsed = null;
         try {
-            return (boolean)classInstance.Get("HasCollapsed");
+            retObjectHasCollapsed = classInstance.Get("HasCollapsed");
+            return (boolean)retObjectHasCollapsed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasCollapsed != null ? retObjectHasCollapsed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +321,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public boolean getHasOverflowed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasOverflowed = null;
         try {
-            return (boolean)classInstance.Get("HasOverflowed");
+            retObjectHasOverflowed = classInstance.Get("HasOverflowed");
+            return (boolean)retObjectHasOverflowed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasOverflowed != null ? retObjectHasOverflowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +335,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public boolean getIsTruncated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTruncated = null;
         try {
-            return (boolean)classInstance.Get("IsTruncated");
+            retObjectIsTruncated = classInstance.Get("IsTruncated");
+            return (boolean)retObjectIsTruncated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTruncated != null ? retObjectIsTruncated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +349,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getBaseline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            return (double)classInstance.Get("Baseline");
+            retObjectBaseline = classInstance.Get("Baseline");
+            return (double)retObjectBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +363,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getExtent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtent = null;
         try {
-            return (double)classInstance.Get("Extent");
+            retObjectExtent = classInstance.Get("Extent");
+            return (double)retObjectExtent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtent != null ? retObjectExtent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +377,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (double)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (double)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +391,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getMarkerBaseline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarkerBaseline = null;
         try {
-            return (double)classInstance.Get("MarkerBaseline");
+            retObjectMarkerBaseline = classInstance.Get("MarkerBaseline");
+            return (double)retObjectMarkerBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMarkerBaseline != null ? retObjectMarkerBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +405,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getMarkerHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarkerHeight = null;
         try {
-            return (double)classInstance.Get("MarkerHeight");
+            retObjectMarkerHeight = classInstance.Get("MarkerHeight");
+            return (double)retObjectMarkerHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMarkerHeight != null ? retObjectMarkerHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +419,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getOverhangAfter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangAfter = null;
         try {
-            return (double)classInstance.Get("OverhangAfter");
+            retObjectOverhangAfter = classInstance.Get("OverhangAfter");
+            return (double)retObjectOverhangAfter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangAfter != null ? retObjectOverhangAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,9 +433,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getOverhangLeading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangLeading = null;
         try {
-            return (double)classInstance.Get("OverhangLeading");
+            retObjectOverhangLeading = classInstance.Get("OverhangLeading");
+            return (double)retObjectOverhangLeading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangLeading != null ? retObjectOverhangLeading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,9 +447,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getOverhangTrailing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangTrailing = null;
         try {
-            return (double)classInstance.Get("OverhangTrailing");
+            retObjectOverhangTrailing = classInstance.Get("OverhangTrailing");
+            return (double)retObjectOverhangTrailing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangTrailing != null ? retObjectOverhangTrailing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,9 +461,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            return (double)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            return (double)retObjectPixelsPerDip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +475,7 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip);
         } catch (JCNativeException jcne) {
@@ -403,9 +485,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getStart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStart = null;
         try {
-            return (double)classInstance.Get("Start");
+            retObjectStart = classInstance.Get("Start");
+            return (double)retObjectStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStart != null ? retObjectStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,9 +499,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getTextBaseline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextBaseline = null;
         try {
-            return (double)classInstance.Get("TextBaseline");
+            retObjectTextBaseline = classInstance.Get("TextBaseline");
+            return (double)retObjectTextBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTextBaseline != null ? retObjectTextBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,9 +513,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getTextHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextHeight = null;
         try {
-            return (double)classInstance.Get("TextHeight");
+            retObjectTextHeight = classInstance.Get("TextHeight");
+            return (double)retObjectTextHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTextHeight != null ? retObjectTextHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,9 +527,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (double)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (double)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,9 +541,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public double getWidthIncludingTrailingWhitespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidthIncludingTrailingWhitespace = null;
         try {
-            return (double)classInstance.Get("WidthIncludingTrailingWhitespace");
+            retObjectWidthIncludingTrailingWhitespace = classInstance.Get("WidthIncludingTrailingWhitespace");
+            return (double)retObjectWidthIncludingTrailingWhitespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWidthIncludingTrailingWhitespace != null ? retObjectWidthIncludingTrailingWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,9 +555,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public int getDependentLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependentLength = null;
         try {
-            return (int)classInstance.Get("DependentLength");
+            retObjectDependentLength = classInstance.Get("DependentLength");
+            return (int)retObjectDependentLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDependentLength != null ? retObjectDependentLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,9 +569,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public int getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,9 +583,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public int getNewlineLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewlineLength = null;
         try {
-            return (int)classInstance.Get("NewlineLength");
+            retObjectNewlineLength = classInstance.Get("NewlineLength");
+            return (int)retObjectNewlineLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNewlineLength != null ? retObjectNewlineLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,9 +597,13 @@ public class TextLine extends NetObject implements AutoCloseable {
 
     public int getTrailingWhitespaceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrailingWhitespaceLength = null;
         try {
-            return (int)classInstance.Get("TrailingWhitespaceLength");
+            retObjectTrailingWhitespaceLength = classInstance.Get("TrailingWhitespaceLength");
+            return (int)retObjectTrailingWhitespaceLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTrailingWhitespaceLength != null ? retObjectTrailingWhitespaceLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

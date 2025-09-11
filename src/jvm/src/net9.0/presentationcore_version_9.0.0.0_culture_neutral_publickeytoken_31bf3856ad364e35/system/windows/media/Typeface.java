@@ -191,9 +191,13 @@ public class Typeface extends NetObject  {
     
     public boolean TryGetGlyphTypeface(JCORefOut<GlyphTypeface> glyphTypeface) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetGlyphTypeface = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetGlyphTypeface", glyphTypeface.getJCRefOut());
+            retObjectTryGetGlyphTypeface = classInstance.Invoke("TryGetGlyphTypeface", glyphTypeface.getJCRefOut());
+            return (boolean)retObjectTryGetGlyphTypeface;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetGlyphTypeface != null ? retObjectTryGetGlyphTypeface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +209,13 @@ public class Typeface extends NetObject  {
     
     public boolean getIsBoldSimulated() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBoldSimulated = null;
         try {
-            return (boolean)classInstance.Get("IsBoldSimulated");
+            retObjectIsBoldSimulated = classInstance.Get("IsBoldSimulated");
+            return (boolean)retObjectIsBoldSimulated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBoldSimulated != null ? retObjectIsBoldSimulated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +223,13 @@ public class Typeface extends NetObject  {
 
     public boolean getIsObliqueSimulated() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsObliqueSimulated = null;
         try {
-            return (boolean)classInstance.Get("IsObliqueSimulated");
+            retObjectIsObliqueSimulated = classInstance.Get("IsObliqueSimulated");
+            return (boolean)retObjectIsObliqueSimulated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsObliqueSimulated != null ? retObjectIsObliqueSimulated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +237,13 @@ public class Typeface extends NetObject  {
 
     public double getCapsHeight() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapsHeight = null;
         try {
-            return (double)classInstance.Get("CapsHeight");
+            retObjectCapsHeight = classInstance.Get("CapsHeight");
+            return (double)retObjectCapsHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectCapsHeight != null ? retObjectCapsHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +251,13 @@ public class Typeface extends NetObject  {
 
     public double getStrikethroughPosition() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrikethroughPosition = null;
         try {
-            return (double)classInstance.Get("StrikethroughPosition");
+            retObjectStrikethroughPosition = classInstance.Get("StrikethroughPosition");
+            return (double)retObjectStrikethroughPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStrikethroughPosition != null ? retObjectStrikethroughPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +265,13 @@ public class Typeface extends NetObject  {
 
     public double getStrikethroughThickness() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrikethroughThickness = null;
         try {
-            return (double)classInstance.Get("StrikethroughThickness");
+            retObjectStrikethroughThickness = classInstance.Get("StrikethroughThickness");
+            return (double)retObjectStrikethroughThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStrikethroughThickness != null ? retObjectStrikethroughThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +279,13 @@ public class Typeface extends NetObject  {
 
     public double getUnderlinePosition() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlinePosition = null;
         try {
-            return (double)classInstance.Get("UnderlinePosition");
+            retObjectUnderlinePosition = classInstance.Get("UnderlinePosition");
+            return (double)retObjectUnderlinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectUnderlinePosition != null ? retObjectUnderlinePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +293,13 @@ public class Typeface extends NetObject  {
 
     public double getUnderlineThickness() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlineThickness = null;
         try {
-            return (double)classInstance.Get("UnderlineThickness");
+            retObjectUnderlineThickness = classInstance.Get("UnderlineThickness");
+            return (double)retObjectUnderlineThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectUnderlineThickness != null ? retObjectUnderlineThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,9 +307,13 @@ public class Typeface extends NetObject  {
 
     public double getXHeight() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXHeight = null;
         try {
-            return (double)classInstance.Get("XHeight");
+            retObjectXHeight = classInstance.Get("XHeight");
+            return (double)retObjectXHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectXHeight != null ? retObjectXHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +321,14 @@ public class Typeface extends NetObject  {
 
     public FontStretch getStretch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStretch = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Stretch");
+            retObjectStretch = classInstance.Get("Stretch");
+            JCObject val = (JCObject)retObjectStretch;
             return new FontStretch(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStretch != null ? retObjectStretch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +336,14 @@ public class Typeface extends NetObject  {
 
     public FontStyle getStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Style");
+            retObjectStyle = classInstance.Get("Style");
+            JCObject val = (JCObject)retObjectStyle;
             return new FontStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStyle != null ? retObjectStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +351,14 @@ public class Typeface extends NetObject  {
 
     public FontWeight getWeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Weight");
+            retObjectWeight = classInstance.Get("Weight");
+            JCObject val = (JCObject)retObjectWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWeight != null ? retObjectWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +366,14 @@ public class Typeface extends NetObject  {
 
     public FontFamily getFontFamily() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FontFamily");
+            retObjectFontFamily = classInstance.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +381,14 @@ public class Typeface extends NetObject  {
 
     public LanguageSpecificStringDictionary getFaceNames() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.io.FileNotFoundException, system.io.FileFormatException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaceNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FaceNames");
+            retObjectFaceNames = classInstance.Get("FaceNames");
+            JCObject val = (JCObject)retObjectFaceNames;
             return new LanguageSpecificStringDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaceNames != null ? retObjectFaceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

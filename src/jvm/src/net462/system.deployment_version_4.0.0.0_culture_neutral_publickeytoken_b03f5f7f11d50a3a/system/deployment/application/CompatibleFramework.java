@@ -159,9 +159,13 @@ public class CompatibleFramework extends NetObject  {
     
     public java.lang.String getProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfile = null;
         try {
-            return (java.lang.String)classInstance.Get("Profile");
+            retObjectProfile = classInstance.Get("Profile");
+            return (java.lang.String)retObjectProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProfile != null ? retObjectProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getSupportedRuntime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedRuntime = null;
         try {
-            return (java.lang.String)classInstance.Get("SupportedRuntime");
+            retObjectSupportedRuntime = classInstance.Get("SupportedRuntime");
+            return (java.lang.String)retObjectSupportedRuntime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSupportedRuntime != null ? retObjectSupportedRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +187,13 @@ public class CompatibleFramework extends NetObject  {
 
     public java.lang.String getTargetVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetVersion");
+            retObjectTargetVersion = classInstance.Get("TargetVersion");
+            return (java.lang.String)retObjectTargetVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetVersion != null ? retObjectTargetVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

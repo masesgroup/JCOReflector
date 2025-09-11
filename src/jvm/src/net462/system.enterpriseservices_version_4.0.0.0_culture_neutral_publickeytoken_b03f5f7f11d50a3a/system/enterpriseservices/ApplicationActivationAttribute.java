@@ -171,10 +171,14 @@ public class ApplicationActivationAttribute extends Attribute  {
     
     public ActivationOption getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new ActivationOption(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class ApplicationActivationAttribute extends Attribute  {
 
     public java.lang.String getSoapMailbox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapMailbox = null;
         try {
-            return (java.lang.String)classInstance.Get("SoapMailbox");
+            retObjectSoapMailbox = classInstance.Get("SoapMailbox");
+            return (java.lang.String)retObjectSoapMailbox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoapMailbox != null ? retObjectSoapMailbox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class ApplicationActivationAttribute extends Attribute  {
 
     public void setSoapMailbox(java.lang.String SoapMailbox) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapMailbox", SoapMailbox);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class ApplicationActivationAttribute extends Attribute  {
 
     public java.lang.String getSoapVRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapVRoot = null;
         try {
-            return (java.lang.String)classInstance.Get("SoapVRoot");
+            retObjectSoapVRoot = classInstance.Get("SoapVRoot");
+            return (java.lang.String)retObjectSoapVRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSoapVRoot != null ? retObjectSoapVRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class ApplicationActivationAttribute extends Attribute  {
 
     public void setSoapVRoot(java.lang.String SoapVRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapVRoot", SoapVRoot);
         } catch (JCNativeException jcne) {

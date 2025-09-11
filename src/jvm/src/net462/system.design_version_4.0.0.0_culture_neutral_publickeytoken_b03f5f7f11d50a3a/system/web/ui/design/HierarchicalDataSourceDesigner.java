@@ -165,9 +165,13 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
     
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public DesignerHierarchicalDataSourceView GetView(java.lang.String viewPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewPath);
+            retObjectGetView = classInstance.Invoke("GetView", viewPath);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DesignerHierarchicalDataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void Configure() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
@@ -196,7 +204,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void RefreshSchema(boolean preferSilent) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema", preferSilent);
         } catch (JCNativeException jcne) {
@@ -206,7 +214,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void ResumeDataSourceEvents() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResumeDataSourceEvents");
         } catch (JCNativeException jcne) {
@@ -216,7 +224,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void SuppressDataSourceEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SuppressDataSourceEvents");
         } catch (JCNativeException jcne) {
@@ -230,9 +238,13 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
     
     public boolean getCanConfigure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanConfigure = null;
         try {
-            return (boolean)classInstance.Get("CanConfigure");
+            retObjectCanConfigure = classInstance.Get("CanConfigure");
+            return (boolean)retObjectCanConfigure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanConfigure != null ? retObjectCanConfigure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +252,13 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public boolean getCanRefreshSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanRefreshSchema = null;
         try {
-            return (boolean)classInstance.Get("CanRefreshSchema");
+            retObjectCanRefreshSchema = classInstance.Get("CanRefreshSchema");
+            return (boolean)retObjectCanRefreshSchema;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanRefreshSchema != null ? retObjectCanRefreshSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +271,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +281,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -275,7 +291,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void addSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SchemaRefreshed", handler);
         } catch (JCNativeException jcne) {
@@ -285,7 +301,7 @@ public class HierarchicalDataSourceDesigner extends ControlDesigner  {
 
     public void removeSchemaRefreshed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SchemaRefreshed", handler);
         } catch (JCNativeException jcne) {

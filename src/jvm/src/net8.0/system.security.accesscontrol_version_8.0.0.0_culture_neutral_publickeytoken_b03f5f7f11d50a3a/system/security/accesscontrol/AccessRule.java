@@ -159,10 +159,14 @@ public class AccessRule extends AuthorizationRule  {
     
     public AccessControlType getAccessControlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessControlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessControlType");
+            retObjectAccessControlType = classInstance.Get("AccessControlType");
+            JCObject val = (JCObject)retObjectAccessControlType;
             return new AccessControlType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessControlType != null ? retObjectAccessControlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

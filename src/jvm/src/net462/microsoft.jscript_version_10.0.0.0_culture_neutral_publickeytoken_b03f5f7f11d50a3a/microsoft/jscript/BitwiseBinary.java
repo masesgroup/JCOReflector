@@ -166,10 +166,14 @@ public class BitwiseBinary extends BinaryOp  {
     
     public NetObject EvaluateBitwiseBinary(NetObject v1, NetObject v2) throws Throwable, microsoft.jscript.JScriptException, system.ArithmeticException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateBitwiseBinary = null;
         try {
-            JCObject objEvaluateBitwiseBinary = (JCObject)classInstance.Invoke("EvaluateBitwiseBinary", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            retObjectEvaluateBitwiseBinary = classInstance.Invoke("EvaluateBitwiseBinary", v1 == null ? null : v1.getJCOInstance(), v2 == null ? null : v2.getJCOInstance());
+            JCObject objEvaluateBitwiseBinary = (JCObject)retObjectEvaluateBitwiseBinary;
             return new NetObject(objEvaluateBitwiseBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluateBitwiseBinary != null ? retObjectEvaluateBitwiseBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

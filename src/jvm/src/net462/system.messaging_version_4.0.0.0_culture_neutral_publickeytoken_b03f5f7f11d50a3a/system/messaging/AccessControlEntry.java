@@ -189,10 +189,14 @@ public class AccessControlEntry extends NetObject  {
     
     public AccessControlEntryType getEntryType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryType");
+            retObjectEntryType = classInstance.Get("EntryType");
+            JCObject val = (JCObject)retObjectEntryType;
             return new AccessControlEntryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryType != null ? retObjectEntryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class AccessControlEntry extends NetObject  {
 
     public void setEntryType(AccessControlEntryType EntryType) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntryType", EntryType == null ? null : EntryType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +214,14 @@ public class AccessControlEntry extends NetObject  {
 
     public GenericAccessRights getGenericAccessRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericAccessRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GenericAccessRights");
+            retObjectGenericAccessRights = classInstance.Get("GenericAccessRights");
+            JCObject val = (JCObject)retObjectGenericAccessRights;
             return new GenericAccessRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericAccessRights != null ? retObjectGenericAccessRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +229,7 @@ public class AccessControlEntry extends NetObject  {
 
     public void setGenericAccessRights(GenericAccessRights GenericAccessRights) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenericAccessRights", GenericAccessRights == null ? null : GenericAccessRights.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +239,14 @@ public class AccessControlEntry extends NetObject  {
 
     public StandardAccessRights getStandardAccessRights() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardAccessRights = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StandardAccessRights");
+            retObjectStandardAccessRights = classInstance.Get("StandardAccessRights");
+            JCObject val = (JCObject)retObjectStandardAccessRights;
             return new StandardAccessRights(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStandardAccessRights != null ? retObjectStandardAccessRights.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class AccessControlEntry extends NetObject  {
 
     public void setStandardAccessRights(StandardAccessRights StandardAccessRights) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardAccessRights", StandardAccessRights == null ? null : StandardAccessRights.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +264,14 @@ public class AccessControlEntry extends NetObject  {
 
     public Trustee getTrustee() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustee = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trustee");
+            retObjectTrustee = classInstance.Get("Trustee");
+            JCObject val = (JCObject)retObjectTrustee;
             return new Trustee(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustee != null ? retObjectTrustee.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +279,7 @@ public class AccessControlEntry extends NetObject  {
 
     public void setTrustee(Trustee Trustee) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Trustee", Trustee == null ? null : Trustee.getJCOInstance());
         } catch (JCNativeException jcne) {

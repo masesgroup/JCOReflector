@@ -172,10 +172,14 @@ public class StylusButtonEventArgs extends StylusEventArgs  {
     
     public StylusButton getStylusButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylusButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StylusButton");
+            retObjectStylusButton = classInstance.Get("StylusButton");
+            JCObject val = (JCObject)retObjectStylusButton;
             return new StylusButton(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStylusButton != null ? retObjectStylusButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

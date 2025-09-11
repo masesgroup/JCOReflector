@@ -183,9 +183,13 @@ public class EndpointDispatcher extends NetObject  {
     
     public boolean getIsSystemEndpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSystemEndpoint = null;
         try {
-            return (boolean)classInstance.Get("IsSystemEndpoint");
+            retObjectIsSystemEndpoint = classInstance.Get("IsSystemEndpoint");
+            return (boolean)retObjectIsSystemEndpoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSystemEndpoint != null ? retObjectIsSystemEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class EndpointDispatcher extends NetObject  {
 
     public int getFilterPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilterPriority = null;
         try {
-            return (int)classInstance.Get("FilterPriority");
+            retObjectFilterPriority = classInstance.Get("FilterPriority");
+            return (int)retObjectFilterPriority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFilterPriority != null ? retObjectFilterPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class EndpointDispatcher extends NetObject  {
 
     public void setFilterPriority(int FilterPriority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilterPriority", FilterPriority);
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class EndpointDispatcher extends NetObject  {
 
     public ChannelDispatcher getChannelDispatcher() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelDispatcher = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelDispatcher");
+            retObjectChannelDispatcher = classInstance.Get("ChannelDispatcher");
+            JCObject val = (JCObject)retObjectChannelDispatcher;
             return new ChannelDispatcher(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelDispatcher != null ? retObjectChannelDispatcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class EndpointDispatcher extends NetObject  {
 
     public DispatchRuntime getDispatchRuntime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDispatchRuntime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DispatchRuntime");
+            retObjectDispatchRuntime = classInstance.Get("DispatchRuntime");
+            JCObject val = (JCObject)retObjectDispatchRuntime;
             return new DispatchRuntime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDispatchRuntime != null ? retObjectDispatchRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class EndpointDispatcher extends NetObject  {
 
     public MessageFilter getAddressFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressFilter");
+            retObjectAddressFilter = classInstance.Get("AddressFilter");
+            JCObject val = (JCObject)retObjectAddressFilter;
             return new MessageFilter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressFilter != null ? retObjectAddressFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class EndpointDispatcher extends NetObject  {
 
     public void setAddressFilter(MessageFilter AddressFilter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AddressFilter", AddressFilter == null ? null : AddressFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,10 +276,14 @@ public class EndpointDispatcher extends NetObject  {
 
     public MessageFilter getContractFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractFilter");
+            retObjectContractFilter = classInstance.Get("ContractFilter");
+            JCObject val = (JCObject)retObjectContractFilter;
             return new MessageFilter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractFilter != null ? retObjectContractFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +291,7 @@ public class EndpointDispatcher extends NetObject  {
 
     public void setContractFilter(MessageFilter ContractFilter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractFilter", ContractFilter == null ? null : ContractFilter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +301,14 @@ public class EndpointDispatcher extends NetObject  {
 
     public EndpointAddress getEndpointAddress() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointAddress");
+            retObjectEndpointAddress = classInstance.Get("EndpointAddress");
+            JCObject val = (JCObject)retObjectEndpointAddress;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointAddress != null ? retObjectEndpointAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +316,13 @@ public class EndpointDispatcher extends NetObject  {
 
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            retObjectContractName = classInstance.Get("ContractName");
+            return (java.lang.String)retObjectContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractName != null ? retObjectContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +330,13 @@ public class EndpointDispatcher extends NetObject  {
 
     public java.lang.String getContractNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractNamespace");
+            retObjectContractNamespace = classInstance.Get("ContractNamespace");
+            return (java.lang.String)retObjectContractNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractNamespace != null ? retObjectContractNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

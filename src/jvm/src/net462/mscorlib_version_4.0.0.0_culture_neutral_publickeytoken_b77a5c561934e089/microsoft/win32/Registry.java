@@ -154,10 +154,14 @@ public class Registry extends NetObject  {
     
     public static NetObject GetValue(java.lang.String keyName, java.lang.String valueName, NetObject defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classType.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectGetValue = classType.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class Registry extends NetObject  {
 
     public static void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class Registry extends NetObject  {
 
     public static void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value, RegistryValueKind valueKind) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance(), valueKind == null ? null : valueKind.getJCOInstance());
         } catch (JCNativeException jcne) {

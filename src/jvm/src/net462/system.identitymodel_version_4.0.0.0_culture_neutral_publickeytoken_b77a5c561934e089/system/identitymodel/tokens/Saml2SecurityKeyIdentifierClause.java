@@ -171,10 +171,14 @@ public class Saml2SecurityKeyIdentifierClause extends SecurityKeyIdentifierClaus
     
     public Saml2Assertion getAssertion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssertion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Assertion");
+            retObjectAssertion = classInstance.Get("Assertion");
+            JCObject val = (JCObject)retObjectAssertion;
             return new Saml2Assertion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssertion != null ? retObjectAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

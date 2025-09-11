@@ -155,7 +155,7 @@ public class SoapExtensionImporter extends NetObject  {
     
     public void ImportMethod(CodeAttributeDeclarationCollection metadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportMethod", metadata == null ? null : metadata.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,10 +169,14 @@ public class SoapExtensionImporter extends NetObject  {
     
     public SoapProtocolImporter getImportContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportContext");
+            retObjectImportContext = classInstance.Get("ImportContext");
+            JCObject val = (JCObject)retObjectImportContext;
             return new SoapProtocolImporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportContext != null ? retObjectImportContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class SoapExtensionImporter extends NetObject  {
 
     public void setImportContext(SoapProtocolImporter ImportContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImportContext", ImportContext == null ? null : ImportContext.getJCOInstance());
         } catch (JCNativeException jcne) {

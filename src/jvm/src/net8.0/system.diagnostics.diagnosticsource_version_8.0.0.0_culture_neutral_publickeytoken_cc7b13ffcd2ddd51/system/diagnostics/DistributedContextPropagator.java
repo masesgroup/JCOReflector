@@ -155,10 +155,14 @@ public class DistributedContextPropagator extends NetObject  {
     
     public static DistributedContextPropagator CreateDefaultPropagator() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDefaultPropagator = null;
         try {
-            JCObject objCreateDefaultPropagator = (JCObject)classType.Invoke("CreateDefaultPropagator");
+            retObjectCreateDefaultPropagator = classType.Invoke("CreateDefaultPropagator");
+            JCObject objCreateDefaultPropagator = (JCObject)retObjectCreateDefaultPropagator;
             return new DistributedContextPropagator(objCreateDefaultPropagator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDefaultPropagator != null ? retObjectCreateDefaultPropagator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class DistributedContextPropagator extends NetObject  {
 
     public static DistributedContextPropagator CreateNoOutputPropagator() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNoOutputPropagator = null;
         try {
-            JCObject objCreateNoOutputPropagator = (JCObject)classType.Invoke("CreateNoOutputPropagator");
+            retObjectCreateNoOutputPropagator = classType.Invoke("CreateNoOutputPropagator");
+            JCObject objCreateNoOutputPropagator = (JCObject)retObjectCreateNoOutputPropagator;
             return new DistributedContextPropagator(objCreateNoOutputPropagator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNoOutputPropagator != null ? retObjectCreateNoOutputPropagator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class DistributedContextPropagator extends NetObject  {
 
     public static DistributedContextPropagator CreatePassThroughPropagator() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePassThroughPropagator = null;
         try {
-            JCObject objCreatePassThroughPropagator = (JCObject)classType.Invoke("CreatePassThroughPropagator");
+            retObjectCreatePassThroughPropagator = classType.Invoke("CreatePassThroughPropagator");
+            JCObject objCreatePassThroughPropagator = (JCObject)retObjectCreatePassThroughPropagator;
             return new DistributedContextPropagator(objCreatePassThroughPropagator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePassThroughPropagator != null ? retObjectCreatePassThroughPropagator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class DistributedContextPropagator extends NetObject  {
     
     public static DistributedContextPropagator getCurrent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrent = null;
         try {
-            JCObject val = (JCObject)classType.Get("Current");
+            retObjectCurrent = classType.Get("Current");
+            JCObject val = (JCObject)retObjectCurrent;
             return new DistributedContextPropagator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrent != null ? retObjectCurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +219,7 @@ public class DistributedContextPropagator extends NetObject  {
 
     public static void setCurrent(DistributedContextPropagator Current) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("Current", Current == null ? null : Current.getJCOInstance());
         } catch (JCNativeException jcne) {

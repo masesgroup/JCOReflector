@@ -158,9 +158,13 @@ public class ModelBinderErrorMessageProviders extends NetObject  {
     
     public static ModelBinderErrorMessageProvider getTypeConversionErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeConversionErrorMessageProvider = null;
         try {
-            return (ModelBinderErrorMessageProvider)classType.Get("TypeConversionErrorMessageProvider");
+            retObjectTypeConversionErrorMessageProvider = classType.Get("TypeConversionErrorMessageProvider");
+            return (ModelBinderErrorMessageProvider)retObjectTypeConversionErrorMessageProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into ModelBinderErrorMessageProvider", retObjectTypeConversionErrorMessageProvider != null ? retObjectTypeConversionErrorMessageProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ModelBinderErrorMessageProviders extends NetObject  {
 
     public static void setTypeConversionErrorMessageProvider(ModelBinderErrorMessageProvider TypeConversionErrorMessageProvider) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("TypeConversionErrorMessageProvider", TypeConversionErrorMessageProvider);
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class ModelBinderErrorMessageProviders extends NetObject  {
 
     public static ModelBinderErrorMessageProvider getValueRequiredErrorMessageProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectValueRequiredErrorMessageProvider = null;
         try {
-            return (ModelBinderErrorMessageProvider)classType.Get("ValueRequiredErrorMessageProvider");
+            retObjectValueRequiredErrorMessageProvider = classType.Get("ValueRequiredErrorMessageProvider");
+            return (ModelBinderErrorMessageProvider)retObjectValueRequiredErrorMessageProvider;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into ModelBinderErrorMessageProvider", retObjectValueRequiredErrorMessageProvider != null ? retObjectValueRequiredErrorMessageProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ModelBinderErrorMessageProviders extends NetObject  {
 
     public static void setValueRequiredErrorMessageProvider(ModelBinderErrorMessageProvider ValueRequiredErrorMessageProvider) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ValueRequiredErrorMessageProvider", ValueRequiredErrorMessageProvider);
         } catch (JCNativeException jcne) {

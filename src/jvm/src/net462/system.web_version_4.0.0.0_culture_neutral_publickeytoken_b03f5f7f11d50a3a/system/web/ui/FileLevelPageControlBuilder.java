@@ -163,7 +163,7 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
     
     public void AppendLiteralString(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendLiteralString", text);
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
 
     public void AppendSubBuilder(ControlBuilder subBuilder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpParseException, system.FormatException, system.reflection.AmbiguousMatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.TypeLoadException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendSubBuilder", subBuilder == null ? null : subBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

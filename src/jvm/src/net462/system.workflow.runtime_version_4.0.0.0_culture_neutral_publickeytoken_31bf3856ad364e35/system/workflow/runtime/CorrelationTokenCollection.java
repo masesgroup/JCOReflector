@@ -163,10 +163,14 @@ public class CorrelationTokenCollection extends NetObjectEnumerable  {
     
     public static CorrelationToken GetCorrelationToken(Activity activity, java.lang.String correlationTokenName, java.lang.String ownerActivityName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCorrelationToken = null;
         try {
-            JCObject objGetCorrelationToken = (JCObject)classType.Invoke("GetCorrelationToken", activity == null ? null : activity.getJCOInstance(), correlationTokenName, ownerActivityName);
+            retObjectGetCorrelationToken = classType.Invoke("GetCorrelationToken", activity == null ? null : activity.getJCOInstance(), correlationTokenName, ownerActivityName);
+            JCObject objGetCorrelationToken = (JCObject)retObjectGetCorrelationToken;
             return new CorrelationToken(objGetCorrelationToken);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCorrelationToken != null ? retObjectGetCorrelationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class CorrelationTokenCollection extends NetObjectEnumerable  {
 
     public CorrelationToken GetItem(java.lang.String key) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", key);
+            retObjectGetItem = classInstance.Invoke("GetItem", key);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new CorrelationToken(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

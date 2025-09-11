@@ -164,9 +164,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
     
     public boolean getCreateDesktopShortcut() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDesktopShortcut = null;
         try {
-            return (boolean)classInstance.Get("CreateDesktopShortcut");
+            retObjectCreateDesktopShortcut = classInstance.Get("CreateDesktopShortcut");
+            return (boolean)retObjectCreateDesktopShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCreateDesktopShortcut != null ? retObjectCreateDesktopShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setCreateDesktopShortcut(boolean CreateDesktopShortcut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CreateDesktopShortcut", CreateDesktopShortcut);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public boolean getRequiresMinimumFramework35SP1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresMinimumFramework35SP1 = null;
         try {
-            return (boolean)classInstance.Get("RequiresMinimumFramework35SP1");
+            retObjectRequiresMinimumFramework35SP1 = classInstance.Get("RequiresMinimumFramework35SP1");
+            return (boolean)retObjectRequiresMinimumFramework35SP1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresMinimumFramework35SP1 != null ? retObjectRequiresMinimumFramework35SP1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setRequiresMinimumFramework35SP1(boolean RequiresMinimumFramework35SP1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequiresMinimumFramework35SP1", RequiresMinimumFramework35SP1);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public boolean getSigningManifests() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningManifests = null;
         try {
-            return (boolean)classInstance.Get("SigningManifests");
+            retObjectSigningManifests = classInstance.Get("SigningManifests");
+            return (boolean)retObjectSigningManifests;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSigningManifests != null ? retObjectSigningManifests.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setSigningManifests(boolean SigningManifests) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningManifests", SigningManifests);
         } catch (JCNativeException jcne) {
@@ -238,10 +254,14 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public ITaskItem getDeploymentManifestEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentManifestEntryPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentManifestEntryPoint");
+            retObjectDeploymentManifestEntryPoint = classInstance.Get("DeploymentManifestEntryPoint");
+            JCObject val = (JCObject)retObjectDeploymentManifestEntryPoint;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeploymentManifestEntryPoint != null ? retObjectDeploymentManifestEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setDeploymentManifestEntryPoint(ITaskItem DeploymentManifestEntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentManifestEntryPoint", DeploymentManifestEntryPoint == null ? null : DeploymentManifestEntryPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,10 +279,14 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public ITaskItem getEntryPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryPoint");
+            retObjectEntryPoint = classInstance.Get("EntryPoint");
+            JCObject val = (JCObject)retObjectEntryPoint;
             return new ITaskItemImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryPoint != null ? retObjectEntryPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +294,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setEntryPoint(ITaskItem EntryPoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntryPoint", EntryPoint == null ? null : EntryPoint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,16 +304,20 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public final ITaskItem[] getAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblies = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Assemblies");
+            retObjectAssemblies = classInstance.Get("Assemblies");
+            JCObject resultingObjects = (JCObject)retObjectAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblies != null ? retObjectAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setAssemblies(ITaskItem[] Assemblies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Assemblies", toObjectFromArray(Assemblies));
         } catch (JCNativeException jcne) {
@@ -307,16 +335,20 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public final ITaskItem[] getFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Files");
+            retObjectFiles = classInstance.Get("Files");
+            JCObject resultingObjects = (JCObject)retObjectFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFiles != null ? retObjectFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +356,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setFiles(ITaskItem[] Files) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Files", toObjectFromArray(Files));
         } catch (JCNativeException jcne) {
@@ -334,16 +366,20 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public final ITaskItem[] getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferencedAssemblies = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ReferencedAssemblies");
+            retObjectReferencedAssemblies = classInstance.Get("ReferencedAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectReferencedAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferencedAssemblies != null ? retObjectReferencedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +387,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setReferencedAssemblies(ITaskItem[] ReferencedAssemblies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferencedAssemblies", toObjectFromArray(ReferencedAssemblies));
         } catch (JCNativeException jcne) {
@@ -361,9 +397,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public java.lang.String getErrorReportUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorReportUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorReportUrl");
+            retObjectErrorReportUrl = classInstance.Get("ErrorReportUrl");
+            return (java.lang.String)retObjectErrorReportUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorReportUrl != null ? retObjectErrorReportUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +411,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setErrorReportUrl(java.lang.String ErrorReportUrl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorReportUrl", ErrorReportUrl);
         } catch (JCNativeException jcne) {
@@ -381,9 +421,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public java.lang.String getSuiteName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSuiteName = null;
         try {
-            return (java.lang.String)classInstance.Get("SuiteName");
+            retObjectSuiteName = classInstance.Get("SuiteName");
+            return (java.lang.String)retObjectSuiteName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSuiteName != null ? retObjectSuiteName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +435,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setSuiteName(java.lang.String SuiteName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SuiteName", SuiteName);
         } catch (JCNativeException jcne) {
@@ -401,9 +445,13 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public java.lang.String getTargetFrameworkVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFrameworkVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFrameworkVersion");
+            retObjectTargetFrameworkVersion = classInstance.Get("TargetFrameworkVersion");
+            return (java.lang.String)retObjectTargetFrameworkVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFrameworkVersion != null ? retObjectTargetFrameworkVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +459,7 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
 
     public void setTargetFrameworkVersion(java.lang.String TargetFrameworkVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFrameworkVersion", TargetFrameworkVersion);
         } catch (JCNativeException jcne) {

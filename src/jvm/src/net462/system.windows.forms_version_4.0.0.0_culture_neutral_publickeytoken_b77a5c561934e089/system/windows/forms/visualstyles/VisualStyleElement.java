@@ -156,10 +156,14 @@ public class VisualStyleElement extends NetObject  {
     
     public static VisualStyleElement CreateElement(java.lang.String className, int part, int state) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateElement = null;
         try {
-            JCObject objCreateElement = (JCObject)classType.Invoke("CreateElement", className, part, state);
+            retObjectCreateElement = classType.Invoke("CreateElement", className, part, state);
+            JCObject objCreateElement = (JCObject)retObjectCreateElement;
             return new VisualStyleElement(objCreateElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateElement != null ? retObjectCreateElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class VisualStyleElement extends NetObject  {
     
     public int getPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPart = null;
         try {
-            return (int)classInstance.Get("Part");
+            retObjectPart = classInstance.Get("Part");
+            return (int)retObjectPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPart != null ? retObjectPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class VisualStyleElement extends NetObject  {
 
     public int getState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            return (int)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            return (int)retObjectState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class VisualStyleElement extends NetObject  {
 
     public java.lang.String getClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassName");
+            retObjectClassName = classInstance.Get("ClassName");
+            return (java.lang.String)retObjectClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassName != null ? retObjectClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class CheckedListBox extends ListBox  {
     
     public boolean GetItemChecked(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemChecked = null;
         try {
-            return (boolean)classInstance.Invoke("GetItemChecked", index);
+            retObjectGetItemChecked = classInstance.Invoke("GetItemChecked", index);
+            return (boolean)retObjectGetItemChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetItemChecked != null ? retObjectGetItemChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class CheckedListBox extends ListBox  {
 
     public CheckState GetItemCheckState(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemCheckState = null;
         try {
-            JCObject objGetItemCheckState = (JCObject)classInstance.Invoke("GetItemCheckState", index);
+            retObjectGetItemCheckState = classInstance.Invoke("GetItemCheckState", index);
+            JCObject objGetItemCheckState = (JCObject)retObjectGetItemCheckState;
             return new CheckState(objGetItemCheckState);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemCheckState != null ? retObjectGetItemCheckState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class CheckedListBox extends ListBox  {
 
     public void SetItemChecked(int index, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetItemChecked", index, value);
         } catch (JCNativeException jcne) {
@@ -202,7 +210,7 @@ public class CheckedListBox extends ListBox  {
 
     public void SetItemCheckState(int index, CheckState value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetItemCheckState", index, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,9 +224,13 @@ public class CheckedListBox extends ListBox  {
     
     public boolean getCheckOnClick() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckOnClick = null;
         try {
-            return (boolean)classInstance.Get("CheckOnClick");
+            retObjectCheckOnClick = classInstance.Get("CheckOnClick");
+            return (boolean)retObjectCheckOnClick;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckOnClick != null ? retObjectCheckOnClick.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +238,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setCheckOnClick(boolean CheckOnClick) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckOnClick", CheckOnClick);
         } catch (JCNativeException jcne) {
@@ -236,9 +248,13 @@ public class CheckedListBox extends ListBox  {
 
     public boolean getThreeDCheckBoxes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreeDCheckBoxes = null;
         try {
-            return (boolean)classInstance.Get("ThreeDCheckBoxes");
+            retObjectThreeDCheckBoxes = classInstance.Get("ThreeDCheckBoxes");
+            return (boolean)retObjectThreeDCheckBoxes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectThreeDCheckBoxes != null ? retObjectThreeDCheckBoxes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setThreeDCheckBoxes(boolean ThreeDCheckBoxes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ThreeDCheckBoxes", ThreeDCheckBoxes);
         } catch (JCNativeException jcne) {
@@ -256,9 +272,13 @@ public class CheckedListBox extends ListBox  {
 
     public boolean getUseCompatibleTextRendering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCompatibleTextRendering = null;
         try {
-            return (boolean)classInstance.Get("UseCompatibleTextRendering");
+            retObjectUseCompatibleTextRendering = classInstance.Get("UseCompatibleTextRendering");
+            return (boolean)retObjectUseCompatibleTextRendering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCompatibleTextRendering != null ? retObjectUseCompatibleTextRendering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +286,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setUseCompatibleTextRendering(boolean UseCompatibleTextRendering) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCompatibleTextRendering", UseCompatibleTextRendering);
         } catch (JCNativeException jcne) {
@@ -276,10 +296,14 @@ public class CheckedListBox extends ListBox  {
 
     public NetObject getDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSource");
+            retObjectDataSource = classInstance.Get("DataSource");
+            JCObject val = (JCObject)retObjectDataSource;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSource != null ? retObjectDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +311,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setDataSource(NetObject DataSource) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSource", DataSource == null ? null : DataSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,9 +321,13 @@ public class CheckedListBox extends ListBox  {
 
     public java.lang.String getDisplayMember() throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMember = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayMember");
+            retObjectDisplayMember = classInstance.Get("DisplayMember");
+            return (java.lang.String)retObjectDisplayMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayMember != null ? retObjectDisplayMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +335,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setDisplayMember(java.lang.String DisplayMember) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMember", DisplayMember);
         } catch (JCNativeException jcne) {
@@ -317,9 +345,13 @@ public class CheckedListBox extends ListBox  {
 
     public java.lang.String getValueMember() throws Throwable, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueMember = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueMember");
+            retObjectValueMember = classInstance.Get("ValueMember");
+            return (java.lang.String)retObjectValueMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueMember != null ? retObjectValueMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +359,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setValueMember(java.lang.String ValueMember) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueMember", ValueMember);
         } catch (JCNativeException jcne) {
@@ -337,10 +369,14 @@ public class CheckedListBox extends ListBox  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +384,7 @@ public class CheckedListBox extends ListBox  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,7 +399,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -373,7 +409,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -383,7 +419,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -393,7 +429,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -403,7 +439,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addDisplayMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -413,7 +449,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeDisplayMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -423,7 +459,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addValueMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -433,7 +469,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeValueMemberChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueMemberChanged", handler);
         } catch (JCNativeException jcne) {
@@ -443,7 +479,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addDrawItem(DrawItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DrawItem", handler);
         } catch (JCNativeException jcne) {
@@ -453,7 +489,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeDrawItem(DrawItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DrawItem", handler);
         } catch (JCNativeException jcne) {
@@ -463,7 +499,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addItemCheck(ItemCheckEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCheck", handler);
         } catch (JCNativeException jcne) {
@@ -473,7 +509,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeItemCheck(ItemCheckEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCheck", handler);
         } catch (JCNativeException jcne) {
@@ -483,7 +519,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addMeasureItem(MeasureItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MeasureItem", handler);
         } catch (JCNativeException jcne) {
@@ -493,7 +529,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeMeasureItem(MeasureItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MeasureItem", handler);
         } catch (JCNativeException jcne) {
@@ -503,7 +539,7 @@ public class CheckedListBox extends ListBox  {
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -513,7 +549,7 @@ public class CheckedListBox extends ListBox  {
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {

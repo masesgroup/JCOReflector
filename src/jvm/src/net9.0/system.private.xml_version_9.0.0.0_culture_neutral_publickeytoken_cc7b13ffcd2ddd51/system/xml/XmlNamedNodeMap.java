@@ -156,10 +156,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
     
     public XmlNode GetNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamedItem = null;
         try {
-            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", localName, namespaceURI);
+            retObjectGetNamedItem = classInstance.Invoke("GetNamedItem", localName, namespaceURI);
+            JCObject objGetNamedItem = (JCObject)retObjectGetNamedItem;
             return new XmlNode(objGetNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedItem != null ? retObjectGetNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
 
     public XmlNode GetNamedItem(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNamedItem = null;
         try {
-            JCObject objGetNamedItem = (JCObject)classInstance.Invoke("GetNamedItem", name);
+            retObjectGetNamedItem = classInstance.Invoke("GetNamedItem", name);
+            JCObject objGetNamedItem = (JCObject)retObjectGetNamedItem;
             return new XmlNode(objGetNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedItem != null ? retObjectGetNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
 
     public XmlNode Item(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject objItem = (JCObject)classInstance.Invoke("Item", index);
+            retObjectItem = classInstance.Invoke("Item", index);
+            JCObject objItem = (JCObject)retObjectItem;
             return new XmlNode(objItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
 
     public XmlNode RemoveNamedItem(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveNamedItem = null;
         try {
-            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", localName, namespaceURI);
+            retObjectRemoveNamedItem = classInstance.Invoke("RemoveNamedItem", localName, namespaceURI);
+            JCObject objRemoveNamedItem = (JCObject)retObjectRemoveNamedItem;
             return new XmlNode(objRemoveNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamedItem != null ? retObjectRemoveNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
 
     public XmlNode RemoveNamedItem(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveNamedItem = null;
         try {
-            JCObject objRemoveNamedItem = (JCObject)classInstance.Invoke("RemoveNamedItem", name);
+            retObjectRemoveNamedItem = classInstance.Invoke("RemoveNamedItem", name);
+            JCObject objRemoveNamedItem = (JCObject)retObjectRemoveNamedItem;
             return new XmlNode(objRemoveNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveNamedItem != null ? retObjectRemoveNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +231,14 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
 
     public XmlNode SetNamedItem(XmlNode node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetNamedItem = null;
         try {
-            JCObject objSetNamedItem = (JCObject)classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
+            retObjectSetNamedItem = classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
+            JCObject objSetNamedItem = (JCObject)retObjectSetNamedItem;
             return new XmlNode(objSetNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetNamedItem != null ? retObjectSetNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,13 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

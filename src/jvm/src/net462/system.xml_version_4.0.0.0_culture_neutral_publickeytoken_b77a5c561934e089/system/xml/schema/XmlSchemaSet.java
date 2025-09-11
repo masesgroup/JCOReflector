@@ -181,9 +181,13 @@ public class XmlSchemaSet extends NetObject  {
     
     public boolean Contains(java.lang.String targetNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", targetNamespace);
+            retObjectContains = classInstance.Invoke("Contains", targetNamespace);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +195,13 @@ public class XmlSchemaSet extends NetObject  {
 
     public boolean Contains(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", schema == null ? null : schema.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +209,13 @@ public class XmlSchemaSet extends NetObject  {
 
     public boolean RemoveRecursive(XmlSchema schemaToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveRecursive = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveRecursive", schemaToRemove == null ? null : schemaToRemove.getJCOInstance());
+            retObjectRemoveRecursive = classInstance.Invoke("RemoveRecursive", schemaToRemove == null ? null : schemaToRemove.getJCOInstance());
+            return (boolean)retObjectRemoveRecursive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveRecursive != null ? retObjectRemoveRecursive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public ICollection Schemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject objSchemas = (JCObject)classInstance.Invoke("Schemas");
+            retObjectSchemas = classInstance.Invoke("Schemas");
+            JCObject objSchemas = (JCObject)retObjectSchemas;
             return new ICollectionImplementation(objSchemas);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +238,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public ICollection Schemas(java.lang.String targetNamespace) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject objSchemas = (JCObject)classInstance.Invoke("Schemas", targetNamespace);
+            retObjectSchemas = classInstance.Invoke("Schemas", targetNamespace);
+            JCObject objSchemas = (JCObject)retObjectSchemas;
             return new ICollectionImplementation(objSchemas);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +253,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchema Add(java.lang.String targetNamespace, java.lang.String schemaUri) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.io.PathTooLongException, system.NotSupportedException, system.RankException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", targetNamespace, schemaUri);
+            retObjectAdd = classInstance.Invoke("Add", targetNamespace, schemaUri);
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new XmlSchema(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +268,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchema Add(java.lang.String targetNamespace, XmlReader schemaDocument) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.RankException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", targetNamespace, schemaDocument == null ? null : schemaDocument.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", targetNamespace, schemaDocument == null ? null : schemaDocument.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new XmlSchema(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +283,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchema Add(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new XmlSchema(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +298,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchema Remove(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", schema == null ? null : schema.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", schema == null ? null : schema.getJCOInstance());
+            JCObject objRemove = (JCObject)retObjectRemove;
             return new XmlSchema(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +313,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchema Reprocess(XmlSchema schema) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReprocess = null;
         try {
-            JCObject objReprocess = (JCObject)classInstance.Invoke("Reprocess", schema == null ? null : schema.getJCOInstance());
+            retObjectReprocess = classInstance.Invoke("Reprocess", schema == null ? null : schema.getJCOInstance());
+            JCObject objReprocess = (JCObject)retObjectReprocess;
             return new XmlSchema(objReprocess);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReprocess != null ? retObjectReprocess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +328,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void Add(XmlSchemaSet schemas) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", schemas == null ? null : schemas.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,7 +338,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void Compile() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Compile");
         } catch (JCNativeException jcne) {
@@ -308,7 +348,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void CopyTo(XmlSchema[] schemas, int index) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(schemas), index);
         } catch (JCNativeException jcne) {
@@ -322,9 +362,13 @@ public class XmlSchemaSet extends NetObject  {
     
     public boolean getIsCompiled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompiled = null;
         try {
-            return (boolean)classInstance.Get("IsCompiled");
+            retObjectIsCompiled = classInstance.Get("IsCompiled");
+            return (boolean)retObjectIsCompiled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompiled != null ? retObjectIsCompiled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +376,13 @@ public class XmlSchemaSet extends NetObject  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +390,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchemaCompilationSettings getCompilationSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilationSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompilationSettings");
+            retObjectCompilationSettings = classInstance.Get("CompilationSettings");
+            JCObject val = (JCObject)retObjectCompilationSettings;
             return new XmlSchemaCompilationSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompilationSettings != null ? retObjectCompilationSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,7 +405,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void setCompilationSettings(XmlSchemaCompilationSettings CompilationSettings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompilationSettings", CompilationSettings == null ? null : CompilationSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,10 +415,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchemaObjectTable getGlobalAttributes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalAttributes");
+            retObjectGlobalAttributes = classInstance.Get("GlobalAttributes");
+            JCObject val = (JCObject)retObjectGlobalAttributes;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalAttributes != null ? retObjectGlobalAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +430,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchemaObjectTable getGlobalElements() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalElements");
+            retObjectGlobalElements = classInstance.Get("GlobalElements");
+            JCObject val = (JCObject)retObjectGlobalElements;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalElements != null ? retObjectGlobalElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +445,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlSchemaObjectTable getGlobalTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlobalTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlobalTypes");
+            retObjectGlobalTypes = classInstance.Get("GlobalTypes");
+            JCObject val = (JCObject)retObjectGlobalTypes;
             return new XmlSchemaObjectTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalTypes != null ? retObjectGlobalTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +460,14 @@ public class XmlSchemaSet extends NetObject  {
 
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +475,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void setXmlResolver(XmlResolver XmlResolver) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlResolver", XmlResolver == null ? null : XmlResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,7 +490,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void addValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {
@@ -432,7 +500,7 @@ public class XmlSchemaSet extends NetObject  {
 
     public void removeValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {

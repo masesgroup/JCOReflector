@@ -147,9 +147,13 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
     
     public int getEndPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndPosition = null;
         try {
-            return (int)classInstance.Get("EndPosition");
+            retObjectEndPosition = classInstance.Get("EndPosition");
+            return (int)retObjectEndPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndPosition != null ? retObjectEndPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,9 +161,13 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
 
     public int getStartPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartPosition = null;
         try {
-            return (int)classInstance.Get("StartPosition");
+            retObjectStartPosition = classInstance.Get("StartPosition");
+            return (int)retObjectStartPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartPosition != null ? retObjectStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +175,14 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
 
     public TokenColor getColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            JCObject val = (JCObject)retObjectColor;
             return new TokenColor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

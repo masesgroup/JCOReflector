@@ -171,16 +171,20 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
     
     public final DataGridViewAutoSizeColumnMode[] getPreviousModes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousModes = null;
         try {
             ArrayList<DataGridViewAutoSizeColumnMode> resultingArrayList = new ArrayList<DataGridViewAutoSizeColumnMode>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("PreviousModes");
+            retObjectPreviousModes = classInstance.Get("PreviousModes");
+            JCObject resultingObjects = (JCObject)retObjectPreviousModes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataGridViewAutoSizeColumnMode(resultingObject));
             }
             DataGridViewAutoSizeColumnMode[] resultingArray = new DataGridViewAutoSizeColumnMode[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousModes != null ? retObjectPreviousModes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

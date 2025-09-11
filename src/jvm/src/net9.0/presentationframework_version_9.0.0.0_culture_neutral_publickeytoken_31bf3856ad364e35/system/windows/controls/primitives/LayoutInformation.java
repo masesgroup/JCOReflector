@@ -158,10 +158,14 @@ public class LayoutInformation extends NetObject  {
     
     public static Geometry GetLayoutClip(FrameworkElement element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLayoutClip = null;
         try {
-            JCObject objGetLayoutClip = (JCObject)classType.Invoke("GetLayoutClip", element == null ? null : element.getJCOInstance());
+            retObjectGetLayoutClip = classType.Invoke("GetLayoutClip", element == null ? null : element.getJCOInstance());
+            JCObject objGetLayoutClip = (JCObject)retObjectGetLayoutClip;
             return new Geometry(objGetLayoutClip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLayoutClip != null ? retObjectGetLayoutClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class LayoutInformation extends NetObject  {
 
     public static Rect GetLayoutSlot(FrameworkElement element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLayoutSlot = null;
         try {
-            JCObject objGetLayoutSlot = (JCObject)classType.Invoke("GetLayoutSlot", element == null ? null : element.getJCOInstance());
+            retObjectGetLayoutSlot = classType.Invoke("GetLayoutSlot", element == null ? null : element.getJCOInstance());
+            JCObject objGetLayoutSlot = (JCObject)retObjectGetLayoutSlot;
             return new Rect(objGetLayoutSlot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLayoutSlot != null ? retObjectGetLayoutSlot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class LayoutInformation extends NetObject  {
 
     public static UIElement GetLayoutExceptionElement(Dispatcher dispatcher) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLayoutExceptionElement = null;
         try {
-            JCObject objGetLayoutExceptionElement = (JCObject)classType.Invoke("GetLayoutExceptionElement", dispatcher == null ? null : dispatcher.getJCOInstance());
+            retObjectGetLayoutExceptionElement = classType.Invoke("GetLayoutExceptionElement", dispatcher == null ? null : dispatcher.getJCOInstance());
+            JCObject objGetLayoutExceptionElement = (JCObject)retObjectGetLayoutExceptionElement;
             return new UIElement(objGetLayoutExceptionElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLayoutExceptionElement != null ? retObjectGetLayoutExceptionElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,13 @@ public class IndexedGlyphRun extends NetObject  {
     
     public int getTextSourceCharacterIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextSourceCharacterIndex = null;
         try {
-            return (int)classInstance.Get("TextSourceCharacterIndex");
+            retObjectTextSourceCharacterIndex = classInstance.Get("TextSourceCharacterIndex");
+            return (int)retObjectTextSourceCharacterIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTextSourceCharacterIndex != null ? retObjectTextSourceCharacterIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class IndexedGlyphRun extends NetObject  {
 
     public int getTextSourceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextSourceLength = null;
         try {
-            return (int)classInstance.Get("TextSourceLength");
+            retObjectTextSourceLength = classInstance.Get("TextSourceLength");
+            return (int)retObjectTextSourceLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTextSourceLength != null ? retObjectTextSourceLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class IndexedGlyphRun extends NetObject  {
 
     public GlyphRun getGlyphRun() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGlyphRun = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GlyphRun");
+            retObjectGlyphRun = classInstance.Get("GlyphRun");
+            JCObject val = (JCObject)retObjectGlyphRun;
             return new GlyphRun(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlyphRun != null ? retObjectGlyphRun.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

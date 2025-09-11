@@ -155,10 +155,14 @@ public class BYOT extends NetObject  {
     
     public static NetObject CreateWithTipTransaction(java.lang.String url, NetType t) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateWithTipTransaction = null;
         try {
-            JCObject objCreateWithTipTransaction = (JCObject)classType.Invoke("CreateWithTipTransaction", url, t == null ? null : t.getJCOInstance());
+            retObjectCreateWithTipTransaction = classType.Invoke("CreateWithTipTransaction", url, t == null ? null : t.getJCOInstance());
+            JCObject objCreateWithTipTransaction = (JCObject)retObjectCreateWithTipTransaction;
             return new NetObject(objCreateWithTipTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWithTipTransaction != null ? retObjectCreateWithTipTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class BYOT extends NetObject  {
 
     public static NetObject CreateWithTransaction(NetObject transaction, NetType t) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateWithTransaction = null;
         try {
-            JCObject objCreateWithTransaction = (JCObject)classType.Invoke("CreateWithTransaction", transaction == null ? null : transaction.getJCOInstance(), t == null ? null : t.getJCOInstance());
+            retObjectCreateWithTransaction = classType.Invoke("CreateWithTransaction", transaction == null ? null : transaction.getJCOInstance(), t == null ? null : t.getJCOInstance());
+            JCObject objCreateWithTransaction = (JCObject)retObjectCreateWithTransaction;
             return new NetObject(objCreateWithTransaction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWithTransaction != null ? retObjectCreateWithTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -158,9 +158,13 @@ public class SoapExtensionAttribute extends Attribute  {
     
     public int getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            return (int)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            return (int)retObjectPriority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class SoapExtensionAttribute extends Attribute  {
 
     public void setPriority(int Priority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority);
         } catch (JCNativeException jcne) {
@@ -178,10 +182,14 @@ public class SoapExtensionAttribute extends Attribute  {
 
     public NetType getExtensionType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtensionType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtensionType");
+            retObjectExtensionType = classInstance.Get("ExtensionType");
+            JCObject val = (JCObject)retObjectExtensionType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtensionType != null ? retObjectExtensionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

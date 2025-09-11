@@ -155,9 +155,13 @@ public class ExpressionMorphHelper extends NetObject  {
     
     public boolean TryInferReturnType(ActivityWithResult expression, EditingContext context, JCORefOut<NetType> returnType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryInferReturnType = null;
         try {
-            return (boolean)classInstance.Invoke("TryInferReturnType", expression == null ? null : expression.getJCOInstance(), context == null ? null : context.getJCOInstance(), returnType.getJCRefOut());
+            retObjectTryInferReturnType = classInstance.Invoke("TryInferReturnType", expression == null ? null : expression.getJCOInstance(), context == null ? null : context.getJCOInstance(), returnType.getJCRefOut());
+            return (boolean)retObjectTryInferReturnType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryInferReturnType != null ? retObjectTryInferReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class ExpressionMorphHelper extends NetObject  {
 
     public boolean TryMorphExpression(ActivityWithResult expression, boolean isLocationExpression, NetType newType, EditingContext context, JCORefOut<ActivityWithResult> newExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryMorphExpression = null;
         try {
-            return (boolean)classInstance.Invoke("TryMorphExpression", expression == null ? null : expression.getJCOInstance(), isLocationExpression, newType == null ? null : newType.getJCOInstance(), context == null ? null : context.getJCOInstance(), newExpression.getJCRefOut());
+            retObjectTryMorphExpression = classInstance.Invoke("TryMorphExpression", expression == null ? null : expression.getJCOInstance(), isLocationExpression, newType == null ? null : newType.getJCOInstance(), context == null ? null : context.getJCOInstance(), newExpression.getJCRefOut());
+            return (boolean)retObjectTryMorphExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryMorphExpression != null ? retObjectTryMorphExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

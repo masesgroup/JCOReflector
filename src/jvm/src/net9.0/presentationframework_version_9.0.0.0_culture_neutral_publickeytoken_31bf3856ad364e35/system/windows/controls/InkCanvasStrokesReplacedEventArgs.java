@@ -161,10 +161,14 @@ public class InkCanvasStrokesReplacedEventArgs extends EventArgs  {
     
     public StrokeCollection getNewStrokes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewStrokes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewStrokes");
+            retObjectNewStrokes = classInstance.Get("NewStrokes");
+            JCObject val = (JCObject)retObjectNewStrokes;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewStrokes != null ? retObjectNewStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class InkCanvasStrokesReplacedEventArgs extends EventArgs  {
 
     public StrokeCollection getPreviousStrokes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousStrokes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousStrokes");
+            retObjectPreviousStrokes = classInstance.Get("PreviousStrokes");
+            JCObject val = (JCObject)retObjectPreviousStrokes;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousStrokes != null ? retObjectPreviousStrokes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

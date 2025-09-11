@@ -178,9 +178,13 @@ public class FigureLength extends ValueType  {
     
     public boolean Equals(FigureLength figureLength) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", figureLength == null ? null : figureLength.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", figureLength == null ? null : figureLength.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class FigureLength extends ValueType  {
     
     public boolean getIsAbsolute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAbsolute = null;
         try {
-            return (boolean)classInstance.Get("IsAbsolute");
+            retObjectIsAbsolute = classInstance.Get("IsAbsolute");
+            return (boolean)retObjectIsAbsolute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAbsolute != null ? retObjectIsAbsolute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class FigureLength extends ValueType  {
 
     public boolean getIsAuto() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuto = null;
         try {
-            return (boolean)classInstance.Get("IsAuto");
+            retObjectIsAuto = classInstance.Get("IsAuto");
+            return (boolean)retObjectIsAuto;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAuto != null ? retObjectIsAuto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +224,13 @@ public class FigureLength extends ValueType  {
 
     public boolean getIsColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsColumn = null;
         try {
-            return (boolean)classInstance.Get("IsColumn");
+            retObjectIsColumn = classInstance.Get("IsColumn");
+            return (boolean)retObjectIsColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsColumn != null ? retObjectIsColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +238,13 @@ public class FigureLength extends ValueType  {
 
     public boolean getIsContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsContent = null;
         try {
-            return (boolean)classInstance.Get("IsContent");
+            retObjectIsContent = classInstance.Get("IsContent");
+            return (boolean)retObjectIsContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsContent != null ? retObjectIsContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +252,13 @@ public class FigureLength extends ValueType  {
 
     public boolean getIsPage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPage = null;
         try {
-            return (boolean)classInstance.Get("IsPage");
+            retObjectIsPage = classInstance.Get("IsPage");
+            return (boolean)retObjectIsPage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPage != null ? retObjectIsPage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +266,13 @@ public class FigureLength extends ValueType  {
 
     public double getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (double)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (double)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +280,14 @@ public class FigureLength extends ValueType  {
 
     public FigureUnitType getFigureUnitType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFigureUnitType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FigureUnitType");
+            retObjectFigureUnitType = classInstance.Get("FigureUnitType");
+            JCObject val = (JCObject)retObjectFigureUnitType;
             return new FigureUnitType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFigureUnitType != null ? retObjectFigureUnitType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

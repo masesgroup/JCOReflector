@@ -170,9 +170,13 @@ public class StoreItemCollection extends ItemCollection  {
     
     public double getStoreSchemaVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStoreSchemaVersion = null;
         try {
-            return (double)classInstance.Get("StoreSchemaVersion");
+            retObjectStoreSchemaVersion = classInstance.Get("StoreSchemaVersion");
+            return (double)retObjectStoreSchemaVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStoreSchemaVersion != null ? retObjectStoreSchemaVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class StoreItemCollection extends ItemCollection  {
 
     public void setStoreSchemaVersion(double StoreSchemaVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StoreSchemaVersion", StoreSchemaVersion);
         } catch (JCNativeException jcne) {

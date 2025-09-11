@@ -161,10 +161,14 @@ public class EventAccessors extends ValueType  {
     
     public MethodDefinitionHandle getAdder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Adder");
+            retObjectAdder = classInstance.Get("Adder");
+            JCObject val = (JCObject)retObjectAdder;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdder != null ? retObjectAdder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class EventAccessors extends ValueType  {
 
     public MethodDefinitionHandle getRaiser() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaiser = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Raiser");
+            retObjectRaiser = classInstance.Get("Raiser");
+            JCObject val = (JCObject)retObjectRaiser;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRaiser != null ? retObjectRaiser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class EventAccessors extends ValueType  {
 
     public MethodDefinitionHandle getRemover() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemover = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Remover");
+            retObjectRemover = classInstance.Get("Remover");
+            JCObject val = (JCObject)retObjectRemover;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemover != null ? retObjectRemover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,9 +167,13 @@ public class XmlReflectionMember extends NetObject  {
     
     public boolean getIsReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReturnValue = null;
         try {
-            return (boolean)classInstance.Get("IsReturnValue");
+            retObjectIsReturnValue = classInstance.Get("IsReturnValue");
+            return (boolean)retObjectIsReturnValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReturnValue != null ? retObjectIsReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setIsReturnValue(boolean IsReturnValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReturnValue", IsReturnValue);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class XmlReflectionMember extends NetObject  {
 
     public boolean getOverrideIsNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideIsNullable = null;
         try {
-            return (boolean)classInstance.Get("OverrideIsNullable");
+            retObjectOverrideIsNullable = classInstance.Get("OverrideIsNullable");
+            return (boolean)retObjectOverrideIsNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOverrideIsNullable != null ? retObjectOverrideIsNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setOverrideIsNullable(boolean OverrideIsNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideIsNullable", OverrideIsNullable);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class XmlReflectionMember extends NetObject  {
 
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberName = null;
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            retObjectMemberName = classInstance.Get("MemberName");
+            return (java.lang.String)retObjectMemberName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMemberName != null ? retObjectMemberName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setMemberName(java.lang.String MemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberName", MemberName);
         } catch (JCNativeException jcne) {
@@ -227,10 +239,14 @@ public class XmlReflectionMember extends NetObject  {
 
     public NetType getMemberType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberType");
+            retObjectMemberType = classInstance.Get("MemberType");
+            JCObject val = (JCObject)retObjectMemberType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberType != null ? retObjectMemberType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setMemberType(NetType MemberType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberType", MemberType == null ? null : MemberType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,10 +264,14 @@ public class XmlReflectionMember extends NetObject  {
 
     public SoapAttributes getSoapAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSoapAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SoapAttributes");
+            retObjectSoapAttributes = classInstance.Get("SoapAttributes");
+            JCObject val = (JCObject)retObjectSoapAttributes;
             return new SoapAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoapAttributes != null ? retObjectSoapAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setSoapAttributes(SoapAttributes SoapAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SoapAttributes", SoapAttributes == null ? null : SoapAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class XmlReflectionMember extends NetObject  {
 
     public XmlAttributes getXmlAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlAttributes");
+            retObjectXmlAttributes = classInstance.Get("XmlAttributes");
+            JCObject val = (JCObject)retObjectXmlAttributes;
             return new XmlAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlAttributes != null ? retObjectXmlAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class XmlReflectionMember extends NetObject  {
 
     public void setXmlAttributes(XmlAttributes XmlAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlAttributes", XmlAttributes == null ? null : XmlAttributes.getJCOInstance());
         } catch (JCNativeException jcne) {

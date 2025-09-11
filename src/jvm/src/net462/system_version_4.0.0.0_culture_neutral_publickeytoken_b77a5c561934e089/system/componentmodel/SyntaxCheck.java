@@ -153,9 +153,13 @@ public class SyntaxCheck extends NetObject  {
     
     public static boolean CheckMachineName(java.lang.String value) throws Throwable, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckMachineName = null;
         try {
-            return (boolean)classType.Invoke("CheckMachineName", value);
+            retObjectCheckMachineName = classType.Invoke("CheckMachineName", value);
+            return (boolean)retObjectCheckMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckMachineName != null ? retObjectCheckMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class SyntaxCheck extends NetObject  {
 
     public static boolean CheckPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckPath = null;
         try {
-            return (boolean)classType.Invoke("CheckPath", value);
+            retObjectCheckPath = classType.Invoke("CheckPath", value);
+            return (boolean)retObjectCheckPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckPath != null ? retObjectCheckPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,13 @@ public class SyntaxCheck extends NetObject  {
 
     public static boolean CheckRootedPath(java.lang.String value) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCheckRootedPath = null;
         try {
-            return (boolean)classType.Invoke("CheckRootedPath", value);
+            retObjectCheckRootedPath = classType.Invoke("CheckRootedPath", value);
+            return (boolean)retObjectCheckRootedPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCheckRootedPath != null ? retObjectCheckRootedPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

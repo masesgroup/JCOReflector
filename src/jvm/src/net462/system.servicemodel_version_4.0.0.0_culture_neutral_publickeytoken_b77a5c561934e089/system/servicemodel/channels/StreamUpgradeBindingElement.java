@@ -156,10 +156,14 @@ public class StreamUpgradeBindingElement extends BindingElement  {
     
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildClientStreamUpgradeProvider = null;
         try {
-            JCObject objBuildClientStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildClientStreamUpgradeProvider = classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildClientStreamUpgradeProvider = (JCObject)retObjectBuildClientStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildClientStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildClientStreamUpgradeProvider != null ? retObjectBuildClientStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class StreamUpgradeBindingElement extends BindingElement  {
 
     public StreamUpgradeProvider BuildServerStreamUpgradeProvider(BindingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildServerStreamUpgradeProvider = null;
         try {
-            JCObject objBuildServerStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildServerStreamUpgradeProvider = classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildServerStreamUpgradeProvider = (JCObject)retObjectBuildServerStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildServerStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildServerStreamUpgradeProvider != null ? retObjectBuildServerStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

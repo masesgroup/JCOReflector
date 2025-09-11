@@ -157,9 +157,13 @@ public class IPGlobalStatistics extends NetObject  {
     
     public boolean getForwardingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForwardingEnabled = null;
         try {
-            return (boolean)classInstance.Get("ForwardingEnabled");
+            retObjectForwardingEnabled = classInstance.Get("ForwardingEnabled");
+            return (boolean)retObjectForwardingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectForwardingEnabled != null ? retObjectForwardingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public int getDefaultTtl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultTtl = null;
         try {
-            return (int)classInstance.Get("DefaultTtl");
+            retObjectDefaultTtl = classInstance.Get("DefaultTtl");
+            return (int)retObjectDefaultTtl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDefaultTtl != null ? retObjectDefaultTtl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public int getNumberOfInterfaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfInterfaces = null;
         try {
-            return (int)classInstance.Get("NumberOfInterfaces");
+            retObjectNumberOfInterfaces = classInstance.Get("NumberOfInterfaces");
+            return (int)retObjectNumberOfInterfaces;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberOfInterfaces != null ? retObjectNumberOfInterfaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public int getNumberOfIPAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfIPAddresses = null;
         try {
-            return (int)classInstance.Get("NumberOfIPAddresses");
+            retObjectNumberOfIPAddresses = classInstance.Get("NumberOfIPAddresses");
+            return (int)retObjectNumberOfIPAddresses;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberOfIPAddresses != null ? retObjectNumberOfIPAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public int getNumberOfRoutes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumberOfRoutes = null;
         try {
-            return (int)classInstance.Get("NumberOfRoutes");
+            retObjectNumberOfRoutes = classInstance.Get("NumberOfRoutes");
+            return (int)retObjectNumberOfRoutes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumberOfRoutes != null ? retObjectNumberOfRoutes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getOutputPacketRequests() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPacketRequests = null;
         try {
-            return (long)classInstance.Get("OutputPacketRequests");
+            retObjectOutputPacketRequests = classInstance.Get("OutputPacketRequests");
+            return (long)retObjectOutputPacketRequests;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOutputPacketRequests != null ? retObjectOutputPacketRequests.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getOutputPacketRoutingDiscards() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPacketRoutingDiscards = null;
         try {
-            return (long)classInstance.Get("OutputPacketRoutingDiscards");
+            retObjectOutputPacketRoutingDiscards = classInstance.Get("OutputPacketRoutingDiscards");
+            return (long)retObjectOutputPacketRoutingDiscards;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOutputPacketRoutingDiscards != null ? retObjectOutputPacketRoutingDiscards.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getOutputPacketsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPacketsDiscarded = null;
         try {
-            return (long)classInstance.Get("OutputPacketsDiscarded");
+            retObjectOutputPacketsDiscarded = classInstance.Get("OutputPacketsDiscarded");
+            return (long)retObjectOutputPacketsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOutputPacketsDiscarded != null ? retObjectOutputPacketsDiscarded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getOutputPacketsWithNoRoute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputPacketsWithNoRoute = null;
         try {
-            return (long)classInstance.Get("OutputPacketsWithNoRoute");
+            retObjectOutputPacketsWithNoRoute = classInstance.Get("OutputPacketsWithNoRoute");
+            return (long)retObjectOutputPacketsWithNoRoute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOutputPacketsWithNoRoute != null ? retObjectOutputPacketsWithNoRoute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketFragmentFailures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketFragmentFailures = null;
         try {
-            return (long)classInstance.Get("PacketFragmentFailures");
+            retObjectPacketFragmentFailures = classInstance.Get("PacketFragmentFailures");
+            return (long)retObjectPacketFragmentFailures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketFragmentFailures != null ? retObjectPacketFragmentFailures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +297,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketReassembliesRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketReassembliesRequired = null;
         try {
-            return (long)classInstance.Get("PacketReassembliesRequired");
+            retObjectPacketReassembliesRequired = classInstance.Get("PacketReassembliesRequired");
+            return (long)retObjectPacketReassembliesRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketReassembliesRequired != null ? retObjectPacketReassembliesRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +311,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketReassemblyFailures() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketReassemblyFailures = null;
         try {
-            return (long)classInstance.Get("PacketReassemblyFailures");
+            retObjectPacketReassemblyFailures = classInstance.Get("PacketReassemblyFailures");
+            return (long)retObjectPacketReassemblyFailures;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketReassemblyFailures != null ? retObjectPacketReassemblyFailures.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +325,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketReassemblyTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketReassemblyTimeout = null;
         try {
-            return (long)classInstance.Get("PacketReassemblyTimeout");
+            retObjectPacketReassemblyTimeout = classInstance.Get("PacketReassemblyTimeout");
+            return (long)retObjectPacketReassemblyTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketReassemblyTimeout != null ? retObjectPacketReassemblyTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +339,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketsFragmented() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketsFragmented = null;
         try {
-            return (long)classInstance.Get("PacketsFragmented");
+            retObjectPacketsFragmented = classInstance.Get("PacketsFragmented");
+            return (long)retObjectPacketsFragmented;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketsFragmented != null ? retObjectPacketsFragmented.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +353,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getPacketsReassembled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketsReassembled = null;
         try {
-            return (long)classInstance.Get("PacketsReassembled");
+            retObjectPacketsReassembled = classInstance.Get("PacketsReassembled");
+            return (long)retObjectPacketsReassembled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketsReassembled != null ? retObjectPacketsReassembled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +367,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPackets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPackets = null;
         try {
-            return (long)classInstance.Get("ReceivedPackets");
+            retObjectReceivedPackets = classInstance.Get("ReceivedPackets");
+            return (long)retObjectReceivedPackets;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPackets != null ? retObjectReceivedPackets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +381,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsDelivered() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsDelivered = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsDelivered");
+            retObjectReceivedPacketsDelivered = classInstance.Get("ReceivedPacketsDelivered");
+            return (long)retObjectReceivedPacketsDelivered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsDelivered != null ? retObjectReceivedPacketsDelivered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +395,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsDiscarded = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsDiscarded");
+            retObjectReceivedPacketsDiscarded = classInstance.Get("ReceivedPacketsDiscarded");
+            return (long)retObjectReceivedPacketsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsDiscarded != null ? retObjectReceivedPacketsDiscarded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +409,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsForwarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsForwarded = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsForwarded");
+            retObjectReceivedPacketsForwarded = classInstance.Get("ReceivedPacketsForwarded");
+            return (long)retObjectReceivedPacketsForwarded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsForwarded != null ? retObjectReceivedPacketsForwarded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +423,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsWithAddressErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsWithAddressErrors = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsWithAddressErrors");
+            retObjectReceivedPacketsWithAddressErrors = classInstance.Get("ReceivedPacketsWithAddressErrors");
+            return (long)retObjectReceivedPacketsWithAddressErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsWithAddressErrors != null ? retObjectReceivedPacketsWithAddressErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +437,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsWithHeadersErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsWithHeadersErrors = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsWithHeadersErrors");
+            retObjectReceivedPacketsWithHeadersErrors = classInstance.Get("ReceivedPacketsWithHeadersErrors");
+            return (long)retObjectReceivedPacketsWithHeadersErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsWithHeadersErrors != null ? retObjectReceivedPacketsWithHeadersErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +451,13 @@ public class IPGlobalStatistics extends NetObject  {
 
     public long getReceivedPacketsWithUnknownProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReceivedPacketsWithUnknownProtocol = null;
         try {
-            return (long)classInstance.Get("ReceivedPacketsWithUnknownProtocol");
+            retObjectReceivedPacketsWithUnknownProtocol = classInstance.Get("ReceivedPacketsWithUnknownProtocol");
+            return (long)retObjectReceivedPacketsWithUnknownProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectReceivedPacketsWithUnknownProtocol != null ? retObjectReceivedPacketsWithUnknownProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

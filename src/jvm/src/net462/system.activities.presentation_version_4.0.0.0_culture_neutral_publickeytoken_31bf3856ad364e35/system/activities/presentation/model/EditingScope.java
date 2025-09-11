@@ -160,9 +160,13 @@ public class EditingScope extends ModelEditingScope  {
     
     public boolean getHasEffectiveChanges() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasEffectiveChanges = null;
         try {
-            return (boolean)classInstance.Get("HasEffectiveChanges");
+            retObjectHasEffectiveChanges = classInstance.Get("HasEffectiveChanges");
+            return (boolean)retObjectHasEffectiveChanges;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasEffectiveChanges != null ? retObjectHasEffectiveChanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class EditingScope extends ModelEditingScope  {
 
     public void setHasEffectiveChanges(boolean HasEffectiveChanges) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasEffectiveChanges", HasEffectiveChanges);
         } catch (JCNativeException jcne) {

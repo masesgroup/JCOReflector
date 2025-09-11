@@ -143,10 +143,14 @@ public class IArgumentProviderImplementation extends NetObject implements IArgum
     
     public Expression GetArgument(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArgument = null;
         try {
-            JCObject objGetArgument = (JCObject)classInstance.Invoke("GetArgument", index);
+            retObjectGetArgument = classInstance.Invoke("GetArgument", index);
+            JCObject objGetArgument = (JCObject)retObjectGetArgument;
             return new Expression(objGetArgument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetArgument != null ? retObjectGetArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +162,13 @@ public class IArgumentProviderImplementation extends NetObject implements IArgum
     
     public int getArgumentCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgumentCount = null;
         try {
-            return (int)classInstance.Get("ArgumentCount");
+            retObjectArgumentCount = classInstance.Get("ArgumentCount");
+            return (int)retObjectArgumentCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectArgumentCount != null ? retObjectArgumentCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

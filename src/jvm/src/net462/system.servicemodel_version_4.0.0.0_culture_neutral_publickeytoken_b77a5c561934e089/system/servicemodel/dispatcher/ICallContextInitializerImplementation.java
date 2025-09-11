@@ -146,10 +146,14 @@ public class ICallContextInitializerImplementation extends NetObject implements 
     
     public NetObject BeforeInvoke(InstanceContext instanceContext, IClientChannel channel, Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeforeInvoke = null;
         try {
-            JCObject objBeforeInvoke = (JCObject)classInstance.Invoke("BeforeInvoke", instanceContext == null ? null : instanceContext.getJCOInstance(), channel == null ? null : channel.getJCOInstance(), message == null ? null : message.getJCOInstance());
+            retObjectBeforeInvoke = classInstance.Invoke("BeforeInvoke", instanceContext == null ? null : instanceContext.getJCOInstance(), channel == null ? null : channel.getJCOInstance(), message == null ? null : message.getJCOInstance());
+            JCObject objBeforeInvoke = (JCObject)retObjectBeforeInvoke;
             return new NetObject(objBeforeInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeforeInvoke != null ? retObjectBeforeInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class ICallContextInitializerImplementation extends NetObject implements 
 
     public void AfterInvoke(NetObject correlationState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AfterInvoke", correlationState == null ? null : correlationState.getJCOInstance());
         } catch (JCNativeException jcne) {

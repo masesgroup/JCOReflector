@@ -173,7 +173,7 @@ public class CompatibleFrameworkMissingException extends DependentPlatformMissin
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +187,14 @@ public class CompatibleFrameworkMissingException extends DependentPlatformMissin
     
     public CompatibleFrameworks getCompatibleFrameworks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompatibleFrameworks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompatibleFrameworks");
+            retObjectCompatibleFrameworks = classInstance.Get("CompatibleFrameworks");
+            JCObject val = (JCObject)retObjectCompatibleFrameworks;
             return new CompatibleFrameworks(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompatibleFrameworks != null ? retObjectCompatibleFrameworks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

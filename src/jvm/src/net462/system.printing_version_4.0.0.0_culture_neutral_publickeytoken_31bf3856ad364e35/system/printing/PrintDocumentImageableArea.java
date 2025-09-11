@@ -159,9 +159,13 @@ public class PrintDocumentImageableArea extends NetObject  {
     
     public double getExtentHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeight = null;
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            retObjectExtentHeight = classInstance.Get("ExtentHeight");
+            return (double)retObjectExtentHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setExtentHeight(double ExtentHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtentHeight", ExtentHeight);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public double getExtentWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidth = null;
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            retObjectExtentWidth = classInstance.Get("ExtentWidth");
+            return (double)retObjectExtentWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setExtentWidth(double ExtentWidth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtentWidth", ExtentWidth);
         } catch (JCNativeException jcne) {
@@ -199,9 +207,13 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public double getMediaSizeHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMediaSizeHeight = null;
         try {
-            return (double)classInstance.Get("MediaSizeHeight");
+            retObjectMediaSizeHeight = classInstance.Get("MediaSizeHeight");
+            return (double)retObjectMediaSizeHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMediaSizeHeight != null ? retObjectMediaSizeHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setMediaSizeHeight(double MediaSizeHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MediaSizeHeight", MediaSizeHeight);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public double getMediaSizeWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMediaSizeWidth = null;
         try {
-            return (double)classInstance.Get("MediaSizeWidth");
+            retObjectMediaSizeWidth = classInstance.Get("MediaSizeWidth");
+            return (double)retObjectMediaSizeWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMediaSizeWidth != null ? retObjectMediaSizeWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setMediaSizeWidth(double MediaSizeWidth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MediaSizeWidth", MediaSizeWidth);
         } catch (JCNativeException jcne) {
@@ -239,9 +255,13 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public double getOriginHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginHeight = null;
         try {
-            return (double)classInstance.Get("OriginHeight");
+            retObjectOriginHeight = classInstance.Get("OriginHeight");
+            return (double)retObjectOriginHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOriginHeight != null ? retObjectOriginHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +269,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setOriginHeight(double OriginHeight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginHeight", OriginHeight);
         } catch (JCNativeException jcne) {
@@ -259,9 +279,13 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public double getOriginWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginWidth = null;
         try {
-            return (double)classInstance.Get("OriginWidth");
+            retObjectOriginWidth = classInstance.Get("OriginWidth");
+            return (double)retObjectOriginWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOriginWidth != null ? retObjectOriginWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +293,7 @@ public class PrintDocumentImageableArea extends NetObject  {
 
     public void setOriginWidth(double OriginWidth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginWidth", OriginWidth);
         } catch (JCNativeException jcne) {

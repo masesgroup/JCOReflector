@@ -177,9 +177,13 @@ public class DateTimePicker extends Control  {
     
     public boolean getChecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecked = null;
         try {
-            return (boolean)classInstance.Get("Checked");
+            retObjectChecked = classInstance.Get("Checked");
+            return (boolean)retObjectChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectChecked != null ? retObjectChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class DateTimePicker extends Control  {
 
     public void setChecked(boolean Checked) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Checked", Checked);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class DateTimePicker extends Control  {
 
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class DateTimePicker extends Control  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class DateTimePicker extends Control  {
 
     public boolean getShowCheckBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCheckBox = null;
         try {
-            return (boolean)classInstance.Get("ShowCheckBox");
+            retObjectShowCheckBox = classInstance.Get("ShowCheckBox");
+            return (boolean)retObjectShowCheckBox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowCheckBox != null ? retObjectShowCheckBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class DateTimePicker extends Control  {
 
     public void setShowCheckBox(boolean ShowCheckBox) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCheckBox", ShowCheckBox);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class DateTimePicker extends Control  {
 
     public boolean getShowUpDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowUpDown = null;
         try {
-            return (boolean)classInstance.Get("ShowUpDown");
+            retObjectShowUpDown = classInstance.Get("ShowUpDown");
+            return (boolean)retObjectShowUpDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowUpDown != null ? retObjectShowUpDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class DateTimePicker extends Control  {
 
     public void setShowUpDown(boolean ShowUpDown) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowUpDown", ShowUpDown);
         } catch (JCNativeException jcne) {
@@ -257,9 +273,13 @@ public class DateTimePicker extends Control  {
 
     public int getPreferredHeight() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreferredHeight = null;
         try {
-            return (int)classInstance.Get("PreferredHeight");
+            retObjectPreferredHeight = classInstance.Get("PreferredHeight");
+            return (int)retObjectPreferredHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPreferredHeight != null ? retObjectPreferredHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +287,14 @@ public class DateTimePicker extends Control  {
 
     public DateTime getMaxDate() throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaxDate");
+            retObjectMaxDate = classInstance.Get("MaxDate");
+            JCObject val = (JCObject)retObjectMaxDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxDate != null ? retObjectMaxDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class DateTimePicker extends Control  {
 
     public void setMaxDate(DateTime MaxDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDate", MaxDate == null ? null : MaxDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +312,14 @@ public class DateTimePicker extends Control  {
 
     public static DateTime getMaximumDateTime() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximumDateTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximumDateTime");
+            retObjectMaximumDateTime = classType.Get("MaximumDateTime");
+            JCObject val = (JCObject)retObjectMaximumDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumDateTime != null ? retObjectMaximumDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +327,14 @@ public class DateTimePicker extends Control  {
 
     public DateTime getMinDate() throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.TypeInitializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MinDate");
+            retObjectMinDate = classInstance.Get("MinDate");
+            JCObject val = (JCObject)retObjectMinDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinDate != null ? retObjectMinDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +342,7 @@ public class DateTimePicker extends Control  {
 
     public void setMinDate(DateTime MinDate) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinDate", MinDate == null ? null : MinDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,10 +352,14 @@ public class DateTimePicker extends Control  {
 
     public static DateTime getMinimumDateTime() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.TypeInitializationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimumDateTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimumDateTime");
+            retObjectMinimumDateTime = classType.Get("MinimumDateTime");
+            JCObject val = (JCObject)retObjectMinimumDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimumDateTime != null ? retObjectMinimumDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +367,14 @@ public class DateTimePicker extends Control  {
 
     public DateTime getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +382,7 @@ public class DateTimePicker extends Control  {
 
     public void setValue(DateTime Value) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,10 +392,14 @@ public class DateTimePicker extends Control  {
 
     public Color getCalendarForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarForeColor");
+            retObjectCalendarForeColor = classInstance.Get("CalendarForeColor");
+            JCObject val = (JCObject)retObjectCalendarForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarForeColor != null ? retObjectCalendarForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,7 +407,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarForeColor(Color CalendarForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarForeColor", CalendarForeColor == null ? null : CalendarForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,10 +417,14 @@ public class DateTimePicker extends Control  {
 
     public Color getCalendarMonthBackground() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarMonthBackground = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarMonthBackground");
+            retObjectCalendarMonthBackground = classInstance.Get("CalendarMonthBackground");
+            JCObject val = (JCObject)retObjectCalendarMonthBackground;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarMonthBackground != null ? retObjectCalendarMonthBackground.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,7 +432,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarMonthBackground(Color CalendarMonthBackground) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarMonthBackground", CalendarMonthBackground == null ? null : CalendarMonthBackground.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -394,10 +442,14 @@ public class DateTimePicker extends Control  {
 
     public Color getCalendarTitleBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarTitleBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarTitleBackColor");
+            retObjectCalendarTitleBackColor = classInstance.Get("CalendarTitleBackColor");
+            JCObject val = (JCObject)retObjectCalendarTitleBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarTitleBackColor != null ? retObjectCalendarTitleBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +457,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarTitleBackColor(Color CalendarTitleBackColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarTitleBackColor", CalendarTitleBackColor == null ? null : CalendarTitleBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -415,10 +467,14 @@ public class DateTimePicker extends Control  {
 
     public Color getCalendarTitleForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarTitleForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarTitleForeColor");
+            retObjectCalendarTitleForeColor = classInstance.Get("CalendarTitleForeColor");
+            JCObject val = (JCObject)retObjectCalendarTitleForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarTitleForeColor != null ? retObjectCalendarTitleForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,7 +482,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarTitleForeColor(Color CalendarTitleForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarTitleForeColor", CalendarTitleForeColor == null ? null : CalendarTitleForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -436,10 +492,14 @@ public class DateTimePicker extends Control  {
 
     public Color getCalendarTrailingForeColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarTrailingForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarTrailingForeColor");
+            retObjectCalendarTrailingForeColor = classInstance.Get("CalendarTrailingForeColor");
+            JCObject val = (JCObject)retObjectCalendarTrailingForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarTrailingForeColor != null ? retObjectCalendarTrailingForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,7 +507,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarTrailingForeColor(Color CalendarTrailingForeColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarTrailingForeColor", CalendarTrailingForeColor == null ? null : CalendarTrailingForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,10 +517,14 @@ public class DateTimePicker extends Control  {
 
     public Font getCalendarFont() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarFont");
+            retObjectCalendarFont = classInstance.Get("CalendarFont");
+            JCObject val = (JCObject)retObjectCalendarFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarFont != null ? retObjectCalendarFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,7 +532,7 @@ public class DateTimePicker extends Control  {
 
     public void setCalendarFont(Font CalendarFont) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarFont", CalendarFont == null ? null : CalendarFont.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -478,9 +542,13 @@ public class DateTimePicker extends Control  {
 
     public java.lang.String getCustomFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("CustomFormat");
+            retObjectCustomFormat = classInstance.Get("CustomFormat");
+            return (java.lang.String)retObjectCustomFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCustomFormat != null ? retObjectCustomFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,7 +556,7 @@ public class DateTimePicker extends Control  {
 
     public void setCustomFormat(java.lang.String CustomFormat) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomFormat", CustomFormat);
         } catch (JCNativeException jcne) {
@@ -498,10 +566,14 @@ public class DateTimePicker extends Control  {
 
     public DateTimePickerFormat getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new DateTimePickerFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,7 +581,7 @@ public class DateTimePicker extends Control  {
 
     public void setFormat(DateTimePickerFormat Format) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Format", Format == null ? null : Format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -519,10 +591,14 @@ public class DateTimePicker extends Control  {
 
     public LeftRightAlignment getDropDownAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDropDownAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DropDownAlign");
+            retObjectDropDownAlign = classInstance.Get("DropDownAlign");
+            JCObject val = (JCObject)retObjectDropDownAlign;
             return new LeftRightAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDropDownAlign != null ? retObjectDropDownAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,7 +606,7 @@ public class DateTimePicker extends Control  {
 
     public void setDropDownAlign(LeftRightAlignment DropDownAlign) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DropDownAlign", DropDownAlign == null ? null : DropDownAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -540,10 +616,14 @@ public class DateTimePicker extends Control  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +631,7 @@ public class DateTimePicker extends Control  {
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -566,7 +646,7 @@ public class DateTimePicker extends Control  {
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -576,7 +656,7 @@ public class DateTimePicker extends Control  {
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -586,7 +666,7 @@ public class DateTimePicker extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -596,7 +676,7 @@ public class DateTimePicker extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -606,7 +686,7 @@ public class DateTimePicker extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -616,7 +696,7 @@ public class DateTimePicker extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -626,7 +706,7 @@ public class DateTimePicker extends Control  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -636,7 +716,7 @@ public class DateTimePicker extends Control  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -646,7 +726,7 @@ public class DateTimePicker extends Control  {
 
     public void addCloseUp(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CloseUp", handler);
         } catch (JCNativeException jcne) {
@@ -656,7 +736,7 @@ public class DateTimePicker extends Control  {
 
     public void removeCloseUp(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CloseUp", handler);
         } catch (JCNativeException jcne) {
@@ -666,7 +746,7 @@ public class DateTimePicker extends Control  {
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -676,7 +756,7 @@ public class DateTimePicker extends Control  {
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -686,7 +766,7 @@ public class DateTimePicker extends Control  {
 
     public void addDropDown(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DropDown", handler);
         } catch (JCNativeException jcne) {
@@ -696,7 +776,7 @@ public class DateTimePicker extends Control  {
 
     public void removeDropDown(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DropDown", handler);
         } catch (JCNativeException jcne) {
@@ -706,7 +786,7 @@ public class DateTimePicker extends Control  {
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -716,7 +796,7 @@ public class DateTimePicker extends Control  {
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -726,7 +806,7 @@ public class DateTimePicker extends Control  {
 
     public void addFormatChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormatChanged", handler);
         } catch (JCNativeException jcne) {
@@ -736,7 +816,7 @@ public class DateTimePicker extends Control  {
 
     public void removeFormatChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormatChanged", handler);
         } catch (JCNativeException jcne) {
@@ -746,7 +826,7 @@ public class DateTimePicker extends Control  {
 
     public void addPaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -756,7 +836,7 @@ public class DateTimePicker extends Control  {
 
     public void removePaddingChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PaddingChanged", handler);
         } catch (JCNativeException jcne) {
@@ -766,7 +846,7 @@ public class DateTimePicker extends Control  {
 
     public void addRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -776,7 +856,7 @@ public class DateTimePicker extends Control  {
 
     public void removeRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -786,7 +866,7 @@ public class DateTimePicker extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -796,7 +876,7 @@ public class DateTimePicker extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -806,7 +886,7 @@ public class DateTimePicker extends Control  {
 
     public void addValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -816,7 +896,7 @@ public class DateTimePicker extends Control  {
 
     public void removeValueChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValueChanged", handler);
         } catch (JCNativeException jcne) {
@@ -826,7 +906,7 @@ public class DateTimePicker extends Control  {
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -836,7 +916,7 @@ public class DateTimePicker extends Control  {
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -846,7 +926,7 @@ public class DateTimePicker extends Control  {
 
     public void addMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -856,7 +936,7 @@ public class DateTimePicker extends Control  {
 
     public void removeMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -866,7 +946,7 @@ public class DateTimePicker extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -876,7 +956,7 @@ public class DateTimePicker extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {

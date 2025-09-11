@@ -188,9 +188,13 @@ public class EventWaitHandle extends WaitHandle  {
     
     public boolean Reset() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReset = null;
         try {
-            return (boolean)classInstance.Invoke("Reset");
+            retObjectReset = classInstance.Invoke("Reset");
+            return (boolean)retObjectReset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReset != null ? retObjectReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +202,13 @@ public class EventWaitHandle extends WaitHandle  {
 
     public boolean Set() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSet = null;
         try {
-            return (boolean)classInstance.Invoke("Set");
+            retObjectSet = classInstance.Invoke("Set");
+            return (boolean)retObjectSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSet != null ? retObjectSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +216,13 @@ public class EventWaitHandle extends WaitHandle  {
 
     public static boolean TryOpenExisting(java.lang.String name, JCORefOut<EventWaitHandle> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryOpenExisting = null;
         try {
-            return (boolean)classType.Invoke("TryOpenExisting", name, result.getJCRefOut());
+            retObjectTryOpenExisting = classType.Invoke("TryOpenExisting", name, result.getJCRefOut());
+            return (boolean)retObjectTryOpenExisting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryOpenExisting != null ? retObjectTryOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +230,14 @@ public class EventWaitHandle extends WaitHandle  {
 
     public static EventWaitHandle OpenExisting(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", name);
+            retObjectOpenExisting = classType.Invoke("OpenExisting", name);
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new EventWaitHandle(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

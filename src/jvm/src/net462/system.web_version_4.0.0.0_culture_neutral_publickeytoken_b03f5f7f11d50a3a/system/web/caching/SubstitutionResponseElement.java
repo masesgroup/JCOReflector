@@ -171,9 +171,13 @@ public class SubstitutionResponseElement extends ResponseElement  {
     
     public HttpResponseSubstitutionCallback getCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallback = null;
         try {
-            return (HttpResponseSubstitutionCallback)classInstance.Get("Callback");
+            retObjectCallback = classInstance.Get("Callback");
+            return (HttpResponseSubstitutionCallback)retObjectCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HttpResponseSubstitutionCallback", retObjectCallback != null ? retObjectCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

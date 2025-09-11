@@ -167,7 +167,7 @@ public class WorkflowContractBehaviorAttribute extends Attribute  {
     
     public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddBindingParameters", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), bindingParameters == null ? null : bindingParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class WorkflowContractBehaviorAttribute extends Attribute  {
 
     public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyClientBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), clientRuntime == null ? null : clientRuntime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class WorkflowContractBehaviorAttribute extends Attribute  {
 
     public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance(), dispatchRuntime == null ? null : dispatchRuntime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class WorkflowContractBehaviorAttribute extends Attribute  {
 
     public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", contractDescription == null ? null : contractDescription.getJCOInstance(), endpoint == null ? null : endpoint.getJCOInstance());
         } catch (JCNativeException jcne) {

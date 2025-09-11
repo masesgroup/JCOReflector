@@ -155,10 +155,14 @@ public class ReferenceHandler extends NetObject  {
     
     public ReferenceResolver CreateResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateResolver = null;
         try {
-            JCObject objCreateResolver = (JCObject)classInstance.Invoke("CreateResolver");
+            retObjectCreateResolver = classInstance.Invoke("CreateResolver");
+            JCObject objCreateResolver = (JCObject)retObjectCreateResolver;
             return new ReferenceResolver(objCreateResolver);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateResolver != null ? retObjectCreateResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class ReferenceHandler extends NetObject  {
     
     public static ReferenceHandler getIgnoreCycles() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIgnoreCycles = null;
         try {
-            JCObject val = (JCObject)classType.Get("IgnoreCycles");
+            retObjectIgnoreCycles = classType.Get("IgnoreCycles");
+            JCObject val = (JCObject)retObjectIgnoreCycles;
             return new ReferenceHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIgnoreCycles != null ? retObjectIgnoreCycles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class ReferenceHandler extends NetObject  {
 
     public static ReferenceHandler getPreserve() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreserve = null;
         try {
-            JCObject val = (JCObject)classType.Get("Preserve");
+            retObjectPreserve = classType.Get("Preserve");
+            JCObject val = (JCObject)retObjectPreserve;
             return new ReferenceHandler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreserve != null ? retObjectPreserve.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

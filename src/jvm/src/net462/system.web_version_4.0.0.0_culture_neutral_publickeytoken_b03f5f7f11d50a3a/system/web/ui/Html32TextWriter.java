@@ -178,7 +178,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
     
     public void RenderBeginTag(HtmlTextWriterTag tagKey) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException, system.resources.MissingManifestResourceException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", tagKey == null ? null : tagKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public void RenderEndTag() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndTag");
         } catch (JCNativeException jcne) {
@@ -202,9 +202,13 @@ public class Html32TextWriter extends HtmlTextWriter  {
     
     public boolean getShouldPerformDivTableSubstitution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldPerformDivTableSubstitution = null;
         try {
-            return (boolean)classInstance.Get("ShouldPerformDivTableSubstitution");
+            retObjectShouldPerformDivTableSubstitution = classInstance.Get("ShouldPerformDivTableSubstitution");
+            return (boolean)retObjectShouldPerformDivTableSubstitution;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldPerformDivTableSubstitution != null ? retObjectShouldPerformDivTableSubstitution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +216,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public void setShouldPerformDivTableSubstitution(boolean ShouldPerformDivTableSubstitution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldPerformDivTableSubstitution", ShouldPerformDivTableSubstitution);
         } catch (JCNativeException jcne) {
@@ -222,9 +226,13 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public boolean getSupportsBold() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsBold = null;
         try {
-            return (boolean)classInstance.Get("SupportsBold");
+            retObjectSupportsBold = classInstance.Get("SupportsBold");
+            return (boolean)retObjectSupportsBold;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsBold != null ? retObjectSupportsBold.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +240,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public void setSupportsBold(boolean SupportsBold) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportsBold", SupportsBold);
         } catch (JCNativeException jcne) {
@@ -242,9 +250,13 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public boolean getSupportsItalic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportsItalic = null;
         try {
-            return (boolean)classInstance.Get("SupportsItalic");
+            retObjectSupportsItalic = classInstance.Get("SupportsItalic");
+            return (boolean)retObjectSupportsItalic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSupportsItalic != null ? retObjectSupportsItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +264,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
 
     public void setSupportsItalic(boolean SupportsItalic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportsItalic", SupportsItalic);
         } catch (JCNativeException jcne) {

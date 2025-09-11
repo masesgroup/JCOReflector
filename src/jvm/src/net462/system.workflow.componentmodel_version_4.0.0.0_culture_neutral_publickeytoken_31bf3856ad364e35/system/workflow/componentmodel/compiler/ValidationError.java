@@ -188,10 +188,14 @@ public class ValidationError extends NetObject  {
     
     public static ValidationError GetNotSetValidationError(java.lang.String propertyName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNotSetValidationError = null;
         try {
-            JCObject objGetNotSetValidationError = (JCObject)classType.Invoke("GetNotSetValidationError", propertyName);
+            retObjectGetNotSetValidationError = classType.Invoke("GetNotSetValidationError", propertyName);
+            JCObject objGetNotSetValidationError = (JCObject)retObjectGetNotSetValidationError;
             return new ValidationError(objGetNotSetValidationError);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNotSetValidationError != null ? retObjectGetNotSetValidationError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class ValidationError extends NetObject  {
     
     public boolean getIsWarning() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWarning = null;
         try {
-            return (boolean)classInstance.Get("IsWarning");
+            retObjectIsWarning = classInstance.Get("IsWarning");
+            return (boolean)retObjectIsWarning;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWarning != null ? retObjectIsWarning.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +221,13 @@ public class ValidationError extends NetObject  {
 
     public int getErrorNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorNumber = null;
         try {
-            return (int)classInstance.Get("ErrorNumber");
+            retObjectErrorNumber = classInstance.Get("ErrorNumber");
+            return (int)retObjectErrorNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectErrorNumber != null ? retObjectErrorNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +235,14 @@ public class ValidationError extends NetObject  {
 
     public IDictionary getUserData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +250,13 @@ public class ValidationError extends NetObject  {
 
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorText = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorText");
+            retObjectErrorText = classInstance.Get("ErrorText");
+            return (java.lang.String)retObjectErrorText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorText != null ? retObjectErrorText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +264,13 @@ public class ValidationError extends NetObject  {
 
     public java.lang.String getPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("PropertyName");
+            retObjectPropertyName = classInstance.Get("PropertyName");
+            return (java.lang.String)retObjectPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyName != null ? retObjectPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +278,7 @@ public class ValidationError extends NetObject  {
 
     public void setPropertyName(java.lang.String PropertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PropertyName", PropertyName);
         } catch (JCNativeException jcne) {

@@ -155,7 +155,7 @@ public class BaseVsaStartup extends NetObject  {
     
     public void SetSite(IJSVsaSite site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSite", site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class BaseVsaStartup extends NetObject  {
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class BaseVsaStartup extends NetObject  {
 
     public void Startup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Startup");
         } catch (JCNativeException jcne) {

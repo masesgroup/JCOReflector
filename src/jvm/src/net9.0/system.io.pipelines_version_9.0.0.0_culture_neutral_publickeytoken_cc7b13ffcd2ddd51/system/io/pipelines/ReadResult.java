@@ -160,9 +160,13 @@ public class ReadResult extends ValueType  {
     
     public boolean getIsCanceled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCanceled = null;
         try {
-            return (boolean)classInstance.Get("IsCanceled");
+            retObjectIsCanceled = classInstance.Get("IsCanceled");
+            return (boolean)retObjectIsCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCanceled != null ? retObjectIsCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class ReadResult extends ValueType  {
 
     public boolean getIsCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCompleted = null;
         try {
-            return (boolean)classInstance.Get("IsCompleted");
+            retObjectIsCompleted = classInstance.Get("IsCompleted");
+            return (boolean)retObjectIsCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCompleted != null ? retObjectIsCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

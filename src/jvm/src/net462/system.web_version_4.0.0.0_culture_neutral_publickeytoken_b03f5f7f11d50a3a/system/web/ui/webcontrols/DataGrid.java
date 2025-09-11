@@ -177,9 +177,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
     
     public boolean getAllowCustomPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCustomPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowCustomPaging");
+            retObjectAllowCustomPaging = classInstance.Get("AllowCustomPaging");
+            return (boolean)retObjectAllowCustomPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCustomPaging != null ? retObjectAllowCustomPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setAllowCustomPaging(boolean AllowCustomPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCustomPaging", AllowCustomPaging);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getAllowPaging() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPaging = null;
         try {
-            return (boolean)classInstance.Get("AllowPaging");
+            retObjectAllowPaging = classInstance.Get("AllowPaging");
+            return (boolean)retObjectAllowPaging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPaging != null ? retObjectAllowPaging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setAllowPaging(boolean AllowPaging) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPaging", AllowPaging);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getAllowSorting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowSorting = null;
         try {
-            return (boolean)classInstance.Get("AllowSorting");
+            retObjectAllowSorting = classInstance.Get("AllowSorting");
+            return (boolean)retObjectAllowSorting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowSorting != null ? retObjectAllowSorting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setAllowSorting(boolean AllowSorting) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowSorting", AllowSorting);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getAutoGenerateColumns() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateColumns = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateColumns");
+            retObjectAutoGenerateColumns = classInstance.Get("AutoGenerateColumns");
+            return (boolean)retObjectAutoGenerateColumns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateColumns != null ? retObjectAutoGenerateColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setAutoGenerateColumns(boolean AutoGenerateColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateColumns", AutoGenerateColumns);
         } catch (JCNativeException jcne) {
@@ -257,9 +273,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getShowFooter() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowFooter = null;
         try {
-            return (boolean)classInstance.Get("ShowFooter");
+            retObjectShowFooter = classInstance.Get("ShowFooter");
+            return (boolean)retObjectShowFooter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowFooter != null ? retObjectShowFooter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setShowFooter(boolean ShowFooter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowFooter", ShowFooter);
         } catch (JCNativeException jcne) {
@@ -277,9 +297,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public boolean getShowHeader() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHeader = null;
         try {
-            return (boolean)classInstance.Get("ShowHeader");
+            retObjectShowHeader = classInstance.Get("ShowHeader");
+            return (boolean)retObjectShowHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHeader != null ? retObjectShowHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +311,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setShowHeader(boolean ShowHeader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHeader", ShowHeader);
         } catch (JCNativeException jcne) {
@@ -297,9 +321,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getCurrentPageIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPageIndex = null;
         try {
-            return (int)classInstance.Get("CurrentPageIndex");
+            retObjectCurrentPageIndex = classInstance.Get("CurrentPageIndex");
+            return (int)retObjectCurrentPageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCurrentPageIndex != null ? retObjectCurrentPageIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +335,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setCurrentPageIndex(int CurrentPageIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPageIndex", CurrentPageIndex);
         } catch (JCNativeException jcne) {
@@ -317,9 +345,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getEditItemIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemIndex = null;
         try {
-            return (int)classInstance.Get("EditItemIndex");
+            retObjectEditItemIndex = classInstance.Get("EditItemIndex");
+            return (int)retObjectEditItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEditItemIndex != null ? retObjectEditItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +359,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setEditItemIndex(int EditItemIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EditItemIndex", EditItemIndex);
         } catch (JCNativeException jcne) {
@@ -337,9 +369,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getPageCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageCount = null;
         try {
-            return (int)classInstance.Get("PageCount");
+            retObjectPageCount = classInstance.Get("PageCount");
+            return (int)retObjectPageCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageCount != null ? retObjectPageCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +383,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getPageSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSize = null;
         try {
-            return (int)classInstance.Get("PageSize");
+            retObjectPageSize = classInstance.Get("PageSize");
+            return (int)retObjectPageSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageSize != null ? retObjectPageSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +397,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setPageSize(int PageSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSize", PageSize);
         } catch (JCNativeException jcne) {
@@ -367,9 +407,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getSelectedIndex() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedIndex = null;
         try {
-            return (int)classInstance.Get("SelectedIndex");
+            retObjectSelectedIndex = classInstance.Get("SelectedIndex");
+            return (int)retObjectSelectedIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectedIndex != null ? retObjectSelectedIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,7 +421,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setSelectedIndex(int SelectedIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedIndex", SelectedIndex);
         } catch (JCNativeException jcne) {
@@ -387,9 +431,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public int getVirtualItemCount() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVirtualItemCount = null;
         try {
-            return (int)classInstance.Get("VirtualItemCount");
+            retObjectVirtualItemCount = classInstance.Get("VirtualItemCount");
+            return (int)retObjectVirtualItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVirtualItemCount != null ? retObjectVirtualItemCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +445,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setVirtualItemCount(int VirtualItemCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VirtualItemCount", VirtualItemCount);
         } catch (JCNativeException jcne) {
@@ -407,9 +455,13 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public java.lang.String getBackImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("BackImageUrl");
+            retObjectBackImageUrl = classInstance.Get("BackImageUrl");
+            return (java.lang.String)retObjectBackImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBackImageUrl != null ? retObjectBackImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +469,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void setBackImageUrl(java.lang.String BackImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackImageUrl", BackImageUrl);
         } catch (JCNativeException jcne) {
@@ -427,10 +479,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public DataGridColumnCollection getColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject val = (JCObject)retObjectColumns;
             return new DataGridColumnCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +494,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public DataGridItem getSelectedItem() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItem");
+            retObjectSelectedItem = classInstance.Get("SelectedItem");
+            JCObject val = (JCObject)retObjectSelectedItem;
             return new DataGridItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItem != null ? retObjectSelectedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +509,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public DataGridItemCollection getItems() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.configuration.provider.ProviderException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItems = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Items");
+            retObjectItems = classInstance.Get("Items");
+            JCObject val = (JCObject)retObjectItems;
             return new DataGridItemCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItems != null ? retObjectItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +524,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public DataGridPagerStyle getPagerStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPagerStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PagerStyle");
+            retObjectPagerStyle = classInstance.Get("PagerStyle");
+            JCObject val = (JCObject)retObjectPagerStyle;
             return new DataGridPagerStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPagerStyle != null ? retObjectPagerStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +539,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getAlternatingItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternatingItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternatingItemStyle");
+            retObjectAlternatingItemStyle = classInstance.Get("AlternatingItemStyle");
+            JCObject val = (JCObject)retObjectAlternatingItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternatingItemStyle != null ? retObjectAlternatingItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +554,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getEditItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EditItemStyle");
+            retObjectEditItemStyle = classInstance.Get("EditItemStyle");
+            JCObject val = (JCObject)retObjectEditItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditItemStyle != null ? retObjectEditItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +569,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getFooterStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterStyle");
+            retObjectFooterStyle = classInstance.Get("FooterStyle");
+            JCObject val = (JCObject)retObjectFooterStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterStyle != null ? retObjectFooterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +584,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getHeaderStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,10 +599,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemStyle");
+            retObjectItemStyle = classInstance.Get("ItemStyle");
+            JCObject val = (JCObject)retObjectItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemStyle != null ? retObjectItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +614,14 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public TableItemStyle getSelectedItemStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedItemStyle");
+            retObjectSelectedItemStyle = classInstance.Get("SelectedItemStyle");
+            JCObject val = (JCObject)retObjectSelectedItemStyle;
             return new TableItemStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedItemStyle != null ? retObjectSelectedItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -542,7 +634,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addCancelCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CancelCommand", handler);
         } catch (JCNativeException jcne) {
@@ -552,7 +644,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeCancelCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CancelCommand", handler);
         } catch (JCNativeException jcne) {
@@ -562,7 +654,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addDeleteCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DeleteCommand", handler);
         } catch (JCNativeException jcne) {
@@ -572,7 +664,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeDeleteCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DeleteCommand", handler);
         } catch (JCNativeException jcne) {
@@ -582,7 +674,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addEditCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EditCommand", handler);
         } catch (JCNativeException jcne) {
@@ -592,7 +684,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeEditCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EditCommand", handler);
         } catch (JCNativeException jcne) {
@@ -602,7 +694,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -612,7 +704,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCommand", handler);
         } catch (JCNativeException jcne) {
@@ -622,7 +714,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addUpdateCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UpdateCommand", handler);
         } catch (JCNativeException jcne) {
@@ -632,7 +724,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeUpdateCommand(DataGridCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UpdateCommand", handler);
         } catch (JCNativeException jcne) {
@@ -642,7 +734,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemCreated(DataGridItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -652,7 +744,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemCreated(DataGridItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemCreated", handler);
         } catch (JCNativeException jcne) {
@@ -662,7 +754,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addItemDataBound(DataGridItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -672,7 +764,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeItemDataBound(DataGridItemEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ItemDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -682,7 +774,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addPageIndexChanged(DataGridPageChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -692,7 +784,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removePageIndexChanged(DataGridPageChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PageIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -702,7 +794,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void addSortCommand(DataGridSortCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SortCommand", handler);
         } catch (JCNativeException jcne) {
@@ -712,7 +804,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
 
     public void removeSortCommand(DataGridSortCommandEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SortCommand", handler);
         } catch (JCNativeException jcne) {

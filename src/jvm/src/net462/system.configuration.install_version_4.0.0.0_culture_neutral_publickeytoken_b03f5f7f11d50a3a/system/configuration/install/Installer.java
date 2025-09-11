@@ -168,7 +168,7 @@ public class Installer extends Component  {
     
     public void Commit(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class Installer extends Component  {
 
     public void Install(IDictionary stateSaver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Install", stateSaver == null ? null : stateSaver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class Installer extends Component  {
 
     public void Rollback(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +198,7 @@ public class Installer extends Component  {
 
     public void Uninstall(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.IOException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninstall", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +212,14 @@ public class Installer extends Component  {
     
     public InstallContext getContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Context");
+            retObjectContext = classInstance.Get("Context");
+            JCObject val = (JCObject)retObjectContext;
             return new InstallContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContext != null ? retObjectContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +227,7 @@ public class Installer extends Component  {
 
     public void setContext(InstallContext Context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Context", Context == null ? null : Context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +237,14 @@ public class Installer extends Component  {
 
     public Installer getParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new Installer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +252,7 @@ public class Installer extends Component  {
 
     public void setParent(Installer Parent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Parent", Parent == null ? null : Parent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +262,14 @@ public class Installer extends Component  {
 
     public InstallerCollection getInstallers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Installers");
+            retObjectInstallers = classInstance.Get("Installers");
+            JCObject val = (JCObject)retObjectInstallers;
             return new InstallerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallers != null ? retObjectInstallers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +277,13 @@ public class Installer extends Component  {
 
     public java.lang.String getHelpText() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpText = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpText");
+            retObjectHelpText = classInstance.Get("HelpText");
+            return (java.lang.String)retObjectHelpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpText != null ? retObjectHelpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +296,7 @@ public class Installer extends Component  {
 
     public void addAfterInstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterInstall", handler);
         } catch (JCNativeException jcne) {
@@ -290,7 +306,7 @@ public class Installer extends Component  {
 
     public void removeAfterInstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterInstall", handler);
         } catch (JCNativeException jcne) {
@@ -300,7 +316,7 @@ public class Installer extends Component  {
 
     public void addAfterRollback(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterRollback", handler);
         } catch (JCNativeException jcne) {
@@ -310,7 +326,7 @@ public class Installer extends Component  {
 
     public void removeAfterRollback(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterRollback", handler);
         } catch (JCNativeException jcne) {
@@ -320,7 +336,7 @@ public class Installer extends Component  {
 
     public void addAfterUninstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AfterUninstall", handler);
         } catch (JCNativeException jcne) {
@@ -330,7 +346,7 @@ public class Installer extends Component  {
 
     public void removeAfterUninstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AfterUninstall", handler);
         } catch (JCNativeException jcne) {
@@ -340,7 +356,7 @@ public class Installer extends Component  {
 
     public void addBeforeInstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeInstall", handler);
         } catch (JCNativeException jcne) {
@@ -350,7 +366,7 @@ public class Installer extends Component  {
 
     public void removeBeforeInstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeInstall", handler);
         } catch (JCNativeException jcne) {
@@ -360,7 +376,7 @@ public class Installer extends Component  {
 
     public void addBeforeRollback(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeRollback", handler);
         } catch (JCNativeException jcne) {
@@ -370,7 +386,7 @@ public class Installer extends Component  {
 
     public void removeBeforeRollback(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeRollback", handler);
         } catch (JCNativeException jcne) {
@@ -380,7 +396,7 @@ public class Installer extends Component  {
 
     public void addBeforeUninstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BeforeUninstall", handler);
         } catch (JCNativeException jcne) {
@@ -390,7 +406,7 @@ public class Installer extends Component  {
 
     public void removeBeforeUninstall(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BeforeUninstall", handler);
         } catch (JCNativeException jcne) {
@@ -400,7 +416,7 @@ public class Installer extends Component  {
 
     public void addCommitted(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Committed", handler);
         } catch (JCNativeException jcne) {
@@ -410,7 +426,7 @@ public class Installer extends Component  {
 
     public void removeCommitted(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Committed", handler);
         } catch (JCNativeException jcne) {
@@ -420,7 +436,7 @@ public class Installer extends Component  {
 
     public void addCommitting(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Committing", handler);
         } catch (JCNativeException jcne) {
@@ -430,7 +446,7 @@ public class Installer extends Component  {
 
     public void removeCommitting(InstallEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Committing", handler);
         } catch (JCNativeException jcne) {

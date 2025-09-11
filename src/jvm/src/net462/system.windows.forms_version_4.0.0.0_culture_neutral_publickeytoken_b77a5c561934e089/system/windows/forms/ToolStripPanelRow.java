@@ -173,9 +173,13 @@ public class ToolStripPanelRow extends Component  {
     
     public boolean CanMove(ToolStrip toolStripToDrag) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanMove = null;
         try {
-            return (boolean)classInstance.Invoke("CanMove", toolStripToDrag == null ? null : toolStripToDrag.getJCOInstance());
+            retObjectCanMove = classInstance.Invoke("CanMove", toolStripToDrag == null ? null : toolStripToDrag.getJCOInstance());
+            return (boolean)retObjectCanMove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanMove != null ? retObjectCanMove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class ToolStripPanelRow extends Component  {
     
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class ToolStripPanelRow extends Component  {
 
     public Rectangle getDisplayRectangle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayRectangle");
+            retObjectDisplayRectangle = classInstance.Get("DisplayRectangle");
+            JCObject val = (JCObject)retObjectDisplayRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayRectangle != null ? retObjectDisplayRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,16 +221,20 @@ public class ToolStripPanelRow extends Component  {
 
     public final Control[] getControls() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControls = null;
         try {
             ArrayList<Control> resultingArrayList = new ArrayList<Control>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
+            retObjectControls = classInstance.Get("Controls");
+            JCObject resultingObjects = (JCObject)retObjectControls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Control(resultingObject));
             }
             Control[] resultingArray = new Control[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControls != null ? retObjectControls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,14 @@ public class ToolStripPanelRow extends Component  {
 
     public LayoutEngine getLayoutEngine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutEngine = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutEngine");
+            retObjectLayoutEngine = classInstance.Get("LayoutEngine");
+            JCObject val = (JCObject)retObjectLayoutEngine;
             return new LayoutEngine(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutEngine != null ? retObjectLayoutEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +257,14 @@ public class ToolStripPanelRow extends Component  {
 
     public Orientation getOrientation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Orientation");
+            retObjectOrientation = classInstance.Get("Orientation");
+            JCObject val = (JCObject)retObjectOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientation != null ? retObjectOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +272,14 @@ public class ToolStripPanelRow extends Component  {
 
     public Padding getMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +287,7 @@ public class ToolStripPanelRow extends Component  {
 
     public void setMargin(Padding Margin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margin", Margin == null ? null : Margin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +297,14 @@ public class ToolStripPanelRow extends Component  {
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +312,7 @@ public class ToolStripPanelRow extends Component  {
 
     public void setPadding(Padding Padding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,10 +322,14 @@ public class ToolStripPanelRow extends Component  {
 
     public ToolStripPanel getToolStripPanel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolStripPanel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolStripPanel");
+            retObjectToolStripPanel = classInstance.Get("ToolStripPanel");
+            JCObject val = (JCObject)retObjectToolStripPanel;
             return new ToolStripPanel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolStripPanel != null ? retObjectToolStripPanel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -159,7 +159,7 @@ public class AutomationInteropProvider extends NetObject  {
     
     public static void RaiseAutomationEvent(AutomationEvent eventId, IRawElementProviderSimple provider, AutomationEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseAutomationEvent", eventId == null ? null : eventId.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class AutomationInteropProvider extends NetObject  {
 
     public static void RaiseAutomationPropertyChangedEvent(IRawElementProviderSimple element, AutomationPropertyChangedEventArgs e) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseAutomationPropertyChangedEvent", element == null ? null : element.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class AutomationInteropProvider extends NetObject  {
 
     public static void RaiseStructureChangedEvent(IRawElementProviderSimple provider, StructureChangedEventArgs e) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RaiseStructureChangedEvent", provider == null ? null : provider.getJCOInstance(), e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,9 +193,13 @@ public class AutomationInteropProvider extends NetObject  {
     
     public static boolean getClientsAreListening() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClientsAreListening = null;
         try {
-            return (boolean)classType.Get("ClientsAreListening");
+            retObjectClientsAreListening = classType.Get("ClientsAreListening");
+            return (boolean)retObjectClientsAreListening;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClientsAreListening != null ? retObjectClientsAreListening.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

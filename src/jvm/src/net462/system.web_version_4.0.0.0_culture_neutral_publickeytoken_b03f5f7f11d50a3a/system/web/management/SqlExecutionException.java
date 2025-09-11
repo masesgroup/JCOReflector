@@ -183,7 +183,7 @@ public class SqlExecutionException extends SystemException {
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.TypeLoadException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotImplementedException, system.runtime.serialization.SerializationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,10 +197,14 @@ public class SqlExecutionException extends SystemException {
     
     public SqlException getException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new SqlException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class SqlExecutionException extends SystemException {
 
     public java.lang.String getCommands() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommands = null;
         try {
-            return (java.lang.String)classInstance.Get("Commands");
+            retObjectCommands = classInstance.Get("Commands");
+            return (java.lang.String)retObjectCommands;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommands != null ? retObjectCommands.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +226,13 @@ public class SqlExecutionException extends SystemException {
 
     public java.lang.String getDatabase() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatabase = null;
         try {
-            return (java.lang.String)classInstance.Get("Database");
+            retObjectDatabase = classInstance.Get("Database");
+            return (java.lang.String)retObjectDatabase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDatabase != null ? retObjectDatabase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,13 @@ public class SqlExecutionException extends SystemException {
 
     public java.lang.String getServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            return (java.lang.String)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            return (java.lang.String)retObjectServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +254,13 @@ public class SqlExecutionException extends SystemException {
 
     public java.lang.String getSqlFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSqlFile = null;
         try {
-            return (java.lang.String)classInstance.Get("SqlFile");
+            retObjectSqlFile = classInstance.Get("SqlFile");
+            return (java.lang.String)retObjectSqlFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSqlFile != null ? retObjectSqlFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

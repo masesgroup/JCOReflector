@@ -277,10 +277,14 @@ public class Bitmap extends Image  {
     
     public Bitmap Clone(Rectangle rect, PixelFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", rect == null ? null : rect.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            retObjectClone = classInstance.Invoke("Clone", rect == null ? null : rect.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            JCObject objClone = (JCObject)retObjectClone;
             return new Bitmap(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +292,14 @@ public class Bitmap extends Image  {
 
     public Bitmap Clone(RectangleF rect, PixelFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", rect == null ? null : rect.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            retObjectClone = classInstance.Invoke("Clone", rect == null ? null : rect.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            JCObject objClone = (JCObject)retObjectClone;
             return new Bitmap(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +307,14 @@ public class Bitmap extends Image  {
 
     public Color GetPixel(int x, int y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPixel = null;
         try {
-            JCObject objGetPixel = (JCObject)classInstance.Invoke("GetPixel", x, y);
+            retObjectGetPixel = classInstance.Invoke("GetPixel", x, y);
+            JCObject objGetPixel = (JCObject)retObjectGetPixel;
             return new Color(objGetPixel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPixel != null ? retObjectGetPixel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +322,14 @@ public class Bitmap extends Image  {
 
     public BitmapData LockBits(Rectangle rect, ImageLockMode flags, PixelFormat format, BitmapData bitmapData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockBits = null;
         try {
-            JCObject objLockBits = (JCObject)classInstance.Invoke("LockBits", rect == null ? null : rect.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), format == null ? null : format.getJCOInstance(), bitmapData == null ? null : bitmapData.getJCOInstance());
+            retObjectLockBits = classInstance.Invoke("LockBits", rect == null ? null : rect.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), format == null ? null : format.getJCOInstance(), bitmapData == null ? null : bitmapData.getJCOInstance());
+            JCObject objLockBits = (JCObject)retObjectLockBits;
             return new BitmapData(objLockBits);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockBits != null ? retObjectLockBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +337,14 @@ public class Bitmap extends Image  {
 
     public BitmapData LockBits(Rectangle rect, ImageLockMode flags, PixelFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLockBits = null;
         try {
-            JCObject objLockBits = (JCObject)classInstance.Invoke("LockBits", rect == null ? null : rect.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            retObjectLockBits = classInstance.Invoke("LockBits", rect == null ? null : rect.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), format == null ? null : format.getJCOInstance());
+            JCObject objLockBits = (JCObject)retObjectLockBits;
             return new BitmapData(objLockBits);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLockBits != null ? retObjectLockBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +352,7 @@ public class Bitmap extends Image  {
 
     public void MakeTransparent() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeTransparent");
         } catch (JCNativeException jcne) {
@@ -342,7 +362,7 @@ public class Bitmap extends Image  {
 
     public void MakeTransparent(Color transparentColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MakeTransparent", transparentColor == null ? null : transparentColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -352,7 +372,7 @@ public class Bitmap extends Image  {
 
     public void SetPixel(int x, int y, Color color) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPixel", x, y, color == null ? null : color.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -362,7 +382,7 @@ public class Bitmap extends Image  {
 
     public void SetResolution(Single xDpi, Single yDpi) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetResolution", xDpi == null ? null : xDpi.getJCOInstance(), yDpi == null ? null : yDpi.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +392,7 @@ public class Bitmap extends Image  {
 
     public void UnlockBits(BitmapData bitmapdata) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnlockBits", bitmapdata == null ? null : bitmapdata.getJCOInstance());
         } catch (JCNativeException jcne) {

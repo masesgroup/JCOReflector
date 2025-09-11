@@ -158,7 +158,7 @@ public class WebRequestInformation extends NetObject  {
     
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatToString", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,10 +172,14 @@ public class WebRequestInformation extends NetObject  {
     
     public IPrincipal getPrincipal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrincipal = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Principal");
+            retObjectPrincipal = classInstance.Get("Principal");
+            JCObject val = (JCObject)retObjectPrincipal;
             return new IPrincipalImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrincipal != null ? retObjectPrincipal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class WebRequestInformation extends NetObject  {
 
     public java.lang.String getRequestPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestPath = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestPath");
+            retObjectRequestPath = classInstance.Get("RequestPath");
+            return (java.lang.String)retObjectRequestPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestPath != null ? retObjectRequestPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class WebRequestInformation extends NetObject  {
 
     public java.lang.String getRequestUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestUrl");
+            retObjectRequestUrl = classInstance.Get("RequestUrl");
+            return (java.lang.String)retObjectRequestUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestUrl != null ? retObjectRequestUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class WebRequestInformation extends NetObject  {
 
     public java.lang.String getThreadAccountName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadAccountName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreadAccountName");
+            retObjectThreadAccountName = classInstance.Get("ThreadAccountName");
+            return (java.lang.String)retObjectThreadAccountName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreadAccountName != null ? retObjectThreadAccountName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +229,13 @@ public class WebRequestInformation extends NetObject  {
 
     public java.lang.String getUserHostAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserHostAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("UserHostAddress");
+            retObjectUserHostAddress = classInstance.Get("UserHostAddress");
+            return (java.lang.String)retObjectUserHostAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserHostAddress != null ? retObjectUserHostAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

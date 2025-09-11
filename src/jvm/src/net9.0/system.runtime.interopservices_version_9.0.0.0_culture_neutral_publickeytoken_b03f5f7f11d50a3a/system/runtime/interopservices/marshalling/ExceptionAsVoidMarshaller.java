@@ -153,7 +153,7 @@ public class ExceptionAsVoidMarshaller extends NetObject  {
     
     public static void ConvertToUnmanaged(NetException e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ConvertToUnmanaged", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {

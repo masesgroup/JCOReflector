@@ -168,9 +168,13 @@ public class ReferralCallback extends NetObject  {
     
     public DereferenceConnectionCallback getDereferenceConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDereferenceConnection = null;
         try {
-            return (DereferenceConnectionCallback)classInstance.Get("DereferenceConnection");
+            retObjectDereferenceConnection = classInstance.Get("DereferenceConnection");
+            return (DereferenceConnectionCallback)retObjectDereferenceConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into DereferenceConnectionCallback", retObjectDereferenceConnection != null ? retObjectDereferenceConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class ReferralCallback extends NetObject  {
 
     public void setDereferenceConnection(DereferenceConnectionCallback DereferenceConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DereferenceConnection", DereferenceConnection);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class ReferralCallback extends NetObject  {
 
     public NotifyOfNewConnectionCallback getNotifyNewConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotifyNewConnection = null;
         try {
-            return (NotifyOfNewConnectionCallback)classInstance.Get("NotifyNewConnection");
+            retObjectNotifyNewConnection = classInstance.Get("NotifyNewConnection");
+            return (NotifyOfNewConnectionCallback)retObjectNotifyNewConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into NotifyOfNewConnectionCallback", retObjectNotifyNewConnection != null ? retObjectNotifyNewConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ReferralCallback extends NetObject  {
 
     public void setNotifyNewConnection(NotifyOfNewConnectionCallback NotifyNewConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NotifyNewConnection", NotifyNewConnection);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class ReferralCallback extends NetObject  {
 
     public QueryForConnectionCallback getQueryForConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQueryForConnection = null;
         try {
-            return (QueryForConnectionCallback)classInstance.Get("QueryForConnection");
+            retObjectQueryForConnection = classInstance.Get("QueryForConnection");
+            return (QueryForConnectionCallback)retObjectQueryForConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into QueryForConnectionCallback", retObjectQueryForConnection != null ? retObjectQueryForConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ReferralCallback extends NetObject  {
 
     public void setQueryForConnection(QueryForConnectionCallback QueryForConnection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QueryForConnection", QueryForConnection);
         } catch (JCNativeException jcne) {

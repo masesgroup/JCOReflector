@@ -170,9 +170,13 @@ public class MessageHeaderDescription extends MessagePartDescription  {
     
     public boolean getMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMustUnderstand = null;
         try {
-            return (boolean)classInstance.Get("MustUnderstand");
+            retObjectMustUnderstand = classInstance.Get("MustUnderstand");
+            return (boolean)retObjectMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMustUnderstand != null ? retObjectMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public void setMustUnderstand(boolean MustUnderstand) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MustUnderstand", MustUnderstand);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public boolean getRelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelay = null;
         try {
-            return (boolean)classInstance.Get("Relay");
+            retObjectRelay = classInstance.Get("Relay");
+            return (boolean)retObjectRelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRelay != null ? retObjectRelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public void setRelay(boolean Relay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Relay", Relay);
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public boolean getTypedHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypedHeader = null;
         try {
-            return (boolean)classInstance.Get("TypedHeader");
+            retObjectTypedHeader = classInstance.Get("TypedHeader");
+            return (boolean)retObjectTypedHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTypedHeader != null ? retObjectTypedHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public void setTypedHeader(boolean TypedHeader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypedHeader", TypedHeader);
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public java.lang.String getActor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActor = null;
         try {
-            return (java.lang.String)classInstance.Get("Actor");
+            retObjectActor = classInstance.Get("Actor");
+            return (java.lang.String)retObjectActor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectActor != null ? retObjectActor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class MessageHeaderDescription extends MessagePartDescription  {
 
     public void setActor(java.lang.String Actor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Actor", Actor);
         } catch (JCNativeException jcne) {

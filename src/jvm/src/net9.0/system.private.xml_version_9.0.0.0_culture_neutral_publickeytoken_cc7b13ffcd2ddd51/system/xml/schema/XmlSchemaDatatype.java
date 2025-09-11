@@ -160,9 +160,13 @@ public class XmlSchemaDatatype extends NetObject  {
     
     public boolean IsDerivedFrom(XmlSchemaDatatype datatype) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDerivedFrom = null;
         try {
-            return (boolean)classInstance.Invoke("IsDerivedFrom", datatype == null ? null : datatype.getJCOInstance());
+            retObjectIsDerivedFrom = classInstance.Invoke("IsDerivedFrom", datatype == null ? null : datatype.getJCOInstance());
+            return (boolean)retObjectIsDerivedFrom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDerivedFrom != null ? retObjectIsDerivedFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public NetObject ChangeType(NetObject value, NetType targetType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            retObjectChangeType = classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objChangeType = (JCObject)retObjectChangeType;
             return new NetObject(objChangeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public NetObject ChangeType(NetObject value, NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangeType = null;
         try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            retObjectChangeType = classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            JCObject objChangeType = (JCObject)retObjectChangeType;
             return new NetObject(objChangeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChangeType != null ? retObjectChangeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public NetObject ParseValue(java.lang.String s, XmlNameTable nameTable, IXmlNamespaceResolver nsmgr) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseValue = null;
         try {
-            JCObject objParseValue = (JCObject)classInstance.Invoke("ParseValue", s, nameTable == null ? null : nameTable.getJCOInstance(), nsmgr == null ? null : nsmgr.getJCOInstance());
+            retObjectParseValue = classInstance.Invoke("ParseValue", s, nameTable == null ? null : nameTable.getJCOInstance(), nsmgr == null ? null : nsmgr.getJCOInstance());
+            JCObject objParseValue = (JCObject)retObjectParseValue;
             return new NetObject(objParseValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseValue != null ? retObjectParseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class XmlSchemaDatatype extends NetObject  {
     
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            retObjectValueType = classInstance.Get("ValueType");
+            JCObject val = (JCObject)retObjectValueType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueType != null ? retObjectValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public XmlSchemaDatatypeVariety getVariety() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVariety = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Variety");
+            retObjectVariety = classInstance.Get("Variety");
+            JCObject val = (JCObject)retObjectVariety;
             return new XmlSchemaDatatypeVariety(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariety != null ? retObjectVariety.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public XmlTypeCode getTypeCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeCode");
+            retObjectTypeCode = classInstance.Get("TypeCode");
+            JCObject val = (JCObject)retObjectTypeCode;
             return new XmlTypeCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeCode != null ? retObjectTypeCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +268,14 @@ public class XmlSchemaDatatype extends NetObject  {
 
     public XmlTokenizedType getTokenizedType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenizedType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenizedType");
+            retObjectTokenizedType = classInstance.Get("TokenizedType");
+            JCObject val = (JCObject)retObjectTokenizedType;
             return new XmlTokenizedType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenizedType != null ? retObjectTokenizedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

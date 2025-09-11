@@ -158,9 +158,13 @@ public class AutomationProperties extends NetObject  {
     
     public static boolean GetIsColumnHeader(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsColumnHeader = null;
         try {
-            return (boolean)classType.Invoke("GetIsColumnHeader", element == null ? null : element.getJCOInstance());
+            retObjectGetIsColumnHeader = classType.Invoke("GetIsColumnHeader", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsColumnHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsColumnHeader != null ? retObjectGetIsColumnHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class AutomationProperties extends NetObject  {
 
     public static boolean GetIsDialog(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsDialog = null;
         try {
-            return (boolean)classType.Invoke("GetIsDialog", element == null ? null : element.getJCOInstance());
+            retObjectGetIsDialog = classType.Invoke("GetIsDialog", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsDialog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsDialog != null ? retObjectGetIsDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class AutomationProperties extends NetObject  {
 
     public static boolean GetIsRequiredForForm(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsRequiredForForm = null;
         try {
-            return (boolean)classType.Invoke("GetIsRequiredForForm", element == null ? null : element.getJCOInstance());
+            retObjectGetIsRequiredForForm = classType.Invoke("GetIsRequiredForForm", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsRequiredForForm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsRequiredForForm != null ? retObjectGetIsRequiredForForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class AutomationProperties extends NetObject  {
 
     public static boolean GetIsRowHeader(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsRowHeader = null;
         try {
-            return (boolean)classType.Invoke("GetIsRowHeader", element == null ? null : element.getJCOInstance());
+            retObjectGetIsRowHeader = classType.Invoke("GetIsRowHeader", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsRowHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsRowHeader != null ? retObjectGetIsRowHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,19 @@ public class AutomationProperties extends NetObject  {
 
     public static int GetPositionInSet(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetPositionInSet = null;
         try {
-            return (int)classType.Invoke("GetPositionInSet", element == null ? null : element.getJCOInstance());
+            retObjectGetPositionInSet = classType.Invoke("GetPositionInSet", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetPositionInSet;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetPositionInSetNumber = (java.lang.Number)retObjectGetPositionInSet;
+                return retObjectGetPositionInSetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetPositionInSet != null ? retObjectGetPositionInSet.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +234,19 @@ public class AutomationProperties extends NetObject  {
 
     public static int GetSizeOfSet(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSizeOfSet = null;
         try {
-            return (int)classType.Invoke("GetSizeOfSet", element == null ? null : element.getJCOInstance());
+            retObjectGetSizeOfSet = classType.Invoke("GetSizeOfSet", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetSizeOfSet;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetSizeOfSetNumber = (java.lang.Number)retObjectGetSizeOfSet;
+                return retObjectGetSizeOfSetNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetSizeOfSet != null ? retObjectGetSizeOfSet.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +254,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetAcceleratorKey(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAcceleratorKey = null;
         try {
-            return (java.lang.String)classType.Invoke("GetAcceleratorKey", element == null ? null : element.getJCOInstance());
+            retObjectGetAcceleratorKey = classType.Invoke("GetAcceleratorKey", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetAcceleratorKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAcceleratorKey != null ? retObjectGetAcceleratorKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +268,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetAccessKey(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessKey = null;
         try {
-            return (java.lang.String)classType.Invoke("GetAccessKey", element == null ? null : element.getJCOInstance());
+            retObjectGetAccessKey = classType.Invoke("GetAccessKey", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetAccessKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAccessKey != null ? retObjectGetAccessKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +282,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetAutomationId(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAutomationId = null;
         try {
-            return (java.lang.String)classType.Invoke("GetAutomationId", element == null ? null : element.getJCOInstance());
+            retObjectGetAutomationId = classType.Invoke("GetAutomationId", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetAutomationId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAutomationId != null ? retObjectGetAutomationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +296,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetHelpText(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHelpText = null;
         try {
-            return (java.lang.String)classType.Invoke("GetHelpText", element == null ? null : element.getJCOInstance());
+            retObjectGetHelpText = classType.Invoke("GetHelpText", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetHelpText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHelpText != null ? retObjectGetHelpText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +310,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetItemStatus(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetItemStatus = null;
         try {
-            return (java.lang.String)classType.Invoke("GetItemStatus", element == null ? null : element.getJCOInstance());
+            retObjectGetItemStatus = classType.Invoke("GetItemStatus", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetItemStatus;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetItemStatus != null ? retObjectGetItemStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +324,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetItemType(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetItemType = null;
         try {
-            return (java.lang.String)classType.Invoke("GetItemType", element == null ? null : element.getJCOInstance());
+            retObjectGetItemType = classType.Invoke("GetItemType", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetItemType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetItemType != null ? retObjectGetItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +338,13 @@ public class AutomationProperties extends NetObject  {
 
     public static java.lang.String GetName(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetName", element == null ? null : element.getJCOInstance());
+            retObjectGetName = classType.Invoke("GetName", element == null ? null : element.getJCOInstance());
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +352,14 @@ public class AutomationProperties extends NetObject  {
 
     public static AutomationHeadingLevel GetHeadingLevel(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetHeadingLevel = null;
         try {
-            JCObject objGetHeadingLevel = (JCObject)classType.Invoke("GetHeadingLevel", element == null ? null : element.getJCOInstance());
+            retObjectGetHeadingLevel = classType.Invoke("GetHeadingLevel", element == null ? null : element.getJCOInstance());
+            JCObject objGetHeadingLevel = (JCObject)retObjectGetHeadingLevel;
             return new AutomationHeadingLevel(objGetHeadingLevel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHeadingLevel != null ? retObjectGetHeadingLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +367,14 @@ public class AutomationProperties extends NetObject  {
 
     public static AutomationLiveSetting GetLiveSetting(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLiveSetting = null;
         try {
-            JCObject objGetLiveSetting = (JCObject)classType.Invoke("GetLiveSetting", element == null ? null : element.getJCOInstance());
+            retObjectGetLiveSetting = classType.Invoke("GetLiveSetting", element == null ? null : element.getJCOInstance());
+            JCObject objGetLiveSetting = (JCObject)retObjectGetLiveSetting;
             return new AutomationLiveSetting(objGetLiveSetting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLiveSetting != null ? retObjectGetLiveSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +382,14 @@ public class AutomationProperties extends NetObject  {
 
     public static IsOffscreenBehavior GetIsOffscreenBehavior(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsOffscreenBehavior = null;
         try {
-            JCObject objGetIsOffscreenBehavior = (JCObject)classType.Invoke("GetIsOffscreenBehavior", element == null ? null : element.getJCOInstance());
+            retObjectGetIsOffscreenBehavior = classType.Invoke("GetIsOffscreenBehavior", element == null ? null : element.getJCOInstance());
+            JCObject objGetIsOffscreenBehavior = (JCObject)retObjectGetIsOffscreenBehavior;
             return new IsOffscreenBehavior(objGetIsOffscreenBehavior);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetIsOffscreenBehavior != null ? retObjectGetIsOffscreenBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +397,14 @@ public class AutomationProperties extends NetObject  {
 
     public static UIElement GetLabeledBy(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLabeledBy = null;
         try {
-            JCObject objGetLabeledBy = (JCObject)classType.Invoke("GetLabeledBy", element == null ? null : element.getJCOInstance());
+            retObjectGetLabeledBy = classType.Invoke("GetLabeledBy", element == null ? null : element.getJCOInstance());
+            JCObject objGetLabeledBy = (JCObject)retObjectGetLabeledBy;
             return new UIElement(objGetLabeledBy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLabeledBy != null ? retObjectGetLabeledBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +412,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetAcceleratorKey(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAcceleratorKey", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -342,7 +422,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetAccessKey(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessKey", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -352,7 +432,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetAutomationId(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAutomationId", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -362,7 +442,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetHeadingLevel(DependencyObject element, AutomationHeadingLevel value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHeadingLevel", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,7 +452,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetHelpText(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetHelpText", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -382,7 +462,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetIsColumnHeader(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsColumnHeader", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -392,7 +472,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetIsDialog(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsDialog", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -402,7 +482,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetIsOffscreenBehavior(DependencyObject element, IsOffscreenBehavior value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsOffscreenBehavior", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,7 +492,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetIsRequiredForForm(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsRequiredForForm", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -422,7 +502,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetIsRowHeader(DependencyObject element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsRowHeader", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -432,7 +512,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetItemStatus(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetItemStatus", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -442,7 +522,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetItemType(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetItemType", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -452,7 +532,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetLabeledBy(DependencyObject element, UIElement value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLabeledBy", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +542,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetLiveSetting(DependencyObject element, AutomationLiveSetting value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLiveSetting", element == null ? null : element.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -472,7 +552,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetName(DependencyObject element, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetName", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -482,7 +562,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetPositionInSet(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetPositionInSet", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -492,7 +572,7 @@ public class AutomationProperties extends NetObject  {
 
     public static void SetSizeOfSet(DependencyObject element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSizeOfSet", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {

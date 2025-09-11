@@ -159,9 +159,13 @@ public class GCSettings extends NetObject  {
     
     public static boolean getIsServerGC() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsServerGC = null;
         try {
-            return (boolean)classType.Get("IsServerGC");
+            retObjectIsServerGC = classType.Get("IsServerGC");
+            return (boolean)retObjectIsServerGC;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsServerGC != null ? retObjectIsServerGC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class GCSettings extends NetObject  {
 
     public static GCLargeObjectHeapCompactionMode getLargeObjectHeapCompactionMode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLargeObjectHeapCompactionMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("LargeObjectHeapCompactionMode");
+            retObjectLargeObjectHeapCompactionMode = classType.Get("LargeObjectHeapCompactionMode");
+            JCObject val = (JCObject)retObjectLargeObjectHeapCompactionMode;
             return new GCLargeObjectHeapCompactionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLargeObjectHeapCompactionMode != null ? retObjectLargeObjectHeapCompactionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class GCSettings extends NetObject  {
 
     public static void setLargeObjectHeapCompactionMode(GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LargeObjectHeapCompactionMode", LargeObjectHeapCompactionMode == null ? null : LargeObjectHeapCompactionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +198,14 @@ public class GCSettings extends NetObject  {
 
     public static GCLatencyMode getLatencyMode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLatencyMode = null;
         try {
-            JCObject val = (JCObject)classType.Get("LatencyMode");
+            retObjectLatencyMode = classType.Get("LatencyMode");
+            JCObject val = (JCObject)retObjectLatencyMode;
             return new GCLatencyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLatencyMode != null ? retObjectLatencyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +213,7 @@ public class GCSettings extends NetObject  {
 
     public static void setLatencyMode(GCLatencyMode LatencyMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LatencyMode", LatencyMode == null ? null : LatencyMode.getJCOInstance());
         } catch (JCNativeException jcne) {

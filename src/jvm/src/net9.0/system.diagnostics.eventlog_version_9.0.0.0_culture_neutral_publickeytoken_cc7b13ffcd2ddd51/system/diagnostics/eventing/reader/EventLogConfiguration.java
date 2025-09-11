@@ -179,7 +179,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -189,7 +189,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void SaveChanges() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveChanges");
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -216,9 +216,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
     
     public boolean getIsClassicLog() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClassicLog = null;
         try {
-            return (boolean)classInstance.Get("IsClassicLog");
+            retObjectIsClassicLog = classInstance.Get("IsClassicLog");
+            return (boolean)retObjectIsClassicLog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClassicLog != null ? retObjectIsClassicLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +230,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public boolean getIsEnabled() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +244,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
@@ -246,9 +254,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public long getMaximumSizeInBytes() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumSizeInBytes = null;
         try {
-            return (long)classInstance.Get("MaximumSizeInBytes");
+            retObjectMaximumSizeInBytes = classInstance.Get("MaximumSizeInBytes");
+            return (long)retObjectMaximumSizeInBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumSizeInBytes != null ? retObjectMaximumSizeInBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +268,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void setMaximumSizeInBytes(long MaximumSizeInBytes) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumSizeInBytes", MaximumSizeInBytes);
         } catch (JCNativeException jcne) {
@@ -266,10 +278,14 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public EventLogIsolation getLogIsolation() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogIsolation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogIsolation");
+            retObjectLogIsolation = classInstance.Get("LogIsolation");
+            JCObject val = (JCObject)retObjectLogIsolation;
             return new EventLogIsolation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogIsolation != null ? retObjectLogIsolation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +293,14 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public EventLogMode getLogMode() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogMode");
+            retObjectLogMode = classInstance.Get("LogMode");
+            JCObject val = (JCObject)retObjectLogMode;
             return new EventLogMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogMode != null ? retObjectLogMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +308,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void setLogMode(EventLogMode LogMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogMode", LogMode == null ? null : LogMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +318,14 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public EventLogType getLogType() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogType");
+            retObjectLogType = classInstance.Get("LogType");
+            JCObject val = (JCObject)retObjectLogType;
             return new EventLogType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogType != null ? retObjectLogType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,9 +333,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public java.lang.String getLogFilePath() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("LogFilePath");
+            retObjectLogFilePath = classInstance.Get("LogFilePath");
+            return (java.lang.String)retObjectLogFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogFilePath != null ? retObjectLogFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +347,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void setLogFilePath(java.lang.String LogFilePath) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogFilePath", LogFilePath);
         } catch (JCNativeException jcne) {
@@ -329,9 +357,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public java.lang.String getLogName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogName = null;
         try {
-            return (java.lang.String)classInstance.Get("LogName");
+            retObjectLogName = classInstance.Get("LogName");
+            return (java.lang.String)retObjectLogName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogName != null ? retObjectLogName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,9 +371,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public java.lang.String getOwningProviderName() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwningProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("OwningProviderName");
+            retObjectOwningProviderName = classInstance.Get("OwningProviderName");
+            return (java.lang.String)retObjectOwningProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOwningProviderName != null ? retObjectOwningProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,9 +385,13 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public java.lang.String getSecurityDescriptor() throws Throwable, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityDescriptor = null;
         try {
-            return (java.lang.String)classInstance.Get("SecurityDescriptor");
+            retObjectSecurityDescriptor = classInstance.Get("SecurityDescriptor");
+            return (java.lang.String)retObjectSecurityDescriptor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityDescriptor != null ? retObjectSecurityDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +399,7 @@ public class EventLogConfiguration extends NetObject implements AutoCloseable {
 
     public void setSecurityDescriptor(java.lang.String SecurityDescriptor) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.diagnostics.eventing.reader.EventLogNotFoundException, system.diagnostics.eventing.reader.EventLogInvalidDataException, system.OperationCanceledException, system.diagnostics.eventing.reader.EventLogProviderDisabledException, system.UnauthorizedAccessException, system.diagnostics.eventing.reader.EventLogReadingException, system.diagnostics.eventing.reader.EventLogException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityDescriptor", SecurityDescriptor);
         } catch (JCNativeException jcne) {

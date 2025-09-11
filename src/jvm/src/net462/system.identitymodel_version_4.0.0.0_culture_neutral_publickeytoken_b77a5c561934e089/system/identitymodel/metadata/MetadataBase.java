@@ -158,10 +158,14 @@ public class MetadataBase extends NetObject  {
     
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class MetadataBase extends NetObject  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
     
     public static java.lang.String getAnonymousSslnego() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnonymousSslnego = null;
         try {
-            return (java.lang.String)classType.Get("AnonymousSslnego");
+            retObjectAnonymousSslnego = classType.Get("AnonymousSslnego");
+            return (java.lang.String)retObjectAnonymousSslnego;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnonymousSslnego != null ? retObjectAnonymousSslnego.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getMutualSslnego() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMutualSslnego = null;
         try {
-            return (java.lang.String)classType.Get("MutualSslnego");
+            retObjectMutualSslnego = classType.Get("MutualSslnego");
+            return (java.lang.String)retObjectMutualSslnego;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMutualSslnego != null ? retObjectMutualSslnego.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getSecureConversation() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecureConversation = null;
         try {
-            return (java.lang.String)classType.Get("SecureConversation");
+            retObjectSecureConversation = classType.Get("SecureConversation");
+            return (java.lang.String)retObjectSecureConversation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecureConversation != null ? retObjectSecureConversation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getSecurityContext() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSecurityContext = null;
         try {
-            return (java.lang.String)classType.Get("SecurityContext");
+            retObjectSecurityContext = classType.Get("SecurityContext");
+            return (java.lang.String)retObjectSecurityContext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityContext != null ? retObjectSecurityContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getSpnego() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpnego = null;
         try {
-            return (java.lang.String)classType.Get("Spnego");
+            retObjectSpnego = classType.Get("Spnego");
+            return (java.lang.String)retObjectSpnego;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSpnego != null ? retObjectSpnego.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class ServiceModelSecurityTokenTypes extends NetObject  {
 
     public static java.lang.String getSspiCredential() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSspiCredential = null;
         try {
-            return (java.lang.String)classType.Get("SspiCredential");
+            retObjectSspiCredential = classType.Get("SspiCredential");
+            return (java.lang.String)retObjectSspiCredential;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSspiCredential != null ? retObjectSspiCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,10 +165,14 @@ public class MethodInfo extends MethodBase  {
     
     public MethodInfo GetBaseDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBaseDefinition = null;
         try {
-            JCObject objGetBaseDefinition = (JCObject)classInstance.Invoke("GetBaseDefinition");
+            retObjectGetBaseDefinition = classInstance.Invoke("GetBaseDefinition");
+            JCObject objGetBaseDefinition = (JCObject)retObjectGetBaseDefinition;
             return new MethodInfo(objGetBaseDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBaseDefinition != null ? retObjectGetBaseDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class MethodInfo extends MethodBase  {
 
     public MethodInfo GetGenericMethodDefinition() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericMethodDefinition = null;
         try {
-            JCObject objGetGenericMethodDefinition = (JCObject)classInstance.Invoke("GetGenericMethodDefinition");
+            retObjectGetGenericMethodDefinition = classInstance.Invoke("GetGenericMethodDefinition");
+            JCObject objGetGenericMethodDefinition = (JCObject)retObjectGetGenericMethodDefinition;
             return new MethodInfo(objGetGenericMethodDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericMethodDefinition != null ? retObjectGetGenericMethodDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class MethodInfo extends MethodBase  {
 
     public MethodInfo MakeGenericMethod(NetType... typeArguments) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeGenericMethod = null;
         try {
-            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (java.lang.Object)toObjectFromArray(typeArguments));
+            retObjectMakeGenericMethod = classInstance.Invoke("MakeGenericMethod", (java.lang.Object)toObjectFromArray(typeArguments));
+            JCObject objMakeGenericMethod = (JCObject)retObjectMakeGenericMethod;
             return new MethodInfo(objMakeGenericMethod);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeGenericMethod != null ? retObjectMakeGenericMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,16 +210,20 @@ public class MethodInfo extends MethodBase  {
 
     public NetType[] GetGenericArguments() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGenericArguments = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGenericArguments");
+            retObjectGetGenericArguments = classInstance.Invoke("GetGenericArguments");
+            JCObject resultingObjects = (JCObject)retObjectGetGenericArguments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGenericArguments != null ? retObjectGetGenericArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -228,7 +244,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke(NetObject obj, NetObject[] parameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -237,7 +253,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -246,7 +262,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -255,7 +271,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -264,7 +280,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -273,7 +289,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public ParameterInfo[] GetParameters() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
     /**
@@ -282,7 +298,7 @@ public class MethodInfo extends MethodBase  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodInfo to obtain the full interface.");
     }
 
 
@@ -291,10 +307,14 @@ public class MethodInfo extends MethodBase  {
     
     public ICustomAttributeProvider getReturnTypeCustomAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnTypeCustomAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnTypeCustomAttributes");
+            retObjectReturnTypeCustomAttributes = classInstance.Get("ReturnTypeCustomAttributes");
+            JCObject val = (JCObject)retObjectReturnTypeCustomAttributes;
             return new ICustomAttributeProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnTypeCustomAttributes != null ? retObjectReturnTypeCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +322,14 @@ public class MethodInfo extends MethodBase  {
 
     public ParameterInfo getReturnParameter() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnParameter");
+            retObjectReturnParameter = classInstance.Get("ReturnParameter");
+            JCObject val = (JCObject)retObjectReturnParameter;
             return new ParameterInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnParameter != null ? retObjectReturnParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +337,14 @@ public class MethodInfo extends MethodBase  {
 
     public NetType getReturnType() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            retObjectReturnType = classInstance.Get("ReturnType");
+            JCObject val = (JCObject)retObjectReturnType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnType != null ? retObjectReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

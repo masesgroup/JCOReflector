@@ -164,10 +164,14 @@ public class DataGridViewRowHeaderCell extends DataGridViewHeaderCell  {
     
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class DataGridViewRowHeaderCell extends DataGridViewHeaderCell  {
 
     public ContextMenuStrip GetInheritedContextMenuStrip(int rowIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInheritedContextMenuStrip = null;
         try {
-            JCObject objGetInheritedContextMenuStrip = (JCObject)classInstance.Invoke("GetInheritedContextMenuStrip", rowIndex);
+            retObjectGetInheritedContextMenuStrip = classInstance.Invoke("GetInheritedContextMenuStrip", rowIndex);
+            JCObject objGetInheritedContextMenuStrip = (JCObject)retObjectGetInheritedContextMenuStrip;
             return new ContextMenuStrip(objGetInheritedContextMenuStrip);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInheritedContextMenuStrip != null ? retObjectGetInheritedContextMenuStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class DataGridViewRowHeaderCell extends DataGridViewHeaderCell  {
 
     public DataGridViewCellStyle GetInheritedStyle(DataGridViewCellStyle inheritedCellStyle, int rowIndex, boolean includeColors) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInheritedStyle = null;
         try {
-            JCObject objGetInheritedStyle = (JCObject)classInstance.Invoke("GetInheritedStyle", inheritedCellStyle == null ? null : inheritedCellStyle.getJCOInstance(), rowIndex, includeColors);
+            retObjectGetInheritedStyle = classInstance.Invoke("GetInheritedStyle", inheritedCellStyle == null ? null : inheritedCellStyle.getJCOInstance(), rowIndex, includeColors);
+            JCObject objGetInheritedStyle = (JCObject)retObjectGetInheritedStyle;
             return new DataGridViewCellStyle(objGetInheritedStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInheritedStyle != null ? retObjectGetInheritedStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

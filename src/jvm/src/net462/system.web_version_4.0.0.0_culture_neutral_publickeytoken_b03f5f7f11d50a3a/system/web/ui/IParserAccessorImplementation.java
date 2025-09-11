@@ -142,7 +142,7 @@ public class IParserAccessorImplementation extends NetObject implements IParserA
     
     public void AddParsedSubObject(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddParsedSubObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -186,9 +186,13 @@ public class RangeAttribute extends ValidationAttribute  {
     
     public boolean IsValid(NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classInstance.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +200,13 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorMessage", name);
+            retObjectFormatErrorMessage = classInstance.Invoke("FormatErrorMessage", name);
+            return (java.lang.String)retObjectFormatErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorMessage != null ? retObjectFormatErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +218,14 @@ public class RangeAttribute extends ValidationAttribute  {
     
     public NetObject getMaximum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximum = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Maximum");
+            retObjectMaximum = classInstance.Get("Maximum");
+            JCObject val = (JCObject)retObjectMaximum;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximum != null ? retObjectMaximum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public void setMaximum(NetObject Maximum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Maximum", Maximum == null ? null : Maximum.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +243,14 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public NetObject getMinimum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimum = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Minimum");
+            retObjectMinimum = classInstance.Get("Minimum");
+            JCObject val = (JCObject)retObjectMinimum;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimum != null ? retObjectMinimum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public void setMinimum(NetObject Minimum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Minimum", Minimum == null ? null : Minimum.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +268,14 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public NetType getOperandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperandType");
+            retObjectOperandType = classInstance.Get("OperandType");
+            JCObject val = (JCObject)retObjectOperandType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperandType != null ? retObjectOperandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +283,7 @@ public class RangeAttribute extends ValidationAttribute  {
 
     public void setOperandType(NetType OperandType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperandType", OperandType == null ? null : OperandType.getJCOInstance());
         } catch (JCNativeException jcne) {

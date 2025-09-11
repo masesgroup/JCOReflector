@@ -164,10 +164,14 @@ public class ConfigurationBuildersSection extends ConfigurationSection  {
     
     public ConfigurationBuilder GetBuilderFromName(java.lang.String builderName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NullReferenceException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBuilderFromName = null;
         try {
-            JCObject objGetBuilderFromName = (JCObject)classInstance.Invoke("GetBuilderFromName", builderName);
+            retObjectGetBuilderFromName = classInstance.Invoke("GetBuilderFromName", builderName);
+            JCObject objGetBuilderFromName = (JCObject)retObjectGetBuilderFromName;
             return new ConfigurationBuilder(objGetBuilderFromName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBuilderFromName != null ? retObjectGetBuilderFromName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ConfigurationBuildersSection extends ConfigurationSection  {
     
     public ProviderSettingsCollection getBuilders() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builders");
+            retObjectBuilders = classInstance.Get("Builders");
+            JCObject val = (JCObject)retObjectBuilders;
             return new ProviderSettingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilders != null ? retObjectBuilders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

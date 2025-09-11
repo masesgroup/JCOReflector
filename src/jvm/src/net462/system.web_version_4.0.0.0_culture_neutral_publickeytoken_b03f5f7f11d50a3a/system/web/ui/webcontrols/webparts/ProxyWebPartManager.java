@@ -164,7 +164,7 @@ public class ProxyWebPartManager extends Control  {
     
     public void Focus() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Focus");
         } catch (JCNativeException jcne) {
@@ -178,10 +178,14 @@ public class ProxyWebPartManager extends Control  {
     
     public ProxyWebPartConnectionCollection getStaticConnections() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStaticConnections = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StaticConnections");
+            retObjectStaticConnections = classInstance.Get("StaticConnections");
+            JCObject val = (JCObject)retObjectStaticConnections;
             return new ProxyWebPartConnectionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticConnections != null ? retObjectStaticConnections.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

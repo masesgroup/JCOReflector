@@ -160,10 +160,14 @@ public class ForestTrustDomainInformation extends NetObject  {
     
     public ForestTrustDomainStatus getStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Status");
+            retObjectStatus = classInstance.Get("Status");
+            JCObject val = (JCObject)retObjectStatus;
             return new ForestTrustDomainStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatus != null ? retObjectStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class ForestTrustDomainInformation extends NetObject  {
 
     public void setStatus(ForestTrustDomainStatus Status) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Status", Status == null ? null : Status.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -181,9 +185,13 @@ public class ForestTrustDomainInformation extends NetObject  {
 
     public java.lang.String getDnsName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsName = null;
         try {
-            return (java.lang.String)classInstance.Get("DnsName");
+            retObjectDnsName = classInstance.Get("DnsName");
+            return (java.lang.String)retObjectDnsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDnsName != null ? retObjectDnsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +199,13 @@ public class ForestTrustDomainInformation extends NetObject  {
 
     public java.lang.String getDomainSid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDomainSid = null;
         try {
-            return (java.lang.String)classInstance.Get("DomainSid");
+            retObjectDomainSid = classInstance.Get("DomainSid");
+            return (java.lang.String)retObjectDomainSid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDomainSid != null ? retObjectDomainSid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class ForestTrustDomainInformation extends NetObject  {
 
     public java.lang.String getNetBiosName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetBiosName = null;
         try {
-            return (java.lang.String)classInstance.Get("NetBiosName");
+            retObjectNetBiosName = classInstance.Get("NetBiosName");
+            return (java.lang.String)retObjectNetBiosName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNetBiosName != null ? retObjectNetBiosName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

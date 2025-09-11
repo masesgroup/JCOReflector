@@ -201,10 +201,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
     
     public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyFromHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyFromHash", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), secretPrepend, secretAppend);
+            retObjectDeriveKeyFromHash = classInstance.Invoke("DeriveKeyFromHash", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), secretPrepend, secretAppend);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyFromHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -213,6 +215,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyFromHash] = (byte)resultingArrayList.get(indexDeriveKeyFromHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyFromHash != null ? retObjectDeriveKeyFromHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +224,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyFromHash(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyFromHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyFromHash", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut());
+            retObjectDeriveKeyFromHash = classInstance.Invoke("DeriveKeyFromHash", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyFromHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -232,6 +238,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyFromHash] = (byte)resultingArrayList.get(indexDeriveKeyFromHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyFromHash != null ? retObjectDeriveKeyFromHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +247,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey otherPartyPublicKey, HashAlgorithmName hashAlgorithm, byte[] hmacKey, byte[] secretPrepend, byte[] secretAppend) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyFromHmac = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyFromHmac", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), hmacKey, secretPrepend, secretAppend);
+            retObjectDeriveKeyFromHmac = classInstance.Invoke("DeriveKeyFromHmac", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), hmacKey, secretPrepend, secretAppend);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyFromHmac;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -251,6 +261,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyFromHmac] = (byte)resultingArrayList.get(indexDeriveKeyFromHmac);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyFromHmac != null ? retObjectDeriveKeyFromHmac.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +270,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyFromHmac(ECDiffieHellmanPublicKey dupParam0, HashAlgorithmName dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyFromHmac = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyFromHmac", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut());
+            retObjectDeriveKeyFromHmac = classInstance.Invoke("DeriveKeyFromHmac", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyFromHmac;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -270,6 +284,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyFromHmac] = (byte)resultingArrayList.get(indexDeriveKeyFromHmac);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyFromHmac != null ? retObjectDeriveKeyFromHmac.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +293,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyMaterial(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.PlatformNotSupportedException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyMaterial = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyMaterial", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            retObjectDeriveKeyMaterial = classInstance.Invoke("DeriveKeyMaterial", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyMaterial;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -289,6 +307,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyMaterial] = (byte)resultingArrayList.get(indexDeriveKeyMaterial);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyMaterial != null ? retObjectDeriveKeyMaterial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +316,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyMaterial(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyMaterial = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyMaterial", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            retObjectDeriveKeyMaterial = classInstance.Invoke("DeriveKeyMaterial", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyMaterial;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -308,6 +330,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyMaterial] = (byte)resultingArrayList.get(indexDeriveKeyMaterial);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyMaterial != null ? retObjectDeriveKeyMaterial.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +339,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey otherPartyPublicKey, byte[] prfLabel, byte[] prfSeed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyTls = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyTls", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), prfLabel, prfSeed);
+            retObjectDeriveKeyTls = classInstance.Invoke("DeriveKeyTls", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance(), prfLabel, prfSeed);
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyTls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -327,6 +353,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyTls] = (byte)resultingArrayList.get(indexDeriveKeyTls);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyTls != null ? retObjectDeriveKeyTls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,10 +362,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] DeriveKeyTls(ECDiffieHellmanPublicKey dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveKeyTls = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DeriveKeyTls", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectDeriveKeyTls = classInstance.Invoke("DeriveKeyTls", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectDeriveKeyTls;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -346,6 +376,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexDeriveKeyTls] = (byte)resultingArrayList.get(indexDeriveKeyTls);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectDeriveKeyTls != null ? retObjectDeriveKeyTls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +385,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public SafeNCryptSecretHandle DeriveSecretAgreementHandle(CngKey otherPartyPublicKey) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.PlatformNotSupportedException, system.RankException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveSecretAgreementHandle = null;
         try {
-            JCObject objDeriveSecretAgreementHandle = (JCObject)classInstance.Invoke("DeriveSecretAgreementHandle", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            retObjectDeriveSecretAgreementHandle = classInstance.Invoke("DeriveSecretAgreementHandle", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            JCObject objDeriveSecretAgreementHandle = (JCObject)retObjectDeriveSecretAgreementHandle;
             return new SafeNCryptSecretHandle(objDeriveSecretAgreementHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeriveSecretAgreementHandle != null ? retObjectDeriveSecretAgreementHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +400,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public SafeNCryptSecretHandle DeriveSecretAgreementHandle(ECDiffieHellmanPublicKey otherPartyPublicKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeriveSecretAgreementHandle = null;
         try {
-            JCObject objDeriveSecretAgreementHandle = (JCObject)classInstance.Invoke("DeriveSecretAgreementHandle", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            retObjectDeriveSecretAgreementHandle = classInstance.Invoke("DeriveSecretAgreementHandle", otherPartyPublicKey == null ? null : otherPartyPublicKey.getJCOInstance());
+            JCObject objDeriveSecretAgreementHandle = (JCObject)retObjectDeriveSecretAgreementHandle;
             return new SafeNCryptSecretHandle(objDeriveSecretAgreementHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeriveSecretAgreementHandle != null ? retObjectDeriveSecretAgreementHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +415,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public ECParameters ExportExplicitParameters(boolean includePrivateParameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportExplicitParameters = null;
         try {
-            JCObject objExportExplicitParameters = (JCObject)classInstance.Invoke("ExportExplicitParameters", includePrivateParameters);
+            retObjectExportExplicitParameters = classInstance.Invoke("ExportExplicitParameters", includePrivateParameters);
+            JCObject objExportExplicitParameters = (JCObject)retObjectExportExplicitParameters;
             return new ECParameters(objExportExplicitParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportExplicitParameters != null ? retObjectExportExplicitParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +430,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public ECParameters ExportParameters(boolean includePrivateParameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportParameters = null;
         try {
-            JCObject objExportParameters = (JCObject)classInstance.Invoke("ExportParameters", includePrivateParameters);
+            retObjectExportParameters = classInstance.Invoke("ExportParameters", includePrivateParameters);
+            JCObject objExportParameters = (JCObject)retObjectExportParameters;
             return new ECParameters(objExportParameters);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExportParameters != null ? retObjectExportParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +445,13 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public java.lang.String ToXmlString(boolean includePrivateParameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXmlString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXmlString", includePrivateParameters);
+            retObjectToXmlString = classInstance.Invoke("ToXmlString", includePrivateParameters);
+            return (java.lang.String)retObjectToXmlString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXmlString != null ? retObjectToXmlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +459,13 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public java.lang.String ToXmlString(ECKeyXmlFormat format) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.RankException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXmlString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXmlString", format == null ? null : format.getJCOInstance());
+            retObjectToXmlString = classInstance.Invoke("ToXmlString", format == null ? null : format.getJCOInstance());
+            return (java.lang.String)retObjectToXmlString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXmlString != null ? retObjectToXmlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +473,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void FromXmlString(java.lang.String xmlString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXmlString", xmlString);
         } catch (JCNativeException jcne) {
@@ -427,7 +483,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void FromXmlString(java.lang.String xml, ECKeyXmlFormat format) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXmlString", xml, format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -437,7 +493,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void GenerateKey(ECCurve curve) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.PlatformNotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateKey", curve == null ? null : curve.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -447,7 +503,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void ImportParameters(ECParameters parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ImportParameters", parameters == null ? null : parameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -461,9 +517,13 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
     
     public boolean getUseSecretAgreementAsHmacKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSecretAgreementAsHmacKey = null;
         try {
-            return (boolean)classInstance.Get("UseSecretAgreementAsHmacKey");
+            retObjectUseSecretAgreementAsHmacKey = classInstance.Get("UseSecretAgreementAsHmacKey");
+            return (boolean)retObjectUseSecretAgreementAsHmacKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSecretAgreementAsHmacKey != null ? retObjectUseSecretAgreementAsHmacKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +531,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] getHmacKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHmacKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("HmacKey");
+            retObjectHmacKey = classInstance.Get("HmacKey");
+            JCObject resultingObjects = (JCObject)retObjectHmacKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -483,6 +545,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexHmacKey] = (byte)resultingArrayList.get(indexHmacKey);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectHmacKey != null ? retObjectHmacKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +554,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setHmacKey(byte[] HmacKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HmacKey", HmacKey);
         } catch (JCNativeException jcne) {
@@ -500,10 +564,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            JCObject resultingObjects = (JCObject)retObjectLabel;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -512,6 +578,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexLabel] = (byte)resultingArrayList.get(indexLabel);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,7 +587,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setLabel(byte[] Label) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -529,10 +597,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] getSecretAppend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecretAppend = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SecretAppend");
+            retObjectSecretAppend = classInstance.Get("SecretAppend");
+            JCObject resultingObjects = (JCObject)retObjectSecretAppend;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -541,6 +611,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexSecretAppend] = (byte)resultingArrayList.get(indexSecretAppend);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSecretAppend != null ? retObjectSecretAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,7 +620,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setSecretAppend(byte[] SecretAppend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecretAppend", SecretAppend);
         } catch (JCNativeException jcne) {
@@ -558,10 +630,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] getSecretPrepend() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecretPrepend = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SecretPrepend");
+            retObjectSecretPrepend = classInstance.Get("SecretPrepend");
+            JCObject resultingObjects = (JCObject)retObjectSecretPrepend;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -570,6 +644,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexSecretPrepend] = (byte)resultingArrayList.get(indexSecretPrepend);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSecretPrepend != null ? retObjectSecretPrepend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,7 +653,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setSecretPrepend(byte[] SecretPrepend) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecretPrepend", SecretPrepend);
         } catch (JCNativeException jcne) {
@@ -587,10 +663,12 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public byte[] getSeed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeed = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Seed");
+            retObjectSeed = classInstance.Get("Seed");
+            JCObject resultingObjects = (JCObject)retObjectSeed;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -599,6 +677,8 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 				resultingArray[indexSeed] = (byte)resultingArrayList.get(indexSeed);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSeed != null ? retObjectSeed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +686,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setSeed(byte[] Seed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Seed", Seed);
         } catch (JCNativeException jcne) {
@@ -616,10 +696,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public CngAlgorithm getHashAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithm = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithm");
+            retObjectHashAlgorithm = classInstance.Get("HashAlgorithm");
+            JCObject val = (JCObject)retObjectHashAlgorithm;
             return new CngAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashAlgorithm != null ? retObjectHashAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,7 +711,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setHashAlgorithm(CngAlgorithm HashAlgorithm) throws Throwable, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HashAlgorithm", HashAlgorithm == null ? null : HashAlgorithm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -637,10 +721,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public CngKey getKey() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.PlatformNotSupportedException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new CngKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -648,7 +736,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setKey(CngKey Key) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Key", Key == null ? null : Key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -658,10 +746,14 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public ECDiffieHellmanKeyDerivationFunction getKeyDerivationFunction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyDerivationFunction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyDerivationFunction");
+            retObjectKeyDerivationFunction = classInstance.Get("KeyDerivationFunction");
+            JCObject val = (JCObject)retObjectKeyDerivationFunction;
             return new ECDiffieHellmanKeyDerivationFunction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyDerivationFunction != null ? retObjectKeyDerivationFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,7 +761,7 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
 
     public void setKeyDerivationFunction(ECDiffieHellmanKeyDerivationFunction KeyDerivationFunction) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyDerivationFunction", KeyDerivationFunction == null ? null : KeyDerivationFunction.getJCOInstance());
         } catch (JCNativeException jcne) {

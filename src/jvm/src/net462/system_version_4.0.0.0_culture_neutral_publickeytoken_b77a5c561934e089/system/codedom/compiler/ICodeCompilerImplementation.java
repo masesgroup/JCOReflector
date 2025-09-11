@@ -145,10 +145,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
     
     public CompilerResults CompileAssemblyFromDom(CompilerParameters options, CodeCompileUnit compilationUnit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromDom = null;
         try {
-            JCObject objCompileAssemblyFromDom = (JCObject)classInstance.Invoke("CompileAssemblyFromDom", options == null ? null : options.getJCOInstance(), compilationUnit == null ? null : compilationUnit.getJCOInstance());
+            retObjectCompileAssemblyFromDom = classInstance.Invoke("CompileAssemblyFromDom", options == null ? null : options.getJCOInstance(), compilationUnit == null ? null : compilationUnit.getJCOInstance());
+            JCObject objCompileAssemblyFromDom = (JCObject)retObjectCompileAssemblyFromDom;
             return new CompilerResults(objCompileAssemblyFromDom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromDom != null ? retObjectCompileAssemblyFromDom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromDomBatch(CompilerParameters options, CodeCompileUnit[] compilationUnits) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromDomBatch = null;
         try {
-            JCObject objCompileAssemblyFromDomBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromDomBatch", options == null ? null : options.getJCOInstance(), toObjectFromArray(compilationUnits));
+            retObjectCompileAssemblyFromDomBatch = classInstance.Invoke("CompileAssemblyFromDomBatch", options == null ? null : options.getJCOInstance(), toObjectFromArray(compilationUnits));
+            JCObject objCompileAssemblyFromDomBatch = (JCObject)retObjectCompileAssemblyFromDomBatch;
             return new CompilerResults(objCompileAssemblyFromDomBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromDomBatch != null ? retObjectCompileAssemblyFromDomBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +175,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromFile = null;
         try {
-            JCObject objCompileAssemblyFromFile = (JCObject)classInstance.Invoke("CompileAssemblyFromFile", options == null ? null : options.getJCOInstance(), fileName);
+            retObjectCompileAssemblyFromFile = classInstance.Invoke("CompileAssemblyFromFile", options == null ? null : options.getJCOInstance(), fileName);
+            JCObject objCompileAssemblyFromFile = (JCObject)retObjectCompileAssemblyFromFile;
             return new CompilerResults(objCompileAssemblyFromFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromFile != null ? retObjectCompileAssemblyFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +190,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromFileBatch = null;
         try {
-            JCObject objCompileAssemblyFromFileBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromFileBatch", options == null ? null : options.getJCOInstance(), fileNames);
+            retObjectCompileAssemblyFromFileBatch = classInstance.Invoke("CompileAssemblyFromFileBatch", options == null ? null : options.getJCOInstance(), fileNames);
+            JCObject objCompileAssemblyFromFileBatch = (JCObject)retObjectCompileAssemblyFromFileBatch;
             return new CompilerResults(objCompileAssemblyFromFileBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromFileBatch != null ? retObjectCompileAssemblyFromFileBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +205,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromFileBatch = null;
         try {
-            JCObject objCompileAssemblyFromFileBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromFileBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCompileAssemblyFromFileBatch = classInstance.Invoke("CompileAssemblyFromFileBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCompileAssemblyFromFileBatch = (JCObject)retObjectCompileAssemblyFromFileBatch;
             return new CompilerResults(objCompileAssemblyFromFileBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromFileBatch != null ? retObjectCompileAssemblyFromFileBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +220,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromSource = null;
         try {
-            JCObject objCompileAssemblyFromSource = (JCObject)classInstance.Invoke("CompileAssemblyFromSource", options == null ? null : options.getJCOInstance(), source);
+            retObjectCompileAssemblyFromSource = classInstance.Invoke("CompileAssemblyFromSource", options == null ? null : options.getJCOInstance(), source);
+            JCObject objCompileAssemblyFromSource = (JCObject)retObjectCompileAssemblyFromSource;
             return new CompilerResults(objCompileAssemblyFromSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromSource != null ? retObjectCompileAssemblyFromSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +235,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromSourceBatch = null;
         try {
-            JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", options == null ? null : options.getJCOInstance(), sources);
+            retObjectCompileAssemblyFromSourceBatch = classInstance.Invoke("CompileAssemblyFromSourceBatch", options == null ? null : options.getJCOInstance(), sources);
+            JCObject objCompileAssemblyFromSourceBatch = (JCObject)retObjectCompileAssemblyFromSourceBatch;
             return new CompilerResults(objCompileAssemblyFromSourceBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromSourceBatch != null ? retObjectCompileAssemblyFromSourceBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +250,14 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileAssemblyFromSourceBatch = null;
         try {
-            JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCompileAssemblyFromSourceBatch = classInstance.Invoke("CompileAssemblyFromSourceBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCompileAssemblyFromSourceBatch = (JCObject)retObjectCompileAssemblyFromSourceBatch;
             return new CompilerResults(objCompileAssemblyFromSourceBatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompileAssemblyFromSourceBatch != null ? retObjectCompileAssemblyFromSourceBatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

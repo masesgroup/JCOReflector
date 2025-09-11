@@ -166,9 +166,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
     
     public boolean getUseUnsafeHeaderParsing() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseUnsafeHeaderParsing = null;
         try {
-            return (boolean)classInstance.Get("UseUnsafeHeaderParsing");
+            retObjectUseUnsafeHeaderParsing = classInstance.Get("UseUnsafeHeaderParsing");
+            return (boolean)retObjectUseUnsafeHeaderParsing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseUnsafeHeaderParsing != null ? retObjectUseUnsafeHeaderParsing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public void setUseUnsafeHeaderParsing(boolean UseUnsafeHeaderParsing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseUnsafeHeaderParsing", UseUnsafeHeaderParsing);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public int getMaximumErrorResponseLength() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumErrorResponseLength = null;
         try {
-            return (int)classInstance.Get("MaximumErrorResponseLength");
+            retObjectMaximumErrorResponseLength = classInstance.Get("MaximumErrorResponseLength");
+            return (int)retObjectMaximumErrorResponseLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaximumErrorResponseLength != null ? retObjectMaximumErrorResponseLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public void setMaximumErrorResponseLength(int MaximumErrorResponseLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumErrorResponseLength", MaximumErrorResponseLength);
         } catch (JCNativeException jcne) {
@@ -206,9 +214,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public int getMaximumResponseHeadersLength() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumResponseHeadersLength = null;
         try {
-            return (int)classInstance.Get("MaximumResponseHeadersLength");
+            retObjectMaximumResponseHeadersLength = classInstance.Get("MaximumResponseHeadersLength");
+            return (int)retObjectMaximumResponseHeadersLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaximumResponseHeadersLength != null ? retObjectMaximumResponseHeadersLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +228,7 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public void setMaximumResponseHeadersLength(int MaximumResponseHeadersLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumResponseHeadersLength", MaximumResponseHeadersLength);
         } catch (JCNativeException jcne) {
@@ -226,9 +238,13 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public int getMaximumUnauthorizedUploadLength() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumUnauthorizedUploadLength = null;
         try {
-            return (int)classInstance.Get("MaximumUnauthorizedUploadLength");
+            retObjectMaximumUnauthorizedUploadLength = classInstance.Get("MaximumUnauthorizedUploadLength");
+            return (int)retObjectMaximumUnauthorizedUploadLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaximumUnauthorizedUploadLength != null ? retObjectMaximumUnauthorizedUploadLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +252,7 @@ public class HttpWebRequestElement extends ConfigurationElement  {
 
     public void setMaximumUnauthorizedUploadLength(int MaximumUnauthorizedUploadLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumUnauthorizedUploadLength", MaximumUnauthorizedUploadLength);
         } catch (JCNativeException jcne) {

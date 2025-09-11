@@ -151,9 +151,13 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
     
     public boolean CompileEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("CompileEmpty");
+            retObjectCompileEmpty = classInstance.Invoke("CompileEmpty");
+            return (boolean)retObjectCompileEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCompileEmpty != null ? retObjectCompileEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,10 +165,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public IVsaScriptScope GetGlobalScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalScope = null;
         try {
-            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
+            retObjectGetGlobalScope = classInstance.Invoke("GetGlobalScope");
+            JCObject objGetGlobalScope = (JCObject)retObjectGetGlobalScope;
             return new IVsaScriptScopeImplementation(objGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalScope != null ? retObjectGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +180,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public IJSVsaEngine Clone(AppDomain domain) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
+            retObjectClone = classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
+            JCObject objClone = (JCObject)retObjectClone;
             return new IJSVsaEngineImplementation(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +195,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public Assembly GetAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssembly = null;
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly");
+            retObjectGetAssembly = classInstance.Invoke("GetAssembly");
+            JCObject objGetAssembly = (JCObject)retObjectGetAssembly;
             return new Assembly(objGetAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssembly != null ? retObjectGetAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +210,14 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public Module GetModule() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModule = null;
         try {
-            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
+            retObjectGetModule = classInstance.Invoke("GetModule");
+            JCObject objGetModule = (JCObject)retObjectGetModule;
             return new Module(objGetModule);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModule != null ? retObjectGetModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +225,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void ConnectEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ConnectEvents");
         } catch (JCNativeException jcne) {
@@ -215,7 +235,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void DisconnectEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisconnectEvents");
         } catch (JCNativeException jcne) {
@@ -225,7 +245,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitVsaEngine", rootMoniker, site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,7 +255,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void Interrupt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Interrupt");
         } catch (JCNativeException jcne) {
@@ -245,7 +265,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void RegisterEventSource(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterEventSource", name);
         } catch (JCNativeException jcne) {
@@ -255,7 +275,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void Restart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Restart");
         } catch (JCNativeException jcne) {
@@ -265,7 +285,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void Run(AppDomain domain) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", domain == null ? null : domain.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +295,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
 
     public void RunEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunEmpty");
         } catch (JCNativeException jcne) {

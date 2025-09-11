@@ -194,9 +194,13 @@ public class TaskCompletionSource extends NetObject  {
     
     public boolean TrySetCanceled() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetCanceled = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetCanceled");
+            retObjectTrySetCanceled = classInstance.Invoke("TrySetCanceled");
+            return (boolean)retObjectTrySetCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetCanceled != null ? retObjectTrySetCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +208,13 @@ public class TaskCompletionSource extends NetObject  {
 
     public boolean TrySetCanceled(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetCanceled = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetCanceled", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectTrySetCanceled = classInstance.Invoke("TrySetCanceled", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return (boolean)retObjectTrySetCanceled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetCanceled != null ? retObjectTrySetCanceled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class TaskCompletionSource extends NetObject  {
 
     public boolean TrySetException(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetException = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetException", exception == null ? null : exception.getJCOInstance());
+            retObjectTrySetException = classInstance.Invoke("TrySetException", exception == null ? null : exception.getJCOInstance());
+            return (boolean)retObjectTrySetException;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetException != null ? retObjectTrySetException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +236,13 @@ public class TaskCompletionSource extends NetObject  {
 
     public boolean TrySetFromTask(Task completedTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetFromTask = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetFromTask", completedTask == null ? null : completedTask.getJCOInstance());
+            retObjectTrySetFromTask = classInstance.Invoke("TrySetFromTask", completedTask == null ? null : completedTask.getJCOInstance());
+            return (boolean)retObjectTrySetFromTask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetFromTask != null ? retObjectTrySetFromTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +250,13 @@ public class TaskCompletionSource extends NetObject  {
 
     public boolean TrySetResult() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetResult = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetResult");
+            retObjectTrySetResult = classInstance.Invoke("TrySetResult");
+            return (boolean)retObjectTrySetResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetResult != null ? retObjectTrySetResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +264,7 @@ public class TaskCompletionSource extends NetObject  {
 
     public void SetCanceled() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCanceled");
         } catch (JCNativeException jcne) {
@@ -254,7 +274,7 @@ public class TaskCompletionSource extends NetObject  {
 
     public void SetCanceled(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCanceled", cancellationToken == null ? null : cancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +284,7 @@ public class TaskCompletionSource extends NetObject  {
 
     public void SetException(NetException exception) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +294,7 @@ public class TaskCompletionSource extends NetObject  {
 
     public void SetFromTask(Task completedTask) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFromTask", completedTask == null ? null : completedTask.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +304,7 @@ public class TaskCompletionSource extends NetObject  {
 
     public void SetResult() throws Throwable, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetResult");
         } catch (JCNativeException jcne) {
@@ -298,10 +318,14 @@ public class TaskCompletionSource extends NetObject  {
     
     public Task getTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Task");
+            retObjectTask = classInstance.Get("Task");
+            JCObject val = (JCObject)retObjectTask;
             return new Task(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

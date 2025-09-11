@@ -162,10 +162,14 @@ public class HostExecutionContextManager extends NetObject  {
     
     public NetObject SetHostExecutionContext(HostExecutionContext hostExecutionContext) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetHostExecutionContext = null;
         try {
-            JCObject objSetHostExecutionContext = (JCObject)classInstance.Invoke("SetHostExecutionContext", hostExecutionContext == null ? null : hostExecutionContext.getJCOInstance());
+            retObjectSetHostExecutionContext = classInstance.Invoke("SetHostExecutionContext", hostExecutionContext == null ? null : hostExecutionContext.getJCOInstance());
+            JCObject objSetHostExecutionContext = (JCObject)retObjectSetHostExecutionContext;
             return new NetObject(objSetHostExecutionContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetHostExecutionContext != null ? retObjectSetHostExecutionContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class HostExecutionContextManager extends NetObject  {
 
     public HostExecutionContext Capture() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            JCObject objCapture = (JCObject)classInstance.Invoke("Capture");
+            retObjectCapture = classInstance.Invoke("Capture");
+            JCObject objCapture = (JCObject)retObjectCapture;
             return new HostExecutionContext(objCapture);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +192,7 @@ public class HostExecutionContextManager extends NetObject  {
 
     public void Revert(NetObject previousState) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Revert", previousState == null ? null : previousState.getJCOInstance());
         } catch (JCNativeException jcne) {

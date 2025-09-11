@@ -174,10 +174,14 @@ public class ControlPaint extends NetObject  {
     
     public static Color Dark(Color baseColor, Single percOfDarkDark) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDark = null;
         try {
-            JCObject objDark = (JCObject)classType.Invoke("Dark", baseColor == null ? null : baseColor.getJCOInstance(), percOfDarkDark == null ? null : percOfDarkDark.getJCOInstance());
+            retObjectDark = classType.Invoke("Dark", baseColor == null ? null : baseColor.getJCOInstance(), percOfDarkDark == null ? null : percOfDarkDark.getJCOInstance());
+            JCObject objDark = (JCObject)retObjectDark;
             return new Color(objDark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDark != null ? retObjectDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class ControlPaint extends NetObject  {
 
     public static Color Dark(Color baseColor) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDark = null;
         try {
-            JCObject objDark = (JCObject)classType.Invoke("Dark", baseColor == null ? null : baseColor.getJCOInstance());
+            retObjectDark = classType.Invoke("Dark", baseColor == null ? null : baseColor.getJCOInstance());
+            JCObject objDark = (JCObject)retObjectDark;
             return new Color(objDark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDark != null ? retObjectDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class ControlPaint extends NetObject  {
 
     public static Color DarkDark(Color baseColor) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDarkDark = null;
         try {
-            JCObject objDarkDark = (JCObject)classType.Invoke("DarkDark", baseColor == null ? null : baseColor.getJCOInstance());
+            retObjectDarkDark = classType.Invoke("DarkDark", baseColor == null ? null : baseColor.getJCOInstance());
+            JCObject objDarkDark = (JCObject)retObjectDarkDark;
             return new Color(objDarkDark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDarkDark != null ? retObjectDarkDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +219,14 @@ public class ControlPaint extends NetObject  {
 
     public static Color Light(Color baseColor, Single percOfLightLight) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLight = null;
         try {
-            JCObject objLight = (JCObject)classType.Invoke("Light", baseColor == null ? null : baseColor.getJCOInstance(), percOfLightLight == null ? null : percOfLightLight.getJCOInstance());
+            retObjectLight = classType.Invoke("Light", baseColor == null ? null : baseColor.getJCOInstance(), percOfLightLight == null ? null : percOfLightLight.getJCOInstance());
+            JCObject objLight = (JCObject)retObjectLight;
             return new Color(objLight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLight != null ? retObjectLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +234,14 @@ public class ControlPaint extends NetObject  {
 
     public static Color Light(Color baseColor) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLight = null;
         try {
-            JCObject objLight = (JCObject)classType.Invoke("Light", baseColor == null ? null : baseColor.getJCOInstance());
+            retObjectLight = classType.Invoke("Light", baseColor == null ? null : baseColor.getJCOInstance());
+            JCObject objLight = (JCObject)retObjectLight;
             return new Color(objLight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLight != null ? retObjectLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +249,14 @@ public class ControlPaint extends NetObject  {
 
     public static Color LightLight(Color baseColor) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLightLight = null;
         try {
-            JCObject objLightLight = (JCObject)classType.Invoke("LightLight", baseColor == null ? null : baseColor.getJCOInstance());
+            retObjectLightLight = classType.Invoke("LightLight", baseColor == null ? null : baseColor.getJCOInstance());
+            JCObject objLightLight = (JCObject)retObjectLightLight;
             return new Color(objLightLight);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLightLight != null ? retObjectLightLight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +264,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder(Graphics graphics, Rectangle bounds, Color leftColor, int leftWidth, ButtonBorderStyle leftStyle, Color topColor, int topWidth, ButtonBorderStyle topStyle, Color rightColor, int rightWidth, ButtonBorderStyle rightStyle, Color bottomColor, int bottomWidth, ButtonBorderStyle bottomStyle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder", graphics == null ? null : graphics.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), leftColor == null ? null : leftColor.getJCOInstance(), leftWidth, leftStyle == null ? null : leftStyle.getJCOInstance(), topColor == null ? null : topColor.getJCOInstance(), topWidth, topStyle == null ? null : topStyle.getJCOInstance(), rightColor == null ? null : rightColor.getJCOInstance(), rightWidth, rightStyle == null ? null : rightStyle.getJCOInstance(), bottomColor == null ? null : bottomColor.getJCOInstance(), bottomWidth, bottomStyle == null ? null : bottomStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +274,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder(Graphics graphics, Rectangle bounds, Color color, ButtonBorderStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder", graphics == null ? null : graphics.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), color == null ? null : color.getJCOInstance(), style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +284,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, int x, int y, int width, int height, Border3DStyle style, Border3DSide sides) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, style == null ? null : style.getJCOInstance(), sides == null ? null : sides.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +294,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, int x, int y, int width, int height, Border3DStyle style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,7 +304,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -290,7 +314,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, Rectangle rectangle, Border3DStyle style, Border3DSide sides) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), style == null ? null : style.getJCOInstance(), sides == null ? null : sides.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -300,7 +324,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, Rectangle rectangle, Border3DStyle style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,7 +334,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawBorder3D(Graphics graphics, Rectangle rectangle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawBorder3D", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +344,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawButton(Graphics graphics, int x, int y, int width, int height, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,7 +354,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawButton(Graphics graphics, Rectangle rectangle, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawButton", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +364,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawCaptionButton(Graphics graphics, int x, int y, int width, int height, CaptionButton button, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCaptionButton", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, button == null ? null : button.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,7 +374,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawCaptionButton(Graphics graphics, Rectangle rectangle, CaptionButton button, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCaptionButton", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), button == null ? null : button.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,7 +384,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawCheckBox(Graphics graphics, int x, int y, int width, int height, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +394,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawCheckBox(Graphics graphics, Rectangle rectangle, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawCheckBox", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,7 +404,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawComboButton(Graphics graphics, int x, int y, int width, int height, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawComboButton", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,7 +414,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawComboButton(Graphics graphics, Rectangle rectangle, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawComboButton", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,7 +424,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawContainerGrabHandle(Graphics graphics, Rectangle bounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawContainerGrabHandle", graphics == null ? null : graphics.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -410,7 +434,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawFocusRectangle(Graphics graphics, Rectangle rectangle, Color foreColor, Color backColor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawFocusRectangle", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,7 +444,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawFocusRectangle(Graphics graphics, Rectangle rectangle) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawFocusRectangle", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -430,7 +454,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawGrabHandle(Graphics graphics, Rectangle rectangle, boolean primary, boolean enabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGrabHandle", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), primary, enabled);
         } catch (JCNativeException jcne) {
@@ -440,7 +464,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawGrid(Graphics graphics, Rectangle area, Size pixelsBetweenDots, Color backColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawGrid", graphics == null ? null : graphics.getJCOInstance(), area == null ? null : area.getJCOInstance(), pixelsBetweenDots == null ? null : pixelsBetweenDots.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,7 +474,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawImageDisabled(Graphics graphics, Image image, int x, int y, Color background) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawImageDisabled", graphics == null ? null : graphics.getJCOInstance(), image == null ? null : image.getJCOInstance(), x, y, background == null ? null : background.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,7 +484,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawLockedFrame(Graphics graphics, Rectangle rectangle, boolean primary) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawLockedFrame", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), primary);
         } catch (JCNativeException jcne) {
@@ -470,7 +494,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMenuGlyph(Graphics graphics, int x, int y, int width, int height, MenuGlyph glyph, Color foreColor, Color backColor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMenuGlyph", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, glyph == null ? null : glyph.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -480,7 +504,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMenuGlyph(Graphics graphics, int x, int y, int width, int height, MenuGlyph glyph) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMenuGlyph", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, glyph == null ? null : glyph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -490,7 +514,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMenuGlyph(Graphics graphics, Rectangle rectangle, MenuGlyph glyph, Color foreColor, Color backColor) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMenuGlyph", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), glyph == null ? null : glyph.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -500,7 +524,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMenuGlyph(Graphics graphics, Rectangle rectangle, MenuGlyph glyph) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMenuGlyph", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), glyph == null ? null : glyph.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -510,7 +534,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMixedCheckBox(Graphics graphics, int x, int y, int width, int height, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMixedCheckBox", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -520,7 +544,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawMixedCheckBox(Graphics graphics, Rectangle rectangle, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawMixedCheckBox", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -530,7 +554,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawRadioButton(Graphics graphics, int x, int y, int width, int height, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -540,7 +564,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawRadioButton(Graphics graphics, Rectangle rectangle, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawRadioButton", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -550,7 +574,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawReversibleFrame(Rectangle rectangle, Color backColor, FrameStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawReversibleFrame", rectangle == null ? null : rectangle.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -560,7 +584,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawReversibleLine(Point start, Point end, Color backColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawReversibleLine", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -570,7 +594,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawScrollButton(Graphics graphics, int x, int y, int width, int height, ScrollButton button, ButtonState state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawScrollButton", graphics == null ? null : graphics.getJCOInstance(), x, y, width, height, button == null ? null : button.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -580,7 +604,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawScrollButton(Graphics graphics, Rectangle rectangle, ScrollButton button, ButtonState state) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawScrollButton", graphics == null ? null : graphics.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance(), button == null ? null : button.getJCOInstance(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -590,7 +614,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawSelectionFrame(Graphics graphics, boolean active, Rectangle outsideRect, Rectangle insideRect, Color backColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawSelectionFrame", graphics == null ? null : graphics.getJCOInstance(), active, outsideRect == null ? null : outsideRect.getJCOInstance(), insideRect == null ? null : insideRect.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -600,7 +624,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawSizeGrip(Graphics graphics, Color backColor, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawSizeGrip", graphics == null ? null : graphics.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -610,7 +634,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawSizeGrip(Graphics graphics, Color backColor, Rectangle bounds) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawSizeGrip", graphics == null ? null : graphics.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -620,7 +644,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawStringDisabled(Graphics graphics, java.lang.String s, Font font, Color color, RectangleF layoutRectangle, StringFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawStringDisabled", graphics == null ? null : graphics.getJCOInstance(), s, font == null ? null : font.getJCOInstance(), color == null ? null : color.getJCOInstance(), layoutRectangle == null ? null : layoutRectangle.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -630,7 +654,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawStringDisabled(IDeviceContext dc, java.lang.String s, Font font, Color color, Rectangle layoutRectangle, TextFormatFlags format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawStringDisabled", dc == null ? null : dc.getJCOInstance(), s, font == null ? null : font.getJCOInstance(), color == null ? null : color.getJCOInstance(), layoutRectangle == null ? null : layoutRectangle.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -640,7 +664,7 @@ public class ControlPaint extends NetObject  {
 
     public static void DrawVisualStyleBorder(Graphics graphics, Rectangle bounds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawVisualStyleBorder", graphics == null ? null : graphics.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -650,7 +674,7 @@ public class ControlPaint extends NetObject  {
 
     public static void FillReversibleRectangle(Rectangle rectangle, Color backColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FillReversibleRectangle", rectangle == null ? null : rectangle.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -664,10 +688,14 @@ public class ControlPaint extends NetObject  {
     
     public static Color getContrastControlDark() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContrastControlDark = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContrastControlDark");
+            retObjectContrastControlDark = classType.Get("ContrastControlDark");
+            JCObject val = (JCObject)retObjectContrastControlDark;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContrastControlDark != null ? retObjectContrastControlDark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -176,9 +176,13 @@ public class AccessDataSource extends SqlDataSource  {
     
     public java.lang.String getDataFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataFile = null;
         try {
-            return (java.lang.String)classInstance.Get("DataFile");
+            retObjectDataFile = classInstance.Get("DataFile");
+            return (java.lang.String)retObjectDataFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataFile != null ? retObjectDataFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class AccessDataSource extends SqlDataSource  {
 
     public void setDataFile(java.lang.String DataFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataFile", DataFile);
         } catch (JCNativeException jcne) {

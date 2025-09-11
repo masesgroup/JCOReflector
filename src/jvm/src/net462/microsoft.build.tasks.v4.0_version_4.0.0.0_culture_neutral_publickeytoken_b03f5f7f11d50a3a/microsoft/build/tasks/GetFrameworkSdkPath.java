@@ -162,9 +162,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
     
     public boolean Execute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
     
     public java.lang.String getFrameworkSdkVersion20Path() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkSdkVersion20Path = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkSdkVersion20Path");
+            retObjectFrameworkSdkVersion20Path = classInstance.Get("FrameworkSdkVersion20Path");
+            return (java.lang.String)retObjectFrameworkSdkVersion20Path;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkSdkVersion20Path != null ? retObjectFrameworkSdkVersion20Path.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
 
     public java.lang.String getFrameworkSdkVersion35Path() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkSdkVersion35Path = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkSdkVersion35Path");
+            retObjectFrameworkSdkVersion35Path = classInstance.Get("FrameworkSdkVersion35Path");
+            return (java.lang.String)retObjectFrameworkSdkVersion35Path;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkSdkVersion35Path != null ? retObjectFrameworkSdkVersion35Path.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
 
     public java.lang.String getFrameworkSdkVersion40Path() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkSdkVersion40Path = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkSdkVersion40Path");
+            retObjectFrameworkSdkVersion40Path = classInstance.Get("FrameworkSdkVersion40Path");
+            return (java.lang.String)retObjectFrameworkSdkVersion40Path;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkSdkVersion40Path != null ? retObjectFrameworkSdkVersion40Path.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
 
     public java.lang.String getFrameworkSdkVersion45Path() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameworkSdkVersion45Path = null;
         try {
-            return (java.lang.String)classInstance.Get("FrameworkSdkVersion45Path");
+            retObjectFrameworkSdkVersion45Path = classInstance.Get("FrameworkSdkVersion45Path");
+            return (java.lang.String)retObjectFrameworkSdkVersion45Path;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFrameworkSdkVersion45Path != null ? retObjectFrameworkSdkVersion45Path.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +236,13 @@ public class GetFrameworkSdkPath extends TaskExtension  {
 
     public java.lang.String getPath() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +250,7 @@ public class GetFrameworkSdkPath extends TaskExtension  {
 
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {

@@ -164,10 +164,14 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
     
     public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecrypt = null;
         try {
-            JCObject objDecrypt = (JCObject)classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            retObjectDecrypt = classInstance.Invoke("Decrypt", encryptedNode == null ? null : encryptedNode.getJCOInstance());
+            JCObject objDecrypt = (JCObject)retObjectDecrypt;
             return new XmlNode(objDecrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrypt != null ? retObjectDecrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
 
     public XmlNode Encrypt(XmlNode node) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncrypt = null;
         try {
-            JCObject objEncrypt = (JCObject)classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            retObjectEncrypt = classInstance.Invoke("Encrypt", node == null ? null : node.getJCOInstance());
+            JCObject objEncrypt = (JCObject)retObjectEncrypt;
             return new XmlNode(objEncrypt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncrypt != null ? retObjectEncrypt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
 
     public void Initialize(java.lang.String name, NameValueCollection configurationValues) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, configurationValues == null ? null : configurationValues.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -200,9 +208,13 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
     
     public boolean getUseMachineProtection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseMachineProtection = null;
         try {
-            return (boolean)classInstance.Get("UseMachineProtection");
+            retObjectUseMachineProtection = classInstance.Get("UseMachineProtection");
+            return (boolean)retObjectUseMachineProtection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseMachineProtection != null ? retObjectUseMachineProtection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

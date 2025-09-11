@@ -159,9 +159,13 @@ public class LocalVariableInfo extends NetObject  {
     
     public boolean getIsPinned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPinned = null;
         try {
-            return (boolean)classInstance.Get("IsPinned");
+            retObjectIsPinned = classInstance.Get("IsPinned");
+            return (boolean)retObjectIsPinned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPinned != null ? retObjectIsPinned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class LocalVariableInfo extends NetObject  {
 
     public int getLocalIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalIndex = null;
         try {
-            return (int)classInstance.Get("LocalIndex");
+            retObjectLocalIndex = classInstance.Get("LocalIndex");
+            return (int)retObjectLocalIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLocalIndex != null ? retObjectLocalIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class LocalVariableInfo extends NetObject  {
 
     public NetType getLocalType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalType");
+            retObjectLocalType = classInstance.Get("LocalType");
+            JCObject val = (JCObject)retObjectLocalType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalType != null ? retObjectLocalType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

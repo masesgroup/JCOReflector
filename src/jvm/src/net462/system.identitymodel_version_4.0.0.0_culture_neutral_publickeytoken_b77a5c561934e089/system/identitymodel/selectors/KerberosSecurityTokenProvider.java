@@ -192,10 +192,14 @@ public class KerberosSecurityTokenProvider extends SecurityTokenProvider  {
     
     public NetworkCredential getNetworkCredential() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetworkCredential = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetworkCredential");
+            retObjectNetworkCredential = classInstance.Get("NetworkCredential");
+            JCObject val = (JCObject)retObjectNetworkCredential;
             return new NetworkCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetworkCredential != null ? retObjectNetworkCredential.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +207,14 @@ public class KerberosSecurityTokenProvider extends SecurityTokenProvider  {
 
     public TokenImpersonationLevel getTokenImpersonationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenImpersonationLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TokenImpersonationLevel");
+            retObjectTokenImpersonationLevel = classInstance.Get("TokenImpersonationLevel");
+            JCObject val = (JCObject)retObjectTokenImpersonationLevel;
             return new TokenImpersonationLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTokenImpersonationLevel != null ? retObjectTokenImpersonationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +222,13 @@ public class KerberosSecurityTokenProvider extends SecurityTokenProvider  {
 
     public java.lang.String getServicePrincipalName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServicePrincipalName = null;
         try {
-            return (java.lang.String)classInstance.Get("ServicePrincipalName");
+            retObjectServicePrincipalName = classInstance.Get("ServicePrincipalName");
+            return (java.lang.String)retObjectServicePrincipalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServicePrincipalName != null ? retObjectServicePrincipalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

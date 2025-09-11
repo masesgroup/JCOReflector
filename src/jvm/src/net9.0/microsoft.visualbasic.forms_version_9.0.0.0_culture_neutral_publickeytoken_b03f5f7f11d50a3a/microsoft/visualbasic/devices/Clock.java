@@ -166,9 +166,13 @@ public class Clock extends NetObject  {
     
     public int getTickCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTickCount = null;
         try {
-            return (int)classInstance.Get("TickCount");
+            retObjectTickCount = classInstance.Get("TickCount");
+            return (int)retObjectTickCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTickCount != null ? retObjectTickCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class Clock extends NetObject  {
 
     public DateTime getGmtTime() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGmtTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GmtTime");
+            retObjectGmtTime = classInstance.Get("GmtTime");
+            JCObject val = (JCObject)retObjectGmtTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGmtTime != null ? retObjectGmtTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class Clock extends NetObject  {
 
     public DateTime getLocalTime() throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalTime");
+            retObjectLocalTime = classInstance.Get("LocalTime");
+            JCObject val = (JCObject)retObjectLocalTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalTime != null ? retObjectLocalTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

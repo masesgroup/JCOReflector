@@ -170,9 +170,13 @@ public class ManipulationVelocities extends NetObject  {
     
     public double getAngularVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAngularVelocity = null;
         try {
-            return (double)classInstance.Get("AngularVelocity");
+            retObjectAngularVelocity = classInstance.Get("AngularVelocity");
+            return (double)retObjectAngularVelocity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectAngularVelocity != null ? retObjectAngularVelocity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class ManipulationVelocities extends NetObject  {
 
     public void setAngularVelocity(double AngularVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AngularVelocity", AngularVelocity);
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class ManipulationVelocities extends NetObject  {
 
     public Vector getExpansionVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpansionVelocity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExpansionVelocity");
+            retObjectExpansionVelocity = classInstance.Get("ExpansionVelocity");
+            JCObject val = (JCObject)retObjectExpansionVelocity;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpansionVelocity != null ? retObjectExpansionVelocity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class ManipulationVelocities extends NetObject  {
 
     public void setExpansionVelocity(Vector ExpansionVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpansionVelocity", ExpansionVelocity == null ? null : ExpansionVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,10 +219,14 @@ public class ManipulationVelocities extends NetObject  {
 
     public Vector getLinearVelocity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinearVelocity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinearVelocity");
+            retObjectLinearVelocity = classInstance.Get("LinearVelocity");
+            JCObject val = (JCObject)retObjectLinearVelocity;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinearVelocity != null ? retObjectLinearVelocity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +234,7 @@ public class ManipulationVelocities extends NetObject  {
 
     public void setLinearVelocity(Vector LinearVelocity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinearVelocity", LinearVelocity == null ? null : LinearVelocity.getJCOInstance());
         } catch (JCNativeException jcne) {

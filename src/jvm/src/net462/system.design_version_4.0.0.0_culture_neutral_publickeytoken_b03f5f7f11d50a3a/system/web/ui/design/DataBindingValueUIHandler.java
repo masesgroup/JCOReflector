@@ -164,7 +164,7 @@ public class DataBindingValueUIHandler extends NetObject  {
     
     public void OnGetUIValueItem(ITypeDescriptorContext context, PropertyDescriptor propDesc, NetArrayList valueUIItemList) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.ArgumentException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.FormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnGetUIValueItem", context == null ? null : context.getJCOInstance(), propDesc == null ? null : propDesc.getJCOInstance(), valueUIItemList == null ? null : valueUIItemList.getJCOInstance());
         } catch (JCNativeException jcne) {

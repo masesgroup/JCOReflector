@@ -170,10 +170,14 @@ public class StrategyBasedComWrappers extends ComWrappers  {
     
     public static IIUnknownInterfaceDetailsStrategy getDefaultIUnknownInterfaceDetailsStrategy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIUnknownInterfaceDetailsStrategy = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultIUnknownInterfaceDetailsStrategy");
+            retObjectDefaultIUnknownInterfaceDetailsStrategy = classType.Get("DefaultIUnknownInterfaceDetailsStrategy");
+            JCObject val = (JCObject)retObjectDefaultIUnknownInterfaceDetailsStrategy;
             return new IIUnknownInterfaceDetailsStrategyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIUnknownInterfaceDetailsStrategy != null ? retObjectDefaultIUnknownInterfaceDetailsStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class StrategyBasedComWrappers extends ComWrappers  {
 
     public static IIUnknownStrategy getDefaultIUnknownStrategy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultIUnknownStrategy = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultIUnknownStrategy");
+            retObjectDefaultIUnknownStrategy = classType.Get("DefaultIUnknownStrategy");
+            JCObject val = (JCObject)retObjectDefaultIUnknownStrategy;
             return new IIUnknownStrategyImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultIUnknownStrategy != null ? retObjectDefaultIUnknownStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

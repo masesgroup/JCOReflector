@@ -161,10 +161,14 @@ public class WebManagementEvent extends WebBaseEvent  {
     
     public WebProcessInformation getProcessInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProcessInformation");
+            retObjectProcessInformation = classInstance.Get("ProcessInformation");
+            JCObject val = (JCObject)retObjectProcessInformation;
             return new WebProcessInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessInformation != null ? retObjectProcessInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

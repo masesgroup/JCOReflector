@@ -158,7 +158,7 @@ public class TemplatedMailWebEventProvider extends MailWebEventProvider  {
     
     public void Initialize(java.lang.String name, NameValueCollection config) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.FormatException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", name, config == null ? null : config.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -172,10 +172,14 @@ public class TemplatedMailWebEventProvider extends MailWebEventProvider  {
     
     public static MailEventNotificationInfo getCurrentNotification() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentNotification = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentNotification");
+            retObjectCurrentNotification = classType.Get("CurrentNotification");
+            JCObject val = (JCObject)retObjectCurrentNotification;
             return new MailEventNotificationInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentNotification != null ? retObjectCurrentNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

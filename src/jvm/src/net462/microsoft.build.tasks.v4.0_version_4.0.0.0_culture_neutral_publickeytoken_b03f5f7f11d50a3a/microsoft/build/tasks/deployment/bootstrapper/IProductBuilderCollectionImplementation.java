@@ -143,7 +143,7 @@ public class IProductBuilderCollectionImplementation extends NetObject implement
     
     public void Add(ProductBuilder builder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", builder == null ? null : builder.getJCOInstance());
         } catch (JCNativeException jcne) {

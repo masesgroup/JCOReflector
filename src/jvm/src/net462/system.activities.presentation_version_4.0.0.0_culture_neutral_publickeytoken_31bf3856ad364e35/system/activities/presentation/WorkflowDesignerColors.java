@@ -161,9 +161,13 @@ public class WorkflowDesignerColors extends NetObject  {
     
     public static double getFontSize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OverflowException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFontSize = null;
         try {
-            return (double)classType.Get("FontSize");
+            retObjectFontSize = classType.Get("FontSize");
+            return (double)retObjectFontSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectFontSize != null ? retObjectFontSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorBackgroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorBackgroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorBackgroundBrushKey");
+            retObjectPropertyInspectorBackgroundBrushKey = classType.Get("PropertyInspectorBackgroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorBackgroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorBackgroundBrushKey != null ? retObjectPropertyInspectorBackgroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorBorderBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorBorderBrushKey");
+            retObjectPropertyInspectorBorderBrushKey = classType.Get("PropertyInspectorBorderBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorBorderBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorBorderBrushKey != null ? retObjectPropertyInspectorBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorCategoryCaptionTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorCategoryCaptionTextBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorCategoryCaptionTextBrushKey");
+            retObjectPropertyInspectorCategoryCaptionTextBrushKey = classType.Get("PropertyInspectorCategoryCaptionTextBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorCategoryCaptionTextBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorCategoryCaptionTextBrushKey != null ? retObjectPropertyInspectorCategoryCaptionTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorPaneBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorPaneBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorPaneBrushKey");
+            retObjectPropertyInspectorPaneBrushKey = classType.Get("PropertyInspectorPaneBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorPaneBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorPaneBrushKey != null ? retObjectPropertyInspectorPaneBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorPopupBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorPopupBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorPopupBrushKey");
+            retObjectPropertyInspectorPopupBrushKey = classType.Get("PropertyInspectorPopupBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorPopupBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorPopupBrushKey != null ? retObjectPropertyInspectorPopupBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +245,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorSelectedBackgroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorSelectedBackgroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorSelectedBackgroundBrushKey");
+            retObjectPropertyInspectorSelectedBackgroundBrushKey = classType.Get("PropertyInspectorSelectedBackgroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorSelectedBackgroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorSelectedBackgroundBrushKey != null ? retObjectPropertyInspectorSelectedBackgroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +259,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorSelectedForegroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorSelectedForegroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorSelectedForegroundBrushKey");
+            retObjectPropertyInspectorSelectedForegroundBrushKey = classType.Get("PropertyInspectorSelectedForegroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorSelectedForegroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorSelectedForegroundBrushKey != null ? retObjectPropertyInspectorSelectedForegroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +273,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorTextBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorTextBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorTextBrushKey");
+            retObjectPropertyInspectorTextBrushKey = classType.Get("PropertyInspectorTextBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorTextBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorTextBrushKey != null ? retObjectPropertyInspectorTextBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +287,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarBackgroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarBackgroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarBackgroundBrushKey");
+            retObjectPropertyInspectorToolBarBackgroundBrushKey = classType.Get("PropertyInspectorToolBarBackgroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarBackgroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarBackgroundBrushKey != null ? retObjectPropertyInspectorToolBarBackgroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +301,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarItemHoverBackgroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarItemHoverBackgroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemHoverBackgroundBrushKey");
+            retObjectPropertyInspectorToolBarItemHoverBackgroundBrushKey = classType.Get("PropertyInspectorToolBarItemHoverBackgroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarItemHoverBackgroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarItemHoverBackgroundBrushKey != null ? retObjectPropertyInspectorToolBarItemHoverBackgroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +315,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarItemHoverBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarItemHoverBorderBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemHoverBorderBrushKey");
+            retObjectPropertyInspectorToolBarItemHoverBorderBrushKey = classType.Get("PropertyInspectorToolBarItemHoverBorderBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarItemHoverBorderBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarItemHoverBorderBrushKey != null ? retObjectPropertyInspectorToolBarItemHoverBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +329,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarItemSelectedBackgroundBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarItemSelectedBackgroundBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemSelectedBackgroundBrushKey");
+            retObjectPropertyInspectorToolBarItemSelectedBackgroundBrushKey = classType.Get("PropertyInspectorToolBarItemSelectedBackgroundBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarItemSelectedBackgroundBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarItemSelectedBackgroundBrushKey != null ? retObjectPropertyInspectorToolBarItemSelectedBackgroundBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +343,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarItemSelectedBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarItemSelectedBorderBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarItemSelectedBorderBrushKey");
+            retObjectPropertyInspectorToolBarItemSelectedBorderBrushKey = classType.Get("PropertyInspectorToolBarItemSelectedBorderBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarItemSelectedBorderBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarItemSelectedBorderBrushKey != null ? retObjectPropertyInspectorToolBarItemSelectedBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +357,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarSeparatorBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarSeparatorBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarSeparatorBrushKey");
+            retObjectPropertyInspectorToolBarSeparatorBrushKey = classType.Get("PropertyInspectorToolBarSeparatorBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarSeparatorBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarSeparatorBrushKey != null ? retObjectPropertyInspectorToolBarSeparatorBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +371,13 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static java.lang.String getPropertyInspectorToolBarTextBoxBorderBrushKey() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyInspectorToolBarTextBoxBorderBrushKey = null;
         try {
-            return (java.lang.String)classType.Get("PropertyInspectorToolBarTextBoxBorderBrushKey");
+            retObjectPropertyInspectorToolBarTextBoxBorderBrushKey = classType.Get("PropertyInspectorToolBarTextBoxBorderBrushKey");
+            return (java.lang.String)retObjectPropertyInspectorToolBarTextBoxBorderBrushKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPropertyInspectorToolBarTextBoxBorderBrushKey != null ? retObjectPropertyInspectorToolBarTextBoxBorderBrushKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +385,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static FontWeight getFontWeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFontWeight = null;
         try {
-            JCObject val = (JCObject)classType.Get("FontWeight");
+            retObjectFontWeight = classType.Get("FontWeight");
+            JCObject val = (JCObject)retObjectFontWeight;
             return new FontWeight(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontWeight != null ? retObjectFontWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +400,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getDesignerViewExpandAllCollapseAllButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewExpandAllCollapseAllButtonBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllButtonBrush");
+            retObjectDesignerViewExpandAllCollapseAllButtonBrush = classType.Get("DesignerViewExpandAllCollapseAllButtonBrush");
+            JCObject val = (JCObject)retObjectDesignerViewExpandAllCollapseAllButtonBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewExpandAllCollapseAllButtonBrush != null ? retObjectDesignerViewExpandAllCollapseAllButtonBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +415,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getDesignerViewExpandAllCollapseAllButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewExpandAllCollapseAllButtonMouseOverBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllButtonMouseOverBrush");
+            retObjectDesignerViewExpandAllCollapseAllButtonMouseOverBrush = classType.Get("DesignerViewExpandAllCollapseAllButtonMouseOverBrush");
+            JCObject val = (JCObject)retObjectDesignerViewExpandAllCollapseAllButtonMouseOverBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewExpandAllCollapseAllButtonMouseOverBrush != null ? retObjectDesignerViewExpandAllCollapseAllButtonMouseOverBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,10 +430,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getDesignerViewExpandAllCollapseAllPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewExpandAllCollapseAllPressedBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewExpandAllCollapseAllPressedBrush");
+            retObjectDesignerViewExpandAllCollapseAllPressedBrush = classType.Get("DesignerViewExpandAllCollapseAllPressedBrush");
+            JCObject val = (JCObject)retObjectDesignerViewExpandAllCollapseAllPressedBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewExpandAllCollapseAllPressedBrush != null ? retObjectDesignerViewExpandAllCollapseAllPressedBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,10 +445,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getFlowchartExpressionButtonBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlowchartExpressionButtonBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonBrush");
+            retObjectFlowchartExpressionButtonBrush = classType.Get("FlowchartExpressionButtonBrush");
+            JCObject val = (JCObject)retObjectFlowchartExpressionButtonBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowchartExpressionButtonBrush != null ? retObjectFlowchartExpressionButtonBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,10 +460,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getFlowchartExpressionButtonMouseOverBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlowchartExpressionButtonMouseOverBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonMouseOverBrush");
+            retObjectFlowchartExpressionButtonMouseOverBrush = classType.Get("FlowchartExpressionButtonMouseOverBrush");
+            JCObject val = (JCObject)retObjectFlowchartExpressionButtonMouseOverBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowchartExpressionButtonMouseOverBrush != null ? retObjectFlowchartExpressionButtonMouseOverBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,10 +475,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Brush getFlowchartExpressionButtonPressedBrush() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlowchartExpressionButtonPressedBrush = null;
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartExpressionButtonPressedBrush");
+            retObjectFlowchartExpressionButtonPressedBrush = classType.Get("FlowchartExpressionButtonPressedBrush");
+            JCObject val = (JCObject)retObjectFlowchartExpressionButtonPressedBrush;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowchartExpressionButtonPressedBrush != null ? retObjectFlowchartExpressionButtonPressedBrush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,10 +490,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getActivityDesignerSelectedTitleForegroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActivityDesignerSelectedTitleForegroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActivityDesignerSelectedTitleForegroundColor");
+            retObjectActivityDesignerSelectedTitleForegroundColor = classType.Get("ActivityDesignerSelectedTitleForegroundColor");
+            JCObject val = (JCObject)retObjectActivityDesignerSelectedTitleForegroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityDesignerSelectedTitleForegroundColor != null ? retObjectActivityDesignerSelectedTitleForegroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,10 +505,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationBackgroundGradientBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientBeginColor");
+            retObjectAnnotationBackgroundGradientBeginColor = classType.Get("AnnotationBackgroundGradientBeginColor");
+            JCObject val = (JCObject)retObjectAnnotationBackgroundGradientBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationBackgroundGradientBeginColor != null ? retObjectAnnotationBackgroundGradientBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,10 +520,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationBackgroundGradientEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientEndColor");
+            retObjectAnnotationBackgroundGradientEndColor = classType.Get("AnnotationBackgroundGradientEndColor");
+            JCObject val = (JCObject)retObjectAnnotationBackgroundGradientEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationBackgroundGradientEndColor != null ? retObjectAnnotationBackgroundGradientEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,10 +535,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationBackgroundGradientMiddleColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationBackgroundGradientMiddleColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBackgroundGradientMiddleColor");
+            retObjectAnnotationBackgroundGradientMiddleColor = classType.Get("AnnotationBackgroundGradientMiddleColor");
+            JCObject val = (JCObject)retObjectAnnotationBackgroundGradientMiddleColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationBackgroundGradientMiddleColor != null ? retObjectAnnotationBackgroundGradientMiddleColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +550,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationBorderColor");
+            retObjectAnnotationBorderColor = classType.Get("AnnotationBorderColor");
+            JCObject val = (JCObject)retObjectAnnotationBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationBorderColor != null ? retObjectAnnotationBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +565,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationDockButtonColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationDockButtonColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonColor");
+            retObjectAnnotationDockButtonColor = classType.Get("AnnotationDockButtonColor");
+            JCObject val = (JCObject)retObjectAnnotationDockButtonColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationDockButtonColor != null ? retObjectAnnotationDockButtonColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +580,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationDockButtonHoverBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationDockButtonHoverBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverBackgroundColor");
+            retObjectAnnotationDockButtonHoverBackgroundColor = classType.Get("AnnotationDockButtonHoverBackgroundColor");
+            JCObject val = (JCObject)retObjectAnnotationDockButtonHoverBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationDockButtonHoverBackgroundColor != null ? retObjectAnnotationDockButtonHoverBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +595,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationDockButtonHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationDockButtonHoverBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverBorderColor");
+            retObjectAnnotationDockButtonHoverBorderColor = classType.Get("AnnotationDockButtonHoverBorderColor");
+            JCObject val = (JCObject)retObjectAnnotationDockButtonHoverBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationDockButtonHoverBorderColor != null ? retObjectAnnotationDockButtonHoverBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,10 +610,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationDockButtonHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationDockButtonHoverColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockButtonHoverColor");
+            retObjectAnnotationDockButtonHoverColor = classType.Get("AnnotationDockButtonHoverColor");
+            JCObject val = (JCObject)retObjectAnnotationDockButtonHoverColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationDockButtonHoverColor != null ? retObjectAnnotationDockButtonHoverColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,10 +625,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationDockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationDockTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationDockTextColor");
+            retObjectAnnotationDockTextColor = classType.Get("AnnotationDockTextColor");
+            JCObject val = (JCObject)retObjectAnnotationDockTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationDockTextColor != null ? retObjectAnnotationDockTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,10 +640,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getAnnotationUndockTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnnotationUndockTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnnotationUndockTextColor");
+            retObjectAnnotationUndockTextColor = classType.Get("AnnotationUndockTextColor");
+            JCObject val = (JCObject)retObjectAnnotationUndockTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotationUndockTextColor != null ? retObjectAnnotationUndockTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,10 +655,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuBackgroundGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuBackgroundGradientBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBackgroundGradientBeginColor");
+            retObjectContextMenuBackgroundGradientBeginColor = classType.Get("ContextMenuBackgroundGradientBeginColor");
+            JCObject val = (JCObject)retObjectContextMenuBackgroundGradientBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuBackgroundGradientBeginColor != null ? retObjectContextMenuBackgroundGradientBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,10 +670,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuBackgroundGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuBackgroundGradientEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBackgroundGradientEndColor");
+            retObjectContextMenuBackgroundGradientEndColor = classType.Get("ContextMenuBackgroundGradientEndColor");
+            JCObject val = (JCObject)retObjectContextMenuBackgroundGradientEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuBackgroundGradientEndColor != null ? retObjectContextMenuBackgroundGradientEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,10 +685,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuBorderColor");
+            retObjectContextMenuBorderColor = classType.Get("ContextMenuBorderColor");
+            JCObject val = (JCObject)retObjectContextMenuBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuBorderColor != null ? retObjectContextMenuBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,10 +700,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuIconAreaColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuIconAreaColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuIconAreaColor");
+            retObjectContextMenuIconAreaColor = classType.Get("ContextMenuIconAreaColor");
+            JCObject val = (JCObject)retObjectContextMenuIconAreaColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuIconAreaColor != null ? retObjectContextMenuIconAreaColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,10 +715,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuItemTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextColor");
+            retObjectContextMenuItemTextColor = classType.Get("ContextMenuItemTextColor");
+            JCObject val = (JCObject)retObjectContextMenuItemTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuItemTextColor != null ? retObjectContextMenuItemTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -574,10 +730,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuItemTextDisabledColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuItemTextDisabledColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextDisabledColor");
+            retObjectContextMenuItemTextDisabledColor = classType.Get("ContextMenuItemTextDisabledColor");
+            JCObject val = (JCObject)retObjectContextMenuItemTextDisabledColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuItemTextDisabledColor != null ? retObjectContextMenuItemTextDisabledColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,10 +745,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuItemTextHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuItemTextHoverColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextHoverColor");
+            retObjectContextMenuItemTextHoverColor = classType.Get("ContextMenuItemTextHoverColor");
+            JCObject val = (JCObject)retObjectContextMenuItemTextHoverColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuItemTextHoverColor != null ? retObjectContextMenuItemTextHoverColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,10 +760,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuItemTextHoverQuirkedColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuItemTextHoverQuirkedColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextHoverQuirkedColor");
+            retObjectContextMenuItemTextHoverQuirkedColor = classType.Get("ContextMenuItemTextHoverQuirkedColor");
+            JCObject val = (JCObject)retObjectContextMenuItemTextHoverQuirkedColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuItemTextHoverQuirkedColor != null ? retObjectContextMenuItemTextHoverQuirkedColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,10 +775,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuItemTextSelectedColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuItemTextSelectedColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuItemTextSelectedColor");
+            retObjectContextMenuItemTextSelectedColor = classType.Get("ContextMenuItemTextSelectedColor");
+            JCObject val = (JCObject)retObjectContextMenuItemTextSelectedColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuItemTextSelectedColor != null ? retObjectContextMenuItemTextSelectedColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,10 +790,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuMouseOverBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuMouseOverBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverBeginColor");
+            retObjectContextMenuMouseOverBeginColor = classType.Get("ContextMenuMouseOverBeginColor");
+            JCObject val = (JCObject)retObjectContextMenuMouseOverBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuMouseOverBeginColor != null ? retObjectContextMenuMouseOverBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,10 +805,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuMouseOverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuMouseOverBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverBorderColor");
+            retObjectContextMenuMouseOverBorderColor = classType.Get("ContextMenuMouseOverBorderColor");
+            JCObject val = (JCObject)retObjectContextMenuMouseOverBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuMouseOverBorderColor != null ? retObjectContextMenuMouseOverBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,10 +820,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuMouseOverEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuMouseOverEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverEndColor");
+            retObjectContextMenuMouseOverEndColor = classType.Get("ContextMenuMouseOverEndColor");
+            JCObject val = (JCObject)retObjectContextMenuMouseOverEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuMouseOverEndColor != null ? retObjectContextMenuMouseOverEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,10 +835,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuMouseOverMiddle1Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuMouseOverMiddle1Color = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverMiddle1Color");
+            retObjectContextMenuMouseOverMiddle1Color = classType.Get("ContextMenuMouseOverMiddle1Color");
+            JCObject val = (JCObject)retObjectContextMenuMouseOverMiddle1Color;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuMouseOverMiddle1Color != null ? retObjectContextMenuMouseOverMiddle1Color.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,10 +850,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuMouseOverMiddle2Color() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuMouseOverMiddle2Color = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuMouseOverMiddle2Color");
+            retObjectContextMenuMouseOverMiddle2Color = classType.Get("ContextMenuMouseOverMiddle2Color");
+            JCObject val = (JCObject)retObjectContextMenuMouseOverMiddle2Color;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuMouseOverMiddle2Color != null ? retObjectContextMenuMouseOverMiddle2Color.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -673,10 +865,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getContextMenuSeparatorColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextMenuSeparatorColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextMenuSeparatorColor");
+            retObjectContextMenuSeparatorColor = classType.Get("ContextMenuSeparatorColor");
+            JCObject val = (JCObject)retObjectContextMenuSeparatorColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextMenuSeparatorColor != null ? retObjectContextMenuSeparatorColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,10 +880,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewBackgroundColor");
+            retObjectDesignerViewBackgroundColor = classType.Get("DesignerViewBackgroundColor");
+            JCObject val = (JCObject)retObjectDesignerViewBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewBackgroundColor != null ? retObjectDesignerViewBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,10 +895,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarCaptionActiveColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarCaptionActiveColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarCaptionActiveColor");
+            retObjectDesignerViewShellBarCaptionActiveColor = classType.Get("DesignerViewShellBarCaptionActiveColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarCaptionActiveColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarCaptionActiveColor != null ? retObjectDesignerViewShellBarCaptionActiveColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,10 +910,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarCaptionColor");
+            retObjectDesignerViewShellBarCaptionColor = classType.Get("DesignerViewShellBarCaptionColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarCaptionColor != null ? retObjectDesignerViewShellBarCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -717,10 +925,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarColorGradientBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarColorGradientBeginColor");
+            retObjectDesignerViewShellBarColorGradientBeginColor = classType.Get("DesignerViewShellBarColorGradientBeginColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarColorGradientBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarColorGradientBeginColor != null ? retObjectDesignerViewShellBarColorGradientBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -728,10 +940,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarColorGradientEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarColorGradientEndColor");
+            retObjectDesignerViewShellBarColorGradientEndColor = classType.Get("DesignerViewShellBarColorGradientEndColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarColorGradientEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarColorGradientEndColor != null ? retObjectDesignerViewShellBarColorGradientEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,10 +955,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarControlBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarControlBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarControlBackgroundColor");
+            retObjectDesignerViewShellBarControlBackgroundColor = classType.Get("DesignerViewShellBarControlBackgroundColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarControlBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarControlBackgroundColor != null ? retObjectDesignerViewShellBarControlBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -750,10 +970,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarHoverColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarHoverColorGradientBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarHoverColorGradientBeginColor");
+            retObjectDesignerViewShellBarHoverColorGradientBeginColor = classType.Get("DesignerViewShellBarHoverColorGradientBeginColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarHoverColorGradientBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarHoverColorGradientBeginColor != null ? retObjectDesignerViewShellBarHoverColorGradientBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -761,10 +985,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarHoverColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarHoverColorGradientEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarHoverColorGradientEndColor");
+            retObjectDesignerViewShellBarHoverColorGradientEndColor = classType.Get("DesignerViewShellBarHoverColorGradientEndColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarHoverColorGradientEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarHoverColorGradientEndColor != null ? retObjectDesignerViewShellBarHoverColorGradientEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,10 +1000,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarSelectedColorGradientBeginColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarSelectedColorGradientBeginColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarSelectedColorGradientBeginColor");
+            retObjectDesignerViewShellBarSelectedColorGradientBeginColor = classType.Get("DesignerViewShellBarSelectedColorGradientBeginColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarSelectedColorGradientBeginColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarSelectedColorGradientBeginColor != null ? retObjectDesignerViewShellBarSelectedColorGradientBeginColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,10 +1015,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewShellBarSelectedColorGradientEndColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewShellBarSelectedColorGradientEndColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewShellBarSelectedColorGradientEndColor");
+            retObjectDesignerViewShellBarSelectedColorGradientEndColor = classType.Get("DesignerViewShellBarSelectedColorGradientEndColor");
+            JCObject val = (JCObject)retObjectDesignerViewShellBarSelectedColorGradientEndColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewShellBarSelectedColorGradientEndColor != null ? retObjectDesignerViewShellBarSelectedColorGradientEndColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -794,10 +1030,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getDesignerViewStatusBarBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDesignerViewStatusBarBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("DesignerViewStatusBarBackgroundColor");
+            retObjectDesignerViewStatusBarBackgroundColor = classType.Get("DesignerViewStatusBarBackgroundColor");
+            JCObject val = (JCObject)retObjectDesignerViewStatusBarBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignerViewStatusBarBackgroundColor != null ? retObjectDesignerViewStatusBarBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,10 +1045,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getFlowchartConnectorColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFlowchartConnectorColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("FlowchartConnectorColor");
+            retObjectFlowchartConnectorColor = classType.Get("FlowchartConnectorColor");
+            JCObject val = (JCObject)retObjectFlowchartConnectorColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowchartConnectorColor != null ? retObjectFlowchartConnectorColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -816,10 +1060,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getGridViewRowHoverColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGridViewRowHoverColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("GridViewRowHoverColor");
+            retObjectGridViewRowHoverColor = classType.Get("GridViewRowHoverColor");
+            JCObject val = (JCObject)retObjectGridViewRowHoverColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGridViewRowHoverColor != null ? retObjectGridViewRowHoverColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -827,10 +1075,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewBackgroundColor");
+            retObjectOutlineViewBackgroundColor = classType.Get("OutlineViewBackgroundColor");
+            JCObject val = (JCObject)retObjectOutlineViewBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewBackgroundColor != null ? retObjectOutlineViewBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -838,10 +1090,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewCollapsedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewCollapsedArrowBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewCollapsedArrowBorderColor");
+            retObjectOutlineViewCollapsedArrowBorderColor = classType.Get("OutlineViewCollapsedArrowBorderColor");
+            JCObject val = (JCObject)retObjectOutlineViewCollapsedArrowBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewCollapsedArrowBorderColor != null ? retObjectOutlineViewCollapsedArrowBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -849,10 +1105,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewCollapsedArrowHoverBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewCollapsedArrowHoverBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewCollapsedArrowHoverBorderColor");
+            retObjectOutlineViewCollapsedArrowHoverBorderColor = classType.Get("OutlineViewCollapsedArrowHoverBorderColor");
+            JCObject val = (JCObject)retObjectOutlineViewCollapsedArrowHoverBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewCollapsedArrowHoverBorderColor != null ? retObjectOutlineViewCollapsedArrowHoverBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -860,10 +1120,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewExpandedArrowBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewExpandedArrowBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewExpandedArrowBorderColor");
+            retObjectOutlineViewExpandedArrowBorderColor = classType.Get("OutlineViewExpandedArrowBorderColor");
+            JCObject val = (JCObject)retObjectOutlineViewExpandedArrowBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewExpandedArrowBorderColor != null ? retObjectOutlineViewExpandedArrowBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -871,10 +1135,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewExpandedArrowColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewExpandedArrowColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewExpandedArrowColor");
+            retObjectOutlineViewExpandedArrowColor = classType.Get("OutlineViewExpandedArrowColor");
+            JCObject val = (JCObject)retObjectOutlineViewExpandedArrowColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewExpandedArrowColor != null ? retObjectOutlineViewExpandedArrowColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -882,10 +1150,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewItemHighlightBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewItemHighlightBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemHighlightBackgroundColor");
+            retObjectOutlineViewItemHighlightBackgroundColor = classType.Get("OutlineViewItemHighlightBackgroundColor");
+            JCObject val = (JCObject)retObjectOutlineViewItemHighlightBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewItemHighlightBackgroundColor != null ? retObjectOutlineViewItemHighlightBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -893,10 +1165,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewItemSelectedTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewItemSelectedTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemSelectedTextColor");
+            retObjectOutlineViewItemSelectedTextColor = classType.Get("OutlineViewItemSelectedTextColor");
+            JCObject val = (JCObject)retObjectOutlineViewItemSelectedTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewItemSelectedTextColor != null ? retObjectOutlineViewItemSelectedTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,10 +1180,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getOutlineViewItemTextColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOutlineViewItemTextColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("OutlineViewItemTextColor");
+            retObjectOutlineViewItemTextColor = classType.Get("OutlineViewItemTextColor");
+            JCObject val = (JCObject)retObjectOutlineViewItemTextColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutlineViewItemTextColor != null ? retObjectOutlineViewItemTextColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -915,10 +1195,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getPropertyToolBarHightlightedButtonForegroundColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyToolBarHightlightedButtonForegroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("PropertyToolBarHightlightedButtonForegroundColor");
+            retObjectPropertyToolBarHightlightedButtonForegroundColor = classType.Get("PropertyToolBarHightlightedButtonForegroundColor");
+            JCObject val = (JCObject)retObjectPropertyToolBarHightlightedButtonForegroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyToolBarHightlightedButtonForegroundColor != null ? retObjectPropertyToolBarHightlightedButtonForegroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,10 +1210,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementBackgroundColor");
+            retObjectWorkflowViewElementBackgroundColor = classType.Get("WorkflowViewElementBackgroundColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementBackgroundColor != null ? retObjectWorkflowViewElementBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -937,10 +1225,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementBorderColor");
+            retObjectWorkflowViewElementBorderColor = classType.Get("WorkflowViewElementBorderColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementBorderColor != null ? retObjectWorkflowViewElementBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -948,10 +1240,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementCaptionColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementCaptionColor");
+            retObjectWorkflowViewElementCaptionColor = classType.Get("WorkflowViewElementCaptionColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementCaptionColor != null ? retObjectWorkflowViewElementCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -959,10 +1255,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementSelectedBackgroundColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementSelectedBackgroundColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedBackgroundColor");
+            retObjectWorkflowViewElementSelectedBackgroundColor = classType.Get("WorkflowViewElementSelectedBackgroundColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementSelectedBackgroundColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementSelectedBackgroundColor != null ? retObjectWorkflowViewElementSelectedBackgroundColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -970,10 +1270,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementSelectedBorderColor() throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.io.IOException, system.xaml.XamlParseException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementSelectedBorderColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedBorderColor");
+            retObjectWorkflowViewElementSelectedBorderColor = classType.Get("WorkflowViewElementSelectedBorderColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementSelectedBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementSelectedBorderColor != null ? retObjectWorkflowViewElementSelectedBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -981,10 +1285,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static Color getWorkflowViewElementSelectedCaptionColor() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.IOException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWorkflowViewElementSelectedCaptionColor = null;
         try {
-            JCObject val = (JCObject)classType.Get("WorkflowViewElementSelectedCaptionColor");
+            retObjectWorkflowViewElementSelectedCaptionColor = classType.Get("WorkflowViewElementSelectedCaptionColor");
+            JCObject val = (JCObject)retObjectWorkflowViewElementSelectedCaptionColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowViewElementSelectedCaptionColor != null ? retObjectWorkflowViewElementSelectedCaptionColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -992,10 +1300,14 @@ public class WorkflowDesignerColors extends NetObject  {
 
     public static FontFamily getFontFamily() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xaml.XamlParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFontFamily = null;
         try {
-            JCObject val = (JCObject)classType.Get("FontFamily");
+            retObjectFontFamily = classType.Get("FontFamily");
+            JCObject val = (JCObject)retObjectFontFamily;
             return new FontFamily(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFontFamily != null ? retObjectFontFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -153,9 +153,13 @@ public class VirtualPathUtility extends NetObject  {
     
     public static boolean IsAbsolute(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAbsolute = null;
         try {
-            return (boolean)classType.Invoke("IsAbsolute", virtualPath);
+            retObjectIsAbsolute = classType.Invoke("IsAbsolute", virtualPath);
+            return (boolean)retObjectIsAbsolute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAbsolute != null ? retObjectIsAbsolute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static boolean IsAppRelative(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAppRelative = null;
         try {
-            return (boolean)classType.Invoke("IsAppRelative", virtualPath);
+            retObjectIsAppRelative = classType.Invoke("IsAppRelative", virtualPath);
+            return (boolean)retObjectIsAppRelative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAppRelative != null ? retObjectIsAppRelative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +181,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String AppendTrailingSlash(java.lang.String virtualPath) throws Throwable, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppendTrailingSlash = null;
         try {
-            return (java.lang.String)classType.Invoke("AppendTrailingSlash", virtualPath);
+            retObjectAppendTrailingSlash = classType.Invoke("AppendTrailingSlash", virtualPath);
+            return (java.lang.String)retObjectAppendTrailingSlash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAppendTrailingSlash != null ? retObjectAppendTrailingSlash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +195,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String Combine(java.lang.String basePath, java.lang.String relativePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            return (java.lang.String)classType.Invoke("Combine", basePath, relativePath);
+            retObjectCombine = classType.Invoke("Combine", basePath, relativePath);
+            return (java.lang.String)retObjectCombine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +209,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String GetDirectory(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectory = null;
         try {
-            return (java.lang.String)classType.Invoke("GetDirectory", virtualPath);
+            retObjectGetDirectory = classType.Invoke("GetDirectory", virtualPath);
+            return (java.lang.String)retObjectGetDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDirectory != null ? retObjectGetDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +223,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String GetExtension(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExtension = null;
         try {
-            return (java.lang.String)classType.Invoke("GetExtension", virtualPath);
+            retObjectGetExtension = classType.Invoke("GetExtension", virtualPath);
+            return (java.lang.String)retObjectGetExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExtension != null ? retObjectGetExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +237,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String GetFileName(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetFileName", virtualPath);
+            retObjectGetFileName = classType.Invoke("GetFileName", virtualPath);
+            return (java.lang.String)retObjectGetFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFileName != null ? retObjectGetFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +251,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String MakeRelative(java.lang.String fromPath, java.lang.String toPath) throws Throwable, system.web.HttpException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.security.SecurityException, system.MemberAccessException, system.InvalidOperationException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeRelative = null;
         try {
-            return (java.lang.String)classType.Invoke("MakeRelative", fromPath, toPath);
+            retObjectMakeRelative = classType.Invoke("MakeRelative", fromPath, toPath);
+            return (java.lang.String)retObjectMakeRelative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectMakeRelative != null ? retObjectMakeRelative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +265,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String RemoveTrailingSlash(java.lang.String virtualPath) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRemoveTrailingSlash = null;
         try {
-            return (java.lang.String)classType.Invoke("RemoveTrailingSlash", virtualPath);
+            retObjectRemoveTrailingSlash = classType.Invoke("RemoveTrailingSlash", virtualPath);
+            return (java.lang.String)retObjectRemoveTrailingSlash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRemoveTrailingSlash != null ? retObjectRemoveTrailingSlash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +279,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String ToAbsolute(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToAbsolute = null;
         try {
-            return (java.lang.String)classType.Invoke("ToAbsolute", virtualPath);
+            retObjectToAbsolute = classType.Invoke("ToAbsolute", virtualPath);
+            return (java.lang.String)retObjectToAbsolute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToAbsolute != null ? retObjectToAbsolute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +293,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String ToAbsolute(java.lang.String virtualPath, java.lang.String applicationPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToAbsolute = null;
         try {
-            return (java.lang.String)classType.Invoke("ToAbsolute", virtualPath, applicationPath);
+            retObjectToAbsolute = classType.Invoke("ToAbsolute", virtualPath, applicationPath);
+            return (java.lang.String)retObjectToAbsolute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToAbsolute != null ? retObjectToAbsolute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +307,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String ToAppRelative(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToAppRelative = null;
         try {
-            return (java.lang.String)classType.Invoke("ToAppRelative", virtualPath);
+            retObjectToAppRelative = classType.Invoke("ToAppRelative", virtualPath);
+            return (java.lang.String)retObjectToAppRelative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToAppRelative != null ? retObjectToAppRelative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +321,13 @@ public class VirtualPathUtility extends NetObject  {
 
     public static java.lang.String ToAppRelative(java.lang.String virtualPath, java.lang.String applicationPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToAppRelative = null;
         try {
-            return (java.lang.String)classType.Invoke("ToAppRelative", virtualPath, applicationPath);
+            retObjectToAppRelative = classType.Invoke("ToAppRelative", virtualPath, applicationPath);
+            return (java.lang.String)retObjectToAppRelative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToAppRelative != null ? retObjectToAppRelative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

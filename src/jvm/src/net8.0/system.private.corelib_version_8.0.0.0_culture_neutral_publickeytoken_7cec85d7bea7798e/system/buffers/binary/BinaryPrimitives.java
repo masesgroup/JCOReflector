@@ -161,9 +161,19 @@ public class BinaryPrimitives extends NetObject  {
     
     public static byte ReverseEndianness(byte value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            return (byte)classType.Invoke("ReverseEndianness", value);
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
+            return (byte)retObjectReverseEndianness;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
+                return retObjectReverseEndiannessNumber.byteValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into byte and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +181,19 @@ public class BinaryPrimitives extends NetObject  {
 
     public static short ReverseEndianness(short value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            return (short)classType.Invoke("ReverseEndianness", value);
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
+            return (short)retObjectReverseEndianness;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
+                return retObjectReverseEndiannessNumber.shortValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into short and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +201,19 @@ public class BinaryPrimitives extends NetObject  {
 
     public static int ReverseEndianness(int value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            return (int)classType.Invoke("ReverseEndianness", value);
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
+            return (int)retObjectReverseEndianness;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
+                return retObjectReverseEndiannessNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +221,19 @@ public class BinaryPrimitives extends NetObject  {
 
     public static long ReverseEndianness(long value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            return (long)classType.Invoke("ReverseEndianness", value);
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value);
+            return (long)retObjectReverseEndianness;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReverseEndiannessNumber = (java.lang.Number)retObjectReverseEndianness;
+                return retObjectReverseEndiannessNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +241,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static SByte ReverseEndianness(SByte value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new SByte(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +256,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static Int128 ReverseEndianness(Int128 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new Int128(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +271,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static UInt128 ReverseEndianness(UInt128 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new UInt128(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +286,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static UInt16 ReverseEndianness(UInt16 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new UInt16(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +301,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static UInt32 ReverseEndianness(UInt32 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new UInt32(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +316,14 @@ public class BinaryPrimitives extends NetObject  {
 
     public static UInt64 ReverseEndianness(UInt64 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReverseEndianness = null;
         try {
-            JCObject objReverseEndianness = (JCObject)classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            retObjectReverseEndianness = classType.Invoke("ReverseEndianness", value == null ? null : value.getJCOInstance());
+            JCObject objReverseEndianness = (JCObject)retObjectReverseEndianness;
             return new UInt64(objReverseEndianness);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReverseEndianness != null ? retObjectReverseEndianness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

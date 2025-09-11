@@ -166,10 +166,14 @@ public class ILGenerator extends NetObject  {
     
     public Label BeginExceptionBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginExceptionBlock = null;
         try {
-            JCObject objBeginExceptionBlock = (JCObject)classInstance.Invoke("BeginExceptionBlock");
+            retObjectBeginExceptionBlock = classInstance.Invoke("BeginExceptionBlock");
+            JCObject objBeginExceptionBlock = (JCObject)retObjectBeginExceptionBlock;
             return new Label(objBeginExceptionBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginExceptionBlock != null ? retObjectBeginExceptionBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class ILGenerator extends NetObject  {
 
     public Label DefineLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineLabel = null;
         try {
-            JCObject objDefineLabel = (JCObject)classInstance.Invoke("DefineLabel");
+            retObjectDefineLabel = classInstance.Invoke("DefineLabel");
+            JCObject objDefineLabel = (JCObject)retObjectDefineLabel;
             return new Label(objDefineLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineLabel != null ? retObjectDefineLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class ILGenerator extends NetObject  {
 
     public LocalBuilder DeclareLocal(NetType localType, boolean pinned) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclareLocal = null;
         try {
-            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance(), pinned);
+            retObjectDeclareLocal = classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance(), pinned);
+            JCObject objDeclareLocal = (JCObject)retObjectDeclareLocal;
             return new LocalBuilder(objDeclareLocal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclareLocal != null ? retObjectDeclareLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class ILGenerator extends NetObject  {
 
     public LocalBuilder DeclareLocal(NetType localType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeclareLocal = null;
         try {
-            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance());
+            retObjectDeclareLocal = classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance());
+            JCObject objDeclareLocal = (JCObject)retObjectDeclareLocal;
             return new LocalBuilder(objDeclareLocal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeclareLocal != null ? retObjectDeclareLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class ILGenerator extends NetObject  {
 
     public void BeginCatchBlock(NetType exceptionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginCatchBlock", exceptionType == null ? null : exceptionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class ILGenerator extends NetObject  {
 
     public void BeginExceptFilterBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginExceptFilterBlock");
         } catch (JCNativeException jcne) {
@@ -230,7 +246,7 @@ public class ILGenerator extends NetObject  {
 
     public void BeginFaultBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginFaultBlock");
         } catch (JCNativeException jcne) {
@@ -240,7 +256,7 @@ public class ILGenerator extends NetObject  {
 
     public void BeginFinallyBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginFinallyBlock");
         } catch (JCNativeException jcne) {
@@ -250,7 +266,7 @@ public class ILGenerator extends NetObject  {
 
     public void BeginScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginScope");
         } catch (JCNativeException jcne) {
@@ -260,7 +276,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, byte arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
         } catch (JCNativeException jcne) {
@@ -270,7 +286,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, double arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
         } catch (JCNativeException jcne) {
@@ -280,7 +296,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, short arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
         } catch (JCNativeException jcne) {
@@ -290,7 +306,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, int arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
         } catch (JCNativeException jcne) {
@@ -300,7 +316,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, long arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg);
         } catch (JCNativeException jcne) {
@@ -310,7 +326,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, SByte arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +336,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, Single arg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,7 +346,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, ConstructorInfo con) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), con == null ? null : con.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +356,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, Label label) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), label == null ? null : label.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,7 +366,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, Label[] labels) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), toObjectFromArray(labels));
         } catch (JCNativeException jcne) {
@@ -360,7 +376,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, LocalBuilder local) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), local == null ? null : local.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +386,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, SignatureHelper signature) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), signature == null ? null : signature.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -380,7 +396,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, FieldInfo field) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), field == null ? null : field.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,7 +406,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, MethodInfo meth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), meth == null ? null : meth.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,7 +416,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, java.lang.String str) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), str);
         } catch (JCNativeException jcne) {
@@ -410,7 +426,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode, NetType cls) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), cls == null ? null : cls.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -420,7 +436,7 @@ public class ILGenerator extends NetObject  {
 
     public void Emit(OpCode opcode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -430,7 +446,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitCall(OpCode opcode, MethodInfo methodInfo, NetType[] optionalParameterTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitCall", opcode == null ? null : opcode.getJCOInstance(), methodInfo == null ? null : methodInfo.getJCOInstance(), toObjectFromArray(optionalParameterTypes));
         } catch (JCNativeException jcne) {
@@ -440,7 +456,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitCalli(OpCode opcode, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, NetType[] optionalParameterTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), toObjectFromArray(optionalParameterTypes));
         } catch (JCNativeException jcne) {
@@ -450,7 +466,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitCalli(OpCode opcode, CallingConvention unmanagedCallConv, NetType returnType, NetType[] parameterTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitCalli", opcode == null ? null : opcode.getJCOInstance(), unmanagedCallConv == null ? null : unmanagedCallConv.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
         } catch (JCNativeException jcne) {
@@ -460,7 +476,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitWriteLine(LocalBuilder localBuilder) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitWriteLine", localBuilder == null ? null : localBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -470,7 +486,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitWriteLine(FieldInfo fld) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.TypeLoadException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitWriteLine", fld == null ? null : fld.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -480,7 +496,7 @@ public class ILGenerator extends NetObject  {
 
     public void EmitWriteLine(java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EmitWriteLine", value);
         } catch (JCNativeException jcne) {
@@ -490,7 +506,7 @@ public class ILGenerator extends NetObject  {
 
     public void EndExceptionBlock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndExceptionBlock");
         } catch (JCNativeException jcne) {
@@ -500,7 +516,7 @@ public class ILGenerator extends NetObject  {
 
     public void EndScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndScope");
         } catch (JCNativeException jcne) {
@@ -510,7 +526,7 @@ public class ILGenerator extends NetObject  {
 
     public void MarkLabel(Label loc) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkLabel", loc == null ? null : loc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -520,7 +536,7 @@ public class ILGenerator extends NetObject  {
 
     public void MarkSequencePoint(ISymbolDocumentWriter document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkSequencePoint", document == null ? null : document.getJCOInstance(), startLine, startColumn, endLine, endColumn);
         } catch (JCNativeException jcne) {
@@ -530,7 +546,7 @@ public class ILGenerator extends NetObject  {
 
     public void ThrowException(NetType excType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ThrowException", excType == null ? null : excType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -540,7 +556,7 @@ public class ILGenerator extends NetObject  {
 
     public void UsingNamespace(java.lang.String usingNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UsingNamespace", usingNamespace);
         } catch (JCNativeException jcne) {
@@ -554,9 +570,13 @@ public class ILGenerator extends NetObject  {
     
     public int getILOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectILOffset = null;
         try {
-            return (int)classInstance.Get("ILOffset");
+            retObjectILOffset = classInstance.Get("ILOffset");
+            return (int)retObjectILOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectILOffset != null ? retObjectILOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

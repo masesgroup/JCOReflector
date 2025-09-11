@@ -170,9 +170,13 @@ public class TypeValidationEventArgs extends EventArgs  {
     
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Get("Cancel");
+            retObjectCancel = classInstance.Get("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class TypeValidationEventArgs extends EventArgs  {
 
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class TypeValidationEventArgs extends EventArgs  {
 
     public boolean getIsValidInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidInput = null;
         try {
-            return (boolean)classInstance.Get("IsValidInput");
+            retObjectIsValidInput = classInstance.Get("IsValidInput");
+            return (boolean)retObjectIsValidInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValidInput != null ? retObjectIsValidInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class TypeValidationEventArgs extends EventArgs  {
 
     public NetObject getReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnValue");
+            retObjectReturnValue = classInstance.Get("ReturnValue");
+            JCObject val = (JCObject)retObjectReturnValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnValue != null ? retObjectReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +223,13 @@ public class TypeValidationEventArgs extends EventArgs  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +237,14 @@ public class TypeValidationEventArgs extends EventArgs  {
 
     public NetType getValidatingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatingType");
+            retObjectValidatingType = classInstance.Get("ValidatingType");
+            JCObject val = (JCObject)retObjectValidatingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatingType != null ? retObjectValidatingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

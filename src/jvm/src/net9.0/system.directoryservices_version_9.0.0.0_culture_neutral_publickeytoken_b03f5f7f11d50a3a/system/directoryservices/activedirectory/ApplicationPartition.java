@@ -182,10 +182,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
     
     public static ApplicationPartition FindByName(DirectoryContext context, java.lang.String distinguishedName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindByName = null;
         try {
-            JCObject objFindByName = (JCObject)classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), distinguishedName);
+            retObjectFindByName = classType.Invoke("FindByName", context == null ? null : context.getJCOInstance(), distinguishedName);
+            JCObject objFindByName = (JCObject)retObjectFindByName;
             return new ApplicationPartition(objFindByName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindByName != null ? retObjectFindByName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public static ApplicationPartition GetApplicationPartition(DirectoryContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetApplicationPartition = null;
         try {
-            JCObject objGetApplicationPartition = (JCObject)classType.Invoke("GetApplicationPartition", context == null ? null : context.getJCOInstance());
+            retObjectGetApplicationPartition = classType.Invoke("GetApplicationPartition", context == null ? null : context.getJCOInstance());
+            JCObject objGetApplicationPartition = (JCObject)retObjectGetApplicationPartition;
             return new ApplicationPartition(objGetApplicationPartition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplicationPartition != null ? retObjectGetApplicationPartition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public DirectoryServer FindDirectoryServer() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindDirectoryServer = null;
         try {
-            JCObject objFindDirectoryServer = (JCObject)classInstance.Invoke("FindDirectoryServer");
+            retObjectFindDirectoryServer = classInstance.Invoke("FindDirectoryServer");
+            JCObject objFindDirectoryServer = (JCObject)retObjectFindDirectoryServer;
             return new DirectoryServer(objFindDirectoryServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindDirectoryServer != null ? retObjectFindDirectoryServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +227,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public DirectoryServer FindDirectoryServer(boolean forceRediscovery) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindDirectoryServer = null;
         try {
-            JCObject objFindDirectoryServer = (JCObject)classInstance.Invoke("FindDirectoryServer", forceRediscovery);
+            retObjectFindDirectoryServer = classInstance.Invoke("FindDirectoryServer", forceRediscovery);
+            JCObject objFindDirectoryServer = (JCObject)retObjectFindDirectoryServer;
             return new DirectoryServer(objFindDirectoryServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindDirectoryServer != null ? retObjectFindDirectoryServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +242,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public DirectoryServer FindDirectoryServer(java.lang.String siteName, boolean forceRediscovery) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindDirectoryServer = null;
         try {
-            JCObject objFindDirectoryServer = (JCObject)classInstance.Invoke("FindDirectoryServer", siteName, forceRediscovery);
+            retObjectFindDirectoryServer = classInstance.Invoke("FindDirectoryServer", siteName, forceRediscovery);
+            JCObject objFindDirectoryServer = (JCObject)retObjectFindDirectoryServer;
             return new DirectoryServer(objFindDirectoryServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindDirectoryServer != null ? retObjectFindDirectoryServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +257,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public DirectoryServer FindDirectoryServer(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindDirectoryServer = null;
         try {
-            JCObject objFindDirectoryServer = (JCObject)classInstance.Invoke("FindDirectoryServer", siteName);
+            retObjectFindDirectoryServer = classInstance.Invoke("FindDirectoryServer", siteName);
+            JCObject objFindDirectoryServer = (JCObject)retObjectFindDirectoryServer;
             return new DirectoryServer(objFindDirectoryServer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindDirectoryServer != null ? retObjectFindDirectoryServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +272,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public ReadOnlyDirectoryServerCollection FindAllDirectoryServers() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDirectoryServers = null;
         try {
-            JCObject objFindAllDirectoryServers = (JCObject)classInstance.Invoke("FindAllDirectoryServers");
+            retObjectFindAllDirectoryServers = classInstance.Invoke("FindAllDirectoryServers");
+            JCObject objFindAllDirectoryServers = (JCObject)retObjectFindAllDirectoryServers;
             return new ReadOnlyDirectoryServerCollection(objFindAllDirectoryServers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDirectoryServers != null ? retObjectFindAllDirectoryServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +287,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public ReadOnlyDirectoryServerCollection FindAllDirectoryServers(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDirectoryServers = null;
         try {
-            JCObject objFindAllDirectoryServers = (JCObject)classInstance.Invoke("FindAllDirectoryServers", siteName);
+            retObjectFindAllDirectoryServers = classInstance.Invoke("FindAllDirectoryServers", siteName);
+            JCObject objFindAllDirectoryServers = (JCObject)retObjectFindAllDirectoryServers;
             return new ReadOnlyDirectoryServerCollection(objFindAllDirectoryServers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDirectoryServers != null ? retObjectFindAllDirectoryServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +302,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDiscoverableDirectoryServers = null;
         try {
-            JCObject objFindAllDiscoverableDirectoryServers = (JCObject)classInstance.Invoke("FindAllDiscoverableDirectoryServers");
+            retObjectFindAllDiscoverableDirectoryServers = classInstance.Invoke("FindAllDiscoverableDirectoryServers");
+            JCObject objFindAllDiscoverableDirectoryServers = (JCObject)retObjectFindAllDiscoverableDirectoryServers;
             return new ReadOnlyDirectoryServerCollection(objFindAllDiscoverableDirectoryServers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDiscoverableDirectoryServers != null ? retObjectFindAllDiscoverableDirectoryServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +317,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public ReadOnlyDirectoryServerCollection FindAllDiscoverableDirectoryServers(java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllDiscoverableDirectoryServers = null;
         try {
-            JCObject objFindAllDiscoverableDirectoryServers = (JCObject)classInstance.Invoke("FindAllDiscoverableDirectoryServers", siteName);
+            retObjectFindAllDiscoverableDirectoryServers = classInstance.Invoke("FindAllDiscoverableDirectoryServers", siteName);
+            JCObject objFindAllDiscoverableDirectoryServers = (JCObject)retObjectFindAllDiscoverableDirectoryServers;
             return new ReadOnlyDirectoryServerCollection(objFindAllDiscoverableDirectoryServers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllDiscoverableDirectoryServers != null ? retObjectFindAllDiscoverableDirectoryServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +332,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public DirectoryEntry GetDirectoryEntry() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.FormatException, system.AccessViolationException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectoryEntry = null;
         try {
-            JCObject objGetDirectoryEntry = (JCObject)classInstance.Invoke("GetDirectoryEntry");
+            retObjectGetDirectoryEntry = classInstance.Invoke("GetDirectoryEntry");
+            JCObject objGetDirectoryEntry = (JCObject)retObjectGetDirectoryEntry;
             return new DirectoryEntry(objGetDirectoryEntry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectoryEntry != null ? retObjectGetDirectoryEntry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +347,7 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public void Delete() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -313,7 +357,7 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public void Save() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OverflowException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save");
         } catch (JCNativeException jcne) {
@@ -327,10 +371,14 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
     
     public DirectoryServerCollection getDirectoryServers() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectoryServers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectoryServers");
+            retObjectDirectoryServers = classInstance.Get("DirectoryServers");
+            JCObject val = (JCObject)retObjectDirectoryServers;
             return new DirectoryServerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectoryServers != null ? retObjectDirectoryServers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +386,13 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public java.lang.String getSecurityReferenceDomain() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityReferenceDomain = null;
         try {
-            return (java.lang.String)classInstance.Get("SecurityReferenceDomain");
+            retObjectSecurityReferenceDomain = classInstance.Get("SecurityReferenceDomain");
+            return (java.lang.String)retObjectSecurityReferenceDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSecurityReferenceDomain != null ? retObjectSecurityReferenceDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,7 +400,7 @@ public class ApplicationPartition extends ActiveDirectoryPartition  {
 
     public void setSecurityReferenceDomain(java.lang.String SecurityReferenceDomain) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityReferenceDomain", SecurityReferenceDomain);
         } catch (JCNativeException jcne) {

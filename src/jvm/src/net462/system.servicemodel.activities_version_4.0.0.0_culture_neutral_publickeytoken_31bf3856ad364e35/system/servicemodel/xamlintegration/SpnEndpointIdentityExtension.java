@@ -175,10 +175,14 @@ public class SpnEndpointIdentityExtension extends MarkupExtension  {
     
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideValue = null;
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectProvideValue = classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objProvideValue = (JCObject)retObjectProvideValue;
             return new NetObject(objProvideValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideValue != null ? retObjectProvideValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class SpnEndpointIdentityExtension extends MarkupExtension  {
     
     public java.lang.String getSpnName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpnName = null;
         try {
-            return (java.lang.String)classInstance.Get("SpnName");
+            retObjectSpnName = classInstance.Get("SpnName");
+            return (java.lang.String)retObjectSpnName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSpnName != null ? retObjectSpnName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class SpnEndpointIdentityExtension extends MarkupExtension  {
 
     public void setSpnName(java.lang.String SpnName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpnName", SpnName);
         } catch (JCNativeException jcne) {

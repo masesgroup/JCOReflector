@@ -156,9 +156,13 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
     
     public boolean CanReadKeyIdentifierClause(XmlReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReadKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("CanReadKeyIdentifierClause", reader == null ? null : reader.getJCOInstance());
+            retObjectCanReadKeyIdentifierClause = classInstance.Invoke("CanReadKeyIdentifierClause", reader == null ? null : reader.getJCOInstance());
+            return (boolean)retObjectCanReadKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanReadKeyIdentifierClause != null ? retObjectCanReadKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
 
     public boolean CanWriteKeyIdentifierClause(SecurityKeyIdentifierClause securityKeyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanWriteKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("CanWriteKeyIdentifierClause", securityKeyIdentifierClause == null ? null : securityKeyIdentifierClause.getJCOInstance());
+            retObjectCanWriteKeyIdentifierClause = classInstance.Invoke("CanWriteKeyIdentifierClause", securityKeyIdentifierClause == null ? null : securityKeyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectCanWriteKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanWriteKeyIdentifierClause != null ? retObjectCanWriteKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
 
     public SecurityKeyIdentifierClause ReadKeyIdentifierClause(XmlReader reader) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadKeyIdentifierClause = null;
         try {
-            JCObject objReadKeyIdentifierClause = (JCObject)classInstance.Invoke("ReadKeyIdentifierClause", reader == null ? null : reader.getJCOInstance());
+            retObjectReadKeyIdentifierClause = classInstance.Invoke("ReadKeyIdentifierClause", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadKeyIdentifierClause = (JCObject)retObjectReadKeyIdentifierClause;
             return new SecurityKeyIdentifierClause(objReadKeyIdentifierClause);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadKeyIdentifierClause != null ? retObjectReadKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +199,7 @@ public class SecurityKeyIdentifierClauseSerializer extends NetObject  {
 
     public void WriteKeyIdentifierClause(XmlWriter writer, SecurityKeyIdentifierClause securityKeyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteKeyIdentifierClause", writer == null ? null : writer.getJCOInstance(), securityKeyIdentifierClause == null ? null : securityKeyIdentifierClause.getJCOInstance());
         } catch (JCNativeException jcne) {

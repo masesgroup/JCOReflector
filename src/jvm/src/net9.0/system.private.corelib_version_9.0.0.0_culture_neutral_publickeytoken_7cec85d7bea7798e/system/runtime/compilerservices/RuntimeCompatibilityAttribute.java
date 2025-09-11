@@ -166,9 +166,13 @@ public class RuntimeCompatibilityAttribute extends Attribute  {
     
     public boolean getWrapNonExceptionThrows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapNonExceptionThrows = null;
         try {
-            return (boolean)classInstance.Get("WrapNonExceptionThrows");
+            retObjectWrapNonExceptionThrows = classInstance.Get("WrapNonExceptionThrows");
+            return (boolean)retObjectWrapNonExceptionThrows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWrapNonExceptionThrows != null ? retObjectWrapNonExceptionThrows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class RuntimeCompatibilityAttribute extends Attribute  {
 
     public void setWrapNonExceptionThrows(boolean WrapNonExceptionThrows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapNonExceptionThrows", WrapNonExceptionThrows);
         } catch (JCNativeException jcne) {

@@ -167,9 +167,13 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
     
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
 
     public void setLanguage(java.lang.String Language) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Language", Language);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
 
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {
@@ -207,16 +215,20 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
 
     public final XmlNode[] getMarkup() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarkup = null;
         try {
             ArrayList<XmlNode> resultingArrayList = new ArrayList<XmlNode>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Markup");
+            retObjectMarkup = classInstance.Get("Markup");
+            JCObject resultingObjects = (JCObject)retObjectMarkup;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlNode(resultingObject));
             }
             XmlNode[] resultingArray = new XmlNode[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarkup != null ? retObjectMarkup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
 
     public void setMarkup(XmlNode[] Markup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Markup", toObjectFromArray(Markup));
         } catch (JCNativeException jcne) {

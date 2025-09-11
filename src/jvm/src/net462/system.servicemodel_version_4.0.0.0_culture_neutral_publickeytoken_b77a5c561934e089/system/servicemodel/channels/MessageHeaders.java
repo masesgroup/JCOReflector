@@ -198,9 +198,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
     
     public boolean HaveMandatoryHeadersBeenUnderstood() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHaveMandatoryHeadersBeenUnderstood = null;
         try {
-            return (boolean)classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood");
+            retObjectHaveMandatoryHeadersBeenUnderstood = classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood");
+            return (boolean)retObjectHaveMandatoryHeadersBeenUnderstood;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHaveMandatoryHeadersBeenUnderstood != null ? retObjectHaveMandatoryHeadersBeenUnderstood.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public boolean HaveMandatoryHeadersBeenUnderstood(java.lang.String... actors) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHaveMandatoryHeadersBeenUnderstood = null;
         try {
-            return (boolean)classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood", (java.lang.Object)actors);
+            retObjectHaveMandatoryHeadersBeenUnderstood = classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood", (java.lang.Object)actors);
+            return (boolean)retObjectHaveMandatoryHeadersBeenUnderstood;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHaveMandatoryHeadersBeenUnderstood != null ? retObjectHaveMandatoryHeadersBeenUnderstood.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +226,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public boolean HaveMandatoryHeadersBeenUnderstood(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHaveMandatoryHeadersBeenUnderstood = null;
         try {
-            return (boolean)classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectHaveMandatoryHeadersBeenUnderstood = classInstance.Invoke("HaveMandatoryHeadersBeenUnderstood", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectHaveMandatoryHeadersBeenUnderstood;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHaveMandatoryHeadersBeenUnderstood != null ? retObjectHaveMandatoryHeadersBeenUnderstood.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,19 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public int FindHeader(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindHeader = null;
         try {
-            return (int)classInstance.Invoke("FindHeader", name, ns);
+            retObjectFindHeader = classInstance.Invoke("FindHeader", name, ns);
+            return (int)retObjectFindHeader;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
+                return retObjectFindHeaderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +260,19 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public int FindHeader(java.lang.String name, java.lang.String ns, java.lang.String... actors) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindHeader = null;
         try {
-            return (int)classInstance.Invoke("FindHeader", name, ns, actors);
+            retObjectFindHeader = classInstance.Invoke("FindHeader", name, ns, actors);
+            return (int)retObjectFindHeader;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
+                return retObjectFindHeaderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +280,19 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public int FindHeader(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindHeader = null;
         try {
-            return (int)classInstance.Invoke("FindHeader", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            retObjectFindHeader = classInstance.Invoke("FindHeader", dupParam0, dupParam1, dupParam2.getJCRefOut());
+            return (int)retObjectFindHeader;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectFindHeaderNumber = (java.lang.Number)retObjectFindHeader;
+                return retObjectFindHeaderNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectFindHeader != null ? retObjectFindHeader.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +300,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public XmlDictionaryReader GetReaderAtHeader(int headerIndex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReaderAtHeader = null;
         try {
-            JCObject objGetReaderAtHeader = (JCObject)classInstance.Invoke("GetReaderAtHeader", headerIndex);
+            retObjectGetReaderAtHeader = classInstance.Invoke("GetReaderAtHeader", headerIndex);
+            JCObject objGetReaderAtHeader = (JCObject)retObjectGetReaderAtHeader;
             return new XmlDictionaryReader(objGetReaderAtHeader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtHeader != null ? retObjectGetReaderAtHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +315,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void Add(MessageHeader header) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", header == null ? null : header.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +325,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -289,7 +335,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void CopyHeaderFrom(Message message, int headerIndex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyHeaderFrom", message == null ? null : message.getJCOInstance(), headerIndex);
         } catch (JCNativeException jcne) {
@@ -299,7 +345,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void CopyHeaderFrom(MessageHeaders collection, int headerIndex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyHeaderFrom", collection == null ? null : collection.getJCOInstance(), headerIndex);
         } catch (JCNativeException jcne) {
@@ -309,7 +355,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void CopyHeadersFrom(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyHeadersFrom", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,7 +365,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void CopyHeadersFrom(MessageHeaders collection) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyHeadersFrom", collection == null ? null : collection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +375,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void CopyTo(MessageHeaderInfo[] array, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -339,7 +385,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void Insert(int headerIndex, MessageHeader header) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", headerIndex, header == null ? null : header.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,7 +395,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void RemoveAll(java.lang.String name, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll", name, ns);
         } catch (JCNativeException jcne) {
@@ -359,7 +405,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void RemoveAt(int headerIndex) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAt", headerIndex);
         } catch (JCNativeException jcne) {
@@ -369,7 +415,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void SetAction(XmlDictionaryString action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAction", action == null ? null : action.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,7 +425,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteHeader(int headerIndex, XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeader", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -389,7 +435,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteHeader(int headerIndex, XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeader", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -399,7 +445,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteHeaderContents(int headerIndex, XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeaderContents", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,7 +455,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteHeaderContents(int headerIndex, XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteHeaderContents", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -419,7 +465,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteStartHeader(int headerIndex, XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartHeader", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,7 +475,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void WriteStartHeader(int headerIndex, XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartHeader", headerIndex, writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -443,9 +489,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,10 +503,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public MessageVersion getMessageVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageVersion");
+            retObjectMessageVersion = classInstance.Get("MessageVersion");
+            JCObject val = (JCObject)retObjectMessageVersion;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageVersion != null ? retObjectMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,10 +518,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public UnderstoodHeaders getUnderstoodHeaders() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderstoodHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderstoodHeaders");
+            retObjectUnderstoodHeaders = classInstance.Get("UnderstoodHeaders");
+            JCObject val = (JCObject)retObjectUnderstoodHeaders;
             return new UnderstoodHeaders(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderstoodHeaders != null ? retObjectUnderstoodHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,10 +533,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public EndpointAddress getFaultTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaultTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FaultTo");
+            retObjectFaultTo = classInstance.Get("FaultTo");
+            JCObject val = (JCObject)retObjectFaultTo;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaultTo != null ? retObjectFaultTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +548,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setFaultTo(EndpointAddress FaultTo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FaultTo", FaultTo == null ? null : FaultTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,10 +558,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public EndpointAddress getFrom() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("From");
+            retObjectFrom = classInstance.Get("From");
+            JCObject val = (JCObject)retObjectFrom;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +573,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setFrom(EndpointAddress From) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("From", From == null ? null : From.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,10 +583,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public EndpointAddress getReplyTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplyTo");
+            retObjectReplyTo = classInstance.Get("ReplyTo");
+            JCObject val = (JCObject)retObjectReplyTo;
             return new EndpointAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplyTo != null ? retObjectReplyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,7 +598,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setReplyTo(EndpointAddress ReplyTo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyTo", ReplyTo == null ? null : ReplyTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -538,9 +608,13 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public java.lang.String getAction() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,7 +622,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setAction(java.lang.String Action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
@@ -558,10 +632,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public Uri getTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.security.SecurityException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("To");
+            retObjectTo = classInstance.Get("To");
+            JCObject val = (JCObject)retObjectTo;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,7 +647,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setTo(Uri To) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("To", To == null ? null : To.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,10 +657,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public UniqueId getMessageId() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageId");
+            retObjectMessageId = classInstance.Get("MessageId");
+            JCObject val = (JCObject)retObjectMessageId;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageId != null ? retObjectMessageId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,7 +672,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setMessageId(UniqueId MessageId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageId", MessageId == null ? null : MessageId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -600,10 +682,14 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public UniqueId getRelatesTo() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.xml.XmlException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelatesTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RelatesTo");
+            retObjectRelatesTo = classInstance.Get("RelatesTo");
+            JCObject val = (JCObject)retObjectRelatesTo;
             return new UniqueId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRelatesTo != null ? retObjectRelatesTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,7 +697,7 @@ public class MessageHeaders extends NetObjectEnumerable  {
 
     public void setRelatesTo(UniqueId RelatesTo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RelatesTo", RelatesTo == null ? null : RelatesTo.getJCOInstance());
         } catch (JCNativeException jcne) {

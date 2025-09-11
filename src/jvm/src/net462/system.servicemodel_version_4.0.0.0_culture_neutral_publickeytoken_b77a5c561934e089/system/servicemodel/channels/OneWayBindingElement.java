@@ -167,9 +167,13 @@ public class OneWayBindingElement extends BindingElement implements system.servi
     
     public boolean ShouldSerializeChannelPoolSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeChannelPoolSettings = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeChannelPoolSettings");
+            retObjectShouldSerializeChannelPoolSettings = classInstance.Invoke("ShouldSerializeChannelPoolSettings");
+            return (boolean)retObjectShouldSerializeChannelPoolSettings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeChannelPoolSettings != null ? retObjectShouldSerializeChannelPoolSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class OneWayBindingElement extends BindingElement implements system.servi
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -201,9 +209,13 @@ public class OneWayBindingElement extends BindingElement implements system.servi
     
     public boolean getPacketRoutable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketRoutable = null;
         try {
-            return (boolean)classInstance.Get("PacketRoutable");
+            retObjectPacketRoutable = classInstance.Get("PacketRoutable");
+            return (boolean)retObjectPacketRoutable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPacketRoutable != null ? retObjectPacketRoutable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public void setPacketRoutable(boolean PacketRoutable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PacketRoutable", PacketRoutable);
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public int getMaxAcceptedChannels() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxAcceptedChannels = null;
         try {
-            return (int)classInstance.Get("MaxAcceptedChannels");
+            retObjectMaxAcceptedChannels = classInstance.Get("MaxAcceptedChannels");
+            return (int)retObjectMaxAcceptedChannels;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxAcceptedChannels != null ? retObjectMaxAcceptedChannels.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public void setMaxAcceptedChannels(int MaxAcceptedChannels) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxAcceptedChannels", MaxAcceptedChannels);
         } catch (JCNativeException jcne) {
@@ -241,10 +257,14 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public ChannelPoolSettings getChannelPoolSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannelPoolSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ChannelPoolSettings");
+            retObjectChannelPoolSettings = classInstance.Get("ChannelPoolSettings");
+            JCObject val = (JCObject)retObjectChannelPoolSettings;
             return new ChannelPoolSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannelPoolSettings != null ? retObjectChannelPoolSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class OneWayBindingElement extends BindingElement implements system.servi
 
     public void setChannelPoolSettings(ChannelPoolSettings ChannelPoolSettings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ChannelPoolSettings", ChannelPoolSettings == null ? null : ChannelPoolSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

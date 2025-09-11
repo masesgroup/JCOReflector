@@ -168,9 +168,13 @@ public class TextExpressionCompiler extends NetObject  {
     
     public boolean GenerateSource(TextWriter textWriter) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException, system.io.PathTooLongException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateSource = null;
         try {
-            return (boolean)classInstance.Invoke("GenerateSource", textWriter == null ? null : textWriter.getJCOInstance());
+            retObjectGenerateSource = classInstance.Invoke("GenerateSource", textWriter == null ? null : textWriter.getJCOInstance());
+            return (boolean)retObjectGenerateSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGenerateSource != null ? retObjectGenerateSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class TextExpressionCompiler extends NetObject  {
 
     public TextExpressionCompilerResults Compile() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadAbortException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException, system.io.PathTooLongException, system.security.SecurityException, system.UnauthorizedAccessException, system.xml.XmlException, system.NotImplementedException, system.xaml.XamlSchemaException, system.UriFormatException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompile = null;
         try {
-            JCObject objCompile = (JCObject)classInstance.Invoke("Compile");
+            retObjectCompile = classInstance.Invoke("Compile");
+            JCObject objCompile = (JCObject)retObjectCompile;
             return new TextExpressionCompilerResults(objCompile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompile != null ? retObjectCompile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

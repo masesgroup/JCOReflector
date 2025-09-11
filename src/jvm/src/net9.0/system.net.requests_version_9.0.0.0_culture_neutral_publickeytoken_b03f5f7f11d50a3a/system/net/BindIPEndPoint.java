@@ -176,7 +176,7 @@ public class BindIPEndPoint extends JCDelegate implements IJCEventEmit, IJCOBrid
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
+            throw new java.lang.UnsupportedOperationException(
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
@@ -190,10 +190,14 @@ public class BindIPEndPoint extends JCDelegate implements IJCEventEmit, IJCOBrid
 
     public IPEndPoint DynamicInvoke(ServicePoint servicePoint, IPEndPoint remoteEndPoint, int retryCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicInvoke = null;
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", servicePoint == null ? null : servicePoint.getJCOInstance(), remoteEndPoint == null ? null : remoteEndPoint.getJCOInstance(), retryCount);
+            retObjectDynamicInvoke = classInstance.Invoke("DynamicInvoke", servicePoint == null ? null : servicePoint.getJCOInstance(), remoteEndPoint == null ? null : remoteEndPoint.getJCOInstance(), retryCount);
+            JCObject objDynamicInvoke = (JCObject)retObjectDynamicInvoke;
             return new IPEndPoint(objDynamicInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamicInvoke != null ? retObjectDynamicInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

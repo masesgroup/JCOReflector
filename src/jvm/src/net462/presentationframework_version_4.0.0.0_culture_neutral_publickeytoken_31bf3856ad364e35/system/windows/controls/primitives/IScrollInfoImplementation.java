@@ -145,10 +145,14 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
     
     public Rect MakeVisible(Visual visual, Rect rectangle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMakeVisible = null;
         try {
-            JCObject objMakeVisible = (JCObject)classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            retObjectMakeVisible = classInstance.Invoke("MakeVisible", visual == null ? null : visual.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
+            JCObject objMakeVisible = (JCObject)retObjectMakeVisible;
             return new Rect(objMakeVisible);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeVisible != null ? retObjectMakeVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void LineDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineDown");
         } catch (JCNativeException jcne) {
@@ -166,7 +170,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void LineLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineLeft");
         } catch (JCNativeException jcne) {
@@ -176,7 +180,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void LineRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineRight");
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void LineUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LineUp");
         } catch (JCNativeException jcne) {
@@ -196,7 +200,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void MouseWheelDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelDown");
         } catch (JCNativeException jcne) {
@@ -206,7 +210,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void MouseWheelLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelLeft");
         } catch (JCNativeException jcne) {
@@ -216,7 +220,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void MouseWheelRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelRight");
         } catch (JCNativeException jcne) {
@@ -226,7 +230,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void MouseWheelUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MouseWheelUp");
         } catch (JCNativeException jcne) {
@@ -236,7 +240,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void PageDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageDown");
         } catch (JCNativeException jcne) {
@@ -246,7 +250,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void PageLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageLeft");
         } catch (JCNativeException jcne) {
@@ -256,7 +260,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void PageRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageRight");
         } catch (JCNativeException jcne) {
@@ -266,7 +270,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void PageUp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PageUp");
         } catch (JCNativeException jcne) {
@@ -276,7 +280,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void SetHorizontalOffset(double offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHorizontalOffset", offset);
         } catch (JCNativeException jcne) {
@@ -286,7 +290,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void SetVerticalOffset(double offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetVerticalOffset", offset);
         } catch (JCNativeException jcne) {
@@ -300,9 +304,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
     
     public boolean getCanHorizontallyScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanHorizontallyScroll = null;
         try {
-            return (boolean)classInstance.Get("CanHorizontallyScroll");
+            retObjectCanHorizontallyScroll = classInstance.Get("CanHorizontallyScroll");
+            return (boolean)retObjectCanHorizontallyScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanHorizontallyScroll != null ? retObjectCanHorizontallyScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +318,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void setCanHorizontallyScroll(boolean CanHorizontallyScroll) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanHorizontallyScroll", CanHorizontallyScroll);
         } catch (JCNativeException jcne) {
@@ -320,9 +328,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public boolean getCanVerticallyScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanVerticallyScroll = null;
         try {
-            return (boolean)classInstance.Get("CanVerticallyScroll");
+            retObjectCanVerticallyScroll = classInstance.Get("CanVerticallyScroll");
+            return (boolean)retObjectCanVerticallyScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanVerticallyScroll != null ? retObjectCanVerticallyScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +342,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void setCanVerticallyScroll(boolean CanVerticallyScroll) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CanVerticallyScroll", CanVerticallyScroll);
         } catch (JCNativeException jcne) {
@@ -340,9 +352,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getExtentHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentHeight = null;
         try {
-            return (double)classInstance.Get("ExtentHeight");
+            retObjectExtentHeight = classInstance.Get("ExtentHeight");
+            return (double)retObjectExtentHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentHeight != null ? retObjectExtentHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +366,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getExtentWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtentWidth = null;
         try {
-            return (double)classInstance.Get("ExtentWidth");
+            retObjectExtentWidth = classInstance.Get("ExtentWidth");
+            return (double)retObjectExtentWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtentWidth != null ? retObjectExtentWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,9 +380,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getHorizontalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalOffset = null;
         try {
-            return (double)classInstance.Get("HorizontalOffset");
+            retObjectHorizontalOffset = classInstance.Get("HorizontalOffset");
+            return (double)retObjectHorizontalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHorizontalOffset != null ? retObjectHorizontalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,9 +394,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getVerticalOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalOffset = null;
         try {
-            return (double)classInstance.Get("VerticalOffset");
+            retObjectVerticalOffset = classInstance.Get("VerticalOffset");
+            return (double)retObjectVerticalOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectVerticalOffset != null ? retObjectVerticalOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,9 +408,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getViewportHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportHeight = null;
         try {
-            return (double)classInstance.Get("ViewportHeight");
+            retObjectViewportHeight = classInstance.Get("ViewportHeight");
+            return (double)retObjectViewportHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportHeight != null ? retObjectViewportHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,9 +422,13 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public double getViewportWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewportWidth = null;
         try {
-            return (double)classInstance.Get("ViewportWidth");
+            retObjectViewportWidth = classInstance.Get("ViewportWidth");
+            return (double)retObjectViewportWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectViewportWidth != null ? retObjectViewportWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +436,14 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public ScrollViewer getScrollOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollOwner");
+            retObjectScrollOwner = classInstance.Get("ScrollOwner");
+            JCObject val = (JCObject)retObjectScrollOwner;
             return new ScrollViewer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollOwner != null ? retObjectScrollOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +451,7 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
 
     public void setScrollOwner(ScrollViewer ScrollOwner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScrollOwner", ScrollOwner == null ? null : ScrollOwner.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -158,10 +158,14 @@ public class RouteBase extends NetObject  {
     
     public RouteData GetRouteData(HttpContextBase httpContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRouteData = null;
         try {
-            JCObject objGetRouteData = (JCObject)classInstance.Invoke("GetRouteData", httpContext == null ? null : httpContext.getJCOInstance());
+            retObjectGetRouteData = classInstance.Invoke("GetRouteData", httpContext == null ? null : httpContext.getJCOInstance());
+            JCObject objGetRouteData = (JCObject)retObjectGetRouteData;
             return new RouteData(objGetRouteData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRouteData != null ? retObjectGetRouteData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class RouteBase extends NetObject  {
 
     public VirtualPathData GetVirtualPath(RequestContext requestContext, RouteValueDictionary values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualPath = null;
         try {
-            JCObject objGetVirtualPath = (JCObject)classInstance.Invoke("GetVirtualPath", requestContext == null ? null : requestContext.getJCOInstance(), values == null ? null : values.getJCOInstance());
+            retObjectGetVirtualPath = classInstance.Invoke("GetVirtualPath", requestContext == null ? null : requestContext.getJCOInstance(), values == null ? null : values.getJCOInstance());
+            JCObject objGetVirtualPath = (JCObject)retObjectGetVirtualPath;
             return new VirtualPathData(objGetVirtualPath);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVirtualPath != null ? retObjectGetVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class RouteBase extends NetObject  {
     
     public boolean getRouteExistingFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouteExistingFiles = null;
         try {
-            return (boolean)classInstance.Get("RouteExistingFiles");
+            retObjectRouteExistingFiles = classInstance.Get("RouteExistingFiles");
+            return (boolean)retObjectRouteExistingFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRouteExistingFiles != null ? retObjectRouteExistingFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +206,7 @@ public class RouteBase extends NetObject  {
 
     public void setRouteExistingFiles(boolean RouteExistingFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RouteExistingFiles", RouteExistingFiles);
         } catch (JCNativeException jcne) {

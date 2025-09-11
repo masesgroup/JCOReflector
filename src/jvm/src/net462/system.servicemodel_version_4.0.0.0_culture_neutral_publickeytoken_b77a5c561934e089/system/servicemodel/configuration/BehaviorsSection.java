@@ -168,10 +168,14 @@ public class BehaviorsSection extends ConfigurationSection  {
     
     public EndpointBehaviorElementCollection getEndpointBehaviors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndpointBehaviors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EndpointBehaviors");
+            retObjectEndpointBehaviors = classInstance.Get("EndpointBehaviors");
+            JCObject val = (JCObject)retObjectEndpointBehaviors;
             return new EndpointBehaviorElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndpointBehaviors != null ? retObjectEndpointBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class BehaviorsSection extends ConfigurationSection  {
 
     public ServiceBehaviorElementCollection getServiceBehaviors() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceBehaviors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceBehaviors");
+            retObjectServiceBehaviors = classInstance.Get("ServiceBehaviors");
+            JCObject val = (JCObject)retObjectServiceBehaviors;
             return new ServiceBehaviorElementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceBehaviors != null ? retObjectServiceBehaviors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

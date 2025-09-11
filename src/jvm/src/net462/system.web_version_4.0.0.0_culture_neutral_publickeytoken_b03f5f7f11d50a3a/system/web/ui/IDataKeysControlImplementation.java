@@ -147,10 +147,12 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
     
     public java.lang.String[] getClientIDRowSuffix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientIDRowSuffix = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ClientIDRowSuffix");
+            retObjectClientIDRowSuffix = classInstance.Get("ClientIDRowSuffix");
+            JCObject resultingObjects = (JCObject)retObjectClientIDRowSuffix;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -159,6 +161,8 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
 				resultingArray[indexClientIDRowSuffix] = (java.lang.String)resultingArrayList.get(indexClientIDRowSuffix);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectClientIDRowSuffix != null ? retObjectClientIDRowSuffix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
 
     public DataKeyArray getClientIDRowSuffixDataKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientIDRowSuffixDataKeys = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientIDRowSuffixDataKeys");
+            retObjectClientIDRowSuffixDataKeys = classInstance.Get("ClientIDRowSuffixDataKeys");
+            JCObject val = (JCObject)retObjectClientIDRowSuffixDataKeys;
             return new DataKeyArray(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientIDRowSuffixDataKeys != null ? retObjectClientIDRowSuffixDataKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

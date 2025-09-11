@@ -164,9 +164,13 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
     
     public boolean getIsNavigationInitiator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNavigationInitiator = null;
         try {
-            return (boolean)classInstance.Get("IsNavigationInitiator");
+            retObjectIsNavigationInitiator = classInstance.Get("IsNavigationInitiator");
+            return (boolean)retObjectIsNavigationInitiator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNavigationInitiator != null ? retObjectIsNavigationInitiator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public WebRequest getWebRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebRequest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebRequest");
+            retObjectWebRequest = classInstance.Get("WebRequest");
+            JCObject val = (JCObject)retObjectWebRequest;
             return new WebRequest(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebRequest != null ? retObjectWebRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public NetObject getContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Content");
+            retObjectContent = classInstance.Get("Content");
+            JCObject val = (JCObject)retObjectContent;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContent != null ? retObjectContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public NetObject getExtraData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtraData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtraData");
+            retObjectExtraData = classInstance.Get("ExtraData");
+            JCObject val = (JCObject)retObjectExtraData;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtraData != null ? retObjectExtraData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +223,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public NetObject getNavigator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Navigator");
+            retObjectNavigator = classInstance.Get("Navigator");
+            JCObject val = (JCObject)retObjectNavigator;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigator != null ? retObjectNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +238,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +253,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public CustomContentState getContentStateToSave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentStateToSave = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentStateToSave");
+            retObjectContentStateToSave = classInstance.Get("ContentStateToSave");
+            JCObject val = (JCObject)retObjectContentStateToSave;
             return new CustomContentState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentStateToSave != null ? retObjectContentStateToSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +268,7 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public void setContentStateToSave(CustomContentState ContentStateToSave) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentStateToSave", ContentStateToSave == null ? null : ContentStateToSave.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +278,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public CustomContentState getTargetContentState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetContentState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetContentState");
+            retObjectTargetContentState = classInstance.Get("TargetContentState");
+            JCObject val = (JCObject)retObjectTargetContentState;
             return new CustomContentState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetContentState != null ? retObjectTargetContentState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +293,14 @@ public class NavigatingCancelEventArgs extends CancelEventArgs  {
 
     public NavigationMode getNavigationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NavigationMode");
+            retObjectNavigationMode = classInstance.Get("NavigationMode");
+            JCObject val = (JCObject)retObjectNavigationMode;
             return new NavigationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigationMode != null ? retObjectNavigationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,10 +160,14 @@ public class LocalScope extends ValueType  {
     
     public LocalConstantHandleCollection GetLocalConstants() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalConstants = null;
         try {
-            JCObject objGetLocalConstants = (JCObject)classInstance.Invoke("GetLocalConstants");
+            retObjectGetLocalConstants = classInstance.Invoke("GetLocalConstants");
+            JCObject objGetLocalConstants = (JCObject)retObjectGetLocalConstants;
             return new LocalConstantHandleCollection(objGetLocalConstants);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalConstants != null ? retObjectGetLocalConstants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class LocalScope extends ValueType  {
 
     public LocalVariableHandleCollection GetLocalVariables() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalVariables = null;
         try {
-            JCObject objGetLocalVariables = (JCObject)classInstance.Invoke("GetLocalVariables");
+            retObjectGetLocalVariables = classInstance.Invoke("GetLocalVariables");
+            JCObject objGetLocalVariables = (JCObject)retObjectGetLocalVariables;
             return new LocalVariableHandleCollection(objGetLocalVariables);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLocalVariables != null ? retObjectGetLocalVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class LocalScope extends ValueType  {
     
     public int getEndOffset() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndOffset = null;
         try {
-            return (int)classInstance.Get("EndOffset");
+            retObjectEndOffset = classInstance.Get("EndOffset");
+            return (int)retObjectEndOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndOffset != null ? retObjectEndOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class LocalScope extends ValueType  {
 
     public int getLength() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (int)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (int)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class LocalScope extends ValueType  {
 
     public int getStartOffset() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartOffset = null;
         try {
-            return (int)classInstance.Get("StartOffset");
+            retObjectStartOffset = classInstance.Get("StartOffset");
+            return (int)retObjectStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartOffset != null ? retObjectStartOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class LocalScope extends ValueType  {
 
     public ImportScopeHandle getImportScope() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportScope");
+            retObjectImportScope = classInstance.Get("ImportScope");
+            JCObject val = (JCObject)retObjectImportScope;
             return new ImportScopeHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportScope != null ? retObjectImportScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class LocalScope extends ValueType  {
 
     public MethodDefinitionHandle getMethod() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            JCObject val = (JCObject)retObjectMethod;
             return new MethodDefinitionHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

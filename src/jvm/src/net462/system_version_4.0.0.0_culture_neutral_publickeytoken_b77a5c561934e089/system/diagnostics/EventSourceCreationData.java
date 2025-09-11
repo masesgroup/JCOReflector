@@ -169,9 +169,13 @@ public class EventSourceCreationData extends NetObject  {
     
     public int getCategoryCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryCount = null;
         try {
-            return (int)classInstance.Get("CategoryCount");
+            retObjectCategoryCount = classInstance.Get("CategoryCount");
+            return (int)retObjectCategoryCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCategoryCount != null ? retObjectCategoryCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setCategoryCount(int CategoryCount) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryCount", CategoryCount);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getCategoryResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("CategoryResourceFile");
+            retObjectCategoryResourceFile = classInstance.Get("CategoryResourceFile");
+            return (java.lang.String)retObjectCategoryResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCategoryResourceFile != null ? retObjectCategoryResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setCategoryResourceFile(java.lang.String CategoryResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CategoryResourceFile", CategoryResourceFile);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getLogName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogName = null;
         try {
-            return (java.lang.String)classInstance.Get("LogName");
+            retObjectLogName = classInstance.Get("LogName");
+            return (java.lang.String)retObjectLogName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogName != null ? retObjectLogName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setLogName(java.lang.String LogName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogName", LogName);
         } catch (JCNativeException jcne) {
@@ -229,9 +241,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setMachineName(java.lang.String MachineName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MachineName", MachineName);
         } catch (JCNativeException jcne) {
@@ -249,9 +265,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getMessageResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("MessageResourceFile");
+            retObjectMessageResourceFile = classInstance.Get("MessageResourceFile");
+            return (java.lang.String)retObjectMessageResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessageResourceFile != null ? retObjectMessageResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setMessageResourceFile(java.lang.String MessageResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageResourceFile", MessageResourceFile);
         } catch (JCNativeException jcne) {
@@ -269,9 +289,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getParameterResourceFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterResourceFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ParameterResourceFile");
+            retObjectParameterResourceFile = classInstance.Get("ParameterResourceFile");
+            return (java.lang.String)retObjectParameterResourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectParameterResourceFile != null ? retObjectParameterResourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setParameterResourceFile(java.lang.String ParameterResourceFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterResourceFile", ParameterResourceFile);
         } catch (JCNativeException jcne) {
@@ -289,9 +313,13 @@ public class EventSourceCreationData extends NetObject  {
 
     public java.lang.String getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            return (java.lang.String)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            return (java.lang.String)retObjectSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class EventSourceCreationData extends NetObject  {
 
     public void setSource(java.lang.String Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source);
         } catch (JCNativeException jcne) {

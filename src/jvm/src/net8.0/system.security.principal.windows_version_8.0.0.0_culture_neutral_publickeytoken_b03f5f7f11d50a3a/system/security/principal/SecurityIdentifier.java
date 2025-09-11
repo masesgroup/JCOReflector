@@ -188,9 +188,13 @@ public class SecurityIdentifier extends IdentityReference  {
     
     public boolean Equals(SecurityIdentifier sid) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", sid == null ? null : sid.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", sid == null ? null : sid.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +202,13 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public boolean IsAccountSid() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAccountSid = null;
         try {
-            return (boolean)classInstance.Invoke("IsAccountSid");
+            retObjectIsAccountSid = classInstance.Invoke("IsAccountSid");
+            return (boolean)retObjectIsAccountSid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAccountSid != null ? retObjectIsAccountSid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +216,13 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public boolean IsEqualDomainSid(SecurityIdentifier sid) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEqualDomainSid = null;
         try {
-            return (boolean)classInstance.Invoke("IsEqualDomainSid", sid == null ? null : sid.getJCOInstance());
+            retObjectIsEqualDomainSid = classInstance.Invoke("IsEqualDomainSid", sid == null ? null : sid.getJCOInstance());
+            return (boolean)retObjectIsEqualDomainSid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEqualDomainSid != null ? retObjectIsEqualDomainSid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +230,13 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public boolean IsValidTargetType(NetType targetType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidTargetType = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
+            retObjectIsValidTargetType = classInstance.Invoke("IsValidTargetType", targetType == null ? null : targetType.getJCOInstance());
+            return (boolean)retObjectIsValidTargetType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidTargetType != null ? retObjectIsValidTargetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +244,13 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public boolean IsWellKnown(WellKnownSidType type) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWellKnown = null;
         try {
-            return (boolean)classInstance.Invoke("IsWellKnown", type == null ? null : type.getJCOInstance());
+            retObjectIsWellKnown = classInstance.Invoke("IsWellKnown", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsWellKnown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWellKnown != null ? retObjectIsWellKnown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +258,19 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public int CompareTo(SecurityIdentifier sid) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", sid == null ? null : sid.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", sid == null ? null : sid.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +278,14 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public IdentityReference Translate(NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTranslate = null;
         try {
-            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            retObjectTranslate = classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            JCObject objTranslate = (JCObject)retObjectTranslate;
             return new IdentityReference(objTranslate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTranslate != null ? retObjectTranslate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +293,7 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -269,7 +303,7 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -283,9 +317,13 @@ public class SecurityIdentifier extends IdentityReference  {
     
     public int getBinaryLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryLength = null;
         try {
-            return (int)classInstance.Get("BinaryLength");
+            retObjectBinaryLength = classInstance.Get("BinaryLength");
+            return (int)retObjectBinaryLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBinaryLength != null ? retObjectBinaryLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +331,14 @@ public class SecurityIdentifier extends IdentityReference  {
 
     public SecurityIdentifier getAccountDomainSid() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccountDomainSid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccountDomainSid");
+            retObjectAccountDomainSid = classInstance.Get("AccountDomainSid");
+            JCObject val = (JCObject)retObjectAccountDomainSid;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccountDomainSid != null ? retObjectAccountDomainSid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

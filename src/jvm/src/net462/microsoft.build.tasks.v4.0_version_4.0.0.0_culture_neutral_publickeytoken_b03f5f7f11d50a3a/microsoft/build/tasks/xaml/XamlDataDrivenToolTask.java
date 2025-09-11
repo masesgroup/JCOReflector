@@ -155,9 +155,13 @@ public class XamlDataDrivenToolTask extends ToolTask  {
     
     public boolean Execute() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.InvalidCastException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.threading.SemaphoreFullException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public boolean IsPropertySet(java.lang.String propertyName) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPropertySet = null;
         try {
-            return (boolean)classInstance.Invoke("IsPropertySet", propertyName);
+            retObjectIsPropertySet = classInstance.Invoke("IsPropertySet", propertyName);
+            return (boolean)retObjectIsPropertySet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPropertySet != null ? retObjectIsPropertySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +183,13 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public boolean ValidateInteger(java.lang.String switchName, int min, int max, int value) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateInteger = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateInteger", switchName, min, max, value);
+            retObjectValidateInteger = classInstance.Invoke("ValidateInteger", switchName, min, max, value);
+            return (boolean)retObjectValidateInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateInteger != null ? retObjectValidateInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +197,7 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public void AddActiveSwitchToolValue(CommandLineToolSwitch switchToAdd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddActiveSwitchToolValue", switchToAdd == null ? null : switchToAdd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +207,7 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public void ReplaceToolSwitch(CommandLineToolSwitch switchToAdd) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReplaceToolSwitch", switchToAdd == null ? null : switchToAdd.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,9 +221,13 @@ public class XamlDataDrivenToolTask extends ToolTask  {
     
     public java.lang.String getAdditionalOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalOptions = null;
         try {
-            return (java.lang.String)classInstance.Get("AdditionalOptions");
+            retObjectAdditionalOptions = classInstance.Get("AdditionalOptions");
+            return (java.lang.String)retObjectAdditionalOptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAdditionalOptions != null ? retObjectAdditionalOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public void setAdditionalOptions(java.lang.String AdditionalOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalOptions", AdditionalOptions);
         } catch (JCNativeException jcne) {
@@ -229,9 +245,13 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public java.lang.String getCommandLineTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandLineTemplate = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandLineTemplate");
+            retObjectCommandLineTemplate = classInstance.Get("CommandLineTemplate");
+            return (java.lang.String)retObjectCommandLineTemplate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandLineTemplate != null ? retObjectCommandLineTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public void setCommandLineTemplate(java.lang.String CommandLineTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandLineTemplate", CommandLineTemplate);
         } catch (JCNativeException jcne) {
@@ -249,10 +269,12 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public java.lang.String[] getAcceptableNonZeroExitCodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptableNonZeroExitCodes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AcceptableNonZeroExitCodes");
+            retObjectAcceptableNonZeroExitCodes = classInstance.Get("AcceptableNonZeroExitCodes");
+            JCObject resultingObjects = (JCObject)retObjectAcceptableNonZeroExitCodes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -261,6 +283,8 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 				resultingArray[indexAcceptableNonZeroExitCodes] = (java.lang.String)resultingArrayList.get(indexAcceptableNonZeroExitCodes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAcceptableNonZeroExitCodes != null ? retObjectAcceptableNonZeroExitCodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class XamlDataDrivenToolTask extends ToolTask  {
 
     public void setAcceptableNonZeroExitCodes(java.lang.String[] AcceptableNonZeroExitCodes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptableNonZeroExitCodes", AcceptableNonZeroExitCodes);
         } catch (JCNativeException jcne) {

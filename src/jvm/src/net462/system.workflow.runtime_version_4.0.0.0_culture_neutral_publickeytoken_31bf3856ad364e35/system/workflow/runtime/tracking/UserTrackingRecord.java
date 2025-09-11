@@ -180,10 +180,14 @@ public class UserTrackingRecord extends TrackingRecord  {
     
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextGuid");
+            retObjectContextGuid = classInstance.Get("ContextGuid");
+            JCObject val = (JCObject)retObjectContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextGuid != null ? retObjectContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setContextGuid(Guid ContextGuid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContextGuid", ContextGuid == null ? null : ContextGuid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +205,14 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public Guid getParentContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentContextGuid");
+            retObjectParentContextGuid = classInstance.Get("ParentContextGuid");
+            JCObject val = (JCObject)retObjectParentContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentContextGuid != null ? retObjectParentContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setParentContextGuid(Guid ParentContextGuid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParentContextGuid", ParentContextGuid == null ? null : ParentContextGuid.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public NetObject getUserData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserData");
+            retObjectUserData = classInstance.Get("UserData");
+            JCObject val = (JCObject)retObjectUserData;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserData != null ? retObjectUserData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +245,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setUserData(NetObject UserData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserData", UserData == null ? null : UserData.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,9 +255,13 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public java.lang.String getQualifiedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualifiedName = null;
         try {
-            return (java.lang.String)classInstance.Get("QualifiedName");
+            retObjectQualifiedName = classInstance.Get("QualifiedName");
+            return (java.lang.String)retObjectQualifiedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectQualifiedName != null ? retObjectQualifiedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +269,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setQualifiedName(java.lang.String QualifiedName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("QualifiedName", QualifiedName);
         } catch (JCNativeException jcne) {
@@ -263,9 +279,13 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public java.lang.String getUserDataKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserDataKey = null;
         try {
-            return (java.lang.String)classInstance.Get("UserDataKey");
+            retObjectUserDataKey = classInstance.Get("UserDataKey");
+            return (java.lang.String)retObjectUserDataKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserDataKey != null ? retObjectUserDataKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +293,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setUserDataKey(java.lang.String UserDataKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserDataKey", UserDataKey);
         } catch (JCNativeException jcne) {
@@ -283,10 +303,14 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public NetType getActivityType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityType");
+            retObjectActivityType = classInstance.Get("ActivityType");
+            JCObject val = (JCObject)retObjectActivityType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityType != null ? retObjectActivityType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +318,7 @@ public class UserTrackingRecord extends TrackingRecord  {
 
     public void setActivityType(NetType ActivityType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityType", ActivityType == null ? null : ActivityType.getJCOInstance());
         } catch (JCNativeException jcne) {

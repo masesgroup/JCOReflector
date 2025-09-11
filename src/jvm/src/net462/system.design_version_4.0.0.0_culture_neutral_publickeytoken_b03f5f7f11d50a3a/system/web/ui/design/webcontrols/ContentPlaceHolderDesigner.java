@@ -164,9 +164,13 @@ public class ContentPlaceHolderDesigner extends ControlDesigner  {
     
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.NullReferenceException, system.web.HttpException, system.OutOfMemoryException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class ContentPlaceHolderDesigner extends ControlDesigner  {
 
     public java.lang.String GetDesignTimeHtml(DesignerRegionCollection regions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml", regions == null ? null : regions.getJCOInstance());
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class ContentPlaceHolderDesigner extends ControlDesigner  {
 
     public java.lang.String GetEditableDesignerRegionContent(EditableDesignerRegion region) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditableDesignerRegionContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            retObjectGetEditableDesignerRegionContent = classInstance.Invoke("GetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance());
+            return (java.lang.String)retObjectGetEditableDesignerRegionContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEditableDesignerRegionContent != null ? retObjectGetEditableDesignerRegionContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class ContentPlaceHolderDesigner extends ControlDesigner  {
 
     public java.lang.String GetPersistenceContent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPersistenceContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPersistenceContent");
+            retObjectGetPersistenceContent = classInstance.Invoke("GetPersistenceContent");
+            return (java.lang.String)retObjectGetPersistenceContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPersistenceContent != null ? retObjectGetPersistenceContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class ContentPlaceHolderDesigner extends ControlDesigner  {
 
     public void SetEditableDesignerRegionContent(EditableDesignerRegion region, java.lang.String content) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetEditableDesignerRegionContent", region == null ? null : region.getJCOInstance(), content);
         } catch (JCNativeException jcne) {

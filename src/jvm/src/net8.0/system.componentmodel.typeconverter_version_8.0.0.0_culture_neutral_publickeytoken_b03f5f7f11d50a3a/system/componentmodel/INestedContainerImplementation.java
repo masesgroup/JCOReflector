@@ -149,7 +149,7 @@ public class INestedContainerImplementation extends NetObject implements INested
     
     public void Add(IComponent component, java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", component == null ? null : component.getJCOInstance(), name);
         } catch (JCNativeException jcne) {
@@ -159,7 +159,7 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     public void Add(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +169,7 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     public void Remove(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +193,14 @@ public class INestedContainerImplementation extends NetObject implements INested
     
     public ComponentCollection getComponents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponents = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Components");
+            retObjectComponents = classInstance.Get("Components");
+            JCObject val = (JCObject)retObjectComponents;
             return new ComponentCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponents != null ? retObjectComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     public IComponent getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new IComponentImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

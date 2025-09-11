@@ -165,10 +165,14 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
     
     public DesignerHierarchicalDataSourceView GetView(java.lang.String viewPath) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewPath);
+            retObjectGetView = classInstance.Invoke("GetView", viewPath);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DesignerHierarchicalDataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void Configure() throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.RankException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Configure");
         } catch (JCNativeException jcne) {
@@ -186,7 +190,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +200,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void RefreshSchema(boolean preferSilent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshSchema", preferSilent);
         } catch (JCNativeException jcne) {
@@ -210,7 +214,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
      */
     @Deprecated 
     public java.lang.String[] GetViewNames() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
     }
 
     /**
@@ -219,7 +223,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
      */
     @Deprecated 
     public void ResumeDataSourceEvents() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
     }
 
     /**
@@ -228,7 +232,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
      */
     @Deprecated 
     public void SuppressDataSourceEvents() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
     }
 
 
@@ -237,9 +241,13 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
     
     public java.lang.String getData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
-            return (java.lang.String)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            return (java.lang.String)retObjectData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +255,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void setData(java.lang.String Data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Data", Data);
         } catch (JCNativeException jcne) {
@@ -257,9 +265,13 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public java.lang.String getDataFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataFile = null;
         try {
-            return (java.lang.String)classInstance.Get("DataFile");
+            retObjectDataFile = classInstance.Get("DataFile");
+            return (java.lang.String)retObjectDataFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataFile != null ? retObjectDataFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +279,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void setDataFile(java.lang.String DataFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataFile", DataFile);
         } catch (JCNativeException jcne) {
@@ -277,9 +289,13 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public java.lang.String getTransform() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            return (java.lang.String)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            return (java.lang.String)retObjectTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +303,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void setTransform(java.lang.String Transform) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform);
         } catch (JCNativeException jcne) {
@@ -297,9 +313,13 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public java.lang.String getTransformFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformFile = null;
         try {
-            return (java.lang.String)classInstance.Get("TransformFile");
+            retObjectTransformFile = classInstance.Get("TransformFile");
+            return (java.lang.String)retObjectTransformFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTransformFile != null ? retObjectTransformFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +327,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void setTransformFile(java.lang.String TransformFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransformFile", TransformFile);
         } catch (JCNativeException jcne) {
@@ -317,9 +337,13 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public java.lang.String getXPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXPath = null;
         try {
-            return (java.lang.String)classInstance.Get("XPath");
+            retObjectXPath = classInstance.Get("XPath");
+            return (java.lang.String)retObjectXPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXPath != null ? retObjectXPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +351,7 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
 
     public void setXPath(java.lang.String XPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XPath", XPath);
         } catch (JCNativeException jcne) {

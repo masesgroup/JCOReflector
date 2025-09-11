@@ -144,10 +144,14 @@ public class ITokenEnumeratorImplementation extends NetObject implements ITokenE
     
     public ITokenColorInfo GetNext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNext = null;
         try {
-            JCObject objGetNext = (JCObject)classInstance.Invoke("GetNext");
+            retObjectGetNext = classInstance.Invoke("GetNext");
+            JCObject objGetNext = (JCObject)retObjectGetNext;
             return new ITokenColorInfoImplementation(objGetNext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNext != null ? retObjectGetNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class ITokenEnumeratorImplementation extends NetObject implements ITokenE
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {

@@ -180,9 +180,13 @@ public class WebBrowserBase extends Control  {
     
     public boolean PreProcessMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreProcessMessage = null;
         try {
-            return (boolean)classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
+            retObjectPreProcessMessage = classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
+            return (boolean)retObjectPreProcessMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPreProcessMessage != null ? retObjectPreProcessMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class WebBrowserBase extends Control  {
 
     public void DrawToBitmapNewWebBrowserBase(Bitmap bitmap, Rectangle targetBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToBitmap", bitmap == null ? null : bitmap.getJCOInstance(), targetBounds == null ? null : targetBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class WebBrowserBase extends Control  {
     
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class WebBrowserBase extends Control  {
 
     public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -224,9 +232,13 @@ public class WebBrowserBase extends Control  {
 
     public boolean getUseWaitCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseWaitCursor = null;
         try {
-            return (boolean)classInstance.Get("UseWaitCursor");
+            retObjectUseWaitCursor = classInstance.Get("UseWaitCursor");
+            return (boolean)retObjectUseWaitCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseWaitCursor != null ? retObjectUseWaitCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +246,7 @@ public class WebBrowserBase extends Control  {
 
     public void setUseWaitCursor(boolean UseWaitCursor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseWaitCursor", UseWaitCursor);
         } catch (JCNativeException jcne) {
@@ -244,10 +256,14 @@ public class WebBrowserBase extends Control  {
 
     public NetObject getActiveXInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveXInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveXInstance");
+            retObjectActiveXInstance = classInstance.Get("ActiveXInstance");
+            JCObject val = (JCObject)retObjectActiveXInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveXInstance != null ? retObjectActiveXInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +271,14 @@ public class WebBrowserBase extends Control  {
 
     public ImeMode getImeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeMode");
+            retObjectImeMode = classInstance.Get("ImeMode");
+            JCObject val = (JCObject)retObjectImeMode;
             return new ImeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeMode != null ? retObjectImeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +286,7 @@ public class WebBrowserBase extends Control  {
 
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeMode", ImeMode == null ? null : ImeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,7 +301,7 @@ public class WebBrowserBase extends Control  {
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -291,7 +311,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -301,7 +321,7 @@ public class WebBrowserBase extends Control  {
 
     public void addBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -311,7 +331,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeBackgroundImageChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -321,7 +341,7 @@ public class WebBrowserBase extends Control  {
 
     public void addBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -331,7 +351,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeBackgroundImageLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackgroundImageLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -341,7 +361,7 @@ public class WebBrowserBase extends Control  {
 
     public void addBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -351,7 +371,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeBindingContextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BindingContextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -361,7 +381,7 @@ public class WebBrowserBase extends Control  {
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -371,7 +391,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -381,7 +401,7 @@ public class WebBrowserBase extends Control  {
 
     public void addCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CursorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -391,7 +411,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeCursorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CursorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -401,7 +421,7 @@ public class WebBrowserBase extends Control  {
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -411,7 +431,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -421,7 +441,7 @@ public class WebBrowserBase extends Control  {
 
     public void addDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -431,7 +451,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -441,7 +461,7 @@ public class WebBrowserBase extends Control  {
 
     public void addEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -451,7 +471,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -461,7 +481,7 @@ public class WebBrowserBase extends Control  {
 
     public void addEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -471,7 +491,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -481,7 +501,7 @@ public class WebBrowserBase extends Control  {
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -491,7 +511,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -501,7 +521,7 @@ public class WebBrowserBase extends Control  {
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -511,7 +531,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -521,7 +541,7 @@ public class WebBrowserBase extends Control  {
 
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -531,7 +551,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -541,7 +561,7 @@ public class WebBrowserBase extends Control  {
 
     public void addLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -551,7 +571,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -561,7 +581,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseCaptureChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseCaptureChanged", handler);
         } catch (JCNativeException jcne) {
@@ -571,7 +591,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseCaptureChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseCaptureChanged", handler);
         } catch (JCNativeException jcne) {
@@ -581,7 +601,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -591,7 +611,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -601,7 +621,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -611,7 +631,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -621,7 +641,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -631,7 +651,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -641,7 +661,7 @@ public class WebBrowserBase extends Control  {
 
     public void addRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -651,7 +671,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -661,7 +681,7 @@ public class WebBrowserBase extends Control  {
 
     public void addStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -671,7 +691,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("StyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -681,7 +701,7 @@ public class WebBrowserBase extends Control  {
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -691,7 +711,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -701,7 +721,7 @@ public class WebBrowserBase extends Control  {
 
     public void addDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -711,7 +731,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -721,7 +741,7 @@ public class WebBrowserBase extends Control  {
 
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -731,7 +751,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -741,7 +761,7 @@ public class WebBrowserBase extends Control  {
 
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -751,7 +771,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -761,7 +781,7 @@ public class WebBrowserBase extends Control  {
 
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -771,7 +791,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -781,7 +801,7 @@ public class WebBrowserBase extends Control  {
 
     public void addHelpRequested(HelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpRequested", handler);
         } catch (JCNativeException jcne) {
@@ -791,7 +811,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeHelpRequested(HelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequested", handler);
         } catch (JCNativeException jcne) {
@@ -801,7 +821,7 @@ public class WebBrowserBase extends Control  {
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -811,7 +831,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -821,7 +841,7 @@ public class WebBrowserBase extends Control  {
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -831,7 +851,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -841,7 +861,7 @@ public class WebBrowserBase extends Control  {
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -851,7 +871,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -861,7 +881,7 @@ public class WebBrowserBase extends Control  {
 
     public void addLayout(LayoutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Layout", handler);
         } catch (JCNativeException jcne) {
@@ -871,7 +891,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeLayout(LayoutEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Layout", handler);
         } catch (JCNativeException jcne) {
@@ -881,7 +901,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -891,7 +911,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseClick", handler);
         } catch (JCNativeException jcne) {
@@ -901,7 +921,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -911,7 +931,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseDoubleClick(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -921,7 +941,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -931,7 +951,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -941,7 +961,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -951,7 +971,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -961,7 +981,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -971,7 +991,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -981,7 +1001,7 @@ public class WebBrowserBase extends Control  {
 
     public void addMouseWheel(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -991,7 +1011,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeMouseWheel(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseWheel", handler);
         } catch (JCNativeException jcne) {
@@ -1001,7 +1021,7 @@ public class WebBrowserBase extends Control  {
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -1011,7 +1031,7 @@ public class WebBrowserBase extends Control  {
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -1021,7 +1041,7 @@ public class WebBrowserBase extends Control  {
 
     public void addQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -1031,7 +1051,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -1041,7 +1061,7 @@ public class WebBrowserBase extends Control  {
 
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -1051,7 +1071,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -1061,7 +1081,7 @@ public class WebBrowserBase extends Control  {
 
     public void addChangeUICues(UICuesEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ChangeUICues", handler);
         } catch (JCNativeException jcne) {
@@ -1071,7 +1091,7 @@ public class WebBrowserBase extends Control  {
 
     public void removeChangeUICues(UICuesEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ChangeUICues", handler);
         } catch (JCNativeException jcne) {

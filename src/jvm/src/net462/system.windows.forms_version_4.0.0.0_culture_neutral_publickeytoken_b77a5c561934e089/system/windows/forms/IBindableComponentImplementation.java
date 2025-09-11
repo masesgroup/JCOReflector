@@ -151,7 +151,7 @@ public class IBindableComponentImplementation extends NetObject implements IBind
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -165,10 +165,14 @@ public class IBindableComponentImplementation extends NetObject implements IBind
     
     public ISite getSite() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSite = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Site");
+            retObjectSite = classInstance.Get("Site");
+            JCObject val = (JCObject)retObjectSite;
             return new ISiteImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSite != null ? retObjectSite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public void setSite(ISite Site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Site", Site == null ? null : Site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public BindingContext getBindingContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BindingContext");
+            retObjectBindingContext = classInstance.Get("BindingContext");
+            JCObject val = (JCObject)retObjectBindingContext;
             return new BindingContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindingContext != null ? retObjectBindingContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public void setBindingContext(BindingContext BindingContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingContext", BindingContext == null ? null : BindingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public ControlBindingsCollection getDataBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new ControlBindingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +235,7 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public void addDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {
@@ -233,7 +245,7 @@ public class IBindableComponentImplementation extends NetObject implements IBind
 
     public void removeDisposed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Disposed", handler);
         } catch (JCNativeException jcne) {

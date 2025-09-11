@@ -198,9 +198,13 @@ public class XmlValidatingReader extends XmlReader  {
     
     public boolean HasLineInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasLineInfo = null;
         try {
-            return (boolean)classInstance.Invoke("HasLineInfo");
+            retObjectHasLineInfo = classInstance.Invoke("HasLineInfo");
+            return (boolean)retObjectHasLineInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasLineInfo != null ? retObjectHasLineInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +212,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean MoveToAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", localName, namespaceURI);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", localName, namespaceURI);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +226,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean MoveToAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name);
+            retObjectMoveToAttribute = classInstance.Invoke("MoveToAttribute", name);
+            return (boolean)retObjectMoveToAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToAttribute != null ? retObjectMoveToAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +240,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean MoveToElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToElement = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToElement");
+            retObjectMoveToElement = classInstance.Invoke("MoveToElement");
+            return (boolean)retObjectMoveToElement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToElement != null ? retObjectMoveToElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +254,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean MoveToFirstAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToFirstAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToFirstAttribute");
+            retObjectMoveToFirstAttribute = classInstance.Invoke("MoveToFirstAttribute");
+            return (boolean)retObjectMoveToFirstAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToFirstAttribute != null ? retObjectMoveToFirstAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +268,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean MoveToNextAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveToNextAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("MoveToNextAttribute");
+            retObjectMoveToNextAttribute = classInstance.Invoke("MoveToNextAttribute");
+            return (boolean)retObjectMoveToNextAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMoveToNextAttribute != null ? retObjectMoveToNextAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +282,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean Read() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +296,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public boolean ReadAttributeValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAttributeValue = null;
         try {
-            return (boolean)classInstance.Invoke("ReadAttributeValue");
+            retObjectReadAttributeValue = classInstance.Invoke("ReadAttributeValue");
+            return (boolean)retObjectReadAttributeValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectReadAttributeValue != null ? retObjectReadAttributeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +310,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadContentAsBase64(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", buffer, index, count);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +330,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadContentAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBase64 = classInstance.Invoke("ReadContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBase64Number = (java.lang.Number)retObjectReadContentAsBase64;
+                return retObjectReadContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBase64 != null ? retObjectReadContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +350,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadContentAsBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", buffer, index, count);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +370,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadContentAsBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadContentAsBinHex = classInstance.Invoke("ReadContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadContentAsBinHexNumber = (java.lang.Number)retObjectReadContentAsBinHex;
+                return retObjectReadContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadContentAsBinHex != null ? retObjectReadContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,9 +390,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadElementContentAsBase64(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBase64", buffer, index, count);
+            retObjectReadElementContentAsBase64 = classInstance.Invoke("ReadElementContentAsBase64", buffer, index, count);
+            return (int)retObjectReadElementContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBase64Number = (java.lang.Number)retObjectReadElementContentAsBase64;
+                return retObjectReadElementContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBase64 != null ? retObjectReadElementContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,9 +410,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadElementContentAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBase64 = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadElementContentAsBase64 = classInstance.Invoke("ReadElementContentAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadElementContentAsBase64;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBase64Number = (java.lang.Number)retObjectReadElementContentAsBase64;
+                return retObjectReadElementContentAsBase64Number.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBase64 != null ? retObjectReadElementContentAsBase64.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,9 +430,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadElementContentAsBinHex(byte[] buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBinHex", buffer, index, count);
+            retObjectReadElementContentAsBinHex = classInstance.Invoke("ReadElementContentAsBinHex", buffer, index, count);
+            return (int)retObjectReadElementContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBinHexNumber = (java.lang.Number)retObjectReadElementContentAsBinHex;
+                return retObjectReadElementContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBinHex != null ? retObjectReadElementContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,9 +450,19 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int ReadElementContentAsBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadElementContentAsBinHex = null;
         try {
-            return (int)classInstance.Invoke("ReadElementContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectReadElementContentAsBinHex = classInstance.Invoke("ReadElementContentAsBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return (int)retObjectReadElementContentAsBinHex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectReadElementContentAsBinHexNumber = (java.lang.Number)retObjectReadElementContentAsBinHex;
+                return retObjectReadElementContentAsBinHexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectReadElementContentAsBinHex != null ? retObjectReadElementContentAsBinHex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +470,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public NetObject ReadTypedValue() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadTypedValue = null;
         try {
-            JCObject objReadTypedValue = (JCObject)classInstance.Invoke("ReadTypedValue");
+            retObjectReadTypedValue = classInstance.Invoke("ReadTypedValue");
+            JCObject objReadTypedValue = (JCObject)retObjectReadTypedValue;
             return new NetObject(objReadTypedValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadTypedValue != null ? retObjectReadTypedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,9 +485,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public java.lang.String GetAttribute(int i) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", i);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", i);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,9 +499,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public java.lang.String GetAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", localName, namespaceURI);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +513,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", name);
+            return (java.lang.String)retObjectGetAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,9 +527,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public java.lang.String LookupNamespace(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupNamespace = null;
         try {
-            return (java.lang.String)classInstance.Invoke("LookupNamespace", prefix);
+            retObjectLookupNamespace = classInstance.Invoke("LookupNamespace", prefix);
+            return (java.lang.String)retObjectLookupNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectLookupNamespace != null ? retObjectLookupNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -409,9 +541,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public java.lang.String ReadString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ReadString");
+            retObjectReadString = classInstance.Invoke("ReadString");
+            return (java.lang.String)retObjectReadString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectReadString != null ? retObjectReadString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +555,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -429,7 +565,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void MoveToAttribute(int i) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveToAttribute", i);
         } catch (JCNativeException jcne) {
@@ -439,7 +575,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void ResolveEntity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveEntity");
         } catch (JCNativeException jcne) {
@@ -453,7 +589,7 @@ public class XmlValidatingReader extends XmlReader  {
      */
     @Deprecated 
     public java.lang.String LookupPrefix(java.lang.String namespaceName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlNamespaceResolver to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlNamespaceResolver to obtain the full interface.");
     }
 
 
@@ -462,9 +598,13 @@ public class XmlValidatingReader extends XmlReader  {
     
     public boolean getNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaces = null;
         try {
-            return (boolean)classInstance.Get("Namespaces");
+            retObjectNamespaces = classInstance.Get("Namespaces");
+            return (boolean)retObjectNamespaces;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNamespaces != null ? retObjectNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +612,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void setNamespaces(boolean Namespaces) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespaces", Namespaces);
         } catch (JCNativeException jcne) {
@@ -482,9 +622,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,9 +636,13 @@ public class XmlValidatingReader extends XmlReader  {
 
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinePosition = null;
         try {
-            return (int)classInstance.Get("LinePosition");
+            retObjectLinePosition = classInstance.Get("LinePosition");
+            return (int)retObjectLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,10 +650,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public NetObject getSchemaType() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaType");
+            retObjectSchemaType = classInstance.Get("SchemaType");
+            JCObject val = (JCObject)retObjectSchemaType;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaType != null ? retObjectSchemaType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,10 +665,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -524,10 +680,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public EntityHandling getEntityHandling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityHandling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityHandling");
+            retObjectEntityHandling = classInstance.Get("EntityHandling");
+            JCObject val = (JCObject)retObjectEntityHandling;
             return new EntityHandling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityHandling != null ? retObjectEntityHandling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,7 +695,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void setEntityHandling(EntityHandling EntityHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityHandling", EntityHandling == null ? null : EntityHandling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -545,10 +705,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public XmlSchemaCollection getSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemaCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,10 +720,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public ValidationType getValidationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidationType");
+            retObjectValidationType = classInstance.Get("ValidationType");
+            JCObject val = (JCObject)retObjectValidationType;
             return new ValidationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidationType != null ? retObjectValidationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,7 +735,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void setValidationType(ValidationType ValidationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidationType", ValidationType == null ? null : ValidationType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -577,10 +745,14 @@ public class XmlValidatingReader extends XmlReader  {
 
     public XmlReader getReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReader = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Reader");
+            retObjectReader = classInstance.Get("Reader");
+            JCObject val = (JCObject)retObjectReader;
             return new XmlReader(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReader != null ? retObjectReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,7 +760,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void setXmlResolver(XmlResolver XmlResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlResolver", XmlResolver == null ? null : XmlResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -603,7 +775,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void addValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {
@@ -613,7 +785,7 @@ public class XmlValidatingReader extends XmlReader  {
 
     public void removeValidationEventHandler(ValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ValidationEventHandler", handler);
         } catch (JCNativeException jcne) {

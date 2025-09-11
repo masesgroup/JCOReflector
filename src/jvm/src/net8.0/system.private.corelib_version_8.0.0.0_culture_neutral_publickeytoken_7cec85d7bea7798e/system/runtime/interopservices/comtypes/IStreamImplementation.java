@@ -144,7 +144,7 @@ public class IStreamImplementation extends NetObject implements IStream {
     
     public void Clone(JCORefOut<IStream> ppstm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clone", ppstm.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     public void Commit(int grfCommitFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", grfCommitFlags);
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LockRegion", libOffset, cb, dwLockType);
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     public void Revert() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Revert");
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     public void SetSize(long libNewSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSize", libNewSize);
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     public void UnlockRegion(long libOffset, long cb, int dwLockType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UnlockRegion", libOffset, cb, dwLockType);
         } catch (JCNativeException jcne) {

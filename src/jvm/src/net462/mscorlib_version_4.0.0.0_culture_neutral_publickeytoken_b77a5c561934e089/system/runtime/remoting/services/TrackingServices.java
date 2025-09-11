@@ -163,7 +163,7 @@ public class TrackingServices extends NetObject  {
     
     public static void RegisterTrackingHandler(ITrackingHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RegisterTrackingHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class TrackingServices extends NetObject  {
 
     public static void UnregisterTrackingHandler(ITrackingHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnregisterTrackingHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,16 +187,20 @@ public class TrackingServices extends NetObject  {
     
     public final static ITrackingHandler[] getRegisteredHandlers() throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisteredHandlers = null;
         try {
             ArrayList<ITrackingHandler> resultingArrayList = new ArrayList<ITrackingHandler>();
-            JCObject resultingObjects = (JCObject)classType.Get("RegisteredHandlers");
+            retObjectRegisteredHandlers = classType.Get("RegisteredHandlers");
+            JCObject resultingObjects = (JCObject)retObjectRegisteredHandlers;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITrackingHandlerImplementation(resultingObject));
             }
             ITrackingHandler[] resultingArray = new ITrackingHandler[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisteredHandlers != null ? retObjectRegisteredHandlers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

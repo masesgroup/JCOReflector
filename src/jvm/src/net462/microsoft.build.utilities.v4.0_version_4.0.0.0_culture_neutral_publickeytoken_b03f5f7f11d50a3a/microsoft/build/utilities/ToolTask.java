@@ -154,9 +154,13 @@ public class ToolTask extends Task  {
     
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.RankException, system.security.cryptography.CryptographicException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,7 +168,7 @@ public class ToolTask extends Task  {
 
     public void Cancel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -178,9 +182,13 @@ public class ToolTask extends Task  {
     
     public boolean getEchoOff() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoOff = null;
         try {
-            return (boolean)classInstance.Get("EchoOff");
+            retObjectEchoOff = classInstance.Get("EchoOff");
+            return (boolean)retObjectEchoOff;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEchoOff != null ? retObjectEchoOff.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ToolTask extends Task  {
 
     public void setEchoOff(boolean EchoOff) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EchoOff", EchoOff);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class ToolTask extends Task  {
 
     public boolean getLogStandardErrorAsError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogStandardErrorAsError = null;
         try {
-            return (boolean)classInstance.Get("LogStandardErrorAsError");
+            retObjectLogStandardErrorAsError = classInstance.Get("LogStandardErrorAsError");
+            return (boolean)retObjectLogStandardErrorAsError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLogStandardErrorAsError != null ? retObjectLogStandardErrorAsError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class ToolTask extends Task  {
 
     public void setLogStandardErrorAsError(boolean LogStandardErrorAsError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogStandardErrorAsError", LogStandardErrorAsError);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class ToolTask extends Task  {
 
     public boolean getUseCommandProcessor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseCommandProcessor = null;
         try {
-            return (boolean)classInstance.Get("UseCommandProcessor");
+            retObjectUseCommandProcessor = classInstance.Get("UseCommandProcessor");
+            return (boolean)retObjectUseCommandProcessor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseCommandProcessor != null ? retObjectUseCommandProcessor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class ToolTask extends Task  {
 
     public void setUseCommandProcessor(boolean UseCommandProcessor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseCommandProcessor", UseCommandProcessor);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class ToolTask extends Task  {
 
     public boolean getYieldDuringToolExecution() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYieldDuringToolExecution = null;
         try {
-            return (boolean)classInstance.Get("YieldDuringToolExecution");
+            retObjectYieldDuringToolExecution = classInstance.Get("YieldDuringToolExecution");
+            return (boolean)retObjectYieldDuringToolExecution;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectYieldDuringToolExecution != null ? retObjectYieldDuringToolExecution.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class ToolTask extends Task  {
 
     public void setYieldDuringToolExecution(boolean YieldDuringToolExecution) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("YieldDuringToolExecution", YieldDuringToolExecution);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class ToolTask extends Task  {
 
     public int getExitCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExitCode = null;
         try {
-            return (int)classInstance.Get("ExitCode");
+            retObjectExitCode = classInstance.Get("ExitCode");
+            return (int)retObjectExitCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectExitCode != null ? retObjectExitCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +292,13 @@ public class ToolTask extends Task  {
 
     public int getTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeout = null;
         try {
-            return (int)classInstance.Get("Timeout");
+            retObjectTimeout = classInstance.Get("Timeout");
+            return (int)retObjectTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTimeout != null ? retObjectTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +306,7 @@ public class ToolTask extends Task  {
 
     public void setTimeout(int Timeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Timeout", Timeout);
         } catch (JCNativeException jcne) {
@@ -288,9 +316,13 @@ public class ToolTask extends Task  {
 
     public java.lang.String getStandardErrorImportance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardErrorImportance = null;
         try {
-            return (java.lang.String)classInstance.Get("StandardErrorImportance");
+            retObjectStandardErrorImportance = classInstance.Get("StandardErrorImportance");
+            return (java.lang.String)retObjectStandardErrorImportance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStandardErrorImportance != null ? retObjectStandardErrorImportance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +330,7 @@ public class ToolTask extends Task  {
 
     public void setStandardErrorImportance(java.lang.String StandardErrorImportance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardErrorImportance", StandardErrorImportance);
         } catch (JCNativeException jcne) {
@@ -308,9 +340,13 @@ public class ToolTask extends Task  {
 
     public java.lang.String getStandardOutputImportance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStandardOutputImportance = null;
         try {
-            return (java.lang.String)classInstance.Get("StandardOutputImportance");
+            retObjectStandardOutputImportance = classInstance.Get("StandardOutputImportance");
+            return (java.lang.String)retObjectStandardOutputImportance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStandardOutputImportance != null ? retObjectStandardOutputImportance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +354,7 @@ public class ToolTask extends Task  {
 
     public void setStandardOutputImportance(java.lang.String StandardOutputImportance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StandardOutputImportance", StandardOutputImportance);
         } catch (JCNativeException jcne) {
@@ -328,9 +364,13 @@ public class ToolTask extends Task  {
 
     public java.lang.String getToolExe() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolExe = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolExe");
+            retObjectToolExe = classInstance.Get("ToolExe");
+            return (java.lang.String)retObjectToolExe;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolExe != null ? retObjectToolExe.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,7 +378,7 @@ public class ToolTask extends Task  {
 
     public void setToolExe(java.lang.String ToolExe) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolExe", ToolExe);
         } catch (JCNativeException jcne) {
@@ -348,9 +388,13 @@ public class ToolTask extends Task  {
 
     public java.lang.String getToolPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolPath");
+            retObjectToolPath = classInstance.Get("ToolPath");
+            return (java.lang.String)retObjectToolPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolPath != null ? retObjectToolPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +402,7 @@ public class ToolTask extends Task  {
 
     public void setToolPath(java.lang.String ToolPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolPath", ToolPath);
         } catch (JCNativeException jcne) {
@@ -368,10 +412,12 @@ public class ToolTask extends Task  {
 
     public java.lang.String[] getEnvironmentVariables() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvironmentVariables = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("EnvironmentVariables");
+            retObjectEnvironmentVariables = classInstance.Get("EnvironmentVariables");
+            JCObject resultingObjects = (JCObject)retObjectEnvironmentVariables;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -380,6 +426,8 @@ public class ToolTask extends Task  {
 				resultingArray[indexEnvironmentVariables] = (java.lang.String)resultingArrayList.get(indexEnvironmentVariables);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectEnvironmentVariables != null ? retObjectEnvironmentVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,7 +435,7 @@ public class ToolTask extends Task  {
 
     public void setEnvironmentVariables(java.lang.String[] EnvironmentVariables) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnvironmentVariables", EnvironmentVariables);
         } catch (JCNativeException jcne) {

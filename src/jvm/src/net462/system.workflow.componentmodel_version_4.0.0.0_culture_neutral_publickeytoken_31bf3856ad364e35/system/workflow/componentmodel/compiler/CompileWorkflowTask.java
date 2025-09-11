@@ -164,9 +164,13 @@ public class CompileWorkflowTask extends Task  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException, system.FormatException, system.MissingMethodException, system.io.PathTooLongException, system.NullReferenceException, system.io.InvalidDataException, system.xml.XmlException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class CompileWorkflowTask extends Task  {
     
     public boolean getBuildingProject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildingProject = null;
         try {
-            return (boolean)classInstance.Get("BuildingProject");
+            retObjectBuildingProject = classInstance.Get("BuildingProject");
+            return (boolean)retObjectBuildingProject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBuildingProject != null ? retObjectBuildingProject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setBuildingProject(boolean BuildingProject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildingProject", BuildingProject);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class CompileWorkflowTask extends Task  {
 
     public boolean getDelaySign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelaySign = null;
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            retObjectDelaySign = classInstance.Get("DelaySign");
+            return (boolean)retObjectDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDelaySign != null ? retObjectDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setDelaySign(boolean DelaySign) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
@@ -218,16 +230,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getCompilationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompilationOptions = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CompilationOptions");
+            retObjectCompilationOptions = classInstance.Get("CompilationOptions");
+            JCObject resultingObjects = (JCObject)retObjectCompilationOptions;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompilationOptions != null ? retObjectCompilationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setCompilationOptions(ITaskItem[] CompilationOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompilationOptions", toObjectFromArray(CompilationOptions));
         } catch (JCNativeException jcne) {
@@ -245,16 +261,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getOutputFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OutputFiles");
+            retObjectOutputFiles = classInstance.Get("OutputFiles");
+            JCObject resultingObjects = (JCObject)retObjectOutputFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputFiles != null ? retObjectOutputFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,16 +282,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getReferenceFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ReferenceFiles");
+            retObjectReferenceFiles = classInstance.Get("ReferenceFiles");
+            JCObject resultingObjects = (JCObject)retObjectReferenceFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceFiles != null ? retObjectReferenceFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setReferenceFiles(ITaskItem[] ReferenceFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceFiles", toObjectFromArray(ReferenceFiles));
         } catch (JCNativeException jcne) {
@@ -289,16 +313,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getResourceFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ResourceFiles");
+            retObjectResourceFiles = classInstance.Get("ResourceFiles");
+            JCObject resultingObjects = (JCObject)retObjectResourceFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceFiles != null ? retObjectResourceFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +334,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setResourceFiles(ITaskItem[] ResourceFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceFiles", toObjectFromArray(ResourceFiles));
         } catch (JCNativeException jcne) {
@@ -316,16 +344,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getSourceCodeFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceCodeFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SourceCodeFiles");
+            retObjectSourceCodeFiles = classInstance.Get("SourceCodeFiles");
+            JCObject resultingObjects = (JCObject)retObjectSourceCodeFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceCodeFiles != null ? retObjectSourceCodeFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +365,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setSourceCodeFiles(ITaskItem[] SourceCodeFiles) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceCodeFiles", toObjectFromArray(SourceCodeFiles));
         } catch (JCNativeException jcne) {
@@ -343,16 +375,20 @@ public class CompileWorkflowTask extends Task  {
 
     public final ITaskItem[] getWorkflowMarkupFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowMarkupFiles = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("WorkflowMarkupFiles");
+            retObjectWorkflowMarkupFiles = classInstance.Get("WorkflowMarkupFiles");
+            JCObject resultingObjects = (JCObject)retObjectWorkflowMarkupFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowMarkupFiles != null ? retObjectWorkflowMarkupFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +396,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setWorkflowMarkupFiles(ITaskItem[] WorkflowMarkupFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WorkflowMarkupFiles", toObjectFromArray(WorkflowMarkupFiles));
         } catch (JCNativeException jcne) {
@@ -370,10 +406,14 @@ public class CompileWorkflowTask extends Task  {
 
     public NetObject getHostObjectNewCompileWorkflowTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostObject");
+            retObjectHostObject = classInstance.Get("HostObject");
+            JCObject val = (JCObject)retObjectHostObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostObject != null ? retObjectHostObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +421,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +435,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setAssemblyName(java.lang.String AssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyName", AssemblyName);
         } catch (JCNativeException jcne) {
@@ -401,9 +445,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getImports() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            return (java.lang.String)classInstance.Get("Imports");
+            retObjectImports = classInstance.Get("Imports");
+            return (java.lang.String)retObjectImports;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,7 +459,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setImports(java.lang.String Imports) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Imports", Imports);
         } catch (JCNativeException jcne) {
@@ -421,9 +469,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getKeepTemporaryFiles() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepTemporaryFiles = null;
         try {
-            return (java.lang.String)classInstance.Get("KeepTemporaryFiles");
+            retObjectKeepTemporaryFiles = classInstance.Get("KeepTemporaryFiles");
+            return (java.lang.String)retObjectKeepTemporaryFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeepTemporaryFiles != null ? retObjectKeepTemporaryFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +483,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getKeyContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainer");
+            retObjectKeyContainer = classInstance.Get("KeyContainer");
+            return (java.lang.String)retObjectKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainer != null ? retObjectKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,7 +497,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainer", KeyContainer);
         } catch (JCNativeException jcne) {
@@ -451,9 +507,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getKeyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,7 +521,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -471,9 +531,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getProjectDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectDirectory");
+            retObjectProjectDirectory = classInstance.Get("ProjectDirectory");
+            return (java.lang.String)retObjectProjectDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectDirectory != null ? retObjectProjectDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +545,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setProjectDirectory(java.lang.String ProjectDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProjectDirectory", ProjectDirectory);
         } catch (JCNativeException jcne) {
@@ -491,9 +555,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getProjectExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectExtension = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectExtension");
+            retObjectProjectExtension = classInstance.Get("ProjectExtension");
+            return (java.lang.String)retObjectProjectExtension;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectExtension != null ? retObjectProjectExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +569,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setProjectExtension(java.lang.String ProjectExtension) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProjectExtension", ProjectExtension);
         } catch (JCNativeException jcne) {
@@ -511,9 +579,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getRootNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RootNamespace");
+            retObjectRootNamespace = classInstance.Get("RootNamespace");
+            return (java.lang.String)retObjectRootNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRootNamespace != null ? retObjectRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +593,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setRootNamespace(java.lang.String RootNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RootNamespace", RootNamespace);
         } catch (JCNativeException jcne) {
@@ -531,9 +603,13 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String getTargetFramework() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFramework = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFramework");
+            retObjectTargetFramework = classInstance.Get("TargetFramework");
+            return (java.lang.String)retObjectTargetFramework;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFramework != null ? retObjectTargetFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -541,7 +617,7 @@ public class CompileWorkflowTask extends Task  {
 
     public void setTargetFramework(java.lang.String TargetFramework) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetFramework", TargetFramework);
         } catch (JCNativeException jcne) {
@@ -551,10 +627,12 @@ public class CompileWorkflowTask extends Task  {
 
     public java.lang.String[] getTemporaryFiles() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTemporaryFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TemporaryFiles");
+            retObjectTemporaryFiles = classInstance.Get("TemporaryFiles");
+            JCObject resultingObjects = (JCObject)retObjectTemporaryFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -563,6 +641,8 @@ public class CompileWorkflowTask extends Task  {
 				resultingArray[indexTemporaryFiles] = (java.lang.String)resultingArrayList.get(indexTemporaryFiles);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTemporaryFiles != null ? retObjectTemporaryFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

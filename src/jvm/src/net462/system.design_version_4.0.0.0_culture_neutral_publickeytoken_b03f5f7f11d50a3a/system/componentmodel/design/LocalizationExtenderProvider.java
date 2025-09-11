@@ -170,9 +170,13 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
     
     public boolean CanExtend(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExtend = null;
         try {
-            return (boolean)classInstance.Invoke("CanExtend", o == null ? null : o.getJCOInstance());
+            retObjectCanExtend = classInstance.Invoke("CanExtend", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectCanExtend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExtend != null ? retObjectCanExtend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public boolean GetLocalizable(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLocalizable = null;
         try {
-            return (boolean)classInstance.Invoke("GetLocalizable", o == null ? null : o.getJCOInstance());
+            retObjectGetLocalizable = classInstance.Invoke("GetLocalizable", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectGetLocalizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetLocalizable != null ? retObjectGetLocalizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public boolean ShouldSerializeLanguage(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeLanguage = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeLanguage", o == null ? null : o.getJCOInstance());
+            retObjectShouldSerializeLanguage = classInstance.Invoke("ShouldSerializeLanguage", o == null ? null : o.getJCOInstance());
+            return (boolean)retObjectShouldSerializeLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeLanguage != null ? retObjectShouldSerializeLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public CultureInfo GetLanguage(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLanguage = null;
         try {
-            JCObject objGetLanguage = (JCObject)classInstance.Invoke("GetLanguage", o == null ? null : o.getJCOInstance());
+            retObjectGetLanguage = classInstance.Invoke("GetLanguage", o == null ? null : o.getJCOInstance());
+            JCObject objGetLanguage = (JCObject)retObjectGetLanguage;
             return new CultureInfo(objGetLanguage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLanguage != null ? retObjectGetLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public CultureInfo GetLoadLanguage(NetObject o) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLoadLanguage = null;
         try {
-            JCObject objGetLoadLanguage = (JCObject)classInstance.Invoke("GetLoadLanguage", o == null ? null : o.getJCOInstance());
+            retObjectGetLoadLanguage = classInstance.Invoke("GetLoadLanguage", o == null ? null : o.getJCOInstance());
+            JCObject objGetLoadLanguage = (JCObject)retObjectGetLoadLanguage;
             return new CultureInfo(objGetLoadLanguage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLoadLanguage != null ? retObjectGetLoadLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +242,7 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -232,7 +252,7 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public void ResetLanguage(NetObject o) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetLanguage", o == null ? null : o.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -242,7 +262,7 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public void SetLanguage(NetObject o, CultureInfo language) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLanguage", o == null ? null : o.getJCOInstance(), language == null ? null : language.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,7 +272,7 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
 
     public void SetLocalizable(NetObject o, boolean localizable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetLocalizable", o == null ? null : o.getJCOInstance(), localizable);
         } catch (JCNativeException jcne) {
@@ -263,7 +283,7 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

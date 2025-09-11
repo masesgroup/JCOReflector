@@ -178,9 +178,13 @@ public class DefaultInterpolatedStringHandler extends ValueType  {
     
     public java.lang.String ToStringAndClear() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToStringAndClear = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToStringAndClear");
+            retObjectToStringAndClear = classInstance.Invoke("ToStringAndClear");
+            return (java.lang.String)retObjectToStringAndClear;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToStringAndClear != null ? retObjectToStringAndClear.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class DefaultInterpolatedStringHandler extends ValueType  {
 
     public void AppendFormatted(NetObject value, int alignment, java.lang.String format) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendFormatted", value == null ? null : value.getJCOInstance(), alignment, format);
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class DefaultInterpolatedStringHandler extends ValueType  {
 
     public void AppendFormatted(java.lang.String value, int alignment, java.lang.String format) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendFormatted", value, alignment, format);
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class DefaultInterpolatedStringHandler extends ValueType  {
 
     public void AppendFormatted(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendFormatted", value);
         } catch (JCNativeException jcne) {
@@ -218,7 +222,7 @@ public class DefaultInterpolatedStringHandler extends ValueType  {
 
     public void AppendLiteral(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendLiteral", value);
         } catch (JCNativeException jcne) {

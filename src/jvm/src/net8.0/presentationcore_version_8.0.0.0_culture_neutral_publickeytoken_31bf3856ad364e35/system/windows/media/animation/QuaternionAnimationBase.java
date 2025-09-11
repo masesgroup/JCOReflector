@@ -157,10 +157,14 @@ public class QuaternionAnimationBase extends AnimationTimeline  {
     
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new NetObject(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class QuaternionAnimationBase extends AnimationTimeline  {
 
     public QuaternionAnimationBase CloneNewQuaternionAnimationBase() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new QuaternionAnimationBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class QuaternionAnimationBase extends AnimationTimeline  {
 
     public Quaternion GetCurrentValue(Quaternion defaultOriginValue, Quaternion defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new Quaternion(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

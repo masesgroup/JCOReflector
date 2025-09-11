@@ -158,9 +158,19 @@ public class ArrayPrototype extends ArrayObject  {
     
     public static long push(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectpush = null;
         try {
-            return (long)classType.Invoke("push", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            retObjectpush = classType.Invoke("push", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            return (long)retObjectpush;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectpushNumber = (java.lang.Number)retObjectpush;
+                return retObjectpushNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectpush != null ? retObjectpush.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +178,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static ArrayObject concat(NetObject thisob, VsaEngine engine, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconcat = null;
         try {
-            JCObject objconcat = (JCObject)classType.Invoke("concat", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), toObjectFromArray(args));
+            retObjectconcat = classType.Invoke("concat", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), toObjectFromArray(args));
+            JCObject objconcat = (JCObject)retObjectconcat;
             return new ArrayObject(objconcat);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconcat != null ? retObjectconcat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +193,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static ArrayObject slice(NetObject thisob, VsaEngine engine, double start, NetObject end) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectslice = null;
         try {
-            JCObject objslice = (JCObject)classType.Invoke("slice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, end == null ? null : end.getJCOInstance());
+            retObjectslice = classType.Invoke("slice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, end == null ? null : end.getJCOInstance());
+            JCObject objslice = (JCObject)retObjectslice;
             return new ArrayObject(objslice);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectslice != null ? retObjectslice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +208,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static ArrayObject splice(NetObject thisob, VsaEngine engine, double start, double deleteCnt, NetObject... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsplice = null;
         try {
-            JCObject objsplice = (JCObject)classType.Invoke("splice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, deleteCnt, toObjectFromArray(args));
+            retObjectsplice = classType.Invoke("splice", thisob == null ? null : thisob.getJCOInstance(), engine == null ? null : engine.getJCOInstance(), start, deleteCnt, toObjectFromArray(args));
+            JCObject objsplice = (JCObject)retObjectsplice;
             return new ArrayObject(objsplice);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectsplice != null ? retObjectsplice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +223,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static NetObject pop(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectpop = null;
         try {
-            JCObject objpop = (JCObject)classType.Invoke("pop", thisob == null ? null : thisob.getJCOInstance());
+            retObjectpop = classType.Invoke("pop", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objpop = (JCObject)retObjectpop;
             return new NetObject(objpop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectpop != null ? retObjectpop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +238,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static NetObject reverse(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.reflection.TargetInvocationException, system.InvalidCastException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectreverse = null;
         try {
-            JCObject objreverse = (JCObject)classType.Invoke("reverse", thisob == null ? null : thisob.getJCOInstance());
+            retObjectreverse = classType.Invoke("reverse", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objreverse = (JCObject)retObjectreverse;
             return new NetObject(objreverse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectreverse != null ? retObjectreverse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +253,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static NetObject shift(NetObject thisob) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, microsoft.jscript.JScriptException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectshift = null;
         try {
-            JCObject objshift = (JCObject)classType.Invoke("shift", thisob == null ? null : thisob.getJCOInstance());
+            retObjectshift = classType.Invoke("shift", thisob == null ? null : thisob.getJCOInstance());
+            JCObject objshift = (JCObject)retObjectshift;
             return new NetObject(objshift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectshift != null ? retObjectshift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +268,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static NetObject sort(NetObject thisob, NetObject function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.NullReferenceException, system.FormatException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectsort = null;
         try {
-            JCObject objsort = (JCObject)classType.Invoke("sort", thisob == null ? null : thisob.getJCOInstance(), function == null ? null : function.getJCOInstance());
+            retObjectsort = classType.Invoke("sort", thisob == null ? null : thisob.getJCOInstance(), function == null ? null : function.getJCOInstance());
+            JCObject objsort = (JCObject)retObjectsort;
             return new NetObject(objsort);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectsort != null ? retObjectsort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +283,14 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static NetObject unshift(NetObject thisob, NetObject... args) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.JScriptException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectunshift = null;
         try {
-            JCObject objunshift = (JCObject)classType.Invoke("unshift", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            retObjectunshift = classType.Invoke("unshift", thisob == null ? null : thisob.getJCOInstance(), toObjectFromArray(args));
+            JCObject objunshift = (JCObject)retObjectunshift;
             return new NetObject(objunshift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectunshift != null ? retObjectunshift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +298,13 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static java.lang.String join(NetObject thisob, NetObject separator) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectjoin = null;
         try {
-            return (java.lang.String)classType.Invoke("join", thisob == null ? null : thisob.getJCOInstance(), separator == null ? null : separator.getJCOInstance());
+            retObjectjoin = classType.Invoke("join", thisob == null ? null : thisob.getJCOInstance(), separator == null ? null : separator.getJCOInstance());
+            return (java.lang.String)retObjectjoin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectjoin != null ? retObjectjoin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +312,13 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static java.lang.String toLocaleString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.vsa.JSVsaException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.FormatException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoLocaleString = null;
         try {
-            return (java.lang.String)classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoLocaleString = classType.Invoke("toLocaleString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoLocaleString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoLocaleString != null ? retObjecttoLocaleString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,9 +326,13 @@ public class ArrayPrototype extends ArrayObject  {
 
     public static java.lang.String toString(NetObject thisob) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.NotImplementedException, system.IndexOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.InvalidOperationException, system.NotSupportedException, system.ArithmeticException, system.OverflowException, microsoft.jscript.JScriptException, system.InvalidCastException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjecttoString = null;
         try {
-            return (java.lang.String)classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            retObjecttoString = classType.Invoke("toString", thisob == null ? null : thisob.getJCOInstance());
+            return (java.lang.String)retObjecttoString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjecttoString != null ? retObjecttoString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +344,14 @@ public class ArrayPrototype extends ArrayObject  {
     
     public static ArrayConstructor getconstructor() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectconstructor = null;
         try {
-            JCObject val = (JCObject)classType.Get("constructor");
+            retObjectconstructor = classType.Get("constructor");
+            JCObject val = (JCObject)retObjectconstructor;
             return new ArrayConstructor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectconstructor != null ? retObjectconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -194,7 +194,7 @@ public class DataSourceSelectArguments extends NetObject  {
     
     public void AddSupportedCapabilities(DataSourceCapabilities capabilities) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddSupportedCapabilities", capabilities == null ? null : capabilities.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void RaiseUnsupportedCapabilitiesError(DataSourceView view) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseUnsupportedCapabilitiesError", view == null ? null : view.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -218,9 +218,13 @@ public class DataSourceSelectArguments extends NetObject  {
     
     public boolean getRetrieveTotalRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRetrieveTotalRowCount = null;
         try {
-            return (boolean)classInstance.Get("RetrieveTotalRowCount");
+            retObjectRetrieveTotalRowCount = classInstance.Get("RetrieveTotalRowCount");
+            return (boolean)retObjectRetrieveTotalRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRetrieveTotalRowCount != null ? retObjectRetrieveTotalRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +232,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void setRetrieveTotalRowCount(boolean RetrieveTotalRowCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RetrieveTotalRowCount", RetrieveTotalRowCount);
         } catch (JCNativeException jcne) {
@@ -238,9 +242,13 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public int getMaximumRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumRows = null;
         try {
-            return (int)classInstance.Get("MaximumRows");
+            retObjectMaximumRows = classInstance.Get("MaximumRows");
+            return (int)retObjectMaximumRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaximumRows != null ? retObjectMaximumRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +256,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void setMaximumRows(int MaximumRows) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumRows", MaximumRows);
         } catch (JCNativeException jcne) {
@@ -258,9 +266,13 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public int getStartRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartRowIndex = null;
         try {
-            return (int)classInstance.Get("StartRowIndex");
+            retObjectStartRowIndex = classInstance.Get("StartRowIndex");
+            return (int)retObjectStartRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartRowIndex != null ? retObjectStartRowIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +280,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void setStartRowIndex(int StartRowIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartRowIndex", StartRowIndex);
         } catch (JCNativeException jcne) {
@@ -278,9 +290,13 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public int getTotalRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalRowCount = null;
         try {
-            return (int)classInstance.Get("TotalRowCount");
+            retObjectTotalRowCount = classInstance.Get("TotalRowCount");
+            return (int)retObjectTotalRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTotalRowCount != null ? retObjectTotalRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +304,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void setTotalRowCount(int TotalRowCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TotalRowCount", TotalRowCount);
         } catch (JCNativeException jcne) {
@@ -298,9 +314,13 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public java.lang.String getSortExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSortExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("SortExpression");
+            retObjectSortExpression = classInstance.Get("SortExpression");
+            return (java.lang.String)retObjectSortExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSortExpression != null ? retObjectSortExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +328,7 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public void setSortExpression(java.lang.String SortExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SortExpression", SortExpression);
         } catch (JCNativeException jcne) {
@@ -318,10 +338,14 @@ public class DataSourceSelectArguments extends NetObject  {
 
     public static DataSourceSelectArguments getEmpty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
         try {
-            JCObject val = (JCObject)classType.Get("Empty");
+            retObjectEmpty = classType.Get("Empty");
+            JCObject val = (JCObject)retObjectEmpty;
             return new DataSourceSelectArguments(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

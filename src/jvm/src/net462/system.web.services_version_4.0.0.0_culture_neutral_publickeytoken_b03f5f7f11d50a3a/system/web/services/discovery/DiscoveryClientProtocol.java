@@ -170,10 +170,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
     
     public Stream Download(JCORefOut url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownload = null;
         try {
-            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url.getJCRefOut());
+            retObjectDownload = classInstance.Invoke("Download", url.getJCRefOut());
+            JCObject objDownload = (JCObject)retObjectDownload;
             return new Stream(objDownload);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownload != null ? retObjectDownload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public Stream Download(JCORefOut url, JCORefOut contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDownload = null;
         try {
-            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url.getJCRefOut(), contentType.getJCRefOut());
+            retObjectDownload = classInstance.Invoke("Download", url.getJCRefOut(), contentType.getJCRefOut());
+            JCObject objDownload = (JCObject)retObjectDownload;
             return new Stream(objDownload);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDownload != null ? retObjectDownload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryClientResultCollection ReadAll(java.lang.String topLevelFilename) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.TypeLoadException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.xml.XmlException, system.MulticastNotSupportedException, system.OverflowException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadAll = null;
         try {
-            JCObject objReadAll = (JCObject)classInstance.Invoke("ReadAll", topLevelFilename);
+            retObjectReadAll = classInstance.Invoke("ReadAll", topLevelFilename);
+            JCObject objReadAll = (JCObject)retObjectReadAll;
             return new DiscoveryClientResultCollection(objReadAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadAll != null ? retObjectReadAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryClientResultCollection WriteAll(java.lang.String directory, java.lang.String topLevelFilename) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.RankException, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteAll = null;
         try {
-            JCObject objWriteAll = (JCObject)classInstance.Invoke("WriteAll", directory, topLevelFilename);
+            retObjectWriteAll = classInstance.Invoke("WriteAll", directory, topLevelFilename);
+            JCObject objWriteAll = (JCObject)retObjectWriteAll;
             return new DiscoveryClientResultCollection(objWriteAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteAll != null ? retObjectWriteAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryDocument Discover(java.lang.String url) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscover = null;
         try {
-            JCObject objDiscover = (JCObject)classInstance.Invoke("Discover", url);
+            retObjectDiscover = classInstance.Invoke("Discover", url);
+            JCObject objDiscover = (JCObject)retObjectDiscover;
             return new DiscoveryDocument(objDiscover);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiscover != null ? retObjectDiscover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryDocument DiscoverAny(java.lang.String url) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDiscoverAny = null;
         try {
-            JCObject objDiscoverAny = (JCObject)classInstance.Invoke("DiscoverAny", url);
+            retObjectDiscoverAny = classInstance.Invoke("DiscoverAny", url);
+            JCObject objDiscoverAny = (JCObject)retObjectDiscoverAny;
             return new DiscoveryDocument(objDiscoverAny);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDiscoverAny != null ? retObjectDiscoverAny.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +260,7 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public void LoadExternals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadExternals");
         } catch (JCNativeException jcne) {
@@ -246,7 +270,7 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public void ResolveAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveAll");
         } catch (JCNativeException jcne) {
@@ -256,7 +280,7 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public void ResolveOneLevel() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.MissingMethodException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResolveOneLevel");
         } catch (JCNativeException jcne) {
@@ -270,10 +294,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
     
     public IList getAdditionalInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdditionalInformation");
+            retObjectAdditionalInformation = classInstance.Get("AdditionalInformation");
+            JCObject val = (JCObject)retObjectAdditionalInformation;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalInformation != null ? retObjectAdditionalInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,10 +309,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryClientDocumentCollection getDocuments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocuments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Documents");
+            retObjectDocuments = classInstance.Get("Documents");
+            JCObject val = (JCObject)retObjectDocuments;
             return new DiscoveryClientDocumentCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocuments != null ? retObjectDocuments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +324,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryClientReferenceCollection getReferences() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject val = (JCObject)retObjectReferences;
             return new DiscoveryClientReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +339,14 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
 
     public DiscoveryExceptionDictionary getErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new DiscoveryExceptionDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

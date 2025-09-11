@@ -172,10 +172,14 @@ public class PublicKey extends NetObject  {
     
     public AsnEncodedData getEncodedKeyValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedKeyValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodedKeyValue");
+            retObjectEncodedKeyValue = classInstance.Get("EncodedKeyValue");
+            JCObject val = (JCObject)retObjectEncodedKeyValue;
             return new AsnEncodedData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedKeyValue != null ? retObjectEncodedKeyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class PublicKey extends NetObject  {
 
     public AsnEncodedData getEncodedParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodedParameters");
+            retObjectEncodedParameters = classInstance.Get("EncodedParameters");
+            JCObject val = (JCObject)retObjectEncodedParameters;
             return new AsnEncodedData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedParameters != null ? retObjectEncodedParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class PublicKey extends NetObject  {
 
     public AsymmetricAlgorithm getKey() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new AsymmetricAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class PublicKey extends NetObject  {
 
     public Oid getOid() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            JCObject val = (JCObject)retObjectOid;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

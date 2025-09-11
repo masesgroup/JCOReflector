@@ -156,10 +156,14 @@ public class SecurityTokenParameters extends NetObject  {
     
     public SecurityTokenParameters Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SecurityTokenParameters(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class SecurityTokenParameters extends NetObject  {
     
     public boolean getRequireDerivedKeys() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireDerivedKeys = null;
         try {
-            return (boolean)classInstance.Get("RequireDerivedKeys");
+            retObjectRequireDerivedKeys = classInstance.Get("RequireDerivedKeys");
+            return (boolean)retObjectRequireDerivedKeys;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireDerivedKeys != null ? retObjectRequireDerivedKeys.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class SecurityTokenParameters extends NetObject  {
 
     public void setRequireDerivedKeys(boolean RequireDerivedKeys) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireDerivedKeys", RequireDerivedKeys);
         } catch (JCNativeException jcne) {
@@ -191,10 +199,14 @@ public class SecurityTokenParameters extends NetObject  {
 
     public SecurityTokenInclusionMode getInclusionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInclusionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InclusionMode");
+            retObjectInclusionMode = classInstance.Get("InclusionMode");
+            JCObject val = (JCObject)retObjectInclusionMode;
             return new SecurityTokenInclusionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInclusionMode != null ? retObjectInclusionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class SecurityTokenParameters extends NetObject  {
 
     public void setInclusionMode(SecurityTokenInclusionMode InclusionMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InclusionMode", InclusionMode == null ? null : InclusionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,10 +224,14 @@ public class SecurityTokenParameters extends NetObject  {
 
     public SecurityTokenReferenceStyle getReferenceStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferenceStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReferenceStyle");
+            retObjectReferenceStyle = classInstance.Get("ReferenceStyle");
+            JCObject val = (JCObject)retObjectReferenceStyle;
             return new SecurityTokenReferenceStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceStyle != null ? retObjectReferenceStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class SecurityTokenParameters extends NetObject  {
 
     public void setReferenceStyle(SecurityTokenReferenceStyle ReferenceStyle) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReferenceStyle", ReferenceStyle == null ? null : ReferenceStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

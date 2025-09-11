@@ -142,7 +142,7 @@ public class IJsonOnDeserializingImplementation extends NetObject implements IJs
     
     public void OnDeserializing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDeserializing");
         } catch (JCNativeException jcne) {

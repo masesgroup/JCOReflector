@@ -159,9 +159,13 @@ public class TypeDescriptionProvider extends NetObject  {
     
     public boolean IsSupportedType(NetType type) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedType = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            retObjectIsSupportedType = classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsSupportedType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedType != null ? retObjectIsSupportedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public IDictionary GetCache(NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCache = null;
         try {
-            JCObject objGetCache = (JCObject)classInstance.Invoke("GetCache", instance == null ? null : instance.getJCOInstance());
+            retObjectGetCache = classInstance.Invoke("GetCache", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetCache = (JCObject)retObjectGetCache;
             return new IDictionaryImplementation(objGetCache);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCache != null ? retObjectGetCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public ICustomTypeDescriptor GetExtendedTypeDescriptor(NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExtendedTypeDescriptor = null;
         try {
-            JCObject objGetExtendedTypeDescriptor = (JCObject)classInstance.Invoke("GetExtendedTypeDescriptor", instance == null ? null : instance.getJCOInstance());
+            retObjectGetExtendedTypeDescriptor = classInstance.Invoke("GetExtendedTypeDescriptor", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetExtendedTypeDescriptor = (JCObject)retObjectGetExtendedTypeDescriptor;
             return new ICustomTypeDescriptorImplementation(objGetExtendedTypeDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExtendedTypeDescriptor != null ? retObjectGetExtendedTypeDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public ICustomTypeDescriptor GetTypeDescriptor(NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeDescriptor = null;
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", instance == null ? null : instance.getJCOInstance());
+            retObjectGetTypeDescriptor = classInstance.Invoke("GetTypeDescriptor", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)retObjectGetTypeDescriptor;
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeDescriptor != null ? retObjectGetTypeDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeDescriptor = null;
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance());
+            retObjectGetTypeDescriptor = classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)retObjectGetTypeDescriptor;
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeDescriptor != null ? retObjectGetTypeDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeDescriptor = null;
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            retObjectGetTypeDescriptor = classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)retObjectGetTypeDescriptor;
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTypeDescriptor != null ? retObjectGetTypeDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public NetObject CreateInstance(IServiceProvider provider, NetType objectType, NetType[] argTypes, NetObject[] args) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", provider == null ? null : provider.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), toObjectFromArray(argTypes), toObjectFromArray(args));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", provider == null ? null : provider.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), toObjectFromArray(argTypes), toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new NetObject(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +263,13 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public java.lang.String GetFullComponentName(NetObject component) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFullComponentName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFullComponentName", component == null ? null : component.getJCOInstance());
+            retObjectGetFullComponentName = classInstance.Invoke("GetFullComponentName", component == null ? null : component.getJCOInstance());
+            return (java.lang.String)retObjectGetFullComponentName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFullComponentName != null ? retObjectGetFullComponentName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public NetType GetReflectionType(NetObject instance) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReflectionType = null;
         try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", instance == null ? null : instance.getJCOInstance());
+            retObjectGetReflectionType = classInstance.Invoke("GetReflectionType", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetReflectionType = (JCObject)retObjectGetReflectionType;
             return new NetType(objGetReflectionType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReflectionType != null ? retObjectGetReflectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public NetType GetReflectionType(NetType objectType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReflectionType = null;
         try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance());
+            retObjectGetReflectionType = classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance());
+            JCObject objGetReflectionType = (JCObject)retObjectGetReflectionType;
             return new NetType(objGetReflectionType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReflectionType != null ? retObjectGetReflectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public NetType GetReflectionType(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReflectionType = null;
         try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            retObjectGetReflectionType = classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetReflectionType = (JCObject)retObjectGetReflectionType;
             return new NetType(objGetReflectionType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReflectionType != null ? retObjectGetReflectionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +322,14 @@ public class TypeDescriptionProvider extends NetObject  {
 
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeType = null;
         try {
-            JCObject objGetRuntimeType = (JCObject)classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            retObjectGetRuntimeType = classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            JCObject objGetRuntimeType = (JCObject)retObjectGetRuntimeType;
             return new NetType(objGetRuntimeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeType != null ? retObjectGetRuntimeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

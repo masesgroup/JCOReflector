@@ -156,9 +156,13 @@ public class BindingBase extends MarkupExtension  {
     
     public boolean ShouldSerializeFallbackValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeFallbackValue = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeFallbackValue");
+            retObjectShouldSerializeFallbackValue = classInstance.Invoke("ShouldSerializeFallbackValue");
+            return (boolean)retObjectShouldSerializeFallbackValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeFallbackValue != null ? retObjectShouldSerializeFallbackValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class BindingBase extends MarkupExtension  {
 
     public boolean ShouldSerializeTargetNullValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTargetNullValue = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTargetNullValue");
+            retObjectShouldSerializeTargetNullValue = classInstance.Invoke("ShouldSerializeTargetNullValue");
+            return (boolean)retObjectShouldSerializeTargetNullValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTargetNullValue != null ? retObjectShouldSerializeTargetNullValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +184,14 @@ public class BindingBase extends MarkupExtension  {
 
     public NetObject ProvideValue(IServiceProvider serviceProvider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NullReferenceException, system.windows.markup.XamlParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideValue = null;
         try {
-            JCObject objProvideValue = (JCObject)classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            retObjectProvideValue = classInstance.Invoke("ProvideValue", serviceProvider == null ? null : serviceProvider.getJCOInstance());
+            JCObject objProvideValue = (JCObject)retObjectProvideValue;
             return new NetObject(objProvideValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProvideValue != null ? retObjectProvideValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class BindingBase extends MarkupExtension  {
     
     public int getDelay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            return (int)classInstance.Get("Delay");
+            retObjectDelay = classInstance.Get("Delay");
+            return (int)retObjectDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +217,7 @@ public class BindingBase extends MarkupExtension  {
 
     public void setDelay(int Delay) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delay", Delay);
         } catch (JCNativeException jcne) {
@@ -211,10 +227,14 @@ public class BindingBase extends MarkupExtension  {
 
     public NetObject getFallbackValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallbackValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FallbackValue");
+            retObjectFallbackValue = classInstance.Get("FallbackValue");
+            JCObject val = (JCObject)retObjectFallbackValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFallbackValue != null ? retObjectFallbackValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +242,7 @@ public class BindingBase extends MarkupExtension  {
 
     public void setFallbackValue(NetObject FallbackValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FallbackValue", FallbackValue == null ? null : FallbackValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -232,10 +252,14 @@ public class BindingBase extends MarkupExtension  {
 
     public NetObject getTargetNullValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetNullValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetNullValue");
+            retObjectTargetNullValue = classInstance.Get("TargetNullValue");
+            JCObject val = (JCObject)retObjectTargetNullValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetNullValue != null ? retObjectTargetNullValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +267,7 @@ public class BindingBase extends MarkupExtension  {
 
     public void setTargetNullValue(NetObject TargetNullValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetNullValue", TargetNullValue == null ? null : TargetNullValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,9 +277,13 @@ public class BindingBase extends MarkupExtension  {
 
     public java.lang.String getBindingGroupName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindingGroupName = null;
         try {
-            return (java.lang.String)classInstance.Get("BindingGroupName");
+            retObjectBindingGroupName = classInstance.Get("BindingGroupName");
+            return (java.lang.String)retObjectBindingGroupName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBindingGroupName != null ? retObjectBindingGroupName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +291,7 @@ public class BindingBase extends MarkupExtension  {
 
     public void setBindingGroupName(java.lang.String BindingGroupName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BindingGroupName", BindingGroupName);
         } catch (JCNativeException jcne) {
@@ -273,9 +301,13 @@ public class BindingBase extends MarkupExtension  {
 
     public java.lang.String getStringFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStringFormat = null;
         try {
-            return (java.lang.String)classInstance.Get("StringFormat");
+            retObjectStringFormat = classInstance.Get("StringFormat");
+            return (java.lang.String)retObjectStringFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStringFormat != null ? retObjectStringFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +315,7 @@ public class BindingBase extends MarkupExtension  {
 
     public void setStringFormat(java.lang.String StringFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StringFormat", StringFormat);
         } catch (JCNativeException jcne) {

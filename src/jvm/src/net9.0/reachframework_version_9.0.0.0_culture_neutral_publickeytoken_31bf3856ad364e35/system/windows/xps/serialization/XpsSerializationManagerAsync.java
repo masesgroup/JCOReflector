@@ -168,7 +168,7 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
     
     public void CancelAsync() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
 
     public void Commit() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.TimeoutException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentNullException, system.windows.xps.XpsSerializationException, system.security.SecurityException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
 
     public void SaveAsXaml(NetObject serializedObject) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.windows.xps.XpsSerializationException, system.IndexOutOfRangeException, system.FormatException, system.InvalidCastException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAsXaml", serializedObject == null ? null : serializedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
 
     public void addXpsSerializationCompleted(XpsSerializationCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("XpsSerializationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -217,7 +217,7 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
 
     public void removeXpsSerializationCompleted(XpsSerializationCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("XpsSerializationCompleted", handler);
         } catch (JCNativeException jcne) {

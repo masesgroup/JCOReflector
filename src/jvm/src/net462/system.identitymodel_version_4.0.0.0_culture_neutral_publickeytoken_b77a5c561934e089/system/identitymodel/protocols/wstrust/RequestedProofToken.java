@@ -201,10 +201,14 @@ public class RequestedProofToken extends NetObject  {
     
     public ProtectedKey getProtectedKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectedKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectedKey");
+            retObjectProtectedKey = classInstance.Get("ProtectedKey");
+            JCObject val = (JCObject)retObjectProtectedKey;
             return new ProtectedKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectedKey != null ? retObjectProtectedKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +216,13 @@ public class RequestedProofToken extends NetObject  {
 
     public java.lang.String getComputedKeyAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputedKeyAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("ComputedKeyAlgorithm");
+            retObjectComputedKeyAlgorithm = classInstance.Get("ComputedKeyAlgorithm");
+            return (java.lang.String)retObjectComputedKeyAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComputedKeyAlgorithm != null ? retObjectComputedKeyAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

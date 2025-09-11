@@ -157,9 +157,13 @@ public class SqlTriggerContext extends NetObject  {
     
     public boolean IsUpdatedColumn(int columnOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUpdatedColumn = null;
         try {
-            return (boolean)classInstance.Invoke("IsUpdatedColumn", columnOrdinal);
+            retObjectIsUpdatedColumn = classInstance.Invoke("IsUpdatedColumn", columnOrdinal);
+            return (boolean)retObjectIsUpdatedColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUpdatedColumn != null ? retObjectIsUpdatedColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class SqlTriggerContext extends NetObject  {
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class SqlTriggerContext extends NetObject  {
 
     public TriggerAction getTriggerAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTriggerAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TriggerAction");
+            retObjectTriggerAction = classInstance.Get("TriggerAction");
+            JCObject val = (JCObject)retObjectTriggerAction;
             return new TriggerAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTriggerAction != null ? retObjectTriggerAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class SqlTriggerContext extends NetObject  {
 
     public SqlXml getEventData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventData");
+            retObjectEventData = classInstance.Get("EventData");
+            JCObject val = (JCObject)retObjectEventData;
             return new SqlXml(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventData != null ? retObjectEventData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -167,10 +167,14 @@ public class MessageBodyDescription extends NetObject  {
     
     public MessagePartDescription getReturnValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnValue");
+            retObjectReturnValue = classInstance.Get("ReturnValue");
+            JCObject val = (JCObject)retObjectReturnValue;
             return new MessagePartDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnValue != null ? retObjectReturnValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class MessageBodyDescription extends NetObject  {
 
     public void setReturnValue(MessagePartDescription ReturnValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnValue", ReturnValue == null ? null : ReturnValue.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class MessageBodyDescription extends NetObject  {
 
     public MessagePartDescriptionCollection getParts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parts");
+            retObjectParts = classInstance.Get("Parts");
+            JCObject val = (JCObject)retObjectParts;
             return new MessagePartDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParts != null ? retObjectParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +207,13 @@ public class MessageBodyDescription extends NetObject  {
 
     public java.lang.String getWrapperName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapperName = null;
         try {
-            return (java.lang.String)classInstance.Get("WrapperName");
+            retObjectWrapperName = classInstance.Get("WrapperName");
+            return (java.lang.String)retObjectWrapperName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrapperName != null ? retObjectWrapperName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +221,7 @@ public class MessageBodyDescription extends NetObject  {
 
     public void setWrapperName(java.lang.String WrapperName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapperName", WrapperName);
         } catch (JCNativeException jcne) {
@@ -219,9 +231,13 @@ public class MessageBodyDescription extends NetObject  {
 
     public java.lang.String getWrapperNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWrapperNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("WrapperNamespace");
+            retObjectWrapperNamespace = classInstance.Get("WrapperNamespace");
+            return (java.lang.String)retObjectWrapperNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWrapperNamespace != null ? retObjectWrapperNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +245,7 @@ public class MessageBodyDescription extends NetObject  {
 
     public void setWrapperNamespace(java.lang.String WrapperNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WrapperNamespace", WrapperNamespace);
         } catch (JCNativeException jcne) {

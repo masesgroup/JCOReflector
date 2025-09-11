@@ -162,9 +162,13 @@ public class ValueProviderCollection extends NetObjectEnumerable  {
     
     public boolean ContainsPrefix(java.lang.String prefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContainsPrefix = null;
         try {
-            return (boolean)classInstance.Invoke("ContainsPrefix", prefix);
+            retObjectContainsPrefix = classInstance.Invoke("ContainsPrefix", prefix);
+            return (boolean)retObjectContainsPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContainsPrefix != null ? retObjectContainsPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ValueProviderCollection extends NetObjectEnumerable  {
 
     public ValueProviderResult GetValue(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key);
+            retObjectGetValue = classInstance.Invoke("GetValue", key);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new ValueProviderResult(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class ValueProviderCollection extends NetObjectEnumerable  {
 
     public ValueProviderResult GetValue(java.lang.String key, boolean skipValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", key, skipValidation);
+            retObjectGetValue = classInstance.Invoke("GetValue", key, skipValidation);
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new ValueProviderResult(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

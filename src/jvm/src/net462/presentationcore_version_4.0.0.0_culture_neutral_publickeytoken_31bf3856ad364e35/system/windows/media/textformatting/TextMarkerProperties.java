@@ -158,9 +158,13 @@ public class TextMarkerProperties extends NetObject  {
     
     public double getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (double)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (double)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class TextMarkerProperties extends NetObject  {
 
     public TextSource getTextSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextSource");
+            retObjectTextSource = classInstance.Get("TextSource");
+            JCObject val = (JCObject)retObjectTextSource;
             return new TextSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextSource != null ? retObjectTextSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

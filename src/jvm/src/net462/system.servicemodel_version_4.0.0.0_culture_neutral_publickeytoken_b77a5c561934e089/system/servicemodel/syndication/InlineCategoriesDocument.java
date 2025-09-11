@@ -166,9 +166,13 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
     
     public boolean getIsFixed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFixed = null;
         try {
-            return (boolean)classInstance.Get("IsFixed");
+            retObjectIsFixed = classInstance.Get("IsFixed");
+            return (boolean)retObjectIsFixed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFixed != null ? retObjectIsFixed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
 
     public void setIsFixed(boolean IsFixed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsFixed", IsFixed);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
 
     public java.lang.String getScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheme = null;
         try {
-            return (java.lang.String)classInstance.Get("Scheme");
+            retObjectScheme = classInstance.Get("Scheme");
+            return (java.lang.String)retObjectScheme;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectScheme != null ? retObjectScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
 
     public void setScheme(java.lang.String Scheme) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scheme", Scheme);
         } catch (JCNativeException jcne) {

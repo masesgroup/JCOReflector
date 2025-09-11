@@ -162,9 +162,13 @@ public class DynamicScriptObject extends DynamicObject  {
     
     public boolean TryGetIndex(GetIndexBinder binder, NetObject[] indexes, JCORefOut<NetObject> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetIndex = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), result.getJCRefOut());
+            retObjectTryGetIndex = classInstance.Invoke("TryGetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), result.getJCRefOut());
+            return (boolean)retObjectTryGetIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetIndex != null ? retObjectTryGetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class DynamicScriptObject extends DynamicObject  {
 
     public boolean TryGetMember(GetMemberBinder binder, JCORefOut<NetObject> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryGetMember = null;
         try {
-            return (boolean)classInstance.Invoke("TryGetMember", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            retObjectTryGetMember = classInstance.Invoke("TryGetMember", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryGetMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetMember != null ? retObjectTryGetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class DynamicScriptObject extends DynamicObject  {
 
     public boolean TryInvoke(InvokeBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryInvoke = null;
         try {
-            return (boolean)classInstance.Invoke("TryInvoke", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            retObjectTryInvoke = classInstance.Invoke("TryInvoke", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            return (boolean)retObjectTryInvoke;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryInvoke != null ? retObjectTryInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class DynamicScriptObject extends DynamicObject  {
 
     public boolean TryInvokeMember(InvokeMemberBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryInvokeMember = null;
         try {
-            return (boolean)classInstance.Invoke("TryInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            retObjectTryInvokeMember = classInstance.Invoke("TryInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+            return (boolean)retObjectTryInvokeMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryInvokeMember != null ? retObjectTryInvokeMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class DynamicScriptObject extends DynamicObject  {
 
     public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetIndex = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            retObjectTrySetIndex = classInstance.Invoke("TrySetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectTrySetIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetIndex != null ? retObjectTrySetIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +232,13 @@ public class DynamicScriptObject extends DynamicObject  {
 
     public boolean TrySetMember(SetMemberBinder binder, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrySetMember = null;
         try {
-            return (boolean)classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectTrySetMember = classInstance.Invoke("TrySetMember", binder == null ? null : binder.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectTrySetMember;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTrySetMember != null ? retObjectTrySetMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -163,10 +163,14 @@ public class X500DistinguishedNameBuilder extends NetObject  {
     
     public X500DistinguishedName Build() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
         try {
-            JCObject objBuild = (JCObject)classInstance.Invoke("Build");
+            retObjectBuild = classInstance.Invoke("Build");
+            JCObject objBuild = (JCObject)retObjectBuild;
             return new X500DistinguishedName(objBuild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddCommonName(java.lang.String commonName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCommonName", commonName);
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddCountryOrRegion(java.lang.String twoLetterCode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.OverflowException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCountryOrRegion", twoLetterCode);
         } catch (JCNativeException jcne) {
@@ -194,7 +198,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddDomainComponent(java.lang.String domainComponent) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDomainComponent", domainComponent);
         } catch (JCNativeException jcne) {
@@ -204,7 +208,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddEmailAddress(java.lang.String emailAddress) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddEmailAddress", emailAddress);
         } catch (JCNativeException jcne) {
@@ -214,7 +218,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddLocalityName(java.lang.String localityName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLocalityName", localityName);
         } catch (JCNativeException jcne) {
@@ -224,7 +228,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddOrganizationalUnitName(java.lang.String organizationalUnitName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOrganizationalUnitName", organizationalUnitName);
         } catch (JCNativeException jcne) {
@@ -234,7 +238,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddOrganizationName(java.lang.String organizationName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOrganizationName", organizationName);
         } catch (JCNativeException jcne) {
@@ -244,7 +248,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
 
     public void AddStateOrProvinceName(java.lang.String stateOrProvinceName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddStateOrProvinceName", stateOrProvinceName);
         } catch (JCNativeException jcne) {

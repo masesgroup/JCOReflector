@@ -160,9 +160,13 @@ public class HttpListenerTimeoutManager extends NetObject  {
     
     public long getMinSendBytesPerSecond() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinSendBytesPerSecond = null;
         try {
-            return (long)classInstance.Get("MinSendBytesPerSecond");
+            retObjectMinSendBytesPerSecond = classInstance.Get("MinSendBytesPerSecond");
+            return (long)retObjectMinSendBytesPerSecond;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMinSendBytesPerSecond != null ? retObjectMinSendBytesPerSecond.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setMinSendBytesPerSecond(long MinSendBytesPerSecond) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinSendBytesPerSecond", MinSendBytesPerSecond);
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public TimeSpan getDrainEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDrainEntityBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DrainEntityBody");
+            retObjectDrainEntityBody = classInstance.Get("DrainEntityBody");
+            JCObject val = (JCObject)retObjectDrainEntityBody;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDrainEntityBody != null ? retObjectDrainEntityBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setDrainEntityBody(TimeSpan DrainEntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DrainEntityBody", DrainEntityBody == null ? null : DrainEntityBody.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +209,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public TimeSpan getEntityBody() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityBody");
+            retObjectEntityBody = classInstance.Get("EntityBody");
+            JCObject val = (JCObject)retObjectEntityBody;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityBody != null ? retObjectEntityBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setEntityBody(TimeSpan EntityBody) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityBody", EntityBody == null ? null : EntityBody.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +234,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public TimeSpan getHeaderWait() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderWait = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderWait");
+            retObjectHeaderWait = classInstance.Get("HeaderWait");
+            JCObject val = (JCObject)retObjectHeaderWait;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderWait != null ? retObjectHeaderWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setHeaderWait(TimeSpan HeaderWait) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderWait", HeaderWait == null ? null : HeaderWait.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +259,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public TimeSpan getIdleConnection() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdleConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdleConnection");
+            retObjectIdleConnection = classInstance.Get("IdleConnection");
+            JCObject val = (JCObject)retObjectIdleConnection;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdleConnection != null ? retObjectIdleConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +274,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setIdleConnection(TimeSpan IdleConnection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdleConnection", IdleConnection == null ? null : IdleConnection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +284,14 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public TimeSpan getRequestQueue() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestQueue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestQueue");
+            retObjectRequestQueue = classInstance.Get("RequestQueue");
+            JCObject val = (JCObject)retObjectRequestQueue;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestQueue != null ? retObjectRequestQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class HttpListenerTimeoutManager extends NetObject  {
 
     public void setRequestQueue(TimeSpan RequestQueue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.net.HttpListenerException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestQueue", RequestQueue == null ? null : RequestQueue.getJCOInstance());
         } catch (JCNativeException jcne) {

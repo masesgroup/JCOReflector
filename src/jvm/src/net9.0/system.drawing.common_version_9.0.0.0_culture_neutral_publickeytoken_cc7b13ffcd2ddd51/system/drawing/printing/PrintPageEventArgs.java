@@ -173,9 +173,13 @@ public class PrintPageEventArgs extends EventArgs  {
     
     public boolean getCancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancel = null;
         try {
-            return (boolean)classInstance.Get("Cancel");
+            retObjectCancel = classInstance.Get("Cancel");
+            return (boolean)retObjectCancel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancel != null ? retObjectCancel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public void setCancel(boolean Cancel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cancel", Cancel);
         } catch (JCNativeException jcne) {
@@ -193,9 +197,13 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public boolean getHasMorePages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasMorePages = null;
         try {
-            return (boolean)classInstance.Get("HasMorePages");
+            retObjectHasMorePages = classInstance.Get("HasMorePages");
+            return (boolean)retObjectHasMorePages;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasMorePages != null ? retObjectHasMorePages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public void setHasMorePages(boolean HasMorePages) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HasMorePages", HasMorePages);
         } catch (JCNativeException jcne) {
@@ -213,10 +221,14 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public Graphics getGraphics() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGraphics = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Graphics");
+            retObjectGraphics = classInstance.Get("Graphics");
+            JCObject val = (JCObject)retObjectGraphics;
             return new Graphics(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGraphics != null ? retObjectGraphics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +236,7 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public void setGraphics(Graphics Graphics) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Graphics", Graphics == null ? null : Graphics.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,10 +246,14 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public PageSettings getPageSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageSettings");
+            retObjectPageSettings = classInstance.Get("PageSettings");
+            JCObject val = (JCObject)retObjectPageSettings;
             return new PageSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageSettings != null ? retObjectPageSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +261,14 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public Rectangle getMarginBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMarginBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MarginBounds");
+            retObjectMarginBounds = classInstance.Get("MarginBounds");
+            JCObject val = (JCObject)retObjectMarginBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarginBounds != null ? retObjectMarginBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +276,14 @@ public class PrintPageEventArgs extends EventArgs  {
 
     public Rectangle getPageBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageBounds");
+            retObjectPageBounds = classInstance.Get("PageBounds");
+            JCObject val = (JCObject)retObjectPageBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageBounds != null ? retObjectPageBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

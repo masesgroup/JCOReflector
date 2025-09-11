@@ -163,9 +163,13 @@ public class MutableObjectModelBinder extends NetObject  {
     
     public boolean BindModel(ModelBindingExecutionContext modelBindingExecutionContext, ModelBindingContext bindingContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBindModel = null;
         try {
-            return (boolean)classInstance.Invoke("BindModel", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            retObjectBindModel = classInstance.Invoke("BindModel", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance(), bindingContext == null ? null : bindingContext.getJCOInstance());
+            return (boolean)retObjectBindModel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBindModel != null ? retObjectBindModel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

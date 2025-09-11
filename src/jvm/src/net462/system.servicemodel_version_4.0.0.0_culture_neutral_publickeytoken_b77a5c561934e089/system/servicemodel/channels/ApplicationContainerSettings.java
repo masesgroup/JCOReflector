@@ -159,9 +159,13 @@ public class ApplicationContainerSettings extends NetObject  {
     
     public int getSessionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSessionId = null;
         try {
-            return (int)classInstance.Get("SessionId");
+            retObjectSessionId = classInstance.Get("SessionId");
+            return (int)retObjectSessionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSessionId != null ? retObjectSessionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class ApplicationContainerSettings extends NetObject  {
 
     public void setSessionId(int SessionId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SessionId", SessionId);
         } catch (JCNativeException jcne) {
@@ -179,9 +183,13 @@ public class ApplicationContainerSettings extends NetObject  {
 
     public java.lang.String getPackageFullName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackageFullName = null;
         try {
-            return (java.lang.String)classInstance.Get("PackageFullName");
+            retObjectPackageFullName = classInstance.Get("PackageFullName");
+            return (java.lang.String)retObjectPackageFullName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPackageFullName != null ? retObjectPackageFullName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +197,7 @@ public class ApplicationContainerSettings extends NetObject  {
 
     public void setPackageFullName(java.lang.String PackageFullName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PackageFullName", PackageFullName);
         } catch (JCNativeException jcne) {

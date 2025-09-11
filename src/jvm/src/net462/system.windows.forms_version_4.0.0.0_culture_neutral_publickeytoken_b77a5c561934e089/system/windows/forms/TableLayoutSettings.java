@@ -165,9 +165,19 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
     
     public int GetColumn(NetObject control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumn = null;
         try {
-            return (int)classInstance.Invoke("GetColumn", control == null ? null : control.getJCOInstance());
+            retObjectGetColumn = classInstance.Invoke("GetColumn", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetColumn;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnNumber = (java.lang.Number)retObjectGetColumn;
+                return retObjectGetColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +185,19 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public int GetColumnSpan(NetObject control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnSpan = null;
         try {
-            return (int)classInstance.Invoke("GetColumnSpan", control == null ? null : control.getJCOInstance());
+            retObjectGetColumnSpan = classInstance.Invoke("GetColumnSpan", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetColumnSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnSpanNumber = (java.lang.Number)retObjectGetColumnSpan;
+                return retObjectGetColumnSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +205,19 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public int GetRow(NetObject control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRow = null;
         try {
-            return (int)classInstance.Invoke("GetRow", control == null ? null : control.getJCOInstance());
+            retObjectGetRow = classInstance.Invoke("GetRow", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetRow;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowNumber = (java.lang.Number)retObjectGetRow;
+                return retObjectGetRowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +225,19 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public int GetRowSpan(NetObject control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRowSpan = null;
         try {
-            return (int)classInstance.Invoke("GetRowSpan", control == null ? null : control.getJCOInstance());
+            retObjectGetRowSpan = classInstance.Invoke("GetRowSpan", control == null ? null : control.getJCOInstance());
+            return (int)retObjectGetRowSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowSpanNumber = (java.lang.Number)retObjectGetRowSpan;
+                return retObjectGetRowSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +245,14 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public TableLayoutPanelCellPosition GetCellPosition(NetObject control) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCellPosition = null;
         try {
-            JCObject objGetCellPosition = (JCObject)classInstance.Invoke("GetCellPosition", control == null ? null : control.getJCOInstance());
+            retObjectGetCellPosition = classInstance.Invoke("GetCellPosition", control == null ? null : control.getJCOInstance());
+            JCObject objGetCellPosition = (JCObject)retObjectGetCellPosition;
             return new TableLayoutPanelCellPosition(objGetCellPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCellPosition != null ? retObjectGetCellPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +260,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void SetCellPosition(NetObject control, TableLayoutPanelCellPosition cellPosition) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCellPosition", control == null ? null : control.getJCOInstance(), cellPosition == null ? null : cellPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +270,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void SetColumn(NetObject control, int column) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumn", control == null ? null : control.getJCOInstance(), column);
         } catch (JCNativeException jcne) {
@@ -236,7 +280,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void SetColumnSpan(NetObject control, int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumnSpan", control == null ? null : control.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -246,7 +290,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void SetRow(NetObject control, int row) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRow", control == null ? null : control.getJCOInstance(), row);
         } catch (JCNativeException jcne) {
@@ -256,7 +300,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void SetRowSpan(NetObject control, int value) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRowSpan", control == null ? null : control.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -270,7 +314,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -279,9 +323,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
     
     public int getColumnCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnCount = null;
         try {
-            return (int)classInstance.Get("ColumnCount");
+            retObjectColumnCount = classInstance.Get("ColumnCount");
+            return (int)retObjectColumnCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnCount != null ? retObjectColumnCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +337,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void setColumnCount(int ColumnCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnCount", ColumnCount);
         } catch (JCNativeException jcne) {
@@ -299,9 +347,13 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public int getRowCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowCount = null;
         try {
-            return (int)classInstance.Get("RowCount");
+            retObjectRowCount = classInstance.Get("RowCount");
+            return (int)retObjectRowCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowCount != null ? retObjectRowCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +361,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void setRowCount(int RowCount) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowCount", RowCount);
         } catch (JCNativeException jcne) {
@@ -319,10 +371,14 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public TableLayoutColumnStyleCollection getColumnStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnStyles");
+            retObjectColumnStyles = classInstance.Get("ColumnStyles");
+            JCObject val = (JCObject)retObjectColumnStyles;
             return new TableLayoutColumnStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnStyles != null ? retObjectColumnStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,10 +386,14 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public TableLayoutPanelGrowStyle getGrowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGrowStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GrowStyle");
+            retObjectGrowStyle = classInstance.Get("GrowStyle");
+            JCObject val = (JCObject)retObjectGrowStyle;
             return new TableLayoutPanelGrowStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGrowStyle != null ? retObjectGrowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +401,7 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public void setGrowStyle(TableLayoutPanelGrowStyle GrowStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GrowStyle", GrowStyle == null ? null : GrowStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +411,14 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
 
     public TableLayoutRowStyleCollection getRowStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowStyles");
+            retObjectRowStyles = classInstance.Get("RowStyles");
+            JCObject val = (JCObject)retObjectRowStyles;
             return new TableLayoutRowStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowStyles != null ? retObjectRowStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

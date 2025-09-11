@@ -155,9 +155,13 @@ public class ModuleExtensions extends NetObject  {
     
     public static boolean HasModuleVersionId(Module module) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHasModuleVersionId = null;
         try {
-            return (boolean)classType.Invoke("HasModuleVersionId", module == null ? null : module.getJCOInstance());
+            retObjectHasModuleVersionId = classType.Invoke("HasModuleVersionId", module == null ? null : module.getJCOInstance());
+            return (boolean)retObjectHasModuleVersionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasModuleVersionId != null ? retObjectHasModuleVersionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class ModuleExtensions extends NetObject  {
 
     public static Guid GetModuleVersionId(Module module) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetModuleVersionId = null;
         try {
-            JCObject objGetModuleVersionId = (JCObject)classType.Invoke("GetModuleVersionId", module == null ? null : module.getJCOInstance());
+            retObjectGetModuleVersionId = classType.Invoke("GetModuleVersionId", module == null ? null : module.getJCOInstance());
+            JCObject objGetModuleVersionId = (JCObject)retObjectGetModuleVersionId;
             return new Guid(objGetModuleVersionId);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModuleVersionId != null ? retObjectGetModuleVersionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

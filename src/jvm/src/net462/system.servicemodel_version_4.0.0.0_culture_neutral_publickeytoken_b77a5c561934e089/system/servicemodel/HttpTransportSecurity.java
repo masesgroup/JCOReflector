@@ -164,9 +164,13 @@ public class HttpTransportSecurity extends NetObject  {
     
     public boolean ShouldSerializeClientCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeClientCredentialType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeClientCredentialType");
+            retObjectShouldSerializeClientCredentialType = classInstance.Invoke("ShouldSerializeClientCredentialType");
+            return (boolean)retObjectShouldSerializeClientCredentialType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeClientCredentialType != null ? retObjectShouldSerializeClientCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class HttpTransportSecurity extends NetObject  {
 
     public boolean ShouldSerializeExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeExtendedProtectionPolicy = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            retObjectShouldSerializeExtendedProtectionPolicy = classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            return (boolean)retObjectShouldSerializeExtendedProtectionPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeExtendedProtectionPolicy != null ? retObjectShouldSerializeExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class HttpTransportSecurity extends NetObject  {
 
     public boolean ShouldSerializeProxyCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeProxyCredentialType = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeProxyCredentialType");
+            retObjectShouldSerializeProxyCredentialType = classInstance.Invoke("ShouldSerializeProxyCredentialType");
+            return (boolean)retObjectShouldSerializeProxyCredentialType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeProxyCredentialType != null ? retObjectShouldSerializeProxyCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class HttpTransportSecurity extends NetObject  {
 
     public boolean ShouldSerializeRealm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeRealm = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeRealm");
+            retObjectShouldSerializeRealm = classInstance.Invoke("ShouldSerializeRealm");
+            return (boolean)retObjectShouldSerializeRealm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeRealm != null ? retObjectShouldSerializeRealm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class HttpTransportSecurity extends NetObject  {
     
     public ExtendedProtectionPolicy getExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProtectionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProtectionPolicy");
+            retObjectExtendedProtectionPolicy = classInstance.Get("ExtendedProtectionPolicy");
+            JCObject val = (JCObject)retObjectExtendedProtectionPolicy;
             return new ExtendedProtectionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProtectionPolicy != null ? retObjectExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +239,7 @@ public class HttpTransportSecurity extends NetObject  {
 
     public void setExtendedProtectionPolicy(ExtendedProtectionPolicy ExtendedProtectionPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedProtectionPolicy", ExtendedProtectionPolicy == null ? null : ExtendedProtectionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +249,14 @@ public class HttpTransportSecurity extends NetObject  {
 
     public HttpClientCredentialType getClientCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCredentialType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCredentialType");
+            retObjectClientCredentialType = classInstance.Get("ClientCredentialType");
+            JCObject val = (JCObject)retObjectClientCredentialType;
             return new HttpClientCredentialType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCredentialType != null ? retObjectClientCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +264,7 @@ public class HttpTransportSecurity extends NetObject  {
 
     public void setClientCredentialType(HttpClientCredentialType ClientCredentialType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCredentialType", ClientCredentialType == null ? null : ClientCredentialType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +274,14 @@ public class HttpTransportSecurity extends NetObject  {
 
     public HttpProxyCredentialType getProxyCredentialType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyCredentialType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyCredentialType");
+            retObjectProxyCredentialType = classInstance.Get("ProxyCredentialType");
+            JCObject val = (JCObject)retObjectProxyCredentialType;
             return new HttpProxyCredentialType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyCredentialType != null ? retObjectProxyCredentialType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +289,7 @@ public class HttpTransportSecurity extends NetObject  {
 
     public void setProxyCredentialType(HttpProxyCredentialType ProxyCredentialType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyCredentialType", ProxyCredentialType == null ? null : ProxyCredentialType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,9 +299,13 @@ public class HttpTransportSecurity extends NetObject  {
 
     public java.lang.String getRealm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRealm = null;
         try {
-            return (java.lang.String)classInstance.Get("Realm");
+            retObjectRealm = classInstance.Get("Realm");
+            return (java.lang.String)retObjectRealm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRealm != null ? retObjectRealm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +313,7 @@ public class HttpTransportSecurity extends NetObject  {
 
     public void setRealm(java.lang.String Realm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Realm", Realm);
         } catch (JCNativeException jcne) {

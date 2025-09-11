@@ -155,9 +155,13 @@ public class SqlServices extends NetObject  {
     
     public static java.lang.String GenerateApplicationServicesScripts(boolean install, SqlFeatures features, java.lang.String database) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateApplicationServicesScripts = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateApplicationServicesScripts", install, features == null ? null : features.getJCOInstance(), database);
+            retObjectGenerateApplicationServicesScripts = classType.Invoke("GenerateApplicationServicesScripts", install, features == null ? null : features.getJCOInstance(), database);
+            return (java.lang.String)retObjectGenerateApplicationServicesScripts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateApplicationServicesScripts != null ? retObjectGenerateApplicationServicesScripts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class SqlServices extends NetObject  {
 
     public static java.lang.String GenerateSessionStateScripts(boolean install, SessionStateType type, java.lang.String customDatabase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGenerateSessionStateScripts = null;
         try {
-            return (java.lang.String)classType.Invoke("GenerateSessionStateScripts", install, type == null ? null : type.getJCOInstance(), customDatabase);
+            retObjectGenerateSessionStateScripts = classType.Invoke("GenerateSessionStateScripts", install, type == null ? null : type.getJCOInstance(), customDatabase);
+            return (java.lang.String)retObjectGenerateSessionStateScripts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateSessionStateScripts != null ? retObjectGenerateSessionStateScripts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class SqlServices extends NetObject  {
 
     public static void Install(java.lang.String server, java.lang.String user, java.lang.String password, java.lang.String database, SqlFeatures features) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Install", server, user, password, database, features == null ? null : features.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class SqlServices extends NetObject  {
 
     public static void Install(java.lang.String server, java.lang.String database, SqlFeatures features) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Install", server, database, features == null ? null : features.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class SqlServices extends NetObject  {
 
     public static void Install(java.lang.String database, SqlFeatures features, java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Install", database, features == null ? null : features.getJCOInstance(), connectionString);
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class SqlServices extends NetObject  {
 
     public static void InstallSessionState(java.lang.String server, java.lang.String user, java.lang.String password, java.lang.String customDatabase, SessionStateType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InstallSessionState", server, user, password, customDatabase, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,7 +223,7 @@ public class SqlServices extends NetObject  {
 
     public static void InstallSessionState(java.lang.String server, java.lang.String customDatabase, SessionStateType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InstallSessionState", server, customDatabase, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +233,7 @@ public class SqlServices extends NetObject  {
 
     public static void InstallSessionState(java.lang.String customDatabase, SessionStateType type, java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("InstallSessionState", customDatabase, type == null ? null : type.getJCOInstance(), connectionString);
         } catch (JCNativeException jcne) {
@@ -235,7 +243,7 @@ public class SqlServices extends NetObject  {
 
     public static void Uninstall(java.lang.String server, java.lang.String user, java.lang.String password, java.lang.String database, SqlFeatures features) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Uninstall", server, user, password, database, features == null ? null : features.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +253,7 @@ public class SqlServices extends NetObject  {
 
     public static void Uninstall(java.lang.String server, java.lang.String database, SqlFeatures features) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Uninstall", server, database, features == null ? null : features.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -255,7 +263,7 @@ public class SqlServices extends NetObject  {
 
     public static void Uninstall(java.lang.String database, SqlFeatures features, java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Uninstall", database, features == null ? null : features.getJCOInstance(), connectionString);
         } catch (JCNativeException jcne) {
@@ -265,7 +273,7 @@ public class SqlServices extends NetObject  {
 
     public static void UninstallSessionState(java.lang.String server, java.lang.String user, java.lang.String password, java.lang.String customDatabase, SessionStateType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UninstallSessionState", server, user, password, customDatabase, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,7 +283,7 @@ public class SqlServices extends NetObject  {
 
     public static void UninstallSessionState(java.lang.String server, java.lang.String customDatabase, SessionStateType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UninstallSessionState", server, customDatabase, type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,7 +293,7 @@ public class SqlServices extends NetObject  {
 
     public static void UninstallSessionState(java.lang.String customDatabase, SessionStateType type, java.lang.String connectionString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.web.HttpException, system.NotSupportedException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.management.SqlExecutionException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UninstallSessionState", customDatabase, type == null ? null : type.getJCOInstance(), connectionString);
         } catch (JCNativeException jcne) {

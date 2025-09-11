@@ -159,10 +159,14 @@ public class XamlServices extends NetObject  {
     
     public static NetObject Load(Stream stream) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class XamlServices extends NetObject  {
 
     public static NetObject Load(TextReader textReader) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class XamlServices extends NetObject  {
 
     public static NetObject Load(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.AggregateException, system.FormatException, system.xml.schema.XmlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", fileName);
+            retObjectLoad = classType.Invoke("Load", fileName);
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class XamlServices extends NetObject  {
 
     public static NetObject Load(XmlReader xmlReader) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.security.SecurityException, system.UriFormatException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", xmlReader == null ? null : xmlReader.getJCOInstance());
+            retObjectLoad = classType.Invoke("Load", xmlReader == null ? null : xmlReader.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new NetObject(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class XamlServices extends NetObject  {
 
     public static NetObject Parse(java.lang.String xaml) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlSchemaException, system.threading.ThreadAbortException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", xaml);
+            retObjectParse = classType.Invoke("Parse", xaml);
+            JCObject objParse = (JCObject)retObjectParse;
             return new NetObject(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +234,13 @@ public class XamlServices extends NetObject  {
 
     public static java.lang.String Save(NetObject instance) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xml.XmlException, system.NotImplementedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSave = null;
         try {
-            return (java.lang.String)classType.Invoke("Save", instance == null ? null : instance.getJCOInstance());
+            retObjectSave = classType.Invoke("Save", instance == null ? null : instance.getJCOInstance());
+            return (java.lang.String)retObjectSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSave != null ? retObjectSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +248,7 @@ public class XamlServices extends NetObject  {
 
     public static void Save(Stream stream, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException, system.NotImplementedException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", stream == null ? null : stream.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,7 +258,7 @@ public class XamlServices extends NetObject  {
 
     public static void Save(TextWriter writer, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", writer == null ? null : writer.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +268,7 @@ public class XamlServices extends NetObject  {
 
     public static void Save(java.lang.String fileName, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.xml.XmlException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", fileName, instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +278,7 @@ public class XamlServices extends NetObject  {
 
     public static void Save(XamlWriter writer, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", writer == null ? null : writer.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +288,7 @@ public class XamlServices extends NetObject  {
 
     public static void Save(XmlWriter writer, NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xaml.XamlException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", writer == null ? null : writer.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
         } catch (JCNativeException jcne) {

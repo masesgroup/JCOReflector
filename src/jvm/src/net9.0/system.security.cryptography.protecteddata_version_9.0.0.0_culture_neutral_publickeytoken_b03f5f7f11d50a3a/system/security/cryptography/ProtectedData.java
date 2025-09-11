@@ -154,10 +154,12 @@ public class ProtectedData extends NetObject  {
     
     public static byte[] Protect(byte[] userData, byte[] optionalEntropy, DataProtectionScope scope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProtect = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", userData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
+            retObjectProtect = classType.Invoke("Protect", userData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectProtect;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -166,6 +168,8 @@ public class ProtectedData extends NetObject  {
 				resultingArray[indexProtect] = (byte)resultingArrayList.get(indexProtect);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectProtect != null ? retObjectProtect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,12 @@ public class ProtectedData extends NetObject  {
 
     public static byte[] Protect(JCORefOut dupParam0, JCORefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProtect = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectProtect = classType.Invoke("Protect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectProtect;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -185,6 +191,8 @@ public class ProtectedData extends NetObject  {
 				resultingArray[indexProtect] = (byte)resultingArrayList.get(indexProtect);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectProtect != null ? retObjectProtect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,12 @@ public class ProtectedData extends NetObject  {
 
     public static byte[] Unprotect(byte[] encryptedData, byte[] optionalEntropy, DataProtectionScope scope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnprotect = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", encryptedData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
+            retObjectUnprotect = classType.Invoke("Unprotect", encryptedData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUnprotect;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -204,6 +214,8 @@ public class ProtectedData extends NetObject  {
 				resultingArray[indexUnprotect] = (byte)resultingArrayList.get(indexUnprotect);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUnprotect != null ? retObjectUnprotect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +223,12 @@ public class ProtectedData extends NetObject  {
 
     public static byte[] Unprotect(JCORefOut dupParam0, JCORefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnprotect = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectUnprotect = classType.Invoke("Unprotect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectUnprotect;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -223,6 +237,8 @@ public class ProtectedData extends NetObject  {
 				resultingArray[indexUnprotect] = (byte)resultingArrayList.get(indexUnprotect);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectUnprotect != null ? retObjectUnprotect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

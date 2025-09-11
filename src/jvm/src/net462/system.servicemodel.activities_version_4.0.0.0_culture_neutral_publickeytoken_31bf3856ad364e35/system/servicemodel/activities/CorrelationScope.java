@@ -163,9 +163,13 @@ public class CorrelationScope extends NativeActivity  {
     
     public boolean ShouldSerializeCorrelatesWith() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeCorrelatesWith = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeCorrelatesWith");
+            retObjectShouldSerializeCorrelatesWith = classInstance.Invoke("ShouldSerializeCorrelatesWith");
+            return (boolean)retObjectShouldSerializeCorrelatesWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeCorrelatesWith != null ? retObjectShouldSerializeCorrelatesWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class CorrelationScope extends NativeActivity  {
     
     public Activity getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class CorrelationScope extends NativeActivity  {
 
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {

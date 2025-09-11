@@ -292,9 +292,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
     
     public boolean Equals(X509Certificate other) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +306,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] Export(X509ContentType contentType, SecureString password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password == null ? null : password.getJCOInstance());
+            retObjectExport = classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password == null ? null : password.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -314,6 +320,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +329,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] Export(X509ContentType contentType, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password);
+            retObjectExport = classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance(), password);
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -333,6 +343,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +352,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] Export(X509ContentType contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExport = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance());
+            retObjectExport = classInstance.Invoke("Export", contentType == null ? null : contentType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectExport;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -352,6 +366,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexExport] = (byte)resultingArrayList.get(indexExport);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExport != null ? retObjectExport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +375,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetCertHash() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCertHash");
+            retObjectGetCertHash = classInstance.Invoke("GetCertHash");
+            JCObject resultingObjects = (JCObject)retObjectGetCertHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -371,6 +389,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetCertHash] = (byte)resultingArrayList.get(indexGetCertHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetCertHash != null ? retObjectGetCertHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +398,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetCertHash(HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCertHash", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectGetCertHash = classInstance.Invoke("GetCertHash", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCertHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -390,6 +412,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetCertHash] = (byte)resultingArrayList.get(indexGetCertHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetCertHash != null ? retObjectGetCertHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +421,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetKeyAlgorithmParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKeyAlgorithmParameters = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetKeyAlgorithmParameters");
+            retObjectGetKeyAlgorithmParameters = classInstance.Invoke("GetKeyAlgorithmParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetKeyAlgorithmParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -409,6 +435,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetKeyAlgorithmParameters] = (byte)resultingArrayList.get(indexGetKeyAlgorithmParameters);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetKeyAlgorithmParameters != null ? retObjectGetKeyAlgorithmParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +444,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetPublicKey() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPublicKey = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPublicKey");
+            retObjectGetPublicKey = classInstance.Invoke("GetPublicKey");
+            JCObject resultingObjects = (JCObject)retObjectGetPublicKey;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -428,6 +458,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetPublicKey] = (byte)resultingArrayList.get(indexGetPublicKey);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetPublicKey != null ? retObjectGetPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +467,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetRawCertData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawCertData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRawCertData");
+            retObjectGetRawCertData = classInstance.Invoke("GetRawCertData");
+            JCObject resultingObjects = (JCObject)retObjectGetRawCertData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -447,6 +481,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetRawCertData] = (byte)resultingArrayList.get(indexGetRawCertData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetRawCertData != null ? retObjectGetRawCertData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,10 +490,12 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public byte[] GetSerialNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerialNumber = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSerialNumber");
+            retObjectGetSerialNumber = classInstance.Invoke("GetSerialNumber");
+            JCObject resultingObjects = (JCObject)retObjectGetSerialNumber;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -466,6 +504,8 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 				resultingArray[indexGetSerialNumber] = (byte)resultingArrayList.get(indexGetSerialNumber);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSerialNumber != null ? retObjectGetSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -473,10 +513,14 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public static X509Certificate CreateFromCertFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromCertFile = null;
         try {
-            JCObject objCreateFromCertFile = (JCObject)classType.Invoke("CreateFromCertFile", filename);
+            retObjectCreateFromCertFile = classType.Invoke("CreateFromCertFile", filename);
+            JCObject objCreateFromCertFile = (JCObject)retObjectCreateFromCertFile;
             return new X509Certificate(objCreateFromCertFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromCertFile != null ? retObjectCreateFromCertFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -484,10 +528,14 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public static X509Certificate CreateFromSignedFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromSignedFile = null;
         try {
-            JCObject objCreateFromSignedFile = (JCObject)classType.Invoke("CreateFromSignedFile", filename);
+            retObjectCreateFromSignedFile = classType.Invoke("CreateFromSignedFile", filename);
+            JCObject objCreateFromSignedFile = (JCObject)retObjectCreateFromSignedFile;
             return new X509Certificate(objCreateFromSignedFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromSignedFile != null ? retObjectCreateFromSignedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -495,9 +543,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetCertHashString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertHashString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCertHashString");
+            retObjectGetCertHashString = classInstance.Invoke("GetCertHashString");
+            return (java.lang.String)retObjectGetCertHashString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCertHashString != null ? retObjectGetCertHashString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,9 +557,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetCertHashString(HashAlgorithmName hashAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCertHashString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetCertHashString", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectGetCertHashString = classInstance.Invoke("GetCertHashString", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return (java.lang.String)retObjectGetCertHashString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCertHashString != null ? retObjectGetCertHashString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,9 +571,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetEffectiveDateString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEffectiveDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetEffectiveDateString");
+            retObjectGetEffectiveDateString = classInstance.Invoke("GetEffectiveDateString");
+            return (java.lang.String)retObjectGetEffectiveDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetEffectiveDateString != null ? retObjectGetEffectiveDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,9 +585,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetExpirationDateString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpirationDateString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetExpirationDateString");
+            retObjectGetExpirationDateString = classInstance.Invoke("GetExpirationDateString");
+            return (java.lang.String)retObjectGetExpirationDateString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetExpirationDateString != null ? retObjectGetExpirationDateString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,9 +599,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFormat = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetFormat");
+            retObjectGetFormat = classInstance.Invoke("GetFormat");
+            return (java.lang.String)retObjectGetFormat;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetFormat != null ? retObjectGetFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,9 +613,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetIssuerName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetIssuerName");
+            retObjectGetIssuerName = classInstance.Invoke("GetIssuerName");
+            return (java.lang.String)retObjectGetIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetIssuerName != null ? retObjectGetIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,9 +627,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetKeyAlgorithm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKeyAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetKeyAlgorithm");
+            retObjectGetKeyAlgorithm = classInstance.Invoke("GetKeyAlgorithm");
+            return (java.lang.String)retObjectGetKeyAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKeyAlgorithm != null ? retObjectGetKeyAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,9 +641,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetKeyAlgorithmParametersString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetKeyAlgorithmParametersString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetKeyAlgorithmParametersString");
+            retObjectGetKeyAlgorithmParametersString = classInstance.Invoke("GetKeyAlgorithmParametersString");
+            return (java.lang.String)retObjectGetKeyAlgorithmParametersString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetKeyAlgorithmParametersString != null ? retObjectGetKeyAlgorithmParametersString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,9 +655,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetName");
+            retObjectGetName = classInstance.Invoke("GetName");
+            return (java.lang.String)retObjectGetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetName != null ? retObjectGetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,9 +669,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetPublicKeyString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPublicKeyString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPublicKeyString");
+            retObjectGetPublicKeyString = classInstance.Invoke("GetPublicKeyString");
+            return (java.lang.String)retObjectGetPublicKeyString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPublicKeyString != null ? retObjectGetPublicKeyString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -595,9 +683,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetRawCertDataString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRawCertDataString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRawCertDataString");
+            retObjectGetRawCertDataString = classInstance.Invoke("GetRawCertDataString");
+            return (java.lang.String)retObjectGetRawCertDataString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRawCertDataString != null ? retObjectGetRawCertDataString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,9 +697,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String GetSerialNumberString() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSerialNumberString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSerialNumberString");
+            retObjectGetSerialNumberString = classInstance.Invoke("GetSerialNumberString");
+            return (java.lang.String)retObjectGetSerialNumberString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSerialNumberString != null ? retObjectGetSerialNumberString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,9 +711,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String ToString(boolean fVerbose) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.globalization.CultureNotFoundException, system.RankException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", fVerbose);
+            retObjectToString = classInstance.Invoke("ToString", fVerbose);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,7 +725,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -635,7 +735,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(byte[] rawData, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", rawData, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -645,7 +745,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(JCORefOut dupParam0, SecureString dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -655,7 +755,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(byte[] rawData, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", rawData, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -665,7 +765,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -675,7 +775,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(byte[] rawData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", (java.lang.Object)rawData);
         } catch (JCNativeException jcne) {
@@ -685,7 +785,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -695,7 +795,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(java.lang.String fileName, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", fileName, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -705,7 +805,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(java.lang.String fileName, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", fileName, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -715,7 +815,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Import(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Import", fileName);
         } catch (JCNativeException jcne) {
@@ -725,7 +825,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -739,7 +839,7 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
      */
     @Deprecated 
     public void OnDeserialization(NetObject sender) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
     /**
@@ -748,13 +848,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -770,9 +870,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
     
     public java.lang.String getIssuer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            return (java.lang.String)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            return (java.lang.String)retObjectIssuer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -780,9 +884,13 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
 
     public java.lang.String getSubject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            return (java.lang.String)retObjectSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,13 @@ public class X509IssuerSerial extends ValueType  {
     
     public java.lang.String getIssuerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Get("IssuerName");
+            retObjectIssuerName = classInstance.Get("IssuerName");
+            return (java.lang.String)retObjectIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIssuerName != null ? retObjectIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class X509IssuerSerial extends ValueType  {
 
     public void setIssuerName(java.lang.String IssuerName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssuerName", IssuerName);
         } catch (JCNativeException jcne) {
@@ -180,9 +184,13 @@ public class X509IssuerSerial extends ValueType  {
 
     public java.lang.String getSerialNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerialNumber = null;
         try {
-            return (java.lang.String)classInstance.Get("SerialNumber");
+            retObjectSerialNumber = classInstance.Get("SerialNumber");
+            return (java.lang.String)retObjectSerialNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSerialNumber != null ? retObjectSerialNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class X509IssuerSerial extends ValueType  {
 
     public void setSerialNumber(java.lang.String SerialNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerialNumber", SerialNumber);
         } catch (JCNativeException jcne) {

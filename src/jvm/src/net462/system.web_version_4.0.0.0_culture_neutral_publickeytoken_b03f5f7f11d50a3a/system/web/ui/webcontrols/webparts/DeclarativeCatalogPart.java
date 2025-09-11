@@ -174,10 +174,14 @@ public class DeclarativeCatalogPart extends CatalogPart  {
     
     public WebPart GetWebPart(WebPartDescription description) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWebPart = null;
         try {
-            JCObject objGetWebPart = (JCObject)classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            retObjectGetWebPart = classInstance.Invoke("GetWebPart", description == null ? null : description.getJCOInstance());
+            JCObject objGetWebPart = (JCObject)retObjectGetWebPart;
             return new WebPart(objGetWebPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWebPart != null ? retObjectGetWebPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +189,14 @@ public class DeclarativeCatalogPart extends CatalogPart  {
 
     public WebPartDescriptionCollection GetAvailableWebPartDescriptions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.FormatException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.web.HttpCompileException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAvailableWebPartDescriptions = null;
         try {
-            JCObject objGetAvailableWebPartDescriptions = (JCObject)classInstance.Invoke("GetAvailableWebPartDescriptions");
+            retObjectGetAvailableWebPartDescriptions = classInstance.Invoke("GetAvailableWebPartDescriptions");
+            JCObject objGetAvailableWebPartDescriptions = (JCObject)retObjectGetAvailableWebPartDescriptions;
             return new WebPartDescriptionCollection(objGetAvailableWebPartDescriptions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAvailableWebPartDescriptions != null ? retObjectGetAvailableWebPartDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +208,13 @@ public class DeclarativeCatalogPart extends CatalogPart  {
     
     public java.lang.String getWebPartsListUserControlPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPartsListUserControlPath = null;
         try {
-            return (java.lang.String)classInstance.Get("WebPartsListUserControlPath");
+            retObjectWebPartsListUserControlPath = classInstance.Get("WebPartsListUserControlPath");
+            return (java.lang.String)retObjectWebPartsListUserControlPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWebPartsListUserControlPath != null ? retObjectWebPartsListUserControlPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +222,7 @@ public class DeclarativeCatalogPart extends CatalogPart  {
 
     public void setWebPartsListUserControlPath(java.lang.String WebPartsListUserControlPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebPartsListUserControlPath", WebPartsListUserControlPath);
         } catch (JCNativeException jcne) {
@@ -220,10 +232,14 @@ public class DeclarativeCatalogPart extends CatalogPart  {
 
     public ITemplate getWebPartsTemplate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebPartsTemplate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebPartsTemplate");
+            retObjectWebPartsTemplate = classInstance.Get("WebPartsTemplate");
+            JCObject val = (JCObject)retObjectWebPartsTemplate;
             return new ITemplateImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebPartsTemplate != null ? retObjectWebPartsTemplate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class DeclarativeCatalogPart extends CatalogPart  {
 
     public void setWebPartsTemplate(ITemplate WebPartsTemplate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebPartsTemplate", WebPartsTemplate == null ? null : WebPartsTemplate.getJCOInstance());
         } catch (JCNativeException jcne) {

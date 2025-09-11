@@ -171,10 +171,14 @@ public class StrokeCollectionChangedEventArgs extends EventArgs  {
     
     public StrokeCollection getAdded() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdded = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Added");
+            retObjectAdded = classInstance.Get("Added");
+            JCObject val = (JCObject)retObjectAdded;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdded != null ? retObjectAdded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class StrokeCollectionChangedEventArgs extends EventArgs  {
 
     public StrokeCollection getRemoved() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoved = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Removed");
+            retObjectRemoved = classInstance.Get("Removed");
+            JCObject val = (JCObject)retObjectRemoved;
             return new StrokeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoved != null ? retObjectRemoved.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

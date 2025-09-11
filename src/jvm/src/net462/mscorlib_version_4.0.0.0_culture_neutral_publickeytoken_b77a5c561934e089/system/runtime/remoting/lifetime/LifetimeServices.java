@@ -166,10 +166,14 @@ public class LifetimeServices extends NetObject  {
     
     public static TimeSpan getLeaseManagerPollTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeaseManagerPollTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("LeaseManagerPollTime");
+            retObjectLeaseManagerPollTime = classType.Get("LeaseManagerPollTime");
+            JCObject val = (JCObject)retObjectLeaseManagerPollTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeaseManagerPollTime != null ? retObjectLeaseManagerPollTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class LifetimeServices extends NetObject  {
 
     public static void setLeaseManagerPollTime(TimeSpan LeaseManagerPollTime) throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LeaseManagerPollTime", LeaseManagerPollTime == null ? null : LeaseManagerPollTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class LifetimeServices extends NetObject  {
 
     public static TimeSpan getLeaseTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeaseTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("LeaseTime");
+            retObjectLeaseTime = classType.Get("LeaseTime");
+            JCObject val = (JCObject)retObjectLeaseTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeaseTime != null ? retObjectLeaseTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class LifetimeServices extends NetObject  {
 
     public static void setLeaseTime(TimeSpan LeaseTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("LeaseTime", LeaseTime == null ? null : LeaseTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class LifetimeServices extends NetObject  {
 
     public static TimeSpan getRenewOnCallTime() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRenewOnCallTime = null;
         try {
-            JCObject val = (JCObject)classType.Get("RenewOnCallTime");
+            retObjectRenewOnCallTime = classType.Get("RenewOnCallTime");
+            JCObject val = (JCObject)retObjectRenewOnCallTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewOnCallTime != null ? retObjectRenewOnCallTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class LifetimeServices extends NetObject  {
 
     public static void setRenewOnCallTime(TimeSpan RenewOnCallTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RenewOnCallTime", RenewOnCallTime == null ? null : RenewOnCallTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class LifetimeServices extends NetObject  {
 
     public static TimeSpan getSponsorshipTimeout() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSponsorshipTimeout = null;
         try {
-            JCObject val = (JCObject)classType.Get("SponsorshipTimeout");
+            retObjectSponsorshipTimeout = classType.Get("SponsorshipTimeout");
+            JCObject val = (JCObject)retObjectSponsorshipTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSponsorshipTimeout != null ? retObjectSponsorshipTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class LifetimeServices extends NetObject  {
 
     public static void setSponsorshipTimeout(TimeSpan SponsorshipTimeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.runtime.remoting.RemotingException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SponsorshipTimeout", SponsorshipTimeout == null ? null : SponsorshipTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {

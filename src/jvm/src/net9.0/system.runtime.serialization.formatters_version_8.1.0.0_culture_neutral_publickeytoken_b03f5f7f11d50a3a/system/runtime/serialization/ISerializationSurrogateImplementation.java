@@ -146,10 +146,14 @@ public class ISerializationSurrogateImplementation extends NetObject implements 
     
     public NetObject SetObjectData(NetObject obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetObjectData = null;
         try {
-            JCObject objSetObjectData = (JCObject)classInstance.Invoke("SetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            retObjectSetObjectData = classInstance.Invoke("SetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector == null ? null : selector.getJCOInstance());
+            JCObject objSetObjectData = (JCObject)retObjectSetObjectData;
             return new NetObject(objSetObjectData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetObjectData != null ? retObjectSetObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class ISerializationSurrogateImplementation extends NetObject implements 
 
     public void GetObjectData(NetObject obj, SerializationInfo info, StreamingContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

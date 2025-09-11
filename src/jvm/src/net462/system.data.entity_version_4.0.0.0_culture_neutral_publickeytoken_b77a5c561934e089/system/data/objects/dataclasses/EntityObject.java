@@ -164,7 +164,7 @@ public class EntityObject extends StructuralObject implements system.data.object
      */
     @Deprecated 
     public void SetChangeTracker(IEntityChangeTracker changeTracker) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityWithChangeTracker to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityWithChangeTracker to obtain the full interface.");
     }
 
 
@@ -173,10 +173,14 @@ public class EntityObject extends StructuralObject implements system.data.object
     
     public EntityKey getEntityKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityKey");
+            retObjectEntityKey = classInstance.Get("EntityKey");
+            JCObject val = (JCObject)retObjectEntityKey;
             return new EntityKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityKey != null ? retObjectEntityKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class EntityObject extends StructuralObject implements system.data.object
 
     public void setEntityKey(EntityKey EntityKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKey", EntityKey == null ? null : EntityKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -194,10 +198,14 @@ public class EntityObject extends StructuralObject implements system.data.object
 
     public EntityState getEntityState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityState");
+            retObjectEntityState = classInstance.Get("EntityState");
+            JCObject val = (JCObject)retObjectEntityState;
             return new EntityState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityState != null ? retObjectEntityState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

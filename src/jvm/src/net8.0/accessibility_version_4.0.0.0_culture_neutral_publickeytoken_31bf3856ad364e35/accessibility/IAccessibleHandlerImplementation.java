@@ -144,7 +144,7 @@ public class IAccessibleHandlerImplementation extends NetObject implements IAcce
     
     public void AccessibleObjectFromID(int hwnd, int lObjectID, JCORefOut<IAccessible> pIAccessible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AccessibleObjectFromID", hwnd, lObjectID, pIAccessible.getJCRefOut());
         } catch (JCNativeException jcne) {

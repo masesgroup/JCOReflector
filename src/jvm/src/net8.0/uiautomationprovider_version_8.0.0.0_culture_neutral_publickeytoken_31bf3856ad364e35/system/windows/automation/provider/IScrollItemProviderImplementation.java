@@ -142,7 +142,7 @@ public class IScrollItemProviderImplementation extends NetObject implements IScr
     
     public void ScrollIntoView() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollIntoView");
         } catch (JCNativeException jcne) {

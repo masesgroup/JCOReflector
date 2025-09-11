@@ -185,7 +185,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
      */
     @Deprecated 
     public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
      */
     @Deprecated 
     public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
 
@@ -203,9 +203,13 @@ public class WebServiceInputActivity extends Activity implements system.workflow
     
     public boolean getIsActivating() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsActivating = null;
         try {
-            return (boolean)classInstance.Get("IsActivating");
+            retObjectIsActivating = classInstance.Get("IsActivating");
+            return (boolean)retObjectIsActivating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsActivating != null ? retObjectIsActivating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void setIsActivating(boolean IsActivating) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsActivating", IsActivating);
         } catch (JCNativeException jcne) {
@@ -223,9 +227,13 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public java.lang.String getMethodName() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodName = null;
         try {
-            return (java.lang.String)classInstance.Get("MethodName");
+            retObjectMethodName = classInstance.Get("MethodName");
+            return (java.lang.String)retObjectMethodName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethodName != null ? retObjectMethodName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +241,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void setMethodName(java.lang.String MethodName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MethodName", MethodName);
         } catch (JCNativeException jcne) {
@@ -243,10 +251,14 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public NetType getInterfaceType() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InterfaceType");
+            retObjectInterfaceType = classInstance.Get("InterfaceType");
+            JCObject val = (JCObject)retObjectInterfaceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterfaceType != null ? retObjectInterfaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +266,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void setInterfaceType(NetType InterfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterfaceType", InterfaceType == null ? null : InterfaceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,10 +276,14 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public WorkflowRoleCollection getRoles() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Roles");
+            retObjectRoles = classInstance.Get("Roles");
+            JCObject val = (JCObject)retObjectRoles;
             return new WorkflowRoleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoles != null ? retObjectRoles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +291,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void setRoles(WorkflowRoleCollection Roles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Roles", Roles == null ? null : Roles.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -285,10 +301,14 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public WorkflowParameterBindingCollection getParameterBindings() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterBindings");
+            retObjectParameterBindings = classInstance.Get("ParameterBindings");
+            JCObject val = (JCObject)retObjectParameterBindings;
             return new WorkflowParameterBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterBindings != null ? retObjectParameterBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,7 +321,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void addInputReceived(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InputReceived", handler);
         } catch (JCNativeException jcne) {
@@ -311,7 +331,7 @@ public class WebServiceInputActivity extends Activity implements system.workflow
 
     public void removeInputReceived(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InputReceived", handler);
         } catch (JCNativeException jcne) {

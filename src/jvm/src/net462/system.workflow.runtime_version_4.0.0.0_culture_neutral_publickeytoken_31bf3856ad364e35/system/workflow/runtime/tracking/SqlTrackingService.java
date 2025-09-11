@@ -181,9 +181,13 @@ public class SqlTrackingService extends TrackingService  {
     
     public boolean getEnableRetries() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableRetries = null;
         try {
-            return (boolean)classInstance.Get("EnableRetries");
+            retObjectEnableRetries = classInstance.Get("EnableRetries");
+            return (boolean)retObjectEnableRetries;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableRetries != null ? retObjectEnableRetries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class SqlTrackingService extends TrackingService  {
 
     public void setEnableRetries(boolean EnableRetries) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableRetries", EnableRetries);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class SqlTrackingService extends TrackingService  {
 
     public boolean getIsTransactional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransactional = null;
         try {
-            return (boolean)classInstance.Get("IsTransactional");
+            retObjectIsTransactional = classInstance.Get("IsTransactional");
+            return (boolean)retObjectIsTransactional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransactional != null ? retObjectIsTransactional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class SqlTrackingService extends TrackingService  {
 
     public void setIsTransactional(boolean IsTransactional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTransactional", IsTransactional);
         } catch (JCNativeException jcne) {
@@ -221,9 +229,13 @@ public class SqlTrackingService extends TrackingService  {
 
     public boolean getPartitionOnCompletion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitionOnCompletion = null;
         try {
-            return (boolean)classInstance.Get("PartitionOnCompletion");
+            retObjectPartitionOnCompletion = classInstance.Get("PartitionOnCompletion");
+            return (boolean)retObjectPartitionOnCompletion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPartitionOnCompletion != null ? retObjectPartitionOnCompletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +243,7 @@ public class SqlTrackingService extends TrackingService  {
 
     public void setPartitionOnCompletion(boolean PartitionOnCompletion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartitionOnCompletion", PartitionOnCompletion);
         } catch (JCNativeException jcne) {
@@ -241,9 +253,13 @@ public class SqlTrackingService extends TrackingService  {
 
     public boolean getUseDefaultProfile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultProfile = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultProfile");
+            retObjectUseDefaultProfile = classInstance.Get("UseDefaultProfile");
+            return (boolean)retObjectUseDefaultProfile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultProfile != null ? retObjectUseDefaultProfile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class SqlTrackingService extends TrackingService  {
 
     public void setUseDefaultProfile(boolean UseDefaultProfile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultProfile", UseDefaultProfile);
         } catch (JCNativeException jcne) {
@@ -261,9 +277,13 @@ public class SqlTrackingService extends TrackingService  {
 
     public double getProfileChangeCheckInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProfileChangeCheckInterval = null;
         try {
-            return (double)classInstance.Get("ProfileChangeCheckInterval");
+            retObjectProfileChangeCheckInterval = classInstance.Get("ProfileChangeCheckInterval");
+            return (double)retObjectProfileChangeCheckInterval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectProfileChangeCheckInterval != null ? retObjectProfileChangeCheckInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class SqlTrackingService extends TrackingService  {
 
     public void setProfileChangeCheckInterval(double ProfileChangeCheckInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProfileChangeCheckInterval", ProfileChangeCheckInterval);
         } catch (JCNativeException jcne) {
@@ -281,9 +301,13 @@ public class SqlTrackingService extends TrackingService  {
 
     public java.lang.String getConnectionString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionString = null;
         try {
-            return (java.lang.String)classInstance.Get("ConnectionString");
+            retObjectConnectionString = classInstance.Get("ConnectionString");
+            return (java.lang.String)retObjectConnectionString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectConnectionString != null ? retObjectConnectionString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

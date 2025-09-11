@@ -163,7 +163,7 @@ public class ColorDialog extends CommonDialog  {
     
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class ColorDialog extends CommonDialog  {
     
     public boolean getAllowFullOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowFullOpen = null;
         try {
-            return (boolean)classInstance.Get("AllowFullOpen");
+            retObjectAllowFullOpen = classInstance.Get("AllowFullOpen");
+            return (boolean)retObjectAllowFullOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowFullOpen != null ? retObjectAllowFullOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setAllowFullOpen(boolean AllowFullOpen) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowFullOpen", AllowFullOpen);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class ColorDialog extends CommonDialog  {
 
     public boolean getAnyColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnyColor = null;
         try {
-            return (boolean)classInstance.Get("AnyColor");
+            retObjectAnyColor = classInstance.Get("AnyColor");
+            return (boolean)retObjectAnyColor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAnyColor != null ? retObjectAnyColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setAnyColor(boolean AnyColor) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AnyColor", AnyColor);
         } catch (JCNativeException jcne) {
@@ -217,9 +225,13 @@ public class ColorDialog extends CommonDialog  {
 
     public boolean getFullOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFullOpen = null;
         try {
-            return (boolean)classInstance.Get("FullOpen");
+            retObjectFullOpen = classInstance.Get("FullOpen");
+            return (boolean)retObjectFullOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectFullOpen != null ? retObjectFullOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +239,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setFullOpen(boolean FullOpen) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FullOpen", FullOpen);
         } catch (JCNativeException jcne) {
@@ -237,9 +249,13 @@ public class ColorDialog extends CommonDialog  {
 
     public boolean getShowHelp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowHelp = null;
         try {
-            return (boolean)classInstance.Get("ShowHelp");
+            retObjectShowHelp = classInstance.Get("ShowHelp");
+            return (boolean)retObjectShowHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowHelp != null ? retObjectShowHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +263,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setShowHelp(boolean ShowHelp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowHelp", ShowHelp);
         } catch (JCNativeException jcne) {
@@ -257,9 +273,13 @@ public class ColorDialog extends CommonDialog  {
 
     public boolean getSolidColorOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSolidColorOnly = null;
         try {
-            return (boolean)classInstance.Get("SolidColorOnly");
+            retObjectSolidColorOnly = classInstance.Get("SolidColorOnly");
+            return (boolean)retObjectSolidColorOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSolidColorOnly != null ? retObjectSolidColorOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setSolidColorOnly(boolean SolidColorOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SolidColorOnly", SolidColorOnly);
         } catch (JCNativeException jcne) {
@@ -277,10 +297,12 @@ public class ColorDialog extends CommonDialog  {
 
     public int[] getCustomColors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomColors = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("CustomColors");
+            retObjectCustomColors = classInstance.Get("CustomColors");
+            JCObject resultingObjects = (JCObject)retObjectCustomColors;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -289,6 +311,8 @@ public class ColorDialog extends CommonDialog  {
 				resultingArray[indexCustomColors] = (int)resultingArrayList.get(indexCustomColors);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectCustomColors != null ? retObjectCustomColors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +320,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setCustomColors(int[] CustomColors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomColors", CustomColors);
         } catch (JCNativeException jcne) {
@@ -306,10 +330,14 @@ public class ColorDialog extends CommonDialog  {
 
     public Color getColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Color");
+            retObjectColor = classInstance.Get("Color");
+            JCObject val = (JCObject)retObjectColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColor != null ? retObjectColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,7 +345,7 @@ public class ColorDialog extends CommonDialog  {
 
     public void setColor(Color Color) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Color", Color == null ? null : Color.getJCOInstance());
         } catch (JCNativeException jcne) {

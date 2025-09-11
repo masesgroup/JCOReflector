@@ -176,9 +176,13 @@ public class XmlChoiceIdentifierAttribute extends Attribute  {
     
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberName = null;
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            retObjectMemberName = classInstance.Get("MemberName");
+            return (java.lang.String)retObjectMemberName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMemberName != null ? retObjectMemberName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +190,7 @@ public class XmlChoiceIdentifierAttribute extends Attribute  {
 
     public void setMemberName(java.lang.String MemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberName", MemberName);
         } catch (JCNativeException jcne) {

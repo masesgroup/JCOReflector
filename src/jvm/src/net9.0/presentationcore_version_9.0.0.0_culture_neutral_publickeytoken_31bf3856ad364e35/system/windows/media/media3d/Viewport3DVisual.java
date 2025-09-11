@@ -177,10 +177,14 @@ public class Viewport3DVisual extends Visual  {
     
     public HitTestResult HitTestNewViewport3DVisual(Point point) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestResult(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void HitTestNewViewport3DVisual(HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HitTest", filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,9 +206,13 @@ public class Viewport3DVisual extends Visual  {
     
     public double getOpacity() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacity = null;
         try {
-            return (double)classInstance.Get("Opacity");
+            retObjectOpacity = classInstance.Get("Opacity");
+            return (double)retObjectOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOpacity != null ? retObjectOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setOpacity(double Opacity) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Opacity", Opacity);
         } catch (JCNativeException jcne) {
@@ -222,10 +230,14 @@ public class Viewport3DVisual extends Visual  {
 
     public DependencyObject getParent() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +245,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Brush getOpacityMask() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacityMask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpacityMask");
+            retObjectOpacityMask = classInstance.Get("OpacityMask");
+            JCObject val = (JCObject)retObjectOpacityMask;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpacityMask != null ? retObjectOpacityMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setOpacityMask(Brush OpacityMask) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OpacityMask", OpacityMask == null ? null : OpacityMask.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +270,14 @@ public class Viewport3DVisual extends Visual  {
 
     public BitmapEffect getBitmapEffect() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmapEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BitmapEffect");
+            retObjectBitmapEffect = classInstance.Get("BitmapEffect");
+            JCObject val = (JCObject)retObjectBitmapEffect;
             return new BitmapEffect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitmapEffect != null ? retObjectBitmapEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setBitmapEffect(BitmapEffect BitmapEffect) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BitmapEffect", BitmapEffect == null ? null : BitmapEffect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,10 +295,14 @@ public class Viewport3DVisual extends Visual  {
 
     public BitmapEffectInput getBitmapEffectInput() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmapEffectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BitmapEffectInput");
+            retObjectBitmapEffectInput = classInstance.Get("BitmapEffectInput");
+            JCObject val = (JCObject)retObjectBitmapEffectInput;
             return new BitmapEffectInput(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitmapEffectInput != null ? retObjectBitmapEffectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +310,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setBitmapEffectInput(BitmapEffectInput BitmapEffectInput) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BitmapEffectInput", BitmapEffectInput == null ? null : BitmapEffectInput.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,10 +320,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Geometry getClip() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clip");
+            retObjectClip = classInstance.Get("Clip");
+            JCObject val = (JCObject)retObjectClip;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClip != null ? retObjectClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,7 +335,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setClip(Geometry Clip) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clip", Clip == null ? null : Clip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,10 +345,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Camera getCamera() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCamera = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Camera");
+            retObjectCamera = classInstance.Get("Camera");
+            JCObject val = (JCObject)retObjectCamera;
             return new Camera(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCamera != null ? retObjectCamera.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +360,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setCamera(Camera Camera) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Camera", Camera == null ? null : Camera.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -338,10 +370,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Visual3DCollection getChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new Visual3DCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +385,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Transform getTransform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Transform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +400,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setTransform(Transform Transform) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,10 +410,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Rect getContentBounds() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentBounds");
+            retObjectContentBounds = classInstance.Get("ContentBounds");
+            JCObject val = (JCObject)retObjectContentBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentBounds != null ? retObjectContentBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,10 +425,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Rect getDescendantBounds() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescendantBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DescendantBounds");
+            retObjectDescendantBounds = classInstance.Get("DescendantBounds");
+            JCObject val = (JCObject)retObjectDescendantBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescendantBounds != null ? retObjectDescendantBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,10 +440,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Rect getViewport() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectViewport = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Viewport");
+            retObjectViewport = classInstance.Get("Viewport");
+            JCObject val = (JCObject)retObjectViewport;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectViewport != null ? retObjectViewport.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,7 +455,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setViewport(Rect Viewport) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Viewport", Viewport == null ? null : Viewport.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -413,10 +465,14 @@ public class Viewport3DVisual extends Visual  {
 
     public Vector getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            JCObject val = (JCObject)retObjectOffset;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +480,7 @@ public class Viewport3DVisual extends Visual  {
 
     public void setOffset(Vector Offset) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset == null ? null : Offset.getJCOInstance());
         } catch (JCNativeException jcne) {

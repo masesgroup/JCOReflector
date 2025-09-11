@@ -164,7 +164,7 @@ public class WorkflowIdleBehavior extends NetObject  {
     
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class WorkflowIdleBehavior extends NetObject  {
 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +188,14 @@ public class WorkflowIdleBehavior extends NetObject  {
     
     public TimeSpan getTimeToPersist() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeToPersist = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeToPersist");
+            retObjectTimeToPersist = classInstance.Get("TimeToPersist");
+            JCObject val = (JCObject)retObjectTimeToPersist;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeToPersist != null ? retObjectTimeToPersist.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class WorkflowIdleBehavior extends NetObject  {
 
     public void setTimeToPersist(TimeSpan TimeToPersist) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeToPersist", TimeToPersist == null ? null : TimeToPersist.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,10 +213,14 @@ public class WorkflowIdleBehavior extends NetObject  {
 
     public TimeSpan getTimeToUnload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeToUnload = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeToUnload");
+            retObjectTimeToUnload = classInstance.Get("TimeToUnload");
+            JCObject val = (JCObject)retObjectTimeToUnload;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeToUnload != null ? retObjectTimeToUnload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +228,7 @@ public class WorkflowIdleBehavior extends NetObject  {
 
     public void setTimeToUnload(TimeSpan TimeToUnload) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeToUnload", TimeToUnload == null ? null : TimeToUnload.getJCOInstance());
         } catch (JCNativeException jcne) {

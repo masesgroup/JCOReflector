@@ -162,9 +162,13 @@ public class HtmlEmptyTagControlBuilder extends ControlBuilder  {
     
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasBody");
+            retObjectHasBody = classInstance.Invoke("HasBody");
+            return (boolean)retObjectHasBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasBody != null ? retObjectHasBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

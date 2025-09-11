@@ -155,10 +155,12 @@ public class CryptographicOperations extends NetObject  {
     
     public static byte[] HashData(HashAlgorithmName hashAlgorithm, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HashData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), source);
+            retObjectHashData = classType.Invoke("HashData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), source);
+            JCObject resultingObjects = (JCObject)retObjectHashData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -167,6 +169,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHashData] = (byte)resultingArrayList.get(indexHashData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHashData != null ? retObjectHashData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HashData(HashAlgorithmName dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HashData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectHashData = classType.Invoke("HashData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectHashData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -186,6 +192,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHashData] = (byte)resultingArrayList.get(indexHashData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHashData != null ? retObjectHashData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HashData(HashAlgorithmName hashAlgorithm, Stream source) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHashData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HashData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), source == null ? null : source.getJCOInstance());
+            retObjectHashData = classType.Invoke("HashData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), source == null ? null : source.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectHashData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -205,6 +215,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHashData] = (byte)resultingArrayList.get(indexHashData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHashData != null ? retObjectHashData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HmacData(HashAlgorithmName hashAlgorithm, byte[] key, byte[] source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHmacData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HmacData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key, source);
+            retObjectHmacData = classType.Invoke("HmacData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key, source);
+            JCObject resultingObjects = (JCObject)retObjectHmacData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -224,6 +238,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHmacData] = (byte)resultingArrayList.get(indexHmacData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHmacData != null ? retObjectHmacData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +247,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HmacData(HashAlgorithmName dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHmacData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HmacData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            retObjectHmacData = classType.Invoke("HmacData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
+            JCObject resultingObjects = (JCObject)retObjectHmacData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -243,6 +261,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHmacData] = (byte)resultingArrayList.get(indexHmacData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHmacData != null ? retObjectHmacData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HmacData(HashAlgorithmName hashAlgorithm, byte[] key, Stream source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHmacData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HmacData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key, source == null ? null : source.getJCOInstance());
+            retObjectHmacData = classType.Invoke("HmacData", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key, source == null ? null : source.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectHmacData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -262,6 +284,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHmacData] = (byte)resultingArrayList.get(indexHmacData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHmacData != null ? retObjectHmacData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +293,12 @@ public class CryptographicOperations extends NetObject  {
 
     public static byte[] HmacData(HashAlgorithmName dupParam0, JCORefOut dupParam1, Stream dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHmacData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HmacData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectHmacData = classType.Invoke("HmacData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectHmacData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -281,6 +307,8 @@ public class CryptographicOperations extends NetObject  {
 				resultingArray[indexHmacData] = (byte)resultingArrayList.get(indexHmacData);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectHmacData != null ? retObjectHmacData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

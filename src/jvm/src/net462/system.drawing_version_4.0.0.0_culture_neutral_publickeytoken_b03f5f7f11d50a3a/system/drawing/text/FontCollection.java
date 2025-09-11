@@ -154,7 +154,7 @@ public class FontCollection extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class FontCollection extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -181,16 +181,20 @@ public class FontCollection extends NetObject implements AutoCloseable {
     
     public final FontFamily[] getFamilies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFamilies = null;
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Families");
+            retObjectFamilies = classInstance.Get("Families");
+            JCObject resultingObjects = (JCObject)retObjectFamilies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFamilies != null ? retObjectFamilies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

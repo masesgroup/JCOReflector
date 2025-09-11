@@ -191,9 +191,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
     
     public int getColumnNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnNumber = null;
         try {
-            return (int)classInstance.Get("ColumnNumber");
+            retObjectColumnNumber = classInstance.Get("ColumnNumber");
+            return (int)retObjectColumnNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnNumber != null ? retObjectColumnNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public int getEndColumnNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndColumnNumber = null;
         try {
-            return (int)classInstance.Get("EndColumnNumber");
+            retObjectEndColumnNumber = classInstance.Get("EndColumnNumber");
+            return (int)retObjectEndColumnNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndColumnNumber != null ? retObjectEndColumnNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +219,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public int getEndLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndLineNumber = null;
         try {
-            return (int)classInstance.Get("EndLineNumber");
+            retObjectEndLineNumber = classInstance.Get("EndLineNumber");
+            return (int)retObjectEndLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndLineNumber != null ? retObjectEndLineNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +233,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +247,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public java.lang.String getCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCode = null;
         try {
-            return (java.lang.String)classInstance.Get("Code");
+            retObjectCode = classInstance.Get("Code");
+            return (java.lang.String)retObjectCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCode != null ? retObjectCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +261,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public java.lang.String getFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFile = null;
         try {
-            return (java.lang.String)classInstance.Get("File");
+            retObjectFile = classInstance.Get("File");
+            return (java.lang.String)retObjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFile != null ? retObjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +275,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectFile");
+            retObjectProjectFile = classInstance.Get("ProjectFile");
+            return (java.lang.String)retObjectProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectFile != null ? retObjectProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +289,7 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public void setProjectFile(java.lang.String ProjectFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProjectFile", ProjectFile);
         } catch (JCNativeException jcne) {
@@ -271,9 +299,13 @@ public class BuildWarningEventArgs extends LazyFormattedBuildEventArgs  {
 
     public java.lang.String getSubcategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubcategory = null;
         try {
-            return (java.lang.String)classInstance.Get("Subcategory");
+            retObjectSubcategory = classInstance.Get("Subcategory");
+            return (java.lang.String)retObjectSubcategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubcategory != null ? retObjectSubcategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

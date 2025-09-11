@@ -167,10 +167,14 @@ public class TryCatch extends NativeActivity  {
     
     public Activity getFinally() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinally = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Finally");
+            retObjectFinally = classInstance.Get("Finally");
+            JCObject val = (JCObject)retObjectFinally;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFinally != null ? retObjectFinally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class TryCatch extends NativeActivity  {
 
     public void setFinally(Activity Finally) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Finally", Finally == null ? null : Finally.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,10 +192,14 @@ public class TryCatch extends NativeActivity  {
 
     public Activity getTry() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTry = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Try");
+            retObjectTry = classInstance.Get("Try");
+            JCObject val = (JCObject)retObjectTry;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTry != null ? retObjectTry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class TryCatch extends NativeActivity  {
 
     public void setTry(Activity Try) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Try", Try == null ? null : Try.getJCOInstance());
         } catch (JCNativeException jcne) {

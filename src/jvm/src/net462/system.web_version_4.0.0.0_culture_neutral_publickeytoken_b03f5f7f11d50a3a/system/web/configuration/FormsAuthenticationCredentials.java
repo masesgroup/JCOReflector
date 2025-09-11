@@ -168,10 +168,14 @@ public class FormsAuthenticationCredentials extends ConfigurationElement  {
     
     public FormsAuthenticationUserCollection getUsers() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Users");
+            retObjectUsers = classInstance.Get("Users");
+            JCObject val = (JCObject)retObjectUsers;
             return new FormsAuthenticationUserCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUsers != null ? retObjectUsers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class FormsAuthenticationCredentials extends ConfigurationElement  {
 
     public FormsAuthPasswordFormat getPasswordFormat() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PasswordFormat");
+            retObjectPasswordFormat = classInstance.Get("PasswordFormat");
+            JCObject val = (JCObject)retObjectPasswordFormat;
             return new FormsAuthPasswordFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPasswordFormat != null ? retObjectPasswordFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class FormsAuthenticationCredentials extends ConfigurationElement  {
 
     public void setPasswordFormat(FormsAuthPasswordFormat PasswordFormat) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordFormat", PasswordFormat == null ? null : PasswordFormat.getJCOInstance());
         } catch (JCNativeException jcne) {

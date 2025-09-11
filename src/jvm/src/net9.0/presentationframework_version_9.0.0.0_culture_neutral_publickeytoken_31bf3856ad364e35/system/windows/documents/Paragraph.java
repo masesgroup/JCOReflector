@@ -176,9 +176,13 @@ public class Paragraph extends Block  {
     
     public boolean ShouldSerializeInlines(XamlDesignerSerializationManager manager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeInlines = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            retObjectShouldSerializeInlines = classInstance.Invoke("ShouldSerializeInlines", manager == null ? null : manager.getJCOInstance());
+            return (boolean)retObjectShouldSerializeInlines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeInlines != null ? retObjectShouldSerializeInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class Paragraph extends Block  {
     
     public boolean getKeepTogether() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepTogether = null;
         try {
-            return (boolean)classInstance.Get("KeepTogether");
+            retObjectKeepTogether = classInstance.Get("KeepTogether");
+            return (boolean)retObjectKeepTogether;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepTogether != null ? retObjectKeepTogether.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class Paragraph extends Block  {
 
     public void setKeepTogether(boolean KeepTogether) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepTogether", KeepTogether);
         } catch (JCNativeException jcne) {
@@ -210,9 +218,13 @@ public class Paragraph extends Block  {
 
     public boolean getKeepWithNext() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepWithNext = null;
         try {
-            return (boolean)classInstance.Get("KeepWithNext");
+            retObjectKeepWithNext = classInstance.Get("KeepWithNext");
+            return (boolean)retObjectKeepWithNext;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepWithNext != null ? retObjectKeepWithNext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class Paragraph extends Block  {
 
     public void setKeepWithNext(boolean KeepWithNext) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepWithNext", KeepWithNext);
         } catch (JCNativeException jcne) {
@@ -230,9 +242,13 @@ public class Paragraph extends Block  {
 
     public double getTextIndent() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextIndent = null;
         try {
-            return (double)classInstance.Get("TextIndent");
+            retObjectTextIndent = classInstance.Get("TextIndent");
+            return (double)retObjectTextIndent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTextIndent != null ? retObjectTextIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class Paragraph extends Block  {
 
     public void setTextIndent(double TextIndent) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextIndent", TextIndent);
         } catch (JCNativeException jcne) {
@@ -250,9 +266,13 @@ public class Paragraph extends Block  {
 
     public int getMinOrphanLines() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinOrphanLines = null;
         try {
-            return (int)classInstance.Get("MinOrphanLines");
+            retObjectMinOrphanLines = classInstance.Get("MinOrphanLines");
+            return (int)retObjectMinOrphanLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinOrphanLines != null ? retObjectMinOrphanLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class Paragraph extends Block  {
 
     public void setMinOrphanLines(int MinOrphanLines) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinOrphanLines", MinOrphanLines);
         } catch (JCNativeException jcne) {
@@ -270,9 +290,13 @@ public class Paragraph extends Block  {
 
     public int getMinWidowLines() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinWidowLines = null;
         try {
-            return (int)classInstance.Get("MinWidowLines");
+            retObjectMinWidowLines = classInstance.Get("MinWidowLines");
+            return (int)retObjectMinWidowLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinWidowLines != null ? retObjectMinWidowLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class Paragraph extends Block  {
 
     public void setMinWidowLines(int MinWidowLines) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinWidowLines", MinWidowLines);
         } catch (JCNativeException jcne) {
@@ -290,10 +314,14 @@ public class Paragraph extends Block  {
 
     public InlineCollection getInlines() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInlines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Inlines");
+            retObjectInlines = classInstance.Get("Inlines");
+            JCObject val = (JCObject)retObjectInlines;
             return new InlineCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInlines != null ? retObjectInlines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,10 +329,14 @@ public class Paragraph extends Block  {
 
     public TextDecorationCollection getTextDecorations() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDecorations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDecorations");
+            retObjectTextDecorations = classInstance.Get("TextDecorations");
+            JCObject val = (JCObject)retObjectTextDecorations;
             return new TextDecorationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDecorations != null ? retObjectTextDecorations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +344,7 @@ public class Paragraph extends Block  {
 
     public void setTextDecorations(TextDecorationCollection TextDecorations) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextDecorations", TextDecorations == null ? null : TextDecorations.getJCOInstance());
         } catch (JCNativeException jcne) {

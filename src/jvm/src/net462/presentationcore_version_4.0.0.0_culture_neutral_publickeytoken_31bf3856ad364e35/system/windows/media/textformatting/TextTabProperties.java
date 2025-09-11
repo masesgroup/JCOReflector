@@ -170,9 +170,13 @@ public class TextTabProperties extends NetObject  {
     
     public double getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            return (double)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            return (double)retObjectLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class TextTabProperties extends NetObject  {
 
     public int getAligningCharacter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAligningCharacter = null;
         try {
-            return (int)classInstance.Get("AligningCharacter");
+            retObjectAligningCharacter = classInstance.Get("AligningCharacter");
+            return (int)retObjectAligningCharacter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAligningCharacter != null ? retObjectAligningCharacter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class TextTabProperties extends NetObject  {
 
     public int getTabLeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabLeader = null;
         try {
-            return (int)classInstance.Get("TabLeader");
+            retObjectTabLeader = classInstance.Get("TabLeader");
+            return (int)retObjectTabLeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTabLeader != null ? retObjectTabLeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class TextTabProperties extends NetObject  {
 
     public TextTabAlignment getAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
+            retObjectAlignment = classInstance.Get("Alignment");
+            JCObject val = (JCObject)retObjectAlignment;
             return new TextTabAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignment != null ? retObjectAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

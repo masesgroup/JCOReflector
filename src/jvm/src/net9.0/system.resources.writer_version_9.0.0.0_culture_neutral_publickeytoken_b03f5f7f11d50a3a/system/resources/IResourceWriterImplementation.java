@@ -144,7 +144,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
     
     public void AddResource(java.lang.String name, byte[] value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -184,7 +184,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -194,7 +194,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -204,7 +204,7 @@ public class IResourceWriterImplementation extends NetObject implements IResourc
 
     public void Generate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {

@@ -155,10 +155,14 @@ public class HttpCapabilitiesProvider extends NetObject  {
     
     public HttpBrowserCapabilities GetBrowserCapabilities(HttpRequest request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBrowserCapabilities = null;
         try {
-            JCObject objGetBrowserCapabilities = (JCObject)classInstance.Invoke("GetBrowserCapabilities", request == null ? null : request.getJCOInstance());
+            retObjectGetBrowserCapabilities = classInstance.Invoke("GetBrowserCapabilities", request == null ? null : request.getJCOInstance());
+            JCObject objGetBrowserCapabilities = (JCObject)retObjectGetBrowserCapabilities;
             return new HttpBrowserCapabilities(objGetBrowserCapabilities);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBrowserCapabilities != null ? retObjectGetBrowserCapabilities.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

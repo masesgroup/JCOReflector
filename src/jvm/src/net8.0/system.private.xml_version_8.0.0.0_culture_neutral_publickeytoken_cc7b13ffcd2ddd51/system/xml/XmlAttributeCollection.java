@@ -159,10 +159,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
     
     public XmlAttribute Append(XmlAttribute node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppend = null;
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", node == null ? null : node.getJCOInstance());
+            retObjectAppend = classInstance.Invoke("Append", node == null ? null : node.getJCOInstance());
+            JCObject objAppend = (JCObject)retObjectAppend;
             return new XmlAttribute(objAppend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAppend != null ? retObjectAppend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlAttribute InsertAfter(XmlAttribute newNode, XmlAttribute refNode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertAfter = null;
         try {
-            JCObject objInsertAfter = (JCObject)classInstance.Invoke("InsertAfter", newNode == null ? null : newNode.getJCOInstance(), refNode == null ? null : refNode.getJCOInstance());
+            retObjectInsertAfter = classInstance.Invoke("InsertAfter", newNode == null ? null : newNode.getJCOInstance(), refNode == null ? null : refNode.getJCOInstance());
+            JCObject objInsertAfter = (JCObject)retObjectInsertAfter;
             return new XmlAttribute(objInsertAfter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertAfter != null ? retObjectInsertAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlAttribute InsertBefore(XmlAttribute newNode, XmlAttribute refNode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertBefore = null;
         try {
-            JCObject objInsertBefore = (JCObject)classInstance.Invoke("InsertBefore", newNode == null ? null : newNode.getJCOInstance(), refNode == null ? null : refNode.getJCOInstance());
+            retObjectInsertBefore = classInstance.Invoke("InsertBefore", newNode == null ? null : newNode.getJCOInstance(), refNode == null ? null : refNode.getJCOInstance());
+            JCObject objInsertBefore = (JCObject)retObjectInsertBefore;
             return new XmlAttribute(objInsertBefore);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertBefore != null ? retObjectInsertBefore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlAttribute Prepend(XmlAttribute node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrepend = null;
         try {
-            JCObject objPrepend = (JCObject)classInstance.Invoke("Prepend", node == null ? null : node.getJCOInstance());
+            retObjectPrepend = classInstance.Invoke("Prepend", node == null ? null : node.getJCOInstance());
+            JCObject objPrepend = (JCObject)retObjectPrepend;
             return new XmlAttribute(objPrepend);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrepend != null ? retObjectPrepend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlAttribute Remove(XmlAttribute node) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            JCObject objRemove = (JCObject)classInstance.Invoke("Remove", node == null ? null : node.getJCOInstance());
+            retObjectRemove = classInstance.Invoke("Remove", node == null ? null : node.getJCOInstance());
+            JCObject objRemove = (JCObject)retObjectRemove;
             return new XmlAttribute(objRemove);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlAttribute RemoveAt(int i) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAt = null;
         try {
-            JCObject objRemoveAt = (JCObject)classInstance.Invoke("RemoveAt", i);
+            retObjectRemoveAt = classInstance.Invoke("RemoveAt", i);
+            JCObject objRemoveAt = (JCObject)retObjectRemoveAt;
             return new XmlAttribute(objRemoveAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveAt != null ? retObjectRemoveAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +249,14 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public XmlNode SetNamedItem(XmlNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetNamedItem = null;
         try {
-            JCObject objSetNamedItem = (JCObject)classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
+            retObjectSetNamedItem = classInstance.Invoke("SetNamedItem", node == null ? null : node.getJCOInstance());
+            JCObject objSetNamedItem = (JCObject)retObjectSetNamedItem;
             return new XmlNode(objSetNamedItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetNamedItem != null ? retObjectSetNamedItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +264,7 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public void CopyTo(XmlAttribute[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyTo", toObjectFromArray(array), index);
         } catch (JCNativeException jcne) {
@@ -246,7 +274,7 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
 
     public void RemoveAll() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAll");
         } catch (JCNativeException jcne) {
@@ -260,7 +288,7 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
      */
     @Deprecated 
     public void CopyTo(Array array, int index) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

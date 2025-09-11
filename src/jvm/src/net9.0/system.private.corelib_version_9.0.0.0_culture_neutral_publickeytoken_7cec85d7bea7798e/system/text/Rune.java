@@ -207,9 +207,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
     
     public boolean Equals(Rune other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +221,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsControl(Rune value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsControl = null;
         try {
-            return (boolean)classType.Invoke("IsControl", value == null ? null : value.getJCOInstance());
+            retObjectIsControl = classType.Invoke("IsControl", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsControl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsControl != null ? retObjectIsControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +235,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsDigit(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDigit = null;
         try {
-            return (boolean)classType.Invoke("IsDigit", value == null ? null : value.getJCOInstance());
+            retObjectIsDigit = classType.Invoke("IsDigit", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsDigit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDigit != null ? retObjectIsDigit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +249,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsLetter(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLetter = null;
         try {
-            return (boolean)classType.Invoke("IsLetter", value == null ? null : value.getJCOInstance());
+            retObjectIsLetter = classType.Invoke("IsLetter", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsLetter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLetter != null ? retObjectIsLetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +263,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsLetterOrDigit(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLetterOrDigit = null;
         try {
-            return (boolean)classType.Invoke("IsLetterOrDigit", value == null ? null : value.getJCOInstance());
+            retObjectIsLetterOrDigit = classType.Invoke("IsLetterOrDigit", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsLetterOrDigit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLetterOrDigit != null ? retObjectIsLetterOrDigit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +277,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsLower(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLower = null;
         try {
-            return (boolean)classType.Invoke("IsLower", value == null ? null : value.getJCOInstance());
+            retObjectIsLower = classType.Invoke("IsLower", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsLower;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLower != null ? retObjectIsLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +291,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsNumber(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNumber = null;
         try {
-            return (boolean)classType.Invoke("IsNumber", value == null ? null : value.getJCOInstance());
+            retObjectIsNumber = classType.Invoke("IsNumber", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNumber != null ? retObjectIsNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +305,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsPunctuation(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPunctuation = null;
         try {
-            return (boolean)classType.Invoke("IsPunctuation", value == null ? null : value.getJCOInstance());
+            retObjectIsPunctuation = classType.Invoke("IsPunctuation", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPunctuation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPunctuation != null ? retObjectIsPunctuation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +319,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsSeparator(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSeparator = null;
         try {
-            return (boolean)classType.Invoke("IsSeparator", value == null ? null : value.getJCOInstance());
+            retObjectIsSeparator = classType.Invoke("IsSeparator", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSeparator != null ? retObjectIsSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +333,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsSymbol(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSymbol = null;
         try {
-            return (boolean)classType.Invoke("IsSymbol", value == null ? null : value.getJCOInstance());
+            retObjectIsSymbol = classType.Invoke("IsSymbol", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsSymbol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSymbol != null ? retObjectIsSymbol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +347,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsUpper(Rune value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsUpper = null;
         try {
-            return (boolean)classType.Invoke("IsUpper", value == null ? null : value.getJCOInstance());
+            retObjectIsUpper = classType.Invoke("IsUpper", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsUpper;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUpper != null ? retObjectIsUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +361,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsValid(int value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classType.Invoke("IsValid", value);
+            retObjectIsValid = classType.Invoke("IsValid", value);
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +375,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsValid(UInt32 value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classType.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            retObjectIsValid = classType.Invoke("IsValid", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +389,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean IsWhiteSpace(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWhiteSpace = null;
         try {
-            return (boolean)classType.Invoke("IsWhiteSpace", value == null ? null : value.getJCOInstance());
+            retObjectIsWhiteSpace = classType.Invoke("IsWhiteSpace", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsWhiteSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWhiteSpace != null ? retObjectIsWhiteSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +403,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean TryCreate(char highSurrogate, char lowSurrogate, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", highSurrogate, lowSurrogate, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", highSurrogate, lowSurrogate, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +417,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean TryCreate(char ch, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", ch, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", ch, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +431,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean TryCreate(int value, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", value, result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", value, result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +445,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean TryCreate(UInt32 value, JCORefOut<Rune> result) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCreate = null;
         try {
-            return (boolean)classType.Invoke("TryCreate", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            retObjectTryCreate = classType.Invoke("TryCreate", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryCreate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryCreate != null ? retObjectTryCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +459,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static boolean TryGetRuneAt(java.lang.String input, int index, JCORefOut<Rune> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetRuneAt = null;
         try {
-            return (boolean)classType.Invoke("TryGetRuneAt", input, index, value.getJCRefOut());
+            retObjectTryGetRuneAt = classType.Invoke("TryGetRuneAt", input, index, value.getJCRefOut());
+            return (boolean)retObjectTryGetRuneAt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetRuneAt != null ? retObjectTryGetRuneAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +473,19 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static double GetNumericValue(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNumericValue = null;
         try {
-            return (double)classType.Invoke("GetNumericValue", value == null ? null : value.getJCOInstance());
+            retObjectGetNumericValue = classType.Invoke("GetNumericValue", value == null ? null : value.getJCOInstance());
+            return (double)retObjectGetNumericValue;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetNumericValueNumber = (java.lang.Number)retObjectGetNumericValue;
+                return retObjectGetNumericValueNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetNumericValue != null ? retObjectGetNumericValue.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +493,19 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public int CompareTo(Rune other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +513,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static UnicodeCategory GetUnicodeCategory(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetUnicodeCategory = null;
         try {
-            JCObject objGetUnicodeCategory = (JCObject)classType.Invoke("GetUnicodeCategory", value == null ? null : value.getJCOInstance());
+            retObjectGetUnicodeCategory = classType.Invoke("GetUnicodeCategory", value == null ? null : value.getJCOInstance());
+            JCObject objGetUnicodeCategory = (JCObject)retObjectGetUnicodeCategory;
             return new UnicodeCategory(objGetUnicodeCategory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetUnicodeCategory != null ? retObjectGetUnicodeCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +528,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune GetRuneAt(java.lang.String input, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRuneAt = null;
         try {
-            JCObject objGetRuneAt = (JCObject)classType.Invoke("GetRuneAt", input, index);
+            retObjectGetRuneAt = classType.Invoke("GetRuneAt", input, index);
+            JCObject objGetRuneAt = (JCObject)retObjectGetRuneAt;
             return new Rune(objGetRuneAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuneAt != null ? retObjectGetRuneAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +543,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune ToLower(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLower = null;
         try {
-            JCObject objToLower = (JCObject)classType.Invoke("ToLower", value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectToLower = classType.Invoke("ToLower", value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objToLower = (JCObject)retObjectToLower;
             return new Rune(objToLower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLower != null ? retObjectToLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +558,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune ToLowerInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLowerInvariant = null;
         try {
-            JCObject objToLowerInvariant = (JCObject)classType.Invoke("ToLowerInvariant", value == null ? null : value.getJCOInstance());
+            retObjectToLowerInvariant = classType.Invoke("ToLowerInvariant", value == null ? null : value.getJCOInstance());
+            JCObject objToLowerInvariant = (JCObject)retObjectToLowerInvariant;
             return new Rune(objToLowerInvariant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToLowerInvariant != null ? retObjectToLowerInvariant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +573,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune ToUpper(Rune value, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToUpper = null;
         try {
-            JCObject objToUpper = (JCObject)classType.Invoke("ToUpper", value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectToUpper = classType.Invoke("ToUpper", value == null ? null : value.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objToUpper = (JCObject)retObjectToUpper;
             return new Rune(objToUpper);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUpper != null ? retObjectToUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +588,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune ToUpperInvariant(Rune value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToUpperInvariant = null;
         try {
-            JCObject objToUpperInvariant = (JCObject)classType.Invoke("ToUpperInvariant", value == null ? null : value.getJCOInstance());
+            retObjectToUpperInvariant = classType.Invoke("ToUpperInvariant", value == null ? null : value.getJCOInstance());
+            JCObject objToUpperInvariant = (JCObject)retObjectToUpperInvariant;
             return new Rune(objToUpperInvariant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToUpperInvariant != null ? retObjectToUpperInvariant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +607,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
      */
     @Deprecated 
     public int CompareTo(NetObject obj) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }
 
     /**
@@ -496,7 +616,7 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -505,9 +625,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
     
     public boolean getIsAscii() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAscii = null;
         try {
-            return (boolean)classInstance.Get("IsAscii");
+            retObjectIsAscii = classInstance.Get("IsAscii");
+            return (boolean)retObjectIsAscii;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAscii != null ? retObjectIsAscii.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,9 +639,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public boolean getIsBmp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBmp = null;
         try {
-            return (boolean)classInstance.Get("IsBmp");
+            retObjectIsBmp = classInstance.Get("IsBmp");
+            return (boolean)retObjectIsBmp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBmp != null ? retObjectIsBmp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,9 +653,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public int getPlane() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlane = null;
         try {
-            return (int)classInstance.Get("Plane");
+            retObjectPlane = classInstance.Get("Plane");
+            return (int)retObjectPlane;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPlane != null ? retObjectPlane.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,9 +667,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public int getUtf16SequenceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtf16SequenceLength = null;
         try {
-            return (int)classInstance.Get("Utf16SequenceLength");
+            retObjectUtf16SequenceLength = classInstance.Get("Utf16SequenceLength");
+            return (int)retObjectUtf16SequenceLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUtf16SequenceLength != null ? retObjectUtf16SequenceLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,9 +681,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public int getUtf8SequenceLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtf8SequenceLength = null;
         try {
-            return (int)classInstance.Get("Utf8SequenceLength");
+            retObjectUtf8SequenceLength = classInstance.Get("Utf8SequenceLength");
+            return (int)retObjectUtf8SequenceLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUtf8SequenceLength != null ? retObjectUtf8SequenceLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,9 +695,13 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public int getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (int)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (int)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -565,10 +709,14 @@ public class Rune extends ValueType implements system.IComparable, system.IForma
 
     public static Rune getReplacementChar() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplacementChar = null;
         try {
-            JCObject val = (JCObject)classType.Get("ReplacementChar");
+            retObjectReplacementChar = classType.Get("ReplacementChar");
+            JCObject val = (JCObject)retObjectReplacementChar;
             return new Rune(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplacementChar != null ? retObjectReplacementChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

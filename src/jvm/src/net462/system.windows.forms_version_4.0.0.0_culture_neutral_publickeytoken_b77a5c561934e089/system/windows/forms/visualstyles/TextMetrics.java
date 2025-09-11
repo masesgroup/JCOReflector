@@ -162,9 +162,13 @@ public class TextMetrics extends ValueType  {
     
     public boolean getItalic() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItalic = null;
         try {
-            return (boolean)classInstance.Get("Italic");
+            retObjectItalic = classInstance.Get("Italic");
+            return (boolean)retObjectItalic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectItalic != null ? retObjectItalic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class TextMetrics extends ValueType  {
 
     public void setItalic(boolean Italic) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Italic", Italic);
         } catch (JCNativeException jcne) {
@@ -182,9 +186,13 @@ public class TextMetrics extends ValueType  {
 
     public boolean getStruckOut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStruckOut = null;
         try {
-            return (boolean)classInstance.Get("StruckOut");
+            retObjectStruckOut = classInstance.Get("StruckOut");
+            return (boolean)retObjectStruckOut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStruckOut != null ? retObjectStruckOut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class TextMetrics extends ValueType  {
 
     public void setStruckOut(boolean StruckOut) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StruckOut", StruckOut);
         } catch (JCNativeException jcne) {
@@ -202,9 +210,13 @@ public class TextMetrics extends ValueType  {
 
     public boolean getUnderlined() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlined = null;
         try {
-            return (boolean)classInstance.Get("Underlined");
+            retObjectUnderlined = classInstance.Get("Underlined");
+            return (boolean)retObjectUnderlined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnderlined != null ? retObjectUnderlined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class TextMetrics extends ValueType  {
 
     public void setUnderlined(boolean Underlined) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Underlined", Underlined);
         } catch (JCNativeException jcne) {
@@ -222,9 +234,13 @@ public class TextMetrics extends ValueType  {
 
     public char getBreakChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBreakChar = null;
         try {
-            return (char)classInstance.Get("BreakChar");
+            retObjectBreakChar = classInstance.Get("BreakChar");
+            return (char)retObjectBreakChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectBreakChar != null ? retObjectBreakChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class TextMetrics extends ValueType  {
 
     public void setBreakChar(char BreakChar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BreakChar", BreakChar);
         } catch (JCNativeException jcne) {
@@ -242,9 +258,13 @@ public class TextMetrics extends ValueType  {
 
     public char getDefaultChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultChar = null;
         try {
-            return (char)classInstance.Get("DefaultChar");
+            retObjectDefaultChar = classInstance.Get("DefaultChar");
+            return (char)retObjectDefaultChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectDefaultChar != null ? retObjectDefaultChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +272,7 @@ public class TextMetrics extends ValueType  {
 
     public void setDefaultChar(char DefaultChar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultChar", DefaultChar);
         } catch (JCNativeException jcne) {
@@ -262,9 +282,13 @@ public class TextMetrics extends ValueType  {
 
     public char getFirstChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstChar = null;
         try {
-            return (char)classInstance.Get("FirstChar");
+            retObjectFirstChar = classInstance.Get("FirstChar");
+            return (char)retObjectFirstChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectFirstChar != null ? retObjectFirstChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +296,7 @@ public class TextMetrics extends ValueType  {
 
     public void setFirstChar(char FirstChar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstChar", FirstChar);
         } catch (JCNativeException jcne) {
@@ -282,9 +306,13 @@ public class TextMetrics extends ValueType  {
 
     public char getLastChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastChar = null;
         try {
-            return (char)classInstance.Get("LastChar");
+            retObjectLastChar = classInstance.Get("LastChar");
+            return (char)retObjectLastChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectLastChar != null ? retObjectLastChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +320,7 @@ public class TextMetrics extends ValueType  {
 
     public void setLastChar(char LastChar) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastChar", LastChar);
         } catch (JCNativeException jcne) {
@@ -302,9 +330,13 @@ public class TextMetrics extends ValueType  {
 
     public int getAscent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAscent = null;
         try {
-            return (int)classInstance.Get("Ascent");
+            retObjectAscent = classInstance.Get("Ascent");
+            return (int)retObjectAscent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAscent != null ? retObjectAscent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +344,7 @@ public class TextMetrics extends ValueType  {
 
     public void setAscent(int Ascent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ascent", Ascent);
         } catch (JCNativeException jcne) {
@@ -322,9 +354,13 @@ public class TextMetrics extends ValueType  {
 
     public int getAverageCharWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAverageCharWidth = null;
         try {
-            return (int)classInstance.Get("AverageCharWidth");
+            retObjectAverageCharWidth = classInstance.Get("AverageCharWidth");
+            return (int)retObjectAverageCharWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAverageCharWidth != null ? retObjectAverageCharWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +368,7 @@ public class TextMetrics extends ValueType  {
 
     public void setAverageCharWidth(int AverageCharWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AverageCharWidth", AverageCharWidth);
         } catch (JCNativeException jcne) {
@@ -342,9 +378,13 @@ public class TextMetrics extends ValueType  {
 
     public int getDescent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescent = null;
         try {
-            return (int)classInstance.Get("Descent");
+            retObjectDescent = classInstance.Get("Descent");
+            return (int)retObjectDescent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDescent != null ? retObjectDescent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +392,7 @@ public class TextMetrics extends ValueType  {
 
     public void setDescent(int Descent) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Descent", Descent);
         } catch (JCNativeException jcne) {
@@ -362,9 +402,13 @@ public class TextMetrics extends ValueType  {
 
     public int getDigitizedAspectX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigitizedAspectX = null;
         try {
-            return (int)classInstance.Get("DigitizedAspectX");
+            retObjectDigitizedAspectX = classInstance.Get("DigitizedAspectX");
+            return (int)retObjectDigitizedAspectX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDigitizedAspectX != null ? retObjectDigitizedAspectX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +416,7 @@ public class TextMetrics extends ValueType  {
 
     public void setDigitizedAspectX(int DigitizedAspectX) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DigitizedAspectX", DigitizedAspectX);
         } catch (JCNativeException jcne) {
@@ -382,9 +426,13 @@ public class TextMetrics extends ValueType  {
 
     public int getDigitizedAspectY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDigitizedAspectY = null;
         try {
-            return (int)classInstance.Get("DigitizedAspectY");
+            retObjectDigitizedAspectY = classInstance.Get("DigitizedAspectY");
+            return (int)retObjectDigitizedAspectY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDigitizedAspectY != null ? retObjectDigitizedAspectY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +440,7 @@ public class TextMetrics extends ValueType  {
 
     public void setDigitizedAspectY(int DigitizedAspectY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DigitizedAspectY", DigitizedAspectY);
         } catch (JCNativeException jcne) {
@@ -402,9 +450,13 @@ public class TextMetrics extends ValueType  {
 
     public int getExternalLeading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExternalLeading = null;
         try {
-            return (int)classInstance.Get("ExternalLeading");
+            retObjectExternalLeading = classInstance.Get("ExternalLeading");
+            return (int)retObjectExternalLeading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectExternalLeading != null ? retObjectExternalLeading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +464,7 @@ public class TextMetrics extends ValueType  {
 
     public void setExternalLeading(int ExternalLeading) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExternalLeading", ExternalLeading);
         } catch (JCNativeException jcne) {
@@ -422,9 +474,13 @@ public class TextMetrics extends ValueType  {
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +488,7 @@ public class TextMetrics extends ValueType  {
 
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -442,9 +498,13 @@ public class TextMetrics extends ValueType  {
 
     public int getInternalLeading() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalLeading = null;
         try {
-            return (int)classInstance.Get("InternalLeading");
+            retObjectInternalLeading = classInstance.Get("InternalLeading");
+            return (int)retObjectInternalLeading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInternalLeading != null ? retObjectInternalLeading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +512,7 @@ public class TextMetrics extends ValueType  {
 
     public void setInternalLeading(int InternalLeading) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InternalLeading", InternalLeading);
         } catch (JCNativeException jcne) {
@@ -462,9 +522,13 @@ public class TextMetrics extends ValueType  {
 
     public int getMaxCharWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCharWidth = null;
         try {
-            return (int)classInstance.Get("MaxCharWidth");
+            retObjectMaxCharWidth = classInstance.Get("MaxCharWidth");
+            return (int)retObjectMaxCharWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxCharWidth != null ? retObjectMaxCharWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +536,7 @@ public class TextMetrics extends ValueType  {
 
     public void setMaxCharWidth(int MaxCharWidth) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxCharWidth", MaxCharWidth);
         } catch (JCNativeException jcne) {
@@ -482,9 +546,13 @@ public class TextMetrics extends ValueType  {
 
     public int getOverhang() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhang = null;
         try {
-            return (int)classInstance.Get("Overhang");
+            retObjectOverhang = classInstance.Get("Overhang");
+            return (int)retObjectOverhang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOverhang != null ? retObjectOverhang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +560,7 @@ public class TextMetrics extends ValueType  {
 
     public void setOverhang(int Overhang) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Overhang", Overhang);
         } catch (JCNativeException jcne) {
@@ -502,9 +570,13 @@ public class TextMetrics extends ValueType  {
 
     public int getWeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWeight = null;
         try {
-            return (int)classInstance.Get("Weight");
+            retObjectWeight = classInstance.Get("Weight");
+            return (int)retObjectWeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWeight != null ? retObjectWeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,7 +584,7 @@ public class TextMetrics extends ValueType  {
 
     public void setWeight(int Weight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Weight", Weight);
         } catch (JCNativeException jcne) {
@@ -522,10 +594,14 @@ public class TextMetrics extends ValueType  {
 
     public TextMetricsCharacterSet getCharSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CharSet");
+            retObjectCharSet = classInstance.Get("CharSet");
+            JCObject val = (JCObject)retObjectCharSet;
             return new TextMetricsCharacterSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCharSet != null ? retObjectCharSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,7 +609,7 @@ public class TextMetrics extends ValueType  {
 
     public void setCharSet(TextMetricsCharacterSet CharSet) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CharSet", CharSet == null ? null : CharSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -543,10 +619,14 @@ public class TextMetrics extends ValueType  {
 
     public TextMetricsPitchAndFamilyValues getPitchAndFamily() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPitchAndFamily = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PitchAndFamily");
+            retObjectPitchAndFamily = classInstance.Get("PitchAndFamily");
+            JCObject val = (JCObject)retObjectPitchAndFamily;
             return new TextMetricsPitchAndFamilyValues(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPitchAndFamily != null ? retObjectPitchAndFamily.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -554,7 +634,7 @@ public class TextMetrics extends ValueType  {
 
     public void setPitchAndFamily(TextMetricsPitchAndFamilyValues PitchAndFamily) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PitchAndFamily", PitchAndFamily == null ? null : PitchAndFamily.getJCOInstance());
         } catch (JCNativeException jcne) {

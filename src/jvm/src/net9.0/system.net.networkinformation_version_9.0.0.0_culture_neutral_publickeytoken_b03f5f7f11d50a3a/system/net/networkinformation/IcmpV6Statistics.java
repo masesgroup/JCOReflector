@@ -157,9 +157,13 @@ public class IcmpV6Statistics extends NetObject  {
     
     public long getDestinationUnreachableMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationUnreachableMessagesReceived = null;
         try {
-            return (long)classInstance.Get("DestinationUnreachableMessagesReceived");
+            retObjectDestinationUnreachableMessagesReceived = classInstance.Get("DestinationUnreachableMessagesReceived");
+            return (long)retObjectDestinationUnreachableMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDestinationUnreachableMessagesReceived != null ? retObjectDestinationUnreachableMessagesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getDestinationUnreachableMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationUnreachableMessagesSent = null;
         try {
-            return (long)classInstance.Get("DestinationUnreachableMessagesSent");
+            retObjectDestinationUnreachableMessagesSent = classInstance.Get("DestinationUnreachableMessagesSent");
+            return (long)retObjectDestinationUnreachableMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDestinationUnreachableMessagesSent != null ? retObjectDestinationUnreachableMessagesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRepliesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRepliesReceived = null;
         try {
-            return (long)classInstance.Get("EchoRepliesReceived");
+            retObjectEchoRepliesReceived = classInstance.Get("EchoRepliesReceived");
+            return (long)retObjectEchoRepliesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEchoRepliesReceived != null ? retObjectEchoRepliesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRepliesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRepliesSent = null;
         try {
-            return (long)classInstance.Get("EchoRepliesSent");
+            retObjectEchoRepliesSent = classInstance.Get("EchoRepliesSent");
+            return (long)retObjectEchoRepliesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEchoRepliesSent != null ? retObjectEchoRepliesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRequestsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRequestsReceived = null;
         try {
-            return (long)classInstance.Get("EchoRequestsReceived");
+            retObjectEchoRequestsReceived = classInstance.Get("EchoRequestsReceived");
+            return (long)retObjectEchoRequestsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEchoRequestsReceived != null ? retObjectEchoRequestsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getEchoRequestsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEchoRequestsSent = null;
         try {
-            return (long)classInstance.Get("EchoRequestsSent");
+            retObjectEchoRequestsSent = classInstance.Get("EchoRequestsSent");
+            return (long)retObjectEchoRequestsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectEchoRequestsSent != null ? retObjectEchoRequestsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getErrorsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsReceived = null;
         try {
-            return (long)classInstance.Get("ErrorsReceived");
+            retObjectErrorsReceived = classInstance.Get("ErrorsReceived");
+            return (long)retObjectErrorsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectErrorsReceived != null ? retObjectErrorsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getErrorsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorsSent = null;
         try {
-            return (long)classInstance.Get("ErrorsSent");
+            retObjectErrorsSent = classInstance.Get("ErrorsSent");
+            return (long)retObjectErrorsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectErrorsSent != null ? retObjectErrorsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipQueriesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipQueriesReceived = null;
         try {
-            return (long)classInstance.Get("MembershipQueriesReceived");
+            retObjectMembershipQueriesReceived = classInstance.Get("MembershipQueriesReceived");
+            return (long)retObjectMembershipQueriesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipQueriesReceived != null ? retObjectMembershipQueriesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipQueriesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipQueriesSent = null;
         try {
-            return (long)classInstance.Get("MembershipQueriesSent");
+            retObjectMembershipQueriesSent = classInstance.Get("MembershipQueriesSent");
+            return (long)retObjectMembershipQueriesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipQueriesSent != null ? retObjectMembershipQueriesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +297,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReductionsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReductionsReceived = null;
         try {
-            return (long)classInstance.Get("MembershipReductionsReceived");
+            retObjectMembershipReductionsReceived = classInstance.Get("MembershipReductionsReceived");
+            return (long)retObjectMembershipReductionsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipReductionsReceived != null ? retObjectMembershipReductionsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +311,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReductionsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReductionsSent = null;
         try {
-            return (long)classInstance.Get("MembershipReductionsSent");
+            retObjectMembershipReductionsSent = classInstance.Get("MembershipReductionsSent");
+            return (long)retObjectMembershipReductionsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipReductionsSent != null ? retObjectMembershipReductionsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +325,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReportsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReportsReceived = null;
         try {
-            return (long)classInstance.Get("MembershipReportsReceived");
+            retObjectMembershipReportsReceived = classInstance.Get("MembershipReportsReceived");
+            return (long)retObjectMembershipReportsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipReportsReceived != null ? retObjectMembershipReportsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +339,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMembershipReportsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipReportsSent = null;
         try {
-            return (long)classInstance.Get("MembershipReportsSent");
+            retObjectMembershipReportsSent = classInstance.Get("MembershipReportsSent");
+            return (long)retObjectMembershipReportsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMembershipReportsSent != null ? retObjectMembershipReportsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +353,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessagesReceived = null;
         try {
-            return (long)classInstance.Get("MessagesReceived");
+            retObjectMessagesReceived = classInstance.Get("MessagesReceived");
+            return (long)retObjectMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMessagesReceived != null ? retObjectMessagesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +367,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessagesSent = null;
         try {
-            return (long)classInstance.Get("MessagesSent");
+            retObjectMessagesSent = classInstance.Get("MessagesSent");
+            return (long)retObjectMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMessagesSent != null ? retObjectMessagesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +381,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborAdvertisementsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborAdvertisementsReceived = null;
         try {
-            return (long)classInstance.Get("NeighborAdvertisementsReceived");
+            retObjectNeighborAdvertisementsReceived = classInstance.Get("NeighborAdvertisementsReceived");
+            return (long)retObjectNeighborAdvertisementsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectNeighborAdvertisementsReceived != null ? retObjectNeighborAdvertisementsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +395,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborAdvertisementsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborAdvertisementsSent = null;
         try {
-            return (long)classInstance.Get("NeighborAdvertisementsSent");
+            retObjectNeighborAdvertisementsSent = classInstance.Get("NeighborAdvertisementsSent");
+            return (long)retObjectNeighborAdvertisementsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectNeighborAdvertisementsSent != null ? retObjectNeighborAdvertisementsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +409,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborSolicitsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborSolicitsReceived = null;
         try {
-            return (long)classInstance.Get("NeighborSolicitsReceived");
+            retObjectNeighborSolicitsReceived = classInstance.Get("NeighborSolicitsReceived");
+            return (long)retObjectNeighborSolicitsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectNeighborSolicitsReceived != null ? retObjectNeighborSolicitsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +423,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getNeighborSolicitsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNeighborSolicitsSent = null;
         try {
-            return (long)classInstance.Get("NeighborSolicitsSent");
+            retObjectNeighborSolicitsSent = classInstance.Get("NeighborSolicitsSent");
+            return (long)retObjectNeighborSolicitsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectNeighborSolicitsSent != null ? retObjectNeighborSolicitsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +437,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getPacketTooBigMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketTooBigMessagesReceived = null;
         try {
-            return (long)classInstance.Get("PacketTooBigMessagesReceived");
+            retObjectPacketTooBigMessagesReceived = classInstance.Get("PacketTooBigMessagesReceived");
+            return (long)retObjectPacketTooBigMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketTooBigMessagesReceived != null ? retObjectPacketTooBigMessagesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +451,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getPacketTooBigMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPacketTooBigMessagesSent = null;
         try {
-            return (long)classInstance.Get("PacketTooBigMessagesSent");
+            retObjectPacketTooBigMessagesSent = classInstance.Get("PacketTooBigMessagesSent");
+            return (long)retObjectPacketTooBigMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPacketTooBigMessagesSent != null ? retObjectPacketTooBigMessagesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +465,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getParameterProblemsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterProblemsReceived = null;
         try {
-            return (long)classInstance.Get("ParameterProblemsReceived");
+            retObjectParameterProblemsReceived = classInstance.Get("ParameterProblemsReceived");
+            return (long)retObjectParameterProblemsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectParameterProblemsReceived != null ? retObjectParameterProblemsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +479,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getParameterProblemsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterProblemsSent = null;
         try {
-            return (long)classInstance.Get("ParameterProblemsSent");
+            retObjectParameterProblemsSent = classInstance.Get("ParameterProblemsSent");
+            return (long)retObjectParameterProblemsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectParameterProblemsSent != null ? retObjectParameterProblemsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +493,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRedirectsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectsReceived = null;
         try {
-            return (long)classInstance.Get("RedirectsReceived");
+            retObjectRedirectsReceived = classInstance.Get("RedirectsReceived");
+            return (long)retObjectRedirectsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRedirectsReceived != null ? retObjectRedirectsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +507,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRedirectsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRedirectsSent = null;
         try {
-            return (long)classInstance.Get("RedirectsSent");
+            retObjectRedirectsSent = classInstance.Get("RedirectsSent");
+            return (long)retObjectRedirectsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRedirectsSent != null ? retObjectRedirectsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +521,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterAdvertisementsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterAdvertisementsReceived = null;
         try {
-            return (long)classInstance.Get("RouterAdvertisementsReceived");
+            retObjectRouterAdvertisementsReceived = classInstance.Get("RouterAdvertisementsReceived");
+            return (long)retObjectRouterAdvertisementsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRouterAdvertisementsReceived != null ? retObjectRouterAdvertisementsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +535,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterAdvertisementsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterAdvertisementsSent = null;
         try {
-            return (long)classInstance.Get("RouterAdvertisementsSent");
+            retObjectRouterAdvertisementsSent = classInstance.Get("RouterAdvertisementsSent");
+            return (long)retObjectRouterAdvertisementsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRouterAdvertisementsSent != null ? retObjectRouterAdvertisementsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +549,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterSolicitsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterSolicitsReceived = null;
         try {
-            return (long)classInstance.Get("RouterSolicitsReceived");
+            retObjectRouterSolicitsReceived = classInstance.Get("RouterSolicitsReceived");
+            return (long)retObjectRouterSolicitsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRouterSolicitsReceived != null ? retObjectRouterSolicitsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +563,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getRouterSolicitsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRouterSolicitsSent = null;
         try {
-            return (long)classInstance.Get("RouterSolicitsSent");
+            retObjectRouterSolicitsSent = classInstance.Get("RouterSolicitsSent");
+            return (long)retObjectRouterSolicitsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRouterSolicitsSent != null ? retObjectRouterSolicitsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +577,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getTimeExceededMessagesReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeExceededMessagesReceived = null;
         try {
-            return (long)classInstance.Get("TimeExceededMessagesReceived");
+            retObjectTimeExceededMessagesReceived = classInstance.Get("TimeExceededMessagesReceived");
+            return (long)retObjectTimeExceededMessagesReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTimeExceededMessagesReceived != null ? retObjectTimeExceededMessagesReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,9 +591,13 @@ public class IcmpV6Statistics extends NetObject  {
 
     public long getTimeExceededMessagesSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeExceededMessagesSent = null;
         try {
-            return (long)classInstance.Get("TimeExceededMessagesSent");
+            retObjectTimeExceededMessagesSent = classInstance.Get("TimeExceededMessagesSent");
+            return (long)retObjectTimeExceededMessagesSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTimeExceededMessagesSent != null ? retObjectTimeExceededMessagesSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

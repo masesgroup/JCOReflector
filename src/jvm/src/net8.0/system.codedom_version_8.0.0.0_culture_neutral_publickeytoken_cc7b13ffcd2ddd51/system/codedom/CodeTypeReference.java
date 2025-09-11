@@ -250,9 +250,13 @@ public class CodeTypeReference extends CodeObject  {
     
     public int getArrayRank() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArrayRank = null;
         try {
-            return (int)classInstance.Get("ArrayRank");
+            retObjectArrayRank = classInstance.Get("ArrayRank");
+            return (int)retObjectArrayRank;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectArrayRank != null ? retObjectArrayRank.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +264,7 @@ public class CodeTypeReference extends CodeObject  {
 
     public void setArrayRank(int ArrayRank) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArrayRank", ArrayRank);
         } catch (JCNativeException jcne) {
@@ -270,10 +274,14 @@ public class CodeTypeReference extends CodeObject  {
 
     public CodeTypeReference getArrayElementType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArrayElementType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ArrayElementType");
+            retObjectArrayElementType = classInstance.Get("ArrayElementType");
+            JCObject val = (JCObject)retObjectArrayElementType;
             return new CodeTypeReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrayElementType != null ? retObjectArrayElementType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +289,7 @@ public class CodeTypeReference extends CodeObject  {
 
     public void setArrayElementType(CodeTypeReference ArrayElementType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ArrayElementType", ArrayElementType == null ? null : ArrayElementType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +299,14 @@ public class CodeTypeReference extends CodeObject  {
 
     public CodeTypeReferenceCollection getTypeArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeArguments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeArguments");
+            retObjectTypeArguments = classInstance.Get("TypeArguments");
+            JCObject val = (JCObject)retObjectTypeArguments;
             return new CodeTypeReferenceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeArguments != null ? retObjectTypeArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +314,14 @@ public class CodeTypeReference extends CodeObject  {
 
     public CodeTypeReferenceOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new CodeTypeReferenceOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +329,7 @@ public class CodeTypeReference extends CodeObject  {
 
     public void setOptions(CodeTypeReferenceOptions Options) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,9 +339,13 @@ public class CodeTypeReference extends CodeObject  {
 
     public java.lang.String getBaseType() throws Throwable, system.ArrayTypeMismatchException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseType = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseType");
+            retObjectBaseType = classInstance.Get("BaseType");
+            return (java.lang.String)retObjectBaseType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseType != null ? retObjectBaseType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +353,7 @@ public class CodeTypeReference extends CodeObject  {
 
     public void setBaseType(java.lang.String BaseType) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseType", BaseType);
         } catch (JCNativeException jcne) {

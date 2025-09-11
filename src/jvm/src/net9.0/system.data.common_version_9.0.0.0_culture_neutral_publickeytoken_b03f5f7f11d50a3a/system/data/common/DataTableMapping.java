@@ -191,10 +191,14 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
     
     public DataColumnMapping GetColumnMappingBySchemaAction(java.lang.String sourceColumn, MissingMappingAction mappingAction) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnMappingBySchemaAction = null;
         try {
-            JCObject objGetColumnMappingBySchemaAction = (JCObject)classInstance.Invoke("GetColumnMappingBySchemaAction", sourceColumn, mappingAction == null ? null : mappingAction.getJCOInstance());
+            retObjectGetColumnMappingBySchemaAction = classInstance.Invoke("GetColumnMappingBySchemaAction", sourceColumn, mappingAction == null ? null : mappingAction.getJCOInstance());
+            JCObject objGetColumnMappingBySchemaAction = (JCObject)retObjectGetColumnMappingBySchemaAction;
             return new DataColumnMapping(objGetColumnMappingBySchemaAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnMappingBySchemaAction != null ? retObjectGetColumnMappingBySchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +206,14 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public DataColumn GetDataColumn(java.lang.String sourceColumn, NetType dataType, DataTable dataTable, MissingMappingAction mappingAction, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataColumn = null;
         try {
-            JCObject objGetDataColumn = (JCObject)classInstance.Invoke("GetDataColumn", sourceColumn, dataType == null ? null : dataType.getJCOInstance(), dataTable == null ? null : dataTable.getJCOInstance(), mappingAction == null ? null : mappingAction.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            retObjectGetDataColumn = classInstance.Invoke("GetDataColumn", sourceColumn, dataType == null ? null : dataType.getJCOInstance(), dataTable == null ? null : dataTable.getJCOInstance(), mappingAction == null ? null : mappingAction.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            JCObject objGetDataColumn = (JCObject)retObjectGetDataColumn;
             return new DataColumn(objGetDataColumn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataColumn != null ? retObjectGetDataColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public DataTable GetDataTableBySchemaAction(DataSet dataSet, MissingSchemaAction schemaAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataTableBySchemaAction = null;
         try {
-            JCObject objGetDataTableBySchemaAction = (JCObject)classInstance.Invoke("GetDataTableBySchemaAction", dataSet == null ? null : dataSet.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            retObjectGetDataTableBySchemaAction = classInstance.Invoke("GetDataTableBySchemaAction", dataSet == null ? null : dataSet.getJCOInstance(), schemaAction == null ? null : schemaAction.getJCOInstance());
+            JCObject objGetDataTableBySchemaAction = (JCObject)retObjectGetDataTableBySchemaAction;
             return new DataTable(objGetDataTableBySchemaAction);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataTableBySchemaAction != null ? retObjectGetDataTableBySchemaAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
      */
     @Deprecated 
     public NetObject Clone() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 
@@ -237,10 +249,14 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
     
     public DataColumnMappingCollection getColumnMappings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnMappings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnMappings");
+            retObjectColumnMappings = classInstance.Get("ColumnMappings");
+            JCObject val = (JCObject)retObjectColumnMappings;
             return new DataColumnMappingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnMappings != null ? retObjectColumnMappings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +264,13 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public java.lang.String getDataSetTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSetTable = null;
         try {
-            return (java.lang.String)classInstance.Get("DataSetTable");
+            retObjectDataSetTable = classInstance.Get("DataSetTable");
+            return (java.lang.String)retObjectDataSetTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataSetTable != null ? retObjectDataSetTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public void setDataSetTable(java.lang.String DataSetTable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataSetTable", DataSetTable);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public java.lang.String getSourceTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceTable = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceTable");
+            retObjectSourceTable = classInstance.Get("SourceTable");
+            return (java.lang.String)retObjectSourceTable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceTable != null ? retObjectSourceTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
 
     public void setSourceTable(java.lang.String SourceTable) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceTable", SourceTable);
         } catch (JCNativeException jcne) {

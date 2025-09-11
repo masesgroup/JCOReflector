@@ -171,10 +171,14 @@ public class MailMessageEventArgs extends LoginCancelEventArgs  {
     
     public MailMessage getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            JCObject val = (JCObject)retObjectMessage;
             return new MailMessage(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -153,9 +153,13 @@ public class RegexRunner extends NetObject  {
     
     public static boolean CharInClass(char ch, java.lang.String charClass) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCharInClass = null;
         try {
-            return (boolean)classType.Invoke("CharInClass", ch, charClass);
+            retObjectCharInClass = classType.Invoke("CharInClass", ch, charClass);
+            return (boolean)retObjectCharInClass;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCharInClass != null ? retObjectCharInClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

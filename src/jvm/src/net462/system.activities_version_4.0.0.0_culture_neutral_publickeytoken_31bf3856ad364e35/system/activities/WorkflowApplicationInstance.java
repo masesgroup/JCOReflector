@@ -163,10 +163,14 @@ public class WorkflowApplicationInstance extends NetObject  {
     
     public IAsyncResult BeginAbandon(AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.transactions.TransactionException, system.PlatformNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAbandon = null;
         try {
-            JCObject objBeginAbandon = (JCObject)classInstance.Invoke("BeginAbandon", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAbandon = classInstance.Invoke("BeginAbandon", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAbandon = (JCObject)retObjectBeginAbandon;
             return new IAsyncResultImplementation(objBeginAbandon);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAbandon != null ? retObjectBeginAbandon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public IAsyncResult BeginAbandon(TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.transactions.TransactionException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OverflowException, system.TimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginAbandon = null;
         try {
-            JCObject objBeginAbandon = (JCObject)classInstance.Invoke("BeginAbandon", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginAbandon = classInstance.Invoke("BeginAbandon", timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginAbandon = (JCObject)retObjectBeginAbandon;
             return new IAsyncResultImplementation(objBeginAbandon);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginAbandon != null ? retObjectBeginAbandon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +193,7 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public void Abandon() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon");
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public void Abandon(TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.OperationCanceledException, system.TimeoutException, system.ObjectDisposedException, system.transactions.TransactionException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abandon", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +213,7 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public void EndAbandon(IAsyncResult asyncResult) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndAbandon", asyncResult == null ? null : asyncResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,10 +227,14 @@ public class WorkflowApplicationInstance extends NetObject  {
     
     public WorkflowIdentity getDefinitionIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefinitionIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefinitionIdentity");
+            retObjectDefinitionIdentity = classInstance.Get("DefinitionIdentity");
+            JCObject val = (JCObject)retObjectDefinitionIdentity;
             return new WorkflowIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefinitionIdentity != null ? retObjectDefinitionIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public void setDefinitionIdentity(WorkflowIdentity DefinitionIdentity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefinitionIdentity", DefinitionIdentity == null ? null : DefinitionIdentity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,10 +252,14 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            JCObject val = (JCObject)retObjectInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +267,14 @@ public class WorkflowApplicationInstance extends NetObject  {
 
     public InstanceStore getInstanceStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceStore = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceStore");
+            retObjectInstanceStore = classInstance.Get("InstanceStore");
+            JCObject val = (JCObject)retObjectInstanceStore;
             return new InstanceStore(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceStore != null ? retObjectInstanceStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

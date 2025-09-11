@@ -162,9 +162,13 @@ public class ReplicationNeighbor extends NetObject  {
     
     public int getConsecutiveFailureCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConsecutiveFailureCount = null;
         try {
-            return (int)classInstance.Get("ConsecutiveFailureCount");
+            retObjectConsecutiveFailureCount = classInstance.Get("ConsecutiveFailureCount");
+            return (int)retObjectConsecutiveFailureCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConsecutiveFailureCount != null ? retObjectConsecutiveFailureCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public int getLastSyncResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastSyncResult = null;
         try {
-            return (int)classInstance.Get("LastSyncResult");
+            retObjectLastSyncResult = classInstance.Get("LastSyncResult");
+            return (int)retObjectLastSyncResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLastSyncResult != null ? retObjectLastSyncResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public long getUsnAttributeFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsnAttributeFilter = null;
         try {
-            return (long)classInstance.Get("UsnAttributeFilter");
+            retObjectUsnAttributeFilter = classInstance.Get("UsnAttributeFilter");
+            return (long)retObjectUsnAttributeFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectUsnAttributeFilter != null ? retObjectUsnAttributeFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public long getUsnLastObjectChangeSynced() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsnLastObjectChangeSynced = null;
         try {
-            return (long)classInstance.Get("UsnLastObjectChangeSynced");
+            retObjectUsnLastObjectChangeSynced = classInstance.Get("UsnLastObjectChangeSynced");
+            return (long)retObjectUsnLastObjectChangeSynced;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectUsnLastObjectChangeSynced != null ? retObjectUsnLastObjectChangeSynced.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class ReplicationNeighbor extends NetObject  {
 
     public DateTime getLastAttemptedSync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastAttemptedSync = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastAttemptedSync");
+            retObjectLastAttemptedSync = classInstance.Get("LastAttemptedSync");
+            JCObject val = (JCObject)retObjectLastAttemptedSync;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastAttemptedSync != null ? retObjectLastAttemptedSync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class ReplicationNeighbor extends NetObject  {
 
     public DateTime getLastSuccessfulSync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastSuccessfulSync = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastSuccessfulSync");
+            retObjectLastSuccessfulSync = classInstance.Get("LastSuccessfulSync");
+            JCObject val = (JCObject)retObjectLastSuccessfulSync;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastSuccessfulSync != null ? retObjectLastSuccessfulSync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class ReplicationNeighbor extends NetObject  {
 
     public ActiveDirectoryTransportType getTransportType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransportType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransportType");
+            retObjectTransportType = classInstance.Get("TransportType");
+            JCObject val = (JCObject)retObjectTransportType;
             return new ActiveDirectoryTransportType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransportType != null ? retObjectTransportType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class ReplicationNeighbor extends NetObject  {
 
     public Guid getSourceInvocationId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceInvocationId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceInvocationId");
+            retObjectSourceInvocationId = classInstance.Get("SourceInvocationId");
+            JCObject val = (JCObject)retObjectSourceInvocationId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceInvocationId != null ? retObjectSourceInvocationId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +278,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public java.lang.String getLastSyncMessage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastSyncMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("LastSyncMessage");
+            retObjectLastSyncMessage = classInstance.Get("LastSyncMessage");
+            return (java.lang.String)retObjectLastSyncMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLastSyncMessage != null ? retObjectLastSyncMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +292,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public java.lang.String getPartitionName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartitionName = null;
         try {
-            return (java.lang.String)classInstance.Get("PartitionName");
+            retObjectPartitionName = classInstance.Get("PartitionName");
+            return (java.lang.String)retObjectPartitionName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPartitionName != null ? retObjectPartitionName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +306,13 @@ public class ReplicationNeighbor extends NetObject  {
 
     public java.lang.String getSourceServer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceServer = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceServer");
+            retObjectSourceServer = classInstance.Get("SourceServer");
+            return (java.lang.String)retObjectSourceServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceServer != null ? retObjectSourceServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

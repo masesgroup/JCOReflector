@@ -158,9 +158,13 @@ public class DefinitionBase extends FrameworkContentElement  {
     
     public java.lang.String getSharedSizeGroup() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSharedSizeGroup = null;
         try {
-            return (java.lang.String)classInstance.Get("SharedSizeGroup");
+            retObjectSharedSizeGroup = classInstance.Get("SharedSizeGroup");
+            return (java.lang.String)retObjectSharedSizeGroup;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSharedSizeGroup != null ? retObjectSharedSizeGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class DefinitionBase extends FrameworkContentElement  {
 
     public void setSharedSizeGroup(java.lang.String SharedSizeGroup) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SharedSizeGroup", SharedSizeGroup);
         } catch (JCNativeException jcne) {

@@ -156,10 +156,14 @@ public class FileVersionInfo extends NetObject  {
     
     public static FileVersionInfo GetVersionInfo(java.lang.String fileName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVersionInfo = null;
         try {
-            JCObject objGetVersionInfo = (JCObject)classType.Invoke("GetVersionInfo", fileName);
+            retObjectGetVersionInfo = classType.Invoke("GetVersionInfo", fileName);
+            JCObject objGetVersionInfo = (JCObject)retObjectGetVersionInfo;
             return new FileVersionInfo(objGetVersionInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVersionInfo != null ? retObjectGetVersionInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class FileVersionInfo extends NetObject  {
     
     public boolean getIsDebug() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDebug = null;
         try {
-            return (boolean)classInstance.Get("IsDebug");
+            retObjectIsDebug = classInstance.Get("IsDebug");
+            return (boolean)retObjectIsDebug;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDebug != null ? retObjectIsDebug.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class FileVersionInfo extends NetObject  {
 
     public boolean getIsPatched() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPatched = null;
         try {
-            return (boolean)classInstance.Get("IsPatched");
+            retObjectIsPatched = classInstance.Get("IsPatched");
+            return (boolean)retObjectIsPatched;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPatched != null ? retObjectIsPatched.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class FileVersionInfo extends NetObject  {
 
     public boolean getIsPreRelease() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPreRelease = null;
         try {
-            return (boolean)classInstance.Get("IsPreRelease");
+            retObjectIsPreRelease = classInstance.Get("IsPreRelease");
+            return (boolean)retObjectIsPreRelease;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPreRelease != null ? retObjectIsPreRelease.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class FileVersionInfo extends NetObject  {
 
     public boolean getIsPrivateBuild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrivateBuild = null;
         try {
-            return (boolean)classInstance.Get("IsPrivateBuild");
+            retObjectIsPrivateBuild = classInstance.Get("IsPrivateBuild");
+            return (boolean)retObjectIsPrivateBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrivateBuild != null ? retObjectIsPrivateBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +231,13 @@ public class FileVersionInfo extends NetObject  {
 
     public boolean getIsSpecialBuild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSpecialBuild = null;
         try {
-            return (boolean)classInstance.Get("IsSpecialBuild");
+            retObjectIsSpecialBuild = classInstance.Get("IsSpecialBuild");
+            return (boolean)retObjectIsSpecialBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSpecialBuild != null ? retObjectIsSpecialBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +245,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getFileBuildPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileBuildPart = null;
         try {
-            return (int)classInstance.Get("FileBuildPart");
+            retObjectFileBuildPart = classInstance.Get("FileBuildPart");
+            return (int)retObjectFileBuildPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFileBuildPart != null ? retObjectFileBuildPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +259,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getFileMajorPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileMajorPart = null;
         try {
-            return (int)classInstance.Get("FileMajorPart");
+            retObjectFileMajorPart = classInstance.Get("FileMajorPart");
+            return (int)retObjectFileMajorPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFileMajorPart != null ? retObjectFileMajorPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,9 +273,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getFileMinorPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileMinorPart = null;
         try {
-            return (int)classInstance.Get("FileMinorPart");
+            retObjectFileMinorPart = classInstance.Get("FileMinorPart");
+            return (int)retObjectFileMinorPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFileMinorPart != null ? retObjectFileMinorPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +287,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getFilePrivatePart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilePrivatePart = null;
         try {
-            return (int)classInstance.Get("FilePrivatePart");
+            retObjectFilePrivatePart = classInstance.Get("FilePrivatePart");
+            return (int)retObjectFilePrivatePart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFilePrivatePart != null ? retObjectFilePrivatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,9 +301,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getProductBuildPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductBuildPart = null;
         try {
-            return (int)classInstance.Get("ProductBuildPart");
+            retObjectProductBuildPart = classInstance.Get("ProductBuildPart");
+            return (int)retObjectProductBuildPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProductBuildPart != null ? retObjectProductBuildPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,9 +315,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getProductMajorPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductMajorPart = null;
         try {
-            return (int)classInstance.Get("ProductMajorPart");
+            retObjectProductMajorPart = classInstance.Get("ProductMajorPart");
+            return (int)retObjectProductMajorPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProductMajorPart != null ? retObjectProductMajorPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +329,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getProductMinorPart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductMinorPart = null;
         try {
-            return (int)classInstance.Get("ProductMinorPart");
+            retObjectProductMinorPart = classInstance.Get("ProductMinorPart");
+            return (int)retObjectProductMinorPart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProductMinorPart != null ? retObjectProductMinorPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,9 +343,13 @@ public class FileVersionInfo extends NetObject  {
 
     public int getProductPrivatePart() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductPrivatePart = null;
         try {
-            return (int)classInstance.Get("ProductPrivatePart");
+            retObjectProductPrivatePart = classInstance.Get("ProductPrivatePart");
+            return (int)retObjectProductPrivatePart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProductPrivatePart != null ? retObjectProductPrivatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +357,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getComments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComments = null;
         try {
-            return (java.lang.String)classInstance.Get("Comments");
+            retObjectComments = classInstance.Get("Comments");
+            return (java.lang.String)retObjectComments;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComments != null ? retObjectComments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +371,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getCompanyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompanyName = null;
         try {
-            return (java.lang.String)classInstance.Get("CompanyName");
+            retObjectCompanyName = classInstance.Get("CompanyName");
+            return (java.lang.String)retObjectCompanyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompanyName != null ? retObjectCompanyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,9 +385,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getFileDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("FileDescription");
+            retObjectFileDescription = classInstance.Get("FileDescription");
+            return (java.lang.String)retObjectFileDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileDescription != null ? retObjectFileDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +399,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,9 +413,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getFileVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("FileVersion");
+            retObjectFileVersion = classInstance.Get("FileVersion");
+            return (java.lang.String)retObjectFileVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileVersion != null ? retObjectFileVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,9 +427,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getInternalName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalName = null;
         try {
-            return (java.lang.String)classInstance.Get("InternalName");
+            retObjectInternalName = classInstance.Get("InternalName");
+            return (java.lang.String)retObjectInternalName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInternalName != null ? retObjectInternalName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,9 +441,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,9 +455,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getLegalCopyright() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLegalCopyright = null;
         try {
-            return (java.lang.String)classInstance.Get("LegalCopyright");
+            retObjectLegalCopyright = classInstance.Get("LegalCopyright");
+            return (java.lang.String)retObjectLegalCopyright;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLegalCopyright != null ? retObjectLegalCopyright.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,9 +469,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getLegalTrademarks() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLegalTrademarks = null;
         try {
-            return (java.lang.String)classInstance.Get("LegalTrademarks");
+            retObjectLegalTrademarks = classInstance.Get("LegalTrademarks");
+            return (java.lang.String)retObjectLegalTrademarks;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLegalTrademarks != null ? retObjectLegalTrademarks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,9 +483,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getOriginalFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalFilename");
+            retObjectOriginalFilename = classInstance.Get("OriginalFilename");
+            return (java.lang.String)retObjectOriginalFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalFilename != null ? retObjectOriginalFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,9 +497,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getPrivateBuild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrivateBuild = null;
         try {
-            return (java.lang.String)classInstance.Get("PrivateBuild");
+            retObjectPrivateBuild = classInstance.Get("PrivateBuild");
+            return (java.lang.String)retObjectPrivateBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPrivateBuild != null ? retObjectPrivateBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,9 +511,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getProductName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductName");
+            retObjectProductName = classInstance.Get("ProductName");
+            return (java.lang.String)retObjectProductName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductName != null ? retObjectProductName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,9 +525,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getProductVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProductVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("ProductVersion");
+            retObjectProductVersion = classInstance.Get("ProductVersion");
+            return (java.lang.String)retObjectProductVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProductVersion != null ? retObjectProductVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,9 +539,13 @@ public class FileVersionInfo extends NetObject  {
 
     public java.lang.String getSpecialBuild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpecialBuild = null;
         try {
-            return (java.lang.String)classInstance.Get("SpecialBuild");
+            retObjectSpecialBuild = classInstance.Get("SpecialBuild");
+            return (java.lang.String)retObjectSpecialBuild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSpecialBuild != null ? retObjectSpecialBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

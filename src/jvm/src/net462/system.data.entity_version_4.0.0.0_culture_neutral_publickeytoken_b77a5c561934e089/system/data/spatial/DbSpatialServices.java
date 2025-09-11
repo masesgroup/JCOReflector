@@ -158,9 +158,13 @@ public class DbSpatialServices extends NetObject  {
     
     public boolean Contains(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Crosses(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCrosses = null;
         try {
-            return (boolean)classInstance.Invoke("Crosses", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectCrosses = classInstance.Invoke("Crosses", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectCrosses;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCrosses != null ? retObjectCrosses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Disjoint(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisjoint = null;
         try {
-            return (boolean)classInstance.Invoke("Disjoint", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectDisjoint = classInstance.Invoke("Disjoint", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (boolean)retObjectDisjoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDisjoint != null ? retObjectDisjoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Disjoint(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisjoint = null;
         try {
-            return (boolean)classInstance.Invoke("Disjoint", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectDisjoint = classInstance.Invoke("Disjoint", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectDisjoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectDisjoint != null ? retObjectDisjoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean GetIsEmpty(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsEmpty", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetIsEmpty = classInstance.Invoke("GetIsEmpty", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (boolean)retObjectGetIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsEmpty != null ? retObjectGetIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean GetIsEmpty(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsEmpty", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetIsEmpty = classInstance.Invoke("GetIsEmpty", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (boolean)retObjectGetIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsEmpty != null ? retObjectGetIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +242,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean GetIsSimple(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsSimple = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsSimple", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetIsSimple = classInstance.Invoke("GetIsSimple", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (boolean)retObjectGetIsSimple;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsSimple != null ? retObjectGetIsSimple.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +256,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean GetIsValid(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetIsValid = null;
         try {
-            return (boolean)classInstance.Invoke("GetIsValid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetIsValid = classInstance.Invoke("GetIsValid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (boolean)retObjectGetIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsValid != null ? retObjectGetIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +270,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Intersects(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersects = null;
         try {
-            return (boolean)classInstance.Invoke("Intersects", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectIntersects = classInstance.Invoke("Intersects", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (boolean)retObjectIntersects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIntersects != null ? retObjectIntersects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +284,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Intersects(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersects = null;
         try {
-            return (boolean)classInstance.Invoke("Intersects", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectIntersects = classInstance.Invoke("Intersects", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectIntersects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIntersects != null ? retObjectIntersects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +298,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Overlaps(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverlaps = null;
         try {
-            return (boolean)classInstance.Invoke("Overlaps", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectOverlaps = classInstance.Invoke("Overlaps", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectOverlaps;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOverlaps != null ? retObjectOverlaps.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,9 +312,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Relate(DbGeometry geometryValue, DbGeometry otherGeometry, java.lang.String matrix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelate = null;
         try {
-            return (boolean)classInstance.Invoke("Relate", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance(), matrix);
+            retObjectRelate = classInstance.Invoke("Relate", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance(), matrix);
+            return (boolean)retObjectRelate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRelate != null ? retObjectRelate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,9 +326,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean SpatialEquals(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpatialEquals = null;
         try {
-            return (boolean)classInstance.Invoke("SpatialEquals", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectSpatialEquals = classInstance.Invoke("SpatialEquals", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (boolean)retObjectSpatialEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSpatialEquals != null ? retObjectSpatialEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,9 +340,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean SpatialEquals(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpatialEquals = null;
         try {
-            return (boolean)classInstance.Invoke("SpatialEquals", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectSpatialEquals = classInstance.Invoke("SpatialEquals", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectSpatialEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSpatialEquals != null ? retObjectSpatialEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +354,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Touches(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTouches = null;
         try {
-            return (boolean)classInstance.Invoke("Touches", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectTouches = classInstance.Invoke("Touches", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectTouches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTouches != null ? retObjectTouches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,9 +368,13 @@ public class DbSpatialServices extends NetObject  {
 
     public boolean Within(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWithin = null;
         try {
-            return (boolean)classInstance.Invoke("Within", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectWithin = classInstance.Invoke("Within", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (boolean)retObjectWithin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWithin != null ? retObjectWithin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +382,12 @@ public class DbSpatialServices extends NetObject  {
 
     public byte[] AsBinary(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsBinary = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectAsBinary = classInstance.Invoke("AsBinary", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectAsBinary;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -330,6 +396,8 @@ public class DbSpatialServices extends NetObject  {
 				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectAsBinary != null ? retObjectAsBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +405,12 @@ public class DbSpatialServices extends NetObject  {
 
     public byte[] AsBinary(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsBinary = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectAsBinary = classInstance.Invoke("AsBinary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectAsBinary;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -349,6 +419,8 @@ public class DbSpatialServices extends NetObject  {
 				resultingArray[indexAsBinary] = (byte)resultingArrayList.get(indexAsBinary);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectAsBinary != null ? retObjectAsBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,9 +428,19 @@ public class DbSpatialServices extends NetObject  {
 
     public double Distance(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistance = null;
         try {
-            return (double)classInstance.Invoke("Distance", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectDistance = classInstance.Invoke("Distance", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            return (double)retObjectDistance;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDistanceNumber = (java.lang.Number)retObjectDistance;
+                return retObjectDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDistance != null ? retObjectDistance.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +448,19 @@ public class DbSpatialServices extends NetObject  {
 
     public double Distance(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDistance = null;
         try {
-            return (double)classInstance.Invoke("Distance", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectDistance = classInstance.Invoke("Distance", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            return (double)retObjectDistance;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectDistanceNumber = (java.lang.Number)retObjectDistance;
+                return retObjectDistanceNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectDistance != null ? retObjectDistance.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,9 +468,19 @@ public class DbSpatialServices extends NetObject  {
 
     public int GetCoordinateSystemId(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCoordinateSystemId = null;
         try {
-            return (int)classInstance.Invoke("GetCoordinateSystemId", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetCoordinateSystemId = classInstance.Invoke("GetCoordinateSystemId", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (int)retObjectGetCoordinateSystemId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCoordinateSystemIdNumber = (java.lang.Number)retObjectGetCoordinateSystemId;
+                return retObjectGetCoordinateSystemIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,9 +488,19 @@ public class DbSpatialServices extends NetObject  {
 
     public int GetCoordinateSystemId(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCoordinateSystemId = null;
         try {
-            return (int)classInstance.Invoke("GetCoordinateSystemId", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetCoordinateSystemId = classInstance.Invoke("GetCoordinateSystemId", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (int)retObjectGetCoordinateSystemId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCoordinateSystemIdNumber = (java.lang.Number)retObjectGetCoordinateSystemId;
+                return retObjectGetCoordinateSystemIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCoordinateSystemId != null ? retObjectGetCoordinateSystemId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,9 +508,19 @@ public class DbSpatialServices extends NetObject  {
 
     public int GetDimension(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDimension = null;
         try {
-            return (int)classInstance.Invoke("GetDimension", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetDimension = classInstance.Invoke("GetDimension", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (int)retObjectGetDimension;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDimensionNumber = (java.lang.Number)retObjectGetDimension;
+                return retObjectGetDimensionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,9 +528,19 @@ public class DbSpatialServices extends NetObject  {
 
     public int GetDimension(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDimension = null;
         try {
-            return (int)classInstance.Invoke("GetDimension", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetDimension = classInstance.Invoke("GetDimension", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (int)retObjectGetDimension;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetDimensionNumber = (java.lang.Number)retObjectGetDimension;
+                return retObjectGetDimensionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetDimension != null ? retObjectGetDimension.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,10 +548,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography Buffer(DbGeography geographyValue, double distance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
-            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geographyValue == null ? null : geographyValue.getJCOInstance(), distance);
+            retObjectBuffer = classInstance.Invoke("Buffer", geographyValue == null ? null : geographyValue.getJCOInstance(), distance);
+            JCObject objBuffer = (JCObject)retObjectBuffer;
             return new DbGeography(objBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,10 +563,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography Difference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDifference = null;
         try {
-            JCObject objDifference = (JCObject)classInstance.Invoke("Difference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectDifference = classInstance.Invoke("Difference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            JCObject objDifference = (JCObject)retObjectDifference;
             return new DbGeography(objDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDifference != null ? retObjectDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,10 +578,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography ElementAt(DbGeography geographyValue, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementAt = null;
         try {
-            JCObject objElementAt = (JCObject)classInstance.Invoke("ElementAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            retObjectElementAt = classInstance.Invoke("ElementAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            JCObject objElementAt = (JCObject)retObjectElementAt;
             return new DbGeography(objElementAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAt != null ? retObjectElementAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,10 +593,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyCollectionFromBinary = null;
         try {
-            JCObject objGeographyCollectionFromBinary = (JCObject)classInstance.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinary, coordinateSystemId);
+            retObjectGeographyCollectionFromBinary = classInstance.Invoke("GeographyCollectionFromBinary", geographyCollectionWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyCollectionFromBinary = (JCObject)retObjectGeographyCollectionFromBinary;
             return new DbGeography(objGeographyCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyCollectionFromBinary != null ? retObjectGeographyCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,10 +608,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyCollectionFromBinary = null;
         try {
-            JCObject objGeographyCollectionFromBinary = (JCObject)classInstance.Invoke("GeographyCollectionFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyCollectionFromBinary = classInstance.Invoke("GeographyCollectionFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyCollectionFromBinary = (JCObject)retObjectGeographyCollectionFromBinary;
             return new DbGeography(objGeographyCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyCollectionFromBinary != null ? retObjectGeographyCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,10 +623,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyCollectionFromText(java.lang.String geographyCollectionWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyCollectionFromText = null;
         try {
-            JCObject objGeographyCollectionFromText = (JCObject)classInstance.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText, coordinateSystemId);
+            retObjectGeographyCollectionFromText = classInstance.Invoke("GeographyCollectionFromText", geographyCollectionWellKnownText, coordinateSystemId);
+            JCObject objGeographyCollectionFromText = (JCObject)retObjectGeographyCollectionFromText;
             return new DbGeography(objGeographyCollectionFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyCollectionFromText != null ? retObjectGeographyCollectionFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,10 +638,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromBinary(byte[] wellKnownBinary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (java.lang.Object)wellKnownBinary);
+            retObjectGeographyFromBinary = classInstance.Invoke("GeographyFromBinary", (java.lang.Object)wellKnownBinary);
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbGeography(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -493,10 +653,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromBinary(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGeographyFromBinary = classInstance.Invoke("GeographyFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbGeography(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,10 +668,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", wellKnownBinary, coordinateSystemId);
+            retObjectGeographyFromBinary = classInstance.Invoke("GeographyFromBinary", wellKnownBinary, coordinateSystemId);
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbGeography(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -515,10 +683,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromBinary = null;
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyFromBinary = classInstance.Invoke("GeographyFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyFromBinary = (JCObject)retObjectGeographyFromBinary;
             return new DbGeography(objGeographyFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromBinary != null ? retObjectGeographyFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -526,10 +698,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromGml(java.lang.String geographyMarkup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromGml = null;
         try {
-            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup);
+            retObjectGeographyFromGml = classInstance.Invoke("GeographyFromGml", geographyMarkup);
+            JCObject objGeographyFromGml = (JCObject)retObjectGeographyFromGml;
             return new DbGeography(objGeographyFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromGml != null ? retObjectGeographyFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,10 +713,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromGml(java.lang.String geographyMarkup, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromGml = null;
         try {
-            JCObject objGeographyFromGml = (JCObject)classInstance.Invoke("GeographyFromGml", geographyMarkup, coordinateSystemId);
+            retObjectGeographyFromGml = classInstance.Invoke("GeographyFromGml", geographyMarkup, coordinateSystemId);
+            JCObject objGeographyFromGml = (JCObject)retObjectGeographyFromGml;
             return new DbGeography(objGeographyFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromGml != null ? retObjectGeographyFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,10 +728,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromProviderValue(NetObject providerValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromProviderValue = null;
         try {
-            JCObject objGeographyFromProviderValue = (JCObject)classInstance.Invoke("GeographyFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            retObjectGeographyFromProviderValue = classInstance.Invoke("GeographyFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            JCObject objGeographyFromProviderValue = (JCObject)retObjectGeographyFromProviderValue;
             return new DbGeography(objGeographyFromProviderValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromProviderValue != null ? retObjectGeographyFromProviderValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -559,10 +743,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromText(java.lang.String wellKnownText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromText = null;
         try {
-            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText);
+            retObjectGeographyFromText = classInstance.Invoke("GeographyFromText", wellKnownText);
+            JCObject objGeographyFromText = (JCObject)retObjectGeographyFromText;
             return new DbGeography(objGeographyFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromText != null ? retObjectGeographyFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,10 +758,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyFromText = null;
         try {
-            JCObject objGeographyFromText = (JCObject)classInstance.Invoke("GeographyFromText", wellKnownText, coordinateSystemId);
+            retObjectGeographyFromText = classInstance.Invoke("GeographyFromText", wellKnownText, coordinateSystemId);
+            JCObject objGeographyFromText = (JCObject)retObjectGeographyFromText;
             return new DbGeography(objGeographyFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyFromText != null ? retObjectGeographyFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -581,10 +773,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyLineFromBinary = null;
         try {
-            JCObject objGeographyLineFromBinary = (JCObject)classInstance.Invoke("GeographyLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            retObjectGeographyLineFromBinary = classInstance.Invoke("GeographyLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyLineFromBinary = (JCObject)retObjectGeographyLineFromBinary;
             return new DbGeography(objGeographyLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyLineFromBinary != null ? retObjectGeographyLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +788,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyLineFromBinary = null;
         try {
-            JCObject objGeographyLineFromBinary = (JCObject)classInstance.Invoke("GeographyLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyLineFromBinary = classInstance.Invoke("GeographyLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyLineFromBinary = (JCObject)retObjectGeographyLineFromBinary;
             return new DbGeography(objGeographyLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyLineFromBinary != null ? retObjectGeographyLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +803,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyLineFromText = null;
         try {
-            JCObject objGeographyLineFromText = (JCObject)classInstance.Invoke("GeographyLineFromText", lineWellKnownText, coordinateSystemId);
+            retObjectGeographyLineFromText = classInstance.Invoke("GeographyLineFromText", lineWellKnownText, coordinateSystemId);
+            JCObject objGeographyLineFromText = (JCObject)retObjectGeographyLineFromText;
             return new DbGeography(objGeographyLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyLineFromText != null ? retObjectGeographyLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,10 +818,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiLineFromBinary = null;
         try {
-            JCObject objGeographyMultiLineFromBinary = (JCObject)classInstance.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            retObjectGeographyMultiLineFromBinary = classInstance.Invoke("GeographyMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyMultiLineFromBinary = (JCObject)retObjectGeographyMultiLineFromBinary;
             return new DbGeography(objGeographyMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiLineFromBinary != null ? retObjectGeographyMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,10 +833,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiLineFromBinary = null;
         try {
-            JCObject objGeographyMultiLineFromBinary = (JCObject)classInstance.Invoke("GeographyMultiLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyMultiLineFromBinary = classInstance.Invoke("GeographyMultiLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyMultiLineFromBinary = (JCObject)retObjectGeographyMultiLineFromBinary;
             return new DbGeography(objGeographyMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiLineFromBinary != null ? retObjectGeographyMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,10 +848,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiLineFromText = null;
         try {
-            JCObject objGeographyMultiLineFromText = (JCObject)classInstance.Invoke("GeographyMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            retObjectGeographyMultiLineFromText = classInstance.Invoke("GeographyMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            JCObject objGeographyMultiLineFromText = (JCObject)retObjectGeographyMultiLineFromText;
             return new DbGeography(objGeographyMultiLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiLineFromText != null ? retObjectGeographyMultiLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -647,10 +863,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPointFromBinary = null;
         try {
-            JCObject objGeographyMultiPointFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            retObjectGeographyMultiPointFromBinary = classInstance.Invoke("GeographyMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyMultiPointFromBinary = (JCObject)retObjectGeographyMultiPointFromBinary;
             return new DbGeography(objGeographyMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPointFromBinary != null ? retObjectGeographyMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -658,10 +878,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPointFromBinary = null;
         try {
-            JCObject objGeographyMultiPointFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyMultiPointFromBinary = classInstance.Invoke("GeographyMultiPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyMultiPointFromBinary = (JCObject)retObjectGeographyMultiPointFromBinary;
             return new DbGeography(objGeographyMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPointFromBinary != null ? retObjectGeographyMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -669,10 +893,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPointFromText = null;
         try {
-            JCObject objGeographyMultiPointFromText = (JCObject)classInstance.Invoke("GeographyMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            retObjectGeographyMultiPointFromText = classInstance.Invoke("GeographyMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            JCObject objGeographyMultiPointFromText = (JCObject)retObjectGeographyMultiPointFromText;
             return new DbGeography(objGeographyMultiPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPointFromText != null ? retObjectGeographyMultiPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -680,10 +908,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPolygonFromBinary = null;
         try {
-            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            retObjectGeographyMultiPolygonFromBinary = classInstance.Invoke("GeographyMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyMultiPolygonFromBinary = (JCObject)retObjectGeographyMultiPolygonFromBinary;
             return new DbGeography(objGeographyMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPolygonFromBinary != null ? retObjectGeographyMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,10 +923,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPolygonFromBinary = null;
         try {
-            JCObject objGeographyMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyMultiPolygonFromBinary = classInstance.Invoke("GeographyMultiPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyMultiPolygonFromBinary = (JCObject)retObjectGeographyMultiPolygonFromBinary;
             return new DbGeography(objGeographyMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPolygonFromBinary != null ? retObjectGeographyMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,10 +938,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyMultiPolygonFromText(java.lang.String multiPolygonWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyMultiPolygonFromText = null;
         try {
-            JCObject objGeographyMultiPolygonFromText = (JCObject)classInstance.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText, coordinateSystemId);
+            retObjectGeographyMultiPolygonFromText = classInstance.Invoke("GeographyMultiPolygonFromText", multiPolygonWellKnownText, coordinateSystemId);
+            JCObject objGeographyMultiPolygonFromText = (JCObject)retObjectGeographyMultiPolygonFromText;
             return new DbGeography(objGeographyMultiPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyMultiPolygonFromText != null ? retObjectGeographyMultiPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,10 +953,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPointFromBinary = null;
         try {
-            JCObject objGeographyPointFromBinary = (JCObject)classInstance.Invoke("GeographyPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            retObjectGeographyPointFromBinary = classInstance.Invoke("GeographyPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyPointFromBinary = (JCObject)retObjectGeographyPointFromBinary;
             return new DbGeography(objGeographyPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPointFromBinary != null ? retObjectGeographyPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -724,10 +968,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPointFromBinary = null;
         try {
-            JCObject objGeographyPointFromBinary = (JCObject)classInstance.Invoke("GeographyPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyPointFromBinary = classInstance.Invoke("GeographyPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyPointFromBinary = (JCObject)retObjectGeographyPointFromBinary;
             return new DbGeography(objGeographyPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPointFromBinary != null ? retObjectGeographyPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -735,10 +983,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPointFromText = null;
         try {
-            JCObject objGeographyPointFromText = (JCObject)classInstance.Invoke("GeographyPointFromText", pointWellKnownText, coordinateSystemId);
+            retObjectGeographyPointFromText = classInstance.Invoke("GeographyPointFromText", pointWellKnownText, coordinateSystemId);
+            JCObject objGeographyPointFromText = (JCObject)retObjectGeographyPointFromText;
             return new DbGeography(objGeographyPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPointFromText != null ? retObjectGeographyPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -746,10 +998,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPolygonFromBinary = null;
         try {
-            JCObject objGeographyPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            retObjectGeographyPolygonFromBinary = classInstance.Invoke("GeographyPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            JCObject objGeographyPolygonFromBinary = (JCObject)retObjectGeographyPolygonFromBinary;
             return new DbGeography(objGeographyPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPolygonFromBinary != null ? retObjectGeographyPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,10 +1013,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPolygonFromBinary = null;
         try {
-            JCObject objGeographyPolygonFromBinary = (JCObject)classInstance.Invoke("GeographyPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeographyPolygonFromBinary = classInstance.Invoke("GeographyPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeographyPolygonFromBinary = (JCObject)retObjectGeographyPolygonFromBinary;
             return new DbGeography(objGeographyPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPolygonFromBinary != null ? retObjectGeographyPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -768,10 +1028,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GeographyPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeographyPolygonFromText = null;
         try {
-            JCObject objGeographyPolygonFromText = (JCObject)classInstance.Invoke("GeographyPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            retObjectGeographyPolygonFromText = classInstance.Invoke("GeographyPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            JCObject objGeographyPolygonFromText = (JCObject)retObjectGeographyPolygonFromText;
             return new DbGeography(objGeographyPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeographyPolygonFromText != null ? retObjectGeographyPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,10 +1043,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GetEndPoint(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEndPoint = null;
         try {
-            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetEndPoint = classInstance.Invoke("GetEndPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetEndPoint = (JCObject)retObjectGetEndPoint;
             return new DbGeography(objGetEndPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEndPoint != null ? retObjectGetEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,10 +1058,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography GetStartPoint(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStartPoint = null;
         try {
-            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetStartPoint = classInstance.Invoke("GetStartPoint", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objGetStartPoint = (JCObject)retObjectGetStartPoint;
             return new DbGeography(objGetStartPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStartPoint != null ? retObjectGetStartPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -801,10 +1073,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography Intersection(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersection = null;
         try {
-            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectIntersection = classInstance.Invoke("Intersection", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            JCObject objIntersection = (JCObject)retObjectIntersection;
             return new DbGeography(objIntersection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersection != null ? retObjectIntersection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -812,10 +1088,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography PointAt(DbGeography geographyValue, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointAt = null;
         try {
-            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            retObjectPointAt = classInstance.Invoke("PointAt", geographyValue == null ? null : geographyValue.getJCOInstance(), index);
+            JCObject objPointAt = (JCObject)retObjectPointAt;
             return new DbGeography(objPointAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointAt != null ? retObjectPointAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -823,10 +1103,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography SymmetricDifference(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSymmetricDifference = null;
         try {
-            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectSymmetricDifference = classInstance.Invoke("SymmetricDifference", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            JCObject objSymmetricDifference = (JCObject)retObjectSymmetricDifference;
             return new DbGeography(objSymmetricDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymmetricDifference != null ? retObjectSymmetricDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -834,10 +1118,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeography Union(DbGeography geographyValue, DbGeography otherGeography) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            retObjectUnion = classInstance.Invoke("Union", geographyValue == null ? null : geographyValue.getJCOInstance(), otherGeography == null ? null : otherGeography.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new DbGeography(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -845,10 +1133,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeographyWellKnownValue CreateWellKnownValue(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWellKnownValue = null;
         try {
-            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectCreateWellKnownValue = classInstance.Invoke("CreateWellKnownValue", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objCreateWellKnownValue = (JCObject)retObjectCreateWellKnownValue;
             return new DbGeographyWellKnownValue(objCreateWellKnownValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWellKnownValue != null ? retObjectCreateWellKnownValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -856,10 +1148,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry Buffer(DbGeometry geometryValue, double distance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
-            JCObject objBuffer = (JCObject)classInstance.Invoke("Buffer", geometryValue == null ? null : geometryValue.getJCOInstance(), distance);
+            retObjectBuffer = classInstance.Invoke("Buffer", geometryValue == null ? null : geometryValue.getJCOInstance(), distance);
+            JCObject objBuffer = (JCObject)retObjectBuffer;
             return new DbGeometry(objBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -867,10 +1163,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry Difference(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDifference = null;
         try {
-            JCObject objDifference = (JCObject)classInstance.Invoke("Difference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectDifference = classInstance.Invoke("Difference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            JCObject objDifference = (JCObject)retObjectDifference;
             return new DbGeometry(objDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDifference != null ? retObjectDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -878,10 +1178,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry ElementAt(DbGeometry geometryValue, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementAt = null;
         try {
-            JCObject objElementAt = (JCObject)classInstance.Invoke("ElementAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            retObjectElementAt = classInstance.Invoke("ElementAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            JCObject objElementAt = (JCObject)retObjectElementAt;
             return new DbGeometry(objElementAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementAt != null ? retObjectElementAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -889,10 +1193,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryCollectionFromBinary(byte[] geometryCollectionWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryCollectionFromBinary = null;
         try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classInstance.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinary, coordinateSystemId);
+            retObjectGeometryCollectionFromBinary = classInstance.Invoke("GeometryCollectionFromBinary", geometryCollectionWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryCollectionFromBinary = (JCObject)retObjectGeometryCollectionFromBinary;
             return new DbGeometry(objGeometryCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryCollectionFromBinary != null ? retObjectGeometryCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -900,10 +1208,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryCollectionFromBinary = null;
         try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classInstance.Invoke("GeometryCollectionFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryCollectionFromBinary = classInstance.Invoke("GeometryCollectionFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryCollectionFromBinary = (JCObject)retObjectGeometryCollectionFromBinary;
             return new DbGeometry(objGeometryCollectionFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryCollectionFromBinary != null ? retObjectGeometryCollectionFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -911,10 +1223,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryCollectionFromText(java.lang.String geometryCollectionWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryCollectionFromText = null;
         try {
-            JCObject objGeometryCollectionFromText = (JCObject)classInstance.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText, coordinateSystemId);
+            retObjectGeometryCollectionFromText = classInstance.Invoke("GeometryCollectionFromText", geometryCollectionWellKnownText, coordinateSystemId);
+            JCObject objGeometryCollectionFromText = (JCObject)retObjectGeometryCollectionFromText;
             return new DbGeometry(objGeometryCollectionFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryCollectionFromText != null ? retObjectGeometryCollectionFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -922,10 +1238,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromBinary(byte[] wellKnownBinary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (java.lang.Object)wellKnownBinary);
+            retObjectGeometryFromBinary = classInstance.Invoke("GeometryFromBinary", (java.lang.Object)wellKnownBinary);
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbGeometry(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -933,10 +1253,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromBinary(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectGeometryFromBinary = classInstance.Invoke("GeometryFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbGeometry(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -944,10 +1268,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromBinary(byte[] wellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", wellKnownBinary, coordinateSystemId);
+            retObjectGeometryFromBinary = classInstance.Invoke("GeometryFromBinary", wellKnownBinary, coordinateSystemId);
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbGeometry(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -955,10 +1283,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromBinary = null;
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryFromBinary = classInstance.Invoke("GeometryFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryFromBinary = (JCObject)retObjectGeometryFromBinary;
             return new DbGeometry(objGeometryFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromBinary != null ? retObjectGeometryFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -966,10 +1298,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromGml(java.lang.String geometryMarkup) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromGml = null;
         try {
-            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup);
+            retObjectGeometryFromGml = classInstance.Invoke("GeometryFromGml", geometryMarkup);
+            JCObject objGeometryFromGml = (JCObject)retObjectGeometryFromGml;
             return new DbGeometry(objGeometryFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromGml != null ? retObjectGeometryFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -977,10 +1313,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromGml(java.lang.String geometryMarkup, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromGml = null;
         try {
-            JCObject objGeometryFromGml = (JCObject)classInstance.Invoke("GeometryFromGml", geometryMarkup, coordinateSystemId);
+            retObjectGeometryFromGml = classInstance.Invoke("GeometryFromGml", geometryMarkup, coordinateSystemId);
+            JCObject objGeometryFromGml = (JCObject)retObjectGeometryFromGml;
             return new DbGeometry(objGeometryFromGml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromGml != null ? retObjectGeometryFromGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -988,10 +1328,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromProviderValue(NetObject providerValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromProviderValue = null;
         try {
-            JCObject objGeometryFromProviderValue = (JCObject)classInstance.Invoke("GeometryFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            retObjectGeometryFromProviderValue = classInstance.Invoke("GeometryFromProviderValue", providerValue == null ? null : providerValue.getJCOInstance());
+            JCObject objGeometryFromProviderValue = (JCObject)retObjectGeometryFromProviderValue;
             return new DbGeometry(objGeometryFromProviderValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromProviderValue != null ? retObjectGeometryFromProviderValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -999,10 +1343,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromText(java.lang.String wellKnownText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromText = null;
         try {
-            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText);
+            retObjectGeometryFromText = classInstance.Invoke("GeometryFromText", wellKnownText);
+            JCObject objGeometryFromText = (JCObject)retObjectGeometryFromText;
             return new DbGeometry(objGeometryFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromText != null ? retObjectGeometryFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1010,10 +1358,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryFromText(java.lang.String wellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryFromText = null;
         try {
-            JCObject objGeometryFromText = (JCObject)classInstance.Invoke("GeometryFromText", wellKnownText, coordinateSystemId);
+            retObjectGeometryFromText = classInstance.Invoke("GeometryFromText", wellKnownText, coordinateSystemId);
+            JCObject objGeometryFromText = (JCObject)retObjectGeometryFromText;
             return new DbGeometry(objGeometryFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryFromText != null ? retObjectGeometryFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1021,10 +1373,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryLineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryLineFromBinary = null;
         try {
-            JCObject objGeometryLineFromBinary = (JCObject)classInstance.Invoke("GeometryLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            retObjectGeometryLineFromBinary = classInstance.Invoke("GeometryLineFromBinary", lineWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryLineFromBinary = (JCObject)retObjectGeometryLineFromBinary;
             return new DbGeometry(objGeometryLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryLineFromBinary != null ? retObjectGeometryLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1032,10 +1388,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryLineFromBinary = null;
         try {
-            JCObject objGeometryLineFromBinary = (JCObject)classInstance.Invoke("GeometryLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryLineFromBinary = classInstance.Invoke("GeometryLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryLineFromBinary = (JCObject)retObjectGeometryLineFromBinary;
             return new DbGeometry(objGeometryLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryLineFromBinary != null ? retObjectGeometryLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1043,10 +1403,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryLineFromText(java.lang.String lineWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryLineFromText = null;
         try {
-            JCObject objGeometryLineFromText = (JCObject)classInstance.Invoke("GeometryLineFromText", lineWellKnownText, coordinateSystemId);
+            retObjectGeometryLineFromText = classInstance.Invoke("GeometryLineFromText", lineWellKnownText, coordinateSystemId);
+            JCObject objGeometryLineFromText = (JCObject)retObjectGeometryLineFromText;
             return new DbGeometry(objGeometryLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryLineFromText != null ? retObjectGeometryLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1054,10 +1418,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiLineFromBinary = null;
         try {
-            JCObject objGeometryMultiLineFromBinary = (JCObject)classInstance.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            retObjectGeometryMultiLineFromBinary = classInstance.Invoke("GeometryMultiLineFromBinary", multiLineWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryMultiLineFromBinary = (JCObject)retObjectGeometryMultiLineFromBinary;
             return new DbGeometry(objGeometryMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiLineFromBinary != null ? retObjectGeometryMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1065,10 +1433,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiLineFromBinary = null;
         try {
-            JCObject objGeometryMultiLineFromBinary = (JCObject)classInstance.Invoke("GeometryMultiLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryMultiLineFromBinary = classInstance.Invoke("GeometryMultiLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryMultiLineFromBinary = (JCObject)retObjectGeometryMultiLineFromBinary;
             return new DbGeometry(objGeometryMultiLineFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiLineFromBinary != null ? retObjectGeometryMultiLineFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1076,10 +1448,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiLineFromText(java.lang.String multiLineWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiLineFromText = null;
         try {
-            JCObject objGeometryMultiLineFromText = (JCObject)classInstance.Invoke("GeometryMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            retObjectGeometryMultiLineFromText = classInstance.Invoke("GeometryMultiLineFromText", multiLineWellKnownText, coordinateSystemId);
+            JCObject objGeometryMultiLineFromText = (JCObject)retObjectGeometryMultiLineFromText;
             return new DbGeometry(objGeometryMultiLineFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiLineFromText != null ? retObjectGeometryMultiLineFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1087,10 +1463,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPointFromBinary = null;
         try {
-            JCObject objGeometryMultiPointFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            retObjectGeometryMultiPointFromBinary = classInstance.Invoke("GeometryMultiPointFromBinary", multiPointWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryMultiPointFromBinary = (JCObject)retObjectGeometryMultiPointFromBinary;
             return new DbGeometry(objGeometryMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPointFromBinary != null ? retObjectGeometryMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1098,10 +1478,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPointFromBinary = null;
         try {
-            JCObject objGeometryMultiPointFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryMultiPointFromBinary = classInstance.Invoke("GeometryMultiPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryMultiPointFromBinary = (JCObject)retObjectGeometryMultiPointFromBinary;
             return new DbGeometry(objGeometryMultiPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPointFromBinary != null ? retObjectGeometryMultiPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1109,10 +1493,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPointFromText(java.lang.String multiPointWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPointFromText = null;
         try {
-            JCObject objGeometryMultiPointFromText = (JCObject)classInstance.Invoke("GeometryMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            retObjectGeometryMultiPointFromText = classInstance.Invoke("GeometryMultiPointFromText", multiPointWellKnownText, coordinateSystemId);
+            JCObject objGeometryMultiPointFromText = (JCObject)retObjectGeometryMultiPointFromText;
             return new DbGeometry(objGeometryMultiPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPointFromText != null ? retObjectGeometryMultiPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1120,10 +1508,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPolygonFromBinary = null;
         try {
-            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            retObjectGeometryMultiPolygonFromBinary = classInstance.Invoke("GeometryMultiPolygonFromBinary", multiPolygonWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryMultiPolygonFromBinary = (JCObject)retObjectGeometryMultiPolygonFromBinary;
             return new DbGeometry(objGeometryMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPolygonFromBinary != null ? retObjectGeometryMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1131,10 +1523,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPolygonFromBinary = null;
         try {
-            JCObject objGeometryMultiPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryMultiPolygonFromBinary = classInstance.Invoke("GeometryMultiPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryMultiPolygonFromBinary = (JCObject)retObjectGeometryMultiPolygonFromBinary;
             return new DbGeometry(objGeometryMultiPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPolygonFromBinary != null ? retObjectGeometryMultiPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1142,10 +1538,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryMultiPolygonFromText(java.lang.String multiPolygonKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryMultiPolygonFromText = null;
         try {
-            JCObject objGeometryMultiPolygonFromText = (JCObject)classInstance.Invoke("GeometryMultiPolygonFromText", multiPolygonKnownText, coordinateSystemId);
+            retObjectGeometryMultiPolygonFromText = classInstance.Invoke("GeometryMultiPolygonFromText", multiPolygonKnownText, coordinateSystemId);
+            JCObject objGeometryMultiPolygonFromText = (JCObject)retObjectGeometryMultiPolygonFromText;
             return new DbGeometry(objGeometryMultiPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryMultiPolygonFromText != null ? retObjectGeometryMultiPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1153,10 +1553,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPointFromBinary = null;
         try {
-            JCObject objGeometryPointFromBinary = (JCObject)classInstance.Invoke("GeometryPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            retObjectGeometryPointFromBinary = classInstance.Invoke("GeometryPointFromBinary", pointWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryPointFromBinary = (JCObject)retObjectGeometryPointFromBinary;
             return new DbGeometry(objGeometryPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPointFromBinary != null ? retObjectGeometryPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1164,10 +1568,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPointFromBinary = null;
         try {
-            JCObject objGeometryPointFromBinary = (JCObject)classInstance.Invoke("GeometryPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryPointFromBinary = classInstance.Invoke("GeometryPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryPointFromBinary = (JCObject)retObjectGeometryPointFromBinary;
             return new DbGeometry(objGeometryPointFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPointFromBinary != null ? retObjectGeometryPointFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1175,10 +1583,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPointFromText(java.lang.String pointWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPointFromText = null;
         try {
-            JCObject objGeometryPointFromText = (JCObject)classInstance.Invoke("GeometryPointFromText", pointWellKnownText, coordinateSystemId);
+            retObjectGeometryPointFromText = classInstance.Invoke("GeometryPointFromText", pointWellKnownText, coordinateSystemId);
+            JCObject objGeometryPointFromText = (JCObject)retObjectGeometryPointFromText;
             return new DbGeometry(objGeometryPointFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPointFromText != null ? retObjectGeometryPointFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1186,10 +1598,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPolygonFromBinary = null;
         try {
-            JCObject objGeometryPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            retObjectGeometryPolygonFromBinary = classInstance.Invoke("GeometryPolygonFromBinary", polygonWellKnownBinary, coordinateSystemId);
+            JCObject objGeometryPolygonFromBinary = (JCObject)retObjectGeometryPolygonFromBinary;
             return new DbGeometry(objGeometryPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPolygonFromBinary != null ? retObjectGeometryPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1197,10 +1613,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPolygonFromBinary = null;
         try {
-            JCObject objGeometryPolygonFromBinary = (JCObject)classInstance.Invoke("GeometryPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            retObjectGeometryPolygonFromBinary = classInstance.Invoke("GeometryPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objGeometryPolygonFromBinary = (JCObject)retObjectGeometryPolygonFromBinary;
             return new DbGeometry(objGeometryPolygonFromBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPolygonFromBinary != null ? retObjectGeometryPolygonFromBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1208,10 +1628,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GeometryPolygonFromText(java.lang.String polygonWellKnownText, int coordinateSystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeometryPolygonFromText = null;
         try {
-            JCObject objGeometryPolygonFromText = (JCObject)classInstance.Invoke("GeometryPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            retObjectGeometryPolygonFromText = classInstance.Invoke("GeometryPolygonFromText", polygonWellKnownText, coordinateSystemId);
+            JCObject objGeometryPolygonFromText = (JCObject)retObjectGeometryPolygonFromText;
             return new DbGeometry(objGeometryPolygonFromText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGeometryPolygonFromText != null ? retObjectGeometryPolygonFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1219,10 +1643,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetBoundary(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBoundary = null;
         try {
-            JCObject objGetBoundary = (JCObject)classInstance.Invoke("GetBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetBoundary = classInstance.Invoke("GetBoundary", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetBoundary = (JCObject)retObjectGetBoundary;
             return new DbGeometry(objGetBoundary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBoundary != null ? retObjectGetBoundary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1230,10 +1658,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetCentroid(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCentroid = null;
         try {
-            JCObject objGetCentroid = (JCObject)classInstance.Invoke("GetCentroid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetCentroid = classInstance.Invoke("GetCentroid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetCentroid = (JCObject)retObjectGetCentroid;
             return new DbGeometry(objGetCentroid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCentroid != null ? retObjectGetCentroid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1241,10 +1673,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetConvexHull(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetConvexHull = null;
         try {
-            JCObject objGetConvexHull = (JCObject)classInstance.Invoke("GetConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetConvexHull = classInstance.Invoke("GetConvexHull", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetConvexHull = (JCObject)retObjectGetConvexHull;
             return new DbGeometry(objGetConvexHull);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetConvexHull != null ? retObjectGetConvexHull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1252,10 +1688,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetEndPoint(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEndPoint = null;
         try {
-            JCObject objGetEndPoint = (JCObject)classInstance.Invoke("GetEndPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetEndPoint = classInstance.Invoke("GetEndPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetEndPoint = (JCObject)retObjectGetEndPoint;
             return new DbGeometry(objGetEndPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEndPoint != null ? retObjectGetEndPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1263,10 +1703,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetEnvelope(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEnvelope = null;
         try {
-            JCObject objGetEnvelope = (JCObject)classInstance.Invoke("GetEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetEnvelope = classInstance.Invoke("GetEnvelope", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetEnvelope = (JCObject)retObjectGetEnvelope;
             return new DbGeometry(objGetEnvelope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEnvelope != null ? retObjectGetEnvelope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1274,10 +1718,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetExteriorRing(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExteriorRing = null;
         try {
-            JCObject objGetExteriorRing = (JCObject)classInstance.Invoke("GetExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetExteriorRing = classInstance.Invoke("GetExteriorRing", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetExteriorRing = (JCObject)retObjectGetExteriorRing;
             return new DbGeometry(objGetExteriorRing);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExteriorRing != null ? retObjectGetExteriorRing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1285,10 +1733,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetPointOnSurface(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPointOnSurface = null;
         try {
-            JCObject objGetPointOnSurface = (JCObject)classInstance.Invoke("GetPointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetPointOnSurface = classInstance.Invoke("GetPointOnSurface", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetPointOnSurface = (JCObject)retObjectGetPointOnSurface;
             return new DbGeometry(objGetPointOnSurface);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPointOnSurface != null ? retObjectGetPointOnSurface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1296,10 +1748,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry GetStartPoint(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStartPoint = null;
         try {
-            JCObject objGetStartPoint = (JCObject)classInstance.Invoke("GetStartPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetStartPoint = classInstance.Invoke("GetStartPoint", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objGetStartPoint = (JCObject)retObjectGetStartPoint;
             return new DbGeometry(objGetStartPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStartPoint != null ? retObjectGetStartPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1307,10 +1763,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry InteriorRingAt(DbGeometry geometryValue, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInteriorRingAt = null;
         try {
-            JCObject objInteriorRingAt = (JCObject)classInstance.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            retObjectInteriorRingAt = classInstance.Invoke("InteriorRingAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            JCObject objInteriorRingAt = (JCObject)retObjectInteriorRingAt;
             return new DbGeometry(objInteriorRingAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInteriorRingAt != null ? retObjectInteriorRingAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1318,10 +1778,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry Intersection(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersection = null;
         try {
-            JCObject objIntersection = (JCObject)classInstance.Invoke("Intersection", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectIntersection = classInstance.Invoke("Intersection", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            JCObject objIntersection = (JCObject)retObjectIntersection;
             return new DbGeometry(objIntersection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersection != null ? retObjectIntersection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1329,10 +1793,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry PointAt(DbGeometry geometryValue, int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointAt = null;
         try {
-            JCObject objPointAt = (JCObject)classInstance.Invoke("PointAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            retObjectPointAt = classInstance.Invoke("PointAt", geometryValue == null ? null : geometryValue.getJCOInstance(), index);
+            JCObject objPointAt = (JCObject)retObjectPointAt;
             return new DbGeometry(objPointAt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointAt != null ? retObjectPointAt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1340,10 +1808,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry SymmetricDifference(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSymmetricDifference = null;
         try {
-            JCObject objSymmetricDifference = (JCObject)classInstance.Invoke("SymmetricDifference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectSymmetricDifference = classInstance.Invoke("SymmetricDifference", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            JCObject objSymmetricDifference = (JCObject)retObjectSymmetricDifference;
             return new DbGeometry(objSymmetricDifference);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymmetricDifference != null ? retObjectSymmetricDifference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1351,10 +1823,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometry Union(DbGeometry geometryValue, DbGeometry otherGeometry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classInstance.Invoke("Union", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            retObjectUnion = classInstance.Invoke("Union", geometryValue == null ? null : geometryValue.getJCOInstance(), otherGeometry == null ? null : otherGeometry.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new DbGeometry(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1362,10 +1838,14 @@ public class DbSpatialServices extends NetObject  {
 
     public DbGeometryWellKnownValue CreateWellKnownValue(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWellKnownValue = null;
         try {
-            JCObject objCreateWellKnownValue = (JCObject)classInstance.Invoke("CreateWellKnownValue", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectCreateWellKnownValue = classInstance.Invoke("CreateWellKnownValue", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objCreateWellKnownValue = (JCObject)retObjectCreateWellKnownValue;
             return new DbGeometryWellKnownValue(objCreateWellKnownValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWellKnownValue != null ? retObjectCreateWellKnownValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1373,10 +1853,14 @@ public class DbSpatialServices extends NetObject  {
 
     public NetObject CreateProviderValue(DbGeographyWellKnownValue wellKnownValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProviderValue = null;
         try {
-            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            retObjectCreateProviderValue = classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            JCObject objCreateProviderValue = (JCObject)retObjectCreateProviderValue;
             return new NetObject(objCreateProviderValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProviderValue != null ? retObjectCreateProviderValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1384,10 +1868,14 @@ public class DbSpatialServices extends NetObject  {
 
     public NetObject CreateProviderValue(DbGeometryWellKnownValue wellKnownValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateProviderValue = null;
         try {
-            JCObject objCreateProviderValue = (JCObject)classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            retObjectCreateProviderValue = classInstance.Invoke("CreateProviderValue", wellKnownValue == null ? null : wellKnownValue.getJCOInstance());
+            JCObject objCreateProviderValue = (JCObject)retObjectCreateProviderValue;
             return new NetObject(objCreateProviderValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateProviderValue != null ? retObjectCreateProviderValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1395,9 +1883,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsGml(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsGml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsGml", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectAsGml = classInstance.Invoke("AsGml", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (java.lang.String)retObjectAsGml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsGml != null ? retObjectAsGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1405,9 +1897,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsGml(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsGml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsGml", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectAsGml = classInstance.Invoke("AsGml", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (java.lang.String)retObjectAsGml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsGml != null ? retObjectAsGml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1415,9 +1911,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsText(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsText", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectAsText = classInstance.Invoke("AsText", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (java.lang.String)retObjectAsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsText != null ? retObjectAsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1425,9 +1925,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsText(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsText = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsText", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectAsText = classInstance.Invoke("AsText", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (java.lang.String)retObjectAsText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsText != null ? retObjectAsText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1435,9 +1939,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsTextIncludingElevationAndMeasure(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsTextIncludingElevationAndMeasure = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectAsTextIncludingElevationAndMeasure = classInstance.Invoke("AsTextIncludingElevationAndMeasure", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (java.lang.String)retObjectAsTextIncludingElevationAndMeasure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsTextIncludingElevationAndMeasure != null ? retObjectAsTextIncludingElevationAndMeasure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1445,9 +1953,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String AsTextIncludingElevationAndMeasure(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsTextIncludingElevationAndMeasure = null;
         try {
-            return (java.lang.String)classInstance.Invoke("AsTextIncludingElevationAndMeasure", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectAsTextIncludingElevationAndMeasure = classInstance.Invoke("AsTextIncludingElevationAndMeasure", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (java.lang.String)retObjectAsTextIncludingElevationAndMeasure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsTextIncludingElevationAndMeasure != null ? retObjectAsTextIncludingElevationAndMeasure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1455,9 +1967,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String GetSpatialTypeName(DbGeography geographyValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpatialTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectGetSpatialTypeName = classInstance.Invoke("GetSpatialTypeName", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (java.lang.String)retObjectGetSpatialTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSpatialTypeName != null ? retObjectGetSpatialTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1465,9 +1981,13 @@ public class DbSpatialServices extends NetObject  {
 
     public java.lang.String GetSpatialTypeName(DbGeometry geometryValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSpatialTypeName = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetSpatialTypeName", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectGetSpatialTypeName = classInstance.Invoke("GetSpatialTypeName", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (java.lang.String)retObjectGetSpatialTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetSpatialTypeName != null ? retObjectGetSpatialTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1479,10 +1999,14 @@ public class DbSpatialServices extends NetObject  {
     
     public static DbSpatialServices getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new DbSpatialServices(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,9 +150,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
     
     public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), filterAttributes == null ? null : filterAttributes.getJCOInstance());
+            retObjectIsSupported = classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), filterAttributes == null ? null : filterAttributes.getJCOInstance());
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectIsSupported = classInstance.Invoke("IsSupported", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsToolboxItem = null;
         try {
-            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectIsToolboxItem = classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            return (boolean)retObjectIsToolboxItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsToolboxItem != null ? retObjectIsToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +192,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsToolboxItem = null;
         try {
-            return (boolean)classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
+            retObjectIsToolboxItem = classInstance.Invoke("IsToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
+            return (boolean)retObjectIsToolboxItem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsToolboxItem != null ? retObjectIsToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +206,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public boolean SetCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetCursor = null;
         try {
-            return (boolean)classInstance.Invoke("SetCursor");
+            retObjectSetCursor = classInstance.Invoke("SetCursor");
+            return (boolean)retObjectSetCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetCursor != null ? retObjectSetCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +220,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserializeToolboxItem = null;
         try {
-            JCObject objDeserializeToolboxItem = (JCObject)classInstance.Invoke("DeserializeToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            retObjectDeserializeToolboxItem = classInstance.Invoke("DeserializeToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance(), host == null ? null : host.getJCOInstance());
+            JCObject objDeserializeToolboxItem = (JCObject)retObjectDeserializeToolboxItem;
             return new ToolboxItem(objDeserializeToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeToolboxItem != null ? retObjectDeserializeToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +235,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeserializeToolboxItem = null;
         try {
-            JCObject objDeserializeToolboxItem = (JCObject)classInstance.Invoke("DeserializeToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
+            retObjectDeserializeToolboxItem = classInstance.Invoke("DeserializeToolboxItem", serializedObject == null ? null : serializedObject.getJCOInstance());
+            JCObject objDeserializeToolboxItem = (JCObject)retObjectDeserializeToolboxItem;
             return new ToolboxItem(objDeserializeToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeserializeToolboxItem != null ? retObjectDeserializeToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +250,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItem GetSelectedToolboxItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedToolboxItem = null;
         try {
-            JCObject objGetSelectedToolboxItem = (JCObject)classInstance.Invoke("GetSelectedToolboxItem");
+            retObjectGetSelectedToolboxItem = classInstance.Invoke("GetSelectedToolboxItem");
+            JCObject objGetSelectedToolboxItem = (JCObject)retObjectGetSelectedToolboxItem;
             return new ToolboxItem(objGetSelectedToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedToolboxItem != null ? retObjectGetSelectedToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +265,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItem GetSelectedToolboxItem(IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedToolboxItem = null;
         try {
-            JCObject objGetSelectedToolboxItem = (JCObject)classInstance.Invoke("GetSelectedToolboxItem", host == null ? null : host.getJCOInstance());
+            retObjectGetSelectedToolboxItem = classInstance.Invoke("GetSelectedToolboxItem", host == null ? null : host.getJCOInstance());
+            JCObject objGetSelectedToolboxItem = (JCObject)retObjectGetSelectedToolboxItem;
             return new ToolboxItem(objGetSelectedToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedToolboxItem != null ? retObjectGetSelectedToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +280,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItemCollection GetToolboxItems() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classInstance.Invoke("GetToolboxItems");
+            retObjectGetToolboxItems = classInstance.Invoke("GetToolboxItems");
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ToolboxItemCollection(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +295,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItemCollection GetToolboxItems(IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classInstance.Invoke("GetToolboxItems", host == null ? null : host.getJCOInstance());
+            retObjectGetToolboxItems = classInstance.Invoke("GetToolboxItems", host == null ? null : host.getJCOInstance());
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ToolboxItemCollection(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +310,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classInstance.Invoke("GetToolboxItems", category, host == null ? null : host.getJCOInstance());
+            retObjectGetToolboxItems = classInstance.Invoke("GetToolboxItems", category, host == null ? null : host.getJCOInstance());
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ToolboxItemCollection(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,10 +325,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public ToolboxItemCollection GetToolboxItems(java.lang.String category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classInstance.Invoke("GetToolboxItems", category);
+            retObjectGetToolboxItems = classInstance.Invoke("GetToolboxItems", category);
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ToolboxItemCollection(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +340,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializeToolboxItem = null;
         try {
-            JCObject objSerializeToolboxItem = (JCObject)classInstance.Invoke("SerializeToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
+            retObjectSerializeToolboxItem = classInstance.Invoke("SerializeToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
+            JCObject objSerializeToolboxItem = (JCObject)retObjectSerializeToolboxItem;
             return new NetObject(objSerializeToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializeToolboxItem != null ? retObjectSerializeToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +355,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCreator", creator, format, host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,7 +365,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCreator", creator, format);
         } catch (JCNativeException jcne) {
@@ -319,7 +375,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,7 +385,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddLinkedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category, host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,7 +395,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -349,7 +405,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -359,7 +415,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void Refresh() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -369,7 +425,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void RemoveCreator(java.lang.String format, IDesignerHost host) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCreator", format, host == null ? null : host.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,7 +435,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void RemoveCreator(java.lang.String format) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveCreator", format);
         } catch (JCNativeException jcne) {
@@ -389,7 +445,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -399,7 +455,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void RemoveToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,7 +465,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void SelectedToolboxItemUsed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SelectedToolboxItemUsed");
         } catch (JCNativeException jcne) {
@@ -419,7 +475,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectedToolboxItem", toolboxItem == null ? null : toolboxItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -433,10 +489,14 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
     
     public CategoryNameCollection getCategoryNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategoryNames = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CategoryNames");
+            retObjectCategoryNames = classInstance.Get("CategoryNames");
+            JCObject val = (JCObject)retObjectCategoryNames;
             return new CategoryNameCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategoryNames != null ? retObjectCategoryNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,9 +504,13 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public java.lang.String getSelectedCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedCategory");
+            retObjectSelectedCategory = classInstance.Get("SelectedCategory");
+            return (java.lang.String)retObjectSelectedCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedCategory != null ? retObjectSelectedCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -454,7 +518,7 @@ public class IToolboxServiceImplementation extends NetObject implements IToolbox
 
     public void setSelectedCategory(java.lang.String SelectedCategory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedCategory", SelectedCategory);
         } catch (JCNativeException jcne) {

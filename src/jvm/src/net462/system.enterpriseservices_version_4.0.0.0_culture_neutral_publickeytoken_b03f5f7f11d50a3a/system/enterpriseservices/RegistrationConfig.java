@@ -166,10 +166,14 @@ public class RegistrationConfig extends NetObject  {
     
     public InstallationFlags getInstallationFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstallationFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstallationFlags");
+            retObjectInstallationFlags = classInstance.Get("InstallationFlags");
+            JCObject val = (JCObject)retObjectInstallationFlags;
             return new InstallationFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstallationFlags != null ? retObjectInstallationFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setInstallationFlags(InstallationFlags InstallationFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstallationFlags", InstallationFlags == null ? null : InstallationFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class RegistrationConfig extends NetObject  {
 
     public java.lang.String getApplication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplication = null;
         try {
-            return (java.lang.String)classInstance.Get("Application");
+            retObjectApplication = classInstance.Get("Application");
+            return (java.lang.String)retObjectApplication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplication != null ? retObjectApplication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setApplication(java.lang.String Application) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Application", Application);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class RegistrationConfig extends NetObject  {
 
     public java.lang.String getApplicationRootDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationRootDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationRootDirectory");
+            retObjectApplicationRootDirectory = classInstance.Get("ApplicationRootDirectory");
+            return (java.lang.String)retObjectApplicationRootDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationRootDirectory != null ? retObjectApplicationRootDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setApplicationRootDirectory(java.lang.String ApplicationRootDirectory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationRootDirectory", ApplicationRootDirectory);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class RegistrationConfig extends NetObject  {
 
     public java.lang.String getAssemblyFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyFile");
+            retObjectAssemblyFile = classInstance.Get("AssemblyFile");
+            return (java.lang.String)retObjectAssemblyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyFile != null ? retObjectAssemblyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setAssemblyFile(java.lang.String AssemblyFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyFile", AssemblyFile);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class RegistrationConfig extends NetObject  {
 
     public java.lang.String getPartition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartition = null;
         try {
-            return (java.lang.String)classInstance.Get("Partition");
+            retObjectPartition = classInstance.Get("Partition");
+            return (java.lang.String)retObjectPartition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPartition != null ? retObjectPartition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setPartition(java.lang.String Partition) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Partition", Partition);
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class RegistrationConfig extends NetObject  {
 
     public java.lang.String getTypeLibrary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeLibrary = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeLibrary");
+            retObjectTypeLibrary = classInstance.Get("TypeLibrary");
+            return (java.lang.String)retObjectTypeLibrary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeLibrary != null ? retObjectTypeLibrary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class RegistrationConfig extends NetObject  {
 
     public void setTypeLibrary(java.lang.String TypeLibrary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeLibrary", TypeLibrary);
         } catch (JCNativeException jcne) {

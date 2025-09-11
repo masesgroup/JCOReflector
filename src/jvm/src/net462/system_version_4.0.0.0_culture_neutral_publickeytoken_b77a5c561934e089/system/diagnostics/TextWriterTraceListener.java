@@ -224,7 +224,7 @@ public class TextWriterTraceListener extends TraceListener  {
     
     public void Close() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -234,7 +234,7 @@ public class TextWriterTraceListener extends TraceListener  {
 
     public void Flush() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -244,7 +244,7 @@ public class TextWriterTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -254,7 +254,7 @@ public class TextWriterTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -268,10 +268,14 @@ public class TextWriterTraceListener extends TraceListener  {
     
     public TextWriter getWriter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Writer");
+            retObjectWriter = classInstance.Get("Writer");
+            JCObject val = (JCObject)retObjectWriter;
             return new TextWriter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriter != null ? retObjectWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +283,7 @@ public class TextWriterTraceListener extends TraceListener  {
 
     public void setWriter(TextWriter Writer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Writer", Writer == null ? null : Writer.getJCOInstance());
         } catch (JCNativeException jcne) {

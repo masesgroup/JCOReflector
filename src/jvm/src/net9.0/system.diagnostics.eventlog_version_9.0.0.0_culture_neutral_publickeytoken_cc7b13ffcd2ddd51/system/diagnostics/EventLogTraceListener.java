@@ -185,7 +185,7 @@ public class EventLogTraceListener extends TraceListener  {
     
     public void Close() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.security.SecurityException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -195,7 +195,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, NetObject data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +205,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void TraceData(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, NetObject... data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceData", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, toObjectFromArray(data));
         } catch (JCNativeException jcne) {
@@ -215,7 +215,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, java.lang.String format, NetObject... args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -225,7 +225,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void TraceEvent(TraceEventCache eventCache, java.lang.String source, TraceEventType severity, int id, java.lang.String message) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TraceEvent", eventCache == null ? null : eventCache.getJCOInstance(), source, severity == null ? null : severity.getJCOInstance(), id, message);
         } catch (JCNativeException jcne) {
@@ -235,7 +235,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void Write(java.lang.String message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -245,7 +245,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void WriteLine(java.lang.String message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -259,10 +259,14 @@ public class EventLogTraceListener extends TraceListener  {
     
     public EventLog getEventLog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventLog = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventLog");
+            retObjectEventLog = classInstance.Get("EventLog");
+            JCObject val = (JCObject)retObjectEventLog;
             return new EventLog(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventLog != null ? retObjectEventLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +274,7 @@ public class EventLogTraceListener extends TraceListener  {
 
     public void setEventLog(EventLog EventLog) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventLog", EventLog == null ? null : EventLog.getJCOInstance());
         } catch (JCNativeException jcne) {

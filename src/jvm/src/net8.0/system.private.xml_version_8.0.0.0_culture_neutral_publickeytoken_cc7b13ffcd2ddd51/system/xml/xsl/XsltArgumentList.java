@@ -162,10 +162,14 @@ public class XsltArgumentList extends NetObject  {
     
     public NetObject GetExtensionObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExtensionObject = null;
         try {
-            JCObject objGetExtensionObject = (JCObject)classInstance.Invoke("GetExtensionObject", namespaceUri);
+            retObjectGetExtensionObject = classInstance.Invoke("GetExtensionObject", namespaceUri);
+            JCObject objGetExtensionObject = (JCObject)retObjectGetExtensionObject;
             return new NetObject(objGetExtensionObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExtensionObject != null ? retObjectGetExtensionObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class XsltArgumentList extends NetObject  {
 
     public NetObject GetParam(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParam = null;
         try {
-            JCObject objGetParam = (JCObject)classInstance.Invoke("GetParam", name, namespaceUri);
+            retObjectGetParam = classInstance.Invoke("GetParam", name, namespaceUri);
+            JCObject objGetParam = (JCObject)retObjectGetParam;
             return new NetObject(objGetParam);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParam != null ? retObjectGetParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class XsltArgumentList extends NetObject  {
 
     public NetObject RemoveExtensionObject(java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveExtensionObject = null;
         try {
-            JCObject objRemoveExtensionObject = (JCObject)classInstance.Invoke("RemoveExtensionObject", namespaceUri);
+            retObjectRemoveExtensionObject = classInstance.Invoke("RemoveExtensionObject", namespaceUri);
+            JCObject objRemoveExtensionObject = (JCObject)retObjectRemoveExtensionObject;
             return new NetObject(objRemoveExtensionObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveExtensionObject != null ? retObjectRemoveExtensionObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class XsltArgumentList extends NetObject  {
 
     public NetObject RemoveParam(java.lang.String name, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveParam = null;
         try {
-            JCObject objRemoveParam = (JCObject)classInstance.Invoke("RemoveParam", name, namespaceUri);
+            retObjectRemoveParam = classInstance.Invoke("RemoveParam", name, namespaceUri);
+            JCObject objRemoveParam = (JCObject)retObjectRemoveParam;
             return new NetObject(objRemoveParam);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRemoveParam != null ? retObjectRemoveParam.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +222,7 @@ public class XsltArgumentList extends NetObject  {
 
     public void AddExtensionObject(java.lang.String namespaceUri, NetObject extension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddExtensionObject", namespaceUri, extension == null ? null : extension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +232,7 @@ public class XsltArgumentList extends NetObject  {
 
     public void AddParam(java.lang.String name, java.lang.String namespaceUri, NetObject parameter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddParam", name, namespaceUri, parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +242,7 @@ public class XsltArgumentList extends NetObject  {
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -245,7 +261,7 @@ public class XsltArgumentList extends NetObject  {
 
     public void addXsltMessageEncountered(XsltMessageEncounteredEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("XsltMessageEncountered", handler);
         } catch (JCNativeException jcne) {
@@ -255,7 +271,7 @@ public class XsltArgumentList extends NetObject  {
 
     public void removeXsltMessageEncountered(XsltMessageEncounteredEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("XsltMessageEncountered", handler);
         } catch (JCNativeException jcne) {

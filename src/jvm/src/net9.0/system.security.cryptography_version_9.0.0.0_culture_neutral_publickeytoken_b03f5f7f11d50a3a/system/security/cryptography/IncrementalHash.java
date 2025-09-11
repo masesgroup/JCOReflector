@@ -157,10 +157,12 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
     
     public byte[] GetCurrentHash() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentHash = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCurrentHash");
+            retObjectGetCurrentHash = classInstance.Invoke("GetCurrentHash");
+            JCObject resultingObjects = (JCObject)retObjectGetCurrentHash;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -169,6 +171,8 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 				resultingArray[indexGetCurrentHash] = (byte)resultingArrayList.get(indexGetCurrentHash);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetCurrentHash != null ? retObjectGetCurrentHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,12 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public byte[] GetHashAndReset() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHashAndReset = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHashAndReset");
+            retObjectGetHashAndReset = classInstance.Invoke("GetHashAndReset");
+            JCObject resultingObjects = (JCObject)retObjectGetHashAndReset;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -188,6 +194,8 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 				resultingArray[indexGetHashAndReset] = (byte)resultingArrayList.get(indexGetHashAndReset);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetHashAndReset != null ? retObjectGetHashAndReset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public IncrementalHash Clone() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new IncrementalHash(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public static IncrementalHash CreateHash(HashAlgorithmName hashAlgorithm) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHash = null;
         try {
-            JCObject objCreateHash = (JCObject)classType.Invoke("CreateHash", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectCreateHash = classType.Invoke("CreateHash", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            JCObject objCreateHash = (JCObject)retObjectCreateHash;
             return new IncrementalHash(objCreateHash);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHash != null ? retObjectCreateHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +233,14 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public static IncrementalHash CreateHMAC(HashAlgorithmName hashAlgorithm, byte[] key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHMAC = null;
         try {
-            JCObject objCreateHMAC = (JCObject)classType.Invoke("CreateHMAC", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key);
+            retObjectCreateHMAC = classType.Invoke("CreateHMAC", hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance(), key);
+            JCObject objCreateHMAC = (JCObject)retObjectCreateHMAC;
             return new IncrementalHash(objCreateHMAC);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHMAC != null ? retObjectCreateHMAC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +248,14 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public static IncrementalHash CreateHMAC(HashAlgorithmName dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHMAC = null;
         try {
-            JCObject objCreateHMAC = (JCObject)classType.Invoke("CreateHMAC", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectCreateHMAC = classType.Invoke("CreateHMAC", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            JCObject objCreateHMAC = (JCObject)retObjectCreateHMAC;
             return new IncrementalHash(objCreateHMAC);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHMAC != null ? retObjectCreateHMAC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +263,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public void AppendData(byte[] data, int offset, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendData", data, offset, count);
         } catch (JCNativeException jcne) {
@@ -249,7 +273,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public void AppendData(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendData", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
@@ -259,7 +283,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public void AppendData(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendData", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -269,7 +293,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public void AppendData(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendData", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -279,7 +303,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -290,7 +314,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -306,9 +330,13 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
     
     public int getHashLengthInBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashLengthInBytes = null;
         try {
-            return (int)classInstance.Get("HashLengthInBytes");
+            retObjectHashLengthInBytes = classInstance.Get("HashLengthInBytes");
+            return (int)retObjectHashLengthInBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHashLengthInBytes != null ? retObjectHashLengthInBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +344,14 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
 
     public HashAlgorithmName getAlgorithmName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlgorithmName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlgorithmName");
+            retObjectAlgorithmName = classInstance.Get("AlgorithmName");
+            JCObject val = (JCObject)retObjectAlgorithmName;
             return new HashAlgorithmName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlgorithmName != null ? retObjectAlgorithmName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

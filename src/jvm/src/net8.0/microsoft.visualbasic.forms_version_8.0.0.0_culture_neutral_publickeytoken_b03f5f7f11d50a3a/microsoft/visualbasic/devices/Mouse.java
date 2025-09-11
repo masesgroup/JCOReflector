@@ -165,9 +165,13 @@ public class Mouse extends NetObject  {
     
     public boolean getButtonsSwapped() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonsSwapped = null;
         try {
-            return (boolean)classInstance.Get("ButtonsSwapped");
+            retObjectButtonsSwapped = classInstance.Get("ButtonsSwapped");
+            return (boolean)retObjectButtonsSwapped;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectButtonsSwapped != null ? retObjectButtonsSwapped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class Mouse extends NetObject  {
 
     public boolean getWheelExists() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWheelExists = null;
         try {
-            return (boolean)classInstance.Get("WheelExists");
+            retObjectWheelExists = classInstance.Get("WheelExists");
+            return (boolean)retObjectWheelExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWheelExists != null ? retObjectWheelExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class Mouse extends NetObject  {
 
     public int getWheelScrollLines() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWheelScrollLines = null;
         try {
-            return (int)classInstance.Get("WheelScrollLines");
+            retObjectWheelScrollLines = classInstance.Get("WheelScrollLines");
+            return (int)retObjectWheelScrollLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWheelScrollLines != null ? retObjectWheelScrollLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

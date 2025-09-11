@@ -156,7 +156,7 @@ public class SystemCommands extends NetObject  {
     
     public static void CloseWindow(Window window) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CloseWindow", window == null ? null : window.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class SystemCommands extends NetObject  {
 
     public static void MaximizeWindow(Window window) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MaximizeWindow", window == null ? null : window.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class SystemCommands extends NetObject  {
 
     public static void MinimizeWindow(Window window) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("MinimizeWindow", window == null ? null : window.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class SystemCommands extends NetObject  {
 
     public static void RestoreWindow(Window window) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RestoreWindow", window == null ? null : window.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class SystemCommands extends NetObject  {
 
     public static void ShowSystemMenu(Window window, Point screenLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ShowSystemMenu", window == null ? null : window.getJCOInstance(), screenLocation == null ? null : screenLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +210,14 @@ public class SystemCommands extends NetObject  {
     
     public static RoutedCommand getCloseWindowCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCloseWindowCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("CloseWindowCommand");
+            retObjectCloseWindowCommand = classType.Get("CloseWindowCommand");
+            JCObject val = (JCObject)retObjectCloseWindowCommand;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloseWindowCommand != null ? retObjectCloseWindowCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +225,7 @@ public class SystemCommands extends NetObject  {
 
     public static void setCloseWindowCommand(RoutedCommand CloseWindowCommand) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("CloseWindowCommand", CloseWindowCommand == null ? null : CloseWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +235,14 @@ public class SystemCommands extends NetObject  {
 
     public static RoutedCommand getMaximizeWindowCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizeWindowCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximizeWindowCommand");
+            retObjectMaximizeWindowCommand = classType.Get("MaximizeWindowCommand");
+            JCObject val = (JCObject)retObjectMaximizeWindowCommand;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximizeWindowCommand != null ? retObjectMaximizeWindowCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +250,7 @@ public class SystemCommands extends NetObject  {
 
     public static void setMaximizeWindowCommand(RoutedCommand MaximizeWindowCommand) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MaximizeWindowCommand", MaximizeWindowCommand == null ? null : MaximizeWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -252,10 +260,14 @@ public class SystemCommands extends NetObject  {
 
     public static RoutedCommand getMinimizeWindowCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizeWindowCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizeWindowCommand");
+            retObjectMinimizeWindowCommand = classType.Get("MinimizeWindowCommand");
+            JCObject val = (JCObject)retObjectMinimizeWindowCommand;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizeWindowCommand != null ? retObjectMinimizeWindowCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +275,7 @@ public class SystemCommands extends NetObject  {
 
     public static void setMinimizeWindowCommand(RoutedCommand MinimizeWindowCommand) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MinimizeWindowCommand", MinimizeWindowCommand == null ? null : MinimizeWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,10 +285,14 @@ public class SystemCommands extends NetObject  {
 
     public static RoutedCommand getRestoreWindowCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRestoreWindowCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("RestoreWindowCommand");
+            retObjectRestoreWindowCommand = classType.Get("RestoreWindowCommand");
+            JCObject val = (JCObject)retObjectRestoreWindowCommand;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreWindowCommand != null ? retObjectRestoreWindowCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +300,7 @@ public class SystemCommands extends NetObject  {
 
     public static void setRestoreWindowCommand(RoutedCommand RestoreWindowCommand) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("RestoreWindowCommand", RestoreWindowCommand == null ? null : RestoreWindowCommand.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +310,14 @@ public class SystemCommands extends NetObject  {
 
     public static RoutedCommand getShowSystemMenuCommand() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShowSystemMenuCommand = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShowSystemMenuCommand");
+            retObjectShowSystemMenuCommand = classType.Get("ShowSystemMenuCommand");
+            JCObject val = (JCObject)retObjectShowSystemMenuCommand;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowSystemMenuCommand != null ? retObjectShowSystemMenuCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +325,7 @@ public class SystemCommands extends NetObject  {
 
     public static void setShowSystemMenuCommand(RoutedCommand ShowSystemMenuCommand) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("ShowSystemMenuCommand", ShowSystemMenuCommand == null ? null : ShowSystemMenuCommand.getJCOInstance());
         } catch (JCNativeException jcne) {

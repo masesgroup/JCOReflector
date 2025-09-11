@@ -166,10 +166,14 @@ public class PersonalizationStateQuery extends NetObject  {
     
     public DateTime getUserInactiveSinceDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserInactiveSinceDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserInactiveSinceDate");
+            retObjectUserInactiveSinceDate = classInstance.Get("UserInactiveSinceDate");
+            JCObject val = (JCObject)retObjectUserInactiveSinceDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserInactiveSinceDate != null ? retObjectUserInactiveSinceDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class PersonalizationStateQuery extends NetObject  {
 
     public void setUserInactiveSinceDate(DateTime UserInactiveSinceDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserInactiveSinceDate", UserInactiveSinceDate == null ? null : UserInactiveSinceDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class PersonalizationStateQuery extends NetObject  {
 
     public java.lang.String getPathToMatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathToMatch = null;
         try {
-            return (java.lang.String)classInstance.Get("PathToMatch");
+            retObjectPathToMatch = classInstance.Get("PathToMatch");
+            return (java.lang.String)retObjectPathToMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPathToMatch != null ? retObjectPathToMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class PersonalizationStateQuery extends NetObject  {
 
     public void setPathToMatch(java.lang.String PathToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathToMatch", PathToMatch);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class PersonalizationStateQuery extends NetObject  {
 
     public java.lang.String getUsernameToMatch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsernameToMatch = null;
         try {
-            return (java.lang.String)classInstance.Get("UsernameToMatch");
+            retObjectUsernameToMatch = classInstance.Get("UsernameToMatch");
+            return (java.lang.String)retObjectUsernameToMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUsernameToMatch != null ? retObjectUsernameToMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class PersonalizationStateQuery extends NetObject  {
 
     public void setUsernameToMatch(java.lang.String UsernameToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsernameToMatch", UsernameToMatch);
         } catch (JCNativeException jcne) {

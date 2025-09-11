@@ -171,9 +171,13 @@ public class SqlDataSourceStatusEventArgs extends EventArgs  {
     
     public boolean getExceptionHandled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionHandled = null;
         try {
-            return (boolean)classInstance.Get("ExceptionHandled");
+            retObjectExceptionHandled = classInstance.Get("ExceptionHandled");
+            return (boolean)retObjectExceptionHandled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExceptionHandled != null ? retObjectExceptionHandled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class SqlDataSourceStatusEventArgs extends EventArgs  {
 
     public void setExceptionHandled(boolean ExceptionHandled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionHandled", ExceptionHandled);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class SqlDataSourceStatusEventArgs extends EventArgs  {
 
     public int getAffectedRows() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAffectedRows = null;
         try {
-            return (int)classInstance.Get("AffectedRows");
+            retObjectAffectedRows = classInstance.Get("AffectedRows");
+            return (int)retObjectAffectedRows;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAffectedRows != null ? retObjectAffectedRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class SqlDataSourceStatusEventArgs extends EventArgs  {
 
     public DbCommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new DbCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class SqlDataSourceStatusEventArgs extends EventArgs  {
 
     public NetException getException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

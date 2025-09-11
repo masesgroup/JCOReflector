@@ -167,10 +167,14 @@ public class WindowsFormsDesignerOptionService extends DesignerOptionService  {
     
     public DesignerOptions getCompatibilityOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompatibilityOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompatibilityOptions");
+            retObjectCompatibilityOptions = classInstance.Get("CompatibilityOptions");
+            JCObject val = (JCObject)retObjectCompatibilityOptions;
             return new DesignerOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompatibilityOptions != null ? retObjectCompatibilityOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

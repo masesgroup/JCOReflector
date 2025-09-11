@@ -167,10 +167,14 @@ public class ConnectionStringsSection extends ConfigurationSection  {
     
     public ConnectionStringSettingsCollection getConnectionStrings() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionStrings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionStrings");
+            retObjectConnectionStrings = classInstance.Get("ConnectionStrings");
+            JCObject val = (JCObject)retObjectConnectionStrings;
             return new ConnectionStringSettingsCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionStrings != null ? retObjectConnectionStrings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -148,10 +148,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
     
     public ITextRangeProvider RangeFromChild(IRawElementProviderSimple childElement) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRangeFromChild = null;
         try {
-            JCObject objRangeFromChild = (JCObject)classInstance.Invoke("RangeFromChild", childElement == null ? null : childElement.getJCOInstance());
+            retObjectRangeFromChild = classInstance.Invoke("RangeFromChild", childElement == null ? null : childElement.getJCOInstance());
+            JCObject objRangeFromChild = (JCObject)retObjectRangeFromChild;
             return new ITextRangeProviderImplementation(objRangeFromChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRangeFromChild != null ? retObjectRangeFromChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     public ITextRangeProvider RangeFromPoint(Point screenLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRangeFromPoint = null;
         try {
-            JCObject objRangeFromPoint = (JCObject)classInstance.Invoke("RangeFromPoint", screenLocation == null ? null : screenLocation.getJCOInstance());
+            retObjectRangeFromPoint = classInstance.Invoke("RangeFromPoint", screenLocation == null ? null : screenLocation.getJCOInstance());
+            JCObject objRangeFromPoint = (JCObject)retObjectRangeFromPoint;
             return new ITextRangeProviderImplementation(objRangeFromPoint);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRangeFromPoint != null ? retObjectRangeFromPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,16 +178,20 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     public ITextRangeProvider[] GetSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelection = null;
         try {
             ArrayList<ITextRangeProvider> resultingArrayList = new ArrayList<ITextRangeProvider>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSelection");
+            retObjectGetSelection = classInstance.Invoke("GetSelection");
+            JCObject resultingObjects = (JCObject)retObjectGetSelection;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITextRangeProviderImplementation(resultingObject));
             }
             ITextRangeProvider[] resultingArray = new ITextRangeProvider[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelection != null ? retObjectGetSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,16 +199,20 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     public ITextRangeProvider[] GetVisibleRanges() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVisibleRanges = null;
         try {
             ArrayList<ITextRangeProvider> resultingArrayList = new ArrayList<ITextRangeProvider>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVisibleRanges");
+            retObjectGetVisibleRanges = classInstance.Invoke("GetVisibleRanges");
+            JCObject resultingObjects = (JCObject)retObjectGetVisibleRanges;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITextRangeProviderImplementation(resultingObject));
             }
             ITextRangeProvider[] resultingArray = new ITextRangeProvider[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVisibleRanges != null ? retObjectGetVisibleRanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
     
     public ITextRangeProvider getDocumentRange() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocumentRange = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DocumentRange");
+            retObjectDocumentRange = classInstance.Get("DocumentRange");
+            JCObject val = (JCObject)retObjectDocumentRange;
             return new ITextRangeProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentRange != null ? retObjectDocumentRange.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
 
     public SupportedTextSelection getSupportedTextSelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportedTextSelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportedTextSelection");
+            retObjectSupportedTextSelection = classInstance.Get("SupportedTextSelection");
+            JCObject val = (JCObject)retObjectSupportedTextSelection;
             return new SupportedTextSelection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportedTextSelection != null ? retObjectSupportedTextSelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

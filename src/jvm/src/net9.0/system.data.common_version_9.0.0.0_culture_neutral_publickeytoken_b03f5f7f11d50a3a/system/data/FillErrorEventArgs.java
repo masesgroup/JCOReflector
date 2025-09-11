@@ -171,9 +171,13 @@ public class FillErrorEventArgs extends EventArgs  {
     
     public boolean getContinue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinue = null;
         try {
-            return (boolean)classInstance.Get("Continue");
+            retObjectContinue = classInstance.Get("Continue");
+            return (boolean)retObjectContinue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinue != null ? retObjectContinue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class FillErrorEventArgs extends EventArgs  {
 
     public void setContinue(boolean Continue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Continue", Continue);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class FillErrorEventArgs extends EventArgs  {
 
     public DataTable getDataTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataTable");
+            retObjectDataTable = classInstance.Get("DataTable");
+            JCObject val = (JCObject)retObjectDataTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataTable != null ? retObjectDataTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class FillErrorEventArgs extends EventArgs  {
 
     public NetException getErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrors = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Errors");
+            retObjectErrors = classInstance.Get("Errors");
+            JCObject val = (JCObject)retObjectErrors;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrors != null ? retObjectErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class FillErrorEventArgs extends EventArgs  {
 
     public void setErrors(NetException Errors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Errors", Errors == null ? null : Errors.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,16 +235,20 @@ public class FillErrorEventArgs extends EventArgs  {
 
     public final NetObject[] getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject resultingObjects = (JCObject)retObjectValues;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

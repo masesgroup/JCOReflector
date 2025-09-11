@@ -162,9 +162,13 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
     
     public boolean Fallback(byte[] bytesUnknown, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.text.DecoderFallbackException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallback = null;
         try {
-            return (boolean)classInstance.Invoke("Fallback", bytesUnknown, index);
+            retObjectFallback = classInstance.Invoke("Fallback", bytesUnknown, index);
+            return (boolean)retObjectFallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFallback != null ? retObjectFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
 
     public boolean Fallback(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException, system.text.DecoderFallbackException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallback = null;
         try {
-            return (boolean)classInstance.Invoke("Fallback", dupParam0.getJCRefOut(), dupParam1);
+            retObjectFallback = classInstance.Invoke("Fallback", dupParam0.getJCRefOut(), dupParam1);
+            return (boolean)retObjectFallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFallback != null ? retObjectFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
 
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMovePrevious = null;
         try {
-            return (boolean)classInstance.Invoke("MovePrevious");
+            retObjectMovePrevious = classInstance.Invoke("MovePrevious");
+            return (boolean)retObjectMovePrevious;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMovePrevious != null ? retObjectMovePrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
 
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextChar = null;
         try {
-            return (char)classInstance.Invoke("GetNextChar");
+            retObjectGetNextChar = classInstance.Invoke("GetNextChar");
+            return (char)retObjectGetNextChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetNextChar != null ? retObjectGetNextChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

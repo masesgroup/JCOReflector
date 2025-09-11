@@ -148,10 +148,14 @@ public class IApplicationTrustManagerImplementation extends NetObject implements
     
     public ApplicationTrust DetermineApplicationTrust(ActivationContext activationContext, TrustManagerContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDetermineApplicationTrust = null;
         try {
-            JCObject objDetermineApplicationTrust = (JCObject)classInstance.Invoke("DetermineApplicationTrust", activationContext == null ? null : activationContext.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            retObjectDetermineApplicationTrust = classInstance.Invoke("DetermineApplicationTrust", activationContext == null ? null : activationContext.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject objDetermineApplicationTrust = (JCObject)retObjectDetermineApplicationTrust;
             return new ApplicationTrust(objDetermineApplicationTrust);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDetermineApplicationTrust != null ? retObjectDetermineApplicationTrust.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,10 +163,14 @@ public class IApplicationTrustManagerImplementation extends NetObject implements
 
     public SecurityElement ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            JCObject objToXml = (JCObject)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            JCObject objToXml = (JCObject)retObjectToXml;
             return new SecurityElement(objToXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +178,7 @@ public class IApplicationTrustManagerImplementation extends NetObject implements
 
     public void FromXml(SecurityElement e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {

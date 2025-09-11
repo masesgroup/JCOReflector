@@ -168,9 +168,13 @@ public class SGen extends ToolTaskExtension  {
     
     public boolean getDelaySign() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelaySign = null;
         try {
-            return (boolean)classInstance.Get("DelaySign");
+            retObjectDelaySign = classInstance.Get("DelaySign");
+            return (boolean)retObjectDelaySign;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDelaySign != null ? retObjectDelaySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setDelaySign(boolean DelaySign) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelaySign", DelaySign);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class SGen extends ToolTaskExtension  {
 
     public boolean getShouldGenerateSerializer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldGenerateSerializer = null;
         try {
-            return (boolean)classInstance.Get("ShouldGenerateSerializer");
+            retObjectShouldGenerateSerializer = classInstance.Get("ShouldGenerateSerializer");
+            return (boolean)retObjectShouldGenerateSerializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShouldGenerateSerializer != null ? retObjectShouldGenerateSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setShouldGenerateSerializer(boolean ShouldGenerateSerializer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShouldGenerateSerializer", ShouldGenerateSerializer);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class SGen extends ToolTaskExtension  {
 
     public boolean getUseProxyTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseProxyTypes = null;
         try {
-            return (boolean)classInstance.Get("UseProxyTypes");
+            retObjectUseProxyTypes = classInstance.Get("UseProxyTypes");
+            return (boolean)retObjectUseProxyTypes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseProxyTypes != null ? retObjectUseProxyTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setUseProxyTypes(boolean UseProxyTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseProxyTypes", UseProxyTypes);
         } catch (JCNativeException jcne) {
@@ -228,16 +240,20 @@ public class SGen extends ToolTaskExtension  {
 
     public final ITaskItem[] getSerializationAssembly() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializationAssembly = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SerializationAssembly");
+            retObjectSerializationAssembly = classInstance.Get("SerializationAssembly");
+            JCObject resultingObjects = (JCObject)retObjectSerializationAssembly;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSerializationAssembly != null ? retObjectSerializationAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +261,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setSerializationAssembly(ITaskItem[] SerializationAssembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SerializationAssembly", toObjectFromArray(SerializationAssembly));
         } catch (JCNativeException jcne) {
@@ -255,9 +271,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getBuildAssemblyName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("BuildAssemblyName");
+            retObjectBuildAssemblyName = classInstance.Get("BuildAssemblyName");
+            return (java.lang.String)retObjectBuildAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBuildAssemblyName != null ? retObjectBuildAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +285,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setBuildAssemblyName(java.lang.String BuildAssemblyName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildAssemblyName", BuildAssemblyName);
         } catch (JCNativeException jcne) {
@@ -275,9 +295,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getBuildAssemblyPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildAssemblyPath = null;
         try {
-            return (java.lang.String)classInstance.Get("BuildAssemblyPath");
+            retObjectBuildAssemblyPath = classInstance.Get("BuildAssemblyPath");
+            return (java.lang.String)retObjectBuildAssemblyPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBuildAssemblyPath != null ? retObjectBuildAssemblyPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +309,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setBuildAssemblyPath(java.lang.String BuildAssemblyPath) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildAssemblyPath", BuildAssemblyPath);
         } catch (JCNativeException jcne) {
@@ -295,9 +319,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getKeyContainer() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainer = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainer");
+            retObjectKeyContainer = classInstance.Get("KeyContainer");
+            return (java.lang.String)retObjectKeyContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainer != null ? retObjectKeyContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +333,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setKeyContainer(java.lang.String KeyContainer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyContainer", KeyContainer);
         } catch (JCNativeException jcne) {
@@ -315,9 +343,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getKeyFile() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyFile = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyFile");
+            retObjectKeyFile = classInstance.Get("KeyFile");
+            return (java.lang.String)retObjectKeyFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyFile != null ? retObjectKeyFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,7 +357,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setKeyFile(java.lang.String KeyFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyFile", KeyFile);
         } catch (JCNativeException jcne) {
@@ -335,9 +367,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getPlatform() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlatform = null;
         try {
-            return (java.lang.String)classInstance.Get("Platform");
+            retObjectPlatform = classInstance.Get("Platform");
+            return (java.lang.String)retObjectPlatform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPlatform != null ? retObjectPlatform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +381,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setPlatform(java.lang.String Platform) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Platform", Platform);
         } catch (JCNativeException jcne) {
@@ -355,9 +391,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getSdkToolsPath() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSdkToolsPath = null;
         try {
-            return (java.lang.String)classInstance.Get("SdkToolsPath");
+            retObjectSdkToolsPath = classInstance.Get("SdkToolsPath");
+            return (java.lang.String)retObjectSdkToolsPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSdkToolsPath != null ? retObjectSdkToolsPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -365,7 +405,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setSdkToolsPath(java.lang.String SdkToolsPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SdkToolsPath", SdkToolsPath);
         } catch (JCNativeException jcne) {
@@ -375,9 +415,13 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String getSerializationAssemblyName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSerializationAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("SerializationAssemblyName");
+            retObjectSerializationAssemblyName = classInstance.Get("SerializationAssemblyName");
+            return (java.lang.String)retObjectSerializationAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSerializationAssemblyName != null ? retObjectSerializationAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +429,12 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String[] getReferences() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReferences = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("References");
+            retObjectReferences = classInstance.Get("References");
+            JCObject resultingObjects = (JCObject)retObjectReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -397,6 +443,8 @@ public class SGen extends ToolTaskExtension  {
 				resultingArray[indexReferences] = (java.lang.String)resultingArrayList.get(indexReferences);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectReferences != null ? retObjectReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +452,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setReferences(java.lang.String[] References) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("References", References);
         } catch (JCNativeException jcne) {
@@ -414,10 +462,12 @@ public class SGen extends ToolTaskExtension  {
 
     public java.lang.String[] getTypes() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Types");
+            retObjectTypes = classInstance.Get("Types");
+            JCObject resultingObjects = (JCObject)retObjectTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -426,6 +476,8 @@ public class SGen extends ToolTaskExtension  {
 				resultingArray[indexTypes] = (java.lang.String)resultingArrayList.get(indexTypes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTypes != null ? retObjectTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,7 +485,7 @@ public class SGen extends ToolTaskExtension  {
 
     public void setTypes(java.lang.String[] Types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Types", Types);
         } catch (JCNativeException jcne) {

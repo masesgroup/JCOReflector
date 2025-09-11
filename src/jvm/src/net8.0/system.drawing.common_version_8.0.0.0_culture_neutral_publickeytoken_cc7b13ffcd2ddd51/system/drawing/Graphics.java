@@ -193,9 +193,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
     
     public boolean IsVisible(int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y, width, height);
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y, width, height);
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(int x, int y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y);
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x, y);
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +221,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +235,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Single x, Single y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +249,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Point point) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,9 +263,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(PointF point) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +277,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(Rectangle rect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +291,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean IsVisible(RectangleF rect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisible = null;
         try {
-            return (boolean)classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            retObjectIsVisible = classInstance.Invoke("IsVisible", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectIsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsVisible != null ? retObjectIsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +305,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Color GetNearestColor(Color color) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNearestColor = null;
         try {
-            JCObject objGetNearestColor = (JCObject)classInstance.Invoke("GetNearestColor", color == null ? null : color.getJCOInstance());
+            retObjectGetNearestColor = classInstance.Invoke("GetNearestColor", color == null ? null : color.getJCOInstance());
+            JCObject objGetNearestColor = (JCObject)retObjectGetNearestColor;
             return new Color(objGetNearestColor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNearestColor != null ? retObjectGetNearestColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,10 +320,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public GraphicsContainer BeginContainer() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginContainer = null;
         try {
-            JCObject objBeginContainer = (JCObject)classInstance.Invoke("BeginContainer");
+            retObjectBeginContainer = classInstance.Invoke("BeginContainer");
+            JCObject objBeginContainer = (JCObject)retObjectBeginContainer;
             return new GraphicsContainer(objBeginContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginContainer != null ? retObjectBeginContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,10 +335,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public GraphicsContainer BeginContainer(Rectangle dstrect, Rectangle srcrect, GraphicsUnit unit) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginContainer = null;
         try {
-            JCObject objBeginContainer = (JCObject)classInstance.Invoke("BeginContainer", dstrect == null ? null : dstrect.getJCOInstance(), srcrect == null ? null : srcrect.getJCOInstance(), unit == null ? null : unit.getJCOInstance());
+            retObjectBeginContainer = classInstance.Invoke("BeginContainer", dstrect == null ? null : dstrect.getJCOInstance(), srcrect == null ? null : srcrect.getJCOInstance(), unit == null ? null : unit.getJCOInstance());
+            JCObject objBeginContainer = (JCObject)retObjectBeginContainer;
             return new GraphicsContainer(objBeginContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginContainer != null ? retObjectBeginContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,10 +350,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public GraphicsContainer BeginContainer(RectangleF dstrect, RectangleF srcrect, GraphicsUnit unit) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginContainer = null;
         try {
-            JCObject objBeginContainer = (JCObject)classInstance.Invoke("BeginContainer", dstrect == null ? null : dstrect.getJCOInstance(), srcrect == null ? null : srcrect.getJCOInstance(), unit == null ? null : unit.getJCOInstance());
+            retObjectBeginContainer = classInstance.Invoke("BeginContainer", dstrect == null ? null : dstrect.getJCOInstance(), srcrect == null ? null : srcrect.getJCOInstance(), unit == null ? null : unit.getJCOInstance());
+            JCObject objBeginContainer = (JCObject)retObjectBeginContainer;
             return new GraphicsContainer(objBeginContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginContainer != null ? retObjectBeginContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +365,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public GraphicsState Save() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSave = null;
         try {
-            JCObject objSave = (JCObject)classInstance.Invoke("Save");
+            retObjectSave = classInstance.Invoke("Save");
+            JCObject objSave = (JCObject)retObjectSave;
             return new GraphicsState(objSave);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSave != null ? retObjectSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +380,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public static Graphics FromImage(Image image) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromImage = null;
         try {
-            JCObject objFromImage = (JCObject)classType.Invoke("FromImage", image == null ? null : image.getJCOInstance());
+            retObjectFromImage = classType.Invoke("FromImage", image == null ? null : image.getJCOInstance());
+            JCObject objFromImage = (JCObject)retObjectFromImage;
             return new Graphics(objFromImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromImage != null ? retObjectFromImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,16 +395,20 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Region[] MeasureCharacterRanges(java.lang.String text, Font font, RectangleF layoutRect, StringFormat stringFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureCharacterRanges = null;
         try {
             ArrayList<Region> resultingArrayList = new ArrayList<Region>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("MeasureCharacterRanges", text, font == null ? null : font.getJCOInstance(), layoutRect == null ? null : layoutRect.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            retObjectMeasureCharacterRanges = classInstance.Invoke("MeasureCharacterRanges", text, font == null ? null : font.getJCOInstance(), layoutRect == null ? null : layoutRect.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectMeasureCharacterRanges;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Region(resultingObject));
             }
             Region[] resultingArray = new Region[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureCharacterRanges != null ? retObjectMeasureCharacterRanges.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,10 +416,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, int width, StringFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), width, format == null ? null : format.getJCOInstance());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), width, format == null ? null : format.getJCOInstance());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +431,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, int width) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), width);
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), width);
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,10 +446,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, PointF origin, StringFormat stringFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), origin == null ? null : origin.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,10 +461,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea, StringFormat stringFormat, JCORefOut<java.util.concurrent.atomic.AtomicInteger> charactersFitted, JCORefOut<java.util.concurrent.atomic.AtomicInteger> linesFilled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance(), charactersFitted.getJCRefOut(), linesFilled.getJCRefOut());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance(), charactersFitted.getJCRefOut(), linesFilled.getJCRefOut());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,10 +476,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea, StringFormat stringFormat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -411,10 +491,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,10 +506,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SizeF MeasureString(java.lang.String text, Font font) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeasureString = null;
         try {
-            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance());
+            retObjectMeasureString = classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance());
+            JCObject objMeasureString = (JCObject)retObjectMeasureString;
             return new SizeF(objMeasureString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMeasureString != null ? retObjectMeasureString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,10 +521,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public NetObject GetContextInfo() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetContextInfo = null;
         try {
-            JCObject objGetContextInfo = (JCObject)classInstance.Invoke("GetContextInfo");
+            retObjectGetContextInfo = classInstance.Invoke("GetContextInfo");
+            JCObject objGetContextInfo = (JCObject)retObjectGetContextInfo;
             return new NetObject(objGetContextInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetContextInfo != null ? retObjectGetContextInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +536,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void AddMetafileComment(byte[] data) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetafileComment", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
@@ -454,7 +546,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void AddMetafileComment(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetafileComment", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -464,7 +556,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void Clear(Color color) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear", color == null ? null : color.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -474,7 +566,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void CopyFromScreen(int sourceX, int sourceY, int destinationX, int destinationY, Size blockRegionSize, CopyPixelOperation copyPixelOperation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromScreen", sourceX, sourceY, destinationX, destinationY, blockRegionSize == null ? null : blockRegionSize.getJCOInstance(), copyPixelOperation == null ? null : copyPixelOperation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -484,7 +576,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void CopyFromScreen(int sourceX, int sourceY, int destinationX, int destinationY, Size blockRegionSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromScreen", sourceX, sourceY, destinationX, destinationY, blockRegionSize == null ? null : blockRegionSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -494,7 +586,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void CopyFromScreen(Point upperLeftSource, Point upperLeftDestination, Size blockRegionSize, CopyPixelOperation copyPixelOperation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromScreen", upperLeftSource == null ? null : upperLeftSource.getJCOInstance(), upperLeftDestination == null ? null : upperLeftDestination.getJCOInstance(), blockRegionSize == null ? null : blockRegionSize.getJCOInstance(), copyPixelOperation == null ? null : copyPixelOperation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -504,7 +596,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void CopyFromScreen(Point upperLeftSource, Point upperLeftDestination, Size blockRegionSize) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromScreen", upperLeftSource == null ? null : upperLeftSource.getJCOInstance(), upperLeftDestination == null ? null : upperLeftDestination.getJCOInstance(), blockRegionSize == null ? null : blockRegionSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -514,7 +606,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -524,7 +616,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawArc(Pen pen, int x, int y, int width, int height, int startAngle, int sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawArc", pen == null ? null : pen.getJCOInstance(), x, y, width, height, startAngle, sweepAngle);
         } catch (JCNativeException jcne) {
@@ -534,7 +626,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawArc(Pen pen, Single x, Single y, Single width, Single height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawArc", pen == null ? null : pen.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -544,7 +636,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawArc(Pen pen, Rectangle rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawArc", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -554,7 +646,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawArc(Pen pen, RectangleF rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawArc", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -564,7 +656,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawBezier(Pen pen, Single x1, Single y1, Single x2, Single y2, Single x3, Single y3, Single x4, Single y4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBezier", pen == null ? null : pen.getJCOInstance(), x1 == null ? null : x1.getJCOInstance(), y1 == null ? null : y1.getJCOInstance(), x2 == null ? null : x2.getJCOInstance(), y2 == null ? null : y2.getJCOInstance(), x3 == null ? null : x3.getJCOInstance(), y3 == null ? null : y3.getJCOInstance(), x4 == null ? null : x4.getJCOInstance(), y4 == null ? null : y4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -574,7 +666,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawBezier(Pen pen, Point pt1, Point pt2, Point pt3, Point pt4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBezier", pen == null ? null : pen.getJCOInstance(), pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance(), pt3 == null ? null : pt3.getJCOInstance(), pt4 == null ? null : pt4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -584,7 +676,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawBezier(Pen pen, PointF pt1, PointF pt2, PointF pt3, PointF pt4) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBezier", pen == null ? null : pen.getJCOInstance(), pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance(), pt3 == null ? null : pt3.getJCOInstance(), pt4 == null ? null : pt4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -594,7 +686,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawBeziers(Pen pen, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBeziers", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -604,7 +696,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawBeziers(Pen pen, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawBeziers", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -614,7 +706,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCachedBitmap(CachedBitmap cachedBitmap, int x, int y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCachedBitmap", cachedBitmap == null ? null : cachedBitmap.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -624,7 +716,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawClosedCurve(Pen pen, Point[] points, Single tension, FillMode fillmode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawClosedCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), tension == null ? null : tension.getJCOInstance(), fillmode == null ? null : fillmode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -634,7 +726,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawClosedCurve(Pen pen, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawClosedCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -644,7 +736,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawClosedCurve(Pen pen, PointF[] points, Single tension, FillMode fillmode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawClosedCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), tension == null ? null : tension.getJCOInstance(), fillmode == null ? null : fillmode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -654,7 +746,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawClosedCurve(Pen pen, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawClosedCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -664,7 +756,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, Point[] points, int offset, int numberOfSegments, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), offset, numberOfSegments, tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -674,7 +766,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, Point[] points, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -684,7 +776,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -694,7 +786,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, PointF[] points, int offset, int numberOfSegments, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), offset, numberOfSegments, tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -704,7 +796,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, PointF[] points, int offset, int numberOfSegments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), offset, numberOfSegments);
         } catch (JCNativeException jcne) {
@@ -714,7 +806,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, PointF[] points, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -724,7 +816,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawCurve(Pen pen, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawCurve", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -734,7 +826,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawEllipse(Pen pen, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", pen == null ? null : pen.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -744,7 +836,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawEllipse(Pen pen, Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", pen == null ? null : pen.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -754,7 +846,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawEllipse(Pen pen, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -764,7 +856,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawEllipse(Pen pen, RectangleF rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawEllipse", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -774,7 +866,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawIcon(Icon icon, int x, int y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawIcon", icon == null ? null : icon.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -784,7 +876,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawIcon(Icon icon, Rectangle targetRect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawIcon", icon == null ? null : icon.getJCOInstance(), targetRect == null ? null : targetRect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -794,7 +886,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawIconUnstretched(Icon icon, Rectangle targetRect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawIconUnstretched", icon == null ? null : icon.getJCOInstance(), targetRect == null ? null : targetRect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -804,7 +896,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -814,7 +906,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, int x, int y, Rectangle srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x, y, srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -824,7 +916,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, int x, int y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -834,7 +926,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -844,7 +936,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Single x, Single y, RectangleF srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -854,7 +946,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Single x, Single y) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -864,7 +956,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Point point) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -874,7 +966,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Point[] destPoints, Rectangle srcRect, GraphicsUnit srcUnit, ImageAttributes imageAttr) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance(), imageAttr == null ? null : imageAttr.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -884,7 +976,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Point[] destPoints, Rectangle srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -894,7 +986,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Point[] destPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints));
         } catch (JCNativeException jcne) {
@@ -904,7 +996,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, PointF point) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -914,7 +1006,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, PointF[] destPoints, RectangleF srcRect, GraphicsUnit srcUnit, ImageAttributes imageAttr) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance(), imageAttr == null ? null : imageAttr.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -924,7 +1016,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, PointF[] destPoints, RectangleF srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -934,7 +1026,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, PointF[] destPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), toObjectFromArray(destPoints));
         } catch (JCNativeException jcne) {
@@ -944,7 +1036,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle destRect, int srcX, int srcY, int srcWidth, int srcHeight, GraphicsUnit srcUnit, ImageAttributes imageAttr) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcX, srcY, srcWidth, srcHeight, srcUnit == null ? null : srcUnit.getJCOInstance(), imageAttr == null ? null : imageAttr.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -954,7 +1046,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle destRect, int srcX, int srcY, int srcWidth, int srcHeight, GraphicsUnit srcUnit) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcX, srcY, srcWidth, srcHeight, srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -964,7 +1056,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle destRect, Single srcX, Single srcY, Single srcWidth, Single srcHeight, GraphicsUnit srcUnit, ImageAttributes imageAttrs) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcX == null ? null : srcX.getJCOInstance(), srcY == null ? null : srcY.getJCOInstance(), srcWidth == null ? null : srcWidth.getJCOInstance(), srcHeight == null ? null : srcHeight.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance(), imageAttrs == null ? null : imageAttrs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -974,7 +1066,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle destRect, Single srcX, Single srcY, Single srcWidth, Single srcHeight, GraphicsUnit srcUnit) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcX == null ? null : srcX.getJCOInstance(), srcY == null ? null : srcY.getJCOInstance(), srcWidth == null ? null : srcWidth.getJCOInstance(), srcHeight == null ? null : srcHeight.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -984,7 +1076,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle destRect, Rectangle srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -994,7 +1086,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1004,7 +1096,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, RectangleF destRect, RectangleF srcRect, GraphicsUnit srcUnit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), destRect == null ? null : destRect.getJCOInstance(), srcRect == null ? null : srcRect.getJCOInstance(), srcUnit == null ? null : srcUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1014,7 +1106,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImage(Image image, RectangleF rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImage", image == null ? null : image.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1024,7 +1116,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImageUnscaled(Image image, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageUnscaled", image == null ? null : image.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -1034,7 +1126,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImageUnscaled(Image image, int x, int y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageUnscaled", image == null ? null : image.getJCOInstance(), x, y);
         } catch (JCNativeException jcne) {
@@ -1044,7 +1136,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImageUnscaled(Image image, Point point) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageUnscaled", image == null ? null : image.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1054,7 +1146,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImageUnscaled(Image image, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageUnscaled", image == null ? null : image.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1064,7 +1156,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawImageUnscaledAndClipped(Image image, Rectangle rect) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageUnscaledAndClipped", image == null ? null : image.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1074,7 +1166,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLine(Pen pen, int x1, int y1, int x2, int y2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), x1, y1, x2, y2);
         } catch (JCNativeException jcne) {
@@ -1084,7 +1176,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLine(Pen pen, Single x1, Single y1, Single x2, Single y2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), x1 == null ? null : x1.getJCOInstance(), y1 == null ? null : y1.getJCOInstance(), x2 == null ? null : x2.getJCOInstance(), y2 == null ? null : y2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1094,7 +1186,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLine(Pen pen, Point pt1, Point pt2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1104,7 +1196,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLine(Pen pen, PointF pt1, PointF pt2) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLine", pen == null ? null : pen.getJCOInstance(), pt1 == null ? null : pt1.getJCOInstance(), pt2 == null ? null : pt2.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1114,7 +1206,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLines(Pen pen, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLines", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1124,7 +1216,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawLines(Pen pen, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLines", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1134,7 +1226,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPath(Pen pen, GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPath", pen == null ? null : pen.getJCOInstance(), path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1144,7 +1236,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPie(Pen pen, int x, int y, int width, int height, int startAngle, int sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPie", pen == null ? null : pen.getJCOInstance(), x, y, width, height, startAngle, sweepAngle);
         } catch (JCNativeException jcne) {
@@ -1154,7 +1246,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPie(Pen pen, Single x, Single y, Single width, Single height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPie", pen == null ? null : pen.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1164,7 +1256,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPie(Pen pen, Rectangle rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPie", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1174,7 +1266,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPie(Pen pen, RectangleF rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPie", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1184,7 +1276,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPolygon(Pen pen, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPolygon", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1194,7 +1286,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawPolygon(Pen pen, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawPolygon", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1204,7 +1296,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangle(Pen pen, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", pen == null ? null : pen.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -1214,7 +1306,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangle(Pen pen, Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", pen == null ? null : pen.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1224,7 +1316,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangle(Pen pen, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1234,7 +1326,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangle(Pen pen, RectangleF rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangle", pen == null ? null : pen.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1244,7 +1336,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangles(Pen pen, Rectangle[] rects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangles", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -1254,7 +1346,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawRectangles(Pen pen, RectangleF[] rects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawRectangles", pen == null ? null : pen.getJCOInstance(), toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -1264,7 +1356,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, Single x, Single y, StringFormat format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1274,7 +1366,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, Single x, Single y) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1284,7 +1376,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, PointF point, StringFormat format) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), point == null ? null : point.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1294,7 +1386,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, PointF point) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1304,7 +1396,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, RectangleF layoutRectangle, StringFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), layoutRectangle == null ? null : layoutRectangle.getJCOInstance(), format == null ? null : format.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1314,7 +1406,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void DrawString(java.lang.String s, Font font, Brush brush, RectangleF layoutRectangle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawString", s, font == null ? null : font.getJCOInstance(), brush == null ? null : brush.getJCOInstance(), layoutRectangle == null ? null : layoutRectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1324,7 +1416,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void EndContainer(GraphicsContainer container) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndContainer", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1334,7 +1426,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ExcludeClip(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExcludeClip", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1344,7 +1436,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ExcludeClip(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExcludeClip", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1354,7 +1446,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, Point[] points, FillMode fillmode, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillmode == null ? null : fillmode.getJCOInstance(), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1364,7 +1456,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, Point[] points, FillMode fillmode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillmode == null ? null : fillmode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1374,7 +1466,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1384,7 +1476,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, PointF[] points, FillMode fillmode, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillmode == null ? null : fillmode.getJCOInstance(), tension == null ? null : tension.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1394,7 +1486,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, PointF[] points, FillMode fillmode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillmode == null ? null : fillmode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1404,7 +1496,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillClosedCurve(Brush brush, PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillClosedCurve", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1414,7 +1506,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillEllipse(Brush brush, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillEllipse", brush == null ? null : brush.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -1424,7 +1516,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillEllipse(Brush brush, Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillEllipse", brush == null ? null : brush.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1434,7 +1526,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillEllipse(Brush brush, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillEllipse", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1444,7 +1536,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillEllipse(Brush brush, RectangleF rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillEllipse", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1454,7 +1546,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPath(Brush brush, GraphicsPath path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPath", brush == null ? null : brush.getJCOInstance(), path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1464,7 +1556,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPie(Brush brush, int x, int y, int width, int height, int startAngle, int sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPie", brush == null ? null : brush.getJCOInstance(), x, y, width, height, startAngle, sweepAngle);
         } catch (JCNativeException jcne) {
@@ -1474,7 +1566,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPie(Brush brush, Single x, Single y, Single width, Single height, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPie", brush == null ? null : brush.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1484,7 +1576,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPie(Brush brush, Rectangle rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPie", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1494,7 +1586,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPie(Brush brush, RectangleF rect, Single startAngle, Single sweepAngle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPie", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance(), startAngle == null ? null : startAngle.getJCOInstance(), sweepAngle == null ? null : sweepAngle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1504,7 +1596,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPolygon(Brush brush, Point[] points, FillMode fillMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPolygon", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillMode == null ? null : fillMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1514,7 +1606,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPolygon(Brush brush, Point[] points) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPolygon", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1524,7 +1616,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPolygon(Brush brush, PointF[] points, FillMode fillMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPolygon", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points), fillMode == null ? null : fillMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1534,7 +1626,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillPolygon(Brush brush, PointF[] points) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillPolygon", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(points));
         } catch (JCNativeException jcne) {
@@ -1544,7 +1636,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangle(Brush brush, int x, int y, int width, int height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangle", brush == null ? null : brush.getJCOInstance(), x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -1554,7 +1646,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangle(Brush brush, Single x, Single y, Single width, Single height) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangle", brush == null ? null : brush.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), width == null ? null : width.getJCOInstance(), height == null ? null : height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1564,7 +1656,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangle(Brush brush, Rectangle rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangle", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1574,7 +1666,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangle(Brush brush, RectangleF rect) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangle", brush == null ? null : brush.getJCOInstance(), rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1584,7 +1676,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangles(Brush brush, Rectangle[] rects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangles", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -1594,7 +1686,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRectangles(Brush brush, RectangleF[] rects) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRectangles", brush == null ? null : brush.getJCOInstance(), toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
@@ -1604,7 +1696,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void FillRegion(Brush brush, Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FillRegion", brush == null ? null : brush.getJCOInstance(), region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1614,7 +1706,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -1624,7 +1716,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void Flush(FlushIntention intention) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush", intention == null ? null : intention.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1634,7 +1726,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void GetContextInfo(JCORefOut<PointF> offset, JCORefOut<Region> clip) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetContextInfo", offset.getJCRefOut(), clip.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1644,7 +1736,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void GetContextInfo(JCORefOut<PointF> offset) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetContextInfo", offset.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -1654,7 +1746,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void IntersectClip(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IntersectClip", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1664,7 +1756,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void IntersectClip(RectangleF rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IntersectClip", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1674,7 +1766,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void IntersectClip(Region region) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IntersectClip", region == null ? null : region.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1684,7 +1776,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void MultiplyTransform(Matrix matrix, MatrixOrder order) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MultiplyTransform", matrix == null ? null : matrix.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1694,7 +1786,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void MultiplyTransform(Matrix matrix) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MultiplyTransform", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1704,7 +1796,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ReleaseHdc() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHdc");
         } catch (JCNativeException jcne) {
@@ -1714,7 +1806,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ResetClip() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetClip");
         } catch (JCNativeException jcne) {
@@ -1724,7 +1816,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ResetTransform() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetTransform");
         } catch (JCNativeException jcne) {
@@ -1734,7 +1826,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void Restore(GraphicsState gstate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Restore", gstate == null ? null : gstate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1744,7 +1836,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void RotateTransform(Single angle, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateTransform", angle == null ? null : angle.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1754,7 +1846,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void RotateTransform(Single angle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateTransform", angle == null ? null : angle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1764,7 +1856,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ScaleTransform(Single sx, Single sy, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleTransform", sx == null ? null : sx.getJCOInstance(), sy == null ? null : sy.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1774,7 +1866,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void ScaleTransform(Single sx, Single sy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScaleTransform", sx == null ? null : sx.getJCOInstance(), sy == null ? null : sy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1784,7 +1876,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(GraphicsPath path, CombineMode combineMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", path == null ? null : path.getJCOInstance(), combineMode == null ? null : combineMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1794,7 +1886,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(GraphicsPath path) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", path == null ? null : path.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1804,7 +1896,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(Graphics g, CombineMode combineMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", g == null ? null : g.getJCOInstance(), combineMode == null ? null : combineMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1814,7 +1906,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(Graphics g) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", g == null ? null : g.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1824,7 +1916,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(Rectangle rect, CombineMode combineMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", rect == null ? null : rect.getJCOInstance(), combineMode == null ? null : combineMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1834,7 +1926,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(Rectangle rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1844,7 +1936,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(RectangleF rect, CombineMode combineMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", rect == null ? null : rect.getJCOInstance(), combineMode == null ? null : combineMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1854,7 +1946,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(RectangleF rect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1864,7 +1956,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void SetClip(Region region, CombineMode combineMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetClip", region == null ? null : region.getJCOInstance(), combineMode == null ? null : combineMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1874,7 +1966,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformPoints(CoordinateSpace destSpace, CoordinateSpace srcSpace, Point[] pts) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformPoints", destSpace == null ? null : destSpace.getJCOInstance(), srcSpace == null ? null : srcSpace.getJCOInstance(), toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -1884,7 +1976,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformPoints(CoordinateSpace destSpace, CoordinateSpace srcSpace, PointF[] pts) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformPoints", destSpace == null ? null : destSpace.getJCOInstance(), srcSpace == null ? null : srcSpace.getJCOInstance(), toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -1894,7 +1986,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TranslateClip(int dx, int dy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslateClip", dx, dy);
         } catch (JCNativeException jcne) {
@@ -1904,7 +1996,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TranslateClip(Single dx, Single dy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslateClip", dx == null ? null : dx.getJCOInstance(), dy == null ? null : dy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1914,7 +2006,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TranslateTransform(Single dx, Single dy, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslateTransform", dx == null ? null : dx.getJCOInstance(), dy == null ? null : dy.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1924,7 +2016,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void TranslateTransform(Single dx, Single dy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TranslateTransform", dx == null ? null : dx.getJCOInstance(), dy == null ? null : dy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1935,7 +2027,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -1951,9 +2043,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
     
     public boolean getIsClipEmpty() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsClipEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsClipEmpty");
+            retObjectIsClipEmpty = classInstance.Get("IsClipEmpty");
+            return (boolean)retObjectIsClipEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsClipEmpty != null ? retObjectIsClipEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1961,9 +2057,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public boolean getIsVisibleClipEmpty() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVisibleClipEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsVisibleClipEmpty");
+            retObjectIsVisibleClipEmpty = classInstance.Get("IsVisibleClipEmpty");
+            return (boolean)retObjectIsVisibleClipEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsVisibleClipEmpty != null ? retObjectIsVisibleClipEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1971,9 +2071,13 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public int getTextContrast() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextContrast = null;
         try {
-            return (int)classInstance.Get("TextContrast");
+            retObjectTextContrast = classInstance.Get("TextContrast");
+            return (int)retObjectTextContrast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTextContrast != null ? retObjectTextContrast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1981,7 +2085,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setTextContrast(int TextContrast) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextContrast", TextContrast);
         } catch (JCNativeException jcne) {
@@ -1991,10 +2095,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Single getDpiX() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DpiX");
+            retObjectDpiX = classInstance.Get("DpiX");
+            JCObject val = (JCObject)retObjectDpiX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDpiX != null ? retObjectDpiX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2002,10 +2110,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Single getDpiY() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDpiY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DpiY");
+            retObjectDpiY = classInstance.Get("DpiY");
+            JCObject val = (JCObject)retObjectDpiY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDpiY != null ? retObjectDpiY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2013,10 +2125,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Single getPageScale() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageScale = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageScale");
+            retObjectPageScale = classInstance.Get("PageScale");
+            JCObject val = (JCObject)retObjectPageScale;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageScale != null ? retObjectPageScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2024,7 +2140,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setPageScale(Single PageScale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageScale", PageScale == null ? null : PageScale.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2034,10 +2150,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public CompositingMode getCompositingMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositingMode");
+            retObjectCompositingMode = classInstance.Get("CompositingMode");
+            JCObject val = (JCObject)retObjectCompositingMode;
             return new CompositingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositingMode != null ? retObjectCompositingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2045,7 +2165,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setCompositingMode(CompositingMode CompositingMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompositingMode", CompositingMode == null ? null : CompositingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2055,10 +2175,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public CompositingQuality getCompositingQuality() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositingQuality = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompositingQuality");
+            retObjectCompositingQuality = classInstance.Get("CompositingQuality");
+            JCObject val = (JCObject)retObjectCompositingQuality;
             return new CompositingQuality(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompositingQuality != null ? retObjectCompositingQuality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2066,7 +2190,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setCompositingQuality(CompositingQuality CompositingQuality) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompositingQuality", CompositingQuality == null ? null : CompositingQuality.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2076,10 +2200,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public InterpolationMode getInterpolationMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterpolationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InterpolationMode");
+            retObjectInterpolationMode = classInstance.Get("InterpolationMode");
+            JCObject val = (JCObject)retObjectInterpolationMode;
             return new InterpolationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterpolationMode != null ? retObjectInterpolationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2087,7 +2215,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setInterpolationMode(InterpolationMode InterpolationMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterpolationMode", InterpolationMode == null ? null : InterpolationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2097,10 +2225,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Matrix getTransform() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Matrix(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2108,7 +2240,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setTransform(Matrix Transform) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2118,10 +2250,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public PixelOffsetMode getPixelOffsetMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelOffsetMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PixelOffsetMode");
+            retObjectPixelOffsetMode = classInstance.Get("PixelOffsetMode");
+            JCObject val = (JCObject)retObjectPixelOffsetMode;
             return new PixelOffsetMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPixelOffsetMode != null ? retObjectPixelOffsetMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2129,7 +2265,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setPixelOffsetMode(PixelOffsetMode PixelOffsetMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelOffsetMode", PixelOffsetMode == null ? null : PixelOffsetMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2139,10 +2275,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public SmoothingMode getSmoothingMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSmoothingMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SmoothingMode");
+            retObjectSmoothingMode = classInstance.Get("SmoothingMode");
+            JCObject val = (JCObject)retObjectSmoothingMode;
             return new SmoothingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSmoothingMode != null ? retObjectSmoothingMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2150,7 +2290,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setSmoothingMode(SmoothingMode SmoothingMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SmoothingMode", SmoothingMode == null ? null : SmoothingMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2160,10 +2300,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public GraphicsUnit getPageUnit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageUnit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageUnit");
+            retObjectPageUnit = classInstance.Get("PageUnit");
+            JCObject val = (JCObject)retObjectPageUnit;
             return new GraphicsUnit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageUnit != null ? retObjectPageUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2171,7 +2315,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setPageUnit(GraphicsUnit PageUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageUnit", PageUnit == null ? null : PageUnit.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2181,10 +2325,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Point getRenderingOrigin() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenderingOrigin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenderingOrigin");
+            retObjectRenderingOrigin = classInstance.Get("RenderingOrigin");
+            JCObject val = (JCObject)retObjectRenderingOrigin;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenderingOrigin != null ? retObjectRenderingOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2192,7 +2340,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setRenderingOrigin(Point RenderingOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenderingOrigin", RenderingOrigin == null ? null : RenderingOrigin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2202,10 +2350,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF getClipBounds() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClipBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClipBounds");
+            retObjectClipBounds = classInstance.Get("ClipBounds");
+            JCObject val = (JCObject)retObjectClipBounds;
             return new RectangleF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClipBounds != null ? retObjectClipBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2213,10 +2365,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public RectangleF getVisibleClipBounds() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.PlatformNotSupportedException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.InvalidCastException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisibleClipBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VisibleClipBounds");
+            retObjectVisibleClipBounds = classInstance.Get("VisibleClipBounds");
+            JCObject val = (JCObject)retObjectVisibleClipBounds;
             return new RectangleF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVisibleClipBounds != null ? retObjectVisibleClipBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2224,10 +2380,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Region getClip() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clip");
+            retObjectClip = classInstance.Get("Clip");
+            JCObject val = (JCObject)retObjectClip;
             return new Region(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClip != null ? retObjectClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2235,7 +2395,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setClip(Region Clip) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clip", Clip == null ? null : Clip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2245,10 +2405,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public TextRenderingHint getTextRenderingHint() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextRenderingHint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextRenderingHint");
+            retObjectTextRenderingHint = classInstance.Get("TextRenderingHint");
+            JCObject val = (JCObject)retObjectTextRenderingHint;
             return new TextRenderingHint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextRenderingHint != null ? retObjectTextRenderingHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2256,7 +2420,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setTextRenderingHint(TextRenderingHint TextRenderingHint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextRenderingHint", TextRenderingHint == null ? null : TextRenderingHint.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -2266,10 +2430,14 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public Matrix3x2 getTransformElements() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformElements = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransformElements");
+            retObjectTransformElements = classInstance.Get("TransformElements");
+            JCObject val = (JCObject)retObjectTransformElements;
             return new Matrix3x2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformElements != null ? retObjectTransformElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2277,7 +2445,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
 
     public void setTransformElements(Matrix3x2 TransformElements) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransformElements", TransformElements == null ? null : TransformElements.getJCOInstance());
         } catch (JCNativeException jcne) {

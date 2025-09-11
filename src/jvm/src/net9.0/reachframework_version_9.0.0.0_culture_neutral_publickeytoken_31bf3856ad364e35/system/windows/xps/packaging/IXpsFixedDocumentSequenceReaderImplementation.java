@@ -147,10 +147,14 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
     
     public IXpsFixedDocumentReader GetFixedDocument(Uri documentSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFixedDocument = null;
         try {
-            JCObject objGetFixedDocument = (JCObject)classInstance.Invoke("GetFixedDocument", documentSource == null ? null : documentSource.getJCOInstance());
+            retObjectGetFixedDocument = classInstance.Invoke("GetFixedDocument", documentSource == null ? null : documentSource.getJCOInstance());
+            JCObject objGetFixedDocument = (JCObject)retObjectGetFixedDocument;
             return new IXpsFixedDocumentReaderImplementation(objGetFixedDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFixedDocument != null ? retObjectGetFixedDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,10 +166,14 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
     
     public PrintTicket getPrintTicket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrintTicket");
+            retObjectPrintTicket = classInstance.Get("PrintTicket");
+            JCObject val = (JCObject)retObjectPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrintTicket != null ? retObjectPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +181,14 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +196,14 @@ public class IXpsFixedDocumentSequenceReaderImplementation extends NetObject imp
 
     public XpsThumbnail getThumbnail() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThumbnail = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Thumbnail");
+            retObjectThumbnail = classInstance.Get("Thumbnail");
+            JCObject val = (JCObject)retObjectThumbnail;
             return new XpsThumbnail(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThumbnail != null ? retObjectThumbnail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

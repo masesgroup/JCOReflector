@@ -160,9 +160,13 @@ public class TrackingRecord extends NetObject  {
     
     public int getEventOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventOrder = null;
         try {
-            return (int)classInstance.Get("EventOrder");
+            retObjectEventOrder = classInstance.Get("EventOrder");
+            return (int)retObjectEventOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventOrder != null ? retObjectEventOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class TrackingRecord extends NetObject  {
 
     public void setEventOrder(int EventOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventOrder", EventOrder);
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class TrackingRecord extends NetObject  {
 
     public DateTime getEventDateTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventDateTime");
+            retObjectEventDateTime = classInstance.Get("EventDateTime");
+            JCObject val = (JCObject)retObjectEventDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventDateTime != null ? retObjectEventDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class TrackingRecord extends NetObject  {
 
     public void setEventDateTime(DateTime EventDateTime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventDateTime", EventDateTime == null ? null : EventDateTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +209,14 @@ public class TrackingRecord extends NetObject  {
 
     public EventArgs getEventArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventArgs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EventArgs");
+            retObjectEventArgs = classInstance.Get("EventArgs");
+            JCObject val = (JCObject)retObjectEventArgs;
             return new EventArgs(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEventArgs != null ? retObjectEventArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class TrackingRecord extends NetObject  {
 
     public void setEventArgs(EventArgs EventArgs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventArgs", EventArgs == null ? null : EventArgs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +234,14 @@ public class TrackingRecord extends NetObject  {
 
     public TrackingAnnotationCollection getAnnotations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnnotations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Annotations");
+            retObjectAnnotations = classInstance.Get("Annotations");
+            JCObject val = (JCObject)retObjectAnnotations;
             return new TrackingAnnotationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnnotations != null ? retObjectAnnotations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,7 +165,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
     
     public void Add(BlockElement element) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -179,7 +179,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
      */
     @Deprecated 
     public void AddChild(NetObject value) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
     /**
@@ -188,7 +188,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
      */
     @Deprecated 
     public void AddText(java.lang.String text) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 
@@ -197,9 +197,13 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
     
     public int getColumnSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnSpan = null;
         try {
-            return (int)classInstance.Get("ColumnSpan");
+            retObjectColumnSpan = classInstance.Get("ColumnSpan");
+            return (int)retObjectColumnSpan;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnSpan != null ? retObjectColumnSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +211,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
 
     public void setColumnSpan(int ColumnSpan) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ColumnSpan", ColumnSpan);
         } catch (JCNativeException jcne) {
@@ -217,9 +221,13 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
 
     public int getRowSpan() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowSpan = null;
         try {
-            return (int)classInstance.Get("RowSpan");
+            retObjectRowSpan = classInstance.Get("RowSpan");
+            return (int)retObjectRowSpan;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowSpan != null ? retObjectRowSpan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +235,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
 
     public void setRowSpan(int RowSpan) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowSpan", RowSpan);
         } catch (JCNativeException jcne) {

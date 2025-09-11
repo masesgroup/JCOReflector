@@ -159,10 +159,14 @@ public class InternalXmlHelper extends NetObject  {
     
     public static XAttribute CreateAttribute(XName name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAttribute = null;
         try {
-            JCObject objCreateAttribute = (JCObject)classType.Invoke("CreateAttribute", name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectCreateAttribute = classType.Invoke("CreateAttribute", name == null ? null : name.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objCreateAttribute = (JCObject)retObjectCreateAttribute;
             return new XAttribute(objCreateAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttribute != null ? retObjectCreateAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class InternalXmlHelper extends NetObject  {
 
     public static XAttribute CreateNamespaceAttribute(XName name, XNamespace ns) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateNamespaceAttribute = null;
         try {
-            JCObject objCreateNamespaceAttribute = (JCObject)classType.Invoke("CreateNamespaceAttribute", name == null ? null : name.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            retObjectCreateNamespaceAttribute = classType.Invoke("CreateNamespaceAttribute", name == null ? null : name.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            JCObject objCreateNamespaceAttribute = (JCObject)retObjectCreateNamespaceAttribute;
             return new XAttribute(objCreateNamespaceAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateNamespaceAttribute != null ? retObjectCreateNamespaceAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

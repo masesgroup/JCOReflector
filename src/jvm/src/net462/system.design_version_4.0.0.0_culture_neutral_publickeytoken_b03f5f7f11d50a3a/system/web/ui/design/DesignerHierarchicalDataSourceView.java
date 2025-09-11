@@ -159,10 +159,14 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
     
     public IHierarchicalEnumerable GetDesignTimeData(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeData = null;
         try {
-            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            retObjectGetDesignTimeData = classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            JCObject objGetDesignTimeData = (JCObject)retObjectGetDesignTimeData;
             return new IHierarchicalEnumerableImplementation(objGetDesignTimeData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDesignTimeData != null ? retObjectGetDesignTimeData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
     
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
 
     public IDataSourceSchema getSchema() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchema = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schema");
+            retObjectSchema = classInstance.Get("Schema");
+            JCObject val = (JCObject)retObjectSchema;
             return new IDataSourceSchemaImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchema != null ? retObjectSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
 
     public IHierarchicalDataSourceDesigner getDataSourceDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataSourceDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataSourceDesigner");
+            retObjectDataSourceDesigner = classInstance.Get("DataSourceDesigner");
+            JCObject val = (JCObject)retObjectDataSourceDesigner;
             return new IHierarchicalDataSourceDesignerImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataSourceDesigner != null ? retObjectDataSourceDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

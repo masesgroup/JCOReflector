@@ -143,10 +143,14 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
     
     public NetObject GetAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAttribute = null;
         try {
-            JCObject objGetAttribute = (JCObject)classInstance.Invoke("GetAttribute", attribute, ignoreCase);
+            retObjectGetAttribute = classInstance.Invoke("GetAttribute", attribute, ignoreCase);
+            JCObject objGetAttribute = (JCObject)retObjectGetAttribute;
             return new NetObject(objGetAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAttribute != null ? retObjectGetAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public NetObject GetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStyleAttribute = null;
         try {
-            JCObject objGetStyleAttribute = (JCObject)classInstance.Invoke("GetStyleAttribute", attribute, designTimeOnly, ignoreCase);
+            retObjectGetStyleAttribute = classInstance.Invoke("GetStyleAttribute", attribute, designTimeOnly, ignoreCase);
+            JCObject objGetStyleAttribute = (JCObject)retObjectGetStyleAttribute;
             return new NetObject(objGetStyleAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStyleAttribute != null ? retObjectGetStyleAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +173,7 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public void RemoveAttribute(java.lang.String attribute, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAttribute", attribute, ignoreCase);
         } catch (JCNativeException jcne) {
@@ -175,7 +183,7 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public void RemoveStyleAttribute(java.lang.String attribute, boolean designTimeOnly, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveStyleAttribute", attribute, designTimeOnly, ignoreCase);
         } catch (JCNativeException jcne) {
@@ -185,7 +193,7 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public void SetAttribute(java.lang.String attribute, NetObject value, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAttribute", attribute, value == null ? null : value.getJCOInstance(), ignoreCase);
         } catch (JCNativeException jcne) {
@@ -195,7 +203,7 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public void SetStyleAttribute(java.lang.String attribute, boolean designTimeOnly, NetObject value, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetStyleAttribute", attribute, designTimeOnly, value == null ? null : value.getJCOInstance(), ignoreCase);
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
     
     public NetObject getDesignTimeElement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeElement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesignTimeElement");
+            retObjectDesignTimeElement = classInstance.Get("DesignTimeElement");
+            JCObject val = (JCObject)retObjectDesignTimeElement;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesignTimeElement != null ? retObjectDesignTimeElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +232,14 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public HtmlControlDesigner getDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Designer");
+            retObjectDesigner = classInstance.Get("Designer");
+            JCObject val = (JCObject)retObjectDesigner;
             return new HtmlControlDesigner(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesigner != null ? retObjectDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
 
     public void setDesigner(HtmlControlDesigner Designer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Designer", Designer == null ? null : Designer.getJCOInstance());
         } catch (JCNativeException jcne) {

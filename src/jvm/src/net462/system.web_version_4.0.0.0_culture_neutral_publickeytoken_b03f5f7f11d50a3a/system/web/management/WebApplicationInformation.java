@@ -156,7 +156,7 @@ public class WebApplicationInformation extends NetObject  {
     
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatToString", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,9 +170,13 @@ public class WebApplicationInformation extends NetObject  {
     
     public java.lang.String getApplicationDomain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationDomain = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationDomain");
+            retObjectApplicationDomain = classInstance.Get("ApplicationDomain");
+            return (java.lang.String)retObjectApplicationDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationDomain != null ? retObjectApplicationDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class WebApplicationInformation extends NetObject  {
 
     public java.lang.String getApplicationPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationPath");
+            retObjectApplicationPath = classInstance.Get("ApplicationPath");
+            return (java.lang.String)retObjectApplicationPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationPath != null ? retObjectApplicationPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class WebApplicationInformation extends NetObject  {
 
     public java.lang.String getApplicationVirtualPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationVirtualPath");
+            retObjectApplicationVirtualPath = classInstance.Get("ApplicationVirtualPath");
+            return (java.lang.String)retObjectApplicationVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationVirtualPath != null ? retObjectApplicationVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class WebApplicationInformation extends NetObject  {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +226,13 @@ public class WebApplicationInformation extends NetObject  {
 
     public java.lang.String getTrustLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustLevel = null;
         try {
-            return (java.lang.String)classInstance.Get("TrustLevel");
+            retObjectTrustLevel = classInstance.Get("TrustLevel");
+            return (java.lang.String)retObjectTrustLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTrustLevel != null ? retObjectTrustLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

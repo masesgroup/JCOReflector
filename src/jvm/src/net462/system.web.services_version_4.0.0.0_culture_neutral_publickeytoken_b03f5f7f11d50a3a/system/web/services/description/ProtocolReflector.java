@@ -167,10 +167,14 @@ public class ProtocolReflector extends NetObject  {
     
     public ServiceDescription GetServiceDescription(java.lang.String ns) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServiceDescription = null;
         try {
-            JCObject objGetServiceDescription = (JCObject)classInstance.Invoke("GetServiceDescription", ns);
+            retObjectGetServiceDescription = classInstance.Invoke("GetServiceDescription", ns);
+            JCObject objGetServiceDescription = (JCObject)retObjectGetServiceDescription;
             return new ServiceDescription(objGetServiceDescription);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServiceDescription != null ? retObjectGetServiceDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class ProtocolReflector extends NetObject  {
     
     public java.lang.String getDefaultNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultNamespace");
+            retObjectDefaultNamespace = classInstance.Get("DefaultNamespace");
+            return (java.lang.String)retObjectDefaultNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultNamespace != null ? retObjectDefaultNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class ProtocolReflector extends NetObject  {
 
     public java.lang.String getProtocolName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProtocolName");
+            retObjectProtocolName = classInstance.Get("ProtocolName");
+            return (java.lang.String)retObjectProtocolName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProtocolName != null ? retObjectProtocolName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class ProtocolReflector extends NetObject  {
 
     public java.lang.String getServiceUrl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ServiceUrl");
+            retObjectServiceUrl = classInstance.Get("ServiceUrl");
+            return (java.lang.String)retObjectServiceUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServiceUrl != null ? retObjectServiceUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +228,14 @@ public class ProtocolReflector extends NetObject  {
 
     public NetType getServiceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceType");
+            retObjectServiceType = classInstance.Get("ServiceType");
+            JCObject val = (JCObject)retObjectServiceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceType != null ? retObjectServiceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +243,14 @@ public class ProtocolReflector extends NetObject  {
 
     public system.web.services.description.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.web.services.description.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +258,14 @@ public class ProtocolReflector extends NetObject  {
 
     public Message getInputMessage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInputMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InputMessage");
+            retObjectInputMessage = classInstance.Get("InputMessage");
+            JCObject val = (JCObject)retObjectInputMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInputMessage != null ? retObjectInputMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +273,14 @@ public class ProtocolReflector extends NetObject  {
 
     public Message getOutputMessage() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutputMessage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OutputMessage");
+            retObjectOutputMessage = classInstance.Get("OutputMessage");
+            JCObject val = (JCObject)retObjectOutputMessage;
             return new Message(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutputMessage != null ? retObjectOutputMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +288,14 @@ public class ProtocolReflector extends NetObject  {
 
     public MessageCollection getHeaderMessages() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderMessages = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderMessages");
+            retObjectHeaderMessages = classInstance.Get("HeaderMessages");
+            JCObject val = (JCObject)retObjectHeaderMessages;
             return new MessageCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderMessages != null ? retObjectHeaderMessages.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +303,14 @@ public class ProtocolReflector extends NetObject  {
 
     public Operation getOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Operation");
+            retObjectOperation = classInstance.Get("Operation");
+            JCObject val = (JCObject)retObjectOperation;
             return new Operation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperation != null ? retObjectOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +318,14 @@ public class ProtocolReflector extends NetObject  {
 
     public OperationBinding getOperationBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationBinding");
+            retObjectOperationBinding = classInstance.Get("OperationBinding");
+            JCObject val = (JCObject)retObjectOperationBinding;
             return new OperationBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationBinding != null ? retObjectOperationBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +333,14 @@ public class ProtocolReflector extends NetObject  {
 
     public Port getPort() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPort = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Port");
+            retObjectPort = classInstance.Get("Port");
+            JCObject val = (JCObject)retObjectPort;
             return new Port(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPort != null ? retObjectPort.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +348,14 @@ public class ProtocolReflector extends NetObject  {
 
     public PortType getPortType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PortType");
+            retObjectPortType = classInstance.Get("PortType");
+            JCObject val = (JCObject)retObjectPortType;
             return new PortType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPortType != null ? retObjectPortType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +363,14 @@ public class ProtocolReflector extends NetObject  {
 
     public Service getService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Service");
+            retObjectService = classInstance.Get("Service");
+            JCObject val = (JCObject)retObjectService;
             return new Service(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectService != null ? retObjectService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +378,14 @@ public class ProtocolReflector extends NetObject  {
 
     public ServiceDescription getServiceDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescription = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescription");
+            retObjectServiceDescription = classInstance.Get("ServiceDescription");
+            JCObject val = (JCObject)retObjectServiceDescription;
             return new ServiceDescription(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescription != null ? retObjectServiceDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +393,14 @@ public class ProtocolReflector extends NetObject  {
 
     public ServiceDescriptionCollection getServiceDescriptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceDescriptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceDescriptions");
+            retObjectServiceDescriptions = classInstance.Get("ServiceDescriptions");
+            JCObject val = (JCObject)retObjectServiceDescriptions;
             return new ServiceDescriptionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceDescriptions != null ? retObjectServiceDescriptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +408,14 @@ public class ProtocolReflector extends NetObject  {
 
     public LogicalMethodInfo getMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            JCObject val = (JCObject)retObjectMethod;
             return new LogicalMethodInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,16 +423,20 @@ public class ProtocolReflector extends NetObject  {
 
     public final LogicalMethodInfo[] getMethods() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethods = null;
         try {
             ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Methods");
+            retObjectMethods = classInstance.Get("Methods");
+            JCObject resultingObjects = (JCObject)retObjectMethods;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
             }
             LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethods != null ? retObjectMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,10 +444,14 @@ public class ProtocolReflector extends NetObject  {
 
     public WebMethodAttribute getMethodAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethodAttribute = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MethodAttribute");
+            retObjectMethodAttribute = classInstance.Get("MethodAttribute");
+            JCObject val = (JCObject)retObjectMethodAttribute;
             return new WebMethodAttribute(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMethodAttribute != null ? retObjectMethodAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,10 +459,14 @@ public class ProtocolReflector extends NetObject  {
 
     public XmlReflectionImporter getReflectionImporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReflectionImporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReflectionImporter");
+            retObjectReflectionImporter = classInstance.Get("ReflectionImporter");
+            JCObject val = (JCObject)retObjectReflectionImporter;
             return new XmlReflectionImporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReflectionImporter != null ? retObjectReflectionImporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,10 +474,14 @@ public class ProtocolReflector extends NetObject  {
 
     public XmlSchemaExporter getSchemaExporter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaExporter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaExporter");
+            retObjectSchemaExporter = classInstance.Get("SchemaExporter");
+            JCObject val = (JCObject)retObjectSchemaExporter;
             return new XmlSchemaExporter(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaExporter != null ? retObjectSchemaExporter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,10 +489,14 @@ public class ProtocolReflector extends NetObject  {
 
     public XmlSchemas getSchemas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Schemas");
+            retObjectSchemas = classInstance.Get("Schemas");
+            JCObject val = (JCObject)retObjectSchemas;
             return new XmlSchemas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemas != null ? retObjectSchemas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

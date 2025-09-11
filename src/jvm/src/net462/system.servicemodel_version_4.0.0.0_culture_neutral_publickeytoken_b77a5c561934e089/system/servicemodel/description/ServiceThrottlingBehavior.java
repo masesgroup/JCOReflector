@@ -167,7 +167,7 @@ public class ServiceThrottlingBehavior extends NetObject  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -176,7 +176,7 @@ public class ServiceThrottlingBehavior extends NetObject  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -185,9 +185,13 @@ public class ServiceThrottlingBehavior extends NetObject  {
     
     public int getMaxConcurrentCalls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentCalls = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentCalls");
+            retObjectMaxConcurrentCalls = classInstance.Get("MaxConcurrentCalls");
+            return (int)retObjectMaxConcurrentCalls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxConcurrentCalls != null ? retObjectMaxConcurrentCalls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +199,7 @@ public class ServiceThrottlingBehavior extends NetObject  {
 
     public void setMaxConcurrentCalls(int MaxConcurrentCalls) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentCalls", MaxConcurrentCalls);
         } catch (JCNativeException jcne) {
@@ -205,9 +209,13 @@ public class ServiceThrottlingBehavior extends NetObject  {
 
     public int getMaxConcurrentInstances() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentInstances = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentInstances");
+            retObjectMaxConcurrentInstances = classInstance.Get("MaxConcurrentInstances");
+            return (int)retObjectMaxConcurrentInstances;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxConcurrentInstances != null ? retObjectMaxConcurrentInstances.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +223,7 @@ public class ServiceThrottlingBehavior extends NetObject  {
 
     public void setMaxConcurrentInstances(int MaxConcurrentInstances) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentInstances", MaxConcurrentInstances);
         } catch (JCNativeException jcne) {
@@ -225,9 +233,13 @@ public class ServiceThrottlingBehavior extends NetObject  {
 
     public int getMaxConcurrentSessions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxConcurrentSessions = null;
         try {
-            return (int)classInstance.Get("MaxConcurrentSessions");
+            retObjectMaxConcurrentSessions = classInstance.Get("MaxConcurrentSessions");
+            return (int)retObjectMaxConcurrentSessions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxConcurrentSessions != null ? retObjectMaxConcurrentSessions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class ServiceThrottlingBehavior extends NetObject  {
 
     public void setMaxConcurrentSessions(int MaxConcurrentSessions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxConcurrentSessions", MaxConcurrentSessions);
         } catch (JCNativeException jcne) {

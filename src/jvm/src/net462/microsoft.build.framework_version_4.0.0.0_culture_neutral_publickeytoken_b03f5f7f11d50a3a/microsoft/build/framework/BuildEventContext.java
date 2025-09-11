@@ -190,9 +190,13 @@ public class BuildEventContext extends NetObject  {
     
     public int getNodeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeId = null;
         try {
-            return (int)classInstance.Get("NodeId");
+            retObjectNodeId = classInstance.Get("NodeId");
+            return (int)retObjectNodeId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNodeId != null ? retObjectNodeId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +204,13 @@ public class BuildEventContext extends NetObject  {
 
     public int getProjectContextId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectContextId = null;
         try {
-            return (int)classInstance.Get("ProjectContextId");
+            retObjectProjectContextId = classInstance.Get("ProjectContextId");
+            return (int)retObjectProjectContextId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProjectContextId != null ? retObjectProjectContextId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +218,13 @@ public class BuildEventContext extends NetObject  {
 
     public int getProjectInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectInstanceId = null;
         try {
-            return (int)classInstance.Get("ProjectInstanceId");
+            retObjectProjectInstanceId = classInstance.Get("ProjectInstanceId");
+            return (int)retObjectProjectInstanceId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProjectInstanceId != null ? retObjectProjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +232,13 @@ public class BuildEventContext extends NetObject  {
 
     public int getSubmissionId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubmissionId = null;
         try {
-            return (int)classInstance.Get("SubmissionId");
+            retObjectSubmissionId = classInstance.Get("SubmissionId");
+            return (int)retObjectSubmissionId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSubmissionId != null ? retObjectSubmissionId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +246,13 @@ public class BuildEventContext extends NetObject  {
 
     public int getTargetId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetId = null;
         try {
-            return (int)classInstance.Get("TargetId");
+            retObjectTargetId = classInstance.Get("TargetId");
+            return (int)retObjectTargetId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTargetId != null ? retObjectTargetId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +260,13 @@ public class BuildEventContext extends NetObject  {
 
     public int getTaskId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskId = null;
         try {
-            return (int)classInstance.Get("TaskId");
+            retObjectTaskId = classInstance.Get("TaskId");
+            return (int)retObjectTaskId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTaskId != null ? retObjectTaskId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +274,13 @@ public class BuildEventContext extends NetObject  {
 
     public long getBuildRequestId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildRequestId = null;
         try {
-            return (long)classInstance.Get("BuildRequestId");
+            retObjectBuildRequestId = classInstance.Get("BuildRequestId");
+            return (long)retObjectBuildRequestId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectBuildRequestId != null ? retObjectBuildRequestId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +288,14 @@ public class BuildEventContext extends NetObject  {
 
     public static BuildEventContext getInvalid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvalid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Invalid");
+            retObjectInvalid = classType.Get("Invalid");
+            JCObject val = (JCObject)retObjectInvalid;
             return new BuildEventContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvalid != null ? retObjectInvalid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

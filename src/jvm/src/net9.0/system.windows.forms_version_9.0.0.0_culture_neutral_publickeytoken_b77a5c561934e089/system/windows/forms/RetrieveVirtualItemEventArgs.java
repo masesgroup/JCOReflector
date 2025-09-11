@@ -171,9 +171,13 @@ public class RetrieveVirtualItemEventArgs extends EventArgs  {
     
     public int getItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemIndex = null;
         try {
-            return (int)classInstance.Get("ItemIndex");
+            retObjectItemIndex = classInstance.Get("ItemIndex");
+            return (int)retObjectItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectItemIndex != null ? retObjectItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class RetrieveVirtualItemEventArgs extends EventArgs  {
 
     public ListViewItem getItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new ListViewItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class RetrieveVirtualItemEventArgs extends EventArgs  {
 
     public void setItem(ListViewItem Item) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Item", Item == null ? null : Item.getJCOInstance());
         } catch (JCNativeException jcne) {

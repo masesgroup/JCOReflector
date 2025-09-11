@@ -230,10 +230,12 @@ public class FormattedText extends NetObject  {
     
     public double[] GetMaxTextWidths() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMaxTextWidths = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMaxTextWidths");
+            retObjectGetMaxTextWidths = classInstance.Invoke("GetMaxTextWidths");
+            JCObject resultingObjects = (JCObject)retObjectGetMaxTextWidths;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -242,6 +244,8 @@ public class FormattedText extends NetObject  {
 				resultingArray[indexGetMaxTextWidths] = (double)resultingArrayList.get(indexGetMaxTextWidths);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectGetMaxTextWidths != null ? retObjectGetMaxTextWidths.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +253,14 @@ public class FormattedText extends NetObject  {
 
     public Geometry BuildGeometry(Point origin) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.NotSupportedException, system.io.FileNotFoundException, system.io.FileFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildGeometry = null;
         try {
-            JCObject objBuildGeometry = (JCObject)classInstance.Invoke("BuildGeometry", origin == null ? null : origin.getJCOInstance());
+            retObjectBuildGeometry = classInstance.Invoke("BuildGeometry", origin == null ? null : origin.getJCOInstance());
+            JCObject objBuildGeometry = (JCObject)retObjectBuildGeometry;
             return new Geometry(objBuildGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildGeometry != null ? retObjectBuildGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +268,14 @@ public class FormattedText extends NetObject  {
 
     public Geometry BuildHighlightGeometry(Point origin, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildHighlightGeometry = null;
         try {
-            JCObject objBuildHighlightGeometry = (JCObject)classInstance.Invoke("BuildHighlightGeometry", origin == null ? null : origin.getJCOInstance(), startIndex, count);
+            retObjectBuildHighlightGeometry = classInstance.Invoke("BuildHighlightGeometry", origin == null ? null : origin.getJCOInstance(), startIndex, count);
+            JCObject objBuildHighlightGeometry = (JCObject)retObjectBuildHighlightGeometry;
             return new Geometry(objBuildHighlightGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildHighlightGeometry != null ? retObjectBuildHighlightGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +283,14 @@ public class FormattedText extends NetObject  {
 
     public Geometry BuildHighlightGeometry(Point origin) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildHighlightGeometry = null;
         try {
-            JCObject objBuildHighlightGeometry = (JCObject)classInstance.Invoke("BuildHighlightGeometry", origin == null ? null : origin.getJCOInstance());
+            retObjectBuildHighlightGeometry = classInstance.Invoke("BuildHighlightGeometry", origin == null ? null : origin.getJCOInstance());
+            JCObject objBuildHighlightGeometry = (JCObject)retObjectBuildHighlightGeometry;
             return new Geometry(objBuildHighlightGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildHighlightGeometry != null ? retObjectBuildHighlightGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +298,7 @@ public class FormattedText extends NetObject  {
 
     public void SetCulture(CultureInfo culture, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCulture", culture == null ? null : culture.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -292,7 +308,7 @@ public class FormattedText extends NetObject  {
 
     public void SetCulture(CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCulture", culture == null ? null : culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -302,7 +318,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontFamily(java.lang.String fontFamily, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontFamily", fontFamily, startIndex, count);
         } catch (JCNativeException jcne) {
@@ -312,7 +328,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontFamily(java.lang.String fontFamily) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontFamily", fontFamily);
         } catch (JCNativeException jcne) {
@@ -322,7 +338,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontFamily(FontFamily fontFamily, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontFamily", fontFamily == null ? null : fontFamily.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -332,7 +348,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontFamily(FontFamily fontFamily) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontFamily", fontFamily == null ? null : fontFamily.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -342,7 +358,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontSize(double emSize, int startIndex, int count) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontSize", emSize, startIndex, count);
         } catch (JCNativeException jcne) {
@@ -352,7 +368,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontSize(double emSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontSize", emSize);
         } catch (JCNativeException jcne) {
@@ -362,7 +378,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontStretch(FontStretch stretch, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontStretch", stretch == null ? null : stretch.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -372,7 +388,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontStretch(FontStretch stretch) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontStretch", stretch == null ? null : stretch.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,7 +398,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontStyle(FontStyle style, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontStyle", style == null ? null : style.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -392,7 +408,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontStyle(FontStyle style) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontStyle", style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,7 +418,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontTypeface(Typeface typeface, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontTypeface", typeface == null ? null : typeface.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -412,7 +428,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontTypeface(Typeface typeface) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontTypeface", typeface == null ? null : typeface.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -422,7 +438,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontWeight(FontWeight weight, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontWeight", weight == null ? null : weight.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -432,7 +448,7 @@ public class FormattedText extends NetObject  {
 
     public void SetFontWeight(FontWeight weight) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.ArgumentNullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontWeight", weight == null ? null : weight.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -442,7 +458,7 @@ public class FormattedText extends NetObject  {
 
     public void SetForegroundBrush(Brush foregroundBrush, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetForegroundBrush", foregroundBrush == null ? null : foregroundBrush.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -452,7 +468,7 @@ public class FormattedText extends NetObject  {
 
     public void SetForegroundBrush(Brush foregroundBrush) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetForegroundBrush", foregroundBrush == null ? null : foregroundBrush.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -462,7 +478,7 @@ public class FormattedText extends NetObject  {
 
     public void SetMaxTextWidths(double[] maxTextWidths) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMaxTextWidths", (java.lang.Object)maxTextWidths);
         } catch (JCNativeException jcne) {
@@ -472,7 +488,7 @@ public class FormattedText extends NetObject  {
 
     public void SetMaxTextWidths(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetMaxTextWidths", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -482,7 +498,7 @@ public class FormattedText extends NetObject  {
 
     public void SetNumberSubstitution(NumberSubstitution numberSubstitution, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNumberSubstitution", numberSubstitution == null ? null : numberSubstitution.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -492,7 +508,7 @@ public class FormattedText extends NetObject  {
 
     public void SetNumberSubstitution(NumberSubstitution numberSubstitution) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetNumberSubstitution", numberSubstitution == null ? null : numberSubstitution.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -502,7 +518,7 @@ public class FormattedText extends NetObject  {
 
     public void SetTextDecorations(TextDecorationCollection textDecorations, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTextDecorations", textDecorations == null ? null : textDecorations.getJCOInstance(), startIndex, count);
         } catch (JCNativeException jcne) {
@@ -512,7 +528,7 @@ public class FormattedText extends NetObject  {
 
     public void SetTextDecorations(TextDecorationCollection textDecorations) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTextDecorations", textDecorations == null ? null : textDecorations.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -526,9 +542,13 @@ public class FormattedText extends NetObject  {
     
     public double getBaseline() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            return (double)classInstance.Get("Baseline");
+            retObjectBaseline = classInstance.Get("Baseline");
+            return (double)retObjectBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,9 +556,13 @@ public class FormattedText extends NetObject  {
 
     public double getExtent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtent = null;
         try {
-            return (double)classInstance.Get("Extent");
+            retObjectExtent = classInstance.Get("Extent");
+            return (double)retObjectExtent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectExtent != null ? retObjectExtent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -546,9 +570,13 @@ public class FormattedText extends NetObject  {
 
     public double getHeight() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (double)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (double)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,9 +584,13 @@ public class FormattedText extends NetObject  {
 
     public double getLineHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineHeight = null;
         try {
-            return (double)classInstance.Get("LineHeight");
+            retObjectLineHeight = classInstance.Get("LineHeight");
+            return (double)retObjectLineHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLineHeight != null ? retObjectLineHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -566,7 +598,7 @@ public class FormattedText extends NetObject  {
 
     public void setLineHeight(double LineHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineHeight", LineHeight);
         } catch (JCNativeException jcne) {
@@ -576,9 +608,13 @@ public class FormattedText extends NetObject  {
 
     public double getMaxTextHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTextHeight = null;
         try {
-            return (double)classInstance.Get("MaxTextHeight");
+            retObjectMaxTextHeight = classInstance.Get("MaxTextHeight");
+            return (double)retObjectMaxTextHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMaxTextHeight != null ? retObjectMaxTextHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -586,7 +622,7 @@ public class FormattedText extends NetObject  {
 
     public void setMaxTextHeight(double MaxTextHeight) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTextHeight", MaxTextHeight);
         } catch (JCNativeException jcne) {
@@ -596,9 +632,13 @@ public class FormattedText extends NetObject  {
 
     public double getMaxTextWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxTextWidth = null;
         try {
-            return (double)classInstance.Get("MaxTextWidth");
+            retObjectMaxTextWidth = classInstance.Get("MaxTextWidth");
+            return (double)retObjectMaxTextWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMaxTextWidth != null ? retObjectMaxTextWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -606,7 +646,7 @@ public class FormattedText extends NetObject  {
 
     public void setMaxTextWidth(double MaxTextWidth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxTextWidth", MaxTextWidth);
         } catch (JCNativeException jcne) {
@@ -616,9 +656,13 @@ public class FormattedText extends NetObject  {
 
     public double getMinWidth() throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinWidth = null;
         try {
-            return (double)classInstance.Get("MinWidth");
+            retObjectMinWidth = classInstance.Get("MinWidth");
+            return (double)retObjectMinWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectMinWidth != null ? retObjectMinWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -626,9 +670,13 @@ public class FormattedText extends NetObject  {
 
     public double getOverhangAfter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangAfter = null;
         try {
-            return (double)classInstance.Get("OverhangAfter");
+            retObjectOverhangAfter = classInstance.Get("OverhangAfter");
+            return (double)retObjectOverhangAfter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangAfter != null ? retObjectOverhangAfter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -636,9 +684,13 @@ public class FormattedText extends NetObject  {
 
     public double getOverhangLeading() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangLeading = null;
         try {
-            return (double)classInstance.Get("OverhangLeading");
+            retObjectOverhangLeading = classInstance.Get("OverhangLeading");
+            return (double)retObjectOverhangLeading;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangLeading != null ? retObjectOverhangLeading.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,9 +698,13 @@ public class FormattedText extends NetObject  {
 
     public double getOverhangTrailing() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverhangTrailing = null;
         try {
-            return (double)classInstance.Get("OverhangTrailing");
+            retObjectOverhangTrailing = classInstance.Get("OverhangTrailing");
+            return (double)retObjectOverhangTrailing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOverhangTrailing != null ? retObjectOverhangTrailing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -656,9 +712,13 @@ public class FormattedText extends NetObject  {
 
     public double getPixelsPerDip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPixelsPerDip = null;
         try {
-            return (double)classInstance.Get("PixelsPerDip");
+            retObjectPixelsPerDip = classInstance.Get("PixelsPerDip");
+            return (double)retObjectPixelsPerDip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPixelsPerDip != null ? retObjectPixelsPerDip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,7 +726,7 @@ public class FormattedText extends NetObject  {
 
     public void setPixelsPerDip(double PixelsPerDip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PixelsPerDip", PixelsPerDip);
         } catch (JCNativeException jcne) {
@@ -676,9 +736,13 @@ public class FormattedText extends NetObject  {
 
     public double getWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (double)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (double)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,9 +750,13 @@ public class FormattedText extends NetObject  {
 
     public double getWidthIncludingTrailingWhitespace() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidthIncludingTrailingWhitespace = null;
         try {
-            return (double)classInstance.Get("WidthIncludingTrailingWhitespace");
+            retObjectWidthIncludingTrailingWhitespace = classInstance.Get("WidthIncludingTrailingWhitespace");
+            return (double)retObjectWidthIncludingTrailingWhitespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectWidthIncludingTrailingWhitespace != null ? retObjectWidthIncludingTrailingWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -696,9 +764,13 @@ public class FormattedText extends NetObject  {
 
     public int getMaxLineCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxLineCount = null;
         try {
-            return (int)classInstance.Get("MaxLineCount");
+            retObjectMaxLineCount = classInstance.Get("MaxLineCount");
+            return (int)retObjectMaxLineCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxLineCount != null ? retObjectMaxLineCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -706,7 +778,7 @@ public class FormattedText extends NetObject  {
 
     public void setMaxLineCount(int MaxLineCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxLineCount", MaxLineCount);
         } catch (JCNativeException jcne) {
@@ -716,9 +788,13 @@ public class FormattedText extends NetObject  {
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,10 +802,14 @@ public class FormattedText extends NetObject  {
 
     public FlowDirection getFlowDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFlowDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FlowDirection");
+            retObjectFlowDirection = classInstance.Get("FlowDirection");
+            JCObject val = (JCObject)retObjectFlowDirection;
             return new FlowDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFlowDirection != null ? retObjectFlowDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,7 +817,7 @@ public class FormattedText extends NetObject  {
 
     public void setFlowDirection(FlowDirection FlowDirection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FlowDirection", FlowDirection == null ? null : FlowDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -747,10 +827,14 @@ public class FormattedText extends NetObject  {
 
     public TextAlignment getTextAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlignment");
+            retObjectTextAlignment = classInstance.Get("TextAlignment");
+            JCObject val = (JCObject)retObjectTextAlignment;
             return new TextAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlignment != null ? retObjectTextAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -758,7 +842,7 @@ public class FormattedText extends NetObject  {
 
     public void setTextAlignment(TextAlignment TextAlignment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlignment", TextAlignment == null ? null : TextAlignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -768,10 +852,14 @@ public class FormattedText extends NetObject  {
 
     public TextTrimming getTrimming() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrimming = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Trimming");
+            retObjectTrimming = classInstance.Get("Trimming");
+            JCObject val = (JCObject)retObjectTrimming;
             return new TextTrimming(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrimming != null ? retObjectTrimming.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,7 +867,7 @@ public class FormattedText extends NetObject  {
 
     public void setTrimming(TextTrimming Trimming) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Trimming", Trimming == null ? null : Trimming.getJCOInstance());
         } catch (JCNativeException jcne) {

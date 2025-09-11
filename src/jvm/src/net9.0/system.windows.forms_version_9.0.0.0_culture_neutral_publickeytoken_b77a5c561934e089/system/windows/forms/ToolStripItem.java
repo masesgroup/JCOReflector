@@ -193,10 +193,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
     
     public Size GetPreferredSize(Size constrainingSize) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPreferredSize = null;
         try {
-            JCObject objGetPreferredSize = (JCObject)classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            retObjectGetPreferredSize = classInstance.Invoke("GetPreferredSize", constrainingSize == null ? null : constrainingSize.getJCOInstance());
+            JCObject objGetPreferredSize = (JCObject)retObjectGetPreferredSize;
             return new Size(objGetPreferredSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPreferredSize != null ? retObjectGetPreferredSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +208,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public DragDropEffects DoDragDrop(NetObject data, DragDropEffects allowedEffects, Bitmap dragImage, Point cursorOffset, boolean useDefaultDragImage) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoDragDrop = null;
         try {
-            JCObject objDoDragDrop = (JCObject)classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance(), dragImage == null ? null : dragImage.getJCOInstance(), cursorOffset == null ? null : cursorOffset.getJCOInstance(), useDefaultDragImage);
+            retObjectDoDragDrop = classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance(), dragImage == null ? null : dragImage.getJCOInstance(), cursorOffset == null ? null : cursorOffset.getJCOInstance(), useDefaultDragImage);
+            JCObject objDoDragDrop = (JCObject)retObjectDoDragDrop;
             return new DragDropEffects(objDoDragDrop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragDrop != null ? retObjectDoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +223,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public DragDropEffects DoDragDrop(NetObject data, DragDropEffects allowedEffects) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoDragDrop = null;
         try {
-            JCObject objDoDragDrop = (JCObject)classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            retObjectDoDragDrop = classInstance.Invoke("DoDragDrop", data == null ? null : data.getJCOInstance(), allowedEffects == null ? null : allowedEffects.getJCOInstance());
+            JCObject objDoDragDrop = (JCObject)retObjectDoDragDrop;
             return new DragDropEffects(objDoDragDrop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDoDragDrop != null ? retObjectDoDragDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +238,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStrip GetCurrentParent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentParent = null;
         try {
-            JCObject objGetCurrentParent = (JCObject)classInstance.Invoke("GetCurrentParent");
+            retObjectGetCurrentParent = classInstance.Invoke("GetCurrentParent");
+            JCObject objGetCurrentParent = (JCObject)retObjectGetCurrentParent;
             return new ToolStrip(objGetCurrentParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentParent != null ? retObjectGetCurrentParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void Invalidate() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate");
         } catch (JCNativeException jcne) {
@@ -247,7 +263,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void Invalidate(Rectangle r) throws Throwable, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.InvalidOperationException, system.OverflowException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invalidate", r == null ? null : r.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,7 +273,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void PerformClick() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidAsynchronousStateException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PerformClick");
         } catch (JCNativeException jcne) {
@@ -267,7 +283,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetBackColor() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetBackColor");
         } catch (JCNativeException jcne) {
@@ -277,7 +293,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetDisplayStyle() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDisplayStyle");
         } catch (JCNativeException jcne) {
@@ -287,7 +303,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetFont() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetFont");
         } catch (JCNativeException jcne) {
@@ -297,7 +313,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetForeColor() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetForeColor");
         } catch (JCNativeException jcne) {
@@ -307,7 +323,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetImage() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetImage");
         } catch (JCNativeException jcne) {
@@ -317,7 +333,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetMargin() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetMargin");
         } catch (JCNativeException jcne) {
@@ -327,7 +343,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetPadding() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetPadding");
         } catch (JCNativeException jcne) {
@@ -337,7 +353,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetRightToLeft() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetRightToLeft");
         } catch (JCNativeException jcne) {
@@ -347,7 +363,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void ResetTextDirection() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetTextDirection");
         } catch (JCNativeException jcne) {
@@ -357,7 +373,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void Select() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select");
         } catch (JCNativeException jcne) {
@@ -371,7 +387,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
      */
     @Deprecated 
     public void OnDragDrop(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -380,7 +396,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
      */
     @Deprecated 
     public void OnDragEnter(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -389,7 +405,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
      */
     @Deprecated 
     public void OnDragLeave(EventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
     /**
@@ -398,7 +414,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
      */
     @Deprecated 
     public void OnDragOver(DragEventArgs e) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
 
@@ -407,9 +423,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
     
     public boolean getAllowDrop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDrop = null;
         try {
-            return (boolean)classInstance.Get("AllowDrop");
+            retObjectAllowDrop = classInstance.Get("AllowDrop");
+            return (boolean)retObjectAllowDrop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDrop != null ? retObjectAllowDrop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,7 +437,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAllowDrop(boolean AllowDrop) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDrop", AllowDrop);
         } catch (JCNativeException jcne) {
@@ -427,9 +447,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getAutoSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSize = null;
         try {
-            return (boolean)classInstance.Get("AutoSize");
+            retObjectAutoSize = classInstance.Get("AutoSize");
+            return (boolean)retObjectAutoSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoSize != null ? retObjectAutoSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,7 +461,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAutoSize(boolean AutoSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSize", AutoSize);
         } catch (JCNativeException jcne) {
@@ -447,9 +471,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getAutoToolTip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoToolTip = null;
         try {
-            return (boolean)classInstance.Get("AutoToolTip");
+            retObjectAutoToolTip = classInstance.Get("AutoToolTip");
+            return (boolean)retObjectAutoToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoToolTip != null ? retObjectAutoToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,7 +485,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAutoToolTip(boolean AutoToolTip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoToolTip", AutoToolTip);
         } catch (JCNativeException jcne) {
@@ -467,9 +495,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getAvailable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAvailable = null;
         try {
-            return (boolean)classInstance.Get("Available");
+            retObjectAvailable = classInstance.Get("Available");
+            return (boolean)retObjectAvailable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAvailable != null ? retObjectAvailable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,7 +509,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAvailable(boolean Available) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Available", Available);
         } catch (JCNativeException jcne) {
@@ -487,9 +519,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getCanSelect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanSelect = null;
         try {
-            return (boolean)classInstance.Get("CanSelect");
+            retObjectCanSelect = classInstance.Get("CanSelect");
+            return (boolean)retObjectCanSelect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanSelect != null ? retObjectCanSelect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,9 +533,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getDoubleClickEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDoubleClickEnabled = null;
         try {
-            return (boolean)classInstance.Get("DoubleClickEnabled");
+            retObjectDoubleClickEnabled = classInstance.Get("DoubleClickEnabled");
+            return (boolean)retObjectDoubleClickEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDoubleClickEnabled != null ? retObjectDoubleClickEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +547,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setDoubleClickEnabled(boolean DoubleClickEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DoubleClickEnabled", DoubleClickEnabled);
         } catch (JCNativeException jcne) {
@@ -517,9 +557,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnabled = null;
         try {
-            return (boolean)classInstance.Get("Enabled");
+            retObjectEnabled = classInstance.Get("Enabled");
+            return (boolean)retObjectEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnabled != null ? retObjectEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,7 +571,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setEnabled(boolean Enabled) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.OverflowException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Enabled", Enabled);
         } catch (JCNativeException jcne) {
@@ -537,9 +581,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getIsDisposed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDisposed = null;
         try {
-            return (boolean)classInstance.Get("IsDisposed");
+            retObjectIsDisposed = classInstance.Get("IsDisposed");
+            return (boolean)retObjectIsDisposed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDisposed != null ? retObjectIsDisposed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,9 +595,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getIsOnDropDown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOnDropDown = null;
         try {
-            return (boolean)classInstance.Get("IsOnDropDown");
+            retObjectIsOnDropDown = classInstance.Get("IsOnDropDown");
+            return (boolean)retObjectIsOnDropDown;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnDropDown != null ? retObjectIsOnDropDown.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,9 +609,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getIsOnOverflow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOnOverflow = null;
         try {
-            return (boolean)classInstance.Get("IsOnOverflow");
+            retObjectIsOnOverflow = classInstance.Get("IsOnOverflow");
+            return (boolean)retObjectIsOnOverflow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnOverflow != null ? retObjectIsOnOverflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,9 +623,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getPressed() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPressed = null;
         try {
-            return (boolean)classInstance.Get("Pressed");
+            retObjectPressed = classInstance.Get("Pressed");
+            return (boolean)retObjectPressed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPressed != null ? retObjectPressed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,9 +637,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getRightToLeftAutoMirrorImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftAutoMirrorImage = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftAutoMirrorImage");
+            retObjectRightToLeftAutoMirrorImage = classInstance.Get("RightToLeftAutoMirrorImage");
+            return (boolean)retObjectRightToLeftAutoMirrorImage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftAutoMirrorImage != null ? retObjectRightToLeftAutoMirrorImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -587,7 +651,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setRightToLeftAutoMirrorImage(boolean RightToLeftAutoMirrorImage) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftAutoMirrorImage", RightToLeftAutoMirrorImage);
         } catch (JCNativeException jcne) {
@@ -597,9 +661,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getSelected() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelected = null;
         try {
-            return (boolean)classInstance.Get("Selected");
+            retObjectSelected = classInstance.Get("Selected");
+            return (boolean)retObjectSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelected != null ? retObjectSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,9 +675,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public boolean getVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVisible = null;
         try {
-            return (boolean)classInstance.Get("Visible");
+            retObjectVisible = classInstance.Get("Visible");
+            return (boolean)retObjectVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVisible != null ? retObjectVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,7 +689,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setVisible(boolean Visible) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Visible", Visible);
         } catch (JCNativeException jcne) {
@@ -627,9 +699,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,7 +713,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setHeight(int Height) throws Throwable, system.PlatformNotSupportedException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -647,9 +723,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public int getImageIndex() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageIndex = null;
         try {
-            return (int)classInstance.Get("ImageIndex");
+            retObjectImageIndex = classInstance.Get("ImageIndex");
+            return (int)retObjectImageIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectImageIndex != null ? retObjectImageIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,7 +737,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImageIndex(int ImageIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageIndex", ImageIndex);
         } catch (JCNativeException jcne) {
@@ -667,9 +747,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public int getMergeIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeIndex = null;
         try {
-            return (int)classInstance.Get("MergeIndex");
+            retObjectMergeIndex = classInstance.Get("MergeIndex");
+            return (int)retObjectMergeIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMergeIndex != null ? retObjectMergeIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,7 +761,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setMergeIndex(int MergeIndex) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MergeIndex", MergeIndex);
         } catch (JCNativeException jcne) {
@@ -687,9 +771,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,7 +785,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setWidth(int Width) throws Throwable, system.PlatformNotSupportedException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -707,10 +795,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Color getBackColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackColor");
+            retObjectBackColor = classInstance.Get("BackColor");
+            JCObject val = (JCObject)retObjectBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackColor != null ? retObjectBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -718,7 +810,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setBackColor(Color BackColor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackColor", BackColor == null ? null : BackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -728,10 +820,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Color getForeColor() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectForeColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ForeColor");
+            retObjectForeColor = classInstance.Get("ForeColor");
+            JCObject val = (JCObject)retObjectForeColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectForeColor != null ? retObjectForeColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,7 +835,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setForeColor(Color ForeColor) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ForeColor", ForeColor == null ? null : ForeColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -749,10 +845,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Color getImageTransparentColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageTransparentColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageTransparentColor");
+            retObjectImageTransparentColor = classInstance.Get("ImageTransparentColor");
+            JCObject val = (JCObject)retObjectImageTransparentColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageTransparentColor != null ? retObjectImageTransparentColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -760,7 +860,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImageTransparentColor(Color ImageTransparentColor) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageTransparentColor", ImageTransparentColor == null ? null : ImageTransparentColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -770,10 +870,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ContentAlignment getImageAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageAlign");
+            retObjectImageAlign = classInstance.Get("ImageAlign");
+            JCObject val = (JCObject)retObjectImageAlign;
             return new ContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageAlign != null ? retObjectImageAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,7 +885,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImageAlign(ContentAlignment ImageAlign) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageAlign", ImageAlign == null ? null : ImageAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -791,10 +895,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ContentAlignment getTextAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlign");
+            retObjectTextAlign = classInstance.Get("TextAlign");
+            JCObject val = (JCObject)retObjectTextAlign;
             return new ContentAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlign != null ? retObjectTextAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -802,7 +910,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setTextAlign(ContentAlignment TextAlign) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlign", TextAlign == null ? null : TextAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -812,10 +920,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Font getFont() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.threading.LockRecursionException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFont = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Font");
+            retObjectFont = classInstance.Get("Font");
+            JCObject val = (JCObject)retObjectFont;
             return new Font(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFont != null ? retObjectFont.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -823,7 +935,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setFont(Font Font) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Font", Font == null ? null : Font.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -833,10 +945,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Image getBackgroundImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundImage");
+            retObjectBackgroundImage = classInstance.Get("BackgroundImage");
+            JCObject val = (JCObject)retObjectBackgroundImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundImage != null ? retObjectBackgroundImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,7 +960,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setBackgroundImage(Image BackgroundImage) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundImage", BackgroundImage == null ? null : BackgroundImage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -854,10 +970,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Image getImage() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -865,7 +985,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImage(Image Image) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Image", Image == null ? null : Image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -875,10 +995,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,10 +1010,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Rectangle getContentRectangle() throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentRectangle");
+            retObjectContentRectangle = classInstance.Get("ContentRectangle");
+            JCObject val = (JCObject)retObjectContentRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentRectangle != null ? retObjectContentRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -897,10 +1025,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,7 +1040,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setSize(Size Size) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size == null ? null : Size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -918,10 +1050,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public NetObject getCommandParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandParameter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandParameter");
+            retObjectCommandParameter = classInstance.Get("CommandParameter");
+            JCObject val = (JCObject)retObjectCommandParameter;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandParameter != null ? retObjectCommandParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -929,7 +1065,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setCommandParameter(NetObject CommandParameter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandParameter", CommandParameter == null ? null : CommandParameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -939,10 +1075,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -950,7 +1090,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setTag(NetObject Tag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -960,9 +1100,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getAccessibleDefaultActionDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleDefaultActionDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleDefaultActionDescription");
+            retObjectAccessibleDefaultActionDescription = classInstance.Get("AccessibleDefaultActionDescription");
+            return (java.lang.String)retObjectAccessibleDefaultActionDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleDefaultActionDescription != null ? retObjectAccessibleDefaultActionDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -970,7 +1114,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAccessibleDefaultActionDescription(java.lang.String AccessibleDefaultActionDescription) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleDefaultActionDescription", AccessibleDefaultActionDescription);
         } catch (JCNativeException jcne) {
@@ -980,9 +1124,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getAccessibleDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleDescription");
+            retObjectAccessibleDescription = classInstance.Get("AccessibleDescription");
+            return (java.lang.String)retObjectAccessibleDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleDescription != null ? retObjectAccessibleDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -990,7 +1138,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAccessibleDescription(java.lang.String AccessibleDescription) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleDescription", AccessibleDescription);
         } catch (JCNativeException jcne) {
@@ -1000,9 +1148,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getAccessibleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleName = null;
         try {
-            return (java.lang.String)classInstance.Get("AccessibleName");
+            retObjectAccessibleName = classInstance.Get("AccessibleName");
+            return (java.lang.String)retObjectAccessibleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccessibleName != null ? retObjectAccessibleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1010,7 +1162,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAccessibleName(java.lang.String AccessibleName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleName", AccessibleName);
         } catch (JCNativeException jcne) {
@@ -1020,9 +1172,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getImageKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageKey");
+            retObjectImageKey = classInstance.Get("ImageKey");
+            return (java.lang.String)retObjectImageKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageKey != null ? retObjectImageKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1030,7 +1186,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImageKey(java.lang.String ImageKey) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageKey", ImageKey);
         } catch (JCNativeException jcne) {
@@ -1040,9 +1196,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1050,7 +1210,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setName(java.lang.String Name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -1060,9 +1220,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectText = null;
         try {
-            return (java.lang.String)classInstance.Get("Text");
+            retObjectText = classInstance.Get("Text");
+            return (java.lang.String)retObjectText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectText != null ? retObjectText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1070,7 +1234,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setText(java.lang.String Text) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Text", Text);
         } catch (JCNativeException jcne) {
@@ -1080,9 +1244,13 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public java.lang.String getToolTipText() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolTipText = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolTipText");
+            retObjectToolTipText = classInstance.Get("ToolTipText");
+            return (java.lang.String)retObjectToolTipText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolTipText != null ? retObjectToolTipText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1090,7 +1258,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setToolTipText(java.lang.String ToolTipText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolTipText", ToolTipText);
         } catch (JCNativeException jcne) {
@@ -1100,10 +1268,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public AccessibleObject getAccessibilityObject() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibilityObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessibilityObject");
+            retObjectAccessibilityObject = classInstance.Get("AccessibilityObject");
+            JCObject val = (JCObject)retObjectAccessibilityObject;
             return new AccessibleObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessibilityObject != null ? retObjectAccessibilityObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1111,10 +1283,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public AccessibleRole getAccessibleRole() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessibleRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AccessibleRole");
+            retObjectAccessibleRole = classInstance.Get("AccessibleRole");
+            JCObject val = (JCObject)retObjectAccessibleRole;
             return new AccessibleRole(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessibleRole != null ? retObjectAccessibleRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1122,7 +1298,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAccessibleRole(AccessibleRole AccessibleRole) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AccessibleRole", AccessibleRole == null ? null : AccessibleRole.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1132,10 +1308,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public AnchorStyles getAnchor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnchor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Anchor");
+            retObjectAnchor = classInstance.Get("Anchor");
+            JCObject val = (JCObject)retObjectAnchor;
             return new AnchorStyles(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnchor != null ? retObjectAnchor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1143,7 +1323,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAnchor(AnchorStyles Anchor) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Anchor", Anchor == null ? null : Anchor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1153,10 +1333,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public DockStyle getDock() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDock = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Dock");
+            retObjectDock = classInstance.Get("Dock");
+            JCObject val = (JCObject)retObjectDock;
             return new DockStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDock != null ? retObjectDock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1164,7 +1348,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setDock(DockStyle Dock) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Dock", Dock == null ? null : Dock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1174,10 +1358,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ImageLayout getBackgroundImageLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackgroundImageLayout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BackgroundImageLayout");
+            retObjectBackgroundImageLayout = classInstance.Get("BackgroundImageLayout");
+            JCObject val = (JCObject)retObjectBackgroundImageLayout;
             return new ImageLayout(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBackgroundImageLayout != null ? retObjectBackgroundImageLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1185,7 +1373,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setBackgroundImageLayout(ImageLayout BackgroundImageLayout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackgroundImageLayout", BackgroundImageLayout == null ? null : BackgroundImageLayout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1195,10 +1383,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public MergeAction getMergeAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergeAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MergeAction");
+            retObjectMergeAction = classInstance.Get("MergeAction");
+            JCObject val = (JCObject)retObjectMergeAction;
             return new MergeAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergeAction != null ? retObjectMergeAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1206,7 +1398,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setMergeAction(MergeAction MergeAction) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MergeAction", MergeAction == null ? null : MergeAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1216,10 +1408,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Padding getMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,7 +1423,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setMargin(Padding Margin) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margin", Margin == null ? null : Margin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1237,10 +1433,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public Padding getPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            JCObject val = (JCObject)retObjectPadding;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1248,7 +1448,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setPadding(Padding Padding) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding == null ? null : Padding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1258,10 +1458,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public RightToLeft getRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            JCObject val = (JCObject)retObjectRightToLeft;
             return new RightToLeft(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1269,7 +1473,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setRightToLeft(RightToLeft RightToLeft) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeft", RightToLeft == null ? null : RightToLeft.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1279,10 +1483,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public TextImageRelation getTextImageRelation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextImageRelation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextImageRelation");
+            retObjectTextImageRelation = classInstance.Get("TextImageRelation");
+            JCObject val = (JCObject)retObjectTextImageRelation;
             return new TextImageRelation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextImageRelation != null ? retObjectTextImageRelation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1290,7 +1498,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setTextImageRelation(TextImageRelation TextImageRelation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextImageRelation", TextImageRelation == null ? null : TextImageRelation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1300,10 +1508,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStrip getOwner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new ToolStrip(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1311,7 +1523,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setOwner(ToolStrip Owner) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.threading.ThreadStateException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1321,10 +1533,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItem getOwnerItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OwnerItem");
+            retObjectOwnerItem = classInstance.Get("OwnerItem");
+            JCObject val = (JCObject)retObjectOwnerItem;
             return new ToolStripItem(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnerItem != null ? retObjectOwnerItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1332,10 +1548,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItemAlignment getAlignment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlignment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Alignment");
+            retObjectAlignment = classInstance.Get("Alignment");
+            JCObject val = (JCObject)retObjectAlignment;
             return new ToolStripItemAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlignment != null ? retObjectAlignment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1343,7 +1563,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setAlignment(ToolStripItemAlignment Alignment) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Alignment", Alignment == null ? null : Alignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1353,10 +1573,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItemDisplayStyle getDisplayStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayStyle");
+            retObjectDisplayStyle = classInstance.Get("DisplayStyle");
+            JCObject val = (JCObject)retObjectDisplayStyle;
             return new ToolStripItemDisplayStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayStyle != null ? retObjectDisplayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1364,7 +1588,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setDisplayStyle(ToolStripItemDisplayStyle DisplayStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayStyle", DisplayStyle == null ? null : DisplayStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1374,10 +1598,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItemImageScaling getImageScaling() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageScaling = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageScaling");
+            retObjectImageScaling = classInstance.Get("ImageScaling");
+            JCObject val = (JCObject)retObjectImageScaling;
             return new ToolStripItemImageScaling(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageScaling != null ? retObjectImageScaling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1385,7 +1613,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setImageScaling(ToolStripItemImageScaling ImageScaling) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageScaling", ImageScaling == null ? null : ImageScaling.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1395,10 +1623,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItemOverflow getOverflow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverflow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Overflow");
+            retObjectOverflow = classInstance.Get("Overflow");
+            JCObject val = (JCObject)retObjectOverflow;
             return new ToolStripItemOverflow(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverflow != null ? retObjectOverflow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1406,7 +1638,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setOverflow(ToolStripItemOverflow Overflow) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Overflow", Overflow == null ? null : Overflow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1416,10 +1648,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripItemPlacement getPlacement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Placement");
+            retObjectPlacement = classInstance.Get("Placement");
+            JCObject val = (JCObject)retObjectPlacement;
             return new ToolStripItemPlacement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPlacement != null ? retObjectPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1427,10 +1663,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ToolStripTextDirection getTextDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextDirection");
+            retObjectTextDirection = classInstance.Get("TextDirection");
+            JCObject val = (JCObject)retObjectTextDirection;
             return new ToolStripTextDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextDirection != null ? retObjectTextDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1438,7 +1678,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setTextDirection(ToolStripTextDirection TextDirection) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextDirection", TextDirection == null ? null : TextDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1448,10 +1688,14 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public ICommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1459,7 +1703,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void setCommand(ICommand Command) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1474,7 +1718,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addAvailableChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AvailableChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1484,7 +1728,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeAvailableChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AvailableChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1494,7 +1738,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1504,7 +1748,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeBackColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("BackColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1514,7 +1758,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -1524,7 +1768,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Click", handler);
         } catch (JCNativeException jcne) {
@@ -1534,7 +1778,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addCommandCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CommandCanExecuteChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1544,7 +1788,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeCommandCanExecuteChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CommandCanExecuteChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1554,7 +1798,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addCommandChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CommandChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1564,7 +1808,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeCommandChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CommandChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1574,7 +1818,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addCommandParameterChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CommandParameterChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1584,7 +1828,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeCommandParameterChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CommandParameterChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1594,7 +1838,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDisplayStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DisplayStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1604,7 +1848,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDisplayStyleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DisplayStyleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1614,7 +1858,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -1624,7 +1868,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDoubleClick(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DoubleClick", handler);
         } catch (JCNativeException jcne) {
@@ -1634,7 +1878,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1644,7 +1888,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDragLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1654,7 +1898,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1664,7 +1908,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeEnabledChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EnabledChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1674,7 +1918,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1684,7 +1928,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1694,7 +1938,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1704,7 +1948,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeLocationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LocationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1714,7 +1958,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1724,7 +1968,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1734,7 +1978,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -1744,7 +1988,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseHover(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseHover", handler);
         } catch (JCNativeException jcne) {
@@ -1754,7 +1998,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1764,7 +2008,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseLeave", handler);
         } catch (JCNativeException jcne) {
@@ -1774,7 +2018,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addOwnerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("OwnerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1784,7 +2028,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeOwnerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("OwnerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1794,7 +2038,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1804,7 +2048,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1814,7 +2058,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addSelectedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1824,7 +2068,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeSelectedChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1834,7 +2078,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1844,7 +2088,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1854,7 +2098,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1864,7 +2108,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeVisibleChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("VisibleChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1874,7 +2118,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -1884,7 +2128,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDragDrop(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragDrop", handler);
         } catch (JCNativeException jcne) {
@@ -1894,7 +2138,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1904,7 +2148,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDragEnter(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragEnter", handler);
         } catch (JCNativeException jcne) {
@@ -1914,7 +2158,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -1924,7 +2168,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeDragOver(DragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DragOver", handler);
         } catch (JCNativeException jcne) {
@@ -1934,7 +2178,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1944,7 +2188,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeGiveFeedback(GiveFeedbackEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("GiveFeedback", handler);
         } catch (JCNativeException jcne) {
@@ -1954,7 +2198,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1964,7 +2208,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseDown(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseDown", handler);
         } catch (JCNativeException jcne) {
@@ -1974,7 +2218,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1984,7 +2228,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseMove(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseMove", handler);
         } catch (JCNativeException jcne) {
@@ -1994,7 +2238,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -2004,7 +2248,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeMouseUp(MouseEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MouseUp", handler);
         } catch (JCNativeException jcne) {
@@ -2014,7 +2258,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addPaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -2024,7 +2268,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removePaint(PaintEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Paint", handler);
         } catch (JCNativeException jcne) {
@@ -2034,7 +2278,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -2044,7 +2288,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeQueryAccessibilityHelp(QueryAccessibilityHelpEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryAccessibilityHelp", handler);
         } catch (JCNativeException jcne) {
@@ -2054,7 +2298,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void addQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {
@@ -2064,7 +2308,7 @@ public class ToolStripItem extends BindableComponent implements system.windows.f
 
     public void removeQueryContinueDrag(QueryContinueDragEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("QueryContinueDrag", handler);
         } catch (JCNativeException jcne) {

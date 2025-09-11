@@ -165,8 +165,8 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -179,7 +179,7 @@ public class AttributeCallback extends JCVoidDelegate implements IJCVoidEventEmi
 
     public void DynamicInvoke(AttributeCallbackBuilder builder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", builder == null ? null : builder.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -174,7 +174,7 @@ public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
     
     public void Validate(X509Certificate2 certificate) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.AccessViolationException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.TypeLoadException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", certificate == null ? null : certificate.getJCOInstance());
         } catch (JCNativeException jcne) {

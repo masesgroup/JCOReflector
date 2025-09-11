@@ -165,9 +165,13 @@ public class ProxyStub extends NetObject  {
     
     public java.lang.String getBaseInterface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseInterface = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseInterface");
+            retObjectBaseInterface = classInstance.Get("BaseInterface");
+            return (java.lang.String)retObjectBaseInterface;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseInterface != null ? retObjectBaseInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getIID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIID = null;
         try {
-            return (java.lang.String)classInstance.Get("IID");
+            retObjectIID = classInstance.Get("IID");
+            return (java.lang.String)retObjectIID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIID != null ? retObjectIID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getNumMethods() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumMethods = null;
         try {
-            return (java.lang.String)classInstance.Get("NumMethods");
+            retObjectNumMethods = classInstance.Get("NumMethods");
+            return (java.lang.String)retObjectNumMethods;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNumMethods != null ? retObjectNumMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +221,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("TlbId");
+            retObjectTlbId = classInstance.Get("TlbId");
+            return (java.lang.String)retObjectTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTlbId != null ? retObjectTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +235,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getXmlBaseInterface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlBaseInterface = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlBaseInterface");
+            retObjectXmlBaseInterface = classInstance.Get("XmlBaseInterface");
+            return (java.lang.String)retObjectXmlBaseInterface;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlBaseInterface != null ? retObjectXmlBaseInterface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +249,7 @@ public class ProxyStub extends NetObject  {
 
     public void setXmlBaseInterface(java.lang.String XmlBaseInterface) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlBaseInterface", XmlBaseInterface);
         } catch (JCNativeException jcne) {
@@ -235,9 +259,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getXmlIID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlIID = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlIID");
+            retObjectXmlIID = classInstance.Get("XmlIID");
+            return (java.lang.String)retObjectXmlIID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlIID != null ? retObjectXmlIID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +273,7 @@ public class ProxyStub extends NetObject  {
 
     public void setXmlIID(java.lang.String XmlIID) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlIID", XmlIID);
         } catch (JCNativeException jcne) {
@@ -255,9 +283,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getXmlName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlName = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlName");
+            retObjectXmlName = classInstance.Get("XmlName");
+            return (java.lang.String)retObjectXmlName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlName != null ? retObjectXmlName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +297,7 @@ public class ProxyStub extends NetObject  {
 
     public void setXmlName(java.lang.String XmlName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlName", XmlName);
         } catch (JCNativeException jcne) {
@@ -275,9 +307,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getXmlNumMethods() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlNumMethods = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlNumMethods");
+            retObjectXmlNumMethods = classInstance.Get("XmlNumMethods");
+            return (java.lang.String)retObjectXmlNumMethods;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlNumMethods != null ? retObjectXmlNumMethods.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,7 +321,7 @@ public class ProxyStub extends NetObject  {
 
     public void setXmlNumMethods(java.lang.String XmlNumMethods) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlNumMethods", XmlNumMethods);
         } catch (JCNativeException jcne) {
@@ -295,9 +331,13 @@ public class ProxyStub extends NetObject  {
 
     public java.lang.String getXmlTlbId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlTlbId = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlTlbId");
+            retObjectXmlTlbId = classInstance.Get("XmlTlbId");
+            return (java.lang.String)retObjectXmlTlbId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlTlbId != null ? retObjectXmlTlbId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +345,7 @@ public class ProxyStub extends NetObject  {
 
     public void setXmlTlbId(java.lang.String XmlTlbId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlTlbId", XmlTlbId);
         } catch (JCNativeException jcne) {

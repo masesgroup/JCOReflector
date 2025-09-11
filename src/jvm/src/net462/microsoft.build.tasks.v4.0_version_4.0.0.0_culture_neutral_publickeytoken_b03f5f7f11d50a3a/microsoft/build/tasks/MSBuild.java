@@ -164,9 +164,13 @@ public class MSBuild extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class MSBuild extends TaskExtension  {
     
     public boolean getBuildInParallel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildInParallel = null;
         try {
-            return (boolean)classInstance.Get("BuildInParallel");
+            retObjectBuildInParallel = classInstance.Get("BuildInParallel");
+            return (boolean)retObjectBuildInParallel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBuildInParallel != null ? retObjectBuildInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setBuildInParallel(boolean BuildInParallel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BuildInParallel", BuildInParallel);
         } catch (JCNativeException jcne) {
@@ -198,9 +206,13 @@ public class MSBuild extends TaskExtension  {
 
     public boolean getRebaseOutputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRebaseOutputs = null;
         try {
-            return (boolean)classInstance.Get("RebaseOutputs");
+            retObjectRebaseOutputs = classInstance.Get("RebaseOutputs");
+            return (boolean)retObjectRebaseOutputs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRebaseOutputs != null ? retObjectRebaseOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +220,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setRebaseOutputs(boolean RebaseOutputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RebaseOutputs", RebaseOutputs);
         } catch (JCNativeException jcne) {
@@ -218,9 +230,13 @@ public class MSBuild extends TaskExtension  {
 
     public boolean getRunEachTargetSeparately() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRunEachTargetSeparately = null;
         try {
-            return (boolean)classInstance.Get("RunEachTargetSeparately");
+            retObjectRunEachTargetSeparately = classInstance.Get("RunEachTargetSeparately");
+            return (boolean)retObjectRunEachTargetSeparately;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRunEachTargetSeparately != null ? retObjectRunEachTargetSeparately.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +244,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setRunEachTargetSeparately(boolean RunEachTargetSeparately) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RunEachTargetSeparately", RunEachTargetSeparately);
         } catch (JCNativeException jcne) {
@@ -238,9 +254,13 @@ public class MSBuild extends TaskExtension  {
 
     public boolean getStopOnFirstFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStopOnFirstFailure = null;
         try {
-            return (boolean)classInstance.Get("StopOnFirstFailure");
+            retObjectStopOnFirstFailure = classInstance.Get("StopOnFirstFailure");
+            return (boolean)retObjectStopOnFirstFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectStopOnFirstFailure != null ? retObjectStopOnFirstFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +268,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setStopOnFirstFailure(boolean StopOnFirstFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StopOnFirstFailure", StopOnFirstFailure);
         } catch (JCNativeException jcne) {
@@ -258,9 +278,13 @@ public class MSBuild extends TaskExtension  {
 
     public boolean getUnloadProjectsOnCompletion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnloadProjectsOnCompletion = null;
         try {
-            return (boolean)classInstance.Get("UnloadProjectsOnCompletion");
+            retObjectUnloadProjectsOnCompletion = classInstance.Get("UnloadProjectsOnCompletion");
+            return (boolean)retObjectUnloadProjectsOnCompletion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnloadProjectsOnCompletion != null ? retObjectUnloadProjectsOnCompletion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +292,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setUnloadProjectsOnCompletion(boolean UnloadProjectsOnCompletion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnloadProjectsOnCompletion", UnloadProjectsOnCompletion);
         } catch (JCNativeException jcne) {
@@ -278,9 +302,13 @@ public class MSBuild extends TaskExtension  {
 
     public boolean getUseResultsCache() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseResultsCache = null;
         try {
-            return (boolean)classInstance.Get("UseResultsCache");
+            retObjectUseResultsCache = classInstance.Get("UseResultsCache");
+            return (boolean)retObjectUseResultsCache;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseResultsCache != null ? retObjectUseResultsCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +316,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setUseResultsCache(boolean UseResultsCache) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseResultsCache", UseResultsCache);
         } catch (JCNativeException jcne) {
@@ -298,16 +326,20 @@ public class MSBuild extends TaskExtension  {
 
     public final ITaskItem[] getProjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjects = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Projects");
+            retObjectProjects = classInstance.Get("Projects");
+            JCObject resultingObjects = (JCObject)retObjectProjects;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProjects != null ? retObjectProjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setProjects(ITaskItem[] Projects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Projects", toObjectFromArray(Projects));
         } catch (JCNativeException jcne) {
@@ -325,16 +357,20 @@ public class MSBuild extends TaskExtension  {
 
     public final ITaskItem[] getTargetOutputs() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetOutputs = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetOutputs");
+            retObjectTargetOutputs = classInstance.Get("TargetOutputs");
+            JCObject resultingObjects = (JCObject)retObjectTargetOutputs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetOutputs != null ? retObjectTargetOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +378,13 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String getRemoveProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveProperties = null;
         try {
-            return (java.lang.String)classInstance.Get("RemoveProperties");
+            retObjectRemoveProperties = classInstance.Get("RemoveProperties");
+            return (java.lang.String)retObjectRemoveProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRemoveProperties != null ? retObjectRemoveProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +392,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setRemoveProperties(java.lang.String RemoveProperties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemoveProperties", RemoveProperties);
         } catch (JCNativeException jcne) {
@@ -362,9 +402,13 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String getSkipNonexistentProjects() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipNonexistentProjects = null;
         try {
-            return (java.lang.String)classInstance.Get("SkipNonexistentProjects");
+            retObjectSkipNonexistentProjects = classInstance.Get("SkipNonexistentProjects");
+            return (java.lang.String)retObjectSkipNonexistentProjects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSkipNonexistentProjects != null ? retObjectSkipNonexistentProjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +416,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setSkipNonexistentProjects(java.lang.String SkipNonexistentProjects) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipNonexistentProjects", SkipNonexistentProjects);
         } catch (JCNativeException jcne) {
@@ -382,9 +426,13 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String getToolsVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolsVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("ToolsVersion");
+            retObjectToolsVersion = classInstance.Get("ToolsVersion");
+            return (java.lang.String)retObjectToolsVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectToolsVersion != null ? retObjectToolsVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +440,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setToolsVersion(java.lang.String ToolsVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ToolsVersion", ToolsVersion);
         } catch (JCNativeException jcne) {
@@ -402,10 +450,12 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String[] getProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject resultingObjects = (JCObject)retObjectProperties;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -414,6 +464,8 @@ public class MSBuild extends TaskExtension  {
 				resultingArray[indexProperties] = (java.lang.String)resultingArrayList.get(indexProperties);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,7 +473,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setProperties(java.lang.String[] Properties) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Properties", Properties);
         } catch (JCNativeException jcne) {
@@ -431,10 +483,12 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String[] getTargetAndPropertyListSeparators() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetAndPropertyListSeparators = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("TargetAndPropertyListSeparators");
+            retObjectTargetAndPropertyListSeparators = classInstance.Get("TargetAndPropertyListSeparators");
+            JCObject resultingObjects = (JCObject)retObjectTargetAndPropertyListSeparators;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -443,6 +497,8 @@ public class MSBuild extends TaskExtension  {
 				resultingArray[indexTargetAndPropertyListSeparators] = (java.lang.String)resultingArrayList.get(indexTargetAndPropertyListSeparators);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTargetAndPropertyListSeparators != null ? retObjectTargetAndPropertyListSeparators.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +506,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setTargetAndPropertyListSeparators(java.lang.String[] TargetAndPropertyListSeparators) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetAndPropertyListSeparators", TargetAndPropertyListSeparators);
         } catch (JCNativeException jcne) {
@@ -460,10 +516,12 @@ public class MSBuild extends TaskExtension  {
 
     public java.lang.String[] getTargets() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargets = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Targets");
+            retObjectTargets = classInstance.Get("Targets");
+            JCObject resultingObjects = (JCObject)retObjectTargets;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -472,6 +530,8 @@ public class MSBuild extends TaskExtension  {
 				resultingArray[indexTargets] = (java.lang.String)resultingArrayList.get(indexTargets);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTargets != null ? retObjectTargets.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,7 +539,7 @@ public class MSBuild extends TaskExtension  {
 
     public void setTargets(java.lang.String[] Targets) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Targets", Targets);
         } catch (JCNativeException jcne) {

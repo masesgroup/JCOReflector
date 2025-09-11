@@ -169,10 +169,14 @@ public class HttpWebResponse extends WebResponse  {
     
     public Stream GetResponseStream() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponseStream = null;
         try {
-            JCObject objGetResponseStream = (JCObject)classInstance.Invoke("GetResponseStream");
+            retObjectGetResponseStream = classInstance.Invoke("GetResponseStream");
+            JCObject objGetResponseStream = (JCObject)retObjectGetResponseStream;
             return new Stream(objGetResponseStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponseStream != null ? retObjectGetResponseStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String GetResponseHeader(java.lang.String headerName) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponseHeader = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetResponseHeader", headerName);
+            retObjectGetResponseHeader = classInstance.Invoke("GetResponseHeader", headerName);
+            return (java.lang.String)retObjectGetResponseHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResponseHeader != null ? retObjectGetResponseHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +198,7 @@ public class HttpWebResponse extends WebResponse  {
 
     public void Close() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.FormatException, system.net.networkinformation.NetworkInformationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -204,10 +212,14 @@ public class HttpWebResponse extends WebResponse  {
     
     public DateTime getLastModified() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.net.ProtocolViolationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastModified = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastModified");
+            retObjectLastModified = classInstance.Get("LastModified");
+            JCObject val = (JCObject)retObjectLastModified;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastModified != null ? retObjectLastModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,10 +227,14 @@ public class HttpWebResponse extends WebResponse  {
 
     public CookieCollection getCookies() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCookies = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Cookies");
+            retObjectCookies = classInstance.Get("Cookies");
+            JCObject val = (JCObject)retObjectCookies;
             return new CookieCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCookies != null ? retObjectCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class HttpWebResponse extends WebResponse  {
 
     public void setCookies(CookieCollection Cookies) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Cookies", Cookies == null ? null : Cookies.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,10 +252,14 @@ public class HttpWebResponse extends WebResponse  {
 
     public HttpStatusCode getStatusCode() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusCode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StatusCode");
+            retObjectStatusCode = classInstance.Get("StatusCode");
+            JCObject val = (JCObject)retObjectStatusCode;
             return new HttpStatusCode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStatusCode != null ? retObjectStatusCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +267,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String getCharacterSet() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCharacterSet = null;
         try {
-            return (java.lang.String)classInstance.Get("CharacterSet");
+            retObjectCharacterSet = classInstance.Get("CharacterSet");
+            return (java.lang.String)retObjectCharacterSet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCharacterSet != null ? retObjectCharacterSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +281,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String getContentEncoding() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentEncoding = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentEncoding");
+            retObjectContentEncoding = classInstance.Get("ContentEncoding");
+            return (java.lang.String)retObjectContentEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentEncoding != null ? retObjectContentEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +295,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String getMethod() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("Method");
+            retObjectMethod = classInstance.Get("Method");
+            return (java.lang.String)retObjectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMethod != null ? retObjectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +309,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String getServer() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServer = null;
         try {
-            return (java.lang.String)classInstance.Get("Server");
+            retObjectServer = classInstance.Get("Server");
+            return (java.lang.String)retObjectServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectServer != null ? retObjectServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +323,13 @@ public class HttpWebResponse extends WebResponse  {
 
     public java.lang.String getStatusDescription() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStatusDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("StatusDescription");
+            retObjectStatusDescription = classInstance.Get("StatusDescription");
+            return (java.lang.String)retObjectStatusDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStatusDescription != null ? retObjectStatusDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +337,14 @@ public class HttpWebResponse extends WebResponse  {
 
     public Version getProtocolVersion() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtocolVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtocolVersion");
+            retObjectProtocolVersion = classInstance.Get("ProtocolVersion");
+            JCObject val = (JCObject)retObjectProtocolVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtocolVersion != null ? retObjectProtocolVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -169,10 +169,14 @@ public class NamedArgumentTypeEncoder extends ValueType  {
     
     public CustomAttributeArrayTypeEncoder SZArray() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSZArray = null;
         try {
-            JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
+            retObjectSZArray = classInstance.Invoke("SZArray");
+            JCObject objSZArray = (JCObject)retObjectSZArray;
             return new CustomAttributeArrayTypeEncoder(objSZArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSZArray != null ? retObjectSZArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class NamedArgumentTypeEncoder extends ValueType  {
 
     public CustomAttributeElementTypeEncoder ScalarType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScalarType = null;
         try {
-            JCObject objScalarType = (JCObject)classInstance.Invoke("ScalarType");
+            retObjectScalarType = classInstance.Invoke("ScalarType");
+            JCObject objScalarType = (JCObject)retObjectScalarType;
             return new CustomAttributeElementTypeEncoder(objScalarType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScalarType != null ? retObjectScalarType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class NamedArgumentTypeEncoder extends ValueType  {
 
     public void Object() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Object");
         } catch (JCNativeException jcne) {
@@ -205,10 +213,14 @@ public class NamedArgumentTypeEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

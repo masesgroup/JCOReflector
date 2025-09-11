@@ -167,7 +167,7 @@ public class Slider extends RangeBase  {
     
     public void OnApplyTemplate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -181,9 +181,13 @@ public class Slider extends RangeBase  {
     
     public boolean getIsDirectionReversed() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDirectionReversed = null;
         try {
-            return (boolean)classInstance.Get("IsDirectionReversed");
+            retObjectIsDirectionReversed = classInstance.Get("IsDirectionReversed");
+            return (boolean)retObjectIsDirectionReversed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDirectionReversed != null ? retObjectIsDirectionReversed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class Slider extends RangeBase  {
 
     public void setIsDirectionReversed(boolean IsDirectionReversed) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsDirectionReversed", IsDirectionReversed);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class Slider extends RangeBase  {
 
     public boolean getIsMoveToPointEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMoveToPointEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsMoveToPointEnabled");
+            retObjectIsMoveToPointEnabled = classInstance.Get("IsMoveToPointEnabled");
+            return (boolean)retObjectIsMoveToPointEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMoveToPointEnabled != null ? retObjectIsMoveToPointEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +219,7 @@ public class Slider extends RangeBase  {
 
     public void setIsMoveToPointEnabled(boolean IsMoveToPointEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMoveToPointEnabled", IsMoveToPointEnabled);
         } catch (JCNativeException jcne) {
@@ -221,9 +229,13 @@ public class Slider extends RangeBase  {
 
     public boolean getIsSelectionRangeEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSelectionRangeEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsSelectionRangeEnabled");
+            retObjectIsSelectionRangeEnabled = classInstance.Get("IsSelectionRangeEnabled");
+            return (boolean)retObjectIsSelectionRangeEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSelectionRangeEnabled != null ? retObjectIsSelectionRangeEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +243,7 @@ public class Slider extends RangeBase  {
 
     public void setIsSelectionRangeEnabled(boolean IsSelectionRangeEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSelectionRangeEnabled", IsSelectionRangeEnabled);
         } catch (JCNativeException jcne) {
@@ -241,9 +253,13 @@ public class Slider extends RangeBase  {
 
     public boolean getIsSnapToTickEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSnapToTickEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsSnapToTickEnabled");
+            retObjectIsSnapToTickEnabled = classInstance.Get("IsSnapToTickEnabled");
+            return (boolean)retObjectIsSnapToTickEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSnapToTickEnabled != null ? retObjectIsSnapToTickEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class Slider extends RangeBase  {
 
     public void setIsSnapToTickEnabled(boolean IsSnapToTickEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSnapToTickEnabled", IsSnapToTickEnabled);
         } catch (JCNativeException jcne) {
@@ -261,9 +277,13 @@ public class Slider extends RangeBase  {
 
     public double getSelectionEnd() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionEnd = null;
         try {
-            return (double)classInstance.Get("SelectionEnd");
+            retObjectSelectionEnd = classInstance.Get("SelectionEnd");
+            return (double)retObjectSelectionEnd;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectSelectionEnd != null ? retObjectSelectionEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class Slider extends RangeBase  {
 
     public void setSelectionEnd(double SelectionEnd) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionEnd", SelectionEnd);
         } catch (JCNativeException jcne) {
@@ -281,9 +301,13 @@ public class Slider extends RangeBase  {
 
     public double getSelectionStart() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionStart = null;
         try {
-            return (double)classInstance.Get("SelectionStart");
+            retObjectSelectionStart = classInstance.Get("SelectionStart");
+            return (double)retObjectSelectionStart;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectSelectionStart != null ? retObjectSelectionStart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +315,7 @@ public class Slider extends RangeBase  {
 
     public void setSelectionStart(double SelectionStart) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionStart", SelectionStart);
         } catch (JCNativeException jcne) {
@@ -301,9 +325,13 @@ public class Slider extends RangeBase  {
 
     public double getTickFrequency() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTickFrequency = null;
         try {
-            return (double)classInstance.Get("TickFrequency");
+            retObjectTickFrequency = classInstance.Get("TickFrequency");
+            return (double)retObjectTickFrequency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTickFrequency != null ? retObjectTickFrequency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +339,7 @@ public class Slider extends RangeBase  {
 
     public void setTickFrequency(double TickFrequency) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TickFrequency", TickFrequency);
         } catch (JCNativeException jcne) {
@@ -321,9 +349,13 @@ public class Slider extends RangeBase  {
 
     public int getAutoToolTipPrecision() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoToolTipPrecision = null;
         try {
-            return (int)classInstance.Get("AutoToolTipPrecision");
+            retObjectAutoToolTipPrecision = classInstance.Get("AutoToolTipPrecision");
+            return (int)retObjectAutoToolTipPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAutoToolTipPrecision != null ? retObjectAutoToolTipPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,7 +363,7 @@ public class Slider extends RangeBase  {
 
     public void setAutoToolTipPrecision(int AutoToolTipPrecision) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoToolTipPrecision", AutoToolTipPrecision);
         } catch (JCNativeException jcne) {
@@ -341,9 +373,13 @@ public class Slider extends RangeBase  {
 
     public int getDelay() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelay = null;
         try {
-            return (int)classInstance.Get("Delay");
+            retObjectDelay = classInstance.Get("Delay");
+            return (int)retObjectDelay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDelay != null ? retObjectDelay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +387,7 @@ public class Slider extends RangeBase  {
 
     public void setDelay(int Delay) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Delay", Delay);
         } catch (JCNativeException jcne) {
@@ -361,9 +397,13 @@ public class Slider extends RangeBase  {
 
     public int getInterval() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterval = null;
         try {
-            return (int)classInstance.Get("Interval");
+            retObjectInterval = classInstance.Get("Interval");
+            return (int)retObjectInterval;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectInterval != null ? retObjectInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,7 +411,7 @@ public class Slider extends RangeBase  {
 
     public void setInterval(int Interval) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Interval", Interval);
         } catch (JCNativeException jcne) {
@@ -381,10 +421,14 @@ public class Slider extends RangeBase  {
 
     public Orientation getOrientation() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOrientation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Orientation");
+            retObjectOrientation = classInstance.Get("Orientation");
+            JCObject val = (JCObject)retObjectOrientation;
             return new Orientation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrientation != null ? retObjectOrientation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +436,7 @@ public class Slider extends RangeBase  {
 
     public void setOrientation(Orientation Orientation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Orientation", Orientation == null ? null : Orientation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -402,10 +446,14 @@ public class Slider extends RangeBase  {
 
     public AutoToolTipPlacement getAutoToolTipPlacement() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoToolTipPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoToolTipPlacement");
+            retObjectAutoToolTipPlacement = classInstance.Get("AutoToolTipPlacement");
+            JCObject val = (JCObject)retObjectAutoToolTipPlacement;
             return new AutoToolTipPlacement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoToolTipPlacement != null ? retObjectAutoToolTipPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,7 +461,7 @@ public class Slider extends RangeBase  {
 
     public void setAutoToolTipPlacement(AutoToolTipPlacement AutoToolTipPlacement) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoToolTipPlacement", AutoToolTipPlacement == null ? null : AutoToolTipPlacement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -423,10 +471,14 @@ public class Slider extends RangeBase  {
 
     public TickPlacement getTickPlacement() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTickPlacement = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TickPlacement");
+            retObjectTickPlacement = classInstance.Get("TickPlacement");
+            JCObject val = (JCObject)retObjectTickPlacement;
             return new TickPlacement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTickPlacement != null ? retObjectTickPlacement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -434,7 +486,7 @@ public class Slider extends RangeBase  {
 
     public void setTickPlacement(TickPlacement TickPlacement) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TickPlacement", TickPlacement == null ? null : TickPlacement.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -444,10 +496,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getDecreaseLarge() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseLarge = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseLarge");
+            retObjectDecreaseLarge = classType.Get("DecreaseLarge");
+            JCObject val = (JCObject)retObjectDecreaseLarge;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseLarge != null ? retObjectDecreaseLarge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -455,10 +511,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getDecreaseSmall() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecreaseSmall = null;
         try {
-            JCObject val = (JCObject)classType.Get("DecreaseSmall");
+            retObjectDecreaseSmall = classType.Get("DecreaseSmall");
+            JCObject val = (JCObject)retObjectDecreaseSmall;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecreaseSmall != null ? retObjectDecreaseSmall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,10 +526,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getIncreaseLarge() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseLarge = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseLarge");
+            retObjectIncreaseLarge = classType.Get("IncreaseLarge");
+            JCObject val = (JCObject)retObjectIncreaseLarge;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseLarge != null ? retObjectIncreaseLarge.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,10 +541,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getIncreaseSmall() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncreaseSmall = null;
         try {
-            JCObject val = (JCObject)classType.Get("IncreaseSmall");
+            retObjectIncreaseSmall = classType.Get("IncreaseSmall");
+            JCObject val = (JCObject)retObjectIncreaseSmall;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncreaseSmall != null ? retObjectIncreaseSmall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,10 +556,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getMaximizeValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaximizeValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaximizeValue");
+            retObjectMaximizeValue = classType.Get("MaximizeValue");
+            JCObject val = (JCObject)retObjectMaximizeValue;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximizeValue != null ? retObjectMaximizeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,10 +571,14 @@ public class Slider extends RangeBase  {
 
     public static RoutedCommand getMinimizeValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinimizeValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinimizeValue");
+            retObjectMinimizeValue = classType.Get("MinimizeValue");
+            JCObject val = (JCObject)retObjectMinimizeValue;
             return new RoutedCommand(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinimizeValue != null ? retObjectMinimizeValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,10 +586,14 @@ public class Slider extends RangeBase  {
 
     public DoubleCollection getTicks() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTicks = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Ticks");
+            retObjectTicks = classInstance.Get("Ticks");
+            JCObject val = (JCObject)retObjectTicks;
             return new DoubleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTicks != null ? retObjectTicks.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -521,7 +601,7 @@ public class Slider extends RangeBase  {
 
     public void setTicks(DoubleCollection Ticks) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Ticks", Ticks == null ? null : Ticks.getJCOInstance());
         } catch (JCNativeException jcne) {

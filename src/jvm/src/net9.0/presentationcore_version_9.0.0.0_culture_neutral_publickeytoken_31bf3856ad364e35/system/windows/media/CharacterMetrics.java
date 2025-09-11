@@ -175,9 +175,13 @@ public class CharacterMetrics extends NetObject  {
     
     public double getBaseline() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseline = null;
         try {
-            return (double)classInstance.Get("Baseline");
+            retObjectBaseline = classInstance.Get("Baseline");
+            return (double)retObjectBaseline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBaseline != null ? retObjectBaseline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +189,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getBlackBoxHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlackBoxHeight = null;
         try {
-            return (double)classInstance.Get("BlackBoxHeight");
+            retObjectBlackBoxHeight = classInstance.Get("BlackBoxHeight");
+            return (double)retObjectBlackBoxHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBlackBoxHeight != null ? retObjectBlackBoxHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getBlackBoxWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlackBoxWidth = null;
         try {
-            return (double)classInstance.Get("BlackBoxWidth");
+            retObjectBlackBoxWidth = classInstance.Get("BlackBoxWidth");
+            return (double)retObjectBlackBoxWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBlackBoxWidth != null ? retObjectBlackBoxWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +217,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getBottomSideBearing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottomSideBearing = null;
         try {
-            return (double)classInstance.Get("BottomSideBearing");
+            retObjectBottomSideBearing = classInstance.Get("BottomSideBearing");
+            return (double)retObjectBottomSideBearing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectBottomSideBearing != null ? retObjectBottomSideBearing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +231,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getLeftSideBearing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeftSideBearing = null;
         try {
-            return (double)classInstance.Get("LeftSideBearing");
+            retObjectLeftSideBearing = classInstance.Get("LeftSideBearing");
+            return (double)retObjectLeftSideBearing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectLeftSideBearing != null ? retObjectLeftSideBearing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +245,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getRightSideBearing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightSideBearing = null;
         try {
-            return (double)classInstance.Get("RightSideBearing");
+            retObjectRightSideBearing = classInstance.Get("RightSideBearing");
+            return (double)retObjectRightSideBearing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectRightSideBearing != null ? retObjectRightSideBearing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,9 +259,13 @@ public class CharacterMetrics extends NetObject  {
 
     public double getTopSideBearing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopSideBearing = null;
         try {
-            return (double)classInstance.Get("TopSideBearing");
+            retObjectTopSideBearing = classInstance.Get("TopSideBearing");
+            return (double)retObjectTopSideBearing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectTopSideBearing != null ? retObjectTopSideBearing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +273,13 @@ public class CharacterMetrics extends NetObject  {
 
     public java.lang.String getMetrics() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMetrics = null;
         try {
-            return (java.lang.String)classInstance.Get("Metrics");
+            retObjectMetrics = classInstance.Get("Metrics");
+            return (java.lang.String)retObjectMetrics;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMetrics != null ? retObjectMetrics.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +287,7 @@ public class CharacterMetrics extends NetObject  {
 
     public void setMetrics(java.lang.String Metrics) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.OverflowException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Metrics", Metrics);
         } catch (JCNativeException jcne) {

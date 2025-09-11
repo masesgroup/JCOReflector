@@ -198,16 +198,20 @@ public class AxParameterData extends NetObject  {
     
     public static AxParameterData[] Convert(ParameterInfo[] infos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
             ArrayList<AxParameterData> resultingArrayList = new ArrayList<AxParameterData>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Convert", (java.lang.Object)toObjectFromArray(infos));
+            retObjectConvert = classType.Invoke("Convert", (java.lang.Object)toObjectFromArray(infos));
+            JCObject resultingObjects = (JCObject)retObjectConvert;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AxParameterData(resultingObject));
             }
             AxParameterData[] resultingArray = new AxParameterData[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,16 +219,20 @@ public class AxParameterData extends NetObject  {
 
     public static AxParameterData[] Convert(ParameterInfo[] infos, boolean ignoreByRefs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
             ArrayList<AxParameterData> resultingArrayList = new ArrayList<AxParameterData>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Convert", toObjectFromArray(infos), ignoreByRefs);
+            retObjectConvert = classType.Invoke("Convert", toObjectFromArray(infos), ignoreByRefs);
+            JCObject resultingObjects = (JCObject)retObjectConvert;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AxParameterData(resultingObject));
             }
             AxParameterData[] resultingArray = new AxParameterData[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +244,13 @@ public class AxParameterData extends NetObject  {
     
     public boolean getIsByRef() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsByRef = null;
         try {
-            return (boolean)classInstance.Get("IsByRef");
+            retObjectIsByRef = classInstance.Get("IsByRef");
+            return (boolean)retObjectIsByRef;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsByRef != null ? retObjectIsByRef.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +258,13 @@ public class AxParameterData extends NetObject  {
 
     public boolean getIsIn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIn = null;
         try {
-            return (boolean)classInstance.Get("IsIn");
+            retObjectIsIn = classInstance.Get("IsIn");
+            return (boolean)retObjectIsIn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIn != null ? retObjectIsIn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,9 +272,13 @@ public class AxParameterData extends NetObject  {
 
     public boolean getIsOptional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOptional = null;
         try {
-            return (boolean)classInstance.Get("IsOptional");
+            retObjectIsOptional = classInstance.Get("IsOptional");
+            return (boolean)retObjectIsOptional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOptional != null ? retObjectIsOptional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,9 +286,13 @@ public class AxParameterData extends NetObject  {
 
     public boolean getIsOut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOut = null;
         try {
-            return (boolean)classInstance.Get("IsOut");
+            retObjectIsOut = classInstance.Get("IsOut");
+            return (boolean)retObjectIsOut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOut != null ? retObjectIsOut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +300,14 @@ public class AxParameterData extends NetObject  {
 
     public FieldDirection getDirection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Direction");
+            retObjectDirection = classInstance.Get("Direction");
+            JCObject val = (JCObject)retObjectDirection;
             return new FieldDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirection != null ? retObjectDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +315,13 @@ public class AxParameterData extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +329,7 @@ public class AxParameterData extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -307,9 +339,13 @@ public class AxParameterData extends NetObject  {
 
     public java.lang.String getTypeName() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,10 +353,14 @@ public class AxParameterData extends NetObject  {
 
     public NetType getParameterType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterType");
+            retObjectParameterType = classInstance.Get("ParameterType");
+            JCObject val = (JCObject)retObjectParameterType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterType != null ? retObjectParameterType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,9 +160,13 @@ public class GCGenerationInfo extends ValueType  {
     
     public long getFragmentationAfterBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentationAfterBytes = null;
         try {
-            return (long)classInstance.Get("FragmentationAfterBytes");
+            retObjectFragmentationAfterBytes = classInstance.Get("FragmentationAfterBytes");
+            return (long)retObjectFragmentationAfterBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectFragmentationAfterBytes != null ? retObjectFragmentationAfterBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getFragmentationBeforeBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentationBeforeBytes = null;
         try {
-            return (long)classInstance.Get("FragmentationBeforeBytes");
+            retObjectFragmentationBeforeBytes = classInstance.Get("FragmentationBeforeBytes");
+            return (long)retObjectFragmentationBeforeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectFragmentationBeforeBytes != null ? retObjectFragmentationBeforeBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getSizeAfterBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeAfterBytes = null;
         try {
-            return (long)classInstance.Get("SizeAfterBytes");
+            retObjectSizeAfterBytes = classInstance.Get("SizeAfterBytes");
+            return (long)retObjectSizeAfterBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSizeAfterBytes != null ? retObjectSizeAfterBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class GCGenerationInfo extends ValueType  {
 
     public long getSizeBeforeBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeBeforeBytes = null;
         try {
-            return (long)classInstance.Get("SizeBeforeBytes");
+            retObjectSizeBeforeBytes = classInstance.Get("SizeBeforeBytes");
+            return (long)retObjectSizeBeforeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSizeBeforeBytes != null ? retObjectSizeBeforeBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

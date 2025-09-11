@@ -161,9 +161,13 @@ public class ProcessModule extends Component  {
     
     public int getModuleMemorySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModuleMemorySize = null;
         try {
-            return (int)classInstance.Get("ModuleMemorySize");
+            retObjectModuleMemorySize = classInstance.Get("ModuleMemorySize");
+            return (int)retObjectModuleMemorySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectModuleMemorySize != null ? retObjectModuleMemorySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class ProcessModule extends Component  {
 
     public void setModuleMemorySize(int ModuleMemorySize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModuleMemorySize", ModuleMemorySize);
         } catch (JCNativeException jcne) {
@@ -181,10 +185,14 @@ public class ProcessModule extends Component  {
 
     public FileVersionInfo getFileVersionInfo() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileVersionInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileVersionInfo");
+            retObjectFileVersionInfo = classInstance.Get("FileVersionInfo");
+            JCObject val = (JCObject)retObjectFileVersionInfo;
             return new FileVersionInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileVersionInfo != null ? retObjectFileVersionInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class ProcessModule extends Component  {
 
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class ProcessModule extends Component  {
 
     public java.lang.String getModuleName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModuleName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModuleName");
+            retObjectModuleName = classInstance.Get("ModuleName");
+            return (java.lang.String)retObjectModuleName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModuleName != null ? retObjectModuleName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -143,10 +143,12 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
     
     public byte[] GetSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSignature = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSignature");
+            retObjectGetSignature = classInstance.Invoke("GetSignature");
+            JCObject resultingObjects = (JCObject)retObjectGetSignature;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -155,6 +157,8 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 				resultingArray[indexGetSignature] = (byte)resultingArrayList.get(indexGetSignature);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetSignature != null ? retObjectGetSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
     
     public int getAddressField1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressField1 = null;
         try {
-            return (int)classInstance.Get("AddressField1");
+            retObjectAddressField1 = classInstance.Get("AddressField1");
+            return (int)retObjectAddressField1;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAddressField1 != null ? retObjectAddressField1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public int getAddressField2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressField2 = null;
         try {
-            return (int)classInstance.Get("AddressField2");
+            retObjectAddressField2 = classInstance.Get("AddressField2");
+            return (int)retObjectAddressField2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAddressField2 != null ? retObjectAddressField2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public int getAddressField3() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressField3 = null;
         try {
-            return (int)classInstance.Get("AddressField3");
+            retObjectAddressField3 = classInstance.Get("AddressField3");
+            return (int)retObjectAddressField3;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAddressField3 != null ? retObjectAddressField3.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public int getEndOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndOffset = null;
         try {
-            return (int)classInstance.Get("EndOffset");
+            retObjectEndOffset = classInstance.Get("EndOffset");
+            return (int)retObjectEndOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEndOffset != null ? retObjectEndOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +226,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public int getStartOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartOffset = null;
         try {
-            return (int)classInstance.Get("StartOffset");
+            retObjectStartOffset = classInstance.Get("StartOffset");
+            return (int)retObjectStartOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectStartOffset != null ? retObjectStartOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +240,14 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public SymAddressKind getAddressKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AddressKind");
+            retObjectAddressKind = classInstance.Get("AddressKind");
+            JCObject val = (JCObject)retObjectAddressKind;
             return new SymAddressKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressKind != null ? retObjectAddressKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +255,14 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public NetObject getAttributes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attributes");
+            retObjectAttributes = classInstance.Get("Attributes");
+            JCObject val = (JCObject)retObjectAttributes;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributes != null ? retObjectAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +270,13 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

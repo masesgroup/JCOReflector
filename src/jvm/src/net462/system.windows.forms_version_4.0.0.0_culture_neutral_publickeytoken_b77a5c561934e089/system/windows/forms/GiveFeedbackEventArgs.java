@@ -171,9 +171,13 @@ public class GiveFeedbackEventArgs extends EventArgs  {
     
     public boolean getUseDefaultCursors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultCursors = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultCursors");
+            retObjectUseDefaultCursors = classInstance.Get("UseDefaultCursors");
+            return (boolean)retObjectUseDefaultCursors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultCursors != null ? retObjectUseDefaultCursors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public void setUseDefaultCursors(boolean UseDefaultCursors) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultCursors", UseDefaultCursors);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class GiveFeedbackEventArgs extends EventArgs  {
 
     public DragDropEffects getEffect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Effect");
+            retObjectEffect = classInstance.Get("Effect");
+            JCObject val = (JCObject)retObjectEffect;
             return new DragDropEffects(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEffect != null ? retObjectEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

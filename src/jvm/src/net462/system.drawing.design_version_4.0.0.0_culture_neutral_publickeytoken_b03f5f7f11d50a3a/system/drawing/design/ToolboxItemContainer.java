@@ -184,10 +184,14 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
     
     public ICollection GetFilter(ICollection creators) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.FormatException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.io.IOException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFilter = null;
         try {
-            JCObject objGetFilter = (JCObject)classInstance.Invoke("GetFilter", creators == null ? null : creators.getJCOInstance());
+            retObjectGetFilter = classInstance.Invoke("GetFilter", creators == null ? null : creators.getJCOInstance());
+            JCObject objGetFilter = (JCObject)retObjectGetFilter;
             return new ICollectionImplementation(objGetFilter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFilter != null ? retObjectGetFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
 
     public ToolboxItem GetToolboxItem(ICollection creators) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetToolboxItem = null;
         try {
-            JCObject objGetToolboxItem = (JCObject)classInstance.Invoke("GetToolboxItem", creators == null ? null : creators.getJCOInstance());
+            retObjectGetToolboxItem = classInstance.Invoke("GetToolboxItem", creators == null ? null : creators.getJCOInstance());
+            JCObject objGetToolboxItem = (JCObject)retObjectGetToolboxItem;
             return new ToolboxItem(objGetToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItem != null ? retObjectGetToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,7 +214,7 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
 
     public void UpdateFilter(ToolboxItem item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateFilter", item == null ? null : item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -229,9 +237,13 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
     
     public boolean getIsCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCreated = null;
         try {
-            return (boolean)classInstance.Get("IsCreated");
+            retObjectIsCreated = classInstance.Get("IsCreated");
+            return (boolean)retObjectIsCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsCreated != null ? retObjectIsCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,9 +251,13 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
 
     public boolean getIsTransient() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransient = null;
         try {
-            return (boolean)classInstance.Get("IsTransient");
+            retObjectIsTransient = classInstance.Get("IsTransient");
+            return (boolean)retObjectIsTransient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransient != null ? retObjectIsTransient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +265,14 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
 
     public IDataObject getToolboxData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToolboxData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ToolboxData");
+            retObjectToolboxData = classInstance.Get("ToolboxData");
+            JCObject val = (JCObject)retObjectToolboxData;
             return new IDataObjectImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToolboxData != null ? retObjectToolboxData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

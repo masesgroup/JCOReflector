@@ -144,7 +144,7 @@ public class IXmlMtomWriterInitializerImplementation extends NetObject implement
     
     public void SetOutput(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutput", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo, boundary, startUri, writeMessageHeaders, ownsStream);
         } catch (JCNativeException jcne) {

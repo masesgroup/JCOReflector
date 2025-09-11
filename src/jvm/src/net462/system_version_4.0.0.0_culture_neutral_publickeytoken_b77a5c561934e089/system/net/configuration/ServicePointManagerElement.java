@@ -167,9 +167,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
     
     public boolean getCheckCertificateName() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckCertificateName = null;
         try {
-            return (boolean)classInstance.Get("CheckCertificateName");
+            retObjectCheckCertificateName = classInstance.Get("CheckCertificateName");
+            return (boolean)retObjectCheckCertificateName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckCertificateName != null ? retObjectCheckCertificateName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setCheckCertificateName(boolean CheckCertificateName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckCertificateName", CheckCertificateName);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public boolean getCheckCertificateRevocationList() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckCertificateRevocationList = null;
         try {
-            return (boolean)classInstance.Get("CheckCertificateRevocationList");
+            retObjectCheckCertificateRevocationList = classInstance.Get("CheckCertificateRevocationList");
+            return (boolean)retObjectCheckCertificateRevocationList;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCheckCertificateRevocationList != null ? retObjectCheckCertificateRevocationList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setCheckCertificateRevocationList(boolean CheckCertificateRevocationList) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckCertificateRevocationList", CheckCertificateRevocationList);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public boolean getEnableDnsRoundRobin() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableDnsRoundRobin = null;
         try {
-            return (boolean)classInstance.Get("EnableDnsRoundRobin");
+            retObjectEnableDnsRoundRobin = classInstance.Get("EnableDnsRoundRobin");
+            return (boolean)retObjectEnableDnsRoundRobin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableDnsRoundRobin != null ? retObjectEnableDnsRoundRobin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setEnableDnsRoundRobin(boolean EnableDnsRoundRobin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableDnsRoundRobin", EnableDnsRoundRobin);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public boolean getExpect100Continue() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpect100Continue = null;
         try {
-            return (boolean)classInstance.Get("Expect100Continue");
+            retObjectExpect100Continue = classInstance.Get("Expect100Continue");
+            return (boolean)retObjectExpect100Continue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExpect100Continue != null ? retObjectExpect100Continue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setExpect100Continue(boolean Expect100Continue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Expect100Continue", Expect100Continue);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public boolean getUseNagleAlgorithm() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseNagleAlgorithm = null;
         try {
-            return (boolean)classInstance.Get("UseNagleAlgorithm");
+            retObjectUseNagleAlgorithm = classInstance.Get("UseNagleAlgorithm");
+            return (boolean)retObjectUseNagleAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseNagleAlgorithm != null ? retObjectUseNagleAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setUseNagleAlgorithm(boolean UseNagleAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseNagleAlgorithm", UseNagleAlgorithm);
         } catch (JCNativeException jcne) {
@@ -267,9 +287,13 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public int getDnsRefreshTimeout() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsRefreshTimeout = null;
         try {
-            return (int)classInstance.Get("DnsRefreshTimeout");
+            retObjectDnsRefreshTimeout = classInstance.Get("DnsRefreshTimeout");
+            return (int)retObjectDnsRefreshTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDnsRefreshTimeout != null ? retObjectDnsRefreshTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +301,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setDnsRefreshTimeout(int DnsRefreshTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DnsRefreshTimeout", DnsRefreshTimeout);
         } catch (JCNativeException jcne) {
@@ -287,10 +311,14 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public EncryptionPolicy getEncryptionPolicy() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionPolicy");
+            retObjectEncryptionPolicy = classInstance.Get("EncryptionPolicy");
+            JCObject val = (JCObject)retObjectEncryptionPolicy;
             return new EncryptionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionPolicy != null ? retObjectEncryptionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +326,7 @@ public class ServicePointManagerElement extends ConfigurationElement  {
 
     public void setEncryptionPolicy(EncryptionPolicy EncryptionPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptionPolicy", EncryptionPolicy == null ? null : EncryptionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {

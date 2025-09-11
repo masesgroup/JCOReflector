@@ -157,7 +157,7 @@ public class DbComparisonExpression extends DbBinaryExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {

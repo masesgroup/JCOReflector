@@ -165,9 +165,19 @@ public class DbCommand extends Component  {
     
     public int ExecuteNonQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteNonQuery = null;
         try {
-            return (int)classInstance.Invoke("ExecuteNonQuery");
+            retObjectExecuteNonQuery = classInstance.Invoke("ExecuteNonQuery");
+            return (int)retObjectExecuteNonQuery;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteNonQueryNumber = (java.lang.Number)retObjectExecuteNonQuery;
+                return retObjectExecuteNonQueryNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteNonQuery != null ? retObjectExecuteNonQuery.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +185,14 @@ public class DbCommand extends Component  {
 
     public DbDataReader ExecuteReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader");
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader");
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new DbDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +200,14 @@ public class DbCommand extends Component  {
 
     public DbDataReader ExecuteReader(CommandBehavior behavior) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteReader = null;
         try {
-            JCObject objExecuteReader = (JCObject)classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            retObjectExecuteReader = classInstance.Invoke("ExecuteReader", behavior == null ? null : behavior.getJCOInstance());
+            JCObject objExecuteReader = (JCObject)retObjectExecuteReader;
             return new DbDataReader(objExecuteReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteReader != null ? retObjectExecuteReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +215,14 @@ public class DbCommand extends Component  {
 
     public DbParameter CreateParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateParameter = null;
         try {
-            JCObject objCreateParameter = (JCObject)classInstance.Invoke("CreateParameter");
+            retObjectCreateParameter = classInstance.Invoke("CreateParameter");
+            JCObject objCreateParameter = (JCObject)retObjectCreateParameter;
             return new DbParameter(objCreateParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateParameter != null ? retObjectCreateParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +230,14 @@ public class DbCommand extends Component  {
 
     public NetObject ExecuteScalar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteScalar = null;
         try {
-            JCObject objExecuteScalar = (JCObject)classInstance.Invoke("ExecuteScalar");
+            retObjectExecuteScalar = classInstance.Invoke("ExecuteScalar");
+            JCObject objExecuteScalar = (JCObject)retObjectExecuteScalar;
             return new NetObject(objExecuteScalar);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExecuteScalar != null ? retObjectExecuteScalar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +245,14 @@ public class DbCommand extends Component  {
 
     public Task PrepareAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrepareAsync = null;
         try {
-            JCObject objPrepareAsync = (JCObject)classInstance.Invoke("PrepareAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectPrepareAsync = classInstance.Invoke("PrepareAsync", cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objPrepareAsync = (JCObject)retObjectPrepareAsync;
             return new Task(objPrepareAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrepareAsync != null ? retObjectPrepareAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +260,14 @@ public class DbCommand extends Component  {
 
     public ValueTask DisposeAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +275,7 @@ public class DbCommand extends Component  {
 
     public void Cancel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Cancel");
         } catch (JCNativeException jcne) {
@@ -251,7 +285,7 @@ public class DbCommand extends Component  {
 
     public void Prepare() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Prepare");
         } catch (JCNativeException jcne) {
@@ -265,9 +299,13 @@ public class DbCommand extends Component  {
     
     public boolean getDesignTimeVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesignTimeVisible = null;
         try {
-            return (boolean)classInstance.Get("DesignTimeVisible");
+            retObjectDesignTimeVisible = classInstance.Get("DesignTimeVisible");
+            return (boolean)retObjectDesignTimeVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDesignTimeVisible != null ? retObjectDesignTimeVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +313,7 @@ public class DbCommand extends Component  {
 
     public void setDesignTimeVisible(boolean DesignTimeVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesignTimeVisible", DesignTimeVisible);
         } catch (JCNativeException jcne) {
@@ -285,9 +323,13 @@ public class DbCommand extends Component  {
 
     public int getCommandTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandTimeout = null;
         try {
-            return (int)classInstance.Get("CommandTimeout");
+            retObjectCommandTimeout = classInstance.Get("CommandTimeout");
+            return (int)retObjectCommandTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCommandTimeout != null ? retObjectCommandTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +337,7 @@ public class DbCommand extends Component  {
 
     public void setCommandTimeout(int CommandTimeout) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandTimeout", CommandTimeout);
         } catch (JCNativeException jcne) {
@@ -305,10 +347,14 @@ public class DbCommand extends Component  {
 
     public CommandType getCommandType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandType");
+            retObjectCommandType = classInstance.Get("CommandType");
+            JCObject val = (JCObject)retObjectCommandType;
             return new CommandType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandType != null ? retObjectCommandType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +362,7 @@ public class DbCommand extends Component  {
 
     public void setCommandType(CommandType CommandType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandType", CommandType == null ? null : CommandType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,10 +372,14 @@ public class DbCommand extends Component  {
 
     public DbConnection getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            JCObject val = (JCObject)retObjectConnection;
             return new DbConnection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +387,7 @@ public class DbCommand extends Component  {
 
     public void setConnection(DbConnection Connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection == null ? null : Connection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,10 +397,14 @@ public class DbCommand extends Component  {
 
     public DbParameterCollection getParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parameters");
+            retObjectParameters = classInstance.Get("Parameters");
+            JCObject val = (JCObject)retObjectParameters;
             return new DbParameterCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameters != null ? retObjectParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,10 +412,14 @@ public class DbCommand extends Component  {
 
     public DbTransaction getTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransaction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transaction");
+            retObjectTransaction = classInstance.Get("Transaction");
+            JCObject val = (JCObject)retObjectTransaction;
             return new DbTransaction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransaction != null ? retObjectTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +427,7 @@ public class DbCommand extends Component  {
 
     public void setTransaction(DbTransaction Transaction) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transaction", Transaction == null ? null : Transaction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -379,10 +437,14 @@ public class DbCommand extends Component  {
 
     public UpdateRowSource getUpdatedRowSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdatedRowSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UpdatedRowSource");
+            retObjectUpdatedRowSource = classInstance.Get("UpdatedRowSource");
+            JCObject val = (JCObject)retObjectUpdatedRowSource;
             return new UpdateRowSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpdatedRowSource != null ? retObjectUpdatedRowSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -390,7 +452,7 @@ public class DbCommand extends Component  {
 
     public void setUpdatedRowSource(UpdateRowSource UpdatedRowSource) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdatedRowSource", UpdatedRowSource == null ? null : UpdatedRowSource.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,9 +462,13 @@ public class DbCommand extends Component  {
 
     public java.lang.String getCommandText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandText = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandText");
+            retObjectCommandText = classInstance.Get("CommandText");
+            return (java.lang.String)retObjectCommandText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandText != null ? retObjectCommandText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,7 +476,7 @@ public class DbCommand extends Component  {
 
     public void setCommandText(java.lang.String CommandText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CommandText", CommandText);
         } catch (JCNativeException jcne) {

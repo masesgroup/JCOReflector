@@ -180,10 +180,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
     
     public TreeNode FindNode(java.lang.String valuePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindNode = null;
         try {
-            JCObject objFindNode = (JCObject)classInstance.Invoke("FindNode", valuePath);
+            retObjectFindNode = classInstance.Invoke("FindNode", valuePath);
+            JCObject objFindNode = (JCObject)retObjectFindNode;
             return new TreeNode(objFindNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindNode != null ? retObjectFindNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void CollapseAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CollapseAll");
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void DataBind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBind");
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void ExpandAll() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExpandAll");
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void RenderBeginTag(HtmlTextWriter writer) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +235,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void RenderEndTag(HtmlTextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.ThreadAbortException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderEndTag", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +249,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
      */
     @Deprecated 
     public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
     /**
@@ -254,7 +258,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
      */
     @Deprecated 
     public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -263,7 +267,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
      */
     @Deprecated 
     public void RaisePostDataChangedEvent() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
     }
 
     /**
@@ -272,7 +276,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
      */
     @Deprecated 
     public java.lang.String GetCallbackResult() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
 
     /**
@@ -281,7 +285,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
      */
     @Deprecated 
     public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
 
 
@@ -290,9 +294,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
     
     public boolean getAutoGenerateDataBindings() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoGenerateDataBindings = null;
         try {
-            return (boolean)classInstance.Get("AutoGenerateDataBindings");
+            retObjectAutoGenerateDataBindings = classInstance.Get("AutoGenerateDataBindings");
+            return (boolean)retObjectAutoGenerateDataBindings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoGenerateDataBindings != null ? retObjectAutoGenerateDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +308,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setAutoGenerateDataBindings(boolean AutoGenerateDataBindings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoGenerateDataBindings", AutoGenerateDataBindings);
         } catch (JCNativeException jcne) {
@@ -310,9 +318,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public boolean getEnableClientScript() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableClientScript = null;
         try {
-            return (boolean)classInstance.Get("EnableClientScript");
+            retObjectEnableClientScript = classInstance.Get("EnableClientScript");
+            return (boolean)retObjectEnableClientScript;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableClientScript != null ? retObjectEnableClientScript.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +332,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setEnableClientScript(boolean EnableClientScript) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableClientScript", EnableClientScript);
         } catch (JCNativeException jcne) {
@@ -330,9 +342,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public boolean getNodeWrap() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeWrap = null;
         try {
-            return (boolean)classInstance.Get("NodeWrap");
+            retObjectNodeWrap = classInstance.Get("NodeWrap");
+            return (boolean)retObjectNodeWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectNodeWrap != null ? retObjectNodeWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +356,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setNodeWrap(boolean NodeWrap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NodeWrap", NodeWrap);
         } catch (JCNativeException jcne) {
@@ -350,9 +366,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public boolean getPopulateNodesFromClient() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopulateNodesFromClient = null;
         try {
-            return (boolean)classInstance.Get("PopulateNodesFromClient");
+            retObjectPopulateNodesFromClient = classInstance.Get("PopulateNodesFromClient");
+            return (boolean)retObjectPopulateNodesFromClient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPopulateNodesFromClient != null ? retObjectPopulateNodesFromClient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +380,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setPopulateNodesFromClient(boolean PopulateNodesFromClient) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PopulateNodesFromClient", PopulateNodesFromClient);
         } catch (JCNativeException jcne) {
@@ -370,9 +390,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public boolean getShowExpandCollapse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowExpandCollapse = null;
         try {
-            return (boolean)classInstance.Get("ShowExpandCollapse");
+            retObjectShowExpandCollapse = classInstance.Get("ShowExpandCollapse");
+            return (boolean)retObjectShowExpandCollapse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowExpandCollapse != null ? retObjectShowExpandCollapse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +404,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setShowExpandCollapse(boolean ShowExpandCollapse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowExpandCollapse", ShowExpandCollapse);
         } catch (JCNativeException jcne) {
@@ -390,9 +414,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public boolean getShowLines() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowLines = null;
         try {
-            return (boolean)classInstance.Get("ShowLines");
+            retObjectShowLines = classInstance.Get("ShowLines");
+            return (boolean)retObjectShowLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowLines != null ? retObjectShowLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +428,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setShowLines(boolean ShowLines) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowLines", ShowLines);
         } catch (JCNativeException jcne) {
@@ -410,9 +438,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public char getPathSeparator() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPathSeparator = null;
         try {
-            return (char)classInstance.Get("PathSeparator");
+            retObjectPathSeparator = classInstance.Get("PathSeparator");
+            return (char)retObjectPathSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPathSeparator != null ? retObjectPathSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,7 +452,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setPathSeparator(char PathSeparator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PathSeparator", PathSeparator);
         } catch (JCNativeException jcne) {
@@ -430,9 +462,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public int getExpandDepth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandDepth = null;
         try {
-            return (int)classInstance.Get("ExpandDepth");
+            retObjectExpandDepth = classInstance.Get("ExpandDepth");
+            return (int)retObjectExpandDepth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectExpandDepth != null ? retObjectExpandDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +476,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setExpandDepth(int ExpandDepth) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpandDepth", ExpandDepth);
         } catch (JCNativeException jcne) {
@@ -450,9 +486,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public int getMaxDataBindDepth() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDataBindDepth = null;
         try {
-            return (int)classInstance.Get("MaxDataBindDepth");
+            retObjectMaxDataBindDepth = classInstance.Get("MaxDataBindDepth");
+            return (int)retObjectMaxDataBindDepth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxDataBindDepth != null ? retObjectMaxDataBindDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +500,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setMaxDataBindDepth(int MaxDataBindDepth) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDataBindDepth", MaxDataBindDepth);
         } catch (JCNativeException jcne) {
@@ -470,9 +510,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public int getNodeIndent() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeIndent = null;
         try {
-            return (int)classInstance.Get("NodeIndent");
+            retObjectNodeIndent = classInstance.Get("NodeIndent");
+            return (int)retObjectNodeIndent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNodeIndent != null ? retObjectNodeIndent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +524,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setNodeIndent(int NodeIndent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NodeIndent", NodeIndent);
         } catch (JCNativeException jcne) {
@@ -490,9 +534,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getCollapseImageToolTip() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapseImageToolTip = null;
         try {
-            return (java.lang.String)classInstance.Get("CollapseImageToolTip");
+            retObjectCollapseImageToolTip = classInstance.Get("CollapseImageToolTip");
+            return (java.lang.String)retObjectCollapseImageToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCollapseImageToolTip != null ? retObjectCollapseImageToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +548,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setCollapseImageToolTip(java.lang.String CollapseImageToolTip) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollapseImageToolTip", CollapseImageToolTip);
         } catch (JCNativeException jcne) {
@@ -510,9 +558,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getCollapseImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollapseImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("CollapseImageUrl");
+            retObjectCollapseImageUrl = classInstance.Get("CollapseImageUrl");
+            return (java.lang.String)retObjectCollapseImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCollapseImageUrl != null ? retObjectCollapseImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +572,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setCollapseImageUrl(java.lang.String CollapseImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollapseImageUrl", CollapseImageUrl);
         } catch (JCNativeException jcne) {
@@ -530,9 +582,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getExpandImageToolTip() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandImageToolTip = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpandImageToolTip");
+            retObjectExpandImageToolTip = classInstance.Get("ExpandImageToolTip");
+            return (java.lang.String)retObjectExpandImageToolTip;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpandImageToolTip != null ? retObjectExpandImageToolTip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,7 +596,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setExpandImageToolTip(java.lang.String ExpandImageToolTip) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpandImageToolTip", ExpandImageToolTip);
         } catch (JCNativeException jcne) {
@@ -550,9 +606,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getExpandImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpandImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpandImageUrl");
+            retObjectExpandImageUrl = classInstance.Get("ExpandImageUrl");
+            return (java.lang.String)retObjectExpandImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpandImageUrl != null ? retObjectExpandImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,7 +620,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setExpandImageUrl(java.lang.String ExpandImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExpandImageUrl", ExpandImageUrl);
         } catch (JCNativeException jcne) {
@@ -570,9 +630,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getLineImagesFolder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineImagesFolder = null;
         try {
-            return (java.lang.String)classInstance.Get("LineImagesFolder");
+            retObjectLineImagesFolder = classInstance.Get("LineImagesFolder");
+            return (java.lang.String)retObjectLineImagesFolder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLineImagesFolder != null ? retObjectLineImagesFolder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,7 +644,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setLineImagesFolder(java.lang.String LineImagesFolder) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LineImagesFolder", LineImagesFolder);
         } catch (JCNativeException jcne) {
@@ -590,9 +654,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getNoExpandImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoExpandImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("NoExpandImageUrl");
+            retObjectNoExpandImageUrl = classInstance.Get("NoExpandImageUrl");
+            return (java.lang.String)retObjectNoExpandImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNoExpandImageUrl != null ? retObjectNoExpandImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,7 +668,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setNoExpandImageUrl(java.lang.String NoExpandImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoExpandImageUrl", NoExpandImageUrl);
         } catch (JCNativeException jcne) {
@@ -610,9 +678,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getSelectedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedValue = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectedValue");
+            retObjectSelectedValue = classInstance.Get("SelectedValue");
+            return (java.lang.String)retObjectSelectedValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectedValue != null ? retObjectSelectedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,9 +692,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getSkipLinkText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLinkText = null;
         try {
-            return (java.lang.String)classInstance.Get("SkipLinkText");
+            retObjectSkipLinkText = classInstance.Get("SkipLinkText");
+            return (java.lang.String)retObjectSkipLinkText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSkipLinkText != null ? retObjectSkipLinkText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,7 +706,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setSkipLinkText(java.lang.String SkipLinkText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLinkText", SkipLinkText);
         } catch (JCNativeException jcne) {
@@ -640,9 +716,13 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public java.lang.String getTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTarget = null;
         try {
-            return (java.lang.String)classInstance.Get("Target");
+            retObjectTarget = classInstance.Get("Target");
+            return (java.lang.String)retObjectTarget;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTarget != null ? retObjectTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,7 +730,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setTarget(java.lang.String Target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Target", Target);
         } catch (JCNativeException jcne) {
@@ -660,10 +740,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public Style getHoverNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHoverNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HoverNodeStyle");
+            retObjectHoverNodeStyle = classInstance.Get("HoverNodeStyle");
+            JCObject val = (JCObject)retObjectHoverNodeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHoverNodeStyle != null ? retObjectHoverNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -671,10 +755,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNode getSelectedNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedNode");
+            retObjectSelectedNode = classInstance.Get("SelectedNode");
+            JCObject val = (JCObject)retObjectSelectedNode;
             return new TreeNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedNode != null ? retObjectSelectedNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,10 +770,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeBindingCollection getDataBindings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataBindings");
+            retObjectDataBindings = classInstance.Get("DataBindings");
+            JCObject val = (JCObject)retObjectDataBindings;
             return new TreeNodeBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindings != null ? retObjectDataBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -693,10 +785,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeCollection getCheckedNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckedNodes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckedNodes");
+            retObjectCheckedNodes = classInstance.Get("CheckedNodes");
+            JCObject val = (JCObject)retObjectCheckedNodes;
             return new TreeNodeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckedNodes != null ? retObjectCheckedNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,10 +800,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeCollection getNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Nodes");
+            retObjectNodes = classInstance.Get("Nodes");
+            JCObject val = (JCObject)retObjectNodes;
             return new TreeNodeCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodes != null ? retObjectNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,10 +815,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyle getLeafNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeafNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LeafNodeStyle");
+            retObjectLeafNodeStyle = classInstance.Get("LeafNodeStyle");
+            JCObject val = (JCObject)retObjectLeafNodeStyle;
             return new TreeNodeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeafNodeStyle != null ? retObjectLeafNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,10 +830,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyle getNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeStyle");
+            retObjectNodeStyle = classInstance.Get("NodeStyle");
+            JCObject val = (JCObject)retObjectNodeStyle;
             return new TreeNodeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeStyle != null ? retObjectNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -737,10 +845,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyle getParentNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentNodeStyle");
+            retObjectParentNodeStyle = classInstance.Get("ParentNodeStyle");
+            JCObject val = (JCObject)retObjectParentNodeStyle;
             return new TreeNodeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentNodeStyle != null ? retObjectParentNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -748,10 +860,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyle getRootNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootNodeStyle");
+            retObjectRootNodeStyle = classInstance.Get("RootNodeStyle");
+            JCObject val = (JCObject)retObjectRootNodeStyle;
             return new TreeNodeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootNodeStyle != null ? retObjectRootNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -759,10 +875,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyle getSelectedNodeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedNodeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedNodeStyle");
+            retObjectSelectedNodeStyle = classInstance.Get("SelectedNodeStyle");
+            JCObject val = (JCObject)retObjectSelectedNodeStyle;
             return new TreeNodeStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedNodeStyle != null ? retObjectSelectedNodeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -770,10 +890,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeStyleCollection getLevelStyles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevelStyles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LevelStyles");
+            retObjectLevelStyles = classInstance.Get("LevelStyles");
+            JCObject val = (JCObject)retObjectLevelStyles;
             return new TreeNodeStyleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevelStyles != null ? retObjectLevelStyles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -781,10 +905,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeNodeTypes getShowCheckBoxes() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCheckBoxes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ShowCheckBoxes");
+            retObjectShowCheckBoxes = classInstance.Get("ShowCheckBoxes");
+            JCObject val = (JCObject)retObjectShowCheckBoxes;
             return new TreeNodeTypes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowCheckBoxes != null ? retObjectShowCheckBoxes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -792,7 +920,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setShowCheckBoxes(TreeNodeTypes ShowCheckBoxes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCheckBoxes", ShowCheckBoxes == null ? null : ShowCheckBoxes.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -802,10 +930,14 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public TreeViewImageSet getImageSet() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageSet");
+            retObjectImageSet = classInstance.Get("ImageSet");
+            JCObject val = (JCObject)retObjectImageSet;
             return new TreeViewImageSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageSet != null ? retObjectImageSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -813,7 +945,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void setImageSet(TreeViewImageSet ImageSet) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageSet", ImageSet == null ? null : ImageSet.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -828,7 +960,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addSelectedNodeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectedNodeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -838,7 +970,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeSelectedNodeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectedNodeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -848,7 +980,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addTreeNodeCheckChanged(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TreeNodeCheckChanged", handler);
         } catch (JCNativeException jcne) {
@@ -858,7 +990,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeTreeNodeCheckChanged(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TreeNodeCheckChanged", handler);
         } catch (JCNativeException jcne) {
@@ -868,7 +1000,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addTreeNodeCollapsed(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TreeNodeCollapsed", handler);
         } catch (JCNativeException jcne) {
@@ -878,7 +1010,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeTreeNodeCollapsed(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TreeNodeCollapsed", handler);
         } catch (JCNativeException jcne) {
@@ -888,7 +1020,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addTreeNodeDataBound(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TreeNodeDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -898,7 +1030,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeTreeNodeDataBound(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TreeNodeDataBound", handler);
         } catch (JCNativeException jcne) {
@@ -908,7 +1040,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addTreeNodeExpanded(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TreeNodeExpanded", handler);
         } catch (JCNativeException jcne) {
@@ -918,7 +1050,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeTreeNodeExpanded(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TreeNodeExpanded", handler);
         } catch (JCNativeException jcne) {
@@ -928,7 +1060,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void addTreeNodePopulate(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TreeNodePopulate", handler);
         } catch (JCNativeException jcne) {
@@ -938,7 +1070,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
 
     public void removeTreeNodePopulate(TreeNodeEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TreeNodePopulate", handler);
         } catch (JCNativeException jcne) {

@@ -168,7 +168,7 @@ public class WorkflowOutline extends UserControl  {
     
     public void RefreshWorkflowOutline() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.UriFormatException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RefreshWorkflowOutline");
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class WorkflowOutline extends UserControl  {
 
     public void ReloadWorkflowOutline() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReloadWorkflowOutline");
         } catch (JCNativeException jcne) {

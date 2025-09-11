@@ -180,9 +180,13 @@ public class DesignerTransactionCloseEventArgs extends EventArgs  {
     
     public boolean getLastTransaction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastTransaction = null;
         try {
-            return (boolean)classInstance.Get("LastTransaction");
+            retObjectLastTransaction = classInstance.Get("LastTransaction");
+            return (boolean)retObjectLastTransaction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLastTransaction != null ? retObjectLastTransaction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class DesignerTransactionCloseEventArgs extends EventArgs  {
 
     public boolean getTransactionCommitted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactionCommitted = null;
         try {
-            return (boolean)classInstance.Get("TransactionCommitted");
+            retObjectTransactionCommitted = classInstance.Get("TransactionCommitted");
+            return (boolean)retObjectTransactionCommitted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactionCommitted != null ? retObjectTransactionCommitted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

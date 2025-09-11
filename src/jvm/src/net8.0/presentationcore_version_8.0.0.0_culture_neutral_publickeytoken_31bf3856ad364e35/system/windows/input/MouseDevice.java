@@ -161,9 +161,13 @@ public class MouseDevice extends InputDevice  {
     
     public boolean Capture(IInputElement element, CaptureMode captureMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.RankException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance(), captureMode == null ? null : captureMode.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class MouseDevice extends InputDevice  {
 
     public boolean Capture(IInputElement element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCapture = null;
         try {
-            return (boolean)classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            retObjectCapture = classInstance.Invoke("Capture", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectCapture;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCapture != null ? retObjectCapture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class MouseDevice extends InputDevice  {
 
     public boolean SetCursor(Cursor cursor) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetCursor = null;
         try {
-            return (boolean)classInstance.Invoke("SetCursor", cursor == null ? null : cursor.getJCOInstance());
+            retObjectSetCursor = classInstance.Invoke("SetCursor", cursor == null ? null : cursor.getJCOInstance());
+            return (boolean)retObjectSetCursor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectSetCursor != null ? retObjectSetCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class MouseDevice extends InputDevice  {
 
     public Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPosition = null;
         try {
-            JCObject objGetPosition = (JCObject)classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetPosition = classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetPosition = (JCObject)retObjectGetPosition;
             return new Point(objGetPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPosition != null ? retObjectGetPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class MouseDevice extends InputDevice  {
 
     public void Synchronize() throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Synchronize");
         } catch (JCNativeException jcne) {
@@ -212,7 +228,7 @@ public class MouseDevice extends InputDevice  {
 
     public void UpdateCursor() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateCursor");
         } catch (JCNativeException jcne) {
@@ -226,10 +242,14 @@ public class MouseDevice extends InputDevice  {
     
     public IInputElement getCaptured() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCaptured = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Captured");
+            retObjectCaptured = classInstance.Get("Captured");
+            JCObject val = (JCObject)retObjectCaptured;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCaptured != null ? retObjectCaptured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +257,14 @@ public class MouseDevice extends InputDevice  {
 
     public IInputElement getDirectlyOver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectlyOver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectlyOver");
+            retObjectDirectlyOver = classInstance.Get("DirectlyOver");
+            JCObject val = (JCObject)retObjectDirectlyOver;
             return new IInputElementImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectlyOver != null ? retObjectDirectlyOver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +272,14 @@ public class MouseDevice extends InputDevice  {
 
     public Cursor getOverrideCursor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOverrideCursor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OverrideCursor");
+            retObjectOverrideCursor = classInstance.Get("OverrideCursor");
+            JCObject val = (JCObject)retObjectOverrideCursor;
             return new Cursor(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOverrideCursor != null ? retObjectOverrideCursor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +287,7 @@ public class MouseDevice extends InputDevice  {
 
     public void setOverrideCursor(Cursor OverrideCursor) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OverrideCursor", OverrideCursor == null ? null : OverrideCursor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -269,10 +297,14 @@ public class MouseDevice extends InputDevice  {
 
     public MouseButtonState getLeftButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeftButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LeftButton");
+            retObjectLeftButton = classInstance.Get("LeftButton");
+            JCObject val = (JCObject)retObjectLeftButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftButton != null ? retObjectLeftButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +312,14 @@ public class MouseDevice extends InputDevice  {
 
     public MouseButtonState getMiddleButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMiddleButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MiddleButton");
+            retObjectMiddleButton = classInstance.Get("MiddleButton");
+            JCObject val = (JCObject)retObjectMiddleButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiddleButton != null ? retObjectMiddleButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +327,14 @@ public class MouseDevice extends InputDevice  {
 
     public MouseButtonState getRightButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightButton");
+            retObjectRightButton = classInstance.Get("RightButton");
+            JCObject val = (JCObject)retObjectRightButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightButton != null ? retObjectRightButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +342,14 @@ public class MouseDevice extends InputDevice  {
 
     public MouseButtonState getXButton1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXButton1 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XButton1");
+            retObjectXButton1 = classInstance.Get("XButton1");
+            JCObject val = (JCObject)retObjectXButton1;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton1 != null ? retObjectXButton1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +357,14 @@ public class MouseDevice extends InputDevice  {
 
     public MouseButtonState getXButton2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXButton2 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XButton2");
+            retObjectXButton2 = classInstance.Get("XButton2");
+            JCObject val = (JCObject)retObjectXButton2;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton2 != null ? retObjectXButton2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

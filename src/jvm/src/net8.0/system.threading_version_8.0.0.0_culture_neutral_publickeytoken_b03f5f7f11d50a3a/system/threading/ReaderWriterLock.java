@@ -164,9 +164,13 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
     
     public boolean AnyWritersSince(int seqNum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAnyWritersSince = null;
         try {
-            return (boolean)classInstance.Invoke("AnyWritersSince", seqNum);
+            retObjectAnyWritersSince = classInstance.Invoke("AnyWritersSince", seqNum);
+            return (boolean)retObjectAnyWritersSince;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectAnyWritersSince != null ? retObjectAnyWritersSince.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public LockCookie ReleaseLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseLock = null;
         try {
-            JCObject objReleaseLock = (JCObject)classInstance.Invoke("ReleaseLock");
+            retObjectReleaseLock = classInstance.Invoke("ReleaseLock");
+            JCObject objReleaseLock = (JCObject)retObjectReleaseLock;
             return new LockCookie(objReleaseLock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReleaseLock != null ? retObjectReleaseLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public LockCookie UpgradeToWriterLock(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpgradeToWriterLock = null;
         try {
-            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", millisecondsTimeout);
+            retObjectUpgradeToWriterLock = classInstance.Invoke("UpgradeToWriterLock", millisecondsTimeout);
+            JCObject objUpgradeToWriterLock = (JCObject)retObjectUpgradeToWriterLock;
             return new LockCookie(objUpgradeToWriterLock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpgradeToWriterLock != null ? retObjectUpgradeToWriterLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +208,14 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public LockCookie UpgradeToWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpgradeToWriterLock = null;
         try {
-            JCObject objUpgradeToWriterLock = (JCObject)classInstance.Invoke("UpgradeToWriterLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectUpgradeToWriterLock = classInstance.Invoke("UpgradeToWriterLock", timeout == null ? null : timeout.getJCOInstance());
+            JCObject objUpgradeToWriterLock = (JCObject)retObjectUpgradeToWriterLock;
             return new LockCookie(objUpgradeToWriterLock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUpgradeToWriterLock != null ? retObjectUpgradeToWriterLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +223,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void AcquireReaderLock(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcquireReaderLock", millisecondsTimeout);
         } catch (JCNativeException jcne) {
@@ -217,7 +233,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void AcquireReaderLock(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcquireReaderLock", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -227,7 +243,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void AcquireWriterLock(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcquireWriterLock", millisecondsTimeout);
         } catch (JCNativeException jcne) {
@@ -237,7 +253,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void AcquireWriterLock(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcquireWriterLock", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,7 +263,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void DowngradeFromWriterLock(JCORefOut<LockCookie> lockCookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DowngradeFromWriterLock", lockCookie.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -257,7 +273,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void ReleaseReaderLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseReaderLock");
         } catch (JCNativeException jcne) {
@@ -267,7 +283,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void ReleaseWriterLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseWriterLock");
         } catch (JCNativeException jcne) {
@@ -277,7 +293,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public void RestoreLock(JCORefOut<LockCookie> lockCookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RestoreLock", lockCookie.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -291,9 +307,13 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
     
     public boolean getIsReaderLockHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReaderLockHeld = null;
         try {
-            return (boolean)classInstance.Get("IsReaderLockHeld");
+            retObjectIsReaderLockHeld = classInstance.Get("IsReaderLockHeld");
+            return (boolean)retObjectIsReaderLockHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReaderLockHeld != null ? retObjectIsReaderLockHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,9 +321,13 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public boolean getIsWriterLockHeld() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsWriterLockHeld = null;
         try {
-            return (boolean)classInstance.Get("IsWriterLockHeld");
+            retObjectIsWriterLockHeld = classInstance.Get("IsWriterLockHeld");
+            return (boolean)retObjectIsWriterLockHeld;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsWriterLockHeld != null ? retObjectIsWriterLockHeld.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,9 +335,13 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
 
     public int getWriterSeqNum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriterSeqNum = null;
         try {
-            return (int)classInstance.Get("WriterSeqNum");
+            retObjectWriterSeqNum = classInstance.Get("WriterSeqNum");
+            return (int)retObjectWriterSeqNum;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWriterSeqNum != null ? retObjectWriterSeqNum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

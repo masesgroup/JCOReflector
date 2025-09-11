@@ -171,10 +171,14 @@ public class ActiveDesignSurfaceChangedEventArgs extends EventArgs  {
     
     public DesignSurface getNewSurface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewSurface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewSurface");
+            retObjectNewSurface = classInstance.Get("NewSurface");
+            JCObject val = (JCObject)retObjectNewSurface;
             return new DesignSurface(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewSurface != null ? retObjectNewSurface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class ActiveDesignSurfaceChangedEventArgs extends EventArgs  {
 
     public DesignSurface getOldSurface() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldSurface = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldSurface");
+            retObjectOldSurface = classInstance.Get("OldSurface");
+            JCObject val = (JCObject)retObjectOldSurface;
             return new DesignSurface(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldSurface != null ? retObjectOldSurface.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

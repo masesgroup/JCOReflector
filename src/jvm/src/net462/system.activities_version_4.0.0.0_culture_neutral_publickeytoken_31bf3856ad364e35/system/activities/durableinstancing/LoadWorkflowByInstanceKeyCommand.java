@@ -167,9 +167,13 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
     
     public boolean getAcceptUninitializedInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptUninitializedInstance = null;
         try {
-            return (boolean)classInstance.Get("AcceptUninitializedInstance");
+            retObjectAcceptUninitializedInstance = classInstance.Get("AcceptUninitializedInstance");
+            return (boolean)retObjectAcceptUninitializedInstance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptUninitializedInstance != null ? retObjectAcceptUninitializedInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
 
     public void setAcceptUninitializedInstance(boolean AcceptUninitializedInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptUninitializedInstance", AcceptUninitializedInstance);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
 
     public Guid getAssociateInstanceKeyToInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssociateInstanceKeyToInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssociateInstanceKeyToInstanceId");
+            retObjectAssociateInstanceKeyToInstanceId = classInstance.Get("AssociateInstanceKeyToInstanceId");
+            JCObject val = (JCObject)retObjectAssociateInstanceKeyToInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssociateInstanceKeyToInstanceId != null ? retObjectAssociateInstanceKeyToInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
 
     public void setAssociateInstanceKeyToInstanceId(Guid AssociateInstanceKeyToInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssociateInstanceKeyToInstanceId", AssociateInstanceKeyToInstanceId == null ? null : AssociateInstanceKeyToInstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
 
     public Guid getLookupInstanceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLookupInstanceKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LookupInstanceKey");
+            retObjectLookupInstanceKey = classInstance.Get("LookupInstanceKey");
+            JCObject val = (JCObject)retObjectLookupInstanceKey;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLookupInstanceKey != null ? retObjectLookupInstanceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class LoadWorkflowByInstanceKeyCommand extends InstancePersistenceCommand
 
     public void setLookupInstanceKey(Guid LookupInstanceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LookupInstanceKey", LookupInstanceKey == null ? null : LookupInstanceKey.getJCOInstance());
         } catch (JCNativeException jcne) {

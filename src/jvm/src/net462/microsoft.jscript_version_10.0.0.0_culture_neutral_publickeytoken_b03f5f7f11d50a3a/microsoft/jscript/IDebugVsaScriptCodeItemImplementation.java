@@ -143,9 +143,13 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
     
     public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseNamedBreakPoint = null;
         try {
-            return (boolean)classInstance.Invoke("ParseNamedBreakPoint", input, functionName.getJCRefOut(), nargs.getJCRefOut(), arguments.getJCRefOut(), returnType.getJCRefOut(), offset.getJCRefOut());
+            retObjectParseNamedBreakPoint = classInstance.Invoke("ParseNamedBreakPoint", input, functionName.getJCRefOut(), nargs.getJCRefOut(), arguments.getJCRefOut(), returnType.getJCRefOut(), offset.getJCRefOut());
+            return (boolean)retObjectParseNamedBreakPoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectParseNamedBreakPoint != null ? retObjectParseNamedBreakPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,10 +157,14 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
 
     public NetObject Evaluate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluate = null;
         try {
-            JCObject objEvaluate = (JCObject)classInstance.Invoke("Evaluate");
+            retObjectEvaluate = classInstance.Invoke("Evaluate");
+            JCObject objEvaluate = (JCObject)retObjectEvaluate;
             return new NetObject(objEvaluate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvaluate != null ? retObjectEvaluate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -170,10 +170,14 @@ public class OperationBinding extends NamedItem  {
     
     public system.web.services.description.Binding getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            JCObject val = (JCObject)retObjectBinding;
             return new system.web.services.description.Binding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class OperationBinding extends NamedItem  {
 
     public FaultBindingCollection getFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFaults = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Faults");
+            retObjectFaults = classInstance.Get("Faults");
+            JCObject val = (JCObject)retObjectFaults;
             return new FaultBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFaults != null ? retObjectFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class OperationBinding extends NamedItem  {
 
     public InputBinding getInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Input");
+            retObjectInput = classInstance.Get("Input");
+            JCObject val = (JCObject)retObjectInput;
             return new InputBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInput != null ? retObjectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +215,7 @@ public class OperationBinding extends NamedItem  {
 
     public void setInput(InputBinding Input) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Input", Input == null ? null : Input.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,10 +225,14 @@ public class OperationBinding extends NamedItem  {
 
     public OutputBinding getOutput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOutput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Output");
+            retObjectOutput = classInstance.Get("Output");
+            JCObject val = (JCObject)retObjectOutput;
             return new OutputBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOutput != null ? retObjectOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +240,7 @@ public class OperationBinding extends NamedItem  {
 
     public void setOutput(OutputBinding Output) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Output", Output == null ? null : Output.getJCOInstance());
         } catch (JCNativeException jcne) {

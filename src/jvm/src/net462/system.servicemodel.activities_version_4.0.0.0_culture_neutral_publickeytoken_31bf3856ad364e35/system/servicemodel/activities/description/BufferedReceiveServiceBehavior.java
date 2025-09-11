@@ -163,7 +163,7 @@ public class BufferedReceiveServiceBehavior extends NetObject  {
     
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyDispatchBehavior", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class BufferedReceiveServiceBehavior extends NetObject  {
 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", serviceDescription == null ? null : serviceDescription.getJCOInstance(), serviceHostBase == null ? null : serviceHostBase.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +187,13 @@ public class BufferedReceiveServiceBehavior extends NetObject  {
     
     public int getMaxPendingMessagesPerChannel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingMessagesPerChannel = null;
         try {
-            return (int)classInstance.Get("MaxPendingMessagesPerChannel");
+            retObjectMaxPendingMessagesPerChannel = classInstance.Get("MaxPendingMessagesPerChannel");
+            return (int)retObjectMaxPendingMessagesPerChannel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxPendingMessagesPerChannel != null ? retObjectMaxPendingMessagesPerChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +201,7 @@ public class BufferedReceiveServiceBehavior extends NetObject  {
 
     public void setMaxPendingMessagesPerChannel(int MaxPendingMessagesPerChannel) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingMessagesPerChannel", MaxPendingMessagesPerChannel);
         } catch (JCNativeException jcne) {

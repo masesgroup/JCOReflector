@@ -164,10 +164,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
     
     public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classType.Invoke("GetToolboxItems", a == null ? null : a.getJCOInstance(), newCodeBase);
+            retObjectGetToolboxItems = classType.Invoke("GetToolboxItems", a == null ? null : a.getJCOInstance(), newCodeBase);
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ICollectionImplementation(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classType.Invoke("GetToolboxItems", a == null ? null : a.getJCOInstance(), newCodeBase, throwOnError);
+            retObjectGetToolboxItems = classType.Invoke("GetToolboxItems", a == null ? null : a.getJCOInstance(), newCodeBase, throwOnError);
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ICollectionImplementation(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static ICollection GetToolboxItems(AssemblyName an) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.IndexOutOfRangeException, system.TypeLoadException, system.ArgumentOutOfRangeException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.reflection.ReflectionTypeLoadException, system.runtime.serialization.SerializationException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classType.Invoke("GetToolboxItems", an == null ? null : an.getJCOInstance());
+            retObjectGetToolboxItems = classType.Invoke("GetToolboxItems", an == null ? null : an.getJCOInstance());
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ICollectionImplementation(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static ICollection GetToolboxItems(AssemblyName an, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.NullReferenceException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.resources.MissingManifestResourceException, system.security.SecurityException, system.MemberAccessException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.reflection.ReflectionTypeLoadException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItems = null;
         try {
-            JCObject objGetToolboxItems = (JCObject)classType.Invoke("GetToolboxItems", an == null ? null : an.getJCOInstance(), throwOnError);
+            retObjectGetToolboxItems = classType.Invoke("GetToolboxItems", an == null ? null : an.getJCOInstance(), throwOnError);
+            JCObject objGetToolboxItems = (JCObject)retObjectGetToolboxItems;
             return new ICollectionImplementation(objGetToolboxItems);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItems != null ? retObjectGetToolboxItems.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +224,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static ToolboxItem GetToolboxItem(NetType toolType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException, system.NotSupportedException, system.io.IOException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItem = null;
         try {
-            JCObject objGetToolboxItem = (JCObject)classType.Invoke("GetToolboxItem", toolType == null ? null : toolType.getJCOInstance());
+            retObjectGetToolboxItem = classType.Invoke("GetToolboxItem", toolType == null ? null : toolType.getJCOInstance());
+            JCObject objGetToolboxItem = (JCObject)retObjectGetToolboxItem;
             return new ToolboxItem(objGetToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItem != null ? retObjectGetToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +239,14 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static ToolboxItem GetToolboxItem(NetType toolType, boolean nonPublic) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetToolboxItem = null;
         try {
-            JCObject objGetToolboxItem = (JCObject)classType.Invoke("GetToolboxItem", toolType == null ? null : toolType.getJCOInstance(), nonPublic);
+            retObjectGetToolboxItem = classType.Invoke("GetToolboxItem", toolType == null ? null : toolType.getJCOInstance(), nonPublic);
+            JCObject objGetToolboxItem = (JCObject)retObjectGetToolboxItem;
             return new ToolboxItem(objGetToolboxItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetToolboxItem != null ? retObjectGetToolboxItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +254,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
 
     public static void UnloadToolboxItems() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.CannotUnloadAppDomainException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnloadToolboxItems");
         } catch (JCNativeException jcne) {
@@ -244,7 +268,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -253,7 +277,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -262,7 +286,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -271,7 +295,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -280,7 +304,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public boolean SetCursor() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -289,7 +313,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -298,7 +322,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItem DeserializeToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -307,7 +331,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItem GetSelectedToolboxItem() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -316,7 +340,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItem GetSelectedToolboxItem(IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -325,7 +349,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItemCollection GetToolboxItems() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -334,7 +358,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItemCollection GetToolboxItems(IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -343,7 +367,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItemCollection GetToolboxItems(java.lang.String category) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -352,7 +376,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -361,7 +385,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -370,7 +394,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -379,7 +403,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -388,7 +412,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -397,7 +421,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -406,7 +430,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -415,7 +439,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -424,7 +448,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void Refresh() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -433,7 +457,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void RemoveCreator(java.lang.String format) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -442,7 +466,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void RemoveCreator(java.lang.String format, IDesignerHost host) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -451,7 +475,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void RemoveToolboxItem(ToolboxItem toolboxItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -460,7 +484,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -469,7 +493,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void SelectedToolboxItemUsed() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -478,7 +502,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
     }
 
     /**
@@ -487,7 +511,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
      */
     @Deprecated 
     public ICollection GetComponentTypes(IDesignerHost designerHost, NetType baseType) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentDiscoveryService to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentDiscoveryService to obtain the full interface.");
     }
 
 

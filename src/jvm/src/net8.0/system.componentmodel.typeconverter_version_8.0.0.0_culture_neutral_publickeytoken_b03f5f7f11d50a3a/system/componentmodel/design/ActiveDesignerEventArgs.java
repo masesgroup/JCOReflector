@@ -172,10 +172,14 @@ public class ActiveDesignerEventArgs extends EventArgs  {
     
     public IDesignerHost getNewDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewDesigner");
+            retObjectNewDesigner = classInstance.Get("NewDesigner");
+            JCObject val = (JCObject)retObjectNewDesigner;
             return new IDesignerHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewDesigner != null ? retObjectNewDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class ActiveDesignerEventArgs extends EventArgs  {
 
     public IDesignerHost getOldDesigner() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOldDesigner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OldDesigner");
+            retObjectOldDesigner = classInstance.Get("OldDesigner");
+            JCObject val = (JCObject)retObjectOldDesigner;
             return new IDesignerHostImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOldDesigner != null ? retObjectOldDesigner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
     
     public boolean getGreedy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGreedy = null;
         try {
-            return (boolean)classInstance.Get("Greedy");
+            retObjectGreedy = classInstance.Get("Greedy");
+            return (boolean)retObjectGreedy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectGreedy != null ? retObjectGreedy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
 
     public void setGreedy(boolean Greedy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Greedy", Greedy);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
 
     public long getMaxNumberOfGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxNumberOfGroups = null;
         try {
-            return (long)classInstance.Get("MaxNumberOfGroups");
+            retObjectMaxNumberOfGroups = classInstance.Get("MaxNumberOfGroups");
+            return (long)retObjectMaxNumberOfGroups;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaxNumberOfGroups != null ? retObjectMaxNumberOfGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class GroupingDataflowBlockOptions extends DataflowBlockOptions  {
 
     public void setMaxNumberOfGroups(long MaxNumberOfGroups) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxNumberOfGroups", MaxNumberOfGroups);
         } catch (JCNativeException jcne) {

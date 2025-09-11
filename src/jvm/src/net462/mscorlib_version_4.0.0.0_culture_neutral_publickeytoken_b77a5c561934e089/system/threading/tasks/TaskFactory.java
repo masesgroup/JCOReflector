@@ -209,10 +209,14 @@ public class TaskFactory extends NetObject  {
     
     public Task StartNew(Action action) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action);
+            retObjectStartNew = classInstance.Invoke("StartNew", action);
+            JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +224,14 @@ public class TaskFactory extends NetObject  {
 
     public Task StartNew(Action action, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectStartNew = classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +239,14 @@ public class TaskFactory extends NetObject  {
 
     public Task StartNew(Action action, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            retObjectStartNew = classInstance.Invoke("StartNew", action, cancellationToken == null ? null : cancellationToken.getJCOInstance(), creationOptions == null ? null : creationOptions.getJCOInstance(), scheduler == null ? null : scheduler.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +254,14 @@ public class TaskFactory extends NetObject  {
 
     public Task StartNew(Action action, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartNew = null;
         try {
-            JCObject objStartNew = (JCObject)classInstance.Invoke("StartNew", action, creationOptions == null ? null : creationOptions.getJCOInstance());
+            retObjectStartNew = classInstance.Invoke("StartNew", action, creationOptions == null ? null : creationOptions.getJCOInstance());
+            JCObject objStartNew = (JCObject)retObjectStartNew;
             return new Task(objStartNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartNew != null ? retObjectStartNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +273,14 @@ public class TaskFactory extends NetObject  {
     
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            retObjectCancellationToken = classInstance.Get("CancellationToken");
+            JCObject val = (JCObject)retObjectCancellationToken;
             return new CancellationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancellationToken != null ? retObjectCancellationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +288,14 @@ public class TaskFactory extends NetObject  {
 
     public TaskContinuationOptions getContinuationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinuationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContinuationOptions");
+            retObjectContinuationOptions = classInstance.Get("ContinuationOptions");
+            JCObject val = (JCObject)retObjectContinuationOptions;
             return new TaskContinuationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinuationOptions != null ? retObjectContinuationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +303,14 @@ public class TaskFactory extends NetObject  {
 
     public TaskCreationOptions getCreationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationOptions");
+            retObjectCreationOptions = classInstance.Get("CreationOptions");
+            JCObject val = (JCObject)retObjectCreationOptions;
             return new TaskCreationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationOptions != null ? retObjectCreationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +318,14 @@ public class TaskFactory extends NetObject  {
 
     public TaskScheduler getScheduler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScheduler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scheduler");
+            retObjectScheduler = classInstance.Get("Scheduler");
+            JCObject val = (JCObject)retObjectScheduler;
             return new TaskScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScheduler != null ? retObjectScheduler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

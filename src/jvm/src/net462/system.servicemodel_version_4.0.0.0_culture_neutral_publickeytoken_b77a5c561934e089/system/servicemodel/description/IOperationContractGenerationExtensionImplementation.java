@@ -143,7 +143,7 @@ public class IOperationContractGenerationExtensionImplementation extends NetObje
     
     public void GenerateOperation(OperationContractGenerationContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateOperation", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

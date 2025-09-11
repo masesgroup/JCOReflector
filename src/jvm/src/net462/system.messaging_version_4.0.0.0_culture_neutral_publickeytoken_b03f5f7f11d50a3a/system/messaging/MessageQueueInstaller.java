@@ -181,9 +181,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
     
     public boolean IsEquivalentInstaller(ComponentInstaller otherInstaller) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEquivalentInstaller = null;
         try {
-            return (boolean)classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            retObjectIsEquivalentInstaller = classInstance.Invoke("IsEquivalentInstaller", otherInstaller == null ? null : otherInstaller.getJCOInstance());
+            return (boolean)retObjectIsEquivalentInstaller;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEquivalentInstaller != null ? retObjectIsEquivalentInstaller.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void Commit(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,7 +205,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void CopyFromComponent(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CopyFromComponent", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -211,7 +215,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void Install(IDictionary stateSaver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Install", stateSaver == null ? null : stateSaver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,7 +225,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void Rollback(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,7 +235,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void Uninstall(IDictionary savedState) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.serialization.SerializationException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.messaging.MessageQueueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Uninstall", savedState == null ? null : savedState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,9 +249,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
     
     public boolean getAuthenticate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticate = null;
         try {
-            return (boolean)classInstance.Get("Authenticate");
+            retObjectAuthenticate = classInstance.Get("Authenticate");
+            return (boolean)retObjectAuthenticate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAuthenticate != null ? retObjectAuthenticate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +263,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setAuthenticate(boolean Authenticate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Authenticate", Authenticate);
         } catch (JCNativeException jcne) {
@@ -265,9 +273,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public boolean getTransactional() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransactional = null;
         try {
-            return (boolean)classInstance.Get("Transactional");
+            retObjectTransactional = classInstance.Get("Transactional");
+            return (boolean)retObjectTransactional;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTransactional != null ? retObjectTransactional.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +287,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setTransactional(boolean Transactional) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transactional", Transactional);
         } catch (JCNativeException jcne) {
@@ -285,9 +297,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public boolean getUseJournalQueue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseJournalQueue = null;
         try {
-            return (boolean)classInstance.Get("UseJournalQueue");
+            retObjectUseJournalQueue = classInstance.Get("UseJournalQueue");
+            return (boolean)retObjectUseJournalQueue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseJournalQueue != null ? retObjectUseJournalQueue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +311,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setUseJournalQueue(boolean UseJournalQueue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseJournalQueue", UseJournalQueue);
         } catch (JCNativeException jcne) {
@@ -305,9 +321,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public short getBasePriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePriority = null;
         try {
-            return (short)classInstance.Get("BasePriority");
+            retObjectBasePriority = classInstance.Get("BasePriority");
+            return (short)retObjectBasePriority;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectBasePriority != null ? retObjectBasePriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +335,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setBasePriority(short BasePriority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BasePriority", BasePriority);
         } catch (JCNativeException jcne) {
@@ -325,9 +345,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public long getMaximumJournalSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumJournalSize = null;
         try {
-            return (long)classInstance.Get("MaximumJournalSize");
+            retObjectMaximumJournalSize = classInstance.Get("MaximumJournalSize");
+            return (long)retObjectMaximumJournalSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumJournalSize != null ? retObjectMaximumJournalSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +359,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setMaximumJournalSize(long MaximumJournalSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumJournalSize", MaximumJournalSize);
         } catch (JCNativeException jcne) {
@@ -345,9 +369,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public long getMaximumQueueSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumQueueSize = null;
         try {
-            return (long)classInstance.Get("MaximumQueueSize");
+            retObjectMaximumQueueSize = classInstance.Get("MaximumQueueSize");
+            return (long)retObjectMaximumQueueSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumQueueSize != null ? retObjectMaximumQueueSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +383,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setMaximumQueueSize(long MaximumQueueSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumQueueSize", MaximumQueueSize);
         } catch (JCNativeException jcne) {
@@ -365,10 +393,14 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public UninstallAction getUninstallAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUninstallAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UninstallAction");
+            retObjectUninstallAction = classInstance.Get("UninstallAction");
+            JCObject val = (JCObject)retObjectUninstallAction;
             return new UninstallAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUninstallAction != null ? retObjectUninstallAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +408,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setUninstallAction(UninstallAction UninstallAction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UninstallAction", UninstallAction == null ? null : UninstallAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +418,14 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public Guid getCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCategory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Category");
+            retObjectCategory = classInstance.Get("Category");
+            JCObject val = (JCObject)retObjectCategory;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCategory != null ? retObjectCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +433,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setCategory(Guid Category) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Category", Category == null ? null : Category.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,10 +443,14 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public AccessControlList getPermissions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Permissions");
+            retObjectPermissions = classInstance.Get("Permissions");
+            JCObject val = (JCObject)retObjectPermissions;
             return new AccessControlList(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissions != null ? retObjectPermissions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +458,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setPermissions(AccessControlList Permissions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Permissions", Permissions == null ? null : Permissions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -428,10 +468,14 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public EncryptionRequired getEncryptionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptionRequired = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptionRequired");
+            retObjectEncryptionRequired = classInstance.Get("EncryptionRequired");
+            JCObject val = (JCObject)retObjectEncryptionRequired;
             return new EncryptionRequired(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptionRequired != null ? retObjectEncryptionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +483,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setEncryptionRequired(EncryptionRequired EncryptionRequired) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptionRequired", EncryptionRequired == null ? null : EncryptionRequired.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -449,9 +493,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,7 +507,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setLabel(java.lang.String Label) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Label", Label);
         } catch (JCNativeException jcne) {
@@ -469,9 +517,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public java.lang.String getMulticastAddress() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMulticastAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("MulticastAddress");
+            retObjectMulticastAddress = classInstance.Get("MulticastAddress");
+            return (java.lang.String)retObjectMulticastAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMulticastAddress != null ? retObjectMulticastAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,7 +531,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setMulticastAddress(java.lang.String MulticastAddress) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MulticastAddress", MulticastAddress);
         } catch (JCNativeException jcne) {
@@ -489,9 +541,13 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +555,7 @@ public class MessageQueueInstaller extends ComponentInstaller  {
 
     public void setPath(java.lang.String Path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {

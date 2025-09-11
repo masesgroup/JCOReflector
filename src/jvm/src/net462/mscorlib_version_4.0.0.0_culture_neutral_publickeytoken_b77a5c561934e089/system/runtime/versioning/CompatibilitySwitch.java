@@ -153,9 +153,13 @@ public class CompatibilitySwitch extends NetObject  {
     
     public static boolean IsEnabled(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classType.Invoke("IsEnabled", compatibilitySwitchName);
+            retObjectIsEnabled = classType.Invoke("IsEnabled", compatibilitySwitchName);
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,9 +167,13 @@ public class CompatibilitySwitch extends NetObject  {
 
     public static java.lang.String GetValue(java.lang.String compatibilitySwitchName) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            return (java.lang.String)classType.Invoke("GetValue", compatibilitySwitchName);
+            retObjectGetValue = classType.Invoke("GetValue", compatibilitySwitchName);
+            return (java.lang.String)retObjectGetValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

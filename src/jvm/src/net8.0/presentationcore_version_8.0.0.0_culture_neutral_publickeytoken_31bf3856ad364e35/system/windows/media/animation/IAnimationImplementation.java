@@ -143,10 +143,14 @@ public class IAnimationImplementation extends NetObject implements IAnimation {
     
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new NetObject(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

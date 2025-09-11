@@ -157,7 +157,7 @@ public class DbLimitExpression extends DbExpression  {
     
     public void Accept(DbExpressionVisitor visitor) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Accept", visitor == null ? null : visitor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -171,9 +171,13 @@ public class DbLimitExpression extends DbExpression  {
     
     public boolean getWithTies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWithTies = null;
         try {
-            return (boolean)classInstance.Get("WithTies");
+            retObjectWithTies = classInstance.Get("WithTies");
+            return (boolean)retObjectWithTies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWithTies != null ? retObjectWithTies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class DbLimitExpression extends DbExpression  {
 
     public DbExpression getArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Argument");
+            retObjectArgument = classInstance.Get("Argument");
+            JCObject val = (JCObject)retObjectArgument;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgument != null ? retObjectArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class DbLimitExpression extends DbExpression  {
 
     public DbExpression getLimit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLimit = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Limit");
+            retObjectLimit = classInstance.Get("Limit");
+            JCObject val = (JCObject)retObjectLimit;
             return new DbExpression(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLimit != null ? retObjectLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

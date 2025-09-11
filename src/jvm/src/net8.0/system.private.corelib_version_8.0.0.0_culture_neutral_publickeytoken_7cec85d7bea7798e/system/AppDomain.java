@@ -174,9 +174,13 @@ public class AppDomain extends MarshalByRefObject  {
     
     public boolean IsDefaultAppDomain() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAppDomain = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAppDomain");
+            retObjectIsDefaultAppDomain = classInstance.Invoke("IsDefaultAppDomain");
+            return (boolean)retObjectIsDefaultAppDomain;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAppDomain != null ? retObjectIsDefaultAppDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public boolean IsFinalizingForUnload() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFinalizingForUnload = null;
         try {
-            return (boolean)classInstance.Invoke("IsFinalizingForUnload");
+            retObjectIsFinalizingForUnload = classInstance.Invoke("IsFinalizingForUnload");
+            return (boolean)retObjectIsFinalizingForUnload;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFinalizingForUnload != null ? retObjectIsFinalizingForUnload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +202,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssembly(java.lang.String assemblyFile, java.lang.String[] args, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssembly = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, args, hashValue, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile, args, hashValue, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+            return (int)retObjectExecuteAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
+                return retObjectExecuteAssemblyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +222,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssembly(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssembly = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)retObjectExecuteAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
+                return retObjectExecuteAssemblyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +242,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssembly(java.lang.String assemblyFile, java.lang.String[] args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssembly = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, args);
+            retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile, args);
+            return (int)retObjectExecuteAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
+                return retObjectExecuteAssemblyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +262,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssembly(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssembly = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut());
+            retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut());
+            return (int)retObjectExecuteAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
+                return retObjectExecuteAssemblyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +282,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssembly = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile);
+            retObjectExecuteAssembly = classInstance.Invoke("ExecuteAssembly", assemblyFile);
+            return (int)retObjectExecuteAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyNumber = (java.lang.Number)retObjectExecuteAssembly;
+                return retObjectExecuteAssemblyNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssembly != null ? retObjectExecuteAssembly.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +302,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssemblyByName(AssemblyName assemblyName, java.lang.String... args) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssemblyByName = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", assemblyName == null ? null : assemblyName.getJCOInstance(), args);
+            retObjectExecuteAssemblyByName = classInstance.Invoke("ExecuteAssemblyByName", assemblyName == null ? null : assemblyName.getJCOInstance(), args);
+            return (int)retObjectExecuteAssemblyByName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyByNameNumber = (java.lang.Number)retObjectExecuteAssemblyByName;
+                return retObjectExecuteAssemblyByNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssemblyByName != null ? retObjectExecuteAssemblyByName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +322,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssemblyByName(AssemblyName dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssemblyByName = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            retObjectExecuteAssemblyByName = classInstance.Invoke("ExecuteAssemblyByName", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
+            return (int)retObjectExecuteAssemblyByName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyByNameNumber = (java.lang.Number)retObjectExecuteAssemblyByName;
+                return retObjectExecuteAssemblyByNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssemblyByName != null ? retObjectExecuteAssemblyByName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +342,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssemblyByName(java.lang.String assemblyName, java.lang.String... args) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssemblyByName = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", assemblyName, args);
+            retObjectExecuteAssemblyByName = classInstance.Invoke("ExecuteAssemblyByName", assemblyName, args);
+            return (int)retObjectExecuteAssemblyByName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyByNameNumber = (java.lang.Number)retObjectExecuteAssemblyByName;
+                return retObjectExecuteAssemblyByNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssemblyByName != null ? retObjectExecuteAssemblyByName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +362,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssemblyByName(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssemblyByName = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", dupParam0, dupParam1.getJCRefOut());
+            retObjectExecuteAssemblyByName = classInstance.Invoke("ExecuteAssemblyByName", dupParam0, dupParam1.getJCRefOut());
+            return (int)retObjectExecuteAssemblyByName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyByNameNumber = (java.lang.Number)retObjectExecuteAssemblyByName;
+                return retObjectExecuteAssemblyByNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssemblyByName != null ? retObjectExecuteAssemblyByName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +382,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int ExecuteAssemblyByName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecuteAssemblyByName = null;
         try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", assemblyName);
+            retObjectExecuteAssemblyByName = classInstance.Invoke("ExecuteAssemblyByName", assemblyName);
+            return (int)retObjectExecuteAssemblyByName;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectExecuteAssemblyByNameNumber = (java.lang.Number)retObjectExecuteAssemblyByName;
+                return retObjectExecuteAssemblyByNameNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectExecuteAssemblyByName != null ? retObjectExecuteAssemblyByName.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +402,19 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static int GetCurrentThreadId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentThreadId = null;
         try {
-            return (int)classType.Invoke("GetCurrentThreadId");
+            retObjectGetCurrentThreadId = classType.Invoke("GetCurrentThreadId");
+            return (int)retObjectGetCurrentThreadId;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCurrentThreadIdNumber = (java.lang.Number)retObjectGetCurrentThreadId;
+                return retObjectGetCurrentThreadIdNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCurrentThreadId != null ? retObjectGetCurrentThreadId.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +422,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static AppDomain CreateDomain(java.lang.String friendlyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDomain = null;
         try {
-            JCObject objCreateDomain = (JCObject)classType.Invoke("CreateDomain", friendlyName);
+            retObjectCreateDomain = classType.Invoke("CreateDomain", friendlyName);
+            JCObject objCreateDomain = (JCObject)retObjectCreateDomain;
             return new AppDomain(objCreateDomain);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDomain != null ? retObjectCreateDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +437,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceAndUnwrap = null;
         try {
-            JCObject objCreateInstanceAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceAndUnwrap = classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceAndUnwrap = (JCObject)retObjectCreateInstanceAndUnwrap;
             return new NetObject(objCreateInstanceAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceAndUnwrap != null ? retObjectCreateInstanceAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -326,10 +452,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceAndUnwrap = null;
         try {
-            JCObject objCreateInstanceAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceAndUnwrap = classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceAndUnwrap = (JCObject)retObjectCreateInstanceAndUnwrap;
             return new NetObject(objCreateInstanceAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceAndUnwrap != null ? retObjectCreateInstanceAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,10 +467,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceAndUnwrap = null;
         try {
-            JCObject objCreateInstanceAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName);
+            retObjectCreateInstanceAndUnwrap = classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName);
+            JCObject objCreateInstanceAndUnwrap = (JCObject)retObjectCreateInstanceAndUnwrap;
             return new NetObject(objCreateInstanceAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceAndUnwrap != null ? retObjectCreateInstanceAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -348,10 +482,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceFromAndUnwrap(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFromAndUnwrap = null;
         try {
-            JCObject objCreateInstanceFromAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFromAndUnwrap = classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFromAndUnwrap = (JCObject)retObjectCreateInstanceFromAndUnwrap;
             return new NetObject(objCreateInstanceFromAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromAndUnwrap != null ? retObjectCreateInstanceFromAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,10 +497,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceFromAndUnwrap(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFromAndUnwrap = null;
         try {
-            JCObject objCreateInstanceFromAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFromAndUnwrap = classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFromAndUnwrap = (JCObject)retObjectCreateInstanceFromAndUnwrap;
             return new NetObject(objCreateInstanceFromAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromAndUnwrap != null ? retObjectCreateInstanceFromAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,10 +512,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject CreateInstanceFromAndUnwrap(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFromAndUnwrap = null;
         try {
-            JCObject objCreateInstanceFromAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName);
+            retObjectCreateInstanceFromAndUnwrap = classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName);
+            JCObject objCreateInstanceFromAndUnwrap = (JCObject)retObjectCreateInstanceFromAndUnwrap;
             return new NetObject(objCreateInstanceFromAndUnwrap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromAndUnwrap != null ? retObjectCreateInstanceFromAndUnwrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,10 +527,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public NetObject GetData(java.lang.String name) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetData = null;
         try {
-            JCObject objGetData = (JCObject)classInstance.Invoke("GetData", name);
+            retObjectGetData = classInstance.Invoke("GetData", name);
+            JCObject objGetData = (JCObject)retObjectGetData;
             return new NetObject(objGetData);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetData != null ? retObjectGetData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,10 +542,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.BadImageFormatException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", rawAssembly, rawSymbolStore);
+            retObjectLoad = classInstance.Invoke("Load", rawAssembly, rawSymbolStore);
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,10 +557,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.BadImageFormatException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectLoad = classInstance.Invoke("Load", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,10 +572,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(byte[] rawAssembly) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.BadImageFormatException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)rawAssembly);
+            retObjectLoad = classInstance.Invoke("Load", (java.lang.Object)rawAssembly);
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,10 +587,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(JCORefOut dupParam0) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.BadImageFormatException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectLoad = classInstance.Invoke("Load", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,10 +602,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(AssemblyName assemblyRef) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance());
+            retObjectLoad = classInstance.Invoke("Load", assemblyRef == null ? null : assemblyRef.getJCOInstance());
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,10 +617,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly Load(java.lang.String assemblyString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileLoadException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoad = null;
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", assemblyString);
+            retObjectLoad = classInstance.Invoke("Load", assemblyString);
+            JCObject objLoad = (JCObject)retObjectLoad;
             return new Assembly(objLoad);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoad != null ? retObjectLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,16 +632,20 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly[] GetAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssemblies = null;
         try {
             ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAssemblies");
+            retObjectGetAssemblies = classInstance.Invoke("GetAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectGetAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Assembly(resultingObject));
             }
             Assembly[] resultingArray = new Assembly[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssemblies != null ? retObjectGetAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -475,16 +653,20 @@ public class AppDomain extends MarshalByRefObject  {
 
     public Assembly[] ReflectionOnlyGetAssemblies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReflectionOnlyGetAssemblies = null;
         try {
             ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ReflectionOnlyGetAssemblies");
+            retObjectReflectionOnlyGetAssemblies = classInstance.Invoke("ReflectionOnlyGetAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectReflectionOnlyGetAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Assembly(resultingObject));
             }
             Assembly[] resultingArray = new Assembly[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReflectionOnlyGetAssemblies != null ? retObjectReflectionOnlyGetAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +674,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", assemblyName, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +689,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", assemblyName, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +704,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstance = null;
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName);
+            retObjectCreateInstance = classInstance.Invoke("CreateInstance", assemblyName, typeName);
+            JCObject objCreateInstance = (JCObject)retObjectCreateInstance;
             return new ObjectHandle(objCreateInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstance != null ? retObjectCreateInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +719,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFrom = classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, ignoreCase, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), culture == null ? null : culture.getJCOInstance(), toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +734,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName, NetObject[] activationAttributes) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            retObjectCreateInstanceFrom = classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,10 +749,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateInstanceFrom = null;
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
+            retObjectCreateInstanceFrom = classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
+            JCObject objCreateInstanceFrom = (JCObject)retObjectCreateInstanceFrom;
             return new ObjectHandle(objCreateInstanceFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFrom != null ? retObjectCreateInstanceFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,9 +764,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public java.lang.String ApplyPolicy(java.lang.String assemblyName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplyPolicy = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ApplyPolicy", assemblyName);
+            retObjectApplyPolicy = classInstance.Invoke("ApplyPolicy", assemblyName);
+            return (java.lang.String)retObjectApplyPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectApplyPolicy != null ? retObjectApplyPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,7 +778,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void AppendPrivatePath(java.lang.String path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AppendPrivatePath", path);
         } catch (JCNativeException jcne) {
@@ -578,7 +788,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void ClearPrivatePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearPrivatePath");
         } catch (JCNativeException jcne) {
@@ -588,7 +798,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void ClearShadowCopyPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearShadowCopyPath");
         } catch (JCNativeException jcne) {
@@ -598,7 +808,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetCachePath(java.lang.String path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCachePath", path);
         } catch (JCNativeException jcne) {
@@ -608,7 +818,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetData(java.lang.String name, NetObject data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetData", name, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -618,7 +828,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetDynamicBase(java.lang.String path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDynamicBase", path);
         } catch (JCNativeException jcne) {
@@ -628,7 +838,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetPrincipalPolicy(PrincipalPolicy policy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPrincipalPolicy", policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -638,7 +848,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetShadowCopyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetShadowCopyFiles");
         } catch (JCNativeException jcne) {
@@ -648,7 +858,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetShadowCopyPath(java.lang.String path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetShadowCopyPath", path);
         } catch (JCNativeException jcne) {
@@ -658,7 +868,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void SetThreadPrincipal(IPrincipal principal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.SystemException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetThreadPrincipal", principal == null ? null : principal.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -668,7 +878,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static void Unload(AppDomain domain) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.CannotUnloadAppDomainException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unload", domain == null ? null : domain.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -682,9 +892,13 @@ public class AppDomain extends MarshalByRefObject  {
     
     public boolean getIsFullyTrusted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFullyTrusted = null;
         try {
-            return (boolean)classInstance.Get("IsFullyTrusted");
+            retObjectIsFullyTrusted = classInstance.Get("IsFullyTrusted");
+            return (boolean)retObjectIsFullyTrusted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFullyTrusted != null ? retObjectIsFullyTrusted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -692,9 +906,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public boolean getIsHomogenous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHomogenous = null;
         try {
-            return (boolean)classInstance.Get("IsHomogenous");
+            retObjectIsHomogenous = classInstance.Get("IsHomogenous");
+            return (boolean)retObjectIsHomogenous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHomogenous != null ? retObjectIsHomogenous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,9 +920,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static boolean getMonitoringIsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonitoringIsEnabled = null;
         try {
-            return (boolean)classType.Get("MonitoringIsEnabled");
+            retObjectMonitoringIsEnabled = classType.Get("MonitoringIsEnabled");
+            return (boolean)retObjectMonitoringIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMonitoringIsEnabled != null ? retObjectMonitoringIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,7 +934,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static void setMonitoringIsEnabled(boolean MonitoringIsEnabled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("MonitoringIsEnabled", MonitoringIsEnabled);
         } catch (JCNativeException jcne) {
@@ -722,9 +944,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public boolean getShadowCopyFiles() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShadowCopyFiles = null;
         try {
-            return (boolean)classInstance.Get("ShadowCopyFiles");
+            retObjectShadowCopyFiles = classInstance.Get("ShadowCopyFiles");
+            return (boolean)retObjectShadowCopyFiles;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShadowCopyFiles != null ? retObjectShadowCopyFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,9 +958,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public int getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -742,9 +972,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public long getMonitoringSurvivedMemorySize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonitoringSurvivedMemorySize = null;
         try {
-            return (long)classInstance.Get("MonitoringSurvivedMemorySize");
+            retObjectMonitoringSurvivedMemorySize = classInstance.Get("MonitoringSurvivedMemorySize");
+            return (long)retObjectMonitoringSurvivedMemorySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMonitoringSurvivedMemorySize != null ? retObjectMonitoringSurvivedMemorySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -752,9 +986,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static long getMonitoringSurvivedProcessMemorySize() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMonitoringSurvivedProcessMemorySize = null;
         try {
-            return (long)classType.Get("MonitoringSurvivedProcessMemorySize");
+            retObjectMonitoringSurvivedProcessMemorySize = classType.Get("MonitoringSurvivedProcessMemorySize");
+            return (long)retObjectMonitoringSurvivedProcessMemorySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMonitoringSurvivedProcessMemorySize != null ? retObjectMonitoringSurvivedProcessMemorySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -762,9 +1000,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public long getMonitoringTotalAllocatedMemorySize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonitoringTotalAllocatedMemorySize = null;
         try {
-            return (long)classInstance.Get("MonitoringTotalAllocatedMemorySize");
+            retObjectMonitoringTotalAllocatedMemorySize = classInstance.Get("MonitoringTotalAllocatedMemorySize");
+            return (long)retObjectMonitoringTotalAllocatedMemorySize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMonitoringTotalAllocatedMemorySize != null ? retObjectMonitoringTotalAllocatedMemorySize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -772,10 +1014,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public static AppDomain getCurrentDomain() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentDomain = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentDomain");
+            retObjectCurrentDomain = classType.Get("CurrentDomain");
+            JCObject val = (JCObject)retObjectCurrentDomain;
             return new AppDomain(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentDomain != null ? retObjectCurrentDomain.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,10 +1029,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public AppDomainSetup getSetupInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSetupInformation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SetupInformation");
+            retObjectSetupInformation = classInstance.Get("SetupInformation");
+            JCObject val = (JCObject)retObjectSetupInformation;
             return new AppDomainSetup(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSetupInformation != null ? retObjectSetupInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -794,10 +1044,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public PermissionSet getPermissionSet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionSet = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PermissionSet");
+            retObjectPermissionSet = classInstance.Get("PermissionSet");
+            JCObject val = (JCObject)retObjectPermissionSet;
             return new PermissionSet(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissionSet != null ? retObjectPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,9 +1059,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public java.lang.String getBaseDirectory() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseDirectory");
+            retObjectBaseDirectory = classInstance.Get("BaseDirectory");
+            return (java.lang.String)retObjectBaseDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseDirectory != null ? retObjectBaseDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -815,9 +1073,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public java.lang.String getDynamicDirectory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDynamicDirectory = null;
         try {
-            return (java.lang.String)classInstance.Get("DynamicDirectory");
+            retObjectDynamicDirectory = classInstance.Get("DynamicDirectory");
+            return (java.lang.String)retObjectDynamicDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDynamicDirectory != null ? retObjectDynamicDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -825,9 +1087,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public java.lang.String getFriendlyName() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFriendlyName = null;
         try {
-            return (java.lang.String)classInstance.Get("FriendlyName");
+            retObjectFriendlyName = classInstance.Get("FriendlyName");
+            return (java.lang.String)retObjectFriendlyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFriendlyName != null ? retObjectFriendlyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -835,9 +1101,13 @@ public class AppDomain extends MarshalByRefObject  {
 
     public java.lang.String getRelativeSearchPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelativeSearchPath = null;
         try {
-            return (java.lang.String)classInstance.Get("RelativeSearchPath");
+            retObjectRelativeSearchPath = classInstance.Get("RelativeSearchPath");
+            return (java.lang.String)retObjectRelativeSearchPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRelativeSearchPath != null ? retObjectRelativeSearchPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -845,10 +1115,14 @@ public class AppDomain extends MarshalByRefObject  {
 
     public TimeSpan getMonitoringTotalProcessorTime() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMonitoringTotalProcessorTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MonitoringTotalProcessorTime");
+            retObjectMonitoringTotalProcessorTime = classInstance.Get("MonitoringTotalProcessorTime");
+            JCObject val = (JCObject)retObjectMonitoringTotalProcessorTime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMonitoringTotalProcessorTime != null ? retObjectMonitoringTotalProcessorTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -861,7 +1135,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AssemblyLoad", handler);
         } catch (JCNativeException jcne) {
@@ -871,7 +1145,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeAssemblyLoad(AssemblyLoadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AssemblyLoad", handler);
         } catch (JCNativeException jcne) {
@@ -881,7 +1155,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addDomainUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DomainUnload", handler);
         } catch (JCNativeException jcne) {
@@ -891,7 +1165,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeDomainUnload(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DomainUnload", handler);
         } catch (JCNativeException jcne) {
@@ -901,7 +1175,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addProcessExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ProcessExit", handler);
         } catch (JCNativeException jcne) {
@@ -911,7 +1185,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeProcessExit(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProcessExit", handler);
         } catch (JCNativeException jcne) {
@@ -921,7 +1195,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AssemblyResolve", handler);
         } catch (JCNativeException jcne) {
@@ -931,7 +1205,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AssemblyResolve", handler);
         } catch (JCNativeException jcne) {
@@ -941,7 +1215,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addReflectionOnlyAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ReflectionOnlyAssemblyResolve", handler);
         } catch (JCNativeException jcne) {
@@ -951,7 +1225,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeReflectionOnlyAssemblyResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ReflectionOnlyAssemblyResolve", handler);
         } catch (JCNativeException jcne) {
@@ -961,7 +1235,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addResourceResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ResourceResolve", handler);
         } catch (JCNativeException jcne) {
@@ -971,7 +1245,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeResourceResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResourceResolve", handler);
         } catch (JCNativeException jcne) {
@@ -981,7 +1255,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TypeResolve", handler);
         } catch (JCNativeException jcne) {
@@ -991,7 +1265,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeTypeResolve(ResolveEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TypeResolve", handler);
         } catch (JCNativeException jcne) {
@@ -1001,7 +1275,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void addUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("UnhandledException", handler);
         } catch (JCNativeException jcne) {
@@ -1011,7 +1285,7 @@ public class AppDomain extends MarshalByRefObject  {
 
     public void removeUnhandledException(UnhandledExceptionEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("UnhandledException", handler);
         } catch (JCNativeException jcne) {

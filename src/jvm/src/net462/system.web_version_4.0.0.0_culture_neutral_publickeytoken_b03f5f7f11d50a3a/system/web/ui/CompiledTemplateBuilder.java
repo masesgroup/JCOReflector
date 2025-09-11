@@ -167,7 +167,7 @@ public class CompiledTemplateBuilder extends NetObject  {
     
     public void InstantiateIn(Control container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstantiateIn", container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {

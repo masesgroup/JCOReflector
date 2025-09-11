@@ -166,10 +166,14 @@ public class CompensableActivity extends NetObject  {
     
     public Activity getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            JCObject val = (JCObject)retObjectBody;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class CompensableActivity extends NetObject  {
 
     public void setBody(Activity Body) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body == null ? null : Body.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class CompensableActivity extends NetObject  {
 
     public Activity getCancellationHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationHandler");
+            retObjectCancellationHandler = classInstance.Get("CancellationHandler");
+            JCObject val = (JCObject)retObjectCancellationHandler;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancellationHandler != null ? retObjectCancellationHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class CompensableActivity extends NetObject  {
 
     public void setCancellationHandler(Activity CancellationHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancellationHandler", CancellationHandler == null ? null : CancellationHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class CompensableActivity extends NetObject  {
 
     public Activity getCompensationHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompensationHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompensationHandler");
+            retObjectCompensationHandler = classInstance.Get("CompensationHandler");
+            JCObject val = (JCObject)retObjectCompensationHandler;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompensationHandler != null ? retObjectCompensationHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class CompensableActivity extends NetObject  {
 
     public void setCompensationHandler(Activity CompensationHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompensationHandler", CompensationHandler == null ? null : CompensationHandler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class CompensableActivity extends NetObject  {
 
     public Activity getConfirmationHandler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConfirmationHandler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConfirmationHandler");
+            retObjectConfirmationHandler = classInstance.Get("ConfirmationHandler");
+            JCObject val = (JCObject)retObjectConfirmationHandler;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConfirmationHandler != null ? retObjectConfirmationHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class CompensableActivity extends NetObject  {
 
     public void setConfirmationHandler(Activity ConfirmationHandler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConfirmationHandler", ConfirmationHandler == null ? null : ConfirmationHandler.getJCOInstance());
         } catch (JCNativeException jcne) {

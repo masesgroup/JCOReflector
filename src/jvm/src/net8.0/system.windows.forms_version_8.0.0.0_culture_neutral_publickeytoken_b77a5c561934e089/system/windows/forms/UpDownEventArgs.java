@@ -170,9 +170,13 @@ public class UpDownEventArgs extends EventArgs  {
     
     public int getButtonID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectButtonID = null;
         try {
-            return (int)classInstance.Get("ButtonID");
+            retObjectButtonID = classInstance.Get("ButtonID");
+            return (int)retObjectButtonID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectButtonID != null ? retObjectButtonID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

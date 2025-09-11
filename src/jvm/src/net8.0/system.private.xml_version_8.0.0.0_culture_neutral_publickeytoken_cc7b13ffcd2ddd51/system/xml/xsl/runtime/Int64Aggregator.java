@@ -156,7 +156,7 @@ public class Int64Aggregator extends ValueType  {
     
     public void Average(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Average", value);
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class Int64Aggregator extends ValueType  {
 
     public void Create() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Create");
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class Int64Aggregator extends ValueType  {
 
     public void Maximum(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Maximum", value);
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class Int64Aggregator extends ValueType  {
 
     public void Minimum(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Minimum", value);
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class Int64Aggregator extends ValueType  {
 
     public void Sum(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Sum", value);
         } catch (JCNativeException jcne) {
@@ -210,9 +210,13 @@ public class Int64Aggregator extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +224,13 @@ public class Int64Aggregator extends ValueType  {
 
     public long getAverageResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAverageResult = null;
         try {
-            return (long)classInstance.Get("AverageResult");
+            retObjectAverageResult = classInstance.Get("AverageResult");
+            return (long)retObjectAverageResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectAverageResult != null ? retObjectAverageResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +238,13 @@ public class Int64Aggregator extends ValueType  {
 
     public long getMaximumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumResult = null;
         try {
-            return (long)classInstance.Get("MaximumResult");
+            retObjectMaximumResult = classInstance.Get("MaximumResult");
+            return (long)retObjectMaximumResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMaximumResult != null ? retObjectMaximumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +252,13 @@ public class Int64Aggregator extends ValueType  {
 
     public long getMinimumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumResult = null;
         try {
-            return (long)classInstance.Get("MinimumResult");
+            retObjectMinimumResult = classInstance.Get("MinimumResult");
+            return (long)retObjectMinimumResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMinimumResult != null ? retObjectMinimumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +266,13 @@ public class Int64Aggregator extends ValueType  {
 
     public long getSumResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSumResult = null;
         try {
-            return (long)classInstance.Get("SumResult");
+            retObjectSumResult = classInstance.Get("SumResult");
+            return (long)retObjectSumResult;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectSumResult != null ? retObjectSumResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

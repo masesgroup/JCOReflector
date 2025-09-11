@@ -173,7 +173,7 @@ public class ChannelParameterCollection extends NetObjectEnumerable  {
     
     public void PropagateChannelParameters(IChannel innerChannel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PropagateChannelParameters", innerChannel == null ? null : innerChannel.getJCOInstance());
         } catch (JCNativeException jcne) {

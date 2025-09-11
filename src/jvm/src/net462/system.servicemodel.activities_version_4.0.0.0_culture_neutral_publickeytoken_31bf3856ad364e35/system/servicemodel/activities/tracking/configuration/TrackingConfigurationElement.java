@@ -158,10 +158,14 @@ public class TrackingConfigurationElement extends ConfigurationElement  {
     
     public NetObject getElementKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementKey");
+            retObjectElementKey = classInstance.Get("ElementKey");
+            JCObject val = (JCObject)retObjectElementKey;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementKey != null ? retObjectElementKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

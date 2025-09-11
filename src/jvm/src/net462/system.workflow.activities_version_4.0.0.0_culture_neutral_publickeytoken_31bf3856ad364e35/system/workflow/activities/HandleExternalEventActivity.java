@@ -185,7 +185,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
      */
     @Deprecated 
     public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
      */
     @Deprecated 
     public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
     }
 
 
@@ -203,9 +203,13 @@ public class HandleExternalEventActivity extends Activity implements system.work
     
     public java.lang.String getEventName() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventName = null;
         try {
-            return (java.lang.String)classInstance.Get("EventName");
+            retObjectEventName = classInstance.Get("EventName");
+            return (java.lang.String)retObjectEventName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEventName != null ? retObjectEventName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public void setEventName(java.lang.String EventName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventName", EventName);
         } catch (JCNativeException jcne) {
@@ -223,10 +227,14 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public NetType getInterfaceType() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInterfaceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InterfaceType");
+            retObjectInterfaceType = classInstance.Get("InterfaceType");
+            JCObject val = (JCObject)retObjectInterfaceType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInterfaceType != null ? retObjectInterfaceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +242,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public void setInterfaceType(NetType InterfaceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InterfaceType", InterfaceType == null ? null : InterfaceType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +252,14 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public WorkflowRoleCollection getRoles() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRoles = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Roles");
+            retObjectRoles = classInstance.Get("Roles");
+            JCObject val = (JCObject)retObjectRoles;
             return new WorkflowRoleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoles != null ? retObjectRoles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +267,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public void setRoles(WorkflowRoleCollection Roles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Roles", Roles == null ? null : Roles.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +277,14 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public WorkflowParameterBindingCollection getParameterBindings() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterBindings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterBindings");
+            retObjectParameterBindings = classInstance.Get("ParameterBindings");
+            JCObject val = (JCObject)retObjectParameterBindings;
             return new WorkflowParameterBindingCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterBindings != null ? retObjectParameterBindings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +292,14 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public CorrelationToken getCorrelationToken() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrelationToken");
+            retObjectCorrelationToken = classInstance.Get("CorrelationToken");
+            JCObject val = (JCObject)retObjectCorrelationToken;
             return new CorrelationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationToken != null ? retObjectCorrelationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,7 +307,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
 
     public void setCorrelationToken(CorrelationToken CorrelationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CorrelationToken", CorrelationToken == null ? null : CorrelationToken.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -144,9 +144,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
     
     public boolean EnsurePendingChangesCommitted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnsurePendingChangesCommitted = null;
         try {
-            return (boolean)classInstance.Invoke("EnsurePendingChangesCommitted");
+            retObjectEnsurePendingChangesCommitted = classInstance.Invoke("EnsurePendingChangesCommitted");
+            return (boolean)retObjectEnsurePendingChangesCommitted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEnsurePendingChangesCommitted != null ? retObjectEnsurePendingChangesCommitted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void DropDownDone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DropDownDone");
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void HandleF4() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HandleF4");
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void LoadState(RegistryKey key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadState", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void SaveState(RegistryKey key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveState", key == null ? null : key.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
     
     public boolean getInPropertySet() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInPropertySet = null;
         try {
-            return (boolean)classInstance.Get("InPropertySet");
+            retObjectInPropertySet = classInstance.Get("InPropertySet");
+            return (boolean)retObjectInPropertySet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInPropertySet != null ? retObjectInPropertySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +221,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void addComComponentNameChanged(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComComponentNameChanged", handler);
         } catch (JCNativeException jcne) {
@@ -223,7 +231,7 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
 
     public void removeComComponentNameChanged(ComponentRenameEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComComponentNameChanged", handler);
         } catch (JCNativeException jcne) {

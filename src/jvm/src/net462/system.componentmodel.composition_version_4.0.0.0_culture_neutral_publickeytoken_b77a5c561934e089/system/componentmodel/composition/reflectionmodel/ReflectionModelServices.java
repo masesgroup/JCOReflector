@@ -158,9 +158,13 @@ public class ReflectionModelServices extends NetObject  {
     
     public static boolean IsDisposalRequired(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDisposalRequired = null;
         try {
-            return (boolean)classType.Invoke("IsDisposalRequired", partDefinition == null ? null : partDefinition.getJCOInstance());
+            retObjectIsDisposalRequired = classType.Invoke("IsDisposalRequired", partDefinition == null ? null : partDefinition.getJCOInstance());
+            return (boolean)retObjectIsDisposalRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDisposalRequired != null ? retObjectIsDisposalRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class ReflectionModelServices extends NetObject  {
 
     public static boolean IsExportFactoryImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsExportFactoryImportDefinition = null;
         try {
-            return (boolean)classType.Invoke("IsExportFactoryImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
+            retObjectIsExportFactoryImportDefinition = classType.Invoke("IsExportFactoryImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
+            return (boolean)retObjectIsExportFactoryImportDefinition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsExportFactoryImportDefinition != null ? retObjectIsExportFactoryImportDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class ReflectionModelServices extends NetObject  {
 
     public static boolean IsImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsImportingParameter = null;
         try {
-            return (boolean)classType.Invoke("IsImportingParameter", importDefinition == null ? null : importDefinition.getJCOInstance());
+            retObjectIsImportingParameter = classType.Invoke("IsImportingParameter", importDefinition == null ? null : importDefinition.getJCOInstance());
+            return (boolean)retObjectIsImportingParameter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsImportingParameter != null ? retObjectIsImportingParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class ReflectionModelServices extends NetObject  {
 
     public static ContractBasedImportDefinition GetExportFactoryProductImportDefinition(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExportFactoryProductImportDefinition = null;
         try {
-            JCObject objGetExportFactoryProductImportDefinition = (JCObject)classType.Invoke("GetExportFactoryProductImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
+            retObjectGetExportFactoryProductImportDefinition = classType.Invoke("GetExportFactoryProductImportDefinition", importDefinition == null ? null : importDefinition.getJCOInstance());
+            JCObject objGetExportFactoryProductImportDefinition = (JCObject)retObjectGetExportFactoryProductImportDefinition;
             return new ContractBasedImportDefinition(objGetExportFactoryProductImportDefinition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportFactoryProductImportDefinition != null ? retObjectGetExportFactoryProductImportDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class ReflectionModelServices extends NetObject  {
 
     public static LazyMemberInfo GetExportingMember(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetExportingMember = null;
         try {
-            JCObject objGetExportingMember = (JCObject)classType.Invoke("GetExportingMember", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            retObjectGetExportingMember = classType.Invoke("GetExportingMember", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            JCObject objGetExportingMember = (JCObject)retObjectGetExportingMember;
             return new LazyMemberInfo(objGetExportingMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportingMember != null ? retObjectGetExportingMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +230,14 @@ public class ReflectionModelServices extends NetObject  {
 
     public static LazyMemberInfo GetImportingMember(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImportingMember = null;
         try {
-            JCObject objGetImportingMember = (JCObject)classType.Invoke("GetImportingMember", importDefinition == null ? null : importDefinition.getJCOInstance());
+            retObjectGetImportingMember = classType.Invoke("GetImportingMember", importDefinition == null ? null : importDefinition.getJCOInstance());
+            JCObject objGetImportingMember = (JCObject)retObjectGetImportingMember;
             return new LazyMemberInfo(objGetImportingMember);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImportingMember != null ? retObjectGetImportingMember.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

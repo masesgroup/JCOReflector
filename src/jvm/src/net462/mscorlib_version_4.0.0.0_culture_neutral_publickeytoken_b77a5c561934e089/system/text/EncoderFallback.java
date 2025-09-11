@@ -155,10 +155,14 @@ public class EncoderFallback extends NetObject  {
     
     public EncoderFallbackBuffer CreateFallbackBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateFallbackBuffer = null;
         try {
-            JCObject objCreateFallbackBuffer = (JCObject)classInstance.Invoke("CreateFallbackBuffer");
+            retObjectCreateFallbackBuffer = classInstance.Invoke("CreateFallbackBuffer");
+            JCObject objCreateFallbackBuffer = (JCObject)retObjectCreateFallbackBuffer;
             return new EncoderFallbackBuffer(objCreateFallbackBuffer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFallbackBuffer != null ? retObjectCreateFallbackBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class EncoderFallback extends NetObject  {
     
     public int getMaxCharCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCharCount = null;
         try {
-            return (int)classInstance.Get("MaxCharCount");
+            retObjectMaxCharCount = classInstance.Get("MaxCharCount");
+            return (int)retObjectMaxCharCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxCharCount != null ? retObjectMaxCharCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class EncoderFallback extends NetObject  {
 
     public static EncoderFallback getExceptionFallback() throws Throwable, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExceptionFallback = null;
         try {
-            JCObject val = (JCObject)classType.Get("ExceptionFallback");
+            retObjectExceptionFallback = classType.Get("ExceptionFallback");
+            JCObject val = (JCObject)retObjectExceptionFallback;
             return new EncoderFallback(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionFallback != null ? retObjectExceptionFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class EncoderFallback extends NetObject  {
 
     public static EncoderFallback getReplacementFallback() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReplacementFallback = null;
         try {
-            JCObject val = (JCObject)classType.Get("ReplacementFallback");
+            retObjectReplacementFallback = classType.Get("ReplacementFallback");
+            JCObject val = (JCObject)retObjectReplacementFallback;
             return new EncoderFallback(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplacementFallback != null ? retObjectReplacementFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

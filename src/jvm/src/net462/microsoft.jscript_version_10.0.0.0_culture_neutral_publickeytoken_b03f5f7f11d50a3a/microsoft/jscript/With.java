@@ -157,10 +157,14 @@ public class With extends AST  {
     
     public static NetObject JScriptWith(NetObject withOb, VsaEngine engine) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, microsoft.jscript.JScriptException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptWith = null;
         try {
-            JCObject objJScriptWith = (JCObject)classType.Invoke("JScriptWith", withOb == null ? null : withOb.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            retObjectJScriptWith = classType.Invoke("JScriptWith", withOb == null ? null : withOb.getJCOInstance(), engine == null ? null : engine.getJCOInstance());
+            JCObject objJScriptWith = (JCObject)retObjectJScriptWith;
             return new NetObject(objJScriptWith);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptWith != null ? retObjectJScriptWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

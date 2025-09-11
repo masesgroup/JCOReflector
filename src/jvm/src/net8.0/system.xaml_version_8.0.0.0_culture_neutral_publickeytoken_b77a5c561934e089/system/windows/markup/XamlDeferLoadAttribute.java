@@ -180,9 +180,13 @@ public class XamlDeferLoadAttribute extends Attribute  {
     
     public java.lang.String getContentTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContentTypeName");
+            retObjectContentTypeName = classInstance.Get("ContentTypeName");
+            return (java.lang.String)retObjectContentTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContentTypeName != null ? retObjectContentTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class XamlDeferLoadAttribute extends Attribute  {
 
     public java.lang.String getLoaderTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoaderTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("LoaderTypeName");
+            retObjectLoaderTypeName = classInstance.Get("LoaderTypeName");
+            return (java.lang.String)retObjectLoaderTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoaderTypeName != null ? retObjectLoaderTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class XamlDeferLoadAttribute extends Attribute  {
 
     public NetType getContentType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentType");
+            retObjectContentType = classInstance.Get("ContentType");
+            JCObject val = (JCObject)retObjectContentType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentType != null ? retObjectContentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class XamlDeferLoadAttribute extends Attribute  {
 
     public void setContentType(NetType ContentType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentType", ContentType == null ? null : ContentType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +233,14 @@ public class XamlDeferLoadAttribute extends Attribute  {
 
     public NetType getLoaderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoaderType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LoaderType");
+            retObjectLoaderType = classInstance.Get("LoaderType");
+            JCObject val = (JCObject)retObjectLoaderType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoaderType != null ? retObjectLoaderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,7 +248,7 @@ public class XamlDeferLoadAttribute extends Attribute  {
 
     public void setLoaderType(NetType LoaderType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoaderType", LoaderType == null ? null : LoaderType.getJCOInstance());
         } catch (JCNativeException jcne) {

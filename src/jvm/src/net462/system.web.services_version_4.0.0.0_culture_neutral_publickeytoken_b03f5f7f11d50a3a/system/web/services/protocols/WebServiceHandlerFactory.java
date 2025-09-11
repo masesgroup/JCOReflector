@@ -164,10 +164,14 @@ public class WebServiceHandlerFactory extends NetObject  {
     
     public IHttpHandler GetHandler(HttpContext context, java.lang.String verb, java.lang.String url, java.lang.String filePath) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.AccessViolationException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.web.HttpCompileException, system.MemberAccessException, system.io.PathTooLongException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHandler = null;
         try {
-            JCObject objGetHandler = (JCObject)classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), verb, url, filePath);
+            retObjectGetHandler = classInstance.Invoke("GetHandler", context == null ? null : context.getJCOInstance(), verb, url, filePath);
+            JCObject objGetHandler = (JCObject)retObjectGetHandler;
             return new IHttpHandlerImplementation(objGetHandler);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHandler != null ? retObjectGetHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class WebServiceHandlerFactory extends NetObject  {
 
     public void ReleaseHandler(IHttpHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {

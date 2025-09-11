@@ -159,10 +159,14 @@ public class Tablet extends NetObject  {
     
     public static TabletDevice getCurrentTabletDevice() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.OverflowException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentTabletDevice = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentTabletDevice");
+            retObjectCurrentTabletDevice = classType.Get("CurrentTabletDevice");
+            JCObject val = (JCObject)retObjectCurrentTabletDevice;
             return new TabletDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentTabletDevice != null ? retObjectCurrentTabletDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class Tablet extends NetObject  {
 
     public static TabletDeviceCollection getTabletDevices() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTabletDevices = null;
         try {
-            JCObject val = (JCObject)classType.Get("TabletDevices");
+            retObjectTabletDevices = classType.Get("TabletDevices");
+            JCObject val = (JCObject)retObjectTabletDevices;
             return new TabletDeviceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTabletDevices != null ? retObjectTabletDevices.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

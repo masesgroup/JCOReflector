@@ -231,10 +231,14 @@ public class WSTrustChannelFactory extends NetObject  {
     
     public IWSTrustChannelContract CreateChannel(EndpointAddress address, Uri via) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateChannel = null;
         try {
-            JCObject objCreateChannel = (JCObject)classInstance.Invoke("CreateChannel", address == null ? null : address.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            retObjectCreateChannel = classInstance.Invoke("CreateChannel", address == null ? null : address.getJCOInstance(), via == null ? null : via.getJCOInstance());
+            JCObject objCreateChannel = (JCObject)retObjectCreateChannel;
             return new IWSTrustChannelContractImplementation(objCreateChannel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateChannel != null ? retObjectCreateChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +250,14 @@ public class WSTrustChannelFactory extends NetObject  {
     
     public WSTrustRequestSerializer getWSTrustRequestSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrustRequestSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustRequestSerializer");
+            retObjectWSTrustRequestSerializer = classInstance.Get("WSTrustRequestSerializer");
+            JCObject val = (JCObject)retObjectWSTrustRequestSerializer;
             return new WSTrustRequestSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrustRequestSerializer != null ? retObjectWSTrustRequestSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +265,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setWSTrustRequestSerializer(WSTrustRequestSerializer WSTrustRequestSerializer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrustRequestSerializer", WSTrustRequestSerializer == null ? null : WSTrustRequestSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,10 +275,14 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public WSTrustResponseSerializer getWSTrustResponseSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrustResponseSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustResponseSerializer");
+            retObjectWSTrustResponseSerializer = classInstance.Get("WSTrustResponseSerializer");
+            JCObject val = (JCObject)retObjectWSTrustResponseSerializer;
             return new WSTrustResponseSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrustResponseSerializer != null ? retObjectWSTrustResponseSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +290,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setWSTrustResponseSerializer(WSTrustResponseSerializer WSTrustResponseSerializer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrustResponseSerializer", WSTrustResponseSerializer == null ? null : WSTrustResponseSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +300,14 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public SecurityTokenResolver getSecurityTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenResolver");
+            retObjectSecurityTokenResolver = classInstance.Get("SecurityTokenResolver");
+            JCObject val = (JCObject)retObjectSecurityTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenResolver != null ? retObjectSecurityTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +315,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setSecurityTokenResolver(SecurityTokenResolver SecurityTokenResolver) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityTokenResolver", SecurityTokenResolver == null ? null : SecurityTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +325,14 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public SecurityTokenResolver getUseKeyTokenResolver() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseKeyTokenResolver = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UseKeyTokenResolver");
+            retObjectUseKeyTokenResolver = classInstance.Get("UseKeyTokenResolver");
+            JCObject val = (JCObject)retObjectUseKeyTokenResolver;
             return new SecurityTokenResolver(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUseKeyTokenResolver != null ? retObjectUseKeyTokenResolver.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +340,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setUseKeyTokenResolver(SecurityTokenResolver UseKeyTokenResolver) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseKeyTokenResolver", UseKeyTokenResolver == null ? null : UseKeyTokenResolver.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +350,14 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public SecurityTokenHandlerCollectionManager getSecurityTokenHandlerCollectionManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenHandlerCollectionManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenHandlerCollectionManager");
+            retObjectSecurityTokenHandlerCollectionManager = classInstance.Get("SecurityTokenHandlerCollectionManager");
+            JCObject val = (JCObject)retObjectSecurityTokenHandlerCollectionManager;
             return new SecurityTokenHandlerCollectionManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenHandlerCollectionManager != null ? retObjectSecurityTokenHandlerCollectionManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +365,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setSecurityTokenHandlerCollectionManager(SecurityTokenHandlerCollectionManager SecurityTokenHandlerCollectionManager) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityTokenHandlerCollectionManager", SecurityTokenHandlerCollectionManager == null ? null : SecurityTokenHandlerCollectionManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +375,14 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public TrustVersion getTrustVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrustVersion = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TrustVersion");
+            retObjectTrustVersion = classInstance.Get("TrustVersion");
+            JCObject val = (JCObject)retObjectTrustVersion;
             return new TrustVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTrustVersion != null ? retObjectTrustVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +390,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     public void setTrustVersion(TrustVersion TrustVersion) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TrustVersion", TrustVersion == null ? null : TrustVersion.getJCOInstance());
         } catch (JCNativeException jcne) {

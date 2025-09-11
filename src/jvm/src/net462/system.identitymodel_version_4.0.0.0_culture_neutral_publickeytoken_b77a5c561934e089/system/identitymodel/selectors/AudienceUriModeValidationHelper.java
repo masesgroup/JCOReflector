@@ -154,9 +154,13 @@ public class AudienceUriModeValidationHelper extends NetObject  {
     
     public static boolean IsDefined(AudienceUriMode validationMode) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", validationMode == null ? null : validationMode.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", validationMode == null ? null : validationMode.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

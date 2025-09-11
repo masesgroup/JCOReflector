@@ -153,9 +153,13 @@ public class RuntimeFeature extends NetObject  {
     
     public static boolean IsSupported(java.lang.String feature) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Invoke("IsSupported", feature);
+            retObjectIsSupported = classType.Invoke("IsSupported", feature);
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

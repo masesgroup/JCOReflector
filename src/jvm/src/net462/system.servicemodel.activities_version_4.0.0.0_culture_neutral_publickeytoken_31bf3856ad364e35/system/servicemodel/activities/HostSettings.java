@@ -166,9 +166,13 @@ public class HostSettings extends NetObject  {
     
     public boolean getIncludeExceptionDetailInFaults() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeExceptionDetailInFaults = null;
         try {
-            return (boolean)classInstance.Get("IncludeExceptionDetailInFaults");
+            retObjectIncludeExceptionDetailInFaults = classInstance.Get("IncludeExceptionDetailInFaults");
+            return (boolean)retObjectIncludeExceptionDetailInFaults;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeExceptionDetailInFaults != null ? retObjectIncludeExceptionDetailInFaults.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class HostSettings extends NetObject  {
 
     public void setIncludeExceptionDetailInFaults(boolean IncludeExceptionDetailInFaults) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeExceptionDetailInFaults", IncludeExceptionDetailInFaults);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class HostSettings extends NetObject  {
 
     public boolean getUseNoPersistHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseNoPersistHandle = null;
         try {
-            return (boolean)classInstance.Get("UseNoPersistHandle");
+            retObjectUseNoPersistHandle = classInstance.Get("UseNoPersistHandle");
+            return (boolean)retObjectUseNoPersistHandle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseNoPersistHandle != null ? retObjectUseNoPersistHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class HostSettings extends NetObject  {
 
     public void setUseNoPersistHandle(boolean UseNoPersistHandle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseNoPersistHandle", UseNoPersistHandle);
         } catch (JCNativeException jcne) {
@@ -206,10 +214,14 @@ public class HostSettings extends NetObject  {
 
     public XName getScopeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScopeName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScopeName");
+            retObjectScopeName = classInstance.Get("ScopeName");
+            JCObject val = (JCObject)retObjectScopeName;
             return new XName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScopeName != null ? retObjectScopeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class HostSettings extends NetObject  {
 
     public void setScopeName(XName ScopeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ScopeName", ScopeName == null ? null : ScopeName.getJCOInstance());
         } catch (JCNativeException jcne) {

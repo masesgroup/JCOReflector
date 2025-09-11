@@ -167,10 +167,14 @@ public class EventHandlerService extends NetObject  {
     
     public NetObject GetHandler(NetType handlerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHandler = null;
         try {
-            JCObject objGetHandler = (JCObject)classInstance.Invoke("GetHandler", handlerType == null ? null : handlerType.getJCOInstance());
+            retObjectGetHandler = classInstance.Invoke("GetHandler", handlerType == null ? null : handlerType.getJCOInstance());
+            JCObject objGetHandler = (JCObject)retObjectGetHandler;
             return new NetObject(objGetHandler);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHandler != null ? retObjectGetHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EventHandlerService extends NetObject  {
 
     public void PopHandler(NetObject handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PopHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class EventHandlerService extends NetObject  {
 
     public void PushHandler(NetObject handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushHandler", handler == null ? null : handler.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +206,14 @@ public class EventHandlerService extends NetObject  {
     
     public Control getFocusWindow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFocusWindow = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FocusWindow");
+            retObjectFocusWindow = classInstance.Get("FocusWindow");
+            JCObject val = (JCObject)retObjectFocusWindow;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFocusWindow != null ? retObjectFocusWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +226,7 @@ public class EventHandlerService extends NetObject  {
 
     public void addEventHandlerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EventHandlerChanged", handler);
         } catch (JCNativeException jcne) {
@@ -228,7 +236,7 @@ public class EventHandlerService extends NetObject  {
 
     public void removeEventHandlerChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EventHandlerChanged", handler);
         } catch (JCNativeException jcne) {

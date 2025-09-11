@@ -171,9 +171,13 @@ public class JsonSerializableAttribute extends JsonAttribute  {
     
     public java.lang.String getTypeInfoPropertyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeInfoPropertyName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeInfoPropertyName");
+            retObjectTypeInfoPropertyName = classInstance.Get("TypeInfoPropertyName");
+            return (java.lang.String)retObjectTypeInfoPropertyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeInfoPropertyName != null ? retObjectTypeInfoPropertyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class JsonSerializableAttribute extends JsonAttribute  {
 
     public void setTypeInfoPropertyName(java.lang.String TypeInfoPropertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeInfoPropertyName", TypeInfoPropertyName);
         } catch (JCNativeException jcne) {
@@ -191,10 +195,14 @@ public class JsonSerializableAttribute extends JsonAttribute  {
 
     public JsonSourceGenerationMode getGenerationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GenerationMode");
+            retObjectGenerationMode = classInstance.Get("GenerationMode");
+            JCObject val = (JCObject)retObjectGenerationMode;
             return new JsonSourceGenerationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerationMode != null ? retObjectGenerationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +210,7 @@ public class JsonSerializableAttribute extends JsonAttribute  {
 
     public void setGenerationMode(JsonSourceGenerationMode GenerationMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GenerationMode", GenerationMode == null ? null : GenerationMode.getJCOInstance());
         } catch (JCNativeException jcne) {

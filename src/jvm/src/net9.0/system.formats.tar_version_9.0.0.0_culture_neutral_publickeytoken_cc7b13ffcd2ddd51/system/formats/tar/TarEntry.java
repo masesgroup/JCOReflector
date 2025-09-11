@@ -160,10 +160,14 @@ public class TarEntry extends NetObject  {
     
     public Task ExtractToFileAsync(java.lang.String destinationFileName, boolean overwrite, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractToFileAsync = null;
         try {
-            JCObject objExtractToFileAsync = (JCObject)classInstance.Invoke("ExtractToFileAsync", destinationFileName, overwrite, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectExtractToFileAsync = classInstance.Invoke("ExtractToFileAsync", destinationFileName, overwrite, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExtractToFileAsync = (JCObject)retObjectExtractToFileAsync;
             return new Task(objExtractToFileAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractToFileAsync != null ? retObjectExtractToFileAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class TarEntry extends NetObject  {
 
     public void ExtractToFile(java.lang.String destinationFileName, boolean overwrite) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.IOException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ExtractToFile", destinationFileName, overwrite);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class TarEntry extends NetObject  {
     
     public int getChecksum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecksum = null;
         try {
-            return (int)classInstance.Get("Checksum");
+            retObjectChecksum = classInstance.Get("Checksum");
+            return (int)retObjectChecksum;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectChecksum != null ? retObjectChecksum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,13 @@ public class TarEntry extends NetObject  {
 
     public int getGid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGid = null;
         try {
-            return (int)classInstance.Get("Gid");
+            retObjectGid = classInstance.Get("Gid");
+            return (int)retObjectGid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGid != null ? retObjectGid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class TarEntry extends NetObject  {
 
     public void setGid(int Gid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Gid", Gid);
         } catch (JCNativeException jcne) {
@@ -215,9 +227,13 @@ public class TarEntry extends NetObject  {
 
     public int getUid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUid = null;
         try {
-            return (int)classInstance.Get("Uid");
+            retObjectUid = classInstance.Get("Uid");
+            return (int)retObjectUid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUid != null ? retObjectUid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +241,7 @@ public class TarEntry extends NetObject  {
 
     public void setUid(int Uid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Uid", Uid);
         } catch (JCNativeException jcne) {
@@ -235,9 +251,13 @@ public class TarEntry extends NetObject  {
 
     public long getDataOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataOffset = null;
         try {
-            return (long)classInstance.Get("DataOffset");
+            retObjectDataOffset = classInstance.Get("DataOffset");
+            return (long)retObjectDataOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDataOffset != null ? retObjectDataOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +265,13 @@ public class TarEntry extends NetObject  {
 
     public long getLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLength = null;
         try {
-            return (long)classInstance.Get("Length");
+            retObjectLength = classInstance.Get("Length");
+            return (long)retObjectLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectLength != null ? retObjectLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,10 +279,14 @@ public class TarEntry extends NetObject  {
 
     public DateTimeOffset getModificationTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModificationTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ModificationTime");
+            retObjectModificationTime = classInstance.Get("ModificationTime");
+            JCObject val = (JCObject)retObjectModificationTime;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModificationTime != null ? retObjectModificationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,7 +294,7 @@ public class TarEntry extends NetObject  {
 
     public void setModificationTime(DateTimeOffset ModificationTime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModificationTime", ModificationTime == null ? null : ModificationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,10 +304,14 @@ public class TarEntry extends NetObject  {
 
     public TarEntryFormat getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new TarEntryFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +319,14 @@ public class TarEntry extends NetObject  {
 
     public TarEntryType getEntryType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntryType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntryType");
+            retObjectEntryType = classInstance.Get("EntryType");
+            JCObject val = (JCObject)retObjectEntryType;
             return new TarEntryType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntryType != null ? retObjectEntryType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +334,14 @@ public class TarEntry extends NetObject  {
 
     public Stream getDataStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataStream");
+            retObjectDataStream = classInstance.Get("DataStream");
+            JCObject val = (JCObject)retObjectDataStream;
             return new Stream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataStream != null ? retObjectDataStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +349,7 @@ public class TarEntry extends NetObject  {
 
     public void setDataStream(Stream DataStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataStream", DataStream == null ? null : DataStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +359,14 @@ public class TarEntry extends NetObject  {
 
     public UnixFileMode getMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Mode");
+            retObjectMode = classInstance.Get("Mode");
+            JCObject val = (JCObject)retObjectMode;
             return new UnixFileMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMode != null ? retObjectMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +374,7 @@ public class TarEntry extends NetObject  {
 
     public void setMode(UnixFileMode Mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mode", Mode == null ? null : Mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,9 +384,13 @@ public class TarEntry extends NetObject  {
 
     public java.lang.String getLinkName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkName = null;
         try {
-            return (java.lang.String)classInstance.Get("LinkName");
+            retObjectLinkName = classInstance.Get("LinkName");
+            return (java.lang.String)retObjectLinkName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLinkName != null ? retObjectLinkName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +398,7 @@ public class TarEntry extends NetObject  {
 
     public void setLinkName(java.lang.String LinkName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LinkName", LinkName);
         } catch (JCNativeException jcne) {
@@ -360,9 +408,13 @@ public class TarEntry extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -370,7 +422,7 @@ public class TarEntry extends NetObject  {
 
     public void setName(java.lang.String Name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

@@ -169,7 +169,7 @@ public class AspNetCompatibilityRequirementsAttribute extends Attribute  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -178,7 +178,7 @@ public class AspNetCompatibilityRequirementsAttribute extends Attribute  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -187,10 +187,14 @@ public class AspNetCompatibilityRequirementsAttribute extends Attribute  {
     
     public AspNetCompatibilityRequirementsMode getRequirementsMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequirementsMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequirementsMode");
+            retObjectRequirementsMode = classInstance.Get("RequirementsMode");
+            JCObject val = (JCObject)retObjectRequirementsMode;
             return new AspNetCompatibilityRequirementsMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequirementsMode != null ? retObjectRequirementsMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +202,7 @@ public class AspNetCompatibilityRequirementsAttribute extends Attribute  {
 
     public void setRequirementsMode(AspNetCompatibilityRequirementsMode RequirementsMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequirementsMode", RequirementsMode == null ? null : RequirementsMode.getJCOInstance());
         } catch (JCNativeException jcne) {

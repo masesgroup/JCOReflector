@@ -174,9 +174,13 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
     
     public int getDataItemIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItemIndex = null;
         try {
-            return (int)classInstance.Get("DataItemIndex");
+            retObjectDataItemIndex = classInstance.Get("DataItemIndex");
+            return (int)retObjectDataItemIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDataItemIndex != null ? retObjectDataItemIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +188,13 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public int getRowIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowIndex = null;
         try {
-            return (int)classInstance.Get("RowIndex");
+            retObjectRowIndex = classInstance.Get("RowIndex");
+            return (int)retObjectRowIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRowIndex != null ? retObjectRowIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public NetObject getDataItem() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataItem");
+            retObjectDataItem = classInstance.Get("DataItem");
+            JCObject val = (JCObject)retObjectDataItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataItem != null ? retObjectDataItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public void setDataItem(NetObject DataItem) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataItem", DataItem == null ? null : DataItem.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -215,10 +227,14 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public DataControlRowState getRowState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowState");
+            retObjectRowState = classInstance.Get("RowState");
+            JCObject val = (JCObject)retObjectRowState;
             return new DataControlRowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowState != null ? retObjectRowState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +242,7 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public void setRowState(DataControlRowState RowState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowState", RowState == null ? null : RowState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -236,10 +252,14 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public DataControlRowType getRowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowType");
+            retObjectRowType = classInstance.Get("RowType");
+            JCObject val = (JCObject)retObjectRowType;
             return new DataControlRowType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowType != null ? retObjectRowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +267,7 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
 
     public void setRowType(DataControlRowType RowType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowType", RowType == null ? null : RowType.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -166,10 +166,14 @@ public class ColorMatrix extends NetObject  {
     
     public Single getMatrix00() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix00 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix00");
+            retObjectMatrix00 = classInstance.Get("Matrix00");
+            JCObject val = (JCObject)retObjectMatrix00;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix00 != null ? retObjectMatrix00.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix00(Single Matrix00) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix00", Matrix00 == null ? null : Matrix00.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix01() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix01 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix01");
+            retObjectMatrix01 = classInstance.Get("Matrix01");
+            JCObject val = (JCObject)retObjectMatrix01;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix01 != null ? retObjectMatrix01.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix01(Single Matrix01) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix01", Matrix01 == null ? null : Matrix01.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix02() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix02 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix02");
+            retObjectMatrix02 = classInstance.Get("Matrix02");
+            JCObject val = (JCObject)retObjectMatrix02;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix02 != null ? retObjectMatrix02.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix02(Single Matrix02) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix02", Matrix02 == null ? null : Matrix02.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix03() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix03 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix03");
+            retObjectMatrix03 = classInstance.Get("Matrix03");
+            JCObject val = (JCObject)retObjectMatrix03;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix03 != null ? retObjectMatrix03.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix03(Single Matrix03) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix03", Matrix03 == null ? null : Matrix03.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +266,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix04() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix04 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix04");
+            retObjectMatrix04 = classInstance.Get("Matrix04");
+            JCObject val = (JCObject)retObjectMatrix04;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix04 != null ? retObjectMatrix04.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix04(Single Matrix04) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix04", Matrix04 == null ? null : Matrix04.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,10 +291,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix10() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix10 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix10");
+            retObjectMatrix10 = classInstance.Get("Matrix10");
+            JCObject val = (JCObject)retObjectMatrix10;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix10 != null ? retObjectMatrix10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +306,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix10(Single Matrix10) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix10", Matrix10 == null ? null : Matrix10.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -292,10 +316,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix11() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix11 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix11");
+            retObjectMatrix11 = classInstance.Get("Matrix11");
+            JCObject val = (JCObject)retObjectMatrix11;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix11 != null ? retObjectMatrix11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +331,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix11(Single Matrix11) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix11", Matrix11 == null ? null : Matrix11.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,10 +341,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix12() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix12 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix12");
+            retObjectMatrix12 = classInstance.Get("Matrix12");
+            JCObject val = (JCObject)retObjectMatrix12;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix12 != null ? retObjectMatrix12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +356,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix12(Single Matrix12) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix12", Matrix12 == null ? null : Matrix12.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,10 +366,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix13() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix13 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix13");
+            retObjectMatrix13 = classInstance.Get("Matrix13");
+            JCObject val = (JCObject)retObjectMatrix13;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix13 != null ? retObjectMatrix13.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -345,7 +381,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix13(Single Matrix13) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix13", Matrix13 == null ? null : Matrix13.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -355,10 +391,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix14() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix14 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix14");
+            retObjectMatrix14 = classInstance.Get("Matrix14");
+            JCObject val = (JCObject)retObjectMatrix14;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix14 != null ? retObjectMatrix14.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,7 +406,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix14(Single Matrix14) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix14", Matrix14 == null ? null : Matrix14.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -376,10 +416,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix20() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix20 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix20");
+            retObjectMatrix20 = classInstance.Get("Matrix20");
+            JCObject val = (JCObject)retObjectMatrix20;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix20 != null ? retObjectMatrix20.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,7 +431,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix20(Single Matrix20) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix20", Matrix20 == null ? null : Matrix20.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -397,10 +441,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix21() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix21 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix21");
+            retObjectMatrix21 = classInstance.Get("Matrix21");
+            JCObject val = (JCObject)retObjectMatrix21;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix21 != null ? retObjectMatrix21.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,7 +456,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix21(Single Matrix21) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix21", Matrix21 == null ? null : Matrix21.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -418,10 +466,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix22() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix22 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix22");
+            retObjectMatrix22 = classInstance.Get("Matrix22");
+            JCObject val = (JCObject)retObjectMatrix22;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix22 != null ? retObjectMatrix22.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,7 +481,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix22(Single Matrix22) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix22", Matrix22 == null ? null : Matrix22.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -439,10 +491,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix23() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix23 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix23");
+            retObjectMatrix23 = classInstance.Get("Matrix23");
+            JCObject val = (JCObject)retObjectMatrix23;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix23 != null ? retObjectMatrix23.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,7 +506,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix23(Single Matrix23) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix23", Matrix23 == null ? null : Matrix23.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -460,10 +516,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix24() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix24 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix24");
+            retObjectMatrix24 = classInstance.Get("Matrix24");
+            JCObject val = (JCObject)retObjectMatrix24;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix24 != null ? retObjectMatrix24.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,7 +531,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix24(Single Matrix24) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix24", Matrix24 == null ? null : Matrix24.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -481,10 +541,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix30() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix30 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix30");
+            retObjectMatrix30 = classInstance.Get("Matrix30");
+            JCObject val = (JCObject)retObjectMatrix30;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix30 != null ? retObjectMatrix30.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +556,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix30(Single Matrix30) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix30", Matrix30 == null ? null : Matrix30.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -502,10 +566,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix31() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix31 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix31");
+            retObjectMatrix31 = classInstance.Get("Matrix31");
+            JCObject val = (JCObject)retObjectMatrix31;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix31 != null ? retObjectMatrix31.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,7 +581,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix31(Single Matrix31) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix31", Matrix31 == null ? null : Matrix31.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -523,10 +591,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix32() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix32 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix32");
+            retObjectMatrix32 = classInstance.Get("Matrix32");
+            JCObject val = (JCObject)retObjectMatrix32;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix32 != null ? retObjectMatrix32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,7 +606,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix32(Single Matrix32) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix32", Matrix32 == null ? null : Matrix32.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -544,10 +616,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix33() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix33 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix33");
+            retObjectMatrix33 = classInstance.Get("Matrix33");
+            JCObject val = (JCObject)retObjectMatrix33;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix33 != null ? retObjectMatrix33.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,7 +631,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix33(Single Matrix33) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix33", Matrix33 == null ? null : Matrix33.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -565,10 +641,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix34() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix34 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix34");
+            retObjectMatrix34 = classInstance.Get("Matrix34");
+            JCObject val = (JCObject)retObjectMatrix34;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix34 != null ? retObjectMatrix34.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -576,7 +656,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix34(Single Matrix34) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix34", Matrix34 == null ? null : Matrix34.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -586,10 +666,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix40() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix40 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix40");
+            retObjectMatrix40 = classInstance.Get("Matrix40");
+            JCObject val = (JCObject)retObjectMatrix40;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix40 != null ? retObjectMatrix40.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,7 +681,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix40(Single Matrix40) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix40", Matrix40 == null ? null : Matrix40.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -607,10 +691,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix41() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix41 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix41");
+            retObjectMatrix41 = classInstance.Get("Matrix41");
+            JCObject val = (JCObject)retObjectMatrix41;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix41 != null ? retObjectMatrix41.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +706,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix41(Single Matrix41) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix41", Matrix41 == null ? null : Matrix41.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -628,10 +716,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix42() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix42 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix42");
+            retObjectMatrix42 = classInstance.Get("Matrix42");
+            JCObject val = (JCObject)retObjectMatrix42;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix42 != null ? retObjectMatrix42.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,7 +731,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix42(Single Matrix42) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix42", Matrix42 == null ? null : Matrix42.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -649,10 +741,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix43() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix43 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix43");
+            retObjectMatrix43 = classInstance.Get("Matrix43");
+            JCObject val = (JCObject)retObjectMatrix43;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix43 != null ? retObjectMatrix43.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -660,7 +756,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix43(Single Matrix43) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix43", Matrix43 == null ? null : Matrix43.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -670,10 +766,14 @@ public class ColorMatrix extends NetObject  {
 
     public Single getMatrix44() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatrix44 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Matrix44");
+            retObjectMatrix44 = classInstance.Get("Matrix44");
+            JCObject val = (JCObject)retObjectMatrix44;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatrix44 != null ? retObjectMatrix44.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -681,7 +781,7 @@ public class ColorMatrix extends NetObject  {
 
     public void setMatrix44(Single Matrix44) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Matrix44", Matrix44 == null ? null : Matrix44.getJCOInstance());
         } catch (JCNativeException jcne) {

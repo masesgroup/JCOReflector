@@ -177,10 +177,14 @@ public class CodeRegionDirective extends CodeDirective  {
     
     public CodeRegionMode getRegionMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RegionMode");
+            retObjectRegionMode = classInstance.Get("RegionMode");
+            JCObject val = (JCObject)retObjectRegionMode;
             return new CodeRegionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegionMode != null ? retObjectRegionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class CodeRegionDirective extends CodeDirective  {
 
     public void setRegionMode(CodeRegionMode RegionMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegionMode", RegionMode == null ? null : RegionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class CodeRegionDirective extends CodeDirective  {
 
     public java.lang.String getRegionText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegionText = null;
         try {
-            return (java.lang.String)classInstance.Get("RegionText");
+            retObjectRegionText = classInstance.Get("RegionText");
+            return (java.lang.String)retObjectRegionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRegionText != null ? retObjectRegionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class CodeRegionDirective extends CodeDirective  {
 
     public void setRegionText(java.lang.String RegionText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegionText", RegionText);
         } catch (JCNativeException jcne) {

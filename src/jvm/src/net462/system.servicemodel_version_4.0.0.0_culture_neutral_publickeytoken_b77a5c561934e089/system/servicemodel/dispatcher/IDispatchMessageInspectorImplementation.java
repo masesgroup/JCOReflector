@@ -146,10 +146,14 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
     
     public NetObject AfterReceiveRequest(JCORefOut<Message> request, IClientChannel channel, InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAfterReceiveRequest = null;
         try {
-            JCObject objAfterReceiveRequest = (JCObject)classInstance.Invoke("AfterReceiveRequest", request.getJCRefOut(), channel == null ? null : channel.getJCOInstance(), instanceContext == null ? null : instanceContext.getJCOInstance());
+            retObjectAfterReceiveRequest = classInstance.Invoke("AfterReceiveRequest", request.getJCRefOut(), channel == null ? null : channel.getJCOInstance(), instanceContext == null ? null : instanceContext.getJCOInstance());
+            JCObject objAfterReceiveRequest = (JCObject)retObjectAfterReceiveRequest;
             return new NetObject(objAfterReceiveRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAfterReceiveRequest != null ? retObjectAfterReceiveRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,7 +161,7 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
 
     public void BeforeSendReply(JCORefOut<Message> reply, NetObject correlationState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeforeSendReply", reply.getJCRefOut(), correlationState == null ? null : correlationState.getJCOInstance());
         } catch (JCNativeException jcne) {

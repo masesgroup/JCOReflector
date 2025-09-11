@@ -182,9 +182,13 @@ public class CustomAttributeNamedArgument extends ValueType  {
     
     public boolean getIsField() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsField = null;
         try {
-            return (boolean)classInstance.Get("IsField");
+            retObjectIsField = classInstance.Get("IsField");
+            return (boolean)retObjectIsField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsField != null ? retObjectIsField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class CustomAttributeNamedArgument extends ValueType  {
 
     public CustomAttributeTypedArgument getTypedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypedValue");
+            retObjectTypedValue = classInstance.Get("TypedValue");
+            JCObject val = (JCObject)retObjectTypedValue;
             return new CustomAttributeTypedArgument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypedValue != null ? retObjectTypedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class CustomAttributeNamedArgument extends ValueType  {
 
     public MemberInfo getMemberInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberInfo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MemberInfo");
+            retObjectMemberInfo = classInstance.Get("MemberInfo");
+            JCObject val = (JCObject)retObjectMemberInfo;
             return new MemberInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberInfo != null ? retObjectMemberInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +226,13 @@ public class CustomAttributeNamedArgument extends ValueType  {
 
     public java.lang.String getMemberName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberName = null;
         try {
-            return (java.lang.String)classInstance.Get("MemberName");
+            retObjectMemberName = classInstance.Get("MemberName");
+            return (java.lang.String)retObjectMemberName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMemberName != null ? retObjectMemberName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

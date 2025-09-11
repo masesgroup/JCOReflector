@@ -158,10 +158,12 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
     
     public byte[] Encode() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode");
+            retObjectEncode = classInstance.Invoke("Encode");
+            JCObject resultingObjects = (JCObject)retObjectEncode;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -170,6 +172,8 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 				resultingArray[indexEncode] = (byte)resultingArrayList.get(indexEncode);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public X509ExtensionCollection GetExtensions() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExtensions = null;
         try {
-            JCObject objGetExtensions = (JCObject)classInstance.Invoke("GetExtensions");
+            retObjectGetExtensions = classInstance.Invoke("GetExtensions");
+            JCObject objGetExtensions = (JCObject)retObjectGetExtensions;
             return new X509ExtensionCollection(objGetExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExtensions != null ? retObjectGetExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
     
     public boolean getHasExtensions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasExtensions = null;
         try {
-            return (boolean)classInstance.Get("HasExtensions");
+            retObjectHasExtensions = classInstance.Get("HasExtensions");
+            return (boolean)retObjectHasExtensions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasExtensions != null ? retObjectHasExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public boolean getIsOrdering() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOrdering = null;
         try {
-            return (boolean)classInstance.Get("IsOrdering");
+            retObjectIsOrdering = classInstance.Get("IsOrdering");
+            return (boolean)retObjectIsOrdering;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOrdering != null ? retObjectIsOrdering.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +228,13 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public int getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (int)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (int)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public DateTimeOffset getTimestamp() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimestamp = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Timestamp");
+            retObjectTimestamp = classInstance.Get("Timestamp");
+            JCObject val = (JCObject)retObjectTimestamp;
             return new DateTimeOffset(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimestamp != null ? retObjectTimestamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +257,14 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public Oid getHashAlgorithmId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHashAlgorithmId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HashAlgorithmId");
+            retObjectHashAlgorithmId = classInstance.Get("HashAlgorithmId");
+            JCObject val = (JCObject)retObjectHashAlgorithmId;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHashAlgorithmId != null ? retObjectHashAlgorithmId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +272,14 @@ public class Rfc3161TimestampTokenInfo extends NetObject  {
 
     public Oid getPolicyId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPolicyId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PolicyId");
+            retObjectPolicyId = classInstance.Get("PolicyId");
+            JCObject val = (JCObject)retObjectPolicyId;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPolicyId != null ? retObjectPolicyId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

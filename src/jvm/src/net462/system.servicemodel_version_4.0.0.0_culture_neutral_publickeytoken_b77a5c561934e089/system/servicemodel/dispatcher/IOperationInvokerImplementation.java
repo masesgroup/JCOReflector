@@ -145,10 +145,14 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
     
     public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeBegin = null;
         try {
-            JCObject objInvokeBegin = (JCObject)classInstance.Invoke("InvokeBegin", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), callback, state == null ? null : state.getJCOInstance());
+            retObjectInvokeBegin = classInstance.Invoke("InvokeBegin", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), callback, state == null ? null : state.getJCOInstance());
+            JCObject objInvokeBegin = (JCObject)retObjectInvokeBegin;
             return new IAsyncResultImplementation(objInvokeBegin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeBegin != null ? retObjectInvokeBegin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
 
     public NetObject Invoke(NetObject instance, NetObject[] inputs, JCORefOut<NetObject[]> outputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), outputs.getJCRefOut());
+            retObjectInvoke = classInstance.Invoke("Invoke", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), outputs.getJCRefOut());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +175,14 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
 
     public NetObject InvokeEnd(NetObject instance, JCORefOut<NetObject[]> outputs, IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeEnd = null;
         try {
-            JCObject objInvokeEnd = (JCObject)classInstance.Invoke("InvokeEnd", instance == null ? null : instance.getJCOInstance(), outputs.getJCRefOut(), result == null ? null : result.getJCOInstance());
+            retObjectInvokeEnd = classInstance.Invoke("InvokeEnd", instance == null ? null : instance.getJCOInstance(), outputs.getJCRefOut(), result == null ? null : result.getJCOInstance());
+            JCObject objInvokeEnd = (JCObject)retObjectInvokeEnd;
             return new NetObject(objInvokeEnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvokeEnd != null ? retObjectInvokeEnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,16 +190,20 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
 
     public NetObject[] AllocateInputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllocateInputs = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("AllocateInputs");
+            retObjectAllocateInputs = classInstance.Invoke("AllocateInputs");
+            JCObject resultingObjects = (JCObject)retObjectAllocateInputs;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAllocateInputs != null ? retObjectAllocateInputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,9 +215,13 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
     
     public boolean getIsSynchronous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSynchronous = null;
         try {
-            return (boolean)classInstance.Get("IsSynchronous");
+            retObjectIsSynchronous = classInstance.Get("IsSynchronous");
+            return (boolean)retObjectIsSynchronous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSynchronous != null ? retObjectIsSynchronous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

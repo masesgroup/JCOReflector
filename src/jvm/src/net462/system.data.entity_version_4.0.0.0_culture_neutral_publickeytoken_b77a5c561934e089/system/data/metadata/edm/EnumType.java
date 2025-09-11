@@ -162,9 +162,13 @@ public class EnumType extends SimpleType  {
     
     public boolean getIsFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsFlags = null;
         try {
-            return (boolean)classInstance.Get("IsFlags");
+            retObjectIsFlags = classInstance.Get("IsFlags");
+            return (boolean)retObjectIsFlags;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsFlags != null ? retObjectIsFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class EnumType extends SimpleType  {
 
     public PrimitiveType getUnderlyingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnderlyingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnderlyingType");
+            retObjectUnderlyingType = classInstance.Get("UnderlyingType");
+            JCObject val = (JCObject)retObjectUnderlyingType;
             return new PrimitiveType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnderlyingType != null ? retObjectUnderlyingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

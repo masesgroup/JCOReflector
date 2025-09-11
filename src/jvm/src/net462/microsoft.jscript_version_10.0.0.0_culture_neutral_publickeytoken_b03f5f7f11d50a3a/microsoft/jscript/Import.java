@@ -157,7 +157,7 @@ public class Import extends AST  {
     
     public static void JScriptImport(java.lang.String name, VsaEngine engine) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("JScriptImport", name, engine == null ? null : engine.getJCOInstance());
         } catch (JCNativeException jcne) {

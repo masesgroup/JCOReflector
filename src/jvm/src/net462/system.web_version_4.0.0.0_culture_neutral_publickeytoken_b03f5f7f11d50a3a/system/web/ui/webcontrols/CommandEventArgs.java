@@ -181,10 +181,14 @@ public class CommandEventArgs extends EventArgs  {
     
     public NetObject getCommandArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandArgument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CommandArgument");
+            retObjectCommandArgument = classInstance.Get("CommandArgument");
+            JCObject val = (JCObject)retObjectCommandArgument;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommandArgument != null ? retObjectCommandArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class CommandEventArgs extends EventArgs  {
 
     public java.lang.String getCommandName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommandName = null;
         try {
-            return (java.lang.String)classInstance.Get("CommandName");
+            retObjectCommandName = classInstance.Get("CommandName");
+            return (java.lang.String)retObjectCommandName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCommandName != null ? retObjectCommandName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

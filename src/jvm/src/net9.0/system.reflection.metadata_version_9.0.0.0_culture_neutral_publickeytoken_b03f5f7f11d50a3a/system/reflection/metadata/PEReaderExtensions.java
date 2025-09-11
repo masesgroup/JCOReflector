@@ -158,10 +158,14 @@ public class PEReaderExtensions extends NetObject  {
     
     public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetadataReader = null;
         try {
-            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            retObjectGetMetadataReader = classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)retObjectGetMetadataReader;
             return new MetadataReader(objGetMetadataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataReader != null ? retObjectGetMetadataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class PEReaderExtensions extends NetObject  {
 
     public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetadataReader = null;
         try {
-            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            retObjectGetMetadataReader = classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)retObjectGetMetadataReader;
             return new MetadataReader(objGetMetadataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataReader != null ? retObjectGetMetadataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class PEReaderExtensions extends NetObject  {
 
     public static MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.BadImageFormatException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMetadataReader = null;
         try {
-            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance());
+            retObjectGetMetadataReader = classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)retObjectGetMetadataReader;
             return new MetadataReader(objGetMetadataReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMetadataReader != null ? retObjectGetMetadataReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class PEReaderExtensions extends NetObject  {
 
     public static MethodBodyBlock GetMethodBody(PEReader peReader, int relativeVirtualAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.BadImageFormatException, system.NullReferenceException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMethodBody = null;
         try {
-            JCObject objGetMethodBody = (JCObject)classType.Invoke("GetMethodBody", peReader == null ? null : peReader.getJCOInstance(), relativeVirtualAddress);
+            retObjectGetMethodBody = classType.Invoke("GetMethodBody", peReader == null ? null : peReader.getJCOInstance(), relativeVirtualAddress);
+            JCObject objGetMethodBody = (JCObject)retObjectGetMethodBody;
             return new MethodBodyBlock(objGetMethodBody);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMethodBody != null ? retObjectGetMethodBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

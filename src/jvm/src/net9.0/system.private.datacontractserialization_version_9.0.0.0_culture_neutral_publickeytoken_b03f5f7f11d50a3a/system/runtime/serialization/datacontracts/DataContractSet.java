@@ -172,10 +172,14 @@ public class DataContractSet extends NetObject  {
     
     public DataContract GetDataContract(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.runtime.serialization.SerializationException, system.runtime.serialization.InvalidDataContractException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataContract = null;
         try {
-            JCObject objGetDataContract = (JCObject)classInstance.Invoke("GetDataContract", type == null ? null : type.getJCOInstance());
+            retObjectGetDataContract = classInstance.Invoke("GetDataContract", type == null ? null : type.getJCOInstance());
+            JCObject objGetDataContract = (JCObject)retObjectGetDataContract;
             return new DataContract(objGetDataContract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataContract != null ? retObjectGetDataContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DataContractSet extends NetObject  {
 
     public DataContract GetDataContract(XmlQualifiedName key) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDataContract = null;
         try {
-            JCObject objGetDataContract = (JCObject)classInstance.Invoke("GetDataContract", key == null ? null : key.getJCOInstance());
+            retObjectGetDataContract = classInstance.Invoke("GetDataContract", key == null ? null : key.getJCOInstance());
+            JCObject objGetDataContract = (JCObject)retObjectGetDataContract;
             return new DataContract(objGetDataContract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDataContract != null ? retObjectGetDataContract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class DataContractSet extends NetObject  {
     
     public Hashtable getSurrogateData() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSurrogateData = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SurrogateData");
+            retObjectSurrogateData = classInstance.Get("SurrogateData");
+            JCObject val = (JCObject)retObjectSurrogateData;
             return new Hashtable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSurrogateData != null ? retObjectSurrogateData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

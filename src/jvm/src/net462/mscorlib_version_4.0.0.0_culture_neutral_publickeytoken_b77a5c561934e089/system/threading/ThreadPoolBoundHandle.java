@@ -157,10 +157,14 @@ public class ThreadPoolBoundHandle extends NetObject implements AutoCloseable {
     
     public static ThreadPoolBoundHandle BindHandle(SafeHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBindHandle = null;
         try {
-            JCObject objBindHandle = (JCObject)classType.Invoke("BindHandle", handle == null ? null : handle.getJCOInstance());
+            retObjectBindHandle = classType.Invoke("BindHandle", handle == null ? null : handle.getJCOInstance());
+            JCObject objBindHandle = (JCObject)retObjectBindHandle;
             return new ThreadPoolBoundHandle(objBindHandle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBindHandle != null ? retObjectBindHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ThreadPoolBoundHandle extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -179,7 +183,7 @@ public class ThreadPoolBoundHandle extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -195,10 +199,14 @@ public class ThreadPoolBoundHandle extends NetObject implements AutoCloseable {
     
     public SafeHandle getHandle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Handle");
+            retObjectHandle = classInstance.Get("Handle");
+            JCObject val = (JCObject)retObjectHandle;
             return new SafeHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHandle != null ? retObjectHandle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

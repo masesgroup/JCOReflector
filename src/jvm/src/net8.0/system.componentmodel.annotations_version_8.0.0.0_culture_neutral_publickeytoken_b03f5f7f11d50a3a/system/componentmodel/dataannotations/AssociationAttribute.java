@@ -170,9 +170,13 @@ public class AssociationAttribute extends Attribute  {
     
     public boolean getIsForeignKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsForeignKey = null;
         try {
-            return (boolean)classInstance.Get("IsForeignKey");
+            retObjectIsForeignKey = classInstance.Get("IsForeignKey");
+            return (boolean)retObjectIsForeignKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsForeignKey != null ? retObjectIsForeignKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class AssociationAttribute extends Attribute  {
 
     public void setIsForeignKey(boolean IsForeignKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsForeignKey", IsForeignKey);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class AssociationAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +208,13 @@ public class AssociationAttribute extends Attribute  {
 
     public java.lang.String getOtherKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOtherKey = null;
         try {
-            return (java.lang.String)classInstance.Get("OtherKey");
+            retObjectOtherKey = classInstance.Get("OtherKey");
+            return (java.lang.String)retObjectOtherKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOtherKey != null ? retObjectOtherKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +222,13 @@ public class AssociationAttribute extends Attribute  {
 
     public java.lang.String getThisKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThisKey = null;
         try {
-            return (java.lang.String)classInstance.Get("ThisKey");
+            retObjectThisKey = classInstance.Get("ThisKey");
+            return (java.lang.String)retObjectThisKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThisKey != null ? retObjectThisKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

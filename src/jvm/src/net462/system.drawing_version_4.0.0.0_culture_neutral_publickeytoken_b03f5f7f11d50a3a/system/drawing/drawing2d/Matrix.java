@@ -199,10 +199,14 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
     
     public Matrix Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Matrix(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -220,7 +224,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Invert() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Invert");
         } catch (JCNativeException jcne) {
@@ -230,7 +234,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Multiply(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Multiply", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +244,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Multiply(Matrix matrix, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Multiply", matrix == null ? null : matrix.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +254,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Reset() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -260,7 +264,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Rotate(Single angle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rotate", angle == null ? null : angle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,7 +274,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Rotate(Single angle, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rotate", angle == null ? null : angle.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -280,7 +284,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void RotateAt(Single angle, PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAt", angle == null ? null : angle.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,7 +294,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void RotateAt(Single angle, PointF point, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RotateAt", angle == null ? null : angle.getJCOInstance(), point == null ? null : point.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -300,7 +304,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Scale(Single scaleX, Single scaleY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", scaleX == null ? null : scaleX.getJCOInstance(), scaleY == null ? null : scaleY.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,7 +314,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Scale(Single scaleX, Single scaleY, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", scaleX == null ? null : scaleX.getJCOInstance(), scaleY == null ? null : scaleY.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -320,7 +324,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Shear(Single shearX, Single shearY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shear", shearX == null ? null : shearX.getJCOInstance(), shearY == null ? null : shearY.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,7 +334,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Shear(Single shearX, Single shearY, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shear", shearX == null ? null : shearX.getJCOInstance(), shearY == null ? null : shearY.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,7 +344,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformPoints(Point[] pts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -350,7 +354,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformPoints(PointF[] pts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -360,7 +364,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformVectors(Point[] pts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformVectors", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -370,7 +374,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void TransformVectors(PointF[] pts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TransformVectors", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -380,7 +384,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Translate(Single offsetX, Single offsetY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", offsetX == null ? null : offsetX.getJCOInstance(), offsetY == null ? null : offsetY.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,7 +394,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void Translate(Single offsetX, Single offsetY, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", offsetX == null ? null : offsetX.getJCOInstance(), offsetY == null ? null : offsetY.getJCOInstance(), order == null ? null : order.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -400,7 +404,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public void VectorTransformPoints(Point[] pts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VectorTransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
@@ -411,7 +415,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -427,9 +431,13 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
     
     public boolean getIsIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdentity = null;
         try {
-            return (boolean)classInstance.Get("IsIdentity");
+            retObjectIsIdentity = classInstance.Get("IsIdentity");
+            return (boolean)retObjectIsIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsIdentity != null ? retObjectIsIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +445,13 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public boolean getIsInvertible() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvertible = null;
         try {
-            return (boolean)classInstance.Get("IsInvertible");
+            retObjectIsInvertible = classInstance.Get("IsInvertible");
+            return (boolean)retObjectIsInvertible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvertible != null ? retObjectIsInvertible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,10 +459,14 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public Single getOffsetX() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OffsetX");
+            retObjectOffsetX = classInstance.Get("OffsetX");
+            JCObject val = (JCObject)retObjectOffsetX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffsetX != null ? retObjectOffsetX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,10 +474,14 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public Single getOffsetY() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OffsetY");
+            retObjectOffsetY = classInstance.Get("OffsetY");
+            JCObject val = (JCObject)retObjectOffsetY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffsetY != null ? retObjectOffsetY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,16 +489,20 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
 
     public final Single[] getElements() throws Throwable, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElements = null;
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Elements");
+            retObjectElements = classInstance.Get("Elements");
+            JCObject resultingObjects = (JCObject)retObjectElements;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElements != null ? retObjectElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

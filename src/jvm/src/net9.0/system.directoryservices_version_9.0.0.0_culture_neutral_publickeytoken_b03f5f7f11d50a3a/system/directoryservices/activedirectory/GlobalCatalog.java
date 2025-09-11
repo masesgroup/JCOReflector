@@ -162,9 +162,13 @@ public class GlobalCatalog extends DomainController  {
     
     public boolean IsGlobalCatalog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsGlobalCatalog = null;
         try {
-            return (boolean)classInstance.Invoke("IsGlobalCatalog");
+            retObjectIsGlobalCatalog = classInstance.Invoke("IsGlobalCatalog");
+            return (boolean)retObjectIsGlobalCatalog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsGlobalCatalog != null ? retObjectIsGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class GlobalCatalog extends DomainController  {
 
     public DomainController DisableGlobalCatalog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableGlobalCatalog = null;
         try {
-            JCObject objDisableGlobalCatalog = (JCObject)classInstance.Invoke("DisableGlobalCatalog");
+            retObjectDisableGlobalCatalog = classInstance.Invoke("DisableGlobalCatalog");
+            JCObject objDisableGlobalCatalog = (JCObject)retObjectDisableGlobalCatalog;
             return new DomainController(objDisableGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisableGlobalCatalog != null ? retObjectDisableGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class GlobalCatalog extends DomainController  {
 
     public GlobalCatalog EnableGlobalCatalog() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableGlobalCatalog = null;
         try {
-            JCObject objEnableGlobalCatalog = (JCObject)classInstance.Invoke("EnableGlobalCatalog");
+            retObjectEnableGlobalCatalog = classInstance.Invoke("EnableGlobalCatalog");
+            JCObject objEnableGlobalCatalog = (JCObject)retObjectEnableGlobalCatalog;
             return new GlobalCatalog(objEnableGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnableGlobalCatalog != null ? retObjectEnableGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalog FindOneNewGlobalCatalog(DirectoryContext context, LocatorOptions flag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindOne = null;
         try {
-            JCObject objFindOne = (JCObject)classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), flag == null ? null : flag.getJCOInstance());
+            retObjectFindOne = classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), flag == null ? null : flag.getJCOInstance());
+            JCObject objFindOne = (JCObject)retObjectFindOne;
             return new GlobalCatalog(objFindOne);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindOne != null ? retObjectFindOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalog FindOneNewGlobalCatalog(DirectoryContext context, java.lang.String siteName, LocatorOptions flag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindOne = null;
         try {
-            JCObject objFindOne = (JCObject)classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), siteName, flag == null ? null : flag.getJCOInstance());
+            retObjectFindOne = classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), siteName, flag == null ? null : flag.getJCOInstance());
+            JCObject objFindOne = (JCObject)retObjectFindOne;
             return new GlobalCatalog(objFindOne);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindOne != null ? retObjectFindOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalog FindOneNewGlobalCatalog(DirectoryContext context, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindOne = null;
         try {
-            JCObject objFindOne = (JCObject)classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), siteName);
+            retObjectFindOne = classType.Invoke("FindOne", context == null ? null : context.getJCOInstance(), siteName);
+            JCObject objFindOne = (JCObject)retObjectFindOne;
             return new GlobalCatalog(objFindOne);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindOne != null ? retObjectFindOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalog FindOneNewGlobalCatalog(DirectoryContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindOne = null;
         try {
-            JCObject objFindOne = (JCObject)classType.Invoke("FindOne", context == null ? null : context.getJCOInstance());
+            retObjectFindOne = classType.Invoke("FindOne", context == null ? null : context.getJCOInstance());
+            JCObject objFindOne = (JCObject)retObjectFindOne;
             return new GlobalCatalog(objFindOne);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindOne != null ? retObjectFindOne.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +266,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalog GetGlobalCatalog(DirectoryContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.AccessViolationException, system.security.SecurityException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlobalCatalog = null;
         try {
-            JCObject objGetGlobalCatalog = (JCObject)classType.Invoke("GetGlobalCatalog", context == null ? null : context.getJCOInstance());
+            retObjectGetGlobalCatalog = classType.Invoke("GetGlobalCatalog", context == null ? null : context.getJCOInstance());
+            JCObject objGetGlobalCatalog = (JCObject)retObjectGetGlobalCatalog;
             return new GlobalCatalog(objGetGlobalCatalog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalCatalog != null ? retObjectGetGlobalCatalog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +281,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalogCollection FindAllNewGlobalCatalog(DirectoryContext context, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
-            JCObject objFindAll = (JCObject)classType.Invoke("FindAll", context == null ? null : context.getJCOInstance(), siteName);
+            retObjectFindAll = classType.Invoke("FindAll", context == null ? null : context.getJCOInstance(), siteName);
+            JCObject objFindAll = (JCObject)retObjectFindAll;
             return new GlobalCatalogCollection(objFindAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +296,14 @@ public class GlobalCatalog extends DomainController  {
 
     public static GlobalCatalogCollection FindAllNewGlobalCatalog(DirectoryContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFindAll = null;
         try {
-            JCObject objFindAll = (JCObject)classType.Invoke("FindAll", context == null ? null : context.getJCOInstance());
+            retObjectFindAll = classType.Invoke("FindAll", context == null ? null : context.getJCOInstance());
+            JCObject objFindAll = (JCObject)retObjectFindAll;
             return new GlobalCatalogCollection(objFindAll);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAll != null ? retObjectFindAll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +311,14 @@ public class GlobalCatalog extends DomainController  {
 
     public ReadOnlyActiveDirectorySchemaPropertyCollection FindAllProperties() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindAllProperties = null;
         try {
-            JCObject objFindAllProperties = (JCObject)classInstance.Invoke("FindAllProperties");
+            retObjectFindAllProperties = classInstance.Invoke("FindAllProperties");
+            JCObject objFindAllProperties = (JCObject)retObjectFindAllProperties;
             return new ReadOnlyActiveDirectorySchemaPropertyCollection(objFindAllProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindAllProperties != null ? retObjectFindAllProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +326,14 @@ public class GlobalCatalog extends DomainController  {
 
     public DirectorySearcher GetDirectorySearcher() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectorySearcher = null;
         try {
-            JCObject objGetDirectorySearcher = (JCObject)classInstance.Invoke("GetDirectorySearcher");
+            retObjectGetDirectorySearcher = classInstance.Invoke("GetDirectorySearcher");
+            JCObject objGetDirectorySearcher = (JCObject)retObjectGetDirectorySearcher;
             return new DirectorySearcher(objGetDirectorySearcher);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDirectorySearcher != null ? retObjectGetDirectorySearcher.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

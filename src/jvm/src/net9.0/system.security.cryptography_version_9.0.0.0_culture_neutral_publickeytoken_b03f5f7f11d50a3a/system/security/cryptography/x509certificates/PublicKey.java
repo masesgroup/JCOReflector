@@ -183,10 +183,12 @@ public class PublicKey extends NetObject  {
     
     public byte[] ExportSubjectPublicKeyInfo() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportSubjectPublicKeyInfo = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ExportSubjectPublicKeyInfo");
+            retObjectExportSubjectPublicKeyInfo = classInstance.Invoke("ExportSubjectPublicKeyInfo");
+            JCObject resultingObjects = (JCObject)retObjectExportSubjectPublicKeyInfo;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -195,6 +197,8 @@ public class PublicKey extends NetObject  {
 				resultingArray[indexExportSubjectPublicKeyInfo] = (byte)resultingArrayList.get(indexExportSubjectPublicKeyInfo);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectExportSubjectPublicKeyInfo != null ? retObjectExportSubjectPublicKeyInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +206,14 @@ public class PublicKey extends NetObject  {
 
     public DSA GetDSAPublicKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDSAPublicKey = null;
         try {
-            JCObject objGetDSAPublicKey = (JCObject)classInstance.Invoke("GetDSAPublicKey");
+            retObjectGetDSAPublicKey = classInstance.Invoke("GetDSAPublicKey");
+            JCObject objGetDSAPublicKey = (JCObject)retObjectGetDSAPublicKey;
             return new DSA(objGetDSAPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDSAPublicKey != null ? retObjectGetDSAPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class PublicKey extends NetObject  {
 
     public ECDiffieHellman GetECDiffieHellmanPublicKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetECDiffieHellmanPublicKey = null;
         try {
-            JCObject objGetECDiffieHellmanPublicKey = (JCObject)classInstance.Invoke("GetECDiffieHellmanPublicKey");
+            retObjectGetECDiffieHellmanPublicKey = classInstance.Invoke("GetECDiffieHellmanPublicKey");
+            JCObject objGetECDiffieHellmanPublicKey = (JCObject)retObjectGetECDiffieHellmanPublicKey;
             return new ECDiffieHellman(objGetECDiffieHellmanPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetECDiffieHellmanPublicKey != null ? retObjectGetECDiffieHellmanPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class PublicKey extends NetObject  {
 
     public ECDsa GetECDsaPublicKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetECDsaPublicKey = null;
         try {
-            JCObject objGetECDsaPublicKey = (JCObject)classInstance.Invoke("GetECDsaPublicKey");
+            retObjectGetECDsaPublicKey = classInstance.Invoke("GetECDsaPublicKey");
+            JCObject objGetECDsaPublicKey = (JCObject)retObjectGetECDsaPublicKey;
             return new ECDsa(objGetECDsaPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetECDsaPublicKey != null ? retObjectGetECDsaPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class PublicKey extends NetObject  {
 
     public RSA GetRSAPublicKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRSAPublicKey = null;
         try {
-            JCObject objGetRSAPublicKey = (JCObject)classInstance.Invoke("GetRSAPublicKey");
+            retObjectGetRSAPublicKey = classInstance.Invoke("GetRSAPublicKey");
+            JCObject objGetRSAPublicKey = (JCObject)retObjectGetRSAPublicKey;
             return new RSA(objGetRSAPublicKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRSAPublicKey != null ? retObjectGetRSAPublicKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,14 @@ public class PublicKey extends NetObject  {
     
     public AsnEncodedData getEncodedKeyValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedKeyValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodedKeyValue");
+            retObjectEncodedKeyValue = classInstance.Get("EncodedKeyValue");
+            JCObject val = (JCObject)retObjectEncodedKeyValue;
             return new AsnEncodedData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedKeyValue != null ? retObjectEncodedKeyValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +285,14 @@ public class PublicKey extends NetObject  {
 
     public AsnEncodedData getEncodedParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncodedParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncodedParameters");
+            retObjectEncodedParameters = classInstance.Get("EncodedParameters");
+            JCObject val = (JCObject)retObjectEncodedParameters;
             return new AsnEncodedData(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncodedParameters != null ? retObjectEncodedParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +300,14 @@ public class PublicKey extends NetObject  {
 
     public AsymmetricAlgorithm getKey() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            JCObject val = (JCObject)retObjectKey;
             return new AsymmetricAlgorithm(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +315,14 @@ public class PublicKey extends NetObject  {
 
     public Oid getOid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Oid");
+            retObjectOid = classInstance.Get("Oid");
+            JCObject val = (JCObject)retObjectOid;
             return new Oid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOid != null ? retObjectOid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

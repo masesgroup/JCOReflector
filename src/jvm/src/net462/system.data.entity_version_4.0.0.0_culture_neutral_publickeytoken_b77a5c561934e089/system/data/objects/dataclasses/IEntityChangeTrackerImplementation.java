@@ -143,7 +143,7 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
     
     public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EntityComplexMemberChanged", entityMemberName, complexObject == null ? null : complexObject.getJCOInstance(), complexObjectMemberName);
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
 
     public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EntityComplexMemberChanging", entityMemberName, complexObject == null ? null : complexObject.getJCOInstance(), complexObjectMemberName);
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
 
     public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EntityMemberChanged", entityMemberName);
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
 
     public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EntityMemberChanging", entityMemberName);
         } catch (JCNativeException jcne) {
@@ -187,10 +187,14 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
     
     public EntityState getEntityState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EntityState");
+            retObjectEntityState = classInstance.Get("EntityState");
+            JCObject val = (JCObject)retObjectEntityState;
             return new EntityState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEntityState != null ? retObjectEntityState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

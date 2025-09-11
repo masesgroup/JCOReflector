@@ -159,9 +159,13 @@ public class PageScalingFactorRange extends NetObject  {
     
     public int getMaximumScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumScale = null;
         try {
-            return (int)classInstance.Get("MaximumScale");
+            retObjectMaximumScale = classInstance.Get("MaximumScale");
+            return (int)retObjectMaximumScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaximumScale != null ? retObjectMaximumScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class PageScalingFactorRange extends NetObject  {
 
     public int getMinimumScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumScale = null;
         try {
-            return (int)classInstance.Get("MinimumScale");
+            retObjectMinimumScale = classInstance.Get("MinimumScale");
+            return (int)retObjectMinimumScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinimumScale != null ? retObjectMinimumScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

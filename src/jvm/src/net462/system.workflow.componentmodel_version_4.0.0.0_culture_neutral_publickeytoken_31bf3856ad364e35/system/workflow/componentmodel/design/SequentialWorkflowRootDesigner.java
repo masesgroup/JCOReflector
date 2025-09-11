@@ -165,9 +165,13 @@ public class SequentialWorkflowRootDesigner extends SequentialActivityDesigner  
     
     public boolean CanBeParentedTo(CompositeActivityDesigner parentActivityDesigner) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanBeParentedTo = null;
         try {
-            return (boolean)classInstance.Invoke("CanBeParentedTo", parentActivityDesigner == null ? null : parentActivityDesigner.getJCOInstance());
+            retObjectCanBeParentedTo = classInstance.Invoke("CanBeParentedTo", parentActivityDesigner == null ? null : parentActivityDesigner.getJCOInstance());
+            return (boolean)retObjectCanBeParentedTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanBeParentedTo != null ? retObjectCanBeParentedTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

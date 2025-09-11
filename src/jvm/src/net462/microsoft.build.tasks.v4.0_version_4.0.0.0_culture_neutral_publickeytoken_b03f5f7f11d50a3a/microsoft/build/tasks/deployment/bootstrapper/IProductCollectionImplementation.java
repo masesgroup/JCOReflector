@@ -143,10 +143,14 @@ public class IProductCollectionImplementation extends NetObject implements IProd
     
     public Product Item(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject objItem = (JCObject)classInstance.Invoke("Item", index);
+            retObjectItem = classInstance.Invoke("Item", index);
+            JCObject objItem = (JCObject)retObjectItem;
             return new Product(objItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IProductCollectionImplementation extends NetObject implements IProd
 
     public Product Product(java.lang.String productCode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduct = null;
         try {
-            JCObject objProduct = (JCObject)classInstance.Invoke("Product", productCode);
+            retObjectProduct = classInstance.Invoke("Product", productCode);
+            JCObject objProduct = (JCObject)retObjectProduct;
             return new Product(objProduct);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProduct != null ? retObjectProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +177,13 @@ public class IProductCollectionImplementation extends NetObject implements IProd
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

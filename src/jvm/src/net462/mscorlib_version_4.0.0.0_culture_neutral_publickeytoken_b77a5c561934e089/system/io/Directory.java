@@ -158,9 +158,13 @@ public class Directory extends NetObject  {
     
     public static boolean Exists(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExists = null;
         try {
-            return (boolean)classType.Invoke("Exists", path);
+            retObjectExists = classType.Invoke("Exists", path);
+            return (boolean)retObjectExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExists != null ? retObjectExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetCreationTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTime = null;
         try {
-            JCObject objGetCreationTime = (JCObject)classType.Invoke("GetCreationTime", path);
+            retObjectGetCreationTime = classType.Invoke("GetCreationTime", path);
+            JCObject objGetCreationTime = (JCObject)retObjectGetCreationTime;
             return new DateTime(objGetCreationTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTime != null ? retObjectGetCreationTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetCreationTimeUtc(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCreationTimeUtc = null;
         try {
-            JCObject objGetCreationTimeUtc = (JCObject)classType.Invoke("GetCreationTimeUtc", path);
+            retObjectGetCreationTimeUtc = classType.Invoke("GetCreationTimeUtc", path);
+            JCObject objGetCreationTimeUtc = (JCObject)retObjectGetCreationTimeUtc;
             return new DateTime(objGetCreationTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCreationTimeUtc != null ? retObjectGetCreationTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +202,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetLastAccessTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTime = null;
         try {
-            JCObject objGetLastAccessTime = (JCObject)classType.Invoke("GetLastAccessTime", path);
+            retObjectGetLastAccessTime = classType.Invoke("GetLastAccessTime", path);
+            JCObject objGetLastAccessTime = (JCObject)retObjectGetLastAccessTime;
             return new DateTime(objGetLastAccessTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTime != null ? retObjectGetLastAccessTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +217,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetLastAccessTimeUtc(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastAccessTimeUtc = null;
         try {
-            JCObject objGetLastAccessTimeUtc = (JCObject)classType.Invoke("GetLastAccessTimeUtc", path);
+            retObjectGetLastAccessTimeUtc = classType.Invoke("GetLastAccessTimeUtc", path);
+            JCObject objGetLastAccessTimeUtc = (JCObject)retObjectGetLastAccessTimeUtc;
             return new DateTime(objGetLastAccessTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastAccessTimeUtc != null ? retObjectGetLastAccessTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetLastWriteTime(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTime = null;
         try {
-            JCObject objGetLastWriteTime = (JCObject)classType.Invoke("GetLastWriteTime", path);
+            retObjectGetLastWriteTime = classType.Invoke("GetLastWriteTime", path);
+            JCObject objGetLastWriteTime = (JCObject)retObjectGetLastWriteTime;
             return new DateTime(objGetLastWriteTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTime != null ? retObjectGetLastWriteTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class Directory extends NetObject  {
 
     public static DateTime GetLastWriteTimeUtc(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLastWriteTimeUtc = null;
         try {
-            JCObject objGetLastWriteTimeUtc = (JCObject)classType.Invoke("GetLastWriteTimeUtc", path);
+            retObjectGetLastWriteTimeUtc = classType.Invoke("GetLastWriteTimeUtc", path);
+            JCObject objGetLastWriteTimeUtc = (JCObject)retObjectGetLastWriteTimeUtc;
             return new DateTime(objGetLastWriteTimeUtc);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetLastWriteTimeUtc != null ? retObjectGetLastWriteTimeUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class Directory extends NetObject  {
 
     public static DirectoryInfo CreateDirectory(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.IOException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDirectory = null;
         try {
-            JCObject objCreateDirectory = (JCObject)classType.Invoke("CreateDirectory", path);
+            retObjectCreateDirectory = classType.Invoke("CreateDirectory", path);
+            JCObject objCreateDirectory = (JCObject)retObjectCreateDirectory;
             return new DirectoryInfo(objCreateDirectory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDirectory != null ? retObjectCreateDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class Directory extends NetObject  {
 
     public static DirectoryInfo CreateDirectory(java.lang.String path, DirectorySecurity directorySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDirectory = null;
         try {
-            JCObject objCreateDirectory = (JCObject)classType.Invoke("CreateDirectory", path, directorySecurity == null ? null : directorySecurity.getJCOInstance());
+            retObjectCreateDirectory = classType.Invoke("CreateDirectory", path, directorySecurity == null ? null : directorySecurity.getJCOInstance());
+            JCObject objCreateDirectory = (JCObject)retObjectCreateDirectory;
             return new DirectoryInfo(objCreateDirectory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDirectory != null ? retObjectCreateDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +292,14 @@ public class Directory extends NetObject  {
 
     public static DirectoryInfo GetParent(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetParent = null;
         try {
-            JCObject objGetParent = (JCObject)classType.Invoke("GetParent", path);
+            retObjectGetParent = classType.Invoke("GetParent", path);
+            JCObject objGetParent = (JCObject)retObjectGetParent;
             return new DirectoryInfo(objGetParent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParent != null ? retObjectGetParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +307,14 @@ public class Directory extends NetObject  {
 
     public static DirectorySecurity GetAccessControl(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.InvalidOperationException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.ArgumentOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", path);
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", path);
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new DirectorySecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +322,14 @@ public class Directory extends NetObject  {
 
     public static DirectorySecurity GetAccessControl(java.lang.String path, AccessControlSections includeSections) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.InvalidOperationException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.ArgumentOutOfRangeException, system.OverflowException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAccessControl = null;
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", path, includeSections == null ? null : includeSections.getJCOInstance());
+            retObjectGetAccessControl = classType.Invoke("GetAccessControl", path, includeSections == null ? null : includeSections.getJCOInstance());
+            JCObject objGetAccessControl = (JCObject)retObjectGetAccessControl;
             return new DirectorySecurity(objGetAccessControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAccessControl != null ? retObjectGetAccessControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,9 +337,13 @@ public class Directory extends NetObject  {
 
     public static java.lang.String GetCurrentDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCurrentDirectory = null;
         try {
-            return (java.lang.String)classType.Invoke("GetCurrentDirectory");
+            retObjectGetCurrentDirectory = classType.Invoke("GetCurrentDirectory");
+            return (java.lang.String)retObjectGetCurrentDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCurrentDirectory != null ? retObjectGetCurrentDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,9 +351,13 @@ public class Directory extends NetObject  {
 
     public static java.lang.String GetDirectoryRoot(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectoryRoot = null;
         try {
-            return (java.lang.String)classType.Invoke("GetDirectoryRoot", path);
+            retObjectGetDirectoryRoot = classType.Invoke("GetDirectoryRoot", path);
+            return (java.lang.String)retObjectGetDirectoryRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDirectoryRoot != null ? retObjectGetDirectoryRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +365,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetDirectories(java.lang.String path) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path);
+            retObjectGetDirectories = classType.Invoke("GetDirectories", path);
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -321,6 +379,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,10 +388,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetDirectories(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path, searchPattern);
+            retObjectGetDirectories = classType.Invoke("GetDirectories", path, searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -340,6 +402,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +411,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetDirectories(java.lang.String path, java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDirectories = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetDirectories = classType.Invoke("GetDirectories", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -359,6 +425,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetDirectories != null ? retObjectGetDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,10 +434,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFiles(java.lang.String path) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path);
+            retObjectGetFiles = classType.Invoke("GetFiles", path);
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -378,6 +448,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +457,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFiles(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path, searchPattern);
+            retObjectGetFiles = classType.Invoke("GetFiles", path, searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -397,6 +471,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +480,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFiles(java.lang.String path, java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetFiles = classType.Invoke("GetFiles", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -416,6 +494,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,10 +503,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFileSystemEntries(java.lang.String path) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileSystemEntries = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path);
+            retObjectGetFileSystemEntries = classType.Invoke("GetFileSystemEntries", path);
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemEntries;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -435,6 +517,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileSystemEntries != null ? retObjectGetFileSystemEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -442,10 +526,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFileSystemEntries(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileSystemEntries = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path, searchPattern);
+            retObjectGetFileSystemEntries = classType.Invoke("GetFileSystemEntries", path, searchPattern);
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemEntries;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -454,6 +540,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileSystemEntries != null ? retObjectGetFileSystemEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +549,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetFileSystemEntries(java.lang.String path, java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.NullReferenceException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileSystemEntries = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            retObjectGetFileSystemEntries = classType.Invoke("GetFileSystemEntries", path, searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetFileSystemEntries;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -473,6 +563,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileSystemEntries != null ? retObjectGetFileSystemEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,10 +572,12 @@ public class Directory extends NetObject  {
 
     public static java.lang.String[] GetLogicalDrives() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetLogicalDrives = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetLogicalDrives");
+            retObjectGetLogicalDrives = classType.Invoke("GetLogicalDrives");
+            JCObject resultingObjects = (JCObject)retObjectGetLogicalDrives;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -492,6 +586,8 @@ public class Directory extends NetObject  {
 				resultingArray[indexGetLogicalDrives] = (java.lang.String)resultingArrayList.get(indexGetLogicalDrives);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetLogicalDrives != null ? retObjectGetLogicalDrives.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +595,7 @@ public class Directory extends NetObject  {
 
     public static void Delete(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", path);
         } catch (JCNativeException jcne) {
@@ -509,7 +605,7 @@ public class Directory extends NetObject  {
 
     public static void Delete(java.lang.String path, boolean recursive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", path, recursive);
         } catch (JCNativeException jcne) {
@@ -519,7 +615,7 @@ public class Directory extends NetObject  {
 
     public static void Move(java.lang.String sourceDirName, java.lang.String destDirName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Move", sourceDirName, destDirName);
         } catch (JCNativeException jcne) {
@@ -529,7 +625,7 @@ public class Directory extends NetObject  {
 
     public static void SetAccessControl(java.lang.String path, DirectorySecurity directorySecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.InvalidOperationException, system.security.accesscontrol.PrivilegeNotHeldException, system.InvalidProgramException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetAccessControl", path, directorySecurity == null ? null : directorySecurity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -539,7 +635,7 @@ public class Directory extends NetObject  {
 
     public static void SetCreationTime(java.lang.String path, DateTime creationTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.io.PathTooLongException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTime", path, creationTime == null ? null : creationTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -549,7 +645,7 @@ public class Directory extends NetObject  {
 
     public static void SetCreationTimeUtc(java.lang.String path, DateTime creationTimeUtc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCreationTimeUtc", path, creationTimeUtc == null ? null : creationTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -559,7 +655,7 @@ public class Directory extends NetObject  {
 
     public static void SetCurrentDirectory(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetCurrentDirectory", path);
         } catch (JCNativeException jcne) {
@@ -569,7 +665,7 @@ public class Directory extends NetObject  {
 
     public static void SetLastAccessTime(java.lang.String path, DateTime lastAccessTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.io.PathTooLongException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTime", path, lastAccessTime == null ? null : lastAccessTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -579,7 +675,7 @@ public class Directory extends NetObject  {
 
     public static void SetLastAccessTimeUtc(java.lang.String path, DateTime lastAccessTimeUtc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastAccessTimeUtc", path, lastAccessTimeUtc == null ? null : lastAccessTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -589,7 +685,7 @@ public class Directory extends NetObject  {
 
     public static void SetLastWriteTime(java.lang.String path, DateTime lastWriteTime) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.io.PathTooLongException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTime", path, lastWriteTime == null ? null : lastWriteTime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -599,7 +695,7 @@ public class Directory extends NetObject  {
 
     public static void SetLastWriteTimeUtc(java.lang.String path, DateTime lastWriteTimeUtc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetLastWriteTimeUtc", path, lastWriteTimeUtc == null ? null : lastWriteTimeUtc.getJCOInstance());
         } catch (JCNativeException jcne) {

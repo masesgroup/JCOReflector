@@ -161,10 +161,14 @@ public class TrackingParameters extends NetObject  {
     
     public Guid getCallerContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallerContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallerContextGuid");
+            retObjectCallerContextGuid = classInstance.Get("CallerContextGuid");
+            JCObject val = (JCObject)retObjectCallerContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallerContextGuid != null ? retObjectCallerContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class TrackingParameters extends NetObject  {
 
     public Guid getCallerInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallerInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallerInstanceId");
+            retObjectCallerInstanceId = classInstance.Get("CallerInstanceId");
+            JCObject val = (JCObject)retObjectCallerInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallerInstanceId != null ? retObjectCallerInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class TrackingParameters extends NetObject  {
 
     public Guid getCallerParentContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallerParentContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallerParentContextGuid");
+            retObjectCallerParentContextGuid = classInstance.Get("CallerParentContextGuid");
+            JCObject val = (JCObject)retObjectCallerParentContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallerParentContextGuid != null ? retObjectCallerParentContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class TrackingParameters extends NetObject  {
 
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextGuid");
+            retObjectContextGuid = classInstance.Get("ContextGuid");
+            JCObject val = (JCObject)retObjectContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextGuid != null ? retObjectContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class TrackingParameters extends NetObject  {
 
     public Guid getInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceId");
+            retObjectInstanceId = classInstance.Get("InstanceId");
+            JCObject val = (JCObject)retObjectInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceId != null ? retObjectInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class TrackingParameters extends NetObject  {
 
     public NetType getWorkflowType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowType");
+            retObjectWorkflowType = classInstance.Get("WorkflowType");
+            JCObject val = (JCObject)retObjectWorkflowType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowType != null ? retObjectWorkflowType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class TrackingParameters extends NetObject  {
 
     public Activity getRootActivity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRootActivity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RootActivity");
+            retObjectRootActivity = classInstance.Get("RootActivity");
+            JCObject val = (JCObject)retObjectRootActivity;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootActivity != null ? retObjectRootActivity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

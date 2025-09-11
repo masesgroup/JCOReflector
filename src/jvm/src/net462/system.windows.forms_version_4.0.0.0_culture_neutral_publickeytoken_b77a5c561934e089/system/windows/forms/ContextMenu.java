@@ -178,7 +178,7 @@ public class ContextMenu extends Menu  {
     
     public void Show(Control control, Point pos) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", control == null ? null : control.getJCOInstance(), pos == null ? null : pos.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,7 +188,7 @@ public class ContextMenu extends Menu  {
 
     public void Show(Control control, Point pos, LeftRightAlignment alignment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", control == null ? null : control.getJCOInstance(), pos == null ? null : pos.getJCOInstance(), alignment == null ? null : alignment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -202,10 +202,14 @@ public class ContextMenu extends Menu  {
     
     public Control getSourceControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SourceControl");
+            retObjectSourceControl = classInstance.Get("SourceControl");
+            JCObject val = (JCObject)retObjectSourceControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSourceControl != null ? retObjectSourceControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class ContextMenu extends Menu  {
 
     public RightToLeft getRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightToLeft");
+            retObjectRightToLeft = classInstance.Get("RightToLeft");
+            JCObject val = (JCObject)retObjectRightToLeft;
             return new RightToLeft(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightToLeft != null ? retObjectRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,7 +232,7 @@ public class ContextMenu extends Menu  {
 
     public void setRightToLeft(RightToLeft RightToLeft) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeft", RightToLeft == null ? null : RightToLeft.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -239,7 +247,7 @@ public class ContextMenu extends Menu  {
 
     public void addCollapse(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Collapse", handler);
         } catch (JCNativeException jcne) {
@@ -249,7 +257,7 @@ public class ContextMenu extends Menu  {
 
     public void removeCollapse(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Collapse", handler);
         } catch (JCNativeException jcne) {
@@ -259,7 +267,7 @@ public class ContextMenu extends Menu  {
 
     public void addPopup(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Popup", handler);
         } catch (JCNativeException jcne) {
@@ -269,7 +277,7 @@ public class ContextMenu extends Menu  {
 
     public void removePopup(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Popup", handler);
         } catch (JCNativeException jcne) {

@@ -172,9 +172,13 @@ public class WebPartAddingEventArgs extends WebPartCancelEventArgs  {
     
     public int getZoneIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZoneIndex = null;
         try {
-            return (int)classInstance.Get("ZoneIndex");
+            retObjectZoneIndex = classInstance.Get("ZoneIndex");
+            return (int)retObjectZoneIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectZoneIndex != null ? retObjectZoneIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class WebPartAddingEventArgs extends WebPartCancelEventArgs  {
 
     public void setZoneIndex(int ZoneIndex) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ZoneIndex", ZoneIndex);
         } catch (JCNativeException jcne) {
@@ -192,10 +196,14 @@ public class WebPartAddingEventArgs extends WebPartCancelEventArgs  {
 
     public WebPartZoneBase getZone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectZone = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Zone");
+            retObjectZone = classInstance.Get("Zone");
+            JCObject val = (JCObject)retObjectZone;
             return new WebPartZoneBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectZone != null ? retObjectZone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,7 +211,7 @@ public class WebPartAddingEventArgs extends WebPartCancelEventArgs  {
 
     public void setZone(WebPartZoneBase Zone) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Zone", Zone == null ? null : Zone.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,9 +171,13 @@ public class GetPageNumberCompletedEventArgs extends AsyncCompletedEventArgs  {
     
     public int getPageNumber() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class GetPageNumberCompletedEventArgs extends AsyncCompletedEventArgs  {
 
     public ContentPosition getContentPosition() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentPosition");
+            retObjectContentPosition = classInstance.Get("ContentPosition");
+            JCObject val = (JCObject)retObjectContentPosition;
             return new ContentPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentPosition != null ? retObjectContentPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class OptionalFieldAttribute extends Attribute  {
     
     public int getVersionAdded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersionAdded = null;
         try {
-            return (int)classInstance.Get("VersionAdded");
+            retObjectVersionAdded = classInstance.Get("VersionAdded");
+            return (int)retObjectVersionAdded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectVersionAdded != null ? retObjectVersionAdded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class OptionalFieldAttribute extends Attribute  {
 
     public void setVersionAdded(int VersionAdded) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VersionAdded", VersionAdded);
         } catch (JCNativeException jcne) {

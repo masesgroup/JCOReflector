@@ -162,10 +162,14 @@ public class ConstructorInfo extends MethodBase  {
     
     public NetObject Invoke(NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(parameters));
+            retObjectInvoke = classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(parameters));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ConstructorInfo extends MethodBase  {
 
     public NetObject Invoke(BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(parameters), culture == null ? null : culture.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", invokeAttr == null ? null : invokeAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(parameters), culture == null ? null : culture.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -197,7 +205,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke_2(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -206,7 +214,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke_3(NetObject obj, NetObject[] parameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -215,7 +223,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke_4(BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -224,7 +232,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject Invoke_5(NetObject[] parameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -233,7 +241,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -242,7 +250,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -251,7 +259,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -260,7 +268,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public ParameterInfo[] GetParameters() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
     /**
@@ -269,7 +277,7 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
 

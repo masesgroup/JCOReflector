@@ -170,10 +170,14 @@ public class ConfigXmlDocument extends XmlDocument  {
     
     public XmlAttribute CreateAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateAttribute = null;
         try {
-            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute", prefix, localName, namespaceUri);
+            retObjectCreateAttribute = classInstance.Invoke("CreateAttribute", prefix, localName, namespaceUri);
+            JCObject objCreateAttribute = (JCObject)retObjectCreateAttribute;
             return new XmlAttribute(objCreateAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAttribute != null ? retObjectCreateAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlCDataSection CreateCDataSection(java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCDataSection = null;
         try {
-            JCObject objCreateCDataSection = (JCObject)classInstance.Invoke("CreateCDataSection", data);
+            retObjectCreateCDataSection = classInstance.Invoke("CreateCDataSection", data);
+            JCObject objCreateCDataSection = (JCObject)retObjectCreateCDataSection;
             return new XmlCDataSection(objCreateCDataSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCDataSection != null ? retObjectCreateCDataSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlComment CreateComment(java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComment = null;
         try {
-            JCObject objCreateComment = (JCObject)classInstance.Invoke("CreateComment", data);
+            retObjectCreateComment = classInstance.Invoke("CreateComment", data);
+            JCObject objCreateComment = (JCObject)retObjectCreateComment;
             return new XmlComment(objCreateComment);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComment != null ? retObjectCreateComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlElement CreateElement(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateElement = null;
         try {
-            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", prefix, localName, namespaceUri);
+            retObjectCreateElement = classInstance.Invoke("CreateElement", prefix, localName, namespaceUri);
+            JCObject objCreateElement = (JCObject)retObjectCreateElement;
             return new XmlElement(objCreateElement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateElement != null ? retObjectCreateElement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlSignificantWhitespace CreateSignificantWhitespace(java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSignificantWhitespace = null;
         try {
-            JCObject objCreateSignificantWhitespace = (JCObject)classInstance.Invoke("CreateSignificantWhitespace", data);
+            retObjectCreateSignificantWhitespace = classInstance.Invoke("CreateSignificantWhitespace", data);
+            JCObject objCreateSignificantWhitespace = (JCObject)retObjectCreateSignificantWhitespace;
             return new XmlSignificantWhitespace(objCreateSignificantWhitespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSignificantWhitespace != null ? retObjectCreateSignificantWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlText CreateTextNode(java.lang.String text) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateTextNode = null;
         try {
-            JCObject objCreateTextNode = (JCObject)classInstance.Invoke("CreateTextNode", text);
+            retObjectCreateTextNode = classInstance.Invoke("CreateTextNode", text);
+            JCObject objCreateTextNode = (JCObject)retObjectCreateTextNode;
             return new XmlText(objCreateTextNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextNode != null ? retObjectCreateTextNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public XmlWhitespace CreateWhitespace(java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateWhitespace = null;
         try {
-            JCObject objCreateWhitespace = (JCObject)classInstance.Invoke("CreateWhitespace", data);
+            retObjectCreateWhitespace = classInstance.Invoke("CreateWhitespace", data);
+            JCObject objCreateWhitespace = (JCObject)retObjectCreateWhitespace;
             return new XmlWhitespace(objCreateWhitespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateWhitespace != null ? retObjectCreateWhitespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +275,7 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public void Load(java.lang.String filename) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", filename);
         } catch (JCNativeException jcne) {
@@ -257,7 +285,7 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public void LoadSingleElement(java.lang.String filename, XmlTextReader sourceReader) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.xml.XmlException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadSingleElement", filename, sourceReader == null ? null : sourceReader.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,9 +299,13 @@ public class ConfigXmlDocument extends XmlDocument  {
     
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,9 +313,13 @@ public class ConfigXmlDocument extends XmlDocument  {
 
     public java.lang.String getFilename() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("Filename");
+            retObjectFilename = classInstance.Get("Filename");
+            return (java.lang.String)retObjectFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilename != null ? retObjectFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

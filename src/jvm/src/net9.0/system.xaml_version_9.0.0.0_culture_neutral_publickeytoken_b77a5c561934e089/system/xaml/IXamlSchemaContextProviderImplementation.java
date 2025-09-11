@@ -147,10 +147,14 @@ public class IXamlSchemaContextProviderImplementation extends NetObject implemen
     
     public XamlSchemaContext getSchemaContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SchemaContext");
+            retObjectSchemaContext = classInstance.Get("SchemaContext");
+            JCObject val = (JCObject)retObjectSchemaContext;
             return new XamlSchemaContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSchemaContext != null ? retObjectSchemaContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

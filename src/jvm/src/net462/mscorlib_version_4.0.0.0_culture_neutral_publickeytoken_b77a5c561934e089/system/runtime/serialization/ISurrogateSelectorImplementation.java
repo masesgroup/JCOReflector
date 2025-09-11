@@ -147,10 +147,14 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
     
     public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSurrogate = null;
         try {
-            JCObject objGetSurrogate = (JCObject)classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector.getJCRefOut());
+            retObjectGetSurrogate = classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector.getJCRefOut());
+            JCObject objGetSurrogate = (JCObject)retObjectGetSurrogate;
             return new ISerializationSurrogateImplementation(objGetSurrogate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSurrogate != null ? retObjectGetSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,10 +162,14 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
 
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelector = null;
         try {
-            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
+            retObjectGetNextSelector = classInstance.Invoke("GetNextSelector");
+            JCObject objGetNextSelector = (JCObject)retObjectGetNextSelector;
             return new ISurrogateSelectorImplementation(objGetNextSelector);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelector != null ? retObjectGetNextSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +177,7 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
 
     public void ChainSelector(ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
         } catch (JCNativeException jcne) {

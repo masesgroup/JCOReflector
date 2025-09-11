@@ -165,9 +165,13 @@ public class AspNetWebSocketOptions extends NetObject  {
     
     public boolean getRequireSameOrigin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireSameOrigin = null;
         try {
-            return (boolean)classInstance.Get("RequireSameOrigin");
+            retObjectRequireSameOrigin = classInstance.Get("RequireSameOrigin");
+            return (boolean)retObjectRequireSameOrigin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireSameOrigin != null ? retObjectRequireSameOrigin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class AspNetWebSocketOptions extends NetObject  {
 
     public void setRequireSameOrigin(boolean RequireSameOrigin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireSameOrigin", RequireSameOrigin);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class AspNetWebSocketOptions extends NetObject  {
 
     public java.lang.String getSubProtocol() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubProtocol = null;
         try {
-            return (java.lang.String)classInstance.Get("SubProtocol");
+            retObjectSubProtocol = classInstance.Get("SubProtocol");
+            return (java.lang.String)retObjectSubProtocol;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubProtocol != null ? retObjectSubProtocol.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class AspNetWebSocketOptions extends NetObject  {
 
     public void setSubProtocol(java.lang.String SubProtocol) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubProtocol", SubProtocol);
         } catch (JCNativeException jcne) {

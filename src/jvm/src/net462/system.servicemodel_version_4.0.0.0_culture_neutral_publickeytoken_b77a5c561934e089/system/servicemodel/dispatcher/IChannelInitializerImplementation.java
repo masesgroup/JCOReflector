@@ -144,7 +144,7 @@ public class IChannelInitializerImplementation extends NetObject implements ICha
     
     public void Initialize(IClientChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", channel == null ? null : channel.getJCOInstance());
         } catch (JCNativeException jcne) {

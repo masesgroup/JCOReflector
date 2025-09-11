@@ -165,7 +165,7 @@ public class HyperLinkDataBindingHandler extends DataBindingHandler  {
     
     public void DataBindControl(IDesignerHost designerHost, Control control) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DataBindControl", designerHost == null ? null : designerHost.getJCOInstance(), control == null ? null : control.getJCOInstance());
         } catch (JCNativeException jcne) {

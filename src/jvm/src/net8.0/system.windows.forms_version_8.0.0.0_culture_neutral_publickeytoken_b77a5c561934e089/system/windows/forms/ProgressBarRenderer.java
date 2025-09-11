@@ -155,7 +155,7 @@ public class ProgressBarRenderer extends NetObject  {
     
     public static void DrawHorizontalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawHorizontalBar", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawHorizontalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawHorizontalChunks", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawVerticalBar(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawVerticalBar", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -185,7 +185,7 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static void DrawVerticalChunks(Graphics g, Rectangle bounds) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("DrawVerticalChunks", g == null ? null : g.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,9 +199,13 @@ public class ProgressBarRenderer extends NetObject  {
     
     public static boolean getIsSupported() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSupported = null;
         try {
-            return (boolean)classType.Get("IsSupported");
+            retObjectIsSupported = classType.Get("IsSupported");
+            return (boolean)retObjectIsSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSupported != null ? retObjectIsSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,9 +213,13 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static int getChunkSpaceThickness() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunkSpaceThickness = null;
         try {
-            return (int)classType.Get("ChunkSpaceThickness");
+            retObjectChunkSpaceThickness = classType.Get("ChunkSpaceThickness");
+            return (int)retObjectChunkSpaceThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectChunkSpaceThickness != null ? retObjectChunkSpaceThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +227,13 @@ public class ProgressBarRenderer extends NetObject  {
 
     public static int getChunkThickness() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectChunkThickness = null;
         try {
-            return (int)classType.Get("ChunkThickness");
+            retObjectChunkThickness = classType.Get("ChunkThickness");
+            return (int)retObjectChunkThickness;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectChunkThickness != null ? retObjectChunkThickness.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

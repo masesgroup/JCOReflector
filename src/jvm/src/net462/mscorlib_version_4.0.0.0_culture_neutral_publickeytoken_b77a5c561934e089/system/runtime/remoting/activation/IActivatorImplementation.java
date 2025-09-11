@@ -149,10 +149,14 @@ public class IActivatorImplementation extends NetObject implements IActivator {
     
     public IConstructionReturnMessage Activate(IConstructionCallMessage msg) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivate = null;
         try {
-            JCObject objActivate = (JCObject)classInstance.Invoke("Activate", msg == null ? null : msg.getJCOInstance());
+            retObjectActivate = classInstance.Invoke("Activate", msg == null ? null : msg.getJCOInstance());
+            JCObject objActivate = (JCObject)retObjectActivate;
             return new IConstructionReturnMessageImplementation(objActivate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivate != null ? retObjectActivate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,10 +168,14 @@ public class IActivatorImplementation extends NetObject implements IActivator {
     
     public ActivatorLevel getLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Level");
+            retObjectLevel = classInstance.Get("Level");
+            JCObject val = (JCObject)retObjectLevel;
             return new ActivatorLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +183,14 @@ public class IActivatorImplementation extends NetObject implements IActivator {
 
     public IActivator getNextActivator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNextActivator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NextActivator");
+            retObjectNextActivator = classInstance.Get("NextActivator");
+            JCObject val = (JCObject)retObjectNextActivator;
             return new IActivatorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNextActivator != null ? retObjectNextActivator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +198,7 @@ public class IActivatorImplementation extends NetObject implements IActivator {
 
     public void setNextActivator(IActivator NextActivator) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NextActivator", NextActivator == null ? null : NextActivator.getJCOInstance());
         } catch (JCNativeException jcne) {

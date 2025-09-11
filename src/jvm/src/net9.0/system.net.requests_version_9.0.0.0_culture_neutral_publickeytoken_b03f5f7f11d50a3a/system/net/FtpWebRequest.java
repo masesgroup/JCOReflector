@@ -170,10 +170,14 @@ public class FtpWebRequest extends WebRequest  {
     
     public IAsyncResult BeginGetRequestStream(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.ProtocolViolationException, system.net.sockets.SocketException, system.io.IOException, system.net.WebException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetRequestStream = null;
         try {
-            JCObject objBeginGetRequestStream = (JCObject)classInstance.Invoke("BeginGetRequestStream", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginGetRequestStream = classInstance.Invoke("BeginGetRequestStream", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginGetRequestStream = (JCObject)retObjectBeginGetRequestStream;
             return new IAsyncResultImplementation(objBeginGetRequestStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetRequestStream != null ? retObjectBeginGetRequestStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public IAsyncResult BeginGetResponse(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.net.sockets.SocketException, system.io.IOException, system.net.WebException, system.security.SecurityException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginGetResponse = null;
         try {
-            JCObject objBeginGetResponse = (JCObject)classInstance.Invoke("BeginGetResponse", callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginGetResponse = classInstance.Invoke("BeginGetResponse", callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginGetResponse = (JCObject)retObjectBeginGetResponse;
             return new IAsyncResultImplementation(objBeginGetResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginGetResponse != null ? retObjectBeginGetResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public Stream EndGetRequestStream(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndGetRequestStream = null;
         try {
-            JCObject objEndGetRequestStream = (JCObject)classInstance.Invoke("EndGetRequestStream", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndGetRequestStream = classInstance.Invoke("EndGetRequestStream", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndGetRequestStream = (JCObject)retObjectEndGetRequestStream;
             return new Stream(objEndGetRequestStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetRequestStream != null ? retObjectEndGetRequestStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public Stream GetRequestStream() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.ProtocolViolationException, system.net.WebException, system.net.sockets.SocketException, system.io.IOException, system.ObjectDisposedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestStream = null;
         try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream");
+            retObjectGetRequestStream = classInstance.Invoke("GetRequestStream");
+            JCObject objGetRequestStream = (JCObject)retObjectGetRequestStream;
             return new Stream(objGetRequestStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequestStream != null ? retObjectGetRequestStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public WebResponse EndGetResponse(IAsyncResult asyncResult) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.WaitHandleCannotBeOpenedException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndGetResponse = null;
         try {
-            JCObject objEndGetResponse = (JCObject)classInstance.Invoke("EndGetResponse", asyncResult == null ? null : asyncResult.getJCOInstance());
+            retObjectEndGetResponse = classInstance.Invoke("EndGetResponse", asyncResult == null ? null : asyncResult.getJCOInstance());
+            JCObject objEndGetResponse = (JCObject)retObjectEndGetResponse;
             return new WebResponse(objEndGetResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndGetResponse != null ? retObjectEndGetResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public WebResponse GetResponse() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.WebException, system.net.sockets.SocketException, system.io.IOException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponse = null;
         try {
-            JCObject objGetResponse = (JCObject)classInstance.Invoke("GetResponse");
+            retObjectGetResponse = classInstance.Invoke("GetResponse");
+            JCObject objGetResponse = (JCObject)retObjectGetResponse;
             return new WebResponse(objGetResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponse != null ? retObjectGetResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,7 +260,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void Abort() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.io.IOException, system.net.WebException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Abort");
         } catch (JCNativeException jcne) {
@@ -250,9 +274,13 @@ public class FtpWebRequest extends WebRequest  {
     
     public boolean getEnableSsl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnableSsl = null;
         try {
-            return (boolean)classInstance.Get("EnableSsl");
+            retObjectEnableSsl = classInstance.Get("EnableSsl");
+            return (boolean)retObjectEnableSsl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEnableSsl != null ? retObjectEnableSsl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +288,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setEnableSsl(boolean EnableSsl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EnableSsl", EnableSsl);
         } catch (JCNativeException jcne) {
@@ -270,9 +298,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public boolean getKeepAlive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAlive = null;
         try {
-            return (boolean)classInstance.Get("KeepAlive");
+            retObjectKeepAlive = classInstance.Get("KeepAlive");
+            return (boolean)retObjectKeepAlive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepAlive != null ? retObjectKeepAlive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +312,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setKeepAlive(boolean KeepAlive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAlive", KeepAlive);
         } catch (JCNativeException jcne) {
@@ -290,9 +322,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public boolean getUseBinary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseBinary = null;
         try {
-            return (boolean)classInstance.Get("UseBinary");
+            retObjectUseBinary = classInstance.Get("UseBinary");
+            return (boolean)retObjectUseBinary;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseBinary != null ? retObjectUseBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +336,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setUseBinary(boolean UseBinary) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseBinary", UseBinary);
         } catch (JCNativeException jcne) {
@@ -310,9 +346,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public boolean getUsePassive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsePassive = null;
         try {
-            return (boolean)classInstance.Get("UsePassive");
+            retObjectUsePassive = classInstance.Get("UsePassive");
+            return (boolean)retObjectUsePassive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsePassive != null ? retObjectUsePassive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +360,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setUsePassive(boolean UsePassive) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsePassive", UsePassive);
         } catch (JCNativeException jcne) {
@@ -330,9 +370,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public int getReadWriteTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadWriteTimeout = null;
         try {
-            return (int)classInstance.Get("ReadWriteTimeout");
+            retObjectReadWriteTimeout = classInstance.Get("ReadWriteTimeout");
+            return (int)retObjectReadWriteTimeout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReadWriteTimeout != null ? retObjectReadWriteTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +384,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setReadWriteTimeout(int ReadWriteTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadWriteTimeout", ReadWriteTimeout);
         } catch (JCNativeException jcne) {
@@ -350,9 +394,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public long getContentOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentOffset = null;
         try {
-            return (long)classInstance.Get("ContentOffset");
+            retObjectContentOffset = classInstance.Get("ContentOffset");
+            return (long)retObjectContentOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectContentOffset != null ? retObjectContentOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +408,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setContentOffset(long ContentOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContentOffset", ContentOffset);
         } catch (JCNativeException jcne) {
@@ -370,10 +418,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public static RequestCachePolicy getDefaultCachePolicy() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefaultCachePolicy = null;
         try {
-            JCObject val = (JCObject)classType.Get("DefaultCachePolicy");
+            retObjectDefaultCachePolicy = classType.Get("DefaultCachePolicy");
+            JCObject val = (JCObject)retObjectDefaultCachePolicy;
             return new RequestCachePolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultCachePolicy != null ? retObjectDefaultCachePolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +433,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public static void setDefaultCachePolicy(RequestCachePolicy DefaultCachePolicy) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("DefaultCachePolicy", DefaultCachePolicy == null ? null : DefaultCachePolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,10 +443,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public ServicePoint getServicePoint() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.UriFormatException, system.globalization.CultureNotFoundException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServicePoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServicePoint");
+            retObjectServicePoint = classInstance.Get("ServicePoint");
+            JCObject val = (JCObject)retObjectServicePoint;
             return new ServicePoint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServicePoint != null ? retObjectServicePoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +458,14 @@ public class FtpWebRequest extends WebRequest  {
 
     public X509CertificateCollection getClientCertificates() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificates");
+            retObjectClientCertificates = classInstance.Get("ClientCertificates");
+            JCObject val = (JCObject)retObjectClientCertificates;
             return new X509CertificateCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificates != null ? retObjectClientCertificates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,7 +473,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setClientCertificates(X509CertificateCollection ClientCertificates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientCertificates", ClientCertificates == null ? null : ClientCertificates.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -423,9 +483,13 @@ public class FtpWebRequest extends WebRequest  {
 
     public java.lang.String getRenameTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenameTo = null;
         try {
-            return (java.lang.String)classInstance.Get("RenameTo");
+            retObjectRenameTo = classInstance.Get("RenameTo");
+            return (java.lang.String)retObjectRenameTo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRenameTo != null ? retObjectRenameTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -433,7 +497,7 @@ public class FtpWebRequest extends WebRequest  {
 
     public void setRenameTo(java.lang.String RenameTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenameTo", RenameTo);
         } catch (JCNativeException jcne) {

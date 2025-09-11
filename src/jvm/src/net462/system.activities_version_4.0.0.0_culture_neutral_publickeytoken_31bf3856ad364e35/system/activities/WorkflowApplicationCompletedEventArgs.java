@@ -161,10 +161,14 @@ public class WorkflowApplicationCompletedEventArgs extends WorkflowApplicationEv
     
     public ActivityInstanceState getCompletionState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompletionState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompletionState");
+            retObjectCompletionState = classInstance.Get("CompletionState");
+            JCObject val = (JCObject)retObjectCompletionState;
             return new ActivityInstanceState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompletionState != null ? retObjectCompletionState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class WorkflowApplicationCompletedEventArgs extends WorkflowApplicationEv
 
     public NetException getTerminationException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTerminationException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TerminationException");
+            retObjectTerminationException = classInstance.Get("TerminationException");
+            JCObject val = (JCObject)retObjectTerminationException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTerminationException != null ? retObjectTerminationException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

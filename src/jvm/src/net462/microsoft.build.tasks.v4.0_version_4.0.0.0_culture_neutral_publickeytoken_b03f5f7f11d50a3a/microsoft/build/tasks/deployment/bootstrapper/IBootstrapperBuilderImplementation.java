@@ -145,10 +145,14 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
     
     public BuildResults Build(BuildSettings settings) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuild = null;
         try {
-            JCObject objBuild = (JCObject)classInstance.Invoke("Build", settings == null ? null : settings.getJCOInstance());
+            retObjectBuild = classInstance.Invoke("Build", settings == null ? null : settings.getJCOInstance());
+            JCObject objBuild = (JCObject)retObjectBuild;
             return new BuildResults(objBuild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuild != null ? retObjectBuild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,10 +164,14 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
     
     public ProductCollection getProducts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProducts = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Products");
+            retObjectProducts = classInstance.Get("Products");
+            JCObject val = (JCObject)retObjectProducts;
             return new ProductCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProducts != null ? retObjectProducts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +179,13 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
 
     public java.lang.String getPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPath = null;
         try {
-            return (java.lang.String)classInstance.Get("Path");
+            retObjectPath = classInstance.Get("Path");
+            return (java.lang.String)retObjectPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPath != null ? retObjectPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +193,7 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
 
     public void setPath(java.lang.String Path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Path", Path);
         } catch (JCNativeException jcne) {

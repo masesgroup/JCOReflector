@@ -159,10 +159,14 @@ public class GenericAce extends NetObject  {
     
     public GenericAce Copy() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new GenericAce(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class GenericAce extends NetObject  {
 
     public static GenericAce CreateFromBinaryForm(byte[] binaryForm, int offset) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromBinaryForm = null;
         try {
-            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", binaryForm, offset);
+            retObjectCreateFromBinaryForm = classType.Invoke("CreateFromBinaryForm", binaryForm, offset);
+            JCObject objCreateFromBinaryForm = (JCObject)retObjectCreateFromBinaryForm;
             return new GenericAce(objCreateFromBinaryForm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromBinaryForm != null ? retObjectCreateFromBinaryForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class GenericAce extends NetObject  {
 
     public static GenericAce CreateFromBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromBinaryForm = null;
         try {
-            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", dupParam0.getJCRefOut(), dupParam1);
+            retObjectCreateFromBinaryForm = classType.Invoke("CreateFromBinaryForm", dupParam0.getJCRefOut(), dupParam1);
+            JCObject objCreateFromBinaryForm = (JCObject)retObjectCreateFromBinaryForm;
             return new GenericAce(objCreateFromBinaryForm);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromBinaryForm != null ? retObjectCreateFromBinaryForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +204,7 @@ public class GenericAce extends NetObject  {
 
     public void GetBinaryForm(byte[] binaryForm, int offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", binaryForm, offset);
         } catch (JCNativeException jcne) {
@@ -202,7 +214,7 @@ public class GenericAce extends NetObject  {
 
     public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
@@ -216,9 +228,13 @@ public class GenericAce extends NetObject  {
     
     public boolean getIsInherited() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInherited = null;
         try {
-            return (boolean)classInstance.Get("IsInherited");
+            retObjectIsInherited = classInstance.Get("IsInherited");
+            return (boolean)retObjectIsInherited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInherited != null ? retObjectIsInherited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +242,13 @@ public class GenericAce extends NetObject  {
 
     public int getBinaryLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinaryLength = null;
         try {
-            return (int)classInstance.Get("BinaryLength");
+            retObjectBinaryLength = classInstance.Get("BinaryLength");
+            return (int)retObjectBinaryLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBinaryLength != null ? retObjectBinaryLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +256,14 @@ public class GenericAce extends NetObject  {
 
     public AceFlags getAceFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AceFlags");
+            retObjectAceFlags = classInstance.Get("AceFlags");
+            JCObject val = (JCObject)retObjectAceFlags;
             return new AceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAceFlags != null ? retObjectAceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +271,7 @@ public class GenericAce extends NetObject  {
 
     public void setAceFlags(AceFlags AceFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AceFlags", AceFlags == null ? null : AceFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,10 +281,14 @@ public class GenericAce extends NetObject  {
 
     public AceType getAceType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAceType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AceType");
+            retObjectAceType = classInstance.Get("AceType");
+            JCObject val = (JCObject)retObjectAceType;
             return new AceType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAceType != null ? retObjectAceType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,10 +296,14 @@ public class GenericAce extends NetObject  {
 
     public AuditFlags getAuditFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuditFlags");
+            retObjectAuditFlags = classInstance.Get("AuditFlags");
+            JCObject val = (JCObject)retObjectAuditFlags;
             return new AuditFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditFlags != null ? retObjectAuditFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,10 +311,14 @@ public class GenericAce extends NetObject  {
 
     public InheritanceFlags getInheritanceFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInheritanceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InheritanceFlags");
+            retObjectInheritanceFlags = classInstance.Get("InheritanceFlags");
+            JCObject val = (JCObject)retObjectInheritanceFlags;
             return new InheritanceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInheritanceFlags != null ? retObjectInheritanceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,10 +326,14 @@ public class GenericAce extends NetObject  {
 
     public PropagationFlags getPropagationFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPropagationFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PropagationFlags");
+            retObjectPropagationFlags = classInstance.Get("PropagationFlags");
+            JCObject val = (JCObject)retObjectPropagationFlags;
             return new PropagationFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropagationFlags != null ? retObjectPropagationFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

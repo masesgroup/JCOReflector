@@ -234,9 +234,13 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
     
     public boolean Equals(SqlDecimal other) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +248,19 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public double ToDouble() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classInstance.Invoke("ToDouble");
+            retObjectToDouble = classInstance.Invoke("ToDouble");
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +268,19 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public int CompareTo(SqlDecimal value) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +288,19 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public int CompareTo(NetObject value) throws Throwable, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", value == null ? null : value.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +308,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean Equals(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            JCObject objEquals = (JCObject)classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objEquals = (JCObject)retObjectEquals;
             return new SqlBoolean(objEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +323,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean GreaterThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new SqlBoolean(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,10 +338,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean GreaterThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new SqlBoolean(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,10 +353,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean LessThan(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new SqlBoolean(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,10 +368,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean LessThanOrEqual(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new SqlBoolean(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,10 +383,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlBoolean NotEquals(SqlDecimal x, SqlDecimal y) throws Throwable, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEquals = null;
         try {
-            JCObject objNotEquals = (JCObject)classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectNotEquals = classType.Invoke("NotEquals", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objNotEquals = (JCObject)retObjectNotEquals;
             return new SqlBoolean(objNotEquals);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEquals != null ? retObjectNotEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,10 +398,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlBoolean ToSqlBoolean() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlBoolean = null;
         try {
-            JCObject objToSqlBoolean = (JCObject)classInstance.Invoke("ToSqlBoolean");
+            retObjectToSqlBoolean = classInstance.Invoke("ToSqlBoolean");
+            JCObject objToSqlBoolean = (JCObject)retObjectToSqlBoolean;
             return new SqlBoolean(objToSqlBoolean);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlBoolean != null ? retObjectToSqlBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,10 +413,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlByte ToSqlByte() throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlByte = null;
         try {
-            JCObject objToSqlByte = (JCObject)classInstance.Invoke("ToSqlByte");
+            retObjectToSqlByte = classInstance.Invoke("ToSqlByte");
+            JCObject objToSqlByte = (JCObject)retObjectToSqlByte;
             return new SqlByte(objToSqlByte);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlByte != null ? retObjectToSqlByte.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,10 +428,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Abs(SqlDecimal n) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
         try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", n == null ? null : n.getJCOInstance());
+            retObjectAbs = classType.Invoke("Abs", n == null ? null : n.getJCOInstance());
+            JCObject objAbs = (JCObject)retObjectAbs;
             return new SqlDecimal(objAbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,10 +443,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Add(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new SqlDecimal(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -384,10 +458,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal AdjustScale(SqlDecimal n, int digits, boolean fRound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdjustScale = null;
         try {
-            JCObject objAdjustScale = (JCObject)classType.Invoke("AdjustScale", n == null ? null : n.getJCOInstance(), digits, fRound);
+            retObjectAdjustScale = classType.Invoke("AdjustScale", n == null ? null : n.getJCOInstance(), digits, fRound);
+            JCObject objAdjustScale = (JCObject)retObjectAdjustScale;
             return new SqlDecimal(objAdjustScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdjustScale != null ? retObjectAdjustScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -395,10 +473,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Ceiling(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
         try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", n == null ? null : n.getJCOInstance());
+            retObjectCeiling = classType.Invoke("Ceiling", n == null ? null : n.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
             return new SqlDecimal(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,10 +488,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal ConvertToPrecScale(SqlDecimal n, int precision, int scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertToPrecScale = null;
         try {
-            JCObject objConvertToPrecScale = (JCObject)classType.Invoke("ConvertToPrecScale", n == null ? null : n.getJCOInstance(), precision, scale);
+            retObjectConvertToPrecScale = classType.Invoke("ConvertToPrecScale", n == null ? null : n.getJCOInstance(), precision, scale);
+            JCObject objConvertToPrecScale = (JCObject)retObjectConvertToPrecScale;
             return new SqlDecimal(objConvertToPrecScale);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertToPrecScale != null ? retObjectConvertToPrecScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,10 +503,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Divide(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new SqlDecimal(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,10 +518,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Floor(SqlDecimal n) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloor = null;
         try {
-            JCObject objFloor = (JCObject)classType.Invoke("Floor", n == null ? null : n.getJCOInstance());
+            retObjectFloor = classType.Invoke("Floor", n == null ? null : n.getJCOInstance());
+            JCObject objFloor = (JCObject)retObjectFloor;
             return new SqlDecimal(objFloor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloor != null ? retObjectFloor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,10 +533,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Multiply(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OverflowException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new SqlDecimal(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,10 +548,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new SqlDecimal(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,10 +563,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Power(SqlDecimal n, double exp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.NotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTruncateException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPower = null;
         try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", n == null ? null : n.getJCOInstance(), exp);
+            retObjectPower = classType.Invoke("Power", n == null ? null : n.getJCOInstance(), exp);
+            JCObject objPower = (JCObject)retObjectPower;
             return new SqlDecimal(objPower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPower != null ? retObjectPower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,10 +578,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Round(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", n == null ? null : n.getJCOInstance(), position);
+            retObjectRound = classType.Invoke("Round", n == null ? null : n.getJCOInstance(), position);
+            JCObject objRound = (JCObject)retObjectRound;
             return new SqlDecimal(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,10 +593,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Subtract(SqlDecimal x, SqlDecimal y) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlTypeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new SqlDecimal(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,10 +608,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlDecimal Truncate(SqlDecimal n, int position) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
         try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", n == null ? null : n.getJCOInstance(), position);
+            retObjectTruncate = classType.Invoke("Truncate", n == null ? null : n.getJCOInstance(), position);
+            JCObject objTruncate = (JCObject)retObjectTruncate;
             return new SqlDecimal(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -505,10 +623,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlDouble ToSqlDouble() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.PlatformNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlDouble = null;
         try {
-            JCObject objToSqlDouble = (JCObject)classInstance.Invoke("ToSqlDouble");
+            retObjectToSqlDouble = classInstance.Invoke("ToSqlDouble");
+            JCObject objToSqlDouble = (JCObject)retObjectToSqlDouble;
             return new SqlDouble(objToSqlDouble);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlDouble != null ? retObjectToSqlDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,10 +638,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlInt16 ToSqlInt16() throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt16 = null;
         try {
-            JCObject objToSqlInt16 = (JCObject)classInstance.Invoke("ToSqlInt16");
+            retObjectToSqlInt16 = classInstance.Invoke("ToSqlInt16");
+            JCObject objToSqlInt16 = (JCObject)retObjectToSqlInt16;
             return new SqlInt16(objToSqlInt16);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt16 != null ? retObjectToSqlInt16.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -527,10 +653,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static SqlInt32 Sign(SqlDecimal n) throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSign = null;
         try {
-            JCObject objSign = (JCObject)classType.Invoke("Sign", n == null ? null : n.getJCOInstance());
+            retObjectSign = classType.Invoke("Sign", n == null ? null : n.getJCOInstance());
+            JCObject objSign = (JCObject)retObjectSign;
             return new SqlInt32(objSign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSign != null ? retObjectSign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -538,10 +668,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlInt32 ToSqlInt32() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt32 = null;
         try {
-            JCObject objToSqlInt32 = (JCObject)classInstance.Invoke("ToSqlInt32");
+            retObjectToSqlInt32 = classInstance.Invoke("ToSqlInt32");
+            JCObject objToSqlInt32 = (JCObject)retObjectToSqlInt32;
             return new SqlInt32(objToSqlInt32);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt32 != null ? retObjectToSqlInt32.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,10 +683,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlInt64 ToSqlInt64() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlTruncateException, system.OverflowException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.DivideByZeroException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlInt64 = null;
         try {
-            JCObject objToSqlInt64 = (JCObject)classInstance.Invoke("ToSqlInt64");
+            retObjectToSqlInt64 = classInstance.Invoke("ToSqlInt64");
+            JCObject objToSqlInt64 = (JCObject)retObjectToSqlInt64;
             return new SqlInt64(objToSqlInt64);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlInt64 != null ? retObjectToSqlInt64.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -560,10 +698,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlMoney ToSqlMoney() throws Throwable, system.ArgumentException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.data.sqltypes.SqlTruncateException, system.DivideByZeroException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlMoney = null;
         try {
-            JCObject objToSqlMoney = (JCObject)classInstance.Invoke("ToSqlMoney");
+            retObjectToSqlMoney = classInstance.Invoke("ToSqlMoney");
+            JCObject objToSqlMoney = (JCObject)retObjectToSqlMoney;
             return new SqlMoney(objToSqlMoney);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlMoney != null ? retObjectToSqlMoney.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -571,10 +713,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlSingle ToSqlSingle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.NotSupportedException, system.PlatformNotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlSingle = null;
         try {
-            JCObject objToSqlSingle = (JCObject)classInstance.Invoke("ToSqlSingle");
+            retObjectToSqlSingle = classInstance.Invoke("ToSqlSingle");
+            JCObject objToSqlSingle = (JCObject)retObjectToSqlSingle;
             return new SqlSingle(objToSqlSingle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlSingle != null ? retObjectToSqlSingle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -582,10 +728,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public SqlString ToSqlString() throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToSqlString = null;
         try {
-            JCObject objToSqlString = (JCObject)classInstance.Invoke("ToSqlString");
+            retObjectToSqlString = classInstance.Invoke("ToSqlString");
+            JCObject objToSqlString = (JCObject)retObjectToSqlString;
             return new SqlString(objToSqlString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToSqlString != null ? retObjectToSqlString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,10 +743,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public static XmlQualifiedName GetXsdType(XmlSchemaSet schemaSet) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXsdType = null;
         try {
-            JCObject objGetXsdType = (JCObject)classType.Invoke("GetXsdType", schemaSet == null ? null : schemaSet.getJCOInstance());
+            retObjectGetXsdType = classType.Invoke("GetXsdType", schemaSet == null ? null : schemaSet.getJCOInstance());
+            JCObject objGetXsdType = (JCObject)retObjectGetXsdType;
             return new XmlQualifiedName(objGetXsdType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetXsdType != null ? retObjectGetXsdType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,7 +762,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -617,7 +771,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -626,7 +780,7 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -635,9 +789,13 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
     
     public boolean getIsNull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Get("IsNull");
+            retObjectIsNull = classInstance.Get("IsNull");
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -645,9 +803,13 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public boolean getIsPositive() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPositive = null;
         try {
-            return (boolean)classInstance.Get("IsPositive");
+            retObjectIsPositive = classInstance.Get("IsPositive");
+            return (boolean)retObjectIsPositive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPositive != null ? retObjectIsPositive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,9 +817,13 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public byte getPrecision() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrecision = null;
         try {
-            return (byte)classInstance.Get("Precision");
+            retObjectPrecision = classInstance.Get("Precision");
+            return (byte)retObjectPrecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectPrecision != null ? retObjectPrecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -665,9 +831,13 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public byte getScale() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScale = null;
         try {
-            return (byte)classInstance.Get("Scale");
+            retObjectScale = classInstance.Get("Scale");
+            return (byte)retObjectScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectScale != null ? retObjectScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -675,10 +845,12 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public byte[] getBinData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BinData");
+            retObjectBinData = classInstance.Get("BinData");
+            JCObject resultingObjects = (JCObject)retObjectBinData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -687,6 +859,8 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 				resultingArray[indexBinData] = (byte)resultingArrayList.get(indexBinData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBinData != null ? retObjectBinData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -694,10 +868,12 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public int[] getData() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Data");
+            retObjectData = classInstance.Get("Data");
+            JCObject resultingObjects = (JCObject)retObjectData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -706,6 +882,8 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 				resultingArray[indexData] = (int)resultingArrayList.get(indexData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectData != null ? retObjectData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -713,10 +891,14 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
 
     public Decimal getValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            JCObject val = (JCObject)retObjectValue;
             return new Decimal(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

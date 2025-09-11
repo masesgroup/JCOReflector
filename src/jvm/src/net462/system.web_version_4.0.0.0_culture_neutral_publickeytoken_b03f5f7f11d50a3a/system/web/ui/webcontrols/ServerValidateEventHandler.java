@@ -167,8 +167,8 @@ public class ServerValidateEventHandler extends JCVoidDelegate implements IJCVoi
         } else if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
         } else
-            throw new UnsupportedOperationException(
-                    String.format("Class %s is not supported.", instance.getClass().getTypeName()));
+            throw new java.lang.UnsupportedOperationException(
+                    java.lang.String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
     protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
@@ -181,7 +181,7 @@ public class ServerValidateEventHandler extends JCVoidDelegate implements IJCVoi
 
     public void DynamicInvoke(NetObject source, ServerValidateEventArgs args) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DynamicInvoke", source == null ? null : source.getJCOInstance(), args == null ? null : args.getJCOInstance());
         } catch (JCNativeException jcne) {

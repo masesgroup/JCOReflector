@@ -162,10 +162,14 @@ public class MenuScrollingVisibilityConverter extends NetObject  {
     
     public NetObject Convert(NetObject[] values, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvert = classInstance.Invoke("Convert", toObjectFromArray(values), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new NetObject(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,16 +177,20 @@ public class MenuScrollingVisibilityConverter extends NetObject  {
 
     public NetObject[] ConvertBack(NetObject value, NetType[] targetTypes, NetObject parameter, CultureInfo culture) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertBack = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvertBack = classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectConvertBack;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertBack != null ? retObjectConvertBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

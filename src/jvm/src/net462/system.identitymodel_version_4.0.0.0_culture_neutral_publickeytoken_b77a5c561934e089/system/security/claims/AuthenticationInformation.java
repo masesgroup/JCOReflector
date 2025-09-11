@@ -165,9 +165,13 @@ public class AuthenticationInformation extends NetObject  {
     
     public java.lang.String getAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("Address");
+            retObjectAddress = classInstance.Get("Address");
+            return (java.lang.String)retObjectAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAddress != null ? retObjectAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class AuthenticationInformation extends NetObject  {
 
     public void setAddress(java.lang.String Address) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Address", Address);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class AuthenticationInformation extends NetObject  {
 
     public java.lang.String getDnsName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDnsName = null;
         try {
-            return (java.lang.String)classInstance.Get("DnsName");
+            retObjectDnsName = classInstance.Get("DnsName");
+            return (java.lang.String)retObjectDnsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDnsName != null ? retObjectDnsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class AuthenticationInformation extends NetObject  {
 
     public void setDnsName(java.lang.String DnsName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DnsName", DnsName);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class AuthenticationInformation extends NetObject  {
 
     public java.lang.String getSession() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSession = null;
         try {
-            return (java.lang.String)classInstance.Get("Session");
+            retObjectSession = classInstance.Get("Session");
+            return (java.lang.String)retObjectSession;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSession != null ? retObjectSession.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class AuthenticationInformation extends NetObject  {
 
     public void setSession(java.lang.String Session) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Session", Session);
         } catch (JCNativeException jcne) {

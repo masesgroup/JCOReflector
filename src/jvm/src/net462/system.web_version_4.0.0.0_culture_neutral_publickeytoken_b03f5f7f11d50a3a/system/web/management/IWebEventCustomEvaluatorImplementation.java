@@ -144,9 +144,13 @@ public class IWebEventCustomEvaluatorImplementation extends NetObject implements
     
     public boolean CanFire(WebBaseEvent raisedEvent, RuleFiringRecord record) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanFire = null;
         try {
-            return (boolean)classInstance.Invoke("CanFire", raisedEvent == null ? null : raisedEvent.getJCOInstance(), record == null ? null : record.getJCOInstance());
+            retObjectCanFire = classInstance.Invoke("CanFire", raisedEvent == null ? null : raisedEvent.getJCOInstance(), record == null ? null : record.getJCOInstance());
+            return (boolean)retObjectCanFire;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanFire != null ? retObjectCanFire.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

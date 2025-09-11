@@ -155,10 +155,14 @@ public class PresentationTraceSources extends NetObject  {
     
     public static PresentationTraceLevel GetTraceLevel(NetObject element) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetTraceLevel = null;
         try {
-            JCObject objGetTraceLevel = (JCObject)classType.Invoke("GetTraceLevel", element == null ? null : element.getJCOInstance());
+            retObjectGetTraceLevel = classType.Invoke("GetTraceLevel", element == null ? null : element.getJCOInstance());
+            JCObject objGetTraceLevel = (JCObject)retObjectGetTraceLevel;
             return new PresentationTraceLevel(objGetTraceLevel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTraceLevel != null ? retObjectGetTraceLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class PresentationTraceSources extends NetObject  {
 
     public static void Refresh() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -176,7 +180,7 @@ public class PresentationTraceSources extends NetObject  {
 
     public static void SetTraceLevel(NetObject element, PresentationTraceLevel traceLevel) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetTraceLevel", element == null ? null : element.getJCOInstance(), traceLevel == null ? null : traceLevel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,10 +194,14 @@ public class PresentationTraceSources extends NetObject  {
     
     public static TraceSource getAnimationSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnimationSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnimationSource");
+            retObjectAnimationSource = classType.Get("AnimationSource");
+            JCObject val = (JCObject)retObjectAnimationSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnimationSource != null ? retObjectAnimationSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getDataBindingSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDataBindingSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("DataBindingSource");
+            retObjectDataBindingSource = classType.Get("DataBindingSource");
+            JCObject val = (JCObject)retObjectDataBindingSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataBindingSource != null ? retObjectDataBindingSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getDependencyPropertySource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDependencyPropertySource = null;
         try {
-            JCObject val = (JCObject)classType.Get("DependencyPropertySource");
+            retObjectDependencyPropertySource = classType.Get("DependencyPropertySource");
+            JCObject val = (JCObject)retObjectDependencyPropertySource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependencyPropertySource != null ? retObjectDependencyPropertySource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getDocumentsSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDocumentsSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("DocumentsSource");
+            retObjectDocumentsSource = classType.Get("DocumentsSource");
+            JCObject val = (JCObject)retObjectDocumentsSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocumentsSource != null ? retObjectDocumentsSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +254,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getFreezableSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFreezableSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("FreezableSource");
+            retObjectFreezableSource = classType.Get("FreezableSource");
+            JCObject val = (JCObject)retObjectFreezableSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFreezableSource != null ? retObjectFreezableSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +269,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getHwndHostSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHwndHostSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("HwndHostSource");
+            retObjectHwndHostSource = classType.Get("HwndHostSource");
+            JCObject val = (JCObject)retObjectHwndHostSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHwndHostSource != null ? retObjectHwndHostSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +284,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getMarkupSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMarkupSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("MarkupSource");
+            retObjectMarkupSource = classType.Get("MarkupSource");
+            JCObject val = (JCObject)retObjectMarkupSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMarkupSource != null ? retObjectMarkupSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +299,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getNameScopeSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNameScopeSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("NameScopeSource");
+            retObjectNameScopeSource = classType.Get("NameScopeSource");
+            JCObject val = (JCObject)retObjectNameScopeSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameScopeSource != null ? retObjectNameScopeSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +314,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getResourceDictionarySource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectResourceDictionarySource = null;
         try {
-            JCObject val = (JCObject)classType.Get("ResourceDictionarySource");
+            retObjectResourceDictionarySource = classType.Get("ResourceDictionarySource");
+            JCObject val = (JCObject)retObjectResourceDictionarySource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionarySource != null ? retObjectResourceDictionarySource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +329,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getRoutedEventSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRoutedEventSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("RoutedEventSource");
+            retObjectRoutedEventSource = classType.Get("RoutedEventSource");
+            JCObject val = (JCObject)retObjectRoutedEventSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRoutedEventSource != null ? retObjectRoutedEventSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +344,14 @@ public class PresentationTraceSources extends NetObject  {
 
     public static TraceSource getShellSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShellSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("ShellSource");
+            retObjectShellSource = classType.Get("ShellSource");
+            JCObject val = (JCObject)retObjectShellSource;
             return new TraceSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShellSource != null ? retObjectShellSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

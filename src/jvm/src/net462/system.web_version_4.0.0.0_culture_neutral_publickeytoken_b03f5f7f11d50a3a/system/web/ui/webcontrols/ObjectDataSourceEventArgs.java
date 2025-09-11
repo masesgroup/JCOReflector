@@ -170,10 +170,14 @@ public class ObjectDataSourceEventArgs extends EventArgs  {
     
     public NetObject getObjectInstance() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectObjectInstance = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ObjectInstance");
+            retObjectObjectInstance = classInstance.Get("ObjectInstance");
+            JCObject val = (JCObject)retObjectObjectInstance;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectObjectInstance != null ? retObjectObjectInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class ObjectDataSourceEventArgs extends EventArgs  {
 
     public void setObjectInstance(NetObject ObjectInstance) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ObjectInstance", ObjectInstance == null ? null : ObjectInstance.getJCOInstance());
         } catch (JCNativeException jcne) {

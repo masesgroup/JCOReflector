@@ -242,10 +242,14 @@ public class StackTrace extends NetObject  {
     
     public StackFrame GetFrame(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFrame = null;
         try {
-            JCObject objGetFrame = (JCObject)classInstance.Invoke("GetFrame", index);
+            retObjectGetFrame = classInstance.Invoke("GetFrame", index);
+            JCObject objGetFrame = (JCObject)retObjectGetFrame;
             return new StackFrame(objGetFrame);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrame != null ? retObjectGetFrame.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,16 +257,20 @@ public class StackTrace extends NetObject  {
 
     public StackFrame[] GetFrames() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFrames = null;
         try {
             ArrayList<StackFrame> resultingArrayList = new ArrayList<StackFrame>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFrames");
+            retObjectGetFrames = classInstance.Invoke("GetFrames");
+            JCObject resultingObjects = (JCObject)retObjectGetFrames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StackFrame(resultingObject));
             }
             StackFrame[] resultingArray = new StackFrame[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFrames != null ? retObjectGetFrames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +282,13 @@ public class StackTrace extends NetObject  {
     
     public int getFrameCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrameCount = null;
         try {
-            return (int)classInstance.Get("FrameCount");
+            retObjectFrameCount = classInstance.Get("FrameCount");
+            return (int)retObjectFrameCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectFrameCount != null ? retObjectFrameCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

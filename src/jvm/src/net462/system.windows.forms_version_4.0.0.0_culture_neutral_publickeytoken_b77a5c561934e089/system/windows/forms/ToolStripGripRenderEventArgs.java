@@ -175,10 +175,14 @@ public class ToolStripGripRenderEventArgs extends ToolStripRenderEventArgs  {
     
     public Rectangle getGripBounds() throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripBounds");
+            retObjectGripBounds = classInstance.Get("GripBounds");
+            JCObject val = (JCObject)retObjectGripBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripBounds != null ? retObjectGripBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class ToolStripGripRenderEventArgs extends ToolStripRenderEventArgs  {
 
     public ToolStripGripDisplayStyle getGripDisplayStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripDisplayStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripDisplayStyle");
+            retObjectGripDisplayStyle = classInstance.Get("GripDisplayStyle");
+            JCObject val = (JCObject)retObjectGripDisplayStyle;
             return new ToolStripGripDisplayStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripDisplayStyle != null ? retObjectGripDisplayStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class ToolStripGripRenderEventArgs extends ToolStripRenderEventArgs  {
 
     public ToolStripGripStyle getGripStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGripStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GripStyle");
+            retObjectGripStyle = classInstance.Get("GripStyle");
+            JCObject val = (JCObject)retObjectGripStyle;
             return new ToolStripGripStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGripStyle != null ? retObjectGripStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

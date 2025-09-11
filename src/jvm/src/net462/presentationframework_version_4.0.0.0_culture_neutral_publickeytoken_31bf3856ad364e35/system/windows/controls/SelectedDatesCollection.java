@@ -167,7 +167,7 @@ public class SelectedDatesCollection extends NetObjectEnumerable  {
     
     public void AddRange(DateTime start, DateTime end) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddRange", start == null ? null : start.getJCOInstance(), end == null ? null : end.getJCOInstance());
         } catch (JCNativeException jcne) {

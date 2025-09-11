@@ -165,9 +165,13 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
     
     public boolean ShouldSerializeExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeExtendedProtectionPolicy = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            retObjectShouldSerializeExtendedProtectionPolicy = classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            return (boolean)retObjectShouldSerializeExtendedProtectionPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeExtendedProtectionPolicy != null ? retObjectShouldSerializeExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public boolean ShouldSerializeListenBacklog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeListenBacklog = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeListenBacklog");
+            retObjectShouldSerializeListenBacklog = classInstance.Invoke("ShouldSerializeListenBacklog");
+            return (boolean)retObjectShouldSerializeListenBacklog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeListenBacklog != null ? retObjectShouldSerializeListenBacklog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
     
     public boolean getPortSharingEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPortSharingEnabled = null;
         try {
-            return (boolean)classInstance.Get("PortSharingEnabled");
+            retObjectPortSharingEnabled = classInstance.Get("PortSharingEnabled");
+            return (boolean)retObjectPortSharingEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPortSharingEnabled != null ? retObjectPortSharingEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +226,7 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public void setPortSharingEnabled(boolean PortSharingEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PortSharingEnabled", PortSharingEnabled);
         } catch (JCNativeException jcne) {
@@ -220,9 +236,13 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public boolean getTeredoEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTeredoEnabled = null;
         try {
-            return (boolean)classInstance.Get("TeredoEnabled");
+            retObjectTeredoEnabled = classInstance.Get("TeredoEnabled");
+            return (boolean)retObjectTeredoEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTeredoEnabled != null ? retObjectTeredoEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +250,7 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public void setTeredoEnabled(boolean TeredoEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TeredoEnabled", TeredoEnabled);
         } catch (JCNativeException jcne) {
@@ -240,9 +260,13 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public int getListenBacklog() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListenBacklog = null;
         try {
-            return (int)classInstance.Get("ListenBacklog");
+            retObjectListenBacklog = classInstance.Get("ListenBacklog");
+            return (int)retObjectListenBacklog;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectListenBacklog != null ? retObjectListenBacklog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +274,7 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public void setListenBacklog(int ListenBacklog) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListenBacklog", ListenBacklog);
         } catch (JCNativeException jcne) {
@@ -260,10 +284,14 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public ExtendedProtectionPolicy getExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProtectionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProtectionPolicy");
+            retObjectExtendedProtectionPolicy = classInstance.Get("ExtendedProtectionPolicy");
+            JCObject val = (JCObject)retObjectExtendedProtectionPolicy;
             return new ExtendedProtectionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProtectionPolicy != null ? retObjectExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +299,7 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public void setExtendedProtectionPolicy(ExtendedProtectionPolicy ExtendedProtectionPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedProtectionPolicy", ExtendedProtectionPolicy == null ? null : ExtendedProtectionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,10 +309,14 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
 
     public TcpConnectionPoolSettings getConnectionPoolSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnectionPoolSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionPoolSettings");
+            retObjectConnectionPoolSettings = classInstance.Get("ConnectionPoolSettings");
+            JCObject val = (JCObject)retObjectConnectionPoolSettings;
             return new TcpConnectionPoolSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConnectionPoolSettings != null ? retObjectConnectionPoolSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -205,9 +205,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
     
     public int getDestinationOrdinal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationOrdinal = null;
         try {
-            return (int)classInstance.Get("DestinationOrdinal");
+            retObjectDestinationOrdinal = classInstance.Get("DestinationOrdinal");
+            return (int)retObjectDestinationOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDestinationOrdinal != null ? retObjectDestinationOrdinal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +219,7 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public void setDestinationOrdinal(int DestinationOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationOrdinal", DestinationOrdinal);
         } catch (JCNativeException jcne) {
@@ -225,9 +229,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public int getSourceOrdinal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceOrdinal = null;
         try {
-            return (int)classInstance.Get("SourceOrdinal");
+            retObjectSourceOrdinal = classInstance.Get("SourceOrdinal");
+            return (int)retObjectSourceOrdinal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSourceOrdinal != null ? retObjectSourceOrdinal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +243,7 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public void setSourceOrdinal(int SourceOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceOrdinal", SourceOrdinal);
         } catch (JCNativeException jcne) {
@@ -245,9 +253,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public java.lang.String getDestinationColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDestinationColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("DestinationColumn");
+            retObjectDestinationColumn = classInstance.Get("DestinationColumn");
+            return (java.lang.String)retObjectDestinationColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDestinationColumn != null ? retObjectDestinationColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +267,7 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public void setDestinationColumn(java.lang.String DestinationColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DestinationColumn", DestinationColumn);
         } catch (JCNativeException jcne) {
@@ -265,9 +277,13 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public java.lang.String getSourceColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceColumn = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceColumn");
+            retObjectSourceColumn = classInstance.Get("SourceColumn");
+            return (java.lang.String)retObjectSourceColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceColumn != null ? retObjectSourceColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +291,7 @@ public class SqlBulkCopyColumnMapping extends NetObject  {
 
     public void setSourceColumn(java.lang.String SourceColumn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceColumn", SourceColumn);
         } catch (JCNativeException jcne) {

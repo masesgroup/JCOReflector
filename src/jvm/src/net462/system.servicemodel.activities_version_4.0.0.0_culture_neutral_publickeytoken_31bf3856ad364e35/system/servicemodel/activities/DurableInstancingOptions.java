@@ -160,10 +160,14 @@ public class DurableInstancingOptions extends NetObject  {
     
     public InstanceStore getInstanceStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceStore = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceStore");
+            retObjectInstanceStore = classInstance.Get("InstanceStore");
+            JCObject val = (JCObject)retObjectInstanceStore;
             return new InstanceStore(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceStore != null ? retObjectInstanceStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +175,7 @@ public class DurableInstancingOptions extends NetObject  {
 
     public void setInstanceStore(InstanceStore InstanceStore) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceStore", InstanceStore == null ? null : InstanceStore.getJCOInstance());
         } catch (JCNativeException jcne) {

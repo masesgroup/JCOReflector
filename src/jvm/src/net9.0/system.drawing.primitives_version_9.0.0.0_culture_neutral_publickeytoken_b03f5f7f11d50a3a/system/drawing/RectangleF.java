@@ -191,9 +191,13 @@ public class RectangleF extends ValueType  {
     
     public boolean Contains(Single x, Single y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +205,13 @@ public class RectangleF extends ValueType  {
 
     public boolean Contains(PointF pt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", pt == null ? null : pt.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", pt == null ? null : pt.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,9 +219,13 @@ public class RectangleF extends ValueType  {
 
     public boolean Contains(RectangleF rect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", rect == null ? null : rect.getJCOInstance());
+            retObjectContains = classInstance.Invoke("Contains", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,9 +233,13 @@ public class RectangleF extends ValueType  {
 
     public boolean Equals(RectangleF other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,9 +247,13 @@ public class RectangleF extends ValueType  {
 
     public boolean IntersectsWith(RectangleF rect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIntersectsWith = null;
         try {
-            return (boolean)classInstance.Invoke("IntersectsWith", rect == null ? null : rect.getJCOInstance());
+            retObjectIntersectsWith = classInstance.Invoke("IntersectsWith", rect == null ? null : rect.getJCOInstance());
+            return (boolean)retObjectIntersectsWith;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIntersectsWith != null ? retObjectIntersectsWith.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +261,14 @@ public class RectangleF extends ValueType  {
 
     public static RectangleF FromLTRB(Single left, Single top, Single right, Single bottom) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromLTRB = null;
         try {
-            JCObject objFromLTRB = (JCObject)classType.Invoke("FromLTRB", left == null ? null : left.getJCOInstance(), top == null ? null : top.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance());
+            retObjectFromLTRB = classType.Invoke("FromLTRB", left == null ? null : left.getJCOInstance(), top == null ? null : top.getJCOInstance(), right == null ? null : right.getJCOInstance(), bottom == null ? null : bottom.getJCOInstance());
+            JCObject objFromLTRB = (JCObject)retObjectFromLTRB;
             return new RectangleF(objFromLTRB);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromLTRB != null ? retObjectFromLTRB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +276,14 @@ public class RectangleF extends ValueType  {
 
     public static RectangleF Inflate(RectangleF rect, Single x, Single y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInflate = null;
         try {
-            JCObject objInflate = (JCObject)classType.Invoke("Inflate", rect == null ? null : rect.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectInflate = classType.Invoke("Inflate", rect == null ? null : rect.getJCOInstance(), x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objInflate = (JCObject)retObjectInflate;
             return new RectangleF(objInflate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInflate != null ? retObjectInflate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +291,14 @@ public class RectangleF extends ValueType  {
 
     public static RectangleF Intersect(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIntersect = null;
         try {
-            JCObject objIntersect = (JCObject)classType.Invoke("Intersect", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            retObjectIntersect = classType.Invoke("Intersect", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            JCObject objIntersect = (JCObject)retObjectIntersect;
             return new RectangleF(objIntersect);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIntersect != null ? retObjectIntersect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,10 +306,14 @@ public class RectangleF extends ValueType  {
 
     public static RectangleF Union(RectangleF a, RectangleF b) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnion = null;
         try {
-            JCObject objUnion = (JCObject)classType.Invoke("Union", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            retObjectUnion = classType.Invoke("Union", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance());
+            JCObject objUnion = (JCObject)retObjectUnion;
             return new RectangleF(objUnion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnion != null ? retObjectUnion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -285,10 +321,14 @@ public class RectangleF extends ValueType  {
 
     public Vector4 ToVector4() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToVector4 = null;
         try {
-            JCObject objToVector4 = (JCObject)classInstance.Invoke("ToVector4");
+            retObjectToVector4 = classInstance.Invoke("ToVector4");
+            JCObject objToVector4 = (JCObject)retObjectToVector4;
             return new Vector4(objToVector4);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToVector4 != null ? retObjectToVector4.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +336,7 @@ public class RectangleF extends ValueType  {
 
     public void Inflate(Single x, Single y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Inflate", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -306,7 +346,7 @@ public class RectangleF extends ValueType  {
 
     public void Inflate(SizeF size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Inflate", size == null ? null : size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -316,7 +356,7 @@ public class RectangleF extends ValueType  {
 
     public void Intersect(RectangleF rect) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Intersect", rect == null ? null : rect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -326,7 +366,7 @@ public class RectangleF extends ValueType  {
 
     public void Offset(Single x, Single y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Offset", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -336,7 +376,7 @@ public class RectangleF extends ValueType  {
 
     public void Offset(PointF pos) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Offset", pos == null ? null : pos.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,9 +390,13 @@ public class RectangleF extends ValueType  {
     
     public boolean getIsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsEmpty");
+            retObjectIsEmpty = classInstance.Get("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +404,14 @@ public class RectangleF extends ValueType  {
 
     public Single getBottom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBottom = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bottom");
+            retObjectBottom = classInstance.Get("Bottom");
+            JCObject val = (JCObject)retObjectBottom;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBottom != null ? retObjectBottom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +419,14 @@ public class RectangleF extends ValueType  {
 
     public Single getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            JCObject val = (JCObject)retObjectHeight;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +434,7 @@ public class RectangleF extends ValueType  {
 
     public void setHeight(Single Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height == null ? null : Height.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,10 +444,14 @@ public class RectangleF extends ValueType  {
 
     public Single getLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeft = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Left");
+            retObjectLeft = classInstance.Get("Left");
+            JCObject val = (JCObject)retObjectLeft;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeft != null ? retObjectLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -403,10 +459,14 @@ public class RectangleF extends ValueType  {
 
     public Single getRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRight = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Right");
+            retObjectRight = classInstance.Get("Right");
+            JCObject val = (JCObject)retObjectRight;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRight != null ? retObjectRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,10 +474,14 @@ public class RectangleF extends ValueType  {
 
     public Single getTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTop = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Top");
+            retObjectTop = classInstance.Get("Top");
+            JCObject val = (JCObject)retObjectTop;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTop != null ? retObjectTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,10 +489,14 @@ public class RectangleF extends ValueType  {
 
     public Single getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            JCObject val = (JCObject)retObjectWidth;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +504,7 @@ public class RectangleF extends ValueType  {
 
     public void setWidth(Single Width) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width == null ? null : Width.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -446,10 +514,14 @@ public class RectangleF extends ValueType  {
 
     public Single getX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectX = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("X");
+            retObjectX = classInstance.Get("X");
+            JCObject val = (JCObject)retObjectX;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectX != null ? retObjectX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,7 +529,7 @@ public class RectangleF extends ValueType  {
 
     public void setX(Single X) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("X", X == null ? null : X.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -467,10 +539,14 @@ public class RectangleF extends ValueType  {
 
     public Single getY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectY = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Y");
+            retObjectY = classInstance.Get("Y");
+            JCObject val = (JCObject)retObjectY;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectY != null ? retObjectY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +554,7 @@ public class RectangleF extends ValueType  {
 
     public void setY(Single Y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Y", Y == null ? null : Y.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -488,10 +564,14 @@ public class RectangleF extends ValueType  {
 
     public PointF getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new PointF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,7 +579,7 @@ public class RectangleF extends ValueType  {
 
     public void setLocation(PointF Location) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -509,10 +589,14 @@ public class RectangleF extends ValueType  {
 
     public SizeF getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new SizeF(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,7 +604,7 @@ public class RectangleF extends ValueType  {
 
     public void setSize(SizeF Size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size == null ? null : Size.getJCOInstance());
         } catch (JCNativeException jcne) {

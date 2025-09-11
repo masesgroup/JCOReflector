@@ -182,9 +182,13 @@ public class NFloat extends ValueType  {
     
     public boolean Equals(NFloat other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +196,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsEvenInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEvenInteger = null;
         try {
-            return (boolean)classType.Invoke("IsEvenInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsEvenInteger = classType.Invoke("IsEvenInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsEvenInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEvenInteger != null ? retObjectIsEvenInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +210,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsFinite(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFinite = null;
         try {
-            return (boolean)classType.Invoke("IsFinite", value == null ? null : value.getJCOInstance());
+            retObjectIsFinite = classType.Invoke("IsFinite", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsFinite;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsFinite != null ? retObjectIsFinite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +224,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsInfinity(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsInfinity = classType.Invoke("IsInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInfinity != null ? retObjectIsInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +238,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsInteger = null;
         try {
-            return (boolean)classType.Invoke("IsInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsInteger = classType.Invoke("IsInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsInteger != null ? retObjectIsInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +252,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsNaN(NFloat value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNaN = null;
         try {
-            return (boolean)classType.Invoke("IsNaN", value == null ? null : value.getJCOInstance());
+            retObjectIsNaN = classType.Invoke("IsNaN", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNaN;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNaN != null ? retObjectIsNaN.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +266,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsNegative(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNegative = null;
         try {
-            return (boolean)classType.Invoke("IsNegative", value == null ? null : value.getJCOInstance());
+            retObjectIsNegative = classType.Invoke("IsNegative", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNegative;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNegative != null ? retObjectIsNegative.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +280,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsNegativeInfinity(NFloat value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNegativeInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsNegativeInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsNegativeInfinity = classType.Invoke("IsNegativeInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNegativeInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNegativeInfinity != null ? retObjectIsNegativeInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +294,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsNormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsNormal = null;
         try {
-            return (boolean)classType.Invoke("IsNormal", value == null ? null : value.getJCOInstance());
+            retObjectIsNormal = classType.Invoke("IsNormal", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsNormal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNormal != null ? retObjectIsNormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +308,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsOddInteger(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOddInteger = null;
         try {
-            return (boolean)classType.Invoke("IsOddInteger", value == null ? null : value.getJCOInstance());
+            retObjectIsOddInteger = classType.Invoke("IsOddInteger", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsOddInteger;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsOddInteger != null ? retObjectIsOddInteger.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +322,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsPositive(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPositive = null;
         try {
-            return (boolean)classType.Invoke("IsPositive", value == null ? null : value.getJCOInstance());
+            retObjectIsPositive = classType.Invoke("IsPositive", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPositive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPositive != null ? retObjectIsPositive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,9 +336,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsPositiveInfinity(NFloat value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPositiveInfinity = null;
         try {
-            return (boolean)classType.Invoke("IsPositiveInfinity", value == null ? null : value.getJCOInstance());
+            retObjectIsPositiveInfinity = classType.Invoke("IsPositiveInfinity", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPositiveInfinity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPositiveInfinity != null ? retObjectIsPositiveInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,9 +350,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsPow2(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPow2 = null;
         try {
-            return (boolean)classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            retObjectIsPow2 = classType.Invoke("IsPow2", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsPow2;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsPow2 != null ? retObjectIsPow2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,9 +364,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsRealNumber(NFloat value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsRealNumber = null;
         try {
-            return (boolean)classType.Invoke("IsRealNumber", value == null ? null : value.getJCOInstance());
+            retObjectIsRealNumber = classType.Invoke("IsRealNumber", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsRealNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsRealNumber != null ? retObjectIsRealNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +378,13 @@ public class NFloat extends ValueType  {
 
     public static boolean IsSubnormal(NFloat value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSubnormal = null;
         try {
-            return (boolean)classType.Invoke("IsSubnormal", value == null ? null : value.getJCOInstance());
+            retObjectIsSubnormal = classType.Invoke("IsSubnormal", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectIsSubnormal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSubnormal != null ? retObjectIsSubnormal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +392,13 @@ public class NFloat extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, NumberStyles style, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +406,13 @@ public class NFloat extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, IFormatProvider provider, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +420,13 @@ public class NFloat extends ValueType  {
 
     public static boolean TryParse(java.lang.String s, JCORefOut<NFloat> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", s, result.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,9 +434,19 @@ public class NFloat extends ValueType  {
 
     public int CompareTo(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", obj == null ? null : obj.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,9 +454,19 @@ public class NFloat extends ValueType  {
 
     public int CompareTo(NFloat other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareTo = null;
         try {
-            return (int)classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            retObjectCompareTo = classInstance.Invoke("CompareTo", other == null ? null : other.getJCOInstance());
+            return (int)retObjectCompareTo;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareToNumber = (java.lang.Number)retObjectCompareTo;
+                return retObjectCompareToNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareTo != null ? retObjectCompareTo.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,9 +474,19 @@ public class NFloat extends ValueType  {
 
     public static int ILogB(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectILogB = null;
         try {
-            return (int)classType.Invoke("ILogB", x == null ? null : x.getJCOInstance());
+            retObjectILogB = classType.Invoke("ILogB", x == null ? null : x.getJCOInstance());
+            return (int)retObjectILogB;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectILogBNumber = (java.lang.Number)retObjectILogB;
+                return retObjectILogBNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectILogB != null ? retObjectILogB.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,9 +494,19 @@ public class NFloat extends ValueType  {
 
     public static int Sign(NFloat value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSign = null;
         try {
-            return (int)classType.Invoke("Sign", value == null ? null : value.getJCOInstance());
+            retObjectSign = classType.Invoke("Sign", value == null ? null : value.getJCOInstance());
+            return (int)retObjectSign;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectSignNumber = (java.lang.Number)retObjectSign;
+                return retObjectSignNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectSign != null ? retObjectSign.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,10 +514,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Abs(NFloat value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAbs = null;
         try {
-            JCObject objAbs = (JCObject)classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            retObjectAbs = classType.Invoke("Abs", value == null ? null : value.getJCOInstance());
+            JCObject objAbs = (JCObject)retObjectAbs;
             return new NFloat(objAbs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAbs != null ? retObjectAbs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -413,10 +529,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Acos(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcos = null;
         try {
-            JCObject objAcos = (JCObject)classType.Invoke("Acos", x == null ? null : x.getJCOInstance());
+            retObjectAcos = classType.Invoke("Acos", x == null ? null : x.getJCOInstance());
+            JCObject objAcos = (JCObject)retObjectAcos;
             return new NFloat(objAcos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcos != null ? retObjectAcos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +544,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Acosh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcosh = null;
         try {
-            JCObject objAcosh = (JCObject)classType.Invoke("Acosh", x == null ? null : x.getJCOInstance());
+            retObjectAcosh = classType.Invoke("Acosh", x == null ? null : x.getJCOInstance());
+            JCObject objAcosh = (JCObject)retObjectAcosh;
             return new NFloat(objAcosh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcosh != null ? retObjectAcosh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +559,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat AcosPi(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAcosPi = null;
         try {
-            JCObject objAcosPi = (JCObject)classType.Invoke("AcosPi", x == null ? null : x.getJCOInstance());
+            retObjectAcosPi = classType.Invoke("AcosPi", x == null ? null : x.getJCOInstance());
+            JCObject objAcosPi = (JCObject)retObjectAcosPi;
             return new NFloat(objAcosPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcosPi != null ? retObjectAcosPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +574,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Asin(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsin = null;
         try {
-            JCObject objAsin = (JCObject)classType.Invoke("Asin", x == null ? null : x.getJCOInstance());
+            retObjectAsin = classType.Invoke("Asin", x == null ? null : x.getJCOInstance());
+            JCObject objAsin = (JCObject)retObjectAsin;
             return new NFloat(objAsin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsin != null ? retObjectAsin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +589,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Asinh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsinh = null;
         try {
-            JCObject objAsinh = (JCObject)classType.Invoke("Asinh", x == null ? null : x.getJCOInstance());
+            retObjectAsinh = classType.Invoke("Asinh", x == null ? null : x.getJCOInstance());
+            JCObject objAsinh = (JCObject)retObjectAsinh;
             return new NFloat(objAsinh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsinh != null ? retObjectAsinh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,10 +604,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat AsinPi(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsinPi = null;
         try {
-            JCObject objAsinPi = (JCObject)classType.Invoke("AsinPi", x == null ? null : x.getJCOInstance());
+            retObjectAsinPi = classType.Invoke("AsinPi", x == null ? null : x.getJCOInstance());
+            JCObject objAsinPi = (JCObject)retObjectAsinPi;
             return new NFloat(objAsinPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAsinPi != null ? retObjectAsinPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,10 +619,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Atan(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan = null;
         try {
-            JCObject objAtan = (JCObject)classType.Invoke("Atan", x == null ? null : x.getJCOInstance());
+            retObjectAtan = classType.Invoke("Atan", x == null ? null : x.getJCOInstance());
+            JCObject objAtan = (JCObject)retObjectAtan;
             return new NFloat(objAtan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan != null ? retObjectAtan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,10 +634,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Atan2(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan2 = null;
         try {
-            JCObject objAtan2 = (JCObject)classType.Invoke("Atan2", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            retObjectAtan2 = classType.Invoke("Atan2", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            JCObject objAtan2 = (JCObject)retObjectAtan2;
             return new NFloat(objAtan2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan2 != null ? retObjectAtan2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,10 +649,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Atan2Pi(NFloat y, NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtan2Pi = null;
         try {
-            JCObject objAtan2Pi = (JCObject)classType.Invoke("Atan2Pi", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            retObjectAtan2Pi = classType.Invoke("Atan2Pi", y == null ? null : y.getJCOInstance(), x == null ? null : x.getJCOInstance());
+            JCObject objAtan2Pi = (JCObject)retObjectAtan2Pi;
             return new NFloat(objAtan2Pi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtan2Pi != null ? retObjectAtan2Pi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -512,10 +664,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Atanh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtanh = null;
         try {
-            JCObject objAtanh = (JCObject)classType.Invoke("Atanh", x == null ? null : x.getJCOInstance());
+            retObjectAtanh = classType.Invoke("Atanh", x == null ? null : x.getJCOInstance());
+            JCObject objAtanh = (JCObject)retObjectAtanh;
             return new NFloat(objAtanh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtanh != null ? retObjectAtanh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -523,10 +679,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat AtanPi(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAtanPi = null;
         try {
-            JCObject objAtanPi = (JCObject)classType.Invoke("AtanPi", x == null ? null : x.getJCOInstance());
+            retObjectAtanPi = classType.Invoke("AtanPi", x == null ? null : x.getJCOInstance());
+            JCObject objAtanPi = (JCObject)retObjectAtanPi;
             return new NFloat(objAtanPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAtanPi != null ? retObjectAtanPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,10 +694,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat BitDecrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitDecrement = null;
         try {
-            JCObject objBitDecrement = (JCObject)classType.Invoke("BitDecrement", x == null ? null : x.getJCOInstance());
+            retObjectBitDecrement = classType.Invoke("BitDecrement", x == null ? null : x.getJCOInstance());
+            JCObject objBitDecrement = (JCObject)retObjectBitDecrement;
             return new NFloat(objBitDecrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitDecrement != null ? retObjectBitDecrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -545,10 +709,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat BitIncrement(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBitIncrement = null;
         try {
-            JCObject objBitIncrement = (JCObject)classType.Invoke("BitIncrement", x == null ? null : x.getJCOInstance());
+            retObjectBitIncrement = classType.Invoke("BitIncrement", x == null ? null : x.getJCOInstance());
+            JCObject objBitIncrement = (JCObject)retObjectBitIncrement;
             return new NFloat(objBitIncrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitIncrement != null ? retObjectBitIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -556,10 +724,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Cbrt(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCbrt = null;
         try {
-            JCObject objCbrt = (JCObject)classType.Invoke("Cbrt", x == null ? null : x.getJCOInstance());
+            retObjectCbrt = classType.Invoke("Cbrt", x == null ? null : x.getJCOInstance());
+            JCObject objCbrt = (JCObject)retObjectCbrt;
             return new NFloat(objCbrt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCbrt != null ? retObjectCbrt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,10 +739,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Ceiling(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCeiling = null;
         try {
-            JCObject objCeiling = (JCObject)classType.Invoke("Ceiling", x == null ? null : x.getJCOInstance());
+            retObjectCeiling = classType.Invoke("Ceiling", x == null ? null : x.getJCOInstance());
+            JCObject objCeiling = (JCObject)retObjectCeiling;
             return new NFloat(objCeiling);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCeiling != null ? retObjectCeiling.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -578,10 +754,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Clamp(NFloat value, NFloat min, NFloat max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClamp = null;
         try {
-            JCObject objClamp = (JCObject)classType.Invoke("Clamp", value == null ? null : value.getJCOInstance(), min == null ? null : min.getJCOInstance(), max == null ? null : max.getJCOInstance());
+            retObjectClamp = classType.Invoke("Clamp", value == null ? null : value.getJCOInstance(), min == null ? null : min.getJCOInstance(), max == null ? null : max.getJCOInstance());
+            JCObject objClamp = (JCObject)retObjectClamp;
             return new NFloat(objClamp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClamp != null ? retObjectClamp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -589,10 +769,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat CopySign(NFloat value, NFloat sign) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopySign = null;
         try {
-            JCObject objCopySign = (JCObject)classType.Invoke("CopySign", value == null ? null : value.getJCOInstance(), sign == null ? null : sign.getJCOInstance());
+            retObjectCopySign = classType.Invoke("CopySign", value == null ? null : value.getJCOInstance(), sign == null ? null : sign.getJCOInstance());
+            JCObject objCopySign = (JCObject)retObjectCopySign;
             return new NFloat(objCopySign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopySign != null ? retObjectCopySign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -600,10 +784,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Cos(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCos = null;
         try {
-            JCObject objCos = (JCObject)classType.Invoke("Cos", x == null ? null : x.getJCOInstance());
+            retObjectCos = classType.Invoke("Cos", x == null ? null : x.getJCOInstance());
+            JCObject objCos = (JCObject)retObjectCos;
             return new NFloat(objCos);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCos != null ? retObjectCos.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,10 +799,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Cosh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCosh = null;
         try {
-            JCObject objCosh = (JCObject)classType.Invoke("Cosh", x == null ? null : x.getJCOInstance());
+            retObjectCosh = classType.Invoke("Cosh", x == null ? null : x.getJCOInstance());
+            JCObject objCosh = (JCObject)retObjectCosh;
             return new NFloat(objCosh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCosh != null ? retObjectCosh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,10 +814,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat CosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCosPi = null;
         try {
-            JCObject objCosPi = (JCObject)classType.Invoke("CosPi", x == null ? null : x.getJCOInstance());
+            retObjectCosPi = classType.Invoke("CosPi", x == null ? null : x.getJCOInstance());
+            JCObject objCosPi = (JCObject)retObjectCosPi;
             return new NFloat(objCosPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCosPi != null ? retObjectCosPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -633,10 +829,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat DegreesToRadians(NFloat degrees) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDegreesToRadians = null;
         try {
-            JCObject objDegreesToRadians = (JCObject)classType.Invoke("DegreesToRadians", degrees == null ? null : degrees.getJCOInstance());
+            retObjectDegreesToRadians = classType.Invoke("DegreesToRadians", degrees == null ? null : degrees.getJCOInstance());
+            JCObject objDegreesToRadians = (JCObject)retObjectDegreesToRadians;
             return new NFloat(objDegreesToRadians);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDegreesToRadians != null ? retObjectDegreesToRadians.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -644,10 +844,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Exp(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp = null;
         try {
-            JCObject objExp = (JCObject)classType.Invoke("Exp", x == null ? null : x.getJCOInstance());
+            retObjectExp = classType.Invoke("Exp", x == null ? null : x.getJCOInstance());
+            JCObject objExp = (JCObject)retObjectExp;
             return new NFloat(objExp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp != null ? retObjectExp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -655,10 +859,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Exp10(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp10 = null;
         try {
-            JCObject objExp10 = (JCObject)classType.Invoke("Exp10", x == null ? null : x.getJCOInstance());
+            retObjectExp10 = classType.Invoke("Exp10", x == null ? null : x.getJCOInstance());
+            JCObject objExp10 = (JCObject)retObjectExp10;
             return new NFloat(objExp10);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp10 != null ? retObjectExp10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -666,10 +874,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Exp10M1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp10M1 = null;
         try {
-            JCObject objExp10M1 = (JCObject)classType.Invoke("Exp10M1", x == null ? null : x.getJCOInstance());
+            retObjectExp10M1 = classType.Invoke("Exp10M1", x == null ? null : x.getJCOInstance());
+            JCObject objExp10M1 = (JCObject)retObjectExp10M1;
             return new NFloat(objExp10M1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp10M1 != null ? retObjectExp10M1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,10 +889,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Exp2(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp2 = null;
         try {
-            JCObject objExp2 = (JCObject)classType.Invoke("Exp2", x == null ? null : x.getJCOInstance());
+            retObjectExp2 = classType.Invoke("Exp2", x == null ? null : x.getJCOInstance());
+            JCObject objExp2 = (JCObject)retObjectExp2;
             return new NFloat(objExp2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp2 != null ? retObjectExp2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -688,10 +904,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Exp2M1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExp2M1 = null;
         try {
-            JCObject objExp2M1 = (JCObject)classType.Invoke("Exp2M1", x == null ? null : x.getJCOInstance());
+            retObjectExp2M1 = classType.Invoke("Exp2M1", x == null ? null : x.getJCOInstance());
+            JCObject objExp2M1 = (JCObject)retObjectExp2M1;
             return new NFloat(objExp2M1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExp2M1 != null ? retObjectExp2M1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -699,10 +919,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat ExpM1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExpM1 = null;
         try {
-            JCObject objExpM1 = (JCObject)classType.Invoke("ExpM1", x == null ? null : x.getJCOInstance());
+            retObjectExpM1 = classType.Invoke("ExpM1", x == null ? null : x.getJCOInstance());
+            JCObject objExpM1 = (JCObject)retObjectExpM1;
             return new NFloat(objExpM1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExpM1 != null ? retObjectExpM1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -710,10 +934,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Floor(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFloor = null;
         try {
-            JCObject objFloor = (JCObject)classType.Invoke("Floor", x == null ? null : x.getJCOInstance());
+            retObjectFloor = classType.Invoke("Floor", x == null ? null : x.getJCOInstance());
+            JCObject objFloor = (JCObject)retObjectFloor;
             return new NFloat(objFloor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFloor != null ? retObjectFloor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -721,10 +949,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat FusedMultiplyAdd(NFloat left, NFloat right, NFloat addend) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFusedMultiplyAdd = null;
         try {
-            JCObject objFusedMultiplyAdd = (JCObject)classType.Invoke("FusedMultiplyAdd", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), addend == null ? null : addend.getJCOInstance());
+            retObjectFusedMultiplyAdd = classType.Invoke("FusedMultiplyAdd", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), addend == null ? null : addend.getJCOInstance());
+            JCObject objFusedMultiplyAdd = (JCObject)retObjectFusedMultiplyAdd;
             return new NFloat(objFusedMultiplyAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFusedMultiplyAdd != null ? retObjectFusedMultiplyAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,10 +964,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Hypot(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHypot = null;
         try {
-            JCObject objHypot = (JCObject)classType.Invoke("Hypot", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectHypot = classType.Invoke("Hypot", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objHypot = (JCObject)retObjectHypot;
             return new NFloat(objHypot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHypot != null ? retObjectHypot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,10 +979,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Ieee754Remainder(NFloat left, NFloat right) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArithmeticException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIeee754Remainder = null;
         try {
-            JCObject objIeee754Remainder = (JCObject)classType.Invoke("Ieee754Remainder", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectIeee754Remainder = classType.Invoke("Ieee754Remainder", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objIeee754Remainder = (JCObject)retObjectIeee754Remainder;
             return new NFloat(objIeee754Remainder);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIeee754Remainder != null ? retObjectIeee754Remainder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -754,10 +994,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Lerp(NFloat value1, NFloat value2, NFloat amount) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLerp = null;
         try {
-            JCObject objLerp = (JCObject)classType.Invoke("Lerp", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            retObjectLerp = classType.Invoke("Lerp", value1 == null ? null : value1.getJCOInstance(), value2 == null ? null : value2.getJCOInstance(), amount == null ? null : amount.getJCOInstance());
+            JCObject objLerp = (JCObject)retObjectLerp;
             return new NFloat(objLerp);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLerp != null ? retObjectLerp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -765,10 +1009,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log(NFloat x, NFloat newBase) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance(), newBase == null ? null : newBase.getJCOInstance());
+            retObjectLog = classType.Invoke("Log", x == null ? null : x.getJCOInstance(), newBase == null ? null : newBase.getJCOInstance());
+            JCObject objLog = (JCObject)retObjectLog;
             return new NFloat(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -776,10 +1024,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog = null;
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance());
+            retObjectLog = classType.Invoke("Log", x == null ? null : x.getJCOInstance());
+            JCObject objLog = (JCObject)retObjectLog;
             return new NFloat(objLog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog != null ? retObjectLog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -787,10 +1039,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log10(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog10 = null;
         try {
-            JCObject objLog10 = (JCObject)classType.Invoke("Log10", x == null ? null : x.getJCOInstance());
+            retObjectLog10 = classType.Invoke("Log10", x == null ? null : x.getJCOInstance());
+            JCObject objLog10 = (JCObject)retObjectLog10;
             return new NFloat(objLog10);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog10 != null ? retObjectLog10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -798,10 +1054,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log10P1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog10P1 = null;
         try {
-            JCObject objLog10P1 = (JCObject)classType.Invoke("Log10P1", x == null ? null : x.getJCOInstance());
+            retObjectLog10P1 = classType.Invoke("Log10P1", x == null ? null : x.getJCOInstance());
+            JCObject objLog10P1 = (JCObject)retObjectLog10P1;
             return new NFloat(objLog10P1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog10P1 != null ? retObjectLog10P1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -809,10 +1069,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log2(NFloat value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog2 = null;
         try {
-            JCObject objLog2 = (JCObject)classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            retObjectLog2 = classType.Invoke("Log2", value == null ? null : value.getJCOInstance());
+            JCObject objLog2 = (JCObject)retObjectLog2;
             return new NFloat(objLog2);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog2 != null ? retObjectLog2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -820,10 +1084,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Log2P1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLog2P1 = null;
         try {
-            JCObject objLog2P1 = (JCObject)classType.Invoke("Log2P1", x == null ? null : x.getJCOInstance());
+            retObjectLog2P1 = classType.Invoke("Log2P1", x == null ? null : x.getJCOInstance());
+            JCObject objLog2P1 = (JCObject)retObjectLog2P1;
             return new NFloat(objLog2P1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLog2P1 != null ? retObjectLog2P1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -831,10 +1099,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat LogP1(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLogP1 = null;
         try {
-            JCObject objLogP1 = (JCObject)classType.Invoke("LogP1", x == null ? null : x.getJCOInstance());
+            retObjectLogP1 = classType.Invoke("LogP1", x == null ? null : x.getJCOInstance());
+            JCObject objLogP1 = (JCObject)retObjectLogP1;
             return new NFloat(objLogP1);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogP1 != null ? retObjectLogP1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -842,10 +1114,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Max(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject objMax = (JCObject)classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMax = classType.Invoke("Max", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMax = (JCObject)retObjectMax;
             return new NFloat(objMax);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -853,10 +1129,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MaxMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxMagnitude = null;
         try {
-            JCObject objMaxMagnitude = (JCObject)classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMaxMagnitude = classType.Invoke("MaxMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMaxMagnitude = (JCObject)retObjectMaxMagnitude;
             return new NFloat(objMaxMagnitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxMagnitude != null ? retObjectMaxMagnitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -864,10 +1144,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MaxMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxMagnitudeNumber = null;
         try {
-            JCObject objMaxMagnitudeNumber = (JCObject)classType.Invoke("MaxMagnitudeNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMaxMagnitudeNumber = classType.Invoke("MaxMagnitudeNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMaxMagnitudeNumber = (JCObject)retObjectMaxMagnitudeNumber;
             return new NFloat(objMaxMagnitudeNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxMagnitudeNumber != null ? retObjectMaxMagnitudeNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -875,10 +1159,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MaxNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxNumber = null;
         try {
-            JCObject objMaxNumber = (JCObject)classType.Invoke("MaxNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMaxNumber = classType.Invoke("MaxNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMaxNumber = (JCObject)retObjectMaxNumber;
             return new NFloat(objMaxNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxNumber != null ? retObjectMaxNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -886,10 +1174,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Min(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMin = null;
         try {
-            JCObject objMin = (JCObject)classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMin = classType.Invoke("Min", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMin = (JCObject)retObjectMin;
             return new NFloat(objMin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMin != null ? retObjectMin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -897,10 +1189,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MinMagnitude(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinMagnitude = null;
         try {
-            JCObject objMinMagnitude = (JCObject)classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMinMagnitude = classType.Invoke("MinMagnitude", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMinMagnitude = (JCObject)retObjectMinMagnitude;
             return new NFloat(objMinMagnitude);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinMagnitude != null ? retObjectMinMagnitude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -908,10 +1204,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MinMagnitudeNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinMagnitudeNumber = null;
         try {
-            JCObject objMinMagnitudeNumber = (JCObject)classType.Invoke("MinMagnitudeNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMinMagnitudeNumber = classType.Invoke("MinMagnitudeNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMinMagnitudeNumber = (JCObject)retObjectMinMagnitudeNumber;
             return new NFloat(objMinMagnitudeNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinMagnitudeNumber != null ? retObjectMinMagnitudeNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -919,10 +1219,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MinNumber(NFloat x, NFloat y) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinNumber = null;
         try {
-            JCObject objMinNumber = (JCObject)classType.Invoke("MinNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectMinNumber = classType.Invoke("MinNumber", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objMinNumber = (JCObject)retObjectMinNumber;
             return new NFloat(objMinNumber);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinNumber != null ? retObjectMinNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -930,10 +1234,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat MultiplyAddEstimate(NFloat left, NFloat right, NFloat addend) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAddEstimate = null;
         try {
-            JCObject objMultiplyAddEstimate = (JCObject)classType.Invoke("MultiplyAddEstimate", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), addend == null ? null : addend.getJCOInstance());
+            retObjectMultiplyAddEstimate = classType.Invoke("MultiplyAddEstimate", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), addend == null ? null : addend.getJCOInstance());
+            JCObject objMultiplyAddEstimate = (JCObject)retObjectMultiplyAddEstimate;
             return new NFloat(objMultiplyAddEstimate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAddEstimate != null ? retObjectMultiplyAddEstimate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -941,10 +1249,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new NFloat(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -952,10 +1264,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new NFloat(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -963,10 +1279,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            retObjectParse = classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)retObjectParse;
             return new NFloat(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -974,10 +1294,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            retObjectParse = classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)retObjectParse;
             return new NFloat(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -985,10 +1309,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Pow(NFloat x, NFloat y) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPow = null;
         try {
-            JCObject objPow = (JCObject)classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            retObjectPow = classType.Invoke("Pow", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objPow = (JCObject)retObjectPow;
             return new NFloat(objPow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPow != null ? retObjectPow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -996,10 +1324,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat RadiansToDegrees(NFloat radians) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRadiansToDegrees = null;
         try {
-            JCObject objRadiansToDegrees = (JCObject)classType.Invoke("RadiansToDegrees", radians == null ? null : radians.getJCOInstance());
+            retObjectRadiansToDegrees = classType.Invoke("RadiansToDegrees", radians == null ? null : radians.getJCOInstance());
+            JCObject objRadiansToDegrees = (JCObject)retObjectRadiansToDegrees;
             return new NFloat(objRadiansToDegrees);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRadiansToDegrees != null ? retObjectRadiansToDegrees.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1007,10 +1339,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat ReciprocalEstimate(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReciprocalEstimate = null;
         try {
-            JCObject objReciprocalEstimate = (JCObject)classType.Invoke("ReciprocalEstimate", x == null ? null : x.getJCOInstance());
+            retObjectReciprocalEstimate = classType.Invoke("ReciprocalEstimate", x == null ? null : x.getJCOInstance());
+            JCObject objReciprocalEstimate = (JCObject)retObjectReciprocalEstimate;
             return new NFloat(objReciprocalEstimate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReciprocalEstimate != null ? retObjectReciprocalEstimate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1018,10 +1354,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat ReciprocalSqrtEstimate(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReciprocalSqrtEstimate = null;
         try {
-            JCObject objReciprocalSqrtEstimate = (JCObject)classType.Invoke("ReciprocalSqrtEstimate", x == null ? null : x.getJCOInstance());
+            retObjectReciprocalSqrtEstimate = classType.Invoke("ReciprocalSqrtEstimate", x == null ? null : x.getJCOInstance());
+            JCObject objReciprocalSqrtEstimate = (JCObject)retObjectReciprocalSqrtEstimate;
             return new NFloat(objReciprocalSqrtEstimate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReciprocalSqrtEstimate != null ? retObjectReciprocalSqrtEstimate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1029,10 +1369,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat RootN(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRootN = null;
         try {
-            JCObject objRootN = (JCObject)classType.Invoke("RootN", x == null ? null : x.getJCOInstance(), n);
+            retObjectRootN = classType.Invoke("RootN", x == null ? null : x.getJCOInstance(), n);
+            JCObject objRootN = (JCObject)retObjectRootN;
             return new NFloat(objRootN);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRootN != null ? retObjectRootN.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1040,10 +1384,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Round(NFloat x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new NFloat(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1051,10 +1399,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Round(NFloat x, int digits) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits);
+            retObjectRound = classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits);
+            JCObject objRound = (JCObject)retObjectRound;
             return new NFloat(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1062,10 +1414,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Round(NFloat x, MidpointRounding mode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new NFloat(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,10 +1429,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Round(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRound = null;
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance());
+            retObjectRound = classType.Invoke("Round", x == null ? null : x.getJCOInstance());
+            JCObject objRound = (JCObject)retObjectRound;
             return new NFloat(objRound);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRound != null ? retObjectRound.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1084,10 +1444,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat ScaleB(NFloat x, int n) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectScaleB = null;
         try {
-            JCObject objScaleB = (JCObject)classType.Invoke("ScaleB", x == null ? null : x.getJCOInstance(), n);
+            retObjectScaleB = classType.Invoke("ScaleB", x == null ? null : x.getJCOInstance(), n);
+            JCObject objScaleB = (JCObject)retObjectScaleB;
             return new NFloat(objScaleB);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScaleB != null ? retObjectScaleB.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1095,10 +1459,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Sin(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSin = null;
         try {
-            JCObject objSin = (JCObject)classType.Invoke("Sin", x == null ? null : x.getJCOInstance());
+            retObjectSin = classType.Invoke("Sin", x == null ? null : x.getJCOInstance());
+            JCObject objSin = (JCObject)retObjectSin;
             return new NFloat(objSin);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSin != null ? retObjectSin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1106,10 +1474,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Sinh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinh = null;
         try {
-            JCObject objSinh = (JCObject)classType.Invoke("Sinh", x == null ? null : x.getJCOInstance());
+            retObjectSinh = classType.Invoke("Sinh", x == null ? null : x.getJCOInstance());
+            JCObject objSinh = (JCObject)retObjectSinh;
             return new NFloat(objSinh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinh != null ? retObjectSinh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1117,10 +1489,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat SinPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSinPi = null;
         try {
-            JCObject objSinPi = (JCObject)classType.Invoke("SinPi", x == null ? null : x.getJCOInstance());
+            retObjectSinPi = classType.Invoke("SinPi", x == null ? null : x.getJCOInstance());
+            JCObject objSinPi = (JCObject)retObjectSinPi;
             return new NFloat(objSinPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSinPi != null ? retObjectSinPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1128,10 +1504,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Sqrt(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSqrt = null;
         try {
-            JCObject objSqrt = (JCObject)classType.Invoke("Sqrt", x == null ? null : x.getJCOInstance());
+            retObjectSqrt = classType.Invoke("Sqrt", x == null ? null : x.getJCOInstance());
+            JCObject objSqrt = (JCObject)retObjectSqrt;
             return new NFloat(objSqrt);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSqrt != null ? retObjectSqrt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1139,10 +1519,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Tan(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTan = null;
         try {
-            JCObject objTan = (JCObject)classType.Invoke("Tan", x == null ? null : x.getJCOInstance());
+            retObjectTan = classType.Invoke("Tan", x == null ? null : x.getJCOInstance());
+            JCObject objTan = (JCObject)retObjectTan;
             return new NFloat(objTan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTan != null ? retObjectTan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1150,10 +1534,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Tanh(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTanh = null;
         try {
-            JCObject objTanh = (JCObject)classType.Invoke("Tanh", x == null ? null : x.getJCOInstance());
+            retObjectTanh = classType.Invoke("Tanh", x == null ? null : x.getJCOInstance());
+            JCObject objTanh = (JCObject)retObjectTanh;
             return new NFloat(objTanh);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTanh != null ? retObjectTanh.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1161,10 +1549,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat TanPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTanPi = null;
         try {
-            JCObject objTanPi = (JCObject)classType.Invoke("TanPi", x == null ? null : x.getJCOInstance());
+            retObjectTanPi = classType.Invoke("TanPi", x == null ? null : x.getJCOInstance());
+            JCObject objTanPi = (JCObject)retObjectTanPi;
             return new NFloat(objTanPi);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTanPi != null ? retObjectTanPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1172,10 +1564,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat Truncate(NFloat x) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTruncate = null;
         try {
-            JCObject objTruncate = (JCObject)classType.Invoke("Truncate", x == null ? null : x.getJCOInstance());
+            retObjectTruncate = classType.Invoke("Truncate", x == null ? null : x.getJCOInstance());
+            JCObject objTruncate = (JCObject)retObjectTruncate;
             return new NFloat(objTruncate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTruncate != null ? retObjectTruncate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1183,9 +1579,13 @@ public class NFloat extends ValueType  {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1193,9 +1593,13 @@ public class NFloat extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1203,9 +1607,13 @@ public class NFloat extends ValueType  {
 
     public java.lang.String ToString(java.lang.String format) throws Throwable, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
+            retObjectToString = classInstance.Invoke("ToString", format);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1217,9 +1625,13 @@ public class NFloat extends ValueType  {
     
     public double getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (double)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (double)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1227,9 +1639,13 @@ public class NFloat extends ValueType  {
 
     public static int getSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classType.Get("Size");
+            retObjectSize = classType.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1237,10 +1653,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getE() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectE = null;
         try {
-            JCObject val = (JCObject)classType.Get("E");
+            retObjectE = classType.Get("E");
+            JCObject val = (JCObject)retObjectE;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectE != null ? retObjectE.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1248,10 +1668,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getEpsilon() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEpsilon = null;
         try {
-            JCObject val = (JCObject)classType.Get("Epsilon");
+            retObjectEpsilon = classType.Get("Epsilon");
+            JCObject val = (JCObject)retObjectEpsilon;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEpsilon != null ? retObjectEpsilon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1259,10 +1683,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getMaxValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMaxValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MaxValue");
+            retObjectMaxValue = classType.Get("MaxValue");
+            JCObject val = (JCObject)retObjectMaxValue;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaxValue != null ? retObjectMaxValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1270,10 +1698,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getMinValue() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMinValue = null;
         try {
-            JCObject val = (JCObject)classType.Get("MinValue");
+            retObjectMinValue = classType.Get("MinValue");
+            JCObject val = (JCObject)retObjectMinValue;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMinValue != null ? retObjectMinValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1281,10 +1713,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getNaN() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNaN = null;
         try {
-            JCObject val = (JCObject)classType.Get("NaN");
+            retObjectNaN = classType.Get("NaN");
+            JCObject val = (JCObject)retObjectNaN;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNaN != null ? retObjectNaN.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1292,10 +1728,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getNegativeInfinity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegativeInfinity = null;
         try {
-            JCObject val = (JCObject)classType.Get("NegativeInfinity");
+            retObjectNegativeInfinity = classType.Get("NegativeInfinity");
+            JCObject val = (JCObject)retObjectNegativeInfinity;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegativeInfinity != null ? retObjectNegativeInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1303,10 +1743,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getNegativeZero() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegativeZero = null;
         try {
-            JCObject val = (JCObject)classType.Get("NegativeZero");
+            retObjectNegativeZero = classType.Get("NegativeZero");
+            JCObject val = (JCObject)retObjectNegativeZero;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegativeZero != null ? retObjectNegativeZero.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1314,10 +1758,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getPi() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPi = null;
         try {
-            JCObject val = (JCObject)classType.Get("Pi");
+            retObjectPi = classType.Get("Pi");
+            JCObject val = (JCObject)retObjectPi;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPi != null ? retObjectPi.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1325,10 +1773,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getPositiveInfinity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPositiveInfinity = null;
         try {
-            JCObject val = (JCObject)classType.Get("PositiveInfinity");
+            retObjectPositiveInfinity = classType.Get("PositiveInfinity");
+            JCObject val = (JCObject)retObjectPositiveInfinity;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPositiveInfinity != null ? retObjectPositiveInfinity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1336,10 +1788,14 @@ public class NFloat extends ValueType  {
 
     public static NFloat getTau() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTau = null;
         try {
-            JCObject val = (JCObject)classType.Get("Tau");
+            retObjectTau = classType.Get("Tau");
+            JCObject val = (JCObject)retObjectTau;
             return new NFloat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTau != null ? retObjectTau.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

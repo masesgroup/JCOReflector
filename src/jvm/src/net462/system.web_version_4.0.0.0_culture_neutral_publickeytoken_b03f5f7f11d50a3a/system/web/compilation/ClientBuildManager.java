@@ -209,9 +209,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
     
     public boolean IsCodeAssembly(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCodeAssembly = null;
         try {
-            return (boolean)classInstance.Invoke("IsCodeAssembly", assemblyName);
+            retObjectIsCodeAssembly = classInstance.Invoke("IsCodeAssembly", assemblyName);
+            return (boolean)retObjectIsCodeAssembly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCodeAssembly != null ? retObjectIsCodeAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,9 +223,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public boolean Unload() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnload = null;
         try {
-            return (boolean)classInstance.Invoke("Unload");
+            retObjectUnload = classInstance.Invoke("Unload");
+            return (boolean)retObjectUnload;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnload != null ? retObjectUnload.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +237,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public CodeCompileUnit GenerateCodeCompileUnit(java.lang.String virtualPath, java.lang.String virtualFileString, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateCodeCompileUnit = null;
         try {
-            JCObject objGenerateCodeCompileUnit = (JCObject)classInstance.Invoke("GenerateCodeCompileUnit", virtualPath, virtualFileString, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut(), linePragmasTable.getJCRefOut());
+            retObjectGenerateCodeCompileUnit = classInstance.Invoke("GenerateCodeCompileUnit", virtualPath, virtualFileString, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut(), linePragmasTable.getJCRefOut());
+            JCObject objGenerateCodeCompileUnit = (JCObject)retObjectGenerateCodeCompileUnit;
             return new CodeCompileUnit(objGenerateCodeCompileUnit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateCodeCompileUnit != null ? retObjectGenerateCodeCompileUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +252,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public CodeCompileUnit GenerateCodeCompileUnit(java.lang.String virtualPath, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateCodeCompileUnit = null;
         try {
-            JCObject objGenerateCodeCompileUnit = (JCObject)classInstance.Invoke("GenerateCodeCompileUnit", virtualPath, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut(), linePragmasTable.getJCRefOut());
+            retObjectGenerateCodeCompileUnit = classInstance.Invoke("GenerateCodeCompileUnit", virtualPath, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut(), linePragmasTable.getJCRefOut());
+            JCObject objGenerateCodeCompileUnit = (JCObject)retObjectGenerateCodeCompileUnit;
             return new CodeCompileUnit(objGenerateCodeCompileUnit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenerateCodeCompileUnit != null ? retObjectGenerateCodeCompileUnit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +267,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public IDictionary GetBrowserDefinitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetBrowserDefinitions = null;
         try {
-            JCObject objGetBrowserDefinitions = (JCObject)classInstance.Invoke("GetBrowserDefinitions");
+            retObjectGetBrowserDefinitions = classInstance.Invoke("GetBrowserDefinitions");
+            JCObject objGetBrowserDefinitions = (JCObject)retObjectGetBrowserDefinitions;
             return new IDictionaryImplementation(objGetBrowserDefinitions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetBrowserDefinitions != null ? retObjectGetBrowserDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +282,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public NetObject InitializeLifetimeService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +297,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String GenerateCode(java.lang.String virtualPath, java.lang.String virtualFileString, JCORefOut<IDictionary> linePragmasTable) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenerateCode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GenerateCode", virtualPath, virtualFileString, linePragmasTable.getJCRefOut());
+            retObjectGenerateCode = classInstance.Invoke("GenerateCode", virtualPath, virtualFileString, linePragmasTable.getJCRefOut());
+            return (java.lang.String)retObjectGenerateCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGenerateCode != null ? retObjectGenerateCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +311,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String GetGeneratedFileVirtualPath(java.lang.String filePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedFileVirtualPath = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetGeneratedFileVirtualPath", filePath);
+            retObjectGetGeneratedFileVirtualPath = classInstance.Invoke("GetGeneratedFileVirtualPath", filePath);
+            return (java.lang.String)retObjectGetGeneratedFileVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetGeneratedFileVirtualPath != null ? retObjectGetGeneratedFileVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +325,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String GetGeneratedSourceFile(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGeneratedSourceFile = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetGeneratedSourceFile", virtualPath);
+            retObjectGetGeneratedSourceFile = classInstance.Invoke("GetGeneratedSourceFile", virtualPath);
+            return (java.lang.String)retObjectGetGeneratedSourceFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetGeneratedSourceFile != null ? retObjectGetGeneratedSourceFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +339,12 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String[] GetAppDomainShutdownDirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAppDomainShutdownDirectories = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAppDomainShutdownDirectories");
+            retObjectGetAppDomainShutdownDirectories = classInstance.Invoke("GetAppDomainShutdownDirectories");
+            JCObject resultingObjects = (JCObject)retObjectGetAppDomainShutdownDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -315,6 +353,8 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 				resultingArray[indexGetAppDomainShutdownDirectories] = (java.lang.String)resultingArrayList.get(indexGetAppDomainShutdownDirectories);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetAppDomainShutdownDirectories != null ? retObjectGetAppDomainShutdownDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +362,12 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String[] GetTopLevelAssemblyReferences(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTopLevelAssemblyReferences = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTopLevelAssemblyReferences", virtualPath);
+            retObjectGetTopLevelAssemblyReferences = classInstance.Invoke("GetTopLevelAssemblyReferences", virtualPath);
+            JCObject resultingObjects = (JCObject)retObjectGetTopLevelAssemblyReferences;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -334,6 +376,8 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 				resultingArray[indexGetTopLevelAssemblyReferences] = (java.lang.String)resultingArrayList.get(indexGetTopLevelAssemblyReferences);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetTopLevelAssemblyReferences != null ? retObjectGetTopLevelAssemblyReferences.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,10 +385,12 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String[] GetVirtualCodeDirectories() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetVirtualCodeDirectories = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVirtualCodeDirectories");
+            retObjectGetVirtualCodeDirectories = classInstance.Invoke("GetVirtualCodeDirectories");
+            JCObject resultingObjects = (JCObject)retObjectGetVirtualCodeDirectories;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -353,6 +399,8 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 				resultingArray[indexGetVirtualCodeDirectories] = (java.lang.String)resultingArrayList.get(indexGetVirtualCodeDirectories);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetVirtualCodeDirectories != null ? retObjectGetVirtualCodeDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +408,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public NetType GetCompiledType(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.threading.ThreadAbortException, system.InvalidCastException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCompiledType = null;
         try {
-            JCObject objGetCompiledType = (JCObject)classInstance.Invoke("GetCompiledType", virtualPath);
+            retObjectGetCompiledType = classInstance.Invoke("GetCompiledType", virtualPath);
+            JCObject objGetCompiledType = (JCObject)retObjectGetCompiledType;
             return new NetType(objGetCompiledType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledType != null ? retObjectGetCompiledType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +423,14 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public IRegisteredObject CreateObject(NetType type, boolean failIfExists) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateObject = null;
         try {
-            JCObject objCreateObject = (JCObject)classInstance.Invoke("CreateObject", type == null ? null : type.getJCOInstance(), failIfExists);
+            retObjectCreateObject = classInstance.Invoke("CreateObject", type == null ? null : type.getJCOInstance(), failIfExists);
+            JCObject objCreateObject = (JCObject)retObjectCreateObject;
             return new IRegisteredObjectImplementation(objCreateObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +438,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void CompileApplicationDependencies() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompileApplicationDependencies");
         } catch (JCNativeException jcne) {
@@ -392,7 +448,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void CompileFile(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompileFile", virtualPath);
         } catch (JCNativeException jcne) {
@@ -402,7 +458,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void CompileFile(java.lang.String virtualPath, ClientBuildManagerCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.UriFormatException, system.threading.ThreadAbortException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CompileFile", virtualPath, callback == null ? null : callback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -412,7 +468,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void GetCodeDirectoryInformation(java.lang.String virtualCodeDir, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters, JCORefOut generatedFilesDir) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetCodeDirectoryInformation", virtualCodeDir, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut(), generatedFilesDir.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -422,7 +478,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void GetCompilerParameters(java.lang.String virtualPath, JCORefOut<NetType> codeDomProviderType, JCORefOut<CompilerParameters> compilerParameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpCompileException, system.web.HttpParseException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetCompilerParameters", virtualPath, codeDomProviderType.getJCRefOut(), compilerParameters.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -432,7 +488,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void PrecompileApplication() throws Throwable, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.provider.ProviderException, system.SystemException, system.io.IOException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrecompileApplication");
         } catch (JCNativeException jcne) {
@@ -442,7 +498,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void PrecompileApplication(ClientBuildManagerCallback callback) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.MulticastNotSupportedException, system.web.HttpException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpParseException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrecompileApplication", callback == null ? null : callback.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -452,7 +508,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void PrecompileApplication(ClientBuildManagerCallback callback, boolean forceCleanBuild) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.web.HttpException, system.OutOfMemoryException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.web.HttpParseException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.runtime.remoting.RemotingException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrecompileApplication", callback == null ? null : callback.getJCOInstance(), forceCleanBuild);
         } catch (JCNativeException jcne) {
@@ -466,13 +522,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -488,9 +544,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
     
     public boolean getIsHostCreated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHostCreated = null;
         try {
-            return (boolean)classInstance.Get("IsHostCreated");
+            retObjectIsHostCreated = classInstance.Get("IsHostCreated");
+            return (boolean)retObjectIsHostCreated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHostCreated != null ? retObjectIsHostCreated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -498,9 +558,13 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public java.lang.String getCodeGenDir() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.NotImplementedException, system.SystemException, system.ObjectDisposedException, system.CannotUnloadAppDomainException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeGenDir = null;
         try {
-            return (java.lang.String)classInstance.Get("CodeGenDir");
+            retObjectCodeGenDir = classInstance.Get("CodeGenDir");
+            return (java.lang.String)retObjectCodeGenDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCodeGenDir != null ? retObjectCodeGenDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,7 +577,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void addAppDomainStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AppDomainStarted", handler);
         } catch (JCNativeException jcne) {
@@ -523,7 +587,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void removeAppDomainStarted(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AppDomainStarted", handler);
         } catch (JCNativeException jcne) {
@@ -533,7 +597,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void addAppDomainShutdown(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AppDomainShutdown", handler);
         } catch (JCNativeException jcne) {
@@ -543,7 +607,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void removeAppDomainShutdown(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AppDomainShutdown", handler);
         } catch (JCNativeException jcne) {
@@ -553,7 +617,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void addAppDomainUnloaded(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AppDomainUnloaded", handler);
         } catch (JCNativeException jcne) {
@@ -563,7 +627,7 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
 
     public void removeAppDomainUnloaded(BuildManagerHostUnloadEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AppDomainUnloaded", handler);
         } catch (JCNativeException jcne) {

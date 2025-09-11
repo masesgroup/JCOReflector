@@ -200,10 +200,14 @@ public class ServiceControllerPermission extends ResourcePermissionBase  {
     
     public ServiceControllerPermissionEntryCollection getPermissionEntries() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPermissionEntries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PermissionEntries");
+            retObjectPermissionEntries = classInstance.Get("PermissionEntries");
+            JCObject val = (JCObject)retObjectPermissionEntries;
             return new ServiceControllerPermissionEntryCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPermissionEntries != null ? retObjectPermissionEntries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

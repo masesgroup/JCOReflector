@@ -178,9 +178,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
     
     public boolean RaiseAutomationNotification(AutomationNotificationKind notificationKind, AutomationNotificationProcessing notificationProcessing, java.lang.String notificationText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaiseAutomationNotification = null;
         try {
-            return (boolean)classInstance.Invoke("RaiseAutomationNotification", notificationKind == null ? null : notificationKind.getJCOInstance(), notificationProcessing == null ? null : notificationProcessing.getJCOInstance(), notificationText);
+            retObjectRaiseAutomationNotification = classInstance.Invoke("RaiseAutomationNotification", notificationKind == null ? null : notificationKind.getJCOInstance(), notificationProcessing == null ? null : notificationProcessing.getJCOInstance(), notificationText);
+            return (boolean)retObjectRaiseAutomationNotification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRaiseAutomationNotification != null ? retObjectRaiseAutomationNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +192,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public boolean RaiseLiveRegionChanged() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRaiseLiveRegionChanged = null;
         try {
-            return (boolean)classInstance.Invoke("RaiseLiveRegionChanged");
+            retObjectRaiseLiveRegionChanged = classInstance.Invoke("RaiseLiveRegionChanged");
+            return (boolean)retObjectRaiseLiveRegionChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRaiseLiveRegionChanged != null ? retObjectRaiseLiveRegionChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +206,19 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public int GetChildCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildCount = null;
         try {
-            return (int)classInstance.Invoke("GetChildCount");
+            retObjectGetChildCount = classInstance.Invoke("GetChildCount");
+            return (int)retObjectGetChildCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetChildCountNumber = (java.lang.Number)retObjectGetChildCount;
+                return retObjectGetChildCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildCount != null ? retObjectGetChildCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +226,19 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public int GetHelpTopic(JCORefOut fileName) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHelpTopic = null;
         try {
-            return (int)classInstance.Invoke("GetHelpTopic", fileName.getJCRefOut());
+            retObjectGetHelpTopic = classInstance.Invoke("GetHelpTopic", fileName.getJCRefOut());
+            return (int)retObjectGetHelpTopic;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetHelpTopicNumber = (java.lang.Number)retObjectGetHelpTopic;
+                return retObjectGetHelpTopicNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetHelpTopic != null ? retObjectGetHelpTopic.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,10 +246,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject GetChild(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChild = null;
         try {
-            JCObject objGetChild = (JCObject)classInstance.Invoke("GetChild", index);
+            retObjectGetChild = classInstance.Invoke("GetChild", index);
+            JCObject objGetChild = (JCObject)retObjectGetChild;
             return new AccessibleObject(objGetChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChild != null ? retObjectGetChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,10 +261,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject GetFocused() throws Throwable, system.PlatformNotSupportedException, system.InvalidCastException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFocused = null;
         try {
-            JCObject objGetFocused = (JCObject)classInstance.Invoke("GetFocused");
+            retObjectGetFocused = classInstance.Invoke("GetFocused");
+            JCObject objGetFocused = (JCObject)retObjectGetFocused;
             return new AccessibleObject(objGetFocused);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFocused != null ? retObjectGetFocused.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,10 +276,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject GetSelected() throws Throwable, system.PlatformNotSupportedException, system.InvalidCastException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelected = null;
         try {
-            JCObject objGetSelected = (JCObject)classInstance.Invoke("GetSelected");
+            retObjectGetSelected = classInstance.Invoke("GetSelected");
+            JCObject objGetSelected = (JCObject)retObjectGetSelected;
             return new AccessibleObject(objGetSelected);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelected != null ? retObjectGetSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,10 +291,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject HitTest(int x, int y) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", x, y);
+            retObjectHitTest = classInstance.Invoke("HitTest", x, y);
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new AccessibleObject(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,10 +306,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject Navigate(AccessibleNavigation navdir) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            JCObject objNavigate = (JCObject)classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            JCObject objNavigate = (JCObject)retObjectNavigate;
             return new AccessibleObject(objNavigate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +321,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public void DoDefaultAction() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoDefaultAction");
         } catch (JCNativeException jcne) {
@@ -283,7 +331,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public void Select(AccessibleSelection flags) throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", flags == null ? null : flags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,7 +345,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -306,7 +354,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
     }
 
     /**
@@ -315,7 +363,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -324,7 +372,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -333,7 +381,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -342,7 +390,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -351,7 +399,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -360,7 +408,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -369,7 +417,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -378,7 +426,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -387,7 +435,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -396,7 +444,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
     }
 
     /**
@@ -405,7 +453,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
     /**
@@ -414,7 +462,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
     /**
@@ -423,7 +471,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
     /**
@@ -432,7 +480,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
     /**
@@ -441,7 +489,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
 
@@ -450,10 +498,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
     
     public Rectangle getBounds() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -461,9 +513,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getDefaultAction() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultAction = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultAction");
+            retObjectDefaultAction = classInstance.Get("DefaultAction");
+            return (java.lang.String)retObjectDefaultAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultAction != null ? retObjectDefaultAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -471,9 +527,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getDescription() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,9 +541,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getHelp() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelp = null;
         try {
-            return (java.lang.String)classInstance.Get("Help");
+            retObjectHelp = classInstance.Get("Help");
+            return (java.lang.String)retObjectHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelp != null ? retObjectHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,9 +555,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getKeyboardShortcut() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyboardShortcut = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyboardShortcut");
+            retObjectKeyboardShortcut = classInstance.Get("KeyboardShortcut");
+            return (java.lang.String)retObjectKeyboardShortcut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyboardShortcut != null ? retObjectKeyboardShortcut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,9 +569,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getName() throws Throwable, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +583,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public void setName(java.lang.String Name) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -521,9 +593,13 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public java.lang.String getValue() throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,7 +607,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public void setValue(java.lang.String Value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {
@@ -541,10 +617,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleObject getParent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new AccessibleObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -552,10 +632,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleRole getRole() throws Throwable, system.PlatformNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRole = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Role");
+            retObjectRole = classInstance.Get("Role");
+            JCObject val = (JCObject)retObjectRole;
             return new AccessibleRole(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRole != null ? retObjectRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,10 +647,14 @@ public class AccessibleObject extends StandardOleMarshalObject  {
 
     public AccessibleStates getState() throws Throwable, system.PlatformNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("State");
+            retObjectState = classInstance.Get("State");
+            JCObject val = (JCObject)retObjectState;
             return new AccessibleStates(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectState != null ? retObjectState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -189,7 +189,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
     
     public void AddAlias(java.lang.String aliasName, AssemblyName assemblyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAlias", aliasName, assemblyName == null ? null : assemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +199,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddMetadata(java.lang.String name, byte[] value) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetadata", name, value);
         } catch (JCNativeException jcne) {
@@ -209,7 +209,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddMetadata(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetadata", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -219,7 +219,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddMetadata(java.lang.String name, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xml.XmlException, system.ArrayTypeMismatchException, system.FormatException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetadata", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -229,7 +229,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddMetadata(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddMetadata", name, value);
         } catch (JCNativeException jcne) {
@@ -239,7 +239,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(ResXDataNode node) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OverflowException, system.OutOfMemoryException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", node == null ? null : node.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,7 +249,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, byte[] value) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -259,7 +259,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.TypeLoadException, system.io.FileLoadException, system.io.FileNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -269,7 +269,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,7 +279,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void AddResource(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.TypeLoadException, system.IndexOutOfRangeException, system.io.FileLoadException, system.io.FileNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddResource", name, value);
         } catch (JCNativeException jcne) {
@@ -289,7 +289,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void Close() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -299,7 +299,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -309,7 +309,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void Generate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Generate");
         } catch (JCNativeException jcne) {
@@ -320,7 +320,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -336,9 +336,13 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
     
     public java.lang.String getBasePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBasePath = null;
         try {
-            return (java.lang.String)classInstance.Get("BasePath");
+            retObjectBasePath = classInstance.Get("BasePath");
+            return (java.lang.String)retObjectBasePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBasePath != null ? retObjectBasePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,7 +350,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
 
     public void setBasePath(java.lang.String BasePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BasePath", BasePath);
         } catch (JCNativeException jcne) {

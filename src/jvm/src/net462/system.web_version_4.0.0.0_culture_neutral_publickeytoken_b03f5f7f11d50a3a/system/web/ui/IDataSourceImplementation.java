@@ -146,10 +146,14 @@ public class IDataSourceImplementation extends NetObject implements IDataSource 
     
     public ICollection GetViewNames() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetViewNames = null;
         try {
-            JCObject objGetViewNames = (JCObject)classInstance.Invoke("GetViewNames");
+            retObjectGetViewNames = classInstance.Invoke("GetViewNames");
+            JCObject objGetViewNames = (JCObject)retObjectGetViewNames;
             return new ICollectionImplementation(objGetViewNames);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetViewNames != null ? retObjectGetViewNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IDataSourceImplementation extends NetObject implements IDataSource 
 
     public DataSourceView GetView(java.lang.String viewName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetView = null;
         try {
-            JCObject objGetView = (JCObject)classInstance.Invoke("GetView", viewName);
+            retObjectGetView = classInstance.Invoke("GetView", viewName);
+            JCObject objGetView = (JCObject)retObjectGetView;
             return new DataSourceView(objGetView);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetView != null ? retObjectGetView.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +185,7 @@ public class IDataSourceImplementation extends NetObject implements IDataSource 
 
     public void addDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {
@@ -187,7 +195,7 @@ public class IDataSourceImplementation extends NetObject implements IDataSource 
 
     public void removeDataSourceChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DataSourceChanged", handler);
         } catch (JCNativeException jcne) {

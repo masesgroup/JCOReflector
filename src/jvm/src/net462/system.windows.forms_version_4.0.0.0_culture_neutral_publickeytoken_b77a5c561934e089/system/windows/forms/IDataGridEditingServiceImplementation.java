@@ -143,9 +143,13 @@ public class IDataGridEditingServiceImplementation extends NetObject implements 
     
     public boolean BeginEdit(DataGridColumnStyle gridColumn, int rowNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginEdit = null;
         try {
-            return (boolean)classInstance.Invoke("BeginEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber);
+            retObjectBeginEdit = classInstance.Invoke("BeginEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber);
+            return (boolean)retObjectBeginEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBeginEdit != null ? retObjectBeginEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -153,9 +157,13 @@ public class IDataGridEditingServiceImplementation extends NetObject implements 
 
     public boolean EndEdit(DataGridColumnStyle gridColumn, int rowNumber, boolean shouldAbort) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndEdit = null;
         try {
-            return (boolean)classInstance.Invoke("EndEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber, shouldAbort);
+            retObjectEndEdit = classInstance.Invoke("EndEdit", gridColumn == null ? null : gridColumn.getJCOInstance(), rowNumber, shouldAbort);
+            return (boolean)retObjectEndEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEndEdit != null ? retObjectEndEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

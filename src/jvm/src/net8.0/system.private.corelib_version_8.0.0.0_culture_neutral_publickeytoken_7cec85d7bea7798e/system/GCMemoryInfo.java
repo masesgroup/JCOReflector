@@ -160,9 +160,13 @@ public class GCMemoryInfo extends ValueType  {
     
     public boolean getCompacted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompacted = null;
         try {
-            return (boolean)classInstance.Get("Compacted");
+            retObjectCompacted = classInstance.Get("Compacted");
+            return (boolean)retObjectCompacted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCompacted != null ? retObjectCompacted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public boolean getConcurrent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConcurrent = null;
         try {
-            return (boolean)classInstance.Get("Concurrent");
+            retObjectConcurrent = classInstance.Get("Concurrent");
+            return (boolean)retObjectConcurrent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectConcurrent != null ? retObjectConcurrent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public double getPauseTimePercentage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPauseTimePercentage = null;
         try {
-            return (double)classInstance.Get("PauseTimePercentage");
+            retObjectPauseTimePercentage = classInstance.Get("PauseTimePercentage");
+            return (double)retObjectPauseTimePercentage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectPauseTimePercentage != null ? retObjectPauseTimePercentage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public int getGeneration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGeneration = null;
         try {
-            return (int)classInstance.Get("Generation");
+            retObjectGeneration = classInstance.Get("Generation");
+            return (int)retObjectGeneration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectGeneration != null ? retObjectGeneration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getFinalizationPendingCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFinalizationPendingCount = null;
         try {
-            return (long)classInstance.Get("FinalizationPendingCount");
+            retObjectFinalizationPendingCount = classInstance.Get("FinalizationPendingCount");
+            return (long)retObjectFinalizationPendingCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectFinalizationPendingCount != null ? retObjectFinalizationPendingCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getFragmentedBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFragmentedBytes = null;
         try {
-            return (long)classInstance.Get("FragmentedBytes");
+            retObjectFragmentedBytes = classInstance.Get("FragmentedBytes");
+            return (long)retObjectFragmentedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectFragmentedBytes != null ? retObjectFragmentedBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +244,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getHeapSizeBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeapSizeBytes = null;
         try {
-            return (long)classInstance.Get("HeapSizeBytes");
+            retObjectHeapSizeBytes = classInstance.Get("HeapSizeBytes");
+            return (long)retObjectHeapSizeBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectHeapSizeBytes != null ? retObjectHeapSizeBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,9 +258,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getHighMemoryLoadThresholdBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHighMemoryLoadThresholdBytes = null;
         try {
-            return (long)classInstance.Get("HighMemoryLoadThresholdBytes");
+            retObjectHighMemoryLoadThresholdBytes = classInstance.Get("HighMemoryLoadThresholdBytes");
+            return (long)retObjectHighMemoryLoadThresholdBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectHighMemoryLoadThresholdBytes != null ? retObjectHighMemoryLoadThresholdBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +272,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndex = null;
         try {
-            return (long)classInstance.Get("Index");
+            retObjectIndex = classInstance.Get("Index");
+            return (long)retObjectIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectIndex != null ? retObjectIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,9 +286,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getMemoryLoadBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemoryLoadBytes = null;
         try {
-            return (long)classInstance.Get("MemoryLoadBytes");
+            retObjectMemoryLoadBytes = classInstance.Get("MemoryLoadBytes");
+            return (long)retObjectMemoryLoadBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectMemoryLoadBytes != null ? retObjectMemoryLoadBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,9 +300,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getPinnedObjectsCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPinnedObjectsCount = null;
         try {
-            return (long)classInstance.Get("PinnedObjectsCount");
+            retObjectPinnedObjectsCount = classInstance.Get("PinnedObjectsCount");
+            return (long)retObjectPinnedObjectsCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPinnedObjectsCount != null ? retObjectPinnedObjectsCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +314,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getPromotedBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromotedBytes = null;
         try {
-            return (long)classInstance.Get("PromotedBytes");
+            retObjectPromotedBytes = classInstance.Get("PromotedBytes");
+            return (long)retObjectPromotedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectPromotedBytes != null ? retObjectPromotedBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,9 +328,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getTotalAvailableMemoryBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalAvailableMemoryBytes = null;
         try {
-            return (long)classInstance.Get("TotalAvailableMemoryBytes");
+            retObjectTotalAvailableMemoryBytes = classInstance.Get("TotalAvailableMemoryBytes");
+            return (long)retObjectTotalAvailableMemoryBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTotalAvailableMemoryBytes != null ? retObjectTotalAvailableMemoryBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,9 +342,13 @@ public class GCMemoryInfo extends ValueType  {
 
     public long getTotalCommittedBytes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTotalCommittedBytes = null;
         try {
-            return (long)classInstance.Get("TotalCommittedBytes");
+            retObjectTotalCommittedBytes = classInstance.Get("TotalCommittedBytes");
+            return (long)retObjectTotalCommittedBytes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectTotalCommittedBytes != null ? retObjectTotalCommittedBytes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

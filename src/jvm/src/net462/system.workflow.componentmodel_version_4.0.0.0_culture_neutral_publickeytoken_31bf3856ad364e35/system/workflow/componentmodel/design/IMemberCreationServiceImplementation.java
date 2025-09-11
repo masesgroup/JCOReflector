@@ -146,7 +146,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
     
     public void CreateEvent(java.lang.String className, java.lang.String eventName, NetType eventType, AttributeInfo[] attributes, boolean emitDependencyProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty);
         } catch (JCNativeException jcne) {
@@ -156,7 +156,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void CreateField(java.lang.String className, java.lang.String fieldName, NetType fieldType, NetType[] genericParameterTypes, MemberAttributes attributes, CodeSnippetExpression initializationExpression, boolean overwriteExisting) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateField", className, fieldName, fieldType == null ? null : fieldType.getJCOInstance(), toObjectFromArray(genericParameterTypes), attributes == null ? null : attributes.getJCOInstance(), initializationExpression == null ? null : initializationExpression.getJCOInstance(), overwriteExisting);
         } catch (JCNativeException jcne) {
@@ -166,7 +166,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void CreateProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty, boolean isAttached, NetType ownerType, boolean isReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateProperty", className, propertyName, propertyType == null ? null : propertyType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty, isAttached, ownerType == null ? null : ownerType.getJCOInstance(), isReadOnly);
         } catch (JCNativeException jcne) {
@@ -176,7 +176,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void RemoveEvent(java.lang.String className, java.lang.String eventName, NetType eventType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveEvent", className, eventName, eventType == null ? null : eventType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void RemoveProperty(java.lang.String className, java.lang.String propertyName, NetType propertyType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveProperty", className, propertyName, propertyType == null ? null : propertyType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void ShowCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowCode");
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void ShowCode(Activity activity, java.lang.String methodName, NetType delegateType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShowCode", activity == null ? null : activity.getJCOInstance(), methodName, delegateType == null ? null : delegateType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void UpdateBaseType(java.lang.String className, NetType baseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateBaseType", className, baseType == null ? null : baseType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -226,7 +226,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void UpdateEvent(java.lang.String className, java.lang.String oldEventName, NetType oldEventType, java.lang.String newEventName, NetType newEventType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateEvent", className, oldEventName, oldEventType == null ? null : oldEventType.getJCOInstance(), newEventName, newEventType == null ? null : newEventType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
         } catch (JCNativeException jcne) {
@@ -236,7 +236,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void UpdateProperty(java.lang.String className, java.lang.String oldPropertyName, NetType oldPropertyType, java.lang.String newPropertyName, NetType newPropertyType, AttributeInfo[] attributes, boolean emitDependencyProperty, boolean isMetaProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateProperty", className, oldPropertyName, oldPropertyType == null ? null : oldPropertyType.getJCOInstance(), newPropertyName, newPropertyType == null ? null : newPropertyType.getJCOInstance(), toObjectFromArray(attributes), emitDependencyProperty, isMetaProperty);
         } catch (JCNativeException jcne) {
@@ -246,7 +246,7 @@ public class IMemberCreationServiceImplementation extends NetObject implements I
 
     public void UpdateTypeName(java.lang.String oldClassName, java.lang.String newClassName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateTypeName", oldClassName, newClassName);
         } catch (JCNativeException jcne) {

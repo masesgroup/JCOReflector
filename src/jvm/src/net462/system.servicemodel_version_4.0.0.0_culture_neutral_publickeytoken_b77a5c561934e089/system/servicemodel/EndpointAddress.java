@@ -217,10 +217,14 @@ public class EndpointAddress extends NetObject  {
     
     public static EndpointAddress ReadFrom(AddressingVersion addressingVersion, XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +232,14 @@ public class EndpointAddress extends NetObject  {
 
     public static EndpointAddress ReadFrom(AddressingVersion addressingVersion, XmlDictionaryReader reader, XmlDictionaryString localName, XmlDictionaryString ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance(), localName == null ? null : localName.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance(), localName == null ? null : localName.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +247,14 @@ public class EndpointAddress extends NetObject  {
 
     public static EndpointAddress ReadFrom(AddressingVersion addressingVersion, XmlReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +262,14 @@ public class EndpointAddress extends NetObject  {
 
     public static EndpointAddress ReadFrom(AddressingVersion addressingVersion, XmlReader reader, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance(), localName, ns);
+            retObjectReadFrom = classType.Invoke("ReadFrom", addressingVersion == null ? null : addressingVersion.getJCOInstance(), reader == null ? null : reader.getJCOInstance(), localName, ns);
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +277,14 @@ public class EndpointAddress extends NetObject  {
 
     public static EndpointAddress ReadFrom(XmlDictionaryReader reader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +292,14 @@ public class EndpointAddress extends NetObject  {
 
     public static EndpointAddress ReadFrom(XmlDictionaryReader reader, XmlDictionaryString localName, XmlDictionaryString ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadFrom = null;
         try {
-            JCObject objReadFrom = (JCObject)classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance(), localName == null ? null : localName.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            retObjectReadFrom = classType.Invoke("ReadFrom", reader == null ? null : reader.getJCOInstance(), localName == null ? null : localName.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
+            JCObject objReadFrom = (JCObject)retObjectReadFrom;
             return new EndpointAddress(objReadFrom);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadFrom != null ? retObjectReadFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +307,14 @@ public class EndpointAddress extends NetObject  {
 
     public XmlDictionaryReader GetReaderAtExtensions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReaderAtExtensions = null;
         try {
-            JCObject objGetReaderAtExtensions = (JCObject)classInstance.Invoke("GetReaderAtExtensions");
+            retObjectGetReaderAtExtensions = classInstance.Invoke("GetReaderAtExtensions");
+            JCObject objGetReaderAtExtensions = (JCObject)retObjectGetReaderAtExtensions;
             return new XmlDictionaryReader(objGetReaderAtExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtExtensions != null ? retObjectGetReaderAtExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +322,14 @@ public class EndpointAddress extends NetObject  {
 
     public XmlDictionaryReader GetReaderAtMetadata() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReaderAtMetadata = null;
         try {
-            JCObject objGetReaderAtMetadata = (JCObject)classInstance.Invoke("GetReaderAtMetadata");
+            retObjectGetReaderAtMetadata = classInstance.Invoke("GetReaderAtMetadata");
+            JCObject objGetReaderAtMetadata = (JCObject)retObjectGetReaderAtMetadata;
             return new XmlDictionaryReader(objGetReaderAtMetadata);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtMetadata != null ? retObjectGetReaderAtMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +337,7 @@ public class EndpointAddress extends NetObject  {
 
     public void ApplyTo(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyTo", message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -315,7 +347,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteContentsTo(AddressingVersion addressingVersion, XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentsTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,7 +357,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteContentsTo(AddressingVersion addressingVersion, XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteContentsTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -335,7 +367,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteTo(AddressingVersion addressingVersion, XmlDictionaryWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,7 +377,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteTo(AddressingVersion addressingVersion, XmlDictionaryWriter writer, XmlDictionaryString localName, XmlDictionaryString ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), localName == null ? null : localName.getJCOInstance(), ns == null ? null : ns.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -355,7 +387,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteTo(AddressingVersion addressingVersion, XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,7 +397,7 @@ public class EndpointAddress extends NetObject  {
 
     public void WriteTo(AddressingVersion addressingVersion, XmlWriter writer, java.lang.String localName, java.lang.String ns) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", addressingVersion == null ? null : addressingVersion.getJCOInstance(), writer == null ? null : writer.getJCOInstance(), localName, ns);
         } catch (JCNativeException jcne) {
@@ -379,9 +411,13 @@ public class EndpointAddress extends NetObject  {
     
     public boolean getIsAnonymous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnonymous = null;
         try {
-            return (boolean)classInstance.Get("IsAnonymous");
+            retObjectIsAnonymous = classInstance.Get("IsAnonymous");
+            return (boolean)retObjectIsAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnonymous != null ? retObjectIsAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +425,13 @@ public class EndpointAddress extends NetObject  {
 
     public boolean getIsNone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNone = null;
         try {
-            return (boolean)classInstance.Get("IsNone");
+            retObjectIsNone = classInstance.Get("IsNone");
+            return (boolean)retObjectIsNone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNone != null ? retObjectIsNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +439,14 @@ public class EndpointAddress extends NetObject  {
 
     public AddressHeaderCollection getHeaders() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new AddressHeaderCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +454,14 @@ public class EndpointAddress extends NetObject  {
 
     public EndpointIdentity getIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Identity");
+            retObjectIdentity = classInstance.Get("Identity");
+            JCObject val = (JCObject)retObjectIdentity;
             return new EndpointIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +469,14 @@ public class EndpointAddress extends NetObject  {
 
     public static Uri getAnonymousUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnonymousUri = null;
         try {
-            JCObject val = (JCObject)classType.Get("AnonymousUri");
+            retObjectAnonymousUri = classType.Get("AnonymousUri");
+            JCObject val = (JCObject)retObjectAnonymousUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnonymousUri != null ? retObjectAnonymousUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +484,14 @@ public class EndpointAddress extends NetObject  {
 
     public static Uri getNoneUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNoneUri = null;
         try {
-            JCObject val = (JCObject)classType.Get("NoneUri");
+            retObjectNoneUri = classType.Get("NoneUri");
+            JCObject val = (JCObject)retObjectNoneUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNoneUri != null ? retObjectNoneUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,10 +499,14 @@ public class EndpointAddress extends NetObject  {
 
     public Uri getUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Uri");
+            retObjectUri = classInstance.Get("Uri");
+            JCObject val = (JCObject)retObjectUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -174,7 +174,7 @@ public class Saml2Assertion extends NetObject  {
     
     public void WriteSourceData(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteSourceData", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,9 +188,13 @@ public class Saml2Assertion extends NetObject  {
     
     public boolean getCanWriteSourceData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanWriteSourceData = null;
         try {
-            return (boolean)classInstance.Get("CanWriteSourceData");
+            retObjectCanWriteSourceData = classInstance.Get("CanWriteSourceData");
+            return (boolean)retObjectCanWriteSourceData;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanWriteSourceData != null ? retObjectCanWriteSourceData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +202,14 @@ public class Saml2Assertion extends NetObject  {
 
     public DateTime getIssueInstant() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssueInstant = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssueInstant");
+            retObjectIssueInstant = classInstance.Get("IssueInstant");
+            JCObject val = (JCObject)retObjectIssueInstant;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssueInstant != null ? retObjectIssueInstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,7 +217,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setIssueInstant(DateTime IssueInstant) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IssueInstant", IssueInstant == null ? null : IssueInstant.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,10 +227,14 @@ public class Saml2Assertion extends NetObject  {
 
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptingCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptingCredentials");
+            retObjectEncryptingCredentials = classInstance.Get("EncryptingCredentials");
+            JCObject val = (JCObject)retObjectEncryptingCredentials;
             return new EncryptingCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptingCredentials != null ? retObjectEncryptingCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +242,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setEncryptingCredentials(EncryptingCredentials EncryptingCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptingCredentials", EncryptingCredentials == null ? null : EncryptingCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,10 +252,14 @@ public class Saml2Assertion extends NetObject  {
 
     public Saml2Advice getAdvice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdvice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Advice");
+            retObjectAdvice = classInstance.Get("Advice");
+            JCObject val = (JCObject)retObjectAdvice;
             return new Saml2Advice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdvice != null ? retObjectAdvice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +267,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setAdvice(Saml2Advice Advice) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Advice", Advice == null ? null : Advice.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -261,10 +277,14 @@ public class Saml2Assertion extends NetObject  {
 
     public Saml2Conditions getConditions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConditions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Conditions");
+            retObjectConditions = classInstance.Get("Conditions");
+            JCObject val = (JCObject)retObjectConditions;
             return new Saml2Conditions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConditions != null ? retObjectConditions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +292,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setConditions(Saml2Conditions Conditions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Conditions", Conditions == null ? null : Conditions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,10 +302,14 @@ public class Saml2Assertion extends NetObject  {
 
     public Saml2Id getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
             return new Saml2Id(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +317,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setId(Saml2Id Id) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Id", Id == null ? null : Id.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,10 +327,14 @@ public class Saml2Assertion extends NetObject  {
 
     public Saml2NameIdentifier getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            JCObject val = (JCObject)retObjectIssuer;
             return new Saml2NameIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,7 +342,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setIssuer(Saml2NameIdentifier Issuer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Issuer", Issuer == null ? null : Issuer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -324,10 +352,14 @@ public class Saml2Assertion extends NetObject  {
 
     public Saml2Subject getSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            JCObject val = (JCObject)retObjectSubject;
             return new Saml2Subject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +367,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setSubject(Saml2Subject Subject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subject", Subject == null ? null : Subject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -345,10 +377,14 @@ public class Saml2Assertion extends NetObject  {
 
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +392,7 @@ public class Saml2Assertion extends NetObject  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -366,9 +402,13 @@ public class Saml2Assertion extends NetObject  {
 
     public java.lang.String getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

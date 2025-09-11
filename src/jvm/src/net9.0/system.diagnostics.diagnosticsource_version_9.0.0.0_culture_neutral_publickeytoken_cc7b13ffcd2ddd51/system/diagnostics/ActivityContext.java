@@ -170,9 +170,13 @@ public class ActivityContext extends ValueType  {
     
     public boolean Equals(ActivityContext value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class ActivityContext extends ValueType  {
 
     public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, boolean isRemote, JCORefOut<ActivityContext> context) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", traceParent, traceState, isRemote, context.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", traceParent, traceState, isRemote, context.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class ActivityContext extends ValueType  {
 
     public static boolean TryParse(java.lang.String traceParent, java.lang.String traceState, JCORefOut<ActivityContext> context) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryParse = null;
         try {
-            return (boolean)classType.Invoke("TryParse", traceParent, traceState, context.getJCRefOut());
+            retObjectTryParse = classType.Invoke("TryParse", traceParent, traceState, context.getJCRefOut());
+            return (boolean)retObjectTryParse;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryParse != null ? retObjectTryParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class ActivityContext extends ValueType  {
 
     public static ActivityContext Parse(java.lang.String traceParent, java.lang.String traceState) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", traceParent, traceState);
+            retObjectParse = classType.Invoke("Parse", traceParent, traceState);
+            JCObject objParse = (JCObject)retObjectParse;
             return new ActivityContext(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +231,13 @@ public class ActivityContext extends ValueType  {
     
     public boolean getIsRemote() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRemote = null;
         try {
-            return (boolean)classInstance.Get("IsRemote");
+            retObjectIsRemote = classInstance.Get("IsRemote");
+            return (boolean)retObjectIsRemote;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRemote != null ? retObjectIsRemote.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class ActivityContext extends ValueType  {
 
     public ActivitySpanId getSpanId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpanId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpanId");
+            retObjectSpanId = classInstance.Get("SpanId");
+            JCObject val = (JCObject)retObjectSpanId;
             return new ActivitySpanId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpanId != null ? retObjectSpanId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class ActivityContext extends ValueType  {
 
     public ActivityTraceFlags getTraceFlags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceFlags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceFlags");
+            retObjectTraceFlags = classInstance.Get("TraceFlags");
+            JCObject val = (JCObject)retObjectTraceFlags;
             return new ActivityTraceFlags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceFlags != null ? retObjectTraceFlags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +275,14 @@ public class ActivityContext extends ValueType  {
 
     public ActivityTraceId getTraceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TraceId");
+            retObjectTraceId = classInstance.Get("TraceId");
+            JCObject val = (JCObject)retObjectTraceId;
             return new ActivityTraceId(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTraceId != null ? retObjectTraceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,9 +290,13 @@ public class ActivityContext extends ValueType  {
 
     public java.lang.String getTraceState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTraceState = null;
         try {
-            return (java.lang.String)classInstance.Get("TraceState");
+            retObjectTraceState = classInstance.Get("TraceState");
+            return (java.lang.String)retObjectTraceState;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTraceState != null ? retObjectTraceState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

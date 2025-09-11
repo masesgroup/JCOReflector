@@ -154,9 +154,13 @@ public class HttpHeaders extends NetObjectEnumerable  {
     
     public boolean Contains(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContains = null;
         try {
-            return (boolean)classInstance.Invoke("Contains", name);
+            retObjectContains = classInstance.Invoke("Contains", name);
+            return (boolean)retObjectContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectContains != null ? retObjectContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class HttpHeaders extends NetObjectEnumerable  {
 
     public boolean Remove(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemove = null;
         try {
-            return (boolean)classInstance.Invoke("Remove", name);
+            retObjectRemove = classInstance.Invoke("Remove", name);
+            return (boolean)retObjectRemove;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemove != null ? retObjectRemove.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class HttpHeaders extends NetObjectEnumerable  {
 
     public boolean TryAddWithoutValidation(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryAddWithoutValidation = null;
         try {
-            return (boolean)classInstance.Invoke("TryAddWithoutValidation", name, value);
+            retObjectTryAddWithoutValidation = classInstance.Invoke("TryAddWithoutValidation", name, value);
+            return (boolean)retObjectTryAddWithoutValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryAddWithoutValidation != null ? retObjectTryAddWithoutValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +196,7 @@ public class HttpHeaders extends NetObjectEnumerable  {
 
     public void Add(java.lang.String name, java.lang.String value) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", name, value);
         } catch (JCNativeException jcne) {
@@ -194,7 +206,7 @@ public class HttpHeaders extends NetObjectEnumerable  {
 
     public void Clear() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -208,10 +220,14 @@ public class HttpHeaders extends NetObjectEnumerable  {
     
     public HttpHeadersNonValidated getNonValidated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNonValidated = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NonValidated");
+            retObjectNonValidated = classInstance.Get("NonValidated");
+            JCObject val = (JCObject)retObjectNonValidated;
             return new HttpHeadersNonValidated(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNonValidated != null ? retObjectNonValidated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -166,9 +166,13 @@ public class SafeFileHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
     
     public boolean getIsAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsync = null;
         try {
-            return (boolean)classInstance.Get("IsAsync");
+            retObjectIsAsync = classInstance.Get("IsAsync");
+            return (boolean)retObjectIsAsync;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsync != null ? retObjectIsAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -213,9 +213,19 @@ public class ConfigurationException extends SystemException {
     
     public static int GetXmlNodeLineNumber(XmlNode node) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlNodeLineNumber = null;
         try {
-            return (int)classType.Invoke("GetXmlNodeLineNumber", node == null ? null : node.getJCOInstance());
+            retObjectGetXmlNodeLineNumber = classType.Invoke("GetXmlNodeLineNumber", node == null ? null : node.getJCOInstance());
+            return (int)retObjectGetXmlNodeLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetXmlNodeLineNumberNumber = (java.lang.Number)retObjectGetXmlNodeLineNumber;
+                return retObjectGetXmlNodeLineNumberNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetXmlNodeLineNumber != null ? retObjectGetXmlNodeLineNumber.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +233,13 @@ public class ConfigurationException extends SystemException {
 
     public static java.lang.String GetXmlNodeFilename(XmlNode node) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetXmlNodeFilename = null;
         try {
-            return (java.lang.String)classType.Invoke("GetXmlNodeFilename", node == null ? null : node.getJCOInstance());
+            retObjectGetXmlNodeFilename = classType.Invoke("GetXmlNodeFilename", node == null ? null : node.getJCOInstance());
+            return (java.lang.String)retObjectGetXmlNodeFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetXmlNodeFilename != null ? retObjectGetXmlNodeFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +247,7 @@ public class ConfigurationException extends SystemException {
 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -247,9 +261,13 @@ public class ConfigurationException extends SystemException {
     
     public int getLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLine = null;
         try {
-            return (int)classInstance.Get("Line");
+            retObjectLine = classInstance.Get("Line");
+            return (int)retObjectLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLine != null ? retObjectLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +275,13 @@ public class ConfigurationException extends SystemException {
 
     public java.lang.String getBareMessage() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBareMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("BareMessage");
+            retObjectBareMessage = classInstance.Get("BareMessage");
+            return (java.lang.String)retObjectBareMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBareMessage != null ? retObjectBareMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +289,13 @@ public class ConfigurationException extends SystemException {
 
     public java.lang.String getFilename() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilename = null;
         try {
-            return (java.lang.String)classInstance.Get("Filename");
+            retObjectFilename = classInstance.Get("Filename");
+            return (java.lang.String)retObjectFilename;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilename != null ? retObjectFilename.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

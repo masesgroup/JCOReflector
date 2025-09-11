@@ -144,7 +144,7 @@ public class IAssemblyPostProcessorImplementation extends NetObject implements I
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IAssemblyPostProcessorImplementation extends NetObject implements I
 
     public void PostProcessAssembly(java.lang.String path) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PostProcessAssembly", path);
         } catch (JCNativeException jcne) {

@@ -191,9 +191,13 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
     
     public boolean getSucceeded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSucceeded = null;
         try {
-            return (boolean)classInstance.Get("Succeeded");
+            retObjectSucceeded = classInstance.Get("Succeeded");
+            return (boolean)retObjectSucceeded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSucceeded != null ? retObjectSucceeded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +205,14 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
 
     public IEnumerable getTargetOutputs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetOutputs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetOutputs");
+            retObjectTargetOutputs = classInstance.Get("TargetOutputs");
+            JCObject val = (JCObject)retObjectTargetOutputs;
             return new IEnumerableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetOutputs != null ? retObjectTargetOutputs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
 
     public void setTargetOutputs(IEnumerable TargetOutputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetOutputs", TargetOutputs == null ? null : TargetOutputs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,9 +230,13 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getProjectFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectFile = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectFile");
+            retObjectProjectFile = classInstance.Get("ProjectFile");
+            return (java.lang.String)retObjectProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectFile != null ? retObjectProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +244,13 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getTargetFile() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetFile = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetFile");
+            retObjectTargetFile = classInstance.Get("TargetFile");
+            return (java.lang.String)retObjectTargetFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetFile != null ? retObjectTargetFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +258,13 @@ public class TargetFinishedEventArgs extends BuildStatusEventArgs  {
 
     public java.lang.String getTargetName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetName = null;
         try {
-            return (java.lang.String)classInstance.Get("TargetName");
+            retObjectTargetName = classInstance.Get("TargetName");
+            return (java.lang.String)retObjectTargetName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTargetName != null ? retObjectTargetName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

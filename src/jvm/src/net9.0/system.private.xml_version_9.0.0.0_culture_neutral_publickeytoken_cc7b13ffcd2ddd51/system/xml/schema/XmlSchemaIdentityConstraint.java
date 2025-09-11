@@ -169,9 +169,13 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
     
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -189,10 +193,14 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
 
     public XmlSchemaObjectCollection getFields() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFields = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Fields");
+            retObjectFields = classInstance.Get("Fields");
+            JCObject val = (JCObject)retObjectFields;
             return new XmlSchemaObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFields != null ? retObjectFields.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +208,14 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
 
     public XmlSchemaXPath getSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Selector");
+            retObjectSelector = classInstance.Get("Selector");
+            JCObject val = (JCObject)retObjectSelector;
             return new XmlSchemaXPath(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelector != null ? retObjectSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +223,7 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
 
     public void setSelector(XmlSchemaXPath Selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Selector", Selector == null ? null : Selector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -221,10 +233,14 @@ public class XmlSchemaIdentityConstraint extends XmlSchemaAnnotated  {
 
     public XmlQualifiedName getQualifiedName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQualifiedName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("QualifiedName");
+            retObjectQualifiedName = classInstance.Get("QualifiedName");
+            JCObject val = (JCObject)retObjectQualifiedName;
             return new XmlQualifiedName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQualifiedName != null ? retObjectQualifiedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

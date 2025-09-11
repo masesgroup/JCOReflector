@@ -156,10 +156,14 @@ public class ConfigurationBuilder extends ProviderBase  {
     
     public ConfigurationSection ProcessConfigurationSection(ConfigurationSection configSection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessConfigurationSection = null;
         try {
-            JCObject objProcessConfigurationSection = (JCObject)classInstance.Invoke("ProcessConfigurationSection", configSection == null ? null : configSection.getJCOInstance());
+            retObjectProcessConfigurationSection = classInstance.Invoke("ProcessConfigurationSection", configSection == null ? null : configSection.getJCOInstance());
+            JCObject objProcessConfigurationSection = (JCObject)retObjectProcessConfigurationSection;
             return new ConfigurationSection(objProcessConfigurationSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessConfigurationSection != null ? retObjectProcessConfigurationSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class ConfigurationBuilder extends ProviderBase  {
 
     public XmlNode ProcessRawXml(XmlNode rawXml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessRawXml = null;
         try {
-            JCObject objProcessRawXml = (JCObject)classInstance.Invoke("ProcessRawXml", rawXml == null ? null : rawXml.getJCOInstance());
+            retObjectProcessRawXml = classInstance.Invoke("ProcessRawXml", rawXml == null ? null : rawXml.getJCOInstance());
+            JCObject objProcessRawXml = (JCObject)retObjectProcessRawXml;
             return new XmlNode(objProcessRawXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProcessRawXml != null ? retObjectProcessRawXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

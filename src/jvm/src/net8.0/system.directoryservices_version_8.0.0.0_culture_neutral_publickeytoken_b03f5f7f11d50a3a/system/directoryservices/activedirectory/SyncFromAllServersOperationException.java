@@ -183,7 +183,7 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
     
     public void GetObjectData(SerializationInfo serializationInfo, StreamingContext streamingContext) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", serializationInfo == null ? null : serializationInfo.getJCOInstance(), streamingContext == null ? null : streamingContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,16 +197,20 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
     
     public final SyncFromAllServersErrorInformation[] getErrorInformation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorInformation = null;
         try {
             ArrayList<SyncFromAllServersErrorInformation> resultingArrayList = new ArrayList<SyncFromAllServersErrorInformation>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ErrorInformation");
+            retObjectErrorInformation = classInstance.Get("ErrorInformation");
+            JCObject resultingObjects = (JCObject)retObjectErrorInformation;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SyncFromAllServersErrorInformation(resultingObject));
             }
             SyncFromAllServersErrorInformation[] resultingArray = new SyncFromAllServersErrorInformation[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorInformation != null ? retObjectErrorInformation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

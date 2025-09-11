@@ -176,9 +176,13 @@ public class BitmapEffectInput extends Animatable  {
     
     public boolean ShouldSerializeInput() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeInput = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeInput");
+            retObjectShouldSerializeInput = classInstance.Invoke("ShouldSerializeInput");
+            return (boolean)retObjectShouldSerializeInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeInput != null ? retObjectShouldSerializeInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class BitmapEffectInput extends Animatable  {
 
     public BitmapEffectInput CloneNewBitmapEffectInput() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BitmapEffectInput(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +205,14 @@ public class BitmapEffectInput extends Animatable  {
 
     public BitmapEffectInput CloneCurrentValueNewBitmapEffectInput() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new BitmapEffectInput(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class BitmapEffectInput extends Animatable  {
     
     public BrushMappingMode getAreaToApplyEffectUnits() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreaToApplyEffectUnits = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AreaToApplyEffectUnits");
+            retObjectAreaToApplyEffectUnits = classInstance.Get("AreaToApplyEffectUnits");
+            JCObject val = (JCObject)retObjectAreaToApplyEffectUnits;
             return new BrushMappingMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAreaToApplyEffectUnits != null ? retObjectAreaToApplyEffectUnits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class BitmapEffectInput extends Animatable  {
 
     public void setAreaToApplyEffectUnits(BrushMappingMode AreaToApplyEffectUnits) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AreaToApplyEffectUnits", AreaToApplyEffectUnits == null ? null : AreaToApplyEffectUnits.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +249,14 @@ public class BitmapEffectInput extends Animatable  {
 
     public static BitmapSource getContextInputSource() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContextInputSource = null;
         try {
-            JCObject val = (JCObject)classType.Get("ContextInputSource");
+            retObjectContextInputSource = classType.Get("ContextInputSource");
+            JCObject val = (JCObject)retObjectContextInputSource;
             return new BitmapSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextInputSource != null ? retObjectContextInputSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +264,14 @@ public class BitmapEffectInput extends Animatable  {
 
     public BitmapSource getInput() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Input");
+            retObjectInput = classInstance.Get("Input");
+            JCObject val = (JCObject)retObjectInput;
             return new BitmapSource(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInput != null ? retObjectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +279,7 @@ public class BitmapEffectInput extends Animatable  {
 
     public void setInput(BitmapSource Input) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Input", Input == null ? null : Input.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +289,14 @@ public class BitmapEffectInput extends Animatable  {
 
     public Rect getAreaToApplyEffect() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAreaToApplyEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AreaToApplyEffect");
+            retObjectAreaToApplyEffect = classInstance.Get("AreaToApplyEffect");
+            JCObject val = (JCObject)retObjectAreaToApplyEffect;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAreaToApplyEffect != null ? retObjectAreaToApplyEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +304,7 @@ public class BitmapEffectInput extends Animatable  {
 
     public void setAreaToApplyEffect(Rect AreaToApplyEffect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AreaToApplyEffect", AreaToApplyEffect == null ? null : AreaToApplyEffect.getJCOInstance());
         } catch (JCNativeException jcne) {

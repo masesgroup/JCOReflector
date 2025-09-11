@@ -166,9 +166,13 @@ public class ActivityDesignerOptionsAttribute extends Attribute  {
     
     public boolean getAllowDrillIn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowDrillIn = null;
         try {
-            return (boolean)classInstance.Get("AllowDrillIn");
+            retObjectAllowDrillIn = classInstance.Get("AllowDrillIn");
+            return (boolean)retObjectAllowDrillIn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowDrillIn != null ? retObjectAllowDrillIn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ActivityDesignerOptionsAttribute extends Attribute  {
 
     public void setAllowDrillIn(boolean AllowDrillIn) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowDrillIn", AllowDrillIn);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class ActivityDesignerOptionsAttribute extends Attribute  {
 
     public boolean getAlwaysCollapseChildren() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlwaysCollapseChildren = null;
         try {
-            return (boolean)classInstance.Get("AlwaysCollapseChildren");
+            retObjectAlwaysCollapseChildren = classInstance.Get("AlwaysCollapseChildren");
+            return (boolean)retObjectAlwaysCollapseChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAlwaysCollapseChildren != null ? retObjectAlwaysCollapseChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class ActivityDesignerOptionsAttribute extends Attribute  {
 
     public void setAlwaysCollapseChildren(boolean AlwaysCollapseChildren) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AlwaysCollapseChildren", AlwaysCollapseChildren);
         } catch (JCNativeException jcne) {

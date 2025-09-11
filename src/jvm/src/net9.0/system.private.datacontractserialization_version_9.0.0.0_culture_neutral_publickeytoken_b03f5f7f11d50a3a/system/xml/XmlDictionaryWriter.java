@@ -172,10 +172,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
     
     public Task WriteBase64Async(byte[] buffer, int index, int count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBase64Async = null;
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", buffer, index, count);
+            retObjectWriteBase64Async = classInstance.Invoke("WriteBase64Async", buffer, index, count);
+            JCObject objWriteBase64Async = (JCObject)retObjectWriteBase64Async;
             return new Task(objWriteBase64Async);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBase64Async != null ? retObjectWriteBase64Async.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public Task WriteBase64Async(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteBase64Async = null;
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            retObjectWriteBase64Async = classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            JCObject objWriteBase64Async = (JCObject)retObjectWriteBase64Async;
             return new Task(objWriteBase64Async);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteBase64Async != null ? retObjectWriteBase64Async.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public Task WriteValueAsync(IStreamProvider value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteValueAsync = null;
         try {
-            JCObject objWriteValueAsync = (JCObject)classInstance.Invoke("WriteValueAsync", value == null ? null : value.getJCOInstance());
+            retObjectWriteValueAsync = classInstance.Invoke("WriteValueAsync", value == null ? null : value.getJCOInstance());
+            JCObject objWriteValueAsync = (JCObject)retObjectWriteValueAsync;
             return new Task(objWriteValueAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteValueAsync != null ? retObjectWriteValueAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryWriter = null;
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance(), ownsStream);
+            retObjectCreateBinaryWriter = classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance(), ownsStream);
+            JCObject objCreateBinaryWriter = (JCObject)retObjectCreateBinaryWriter;
             return new XmlDictionaryWriter(objCreateBinaryWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryWriter != null ? retObjectCreateBinaryWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +232,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryWriter = null;
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            retObjectCreateBinaryWriter = classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance());
+            JCObject objCreateBinaryWriter = (JCObject)retObjectCreateBinaryWriter;
             return new XmlDictionaryWriter(objCreateBinaryWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryWriter != null ? retObjectCreateBinaryWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +247,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryWriter = null;
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance());
+            retObjectCreateBinaryWriter = classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objCreateBinaryWriter = (JCObject)retObjectCreateBinaryWriter;
             return new XmlDictionaryWriter(objCreateBinaryWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryWriter != null ? retObjectCreateBinaryWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +262,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateBinaryWriter = null;
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance());
+            retObjectCreateBinaryWriter = classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateBinaryWriter = (JCObject)retObjectCreateBinaryWriter;
             return new XmlDictionaryWriter(objCreateBinaryWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateBinaryWriter != null ? retObjectCreateBinaryWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +277,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateDictionaryWriter(XmlWriter writer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDictionaryWriter = null;
         try {
-            JCObject objCreateDictionaryWriter = (JCObject)classType.Invoke("CreateDictionaryWriter", writer == null ? null : writer.getJCOInstance());
+            retObjectCreateDictionaryWriter = classType.Invoke("CreateDictionaryWriter", writer == null ? null : writer.getJCOInstance());
+            JCObject objCreateDictionaryWriter = (JCObject)retObjectCreateDictionaryWriter;
             return new XmlDictionaryWriter(objCreateDictionaryWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDictionaryWriter != null ? retObjectCreateDictionaryWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,10 +292,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomWriter = null;
         try {
-            JCObject objCreateMtomWriter = (JCObject)classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo, boundary, startUri, writeMessageHeaders, ownsStream);
+            retObjectCreateMtomWriter = classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo, boundary, startUri, writeMessageHeaders, ownsStream);
+            JCObject objCreateMtomWriter = (JCObject)retObjectCreateMtomWriter;
             return new XmlDictionaryWriter(objCreateMtomWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomWriter != null ? retObjectCreateMtomWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,10 +307,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateMtomWriter = null;
         try {
-            JCObject objCreateMtomWriter = (JCObject)classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo);
+            retObjectCreateMtomWriter = classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo);
+            JCObject objCreateMtomWriter = (JCObject)retObjectCreateMtomWriter;
             return new XmlDictionaryWriter(objCreateMtomWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMtomWriter != null ? retObjectCreateMtomWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +322,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextWriter = null;
         try {
-            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            retObjectCreateTextWriter = classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            JCObject objCreateTextWriter = (JCObject)retObjectCreateTextWriter;
             return new XmlDictionaryWriter(objCreateTextWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextWriter != null ? retObjectCreateTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +337,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextWriter = null;
         try {
-            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+            retObjectCreateTextWriter = classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance());
+            JCObject objCreateTextWriter = (JCObject)retObjectCreateTextWriter;
             return new XmlDictionaryWriter(objCreateTextWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextWriter != null ? retObjectCreateTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +352,14 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public static XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateTextWriter = null;
         try {
-            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance());
+            retObjectCreateTextWriter = classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateTextWriter = (JCObject)retObjectCreateTextWriter;
             return new XmlDictionaryWriter(objCreateTextWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateTextWriter != null ? retObjectCreateTextWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +367,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -325,7 +377,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void EndCanonicalization() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndCanonicalization");
         } catch (JCNativeException jcne) {
@@ -335,7 +387,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void StartCanonicalization(Stream stream, boolean includeComments, java.lang.String[] inclusivePrefixes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartCanonicalization", stream == null ? null : stream.getJCOInstance(), includeComments, inclusivePrefixes);
         } catch (JCNativeException jcne) {
@@ -345,7 +397,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -355,7 +407,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, array, offset, count);
         } catch (JCNativeException jcne) {
@@ -365,7 +417,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
@@ -375,7 +427,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, double[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, array, offset, count);
         } catch (JCNativeException jcne) {
@@ -385,7 +437,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, short[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, array, offset, count);
         } catch (JCNativeException jcne) {
@@ -395,7 +447,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, int[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, array, offset, count);
         } catch (JCNativeException jcne) {
@@ -405,7 +457,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, long[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, array, offset, count);
         } catch (JCNativeException jcne) {
@@ -415,7 +467,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Single[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -425,7 +477,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -435,7 +487,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -445,7 +497,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -455,7 +507,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName, namespaceUri, toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -465,7 +517,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, boolean[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
         } catch (JCNativeException jcne) {
@@ -475,7 +527,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String dupParam0, XmlDictionaryString dupParam1, XmlDictionaryString dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
@@ -485,7 +537,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, double[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
         } catch (JCNativeException jcne) {
@@ -495,7 +547,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, short[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
         } catch (JCNativeException jcne) {
@@ -505,7 +557,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, int[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
         } catch (JCNativeException jcne) {
@@ -515,7 +567,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, long[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), array, offset, count);
         } catch (JCNativeException jcne) {
@@ -525,7 +577,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Single[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -535,7 +587,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, DateTime[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -545,7 +597,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Decimal[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -555,7 +607,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, Guid[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -565,7 +617,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteArray(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, TimeSpan[] array, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteArray", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), toObjectFromArray(array), offset, count);
         } catch (JCNativeException jcne) {
@@ -575,7 +627,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteAttributeString(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributeString", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -585,7 +637,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteAttributeString(XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteAttributeString", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -595,7 +647,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteElementString(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteElementString", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -605,7 +657,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteElementString(XmlDictionaryString localName, XmlDictionaryString namespaceUri, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteElementString", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -615,7 +667,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteNode(XmlDictionaryReader reader, boolean defattr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNode", reader == null ? null : reader.getJCOInstance(), defattr);
         } catch (JCNativeException jcne) {
@@ -625,7 +677,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteNode(XmlReader reader, boolean defattr) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteNode", reader == null ? null : reader.getJCOInstance(), defattr);
         } catch (JCNativeException jcne) {
@@ -635,7 +687,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteQualifiedName(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteQualifiedName", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -645,7 +697,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteStartAttribute(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -655,7 +707,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteStartAttribute(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartAttribute", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -665,7 +717,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteStartElement(java.lang.String prefix, XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", prefix, localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -675,7 +727,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteStartElement", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -685,7 +737,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteString(XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteString", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -695,7 +747,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteValue(Guid value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -705,7 +757,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteValue(TimeSpan value) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -715,7 +767,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteValue(IStreamProvider value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -725,7 +777,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteValue(UniqueId value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -735,7 +787,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteValue(XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteValue", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -745,7 +797,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteXmlAttribute(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlAttribute", localName, value);
         } catch (JCNativeException jcne) {
@@ -755,7 +807,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteXmlAttribute(XmlDictionaryString localName, XmlDictionaryString value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlAttribute", localName == null ? null : localName.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -765,7 +817,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteXmlnsAttribute(java.lang.String prefix, java.lang.String namespaceUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlnsAttribute", prefix, namespaceUri);
         } catch (JCNativeException jcne) {
@@ -775,7 +827,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     public void WriteXmlnsAttribute(java.lang.String prefix, XmlDictionaryString namespaceUri) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXmlnsAttribute", prefix, namespaceUri == null ? null : namespaceUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -789,9 +841,13 @@ public class XmlDictionaryWriter extends XmlWriter  {
     
     public boolean getCanCanonicalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanCanonicalize = null;
         try {
-            return (boolean)classInstance.Get("CanCanonicalize");
+            retObjectCanCanonicalize = classInstance.Get("CanCanonicalize");
+            return (boolean)retObjectCanCanonicalize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanCanonicalize != null ? retObjectCanCanonicalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

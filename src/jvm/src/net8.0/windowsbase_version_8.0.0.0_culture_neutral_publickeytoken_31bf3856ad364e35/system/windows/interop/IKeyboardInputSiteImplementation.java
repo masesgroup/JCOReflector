@@ -145,9 +145,13 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
     
     public boolean OnNoMoreTabStops(TraversalRequest request) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnNoMoreTabStops = null;
         try {
-            return (boolean)classInstance.Invoke("OnNoMoreTabStops", request == null ? null : request.getJCOInstance());
+            retObjectOnNoMoreTabStops = classInstance.Invoke("OnNoMoreTabStops", request == null ? null : request.getJCOInstance());
+            return (boolean)retObjectOnNoMoreTabStops;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectOnNoMoreTabStops != null ? retObjectOnNoMoreTabStops.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -155,7 +159,7 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
 
     public void Unregister() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unregister");
         } catch (JCNativeException jcne) {
@@ -169,10 +173,14 @@ public class IKeyboardInputSiteImplementation extends NetObject implements IKeyb
     
     public IKeyboardInputSink getSink() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSink = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sink");
+            retObjectSink = classInstance.Get("Sink");
+            JCObject val = (JCObject)retObjectSink;
             return new IKeyboardInputSinkImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSink != null ? retObjectSink.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

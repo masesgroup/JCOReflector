@@ -218,9 +218,13 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     
     public boolean getIsAnimationProhibited() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAnimationProhibited = null;
         try {
-            return (boolean)classInstance.Get("IsAnimationProhibited");
+            retObjectIsAnimationProhibited = classInstance.Get("IsAnimationProhibited");
+            return (boolean)retObjectIsAnimationProhibited;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAnimationProhibited != null ? retObjectIsAnimationProhibited.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +232,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
 
     public void setIsAnimationProhibited(boolean IsAnimationProhibited) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAnimationProhibited", IsAnimationProhibited);
         } catch (JCNativeException jcne) {

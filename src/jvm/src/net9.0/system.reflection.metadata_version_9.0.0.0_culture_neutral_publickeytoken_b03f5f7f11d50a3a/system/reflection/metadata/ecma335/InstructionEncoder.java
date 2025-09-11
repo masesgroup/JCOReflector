@@ -178,10 +178,14 @@ public class InstructionEncoder extends ValueType  {
     
     public LabelHandle DefineLabel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineLabel = null;
         try {
-            JCObject objDefineLabel = (JCObject)classInstance.Invoke("DefineLabel");
+            retObjectDefineLabel = classInstance.Invoke("DefineLabel");
+            JCObject objDefineLabel = (JCObject)retObjectDefineLabel;
             return new LabelHandle(objDefineLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineLabel != null ? retObjectDefineLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +193,14 @@ public class InstructionEncoder extends ValueType  {
 
     public SwitchInstructionEncoder Switch(int branchCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classInstance.Invoke("Switch", branchCount);
+            retObjectSwitch = classInstance.Invoke("Switch", branchCount);
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new SwitchInstructionEncoder(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +208,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Branch(ILOpCode code, LabelHandle label) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Branch", code == null ? null : code.getJCOInstance(), label == null ? null : label.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +218,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Call(EntityHandle methodHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Call", methodHandle == null ? null : methodHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +228,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Call(MemberReferenceHandle methodHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Call", methodHandle == null ? null : methodHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -230,7 +238,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Call(MethodDefinitionHandle methodHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Call", methodHandle == null ? null : methodHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,7 +248,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Call(MethodSpecificationHandle methodHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Call", methodHandle == null ? null : methodHandle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,7 +258,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void CallIndirect(StandaloneSignatureHandle signature) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CallIndirect", signature == null ? null : signature.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,7 +268,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadArgument(int argumentIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadArgument", argumentIndex);
         } catch (JCNativeException jcne) {
@@ -270,7 +278,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadArgumentAddress(int argumentIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadArgumentAddress", argumentIndex);
         } catch (JCNativeException jcne) {
@@ -280,7 +288,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadConstantI4(int value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadConstantI4", value);
         } catch (JCNativeException jcne) {
@@ -290,7 +298,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadConstantI8(long value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadConstantI8", value);
         } catch (JCNativeException jcne) {
@@ -300,7 +308,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadConstantR4(Single value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadConstantR4", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,7 +318,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadConstantR8(double value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadConstantR8", value);
         } catch (JCNativeException jcne) {
@@ -320,7 +328,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadLocal(int slotIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadLocal", slotIndex);
         } catch (JCNativeException jcne) {
@@ -330,7 +338,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadLocalAddress(int slotIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadLocalAddress", slotIndex);
         } catch (JCNativeException jcne) {
@@ -340,7 +348,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void LoadString(UserStringHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadString", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,7 +358,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void MarkLabel(LabelHandle label) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkLabel", label == null ? null : label.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -360,7 +368,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void OpCode(ILOpCode code) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OpCode", code == null ? null : code.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,7 +378,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void StoreArgument(int argumentIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreArgument", argumentIndex);
         } catch (JCNativeException jcne) {
@@ -380,7 +388,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void StoreLocal(int slotIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreLocal", slotIndex);
         } catch (JCNativeException jcne) {
@@ -390,7 +398,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Token(int token) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Token", token);
         } catch (JCNativeException jcne) {
@@ -400,7 +408,7 @@ public class InstructionEncoder extends ValueType  {
 
     public void Token(EntityHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Token", handle == null ? null : handle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -414,9 +422,13 @@ public class InstructionEncoder extends ValueType  {
     
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,10 +436,14 @@ public class InstructionEncoder extends ValueType  {
 
     public BlobBuilder getCodeBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCodeBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CodeBuilder");
+            retObjectCodeBuilder = classInstance.Get("CodeBuilder");
+            JCObject val = (JCObject)retObjectCodeBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeBuilder != null ? retObjectCodeBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +451,14 @@ public class InstructionEncoder extends ValueType  {
 
     public ControlFlowBuilder getControlFlowBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlFlowBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ControlFlowBuilder");
+            retObjectControlFlowBuilder = classInstance.Get("ControlFlowBuilder");
+            JCObject val = (JCObject)retObjectControlFlowBuilder;
             return new ControlFlowBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControlFlowBuilder != null ? retObjectControlFlowBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

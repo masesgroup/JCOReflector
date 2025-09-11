@@ -156,10 +156,14 @@ public class StaticSiteMapProvider extends SiteMapProvider  {
     
     public SiteMapNode BuildSiteMap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildSiteMap = null;
         try {
-            JCObject objBuildSiteMap = (JCObject)classInstance.Invoke("BuildSiteMap");
+            retObjectBuildSiteMap = classInstance.Invoke("BuildSiteMap");
+            JCObject objBuildSiteMap = (JCObject)retObjectBuildSiteMap;
             return new SiteMapNode(objBuildSiteMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildSiteMap != null ? retObjectBuildSiteMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class StaticSiteMapProvider extends SiteMapProvider  {
 
     public SiteMapNode FindSiteMapNode(java.lang.String rawUrl) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNode = null;
         try {
-            JCObject objFindSiteMapNode = (JCObject)classInstance.Invoke("FindSiteMapNode", rawUrl);
+            retObjectFindSiteMapNode = classInstance.Invoke("FindSiteMapNode", rawUrl);
+            JCObject objFindSiteMapNode = (JCObject)retObjectFindSiteMapNode;
             return new SiteMapNode(objFindSiteMapNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNode != null ? retObjectFindSiteMapNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class StaticSiteMapProvider extends SiteMapProvider  {
 
     public SiteMapNode FindSiteMapNodeFromKey(java.lang.String key) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.web.HttpException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindSiteMapNodeFromKey = null;
         try {
-            JCObject objFindSiteMapNodeFromKey = (JCObject)classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            retObjectFindSiteMapNodeFromKey = classInstance.Invoke("FindSiteMapNodeFromKey", key);
+            JCObject objFindSiteMapNodeFromKey = (JCObject)retObjectFindSiteMapNodeFromKey;
             return new SiteMapNode(objFindSiteMapNodeFromKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindSiteMapNodeFromKey != null ? retObjectFindSiteMapNodeFromKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class StaticSiteMapProvider extends SiteMapProvider  {
 
     public SiteMapNode GetParentNode(SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.web.HttpException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentNode = null;
         try {
-            JCObject objGetParentNode = (JCObject)classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            retObjectGetParentNode = classInstance.Invoke("GetParentNode", node == null ? null : node.getJCOInstance());
+            JCObject objGetParentNode = (JCObject)retObjectGetParentNode;
             return new SiteMapNode(objGetParentNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentNode != null ? retObjectGetParentNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +216,14 @@ public class StaticSiteMapProvider extends SiteMapProvider  {
 
     public SiteMapNodeCollection GetChildNodes(SiteMapNode node) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildNodes = null;
         try {
-            JCObject objGetChildNodes = (JCObject)classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            retObjectGetChildNodes = classInstance.Invoke("GetChildNodes", node == null ? null : node.getJCOInstance());
+            JCObject objGetChildNodes = (JCObject)retObjectGetChildNodes;
             return new SiteMapNodeCollection(objGetChildNodes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildNodes != null ? retObjectGetChildNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

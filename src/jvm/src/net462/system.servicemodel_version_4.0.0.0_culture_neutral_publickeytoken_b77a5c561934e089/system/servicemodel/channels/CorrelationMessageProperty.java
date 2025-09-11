@@ -159,9 +159,13 @@ public class CorrelationMessageProperty extends NetObject  {
     
     public static boolean TryGet(Message message, JCORefOut<CorrelationMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGet = null;
         try {
-            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+            retObjectTryGet = classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+            return (boolean)retObjectTryGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGet != null ? retObjectTryGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class CorrelationMessageProperty extends NetObject  {
 
     public static boolean TryGet(MessageProperties properties, JCORefOut<CorrelationMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGet = null;
         try {
-            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+            retObjectTryGet = classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+            return (boolean)retObjectTryGet;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGet != null ? retObjectTryGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class CorrelationMessageProperty extends NetObject  {
     
     public InstanceKey getCorrelationKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCorrelationKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CorrelationKey");
+            retObjectCorrelationKey = classInstance.Get("CorrelationKey");
+            JCObject val = (JCObject)retObjectCorrelationKey;
             return new InstanceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationKey != null ? retObjectCorrelationKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class CorrelationMessageProperty extends NetObject  {
 
     public static java.lang.String getName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classType.Get("Name");
+            retObjectName = classType.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

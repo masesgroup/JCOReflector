@@ -171,9 +171,13 @@ public class XpsSerializationProgressChangedEventArgs extends ProgressChangedEve
     
     public int getPageNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageNumber = null;
         try {
-            return (int)classInstance.Get("PageNumber");
+            retObjectPageNumber = classInstance.Get("PageNumber");
+            return (int)retObjectPageNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPageNumber != null ? retObjectPageNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class XpsSerializationProgressChangedEventArgs extends ProgressChangedEve
 
     public XpsWritingProgressChangeLevel getWritingLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWritingLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WritingLevel");
+            retObjectWritingLevel = classInstance.Get("WritingLevel");
+            JCObject val = (JCObject)retObjectWritingLevel;
             return new XpsWritingProgressChangeLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWritingLevel != null ? retObjectWritingLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

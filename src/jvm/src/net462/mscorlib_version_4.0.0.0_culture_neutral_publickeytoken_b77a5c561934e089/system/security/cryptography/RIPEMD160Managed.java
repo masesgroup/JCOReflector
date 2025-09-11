@@ -162,7 +162,7 @@ public class RIPEMD160Managed extends RIPEMD160  {
     
     public void Initialize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize");
         } catch (JCNativeException jcne) {

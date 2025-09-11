@@ -172,9 +172,13 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
     
     public int getSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSequence = null;
         try {
-            return (int)classInstance.Get("Sequence");
+            retObjectSequence = classInstance.Get("Sequence");
+            return (int)retObjectSequence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSequence != null ? retObjectSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
 
     public PrintTicket getCurrentPrintTicket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPrintTicket = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentPrintTicket");
+            retObjectCurrentPrintTicket = classInstance.Get("CurrentPrintTicket");
+            JCObject val = (JCObject)retObjectCurrentPrintTicket;
             return new PrintTicket(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentPrintTicket != null ? retObjectCurrentPrintTicket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
 
     public void setCurrentPrintTicket(PrintTicket CurrentPrintTicket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CurrentPrintTicket", CurrentPrintTicket == null ? null : CurrentPrintTicket.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class WritingPrintTicketRequiredEventArgs extends EventArgs  {
 
     public PrintTicketLevel getCurrentPrintTicketLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentPrintTicketLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentPrintTicketLevel");
+            retObjectCurrentPrintTicketLevel = classInstance.Get("CurrentPrintTicketLevel");
+            JCObject val = (JCObject)retObjectCurrentPrintTicketLevel;
             return new PrintTicketLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentPrintTicketLevel != null ? retObjectCurrentPrintTicketLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

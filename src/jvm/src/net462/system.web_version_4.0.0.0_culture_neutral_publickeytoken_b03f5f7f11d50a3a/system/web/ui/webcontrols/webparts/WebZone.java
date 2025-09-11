@@ -162,10 +162,14 @@ public class WebZone extends CompositeControl  {
     
     public PartChromeType GetEffectiveChromeType(Part part) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEffectiveChromeType = null;
         try {
-            JCObject objGetEffectiveChromeType = (JCObject)classInstance.Invoke("GetEffectiveChromeType", part == null ? null : part.getJCOInstance());
+            retObjectGetEffectiveChromeType = classInstance.Invoke("GetEffectiveChromeType", part == null ? null : part.getJCOInstance());
+            JCObject objGetEffectiveChromeType = (JCObject)retObjectGetEffectiveChromeType;
             return new PartChromeType(objGetEffectiveChromeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEffectiveChromeType != null ? retObjectGetEffectiveChromeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class WebZone extends CompositeControl  {
 
     public void RenderBeginTag(HtmlTextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RenderBeginTag", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class WebZone extends CompositeControl  {
     
     public int getPadding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPadding = null;
         try {
-            return (int)classInstance.Get("Padding");
+            retObjectPadding = classInstance.Get("Padding");
+            return (int)retObjectPadding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPadding != null ? retObjectPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class WebZone extends CompositeControl  {
 
     public void setPadding(int Padding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Padding", Padding);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class WebZone extends CompositeControl  {
 
     public java.lang.String getBackImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("BackImageUrl");
+            retObjectBackImageUrl = classInstance.Get("BackImageUrl");
+            return (java.lang.String)retObjectBackImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBackImageUrl != null ? retObjectBackImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class WebZone extends CompositeControl  {
 
     public void setBackImageUrl(java.lang.String BackImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BackImageUrl", BackImageUrl);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class WebZone extends CompositeControl  {
 
     public java.lang.String getEmptyZoneText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyZoneText = null;
         try {
-            return (java.lang.String)classInstance.Get("EmptyZoneText");
+            retObjectEmptyZoneText = classInstance.Get("EmptyZoneText");
+            return (java.lang.String)retObjectEmptyZoneText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmptyZoneText != null ? retObjectEmptyZoneText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class WebZone extends CompositeControl  {
 
     public void setEmptyZoneText(java.lang.String EmptyZoneText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmptyZoneText", EmptyZoneText);
         } catch (JCNativeException jcne) {
@@ -247,9 +263,13 @@ public class WebZone extends CompositeControl  {
 
     public java.lang.String getHeaderText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderText = null;
         try {
-            return (java.lang.String)classInstance.Get("HeaderText");
+            retObjectHeaderText = classInstance.Get("HeaderText");
+            return (java.lang.String)retObjectHeaderText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHeaderText != null ? retObjectHeaderText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +277,7 @@ public class WebZone extends CompositeControl  {
 
     public void setHeaderText(java.lang.String HeaderText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderText", HeaderText);
         } catch (JCNativeException jcne) {
@@ -267,10 +287,14 @@ public class WebZone extends CompositeControl  {
 
     public ButtonType getVerbButtonType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbButtonType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerbButtonType");
+            retObjectVerbButtonType = classInstance.Get("VerbButtonType");
+            JCObject val = (JCObject)retObjectVerbButtonType;
             return new ButtonType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbButtonType != null ? retObjectVerbButtonType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class WebZone extends CompositeControl  {
 
     public void setVerbButtonType(ButtonType VerbButtonType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerbButtonType", VerbButtonType == null ? null : VerbButtonType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,10 +312,14 @@ public class WebZone extends CompositeControl  {
 
     public Style getEmptyZoneTextStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmptyZoneTextStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmptyZoneTextStyle");
+            retObjectEmptyZoneTextStyle = classInstance.Get("EmptyZoneTextStyle");
+            JCObject val = (JCObject)retObjectEmptyZoneTextStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmptyZoneTextStyle != null ? retObjectEmptyZoneTextStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,10 +327,14 @@ public class WebZone extends CompositeControl  {
 
     public Style getErrorStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorStyle");
+            retObjectErrorStyle = classInstance.Get("ErrorStyle");
+            JCObject val = (JCObject)retObjectErrorStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorStyle != null ? retObjectErrorStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,10 +342,14 @@ public class WebZone extends CompositeControl  {
 
     public Style getPartChromeStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartChromeStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartChromeStyle");
+            retObjectPartChromeStyle = classInstance.Get("PartChromeStyle");
+            JCObject val = (JCObject)retObjectPartChromeStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartChromeStyle != null ? retObjectPartChromeStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,10 +357,14 @@ public class WebZone extends CompositeControl  {
 
     public Style getVerbStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerbStyle");
+            retObjectVerbStyle = classInstance.Get("VerbStyle");
+            JCObject val = (JCObject)retObjectVerbStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerbStyle != null ? retObjectVerbStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,10 +372,14 @@ public class WebZone extends CompositeControl  {
 
     public TableStyle getPartStyle() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartStyle");
+            retObjectPartStyle = classInstance.Get("PartStyle");
+            JCObject val = (JCObject)retObjectPartStyle;
             return new TableStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartStyle != null ? retObjectPartStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,10 +387,14 @@ public class WebZone extends CompositeControl  {
 
     public Unit getPartChromePadding() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartChromePadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartChromePadding");
+            retObjectPartChromePadding = classInstance.Get("PartChromePadding");
+            JCObject val = (JCObject)retObjectPartChromePadding;
             return new Unit(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartChromePadding != null ? retObjectPartChromePadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +402,7 @@ public class WebZone extends CompositeControl  {
 
     public void setPartChromePadding(Unit PartChromePadding) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartChromePadding", PartChromePadding == null ? null : PartChromePadding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,10 +412,14 @@ public class WebZone extends CompositeControl  {
 
     public PartChromeType getPartChromeType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartChromeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartChromeType");
+            retObjectPartChromeType = classInstance.Get("PartChromeType");
+            JCObject val = (JCObject)retObjectPartChromeType;
             return new PartChromeType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartChromeType != null ? retObjectPartChromeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,7 +427,7 @@ public class WebZone extends CompositeControl  {
 
     public void setPartChromeType(PartChromeType PartChromeType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PartChromeType", PartChromeType == null ? null : PartChromeType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -385,10 +437,14 @@ public class WebZone extends CompositeControl  {
 
     public TitleStyle getFooterStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFooterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FooterStyle");
+            retObjectFooterStyle = classInstance.Get("FooterStyle");
+            JCObject val = (JCObject)retObjectFooterStyle;
             return new TitleStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFooterStyle != null ? retObjectFooterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,10 +452,14 @@ public class WebZone extends CompositeControl  {
 
     public TitleStyle getHeaderStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeaderStyle");
+            retObjectHeaderStyle = classInstance.Get("HeaderStyle");
+            JCObject val = (JCObject)retObjectHeaderStyle;
             return new TitleStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaderStyle != null ? retObjectHeaderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,10 +467,14 @@ public class WebZone extends CompositeControl  {
 
     public TitleStyle getPartTitleStyle() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartTitleStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PartTitleStyle");
+            retObjectPartTitleStyle = classInstance.Get("PartTitleStyle");
+            JCObject val = (JCObject)retObjectPartTitleStyle;
             return new TitleStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPartTitleStyle != null ? retObjectPartTitleStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

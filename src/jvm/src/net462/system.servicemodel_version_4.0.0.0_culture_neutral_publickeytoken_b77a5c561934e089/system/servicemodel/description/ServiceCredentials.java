@@ -175,10 +175,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
     
     public SecurityTokenManager CreateSecurityTokenManager() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenManager = null;
         try {
-            JCObject objCreateSecurityTokenManager = (JCObject)classInstance.Invoke("CreateSecurityTokenManager");
+            retObjectCreateSecurityTokenManager = classInstance.Invoke("CreateSecurityTokenManager");
+            JCObject objCreateSecurityTokenManager = (JCObject)retObjectCreateSecurityTokenManager;
             return new SecurityTokenManager(objCreateSecurityTokenManager);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenManager != null ? retObjectCreateSecurityTokenManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +190,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public ServiceCredentials Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new ServiceCredentials(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
      */
     @Deprecated 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
     /**
@@ -210,7 +218,7 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
      */
     @Deprecated 
     public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
     }
 
 
@@ -219,9 +227,13 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
     
     public boolean getUseIdentityConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseIdentityConfiguration = null;
         try {
-            return (boolean)classInstance.Get("UseIdentityConfiguration");
+            retObjectUseIdentityConfiguration = classInstance.Get("UseIdentityConfiguration");
+            return (boolean)retObjectUseIdentityConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseIdentityConfiguration != null ? retObjectUseIdentityConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +241,7 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public void setUseIdentityConfiguration(boolean UseIdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseIdentityConfiguration", UseIdentityConfiguration);
         } catch (JCNativeException jcne) {
@@ -239,10 +251,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public IdentityConfiguration getIdentityConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdentityConfiguration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdentityConfiguration");
+            retObjectIdentityConfiguration = classInstance.Get("IdentityConfiguration");
+            JCObject val = (JCObject)retObjectIdentityConfiguration;
             return new IdentityConfiguration(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdentityConfiguration != null ? retObjectIdentityConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +266,7 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public void setIdentityConfiguration(IdentityConfiguration IdentityConfiguration) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdentityConfiguration", IdentityConfiguration == null ? null : IdentityConfiguration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -260,10 +276,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public ExceptionMapper getExceptionMapper() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionMapper = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionMapper");
+            retObjectExceptionMapper = classInstance.Get("ExceptionMapper");
+            JCObject val = (JCObject)retObjectExceptionMapper;
             return new ExceptionMapper(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionMapper != null ? retObjectExceptionMapper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public void setExceptionMapper(ExceptionMapper ExceptionMapper) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExceptionMapper", ExceptionMapper == null ? null : ExceptionMapper.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -281,10 +301,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public IssuedTokenServiceCredential getIssuedTokenAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuedTokenAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IssuedTokenAuthentication");
+            retObjectIssuedTokenAuthentication = classInstance.Get("IssuedTokenAuthentication");
+            JCObject val = (JCObject)retObjectIssuedTokenAuthentication;
             return new IssuedTokenServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuedTokenAuthentication != null ? retObjectIssuedTokenAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +316,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public PeerCredential getPeer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Peer");
+            retObjectPeer = classInstance.Get("Peer");
+            JCObject val = (JCObject)retObjectPeer;
             return new PeerCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeer != null ? retObjectPeer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,10 +331,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public SecureConversationServiceCredential getSecureConversationAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecureConversationAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecureConversationAuthentication");
+            retObjectSecureConversationAuthentication = classInstance.Get("SecureConversationAuthentication");
+            JCObject val = (JCObject)retObjectSecureConversationAuthentication;
             return new SecureConversationServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecureConversationAuthentication != null ? retObjectSecureConversationAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -314,10 +346,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public UserNamePasswordServiceCredential getUserNameAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNameAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserNameAuthentication");
+            retObjectUserNameAuthentication = classInstance.Get("UserNameAuthentication");
+            JCObject val = (JCObject)retObjectUserNameAuthentication;
             return new UserNamePasswordServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserNameAuthentication != null ? retObjectUserNameAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -325,10 +361,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public WindowsServiceCredential getWindowsAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowsAuthentication = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowsAuthentication");
+            retObjectWindowsAuthentication = classInstance.Get("WindowsAuthentication");
+            JCObject val = (JCObject)retObjectWindowsAuthentication;
             return new WindowsServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowsAuthentication != null ? retObjectWindowsAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,10 +376,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public X509CertificateInitiatorServiceCredential getClientCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientCertificate");
+            retObjectClientCertificate = classInstance.Get("ClientCertificate");
+            JCObject val = (JCObject)retObjectClientCertificate;
             return new X509CertificateInitiatorServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientCertificate != null ? retObjectClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,10 +391,14 @@ public class ServiceCredentials extends SecurityCredentialsManager  {
 
     public X509CertificateRecipientServiceCredential getServiceCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServiceCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ServiceCertificate");
+            retObjectServiceCertificate = classInstance.Get("ServiceCertificate");
+            JCObject val = (JCObject)retObjectServiceCertificate;
             return new X509CertificateRecipientServiceCredential(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectServiceCertificate != null ? retObjectServiceCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

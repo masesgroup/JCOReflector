@@ -170,10 +170,14 @@ public class DoWorkEventArgs extends CancelEventArgs  {
     
     public NetObject getArgument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Argument");
+            retObjectArgument = classInstance.Get("Argument");
+            JCObject val = (JCObject)retObjectArgument;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgument != null ? retObjectArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class DoWorkEventArgs extends CancelEventArgs  {
 
     public NetObject getResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Result");
+            retObjectResult = classInstance.Get("Result");
+            JCObject val = (JCObject)retObjectResult;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResult != null ? retObjectResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,7 +200,7 @@ public class DoWorkEventArgs extends CancelEventArgs  {
 
     public void setResult(NetObject Result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Result", Result == null ? null : Result.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -155,10 +155,14 @@ public class AsyncOperationManager extends NetObject  {
     
     public static AsyncOperation CreateOperation(NetObject userSuppliedState) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateOperation = null;
         try {
-            JCObject objCreateOperation = (JCObject)classType.Invoke("CreateOperation", userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
+            retObjectCreateOperation = classType.Invoke("CreateOperation", userSuppliedState == null ? null : userSuppliedState.getJCOInstance());
+            JCObject objCreateOperation = (JCObject)retObjectCreateOperation;
             return new AsyncOperation(objCreateOperation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateOperation != null ? retObjectCreateOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class AsyncOperationManager extends NetObject  {
     
     public static SynchronizationContext getSynchronizationContext() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSynchronizationContext = null;
         try {
-            JCObject val = (JCObject)classType.Get("SynchronizationContext");
+            retObjectSynchronizationContext = classType.Get("SynchronizationContext");
+            JCObject val = (JCObject)retObjectSynchronizationContext;
             return new SynchronizationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizationContext != null ? retObjectSynchronizationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class AsyncOperationManager extends NetObject  {
 
     public static void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
         } catch (JCNativeException jcne) {

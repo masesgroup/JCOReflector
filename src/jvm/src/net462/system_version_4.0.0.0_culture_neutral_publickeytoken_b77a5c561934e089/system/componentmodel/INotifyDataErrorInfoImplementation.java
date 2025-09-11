@@ -142,10 +142,14 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
     
     public IEnumerable GetErrors(java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetErrors = null;
         try {
-            JCObject objGetErrors = (JCObject)classInstance.Invoke("GetErrors", propertyName);
+            retObjectGetErrors = classInstance.Invoke("GetErrors", propertyName);
+            JCObject objGetErrors = (JCObject)retObjectGetErrors;
             return new IEnumerableImplementation(objGetErrors);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetErrors != null ? retObjectGetErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,9 +161,13 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
     
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasErrors = null;
         try {
-            return (boolean)classInstance.Get("HasErrors");
+            retObjectHasErrors = classInstance.Get("HasErrors");
+            return (boolean)retObjectHasErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasErrors != null ? retObjectHasErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

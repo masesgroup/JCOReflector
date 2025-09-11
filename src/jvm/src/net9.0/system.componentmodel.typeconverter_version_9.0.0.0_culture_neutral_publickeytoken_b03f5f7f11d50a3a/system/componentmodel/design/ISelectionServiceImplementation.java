@@ -146,9 +146,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
     
     public boolean GetComponentSelected(NetObject component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponentSelected = null;
         try {
-            return (boolean)classInstance.Invoke("GetComponentSelected", component == null ? null : component.getJCOInstance());
+            retObjectGetComponentSelected = classInstance.Invoke("GetComponentSelected", component == null ? null : component.getJCOInstance());
+            return (boolean)retObjectGetComponentSelected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetComponentSelected != null ? retObjectGetComponentSelected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,10 +160,14 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public ICollection GetSelectedComponents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedComponents = null;
         try {
-            JCObject objGetSelectedComponents = (JCObject)classInstance.Invoke("GetSelectedComponents");
+            retObjectGetSelectedComponents = classInstance.Invoke("GetSelectedComponents");
+            JCObject objGetSelectedComponents = (JCObject)retObjectGetSelectedComponents;
             return new ICollectionImplementation(objGetSelectedComponents);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedComponents != null ? retObjectGetSelectedComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +175,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void SetSelectedComponents(ICollection components, SelectionTypes selectionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectedComponents", components == null ? null : components.getJCOInstance(), selectionType == null ? null : selectionType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +185,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void SetSelectedComponents(ICollection components) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectedComponents", components == null ? null : components.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -191,9 +199,13 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
     
     public int getSelectionCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionCount = null;
         try {
-            return (int)classInstance.Get("SelectionCount");
+            retObjectSelectionCount = classInstance.Get("SelectionCount");
+            return (int)retObjectSelectionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSelectionCount != null ? retObjectSelectionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +213,14 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public NetObject getPrimarySelection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimarySelection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimarySelection");
+            retObjectPrimarySelection = classInstance.Get("PrimarySelection");
+            JCObject val = (JCObject)retObjectPrimarySelection;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimarySelection != null ? retObjectPrimarySelection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +233,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void addSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -227,7 +243,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void removeSelectionChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanged", handler);
         } catch (JCNativeException jcne) {
@@ -237,7 +253,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void addSelectionChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SelectionChanging", handler);
         } catch (JCNativeException jcne) {
@@ -247,7 +263,7 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
 
     public void removeSelectionChanging(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SelectionChanging", handler);
         } catch (JCNativeException jcne) {

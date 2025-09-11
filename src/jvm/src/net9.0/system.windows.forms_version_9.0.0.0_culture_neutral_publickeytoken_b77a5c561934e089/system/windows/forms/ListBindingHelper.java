@@ -155,10 +155,14 @@ public class ListBindingHelper extends NetObject  {
     
     public static PropertyDescriptorCollection GetListItemProperties(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListItemProperties = null;
         try {
-            JCObject objGetListItemProperties = (JCObject)classType.Invoke("GetListItemProperties", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
+            retObjectGetListItemProperties = classType.Invoke("GetListItemProperties", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
+            JCObject objGetListItemProperties = (JCObject)retObjectGetListItemProperties;
             return new PropertyDescriptorCollection(objGetListItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetListItemProperties != null ? retObjectGetListItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static PropertyDescriptorCollection GetListItemProperties(NetObject dataSource, java.lang.String dataMember, PropertyDescriptor[] listAccessors) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListItemProperties = null;
         try {
-            JCObject objGetListItemProperties = (JCObject)classType.Invoke("GetListItemProperties", dataSource == null ? null : dataSource.getJCOInstance(), dataMember, toObjectFromArray(listAccessors));
+            retObjectGetListItemProperties = classType.Invoke("GetListItemProperties", dataSource == null ? null : dataSource.getJCOInstance(), dataMember, toObjectFromArray(listAccessors));
+            JCObject objGetListItemProperties = (JCObject)retObjectGetListItemProperties;
             return new PropertyDescriptorCollection(objGetListItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetListItemProperties != null ? retObjectGetListItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static PropertyDescriptorCollection GetListItemProperties(NetObject list) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListItemProperties = null;
         try {
-            JCObject objGetListItemProperties = (JCObject)classType.Invoke("GetListItemProperties", list == null ? null : list.getJCOInstance());
+            retObjectGetListItemProperties = classType.Invoke("GetListItemProperties", list == null ? null : list.getJCOInstance());
+            JCObject objGetListItemProperties = (JCObject)retObjectGetListItemProperties;
             return new PropertyDescriptorCollection(objGetListItemProperties);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetListItemProperties != null ? retObjectGetListItemProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +200,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetList = null;
         try {
-            JCObject objGetList = (JCObject)classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            retObjectGetList = classType.Invoke("GetList", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            JCObject objGetList = (JCObject)retObjectGetList;
             return new NetObject(objGetList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetList != null ? retObjectGetList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +215,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static NetObject GetList(NetObject list) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetList = null;
         try {
-            JCObject objGetList = (JCObject)classType.Invoke("GetList", list == null ? null : list.getJCOInstance());
+            retObjectGetList = classType.Invoke("GetList", list == null ? null : list.getJCOInstance());
+            JCObject objGetList = (JCObject)retObjectGetList;
             return new NetObject(objGetList);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetList != null ? retObjectGetList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class ListBindingHelper extends NetObject  {
 
     public static java.lang.String GetListName(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListName = null;
         try {
-            return (java.lang.String)classType.Invoke("GetListName", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
+            retObjectGetListName = classType.Invoke("GetListName", list == null ? null : list.getJCOInstance(), toObjectFromArray(listAccessors));
+            return (java.lang.String)retObjectGetListName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetListName != null ? retObjectGetListName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +244,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static NetType GetListItemType(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListItemType = null;
         try {
-            JCObject objGetListItemType = (JCObject)classType.Invoke("GetListItemType", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            retObjectGetListItemType = classType.Invoke("GetListItemType", dataSource == null ? null : dataSource.getJCOInstance(), dataMember);
+            JCObject objGetListItemType = (JCObject)retObjectGetListItemType;
             return new NetType(objGetListItemType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetListItemType != null ? retObjectGetListItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,10 +259,14 @@ public class ListBindingHelper extends NetObject  {
 
     public static NetType GetListItemType(NetObject list) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetListItemType = null;
         try {
-            JCObject objGetListItemType = (JCObject)classType.Invoke("GetListItemType", list == null ? null : list.getJCOInstance());
+            retObjectGetListItemType = classType.Invoke("GetListItemType", list == null ? null : list.getJCOInstance());
+            JCObject objGetListItemType = (JCObject)retObjectGetListItemType;
             return new NetType(objGetListItemType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetListItemType != null ? retObjectGetListItemType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

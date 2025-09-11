@@ -235,9 +235,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
     
     public boolean Match(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", message == null ? null : message.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", message == null ? null : message.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,9 +249,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public boolean Match(MessageBuffer messageBuffer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", messageBuffer == null ? null : messageBuffer.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", messageBuffer == null ? null : messageBuffer.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +263,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public boolean Match(SeekableXPathNavigator navigator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,9 +277,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public boolean Match(XPathNavigator navigator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.xpath.XPathException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", navigator == null ? null : navigator.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +291,14 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public static XmlSchemaType StaticGetSchema(XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.RankException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStaticGetSchema = null;
         try {
-            JCObject objStaticGetSchema = (JCObject)classType.Invoke("StaticGetSchema", schemas == null ? null : schemas.getJCOInstance());
+            retObjectStaticGetSchema = classType.Invoke("StaticGetSchema", schemas == null ? null : schemas.getJCOInstance());
+            JCObject objStaticGetSchema = (JCObject)retObjectStaticGetSchema;
             return new XmlSchemaType(objStaticGetSchema);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStaticGetSchema != null ? retObjectStaticGetSchema.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +306,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public void TrimToSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TrimToSize");
         } catch (JCNativeException jcne) {
@@ -296,7 +316,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public void WriteXPathTo(XmlWriter writer, java.lang.String prefix, java.lang.String localName, java.lang.String ns, boolean writeNamespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXPathTo", writer == null ? null : writer.getJCOInstance(), prefix, localName, ns, writeNamespaces);
         } catch (JCNativeException jcne) {
@@ -310,7 +330,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
      */
     @Deprecated 
     public XmlSchema GetSchema() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -319,7 +339,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
      */
     @Deprecated 
     public void ReadXml(XmlReader reader) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
     /**
@@ -328,7 +348,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
      */
     @Deprecated 
     public void WriteXml(XmlWriter writer) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 
@@ -337,9 +357,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
     
     public int getNodeQuota() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeQuota = null;
         try {
-            return (int)classInstance.Get("NodeQuota");
+            retObjectNodeQuota = classInstance.Get("NodeQuota");
+            return (int)retObjectNodeQuota;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNodeQuota != null ? retObjectNodeQuota.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,7 +371,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public void setNodeQuota(int NodeQuota) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NodeQuota", NodeQuota);
         } catch (JCNativeException jcne) {
@@ -357,9 +381,13 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public java.lang.String getXPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXPath = null;
         try {
-            return (java.lang.String)classInstance.Get("XPath");
+            retObjectXPath = classInstance.Get("XPath");
+            return (java.lang.String)retObjectXPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXPath != null ? retObjectXPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,10 +395,14 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
 
     public XmlNamespaceManager getNamespaces() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaces = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Namespaces");
+            retObjectNamespaces = classInstance.Get("Namespaces");
+            JCObject val = (JCObject)retObjectNamespaces;
             return new XmlNamespaceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaces != null ? retObjectNamespaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

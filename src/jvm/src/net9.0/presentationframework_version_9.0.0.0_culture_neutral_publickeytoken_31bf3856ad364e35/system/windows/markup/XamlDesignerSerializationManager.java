@@ -172,10 +172,14 @@ public class XamlDesignerSerializationManager extends ServiceProviders  {
     
     public XamlWriterMode getXamlWriterMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXamlWriterMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XamlWriterMode");
+            retObjectXamlWriterMode = classInstance.Get("XamlWriterMode");
+            JCObject val = (JCObject)retObjectXamlWriterMode;
             return new XamlWriterMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXamlWriterMode != null ? retObjectXamlWriterMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class XamlDesignerSerializationManager extends ServiceProviders  {
 
     public void setXamlWriterMode(XamlWriterMode XamlWriterMode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XamlWriterMode", XamlWriterMode == null ? null : XamlWriterMode.getJCOInstance());
         } catch (JCNativeException jcne) {

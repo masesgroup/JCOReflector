@@ -156,10 +156,14 @@ public class DynamicUpdateServices extends NetObject  {
     
     public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
         try {
-            JCObject objCreateUpdateMap = (JCObject)classType.Invoke("CreateUpdateMap", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance());
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedWorkflowDefinition == null ? null : updatedWorkflowDefinition.getJCOInstance());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
             return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class DynamicUpdateServices extends NetObject  {
 
     public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUpdateMap = null;
         try {
-            JCObject objCreateUpdateMap = (JCObject)classType.Invoke("CreateUpdateMap", updatedActivityDefinition == null ? null : updatedActivityDefinition.getJCOInstance());
+            retObjectCreateUpdateMap = classType.Invoke("CreateUpdateMap", updatedActivityDefinition == null ? null : updatedActivityDefinition.getJCOInstance());
+            JCObject objCreateUpdateMap = (JCObject)retObjectCreateUpdateMap;
             return new DynamicUpdateMap(objCreateUpdateMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUpdateMap != null ? retObjectCreateUpdateMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class DynamicUpdateServices extends NetObject  {
 
     public static DynamicUpdateMap GetImplementationMap(Activity targetActivity) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetImplementationMap = null;
         try {
-            JCObject objGetImplementationMap = (JCObject)classType.Invoke("GetImplementationMap", targetActivity == null ? null : targetActivity.getJCOInstance());
+            retObjectGetImplementationMap = classType.Invoke("GetImplementationMap", targetActivity == null ? null : targetActivity.getJCOInstance());
+            JCObject objGetImplementationMap = (JCObject)retObjectGetImplementationMap;
             return new DynamicUpdateMap(objGetImplementationMap);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImplementationMap != null ? retObjectGetImplementationMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,7 +201,7 @@ public class DynamicUpdateServices extends NetObject  {
 
     public static void PrepareForUpdate(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareForUpdate", workflowDefinitionToBeUpdated == null ? null : workflowDefinitionToBeUpdated.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -199,7 +211,7 @@ public class DynamicUpdateServices extends NetObject  {
 
     public static void PrepareForUpdate(ActivityBuilder activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareForUpdate", activityDefinitionToBeUpdated == null ? null : activityDefinitionToBeUpdated.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -209,7 +221,7 @@ public class DynamicUpdateServices extends NetObject  {
 
     public static void SetImplementationMap(Activity targetActivity, DynamicUpdateMap implementationMap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetImplementationMap", targetActivity == null ? null : targetActivity.getJCOInstance(), implementationMap == null ? null : implementationMap.getJCOInstance());
         } catch (JCNativeException jcne) {

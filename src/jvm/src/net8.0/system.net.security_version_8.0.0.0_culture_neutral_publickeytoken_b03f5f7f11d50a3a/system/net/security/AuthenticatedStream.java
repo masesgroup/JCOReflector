@@ -155,10 +155,14 @@ public class AuthenticatedStream extends Stream  {
     
     public ValueTask DisposeAsync() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisposeAsync = null;
         try {
-            JCObject objDisposeAsync = (JCObject)classInstance.Invoke("DisposeAsync");
+            retObjectDisposeAsync = classInstance.Invoke("DisposeAsync");
+            JCObject objDisposeAsync = (JCObject)retObjectDisposeAsync;
             return new ValueTask(objDisposeAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisposeAsync != null ? retObjectDisposeAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class AuthenticatedStream extends Stream  {
     
     public boolean getIsAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("IsAuthenticated");
+            retObjectIsAuthenticated = classInstance.Get("IsAuthenticated");
+            return (boolean)retObjectIsAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAuthenticated != null ? retObjectIsAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +188,13 @@ public class AuthenticatedStream extends Stream  {
 
     public boolean getIsEncrypted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEncrypted = null;
         try {
-            return (boolean)classInstance.Get("IsEncrypted");
+            retObjectIsEncrypted = classInstance.Get("IsEncrypted");
+            return (boolean)retObjectIsEncrypted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEncrypted != null ? retObjectIsEncrypted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class AuthenticatedStream extends Stream  {
 
     public boolean getIsMutuallyAuthenticated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMutuallyAuthenticated = null;
         try {
-            return (boolean)classInstance.Get("IsMutuallyAuthenticated");
+            retObjectIsMutuallyAuthenticated = classInstance.Get("IsMutuallyAuthenticated");
+            return (boolean)retObjectIsMutuallyAuthenticated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMutuallyAuthenticated != null ? retObjectIsMutuallyAuthenticated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class AuthenticatedStream extends Stream  {
 
     public boolean getIsServer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsServer = null;
         try {
-            return (boolean)classInstance.Get("IsServer");
+            retObjectIsServer = classInstance.Get("IsServer");
+            return (boolean)retObjectIsServer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsServer != null ? retObjectIsServer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class AuthenticatedStream extends Stream  {
 
     public boolean getIsSigned() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSigned = null;
         try {
-            return (boolean)classInstance.Get("IsSigned");
+            retObjectIsSigned = classInstance.Get("IsSigned");
+            return (boolean)retObjectIsSigned;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSigned != null ? retObjectIsSigned.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +244,13 @@ public class AuthenticatedStream extends Stream  {
 
     public boolean getLeaveInnerStreamOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeaveInnerStreamOpen = null;
         try {
-            return (boolean)classInstance.Get("LeaveInnerStreamOpen");
+            retObjectLeaveInnerStreamOpen = classInstance.Get("LeaveInnerStreamOpen");
+            return (boolean)retObjectLeaveInnerStreamOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLeaveInnerStreamOpen != null ? retObjectLeaveInnerStreamOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

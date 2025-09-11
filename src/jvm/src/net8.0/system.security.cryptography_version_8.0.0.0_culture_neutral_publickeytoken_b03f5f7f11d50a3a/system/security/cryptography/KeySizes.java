@@ -169,9 +169,13 @@ public class KeySizes extends NetObject  {
     
     public int getMaxSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxSize = null;
         try {
-            return (int)classInstance.Get("MaxSize");
+            retObjectMaxSize = classInstance.Get("MaxSize");
+            return (int)retObjectMaxSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxSize != null ? retObjectMaxSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class KeySizes extends NetObject  {
 
     public void setMaxSize(int MaxSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxSize", MaxSize);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class KeySizes extends NetObject  {
 
     public int getMinSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinSize = null;
         try {
-            return (int)classInstance.Get("MinSize");
+            retObjectMinSize = classInstance.Get("MinSize");
+            return (int)retObjectMinSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinSize != null ? retObjectMinSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class KeySizes extends NetObject  {
 
     public void setMinSize(int MinSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinSize", MinSize);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class KeySizes extends NetObject  {
 
     public int getSkipSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipSize = null;
         try {
-            return (int)classInstance.Get("SkipSize");
+            retObjectSkipSize = classInstance.Get("SkipSize");
+            return (int)retObjectSkipSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSkipSize != null ? retObjectSkipSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class KeySizes extends NetObject  {
 
     public void setSkipSize(int SkipSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipSize", SkipSize);
         } catch (JCNativeException jcne) {

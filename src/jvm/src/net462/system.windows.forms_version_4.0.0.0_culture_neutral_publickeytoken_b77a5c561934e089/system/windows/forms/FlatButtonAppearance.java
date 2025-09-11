@@ -160,9 +160,13 @@ public class FlatButtonAppearance extends NetObject  {
     
     public int getBorderSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderSize = null;
         try {
-            return (int)classInstance.Get("BorderSize");
+            retObjectBorderSize = classInstance.Get("BorderSize");
+            return (int)retObjectBorderSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBorderSize != null ? retObjectBorderSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,7 +174,7 @@ public class FlatButtonAppearance extends NetObject  {
 
     public void setBorderSize(int BorderSize) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderSize", BorderSize);
         } catch (JCNativeException jcne) {
@@ -180,10 +184,14 @@ public class FlatButtonAppearance extends NetObject  {
 
     public Color getBorderColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderColor");
+            retObjectBorderColor = classInstance.Get("BorderColor");
+            JCObject val = (JCObject)retObjectBorderColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderColor != null ? retObjectBorderColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +199,7 @@ public class FlatButtonAppearance extends NetObject  {
 
     public void setBorderColor(Color BorderColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderColor", BorderColor == null ? null : BorderColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -201,10 +209,14 @@ public class FlatButtonAppearance extends NetObject  {
 
     public Color getCheckedBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCheckedBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CheckedBackColor");
+            retObjectCheckedBackColor = classInstance.Get("CheckedBackColor");
+            JCObject val = (JCObject)retObjectCheckedBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCheckedBackColor != null ? retObjectCheckedBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class FlatButtonAppearance extends NetObject  {
 
     public void setCheckedBackColor(Color CheckedBackColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CheckedBackColor", CheckedBackColor == null ? null : CheckedBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -222,10 +234,14 @@ public class FlatButtonAppearance extends NetObject  {
 
     public Color getMouseDownBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouseDownBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseDownBackColor");
+            retObjectMouseDownBackColor = classInstance.Get("MouseDownBackColor");
+            JCObject val = (JCObject)retObjectMouseDownBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseDownBackColor != null ? retObjectMouseDownBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +249,7 @@ public class FlatButtonAppearance extends NetObject  {
 
     public void setMouseDownBackColor(Color MouseDownBackColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MouseDownBackColor", MouseDownBackColor == null ? null : MouseDownBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,10 +259,14 @@ public class FlatButtonAppearance extends NetObject  {
 
     public Color getMouseOverBackColor() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouseOverBackColor = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseOverBackColor");
+            retObjectMouseOverBackColor = classInstance.Get("MouseOverBackColor");
+            JCObject val = (JCObject)retObjectMouseOverBackColor;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseOverBackColor != null ? retObjectMouseOverBackColor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +274,7 @@ public class FlatButtonAppearance extends NetObject  {
 
     public void setMouseOverBackColor(Color MouseOverBackColor) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MouseOverBackColor", MouseOverBackColor == null ? null : MouseOverBackColor.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -171,10 +171,14 @@ public class QueryPageSettingsEventArgs extends PrintEventArgs  {
     
     public PageSettings getPageSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPageSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PageSettings");
+            retObjectPageSettings = classInstance.Get("PageSettings");
+            JCObject val = (JCObject)retObjectPageSettings;
             return new PageSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPageSettings != null ? retObjectPageSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class QueryPageSettingsEventArgs extends PrintEventArgs  {
 
     public void setPageSettings(PageSettings PageSettings) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PageSettings", PageSettings == null ? null : PageSettings.getJCOInstance());
         } catch (JCNativeException jcne) {

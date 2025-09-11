@@ -153,7 +153,7 @@ public class ServiceHostingEnvironment extends NetObject  {
     
     public static void EnsureInitialized() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnsureInitialized");
         } catch (JCNativeException jcne) {
@@ -163,7 +163,7 @@ public class ServiceHostingEnvironment extends NetObject  {
 
     public static void EnsureServiceAvailable(java.lang.String virtualPath) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.web.HttpException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.runtime.interopservices.COMException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("EnsureServiceAvailable", virtualPath);
         } catch (JCNativeException jcne) {
@@ -177,9 +177,13 @@ public class ServiceHostingEnvironment extends NetObject  {
     
     public static boolean getAspNetCompatibilityEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAspNetCompatibilityEnabled = null;
         try {
-            return (boolean)classType.Get("AspNetCompatibilityEnabled");
+            retObjectAspNetCompatibilityEnabled = classType.Get("AspNetCompatibilityEnabled");
+            return (boolean)retObjectAspNetCompatibilityEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAspNetCompatibilityEnabled != null ? retObjectAspNetCompatibilityEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +191,13 @@ public class ServiceHostingEnvironment extends NetObject  {
 
     public static boolean getMultipleSiteBindingsEnabled() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultipleSiteBindingsEnabled = null;
         try {
-            return (boolean)classType.Get("MultipleSiteBindingsEnabled");
+            retObjectMultipleSiteBindingsEnabled = classType.Get("MultipleSiteBindingsEnabled");
+            return (boolean)retObjectMultipleSiteBindingsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultipleSiteBindingsEnabled != null ? retObjectMultipleSiteBindingsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

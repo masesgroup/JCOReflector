@@ -166,10 +166,14 @@ public class ConstantExpectedAttribute extends Attribute  {
     
     public NetObject getMax() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMax = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Max");
+            retObjectMax = classInstance.Get("Max");
+            JCObject val = (JCObject)retObjectMax;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMax != null ? retObjectMax.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ConstantExpectedAttribute extends Attribute  {
 
     public void setMax(NetObject Max) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Max", Max == null ? null : Max.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class ConstantExpectedAttribute extends Attribute  {
 
     public NetObject getMin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Min");
+            retObjectMin = classInstance.Get("Min");
+            JCObject val = (JCObject)retObjectMin;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMin != null ? retObjectMin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ConstantExpectedAttribute extends Attribute  {
 
     public void setMin(NetObject Min) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Min", Min == null ? null : Min.getJCOInstance());
         } catch (JCNativeException jcne) {

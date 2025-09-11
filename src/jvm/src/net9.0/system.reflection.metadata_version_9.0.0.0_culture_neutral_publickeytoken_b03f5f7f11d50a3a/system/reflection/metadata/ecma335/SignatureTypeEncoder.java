@@ -176,10 +176,14 @@ public class SignatureTypeEncoder extends ValueType  {
     
     public CustomModifiersEncoder CustomModifiers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomModifiers = null;
         try {
-            JCObject objCustomModifiers = (JCObject)classInstance.Invoke("CustomModifiers");
+            retObjectCustomModifiers = classInstance.Invoke("CustomModifiers");
+            JCObject objCustomModifiers = (JCObject)retObjectCustomModifiers;
             return new CustomModifiersEncoder(objCustomModifiers);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomModifiers != null ? retObjectCustomModifiers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +191,14 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public GenericTypeArgumentsEncoder GenericInstantiation(EntityHandle genericType, int genericArgumentCount, boolean isValueType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericInstantiation = null;
         try {
-            JCObject objGenericInstantiation = (JCObject)classInstance.Invoke("GenericInstantiation", genericType == null ? null : genericType.getJCOInstance(), genericArgumentCount, isValueType);
+            retObjectGenericInstantiation = classInstance.Invoke("GenericInstantiation", genericType == null ? null : genericType.getJCOInstance(), genericArgumentCount, isValueType);
+            JCObject objGenericInstantiation = (JCObject)retObjectGenericInstantiation;
             return new GenericTypeArgumentsEncoder(objGenericInstantiation);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericInstantiation != null ? retObjectGenericInstantiation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,10 +206,14 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public MethodSignatureEncoder FunctionPointer(SignatureCallingConvention convention, FunctionPointerAttributes attributes, int genericParameterCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFunctionPointer = null;
         try {
-            JCObject objFunctionPointer = (JCObject)classInstance.Invoke("FunctionPointer", convention == null ? null : convention.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), genericParameterCount);
+            retObjectFunctionPointer = classInstance.Invoke("FunctionPointer", convention == null ? null : convention.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), genericParameterCount);
+            JCObject objFunctionPointer = (JCObject)retObjectFunctionPointer;
             return new MethodSignatureEncoder(objFunctionPointer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFunctionPointer != null ? retObjectFunctionPointer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,10 +221,14 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public SignatureTypeEncoder Pointer() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPointer = null;
         try {
-            JCObject objPointer = (JCObject)classInstance.Invoke("Pointer");
+            retObjectPointer = classInstance.Invoke("Pointer");
+            JCObject objPointer = (JCObject)retObjectPointer;
             return new SignatureTypeEncoder(objPointer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPointer != null ? retObjectPointer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +236,14 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public SignatureTypeEncoder SZArray() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSZArray = null;
         try {
-            JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
+            retObjectSZArray = classInstance.Invoke("SZArray");
+            JCObject objSZArray = (JCObject)retObjectSZArray;
             return new SignatureTypeEncoder(objSZArray);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSZArray != null ? retObjectSZArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +251,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Array(JCORefOut<SignatureTypeEncoder> elementType, JCORefOut<ArrayShapeEncoder> arrayShape) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Array", elementType.getJCRefOut(), arrayShape.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -241,7 +261,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Boolean() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Boolean");
         } catch (JCNativeException jcne) {
@@ -251,7 +271,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Byte() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Byte");
         } catch (JCNativeException jcne) {
@@ -261,7 +281,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Char() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Char");
         } catch (JCNativeException jcne) {
@@ -271,7 +291,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Double() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Double");
         } catch (JCNativeException jcne) {
@@ -281,7 +301,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void GenericMethodTypeParameter(int parameterIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenericMethodTypeParameter", parameterIndex);
         } catch (JCNativeException jcne) {
@@ -291,7 +311,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void GenericTypeParameter(int parameterIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenericTypeParameter", parameterIndex);
         } catch (JCNativeException jcne) {
@@ -301,7 +321,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Int16() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int16");
         } catch (JCNativeException jcne) {
@@ -311,7 +331,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Int32() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int32");
         } catch (JCNativeException jcne) {
@@ -321,7 +341,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Int64() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Int64");
         } catch (JCNativeException jcne) {
@@ -331,7 +351,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void IntPtr() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IntPtr");
         } catch (JCNativeException jcne) {
@@ -341,7 +361,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Object() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Object");
         } catch (JCNativeException jcne) {
@@ -351,7 +371,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void PrimitiveType(PrimitiveTypeCode type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PrimitiveType", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,7 +381,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void SByte() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SByte");
         } catch (JCNativeException jcne) {
@@ -371,7 +391,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Single() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Single");
         } catch (JCNativeException jcne) {
@@ -381,7 +401,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void String() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("String");
         } catch (JCNativeException jcne) {
@@ -391,7 +411,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void Type(EntityHandle type, boolean isValueType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Type", type == null ? null : type.getJCOInstance(), isValueType);
         } catch (JCNativeException jcne) {
@@ -401,7 +421,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void TypedReference() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("TypedReference");
         } catch (JCNativeException jcne) {
@@ -411,7 +431,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void UInt16() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt16");
         } catch (JCNativeException jcne) {
@@ -421,7 +441,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void UInt32() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt32");
         } catch (JCNativeException jcne) {
@@ -431,7 +451,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void UInt64() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UInt64");
         } catch (JCNativeException jcne) {
@@ -441,7 +461,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void UIntPtr() throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UIntPtr");
         } catch (JCNativeException jcne) {
@@ -451,7 +471,7 @@ public class SignatureTypeEncoder extends ValueType  {
 
     public void VoidPointer() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("VoidPointer");
         } catch (JCNativeException jcne) {
@@ -465,10 +485,14 @@ public class SignatureTypeEncoder extends ValueType  {
     
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

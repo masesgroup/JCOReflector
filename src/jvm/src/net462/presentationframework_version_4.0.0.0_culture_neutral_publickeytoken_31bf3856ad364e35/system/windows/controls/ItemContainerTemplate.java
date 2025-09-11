@@ -166,10 +166,14 @@ public class ItemContainerTemplate extends DataTemplate  {
     
     public NetObject getItemContainerTemplateKey() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemContainerTemplateKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemContainerTemplateKey");
+            retObjectItemContainerTemplateKey = classInstance.Get("ItemContainerTemplateKey");
+            JCObject val = (JCObject)retObjectItemContainerTemplateKey;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemContainerTemplateKey != null ? retObjectItemContainerTemplateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

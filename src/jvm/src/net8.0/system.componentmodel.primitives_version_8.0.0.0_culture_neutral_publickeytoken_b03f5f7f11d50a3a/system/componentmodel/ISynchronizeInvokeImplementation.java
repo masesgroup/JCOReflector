@@ -144,10 +144,14 @@ public class ISynchronizeInvokeImplementation extends NetObject implements ISync
     
     public NetObject EndInvoke(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndInvoke = null;
         try {
-            JCObject objEndInvoke = (JCObject)classInstance.Invoke("EndInvoke", result == null ? null : result.getJCOInstance());
+            retObjectEndInvoke = classInstance.Invoke("EndInvoke", result == null ? null : result.getJCOInstance());
+            JCObject objEndInvoke = (JCObject)retObjectEndInvoke;
             return new NetObject(objEndInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndInvoke != null ? retObjectEndInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,9 +163,13 @@ public class ISynchronizeInvokeImplementation extends NetObject implements ISync
     
     public boolean getInvokeRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvokeRequired = null;
         try {
-            return (boolean)classInstance.Get("InvokeRequired");
+            retObjectInvokeRequired = classInstance.Get("InvokeRequired");
+            return (boolean)retObjectInvokeRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectInvokeRequired != null ? retObjectInvokeRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

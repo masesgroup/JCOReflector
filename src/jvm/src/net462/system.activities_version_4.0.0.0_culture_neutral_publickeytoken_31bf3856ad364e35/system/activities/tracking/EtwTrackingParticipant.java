@@ -167,10 +167,14 @@ public class EtwTrackingParticipant extends TrackingParticipant  {
     
     public Guid getEtwProviderId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEtwProviderId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EtwProviderId");
+            retObjectEtwProviderId = classInstance.Get("EtwProviderId");
+            JCObject val = (JCObject)retObjectEtwProviderId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEtwProviderId != null ? retObjectEtwProviderId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EtwTrackingParticipant extends TrackingParticipant  {
 
     public void setEtwProviderId(Guid EtwProviderId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EtwProviderId", EtwProviderId == null ? null : EtwProviderId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class EtwTrackingParticipant extends TrackingParticipant  {
 
     public java.lang.String getApplicationReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationReference = null;
         try {
-            return (java.lang.String)classInstance.Get("ApplicationReference");
+            retObjectApplicationReference = classInstance.Get("ApplicationReference");
+            return (java.lang.String)retObjectApplicationReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectApplicationReference != null ? retObjectApplicationReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class EtwTrackingParticipant extends TrackingParticipant  {
 
     public void setApplicationReference(java.lang.String ApplicationReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ApplicationReference", ApplicationReference);
         } catch (JCNativeException jcne) {

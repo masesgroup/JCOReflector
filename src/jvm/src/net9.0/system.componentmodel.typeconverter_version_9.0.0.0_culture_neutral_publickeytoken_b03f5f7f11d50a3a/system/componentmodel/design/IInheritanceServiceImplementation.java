@@ -147,10 +147,14 @@ public class IInheritanceServiceImplementation extends NetObject implements IInh
     
     public InheritanceAttribute GetInheritanceAttribute(IComponent component) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInheritanceAttribute = null;
         try {
-            JCObject objGetInheritanceAttribute = (JCObject)classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
+            retObjectGetInheritanceAttribute = classInstance.Invoke("GetInheritanceAttribute", component == null ? null : component.getJCOInstance());
+            JCObject objGetInheritanceAttribute = (JCObject)retObjectGetInheritanceAttribute;
             return new InheritanceAttribute(objGetInheritanceAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInheritanceAttribute != null ? retObjectGetInheritanceAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IInheritanceServiceImplementation extends NetObject implements IInh
 
     public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddInheritedComponents", component == null ? null : component.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {

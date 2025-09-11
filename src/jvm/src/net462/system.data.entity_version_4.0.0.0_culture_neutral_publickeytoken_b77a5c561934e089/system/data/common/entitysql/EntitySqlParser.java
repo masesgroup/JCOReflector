@@ -159,10 +159,14 @@ public class EntitySqlParser extends NetObject  {
     
     public DbLambda ParseLambda(java.lang.String query, DbVariableReferenceExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.EntitySqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParseLambda = null;
         try {
-            JCObject objParseLambda = (JCObject)classInstance.Invoke("ParseLambda", query, toObjectFromArray(variables));
+            retObjectParseLambda = classInstance.Invoke("ParseLambda", query, toObjectFromArray(variables));
+            JCObject objParseLambda = (JCObject)retObjectParseLambda;
             return new DbLambda(objParseLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParseLambda != null ? retObjectParseLambda.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class EntitySqlParser extends NetObject  {
 
     public ParseResult Parse(java.lang.String query, DbParameterReferenceExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.EntitySqlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classInstance.Invoke("Parse", query, toObjectFromArray(parameters));
+            retObjectParse = classInstance.Invoke("Parse", query, toObjectFromArray(parameters));
+            JCObject objParse = (JCObject)retObjectParse;
             return new ParseResult(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

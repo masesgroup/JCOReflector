@@ -167,10 +167,14 @@ public class HttpRuntime extends NetObject  {
     
     public static NamedPermissionSet GetNamedPermissionSet() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetNamedPermissionSet = null;
         try {
-            JCObject objGetNamedPermissionSet = (JCObject)classType.Invoke("GetNamedPermissionSet");
+            retObjectGetNamedPermissionSet = classType.Invoke("GetNamedPermissionSet");
+            JCObject objGetNamedPermissionSet = (JCObject)retObjectGetNamedPermissionSet;
             return new NamedPermissionSet(objGetNamedPermissionSet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNamedPermissionSet != null ? retObjectGetNamedPermissionSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class HttpRuntime extends NetObject  {
 
     public static void Close() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.SemaphoreFullException, system.web.HttpRequestValidationException, system.configuration.provider.ProviderException, system.MemberAccessException, system.io.PathTooLongException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -188,7 +192,7 @@ public class HttpRuntime extends NetObject  {
 
     public static void ProcessRequest(HttpWorkerRequest wr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.ApplicationException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.MemberAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ProcessRequest", wr == null ? null : wr.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class HttpRuntime extends NetObject  {
 
     public static void UnloadAppDomain() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("UnloadAppDomain");
         } catch (JCNativeException jcne) {
@@ -212,9 +216,13 @@ public class HttpRuntime extends NetObject  {
     
     public static boolean getIsOnUNCShare() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsOnUNCShare = null;
         try {
-            return (boolean)classType.Get("IsOnUNCShare");
+            retObjectIsOnUNCShare = classType.Get("IsOnUNCShare");
+            return (boolean)retObjectIsOnUNCShare;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnUNCShare != null ? retObjectIsOnUNCShare.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +230,13 @@ public class HttpRuntime extends NetObject  {
 
     public static boolean getUsingIntegratedPipeline() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUsingIntegratedPipeline = null;
         try {
-            return (boolean)classType.Get("UsingIntegratedPipeline");
+            retObjectUsingIntegratedPipeline = classType.Get("UsingIntegratedPipeline");
+            return (boolean)retObjectUsingIntegratedPipeline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsingIntegratedPipeline != null ? retObjectUsingIntegratedPipeline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +244,14 @@ public class HttpRuntime extends NetObject  {
 
     public static IServiceProvider getWebObjectActivator() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWebObjectActivator = null;
         try {
-            JCObject val = (JCObject)classType.Get("WebObjectActivator");
+            retObjectWebObjectActivator = classType.Get("WebObjectActivator");
+            JCObject val = (JCObject)retObjectWebObjectActivator;
             return new IServiceProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebObjectActivator != null ? retObjectWebObjectActivator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,7 +259,7 @@ public class HttpRuntime extends NetObject  {
 
     public static void setWebObjectActivator(IServiceProvider WebObjectActivator) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("WebObjectActivator", WebObjectActivator == null ? null : WebObjectActivator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,9 +269,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAppDomainAppId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppDomainAppId = null;
         try {
-            return (java.lang.String)classType.Get("AppDomainAppId");
+            retObjectAppDomainAppId = classType.Get("AppDomainAppId");
+            return (java.lang.String)retObjectAppDomainAppId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainAppId != null ? retObjectAppDomainAppId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +283,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAppDomainAppPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppDomainAppPath = null;
         try {
-            return (java.lang.String)classType.Get("AppDomainAppPath");
+            retObjectAppDomainAppPath = classType.Get("AppDomainAppPath");
+            return (java.lang.String)retObjectAppDomainAppPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainAppPath != null ? retObjectAppDomainAppPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +297,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAppDomainAppVirtualPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppDomainAppVirtualPath = null;
         try {
-            return (java.lang.String)classType.Get("AppDomainAppVirtualPath");
+            retObjectAppDomainAppVirtualPath = classType.Get("AppDomainAppVirtualPath");
+            return (java.lang.String)retObjectAppDomainAppVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainAppVirtualPath != null ? retObjectAppDomainAppVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +311,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAppDomainId() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAppDomainId = null;
         try {
-            return (java.lang.String)classType.Get("AppDomainId");
+            retObjectAppDomainId = classType.Get("AppDomainId");
+            return (java.lang.String)retObjectAppDomainId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppDomainId != null ? retObjectAppDomainId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +325,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAspClientScriptPhysicalPath() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAspClientScriptPhysicalPath = null;
         try {
-            return (java.lang.String)classType.Get("AspClientScriptPhysicalPath");
+            retObjectAspClientScriptPhysicalPath = classType.Get("AspClientScriptPhysicalPath");
+            return (java.lang.String)retObjectAspClientScriptPhysicalPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAspClientScriptPhysicalPath != null ? retObjectAspClientScriptPhysicalPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +339,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAspClientScriptVirtualPath() throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAspClientScriptVirtualPath = null;
         try {
-            return (java.lang.String)classType.Get("AspClientScriptVirtualPath");
+            retObjectAspClientScriptVirtualPath = classType.Get("AspClientScriptVirtualPath");
+            return (java.lang.String)retObjectAspClientScriptVirtualPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAspClientScriptVirtualPath != null ? retObjectAspClientScriptVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +353,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getAspInstallDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAspInstallDirectory = null;
         try {
-            return (java.lang.String)classType.Get("AspInstallDirectory");
+            retObjectAspInstallDirectory = classType.Get("AspInstallDirectory");
+            return (java.lang.String)retObjectAspInstallDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAspInstallDirectory != null ? retObjectAspInstallDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +367,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getBinDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBinDirectory = null;
         try {
-            return (java.lang.String)classType.Get("BinDirectory");
+            retObjectBinDirectory = classType.Get("BinDirectory");
+            return (java.lang.String)retObjectBinDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBinDirectory != null ? retObjectBinDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,9 +381,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getClrInstallDirectory() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClrInstallDirectory = null;
         try {
-            return (java.lang.String)classType.Get("ClrInstallDirectory");
+            retObjectClrInstallDirectory = classType.Get("ClrInstallDirectory");
+            return (java.lang.String)retObjectClrInstallDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClrInstallDirectory != null ? retObjectClrInstallDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -343,9 +395,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getCodegenDir() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCodegenDir = null;
         try {
-            return (java.lang.String)classType.Get("CodegenDir");
+            retObjectCodegenDir = classType.Get("CodegenDir");
+            return (java.lang.String)retObjectCodegenDir;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCodegenDir != null ? retObjectCodegenDir.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +409,13 @@ public class HttpRuntime extends NetObject  {
 
     public static java.lang.String getMachineConfigurationDirectory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMachineConfigurationDirectory = null;
         try {
-            return (java.lang.String)classType.Get("MachineConfigurationDirectory");
+            retObjectMachineConfigurationDirectory = classType.Get("MachineConfigurationDirectory");
+            return (java.lang.String)retObjectMachineConfigurationDirectory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineConfigurationDirectory != null ? retObjectMachineConfigurationDirectory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +423,14 @@ public class HttpRuntime extends NetObject  {
 
     public static Version getIISVersion() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIISVersion = null;
         try {
-            JCObject val = (JCObject)classType.Get("IISVersion");
+            retObjectIISVersion = classType.Get("IISVersion");
+            JCObject val = (JCObject)retObjectIISVersion;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIISVersion != null ? retObjectIISVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +438,14 @@ public class HttpRuntime extends NetObject  {
 
     public static Version getTargetFramework() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTargetFramework = null;
         try {
-            JCObject val = (JCObject)classType.Get("TargetFramework");
+            retObjectTargetFramework = classType.Get("TargetFramework");
+            JCObject val = (JCObject)retObjectTargetFramework;
             return new Version(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetFramework != null ? retObjectTargetFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,10 +453,14 @@ public class HttpRuntime extends NetObject  {
 
     public static Cache getCache() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.web.HttpException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCache = null;
         try {
-            JCObject val = (JCObject)classType.Get("Cache");
+            retObjectCache = classType.Get("Cache");
+            JCObject val = (JCObject)retObjectCache;
             return new Cache(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCache != null ? retObjectCache.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

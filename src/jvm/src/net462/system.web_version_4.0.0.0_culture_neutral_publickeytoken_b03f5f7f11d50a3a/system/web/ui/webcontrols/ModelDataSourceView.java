@@ -173,7 +173,7 @@ public class ModelDataSourceView extends DataSourceView  {
     
     public void Delete(IDictionary keys, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete", keys == null ? null : keys.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void Insert(IDictionary values, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", values == null ? null : values.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -193,7 +193,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Select", arguments == null ? null : arguments.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -203,7 +203,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void Update(IDictionary keys, IDictionary values, IDictionary oldValues, DataSourceViewOperationCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Update", keys == null ? null : keys.getJCOInstance(), values == null ? null : values.getJCOInstance(), oldValues == null ? null : oldValues.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
@@ -213,7 +213,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void UpdateProperties(java.lang.String modelTypeName, java.lang.String selectMethod, java.lang.String updateMethod, java.lang.String insertMethod, java.lang.String deleteMethod, java.lang.String dataKeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateProperties", modelTypeName, selectMethod, updateMethod, insertMethod, deleteMethod, dataKeyName);
         } catch (JCNativeException jcne) {
@@ -227,7 +227,7 @@ public class ModelDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public NetObject SaveViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -236,7 +236,7 @@ public class ModelDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void LoadViewState(NetObject state) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
     /**
@@ -245,7 +245,7 @@ public class ModelDataSourceView extends DataSourceView  {
      */
     @Deprecated 
     public void TrackViewState() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 
@@ -254,9 +254,13 @@ public class ModelDataSourceView extends DataSourceView  {
     
     public java.lang.String getDataKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("DataKeyName");
+            retObjectDataKeyName = classInstance.Get("DataKeyName");
+            return (java.lang.String)retObjectDataKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataKeyName != null ? retObjectDataKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,7 +268,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setDataKeyName(java.lang.String DataKeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataKeyName", DataKeyName);
         } catch (JCNativeException jcne) {
@@ -274,9 +278,13 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public java.lang.String getDeleteMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeleteMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("DeleteMethod");
+            retObjectDeleteMethod = classInstance.Get("DeleteMethod");
+            return (java.lang.String)retObjectDeleteMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDeleteMethod != null ? retObjectDeleteMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +292,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setDeleteMethod(java.lang.String DeleteMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeleteMethod", DeleteMethod);
         } catch (JCNativeException jcne) {
@@ -294,9 +302,13 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public java.lang.String getInsertMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("InsertMethod");
+            retObjectInsertMethod = classInstance.Get("InsertMethod");
+            return (java.lang.String)retObjectInsertMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInsertMethod != null ? retObjectInsertMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,7 +316,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setInsertMethod(java.lang.String InsertMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertMethod", InsertMethod);
         } catch (JCNativeException jcne) {
@@ -314,9 +326,13 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public java.lang.String getModelTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModelTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("ModelTypeName");
+            retObjectModelTypeName = classInstance.Get("ModelTypeName");
+            return (java.lang.String)retObjectModelTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectModelTypeName != null ? retObjectModelTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,7 +340,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setModelTypeName(java.lang.String ModelTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ModelTypeName", ModelTypeName);
         } catch (JCNativeException jcne) {
@@ -334,9 +350,13 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public java.lang.String getSelectMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("SelectMethod");
+            retObjectSelectMethod = classInstance.Get("SelectMethod");
+            return (java.lang.String)retObjectSelectMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSelectMethod != null ? retObjectSelectMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +364,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setSelectMethod(java.lang.String SelectMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectMethod", SelectMethod);
         } catch (JCNativeException jcne) {
@@ -354,9 +374,13 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public java.lang.String getUpdateMethod() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUpdateMethod = null;
         try {
-            return (java.lang.String)classInstance.Get("UpdateMethod");
+            retObjectUpdateMethod = classInstance.Get("UpdateMethod");
+            return (java.lang.String)retObjectUpdateMethod;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpdateMethod != null ? retObjectUpdateMethod.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +388,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void setUpdateMethod(java.lang.String UpdateMethod) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UpdateMethod", UpdateMethod);
         } catch (JCNativeException jcne) {
@@ -379,7 +403,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void addCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {
@@ -389,7 +413,7 @@ public class ModelDataSourceView extends DataSourceView  {
 
     public void removeCallingDataMethods(CallingDataMethodsEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CallingDataMethods", handler);
         } catch (JCNativeException jcne) {

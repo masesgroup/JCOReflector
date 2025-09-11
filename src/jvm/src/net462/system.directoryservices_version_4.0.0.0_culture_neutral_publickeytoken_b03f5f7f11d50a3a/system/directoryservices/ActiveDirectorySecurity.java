@@ -173,9 +173,13 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
     
     public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifyAccessRule = null;
         try {
-            return (boolean)classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            retObjectModifyAccessRule = classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            return (boolean)retObjectModifyAccessRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectModifyAccessRule != null ? retObjectModifyAccessRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +187,13 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModifyAuditRule = null;
         try {
-            return (boolean)classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            retObjectModifyAuditRule = classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+            return (boolean)retObjectModifyAuditRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectModifyAuditRule != null ? retObjectModifyAuditRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +201,13 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public boolean RemoveAccessRule(ActiveDirectoryAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAccessRule = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAccessRule", rule == null ? null : rule.getJCOInstance());
+            retObjectRemoveAccessRule = classInstance.Invoke("RemoveAccessRule", rule == null ? null : rule.getJCOInstance());
+            return (boolean)retObjectRemoveAccessRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAccessRule != null ? retObjectRemoveAccessRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +215,13 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public boolean RemoveAuditRule(ActiveDirectoryAuditRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoveAuditRule = null;
         try {
-            return (boolean)classInstance.Invoke("RemoveAuditRule", rule == null ? null : rule.getJCOInstance());
+            retObjectRemoveAuditRule = classInstance.Invoke("RemoveAuditRule", rule == null ? null : rule.getJCOInstance());
+            return (boolean)retObjectRemoveAuditRule;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRemoveAuditRule != null ? retObjectRemoveAuditRule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +229,14 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessRuleFactory = null;
         try {
-            JCObject objAccessRuleFactory = (JCObject)classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectAccessRuleFactory = classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objAccessRuleFactory = (JCObject)retObjectAccessRuleFactory;
             return new AccessRule(objAccessRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessRuleFactory != null ? retObjectAccessRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +244,14 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public AccessRule AccessRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AccessControlType type, Guid objectGuid, Guid inheritedObjectGuid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessRuleFactory = null;
         try {
-            JCObject objAccessRuleFactory = (JCObject)classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectGuid == null ? null : objectGuid.getJCOInstance(), inheritedObjectGuid == null ? null : inheritedObjectGuid.getJCOInstance());
+            retObjectAccessRuleFactory = classInstance.Invoke("AccessRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectGuid == null ? null : objectGuid.getJCOInstance(), inheritedObjectGuid == null ? null : inheritedObjectGuid.getJCOInstance());
+            JCObject objAccessRuleFactory = (JCObject)retObjectAccessRuleFactory;
             return new AccessRule(objAccessRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAccessRuleFactory != null ? retObjectAccessRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +259,14 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditRuleFactory = null;
         try {
-            JCObject objAuditRuleFactory = (JCObject)classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            retObjectAuditRuleFactory = classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance());
+            JCObject objAuditRuleFactory = (JCObject)retObjectAuditRuleFactory;
             return new AuditRule(objAuditRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditRuleFactory != null ? retObjectAuditRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +274,14 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public AuditRule AuditRuleFactory(IdentityReference identityReference, int accessMask, boolean isInherited, InheritanceFlags inheritanceFlags, PropagationFlags propagationFlags, AuditFlags flags, Guid objectGuid, Guid inheritedObjectGuid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuditRuleFactory = null;
         try {
-            JCObject objAuditRuleFactory = (JCObject)classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), objectGuid == null ? null : objectGuid.getJCOInstance(), inheritedObjectGuid == null ? null : inheritedObjectGuid.getJCOInstance());
+            retObjectAuditRuleFactory = classInstance.Invoke("AuditRuleFactory", identityReference == null ? null : identityReference.getJCOInstance(), accessMask, isInherited, inheritanceFlags == null ? null : inheritanceFlags.getJCOInstance(), propagationFlags == null ? null : propagationFlags.getJCOInstance(), flags == null ? null : flags.getJCOInstance(), objectGuid == null ? null : objectGuid.getJCOInstance(), inheritedObjectGuid == null ? null : inheritedObjectGuid.getJCOInstance());
+            JCObject objAuditRuleFactory = (JCObject)retObjectAuditRuleFactory;
             return new AuditRule(objAuditRuleFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuditRuleFactory != null ? retObjectAuditRuleFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +289,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void AddAccessRule(ActiveDirectoryAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAccessRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -267,7 +299,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void AddAuditRule(ActiveDirectoryAuditRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddAuditRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,7 +309,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void PurgeAccessRules(IdentityReference identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAccessRules", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -287,7 +319,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void PurgeAuditRules(IdentityReference identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PurgeAuditRules", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -297,7 +329,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void RemoveAccess(IdentityReference identity, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAccess", identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -307,7 +339,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void RemoveAccessRuleSpecific(ActiveDirectoryAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAccessRuleSpecific", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -317,7 +349,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void RemoveAudit(IdentityReference identity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAudit", identity == null ? null : identity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -327,7 +359,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void RemoveAuditRuleSpecific(ActiveDirectoryAuditRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveAuditRuleSpecific", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,7 +369,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void ResetAccessRule(ActiveDirectoryAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetAccessRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -347,7 +379,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void SetAccessRule(ActiveDirectoryAccessRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAccessRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -357,7 +389,7 @@ public class ActiveDirectorySecurity extends DirectoryObjectSecurity  {
 
     public void SetAuditRule(ActiveDirectoryAuditRule rule) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAuditRule", rule == null ? null : rule.getJCOInstance());
         } catch (JCNativeException jcne) {

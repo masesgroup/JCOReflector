@@ -166,9 +166,13 @@ public class CompareAttribute extends ValidationAttribute  {
     
     public java.lang.String FormatErrorMessage(java.lang.String name) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatErrorMessage", name);
+            retObjectFormatErrorMessage = classInstance.Invoke("FormatErrorMessage", name);
+            return (java.lang.String)retObjectFormatErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatErrorMessage != null ? retObjectFormatErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class CompareAttribute extends ValidationAttribute  {
     
     public java.lang.String getOtherProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOtherProperty = null;
         try {
-            return (java.lang.String)classInstance.Get("OtherProperty");
+            retObjectOtherProperty = classInstance.Get("OtherProperty");
+            return (java.lang.String)retObjectOtherProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOtherProperty != null ? retObjectOtherProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class CompareAttribute extends ValidationAttribute  {
 
     public java.lang.String getOtherPropertyDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOtherPropertyDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("OtherPropertyDisplayName");
+            retObjectOtherPropertyDisplayName = classInstance.Get("OtherPropertyDisplayName");
+            return (java.lang.String)retObjectOtherPropertyDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOtherPropertyDisplayName != null ? retObjectOtherPropertyDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class CompareAttribute extends ValidationAttribute  {
 
     public void setOtherPropertyDisplayName(java.lang.String OtherPropertyDisplayName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OtherPropertyDisplayName", OtherPropertyDisplayName);
         } catch (JCNativeException jcne) {

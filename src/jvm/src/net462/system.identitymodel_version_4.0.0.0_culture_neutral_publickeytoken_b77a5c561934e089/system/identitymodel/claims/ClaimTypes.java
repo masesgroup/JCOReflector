@@ -157,9 +157,13 @@ public class ClaimTypes extends NetObject  {
     
     public static java.lang.String getAnonymous() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnonymous = null;
         try {
-            return (java.lang.String)classType.Get("Anonymous");
+            retObjectAnonymous = classType.Get("Anonymous");
+            return (java.lang.String)retObjectAnonymous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAnonymous != null ? retObjectAnonymous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getAuthentication() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuthentication = null;
         try {
-            return (java.lang.String)classType.Get("Authentication");
+            retObjectAuthentication = classType.Get("Authentication");
+            return (java.lang.String)retObjectAuthentication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthentication != null ? retObjectAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getAuthorizationDecision() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuthorizationDecision = null;
         try {
-            return (java.lang.String)classType.Get("AuthorizationDecision");
+            retObjectAuthorizationDecision = classType.Get("AuthorizationDecision");
+            return (java.lang.String)retObjectAuthorizationDecision;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAuthorizationDecision != null ? retObjectAuthorizationDecision.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getCountry() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCountry = null;
         try {
-            return (java.lang.String)classType.Get("Country");
+            retObjectCountry = classType.Get("Country");
+            return (java.lang.String)retObjectCountry;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCountry != null ? retObjectCountry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getDateOfBirth() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDateOfBirth = null;
         try {
-            return (java.lang.String)classType.Get("DateOfBirth");
+            retObjectDateOfBirth = classType.Get("DateOfBirth");
+            return (java.lang.String)retObjectDateOfBirth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDateOfBirth != null ? retObjectDateOfBirth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +227,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getDenyOnlySid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDenyOnlySid = null;
         try {
-            return (java.lang.String)classType.Get("DenyOnlySid");
+            retObjectDenyOnlySid = classType.Get("DenyOnlySid");
+            return (java.lang.String)retObjectDenyOnlySid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDenyOnlySid != null ? retObjectDenyOnlySid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +241,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getDns() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDns = null;
         try {
-            return (java.lang.String)classType.Get("Dns");
+            retObjectDns = classType.Get("Dns");
+            return (java.lang.String)retObjectDns;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDns != null ? retObjectDns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +255,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getEmail() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmail = null;
         try {
-            return (java.lang.String)classType.Get("Email");
+            retObjectEmail = classType.Get("Email");
+            return (java.lang.String)retObjectEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmail != null ? retObjectEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +269,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getGender() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGender = null;
         try {
-            return (java.lang.String)classType.Get("Gender");
+            retObjectGender = classType.Get("Gender");
+            return (java.lang.String)retObjectGender;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGender != null ? retObjectGender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +283,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getGivenName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGivenName = null;
         try {
-            return (java.lang.String)classType.Get("GivenName");
+            retObjectGivenName = classType.Get("GivenName");
+            return (java.lang.String)retObjectGivenName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGivenName != null ? retObjectGivenName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +297,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getHash() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHash = null;
         try {
-            return (java.lang.String)classType.Get("Hash");
+            retObjectHash = classType.Get("Hash");
+            return (java.lang.String)retObjectHash;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHash != null ? retObjectHash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +311,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getHomePhone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectHomePhone = null;
         try {
-            return (java.lang.String)classType.Get("HomePhone");
+            retObjectHomePhone = classType.Get("HomePhone");
+            return (java.lang.String)retObjectHomePhone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHomePhone != null ? retObjectHomePhone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +325,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getLocality() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLocality = null;
         try {
-            return (java.lang.String)classType.Get("Locality");
+            retObjectLocality = classType.Get("Locality");
+            return (java.lang.String)retObjectLocality;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLocality != null ? retObjectLocality.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,9 +339,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getMobilePhone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMobilePhone = null;
         try {
-            return (java.lang.String)classType.Get("MobilePhone");
+            retObjectMobilePhone = classType.Get("MobilePhone");
+            return (java.lang.String)retObjectMobilePhone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMobilePhone != null ? retObjectMobilePhone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,9 +353,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classType.Get("Name");
+            retObjectName = classType.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -307,9 +367,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getNameIdentifier() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNameIdentifier = null;
         try {
-            return (java.lang.String)classType.Get("NameIdentifier");
+            retObjectNameIdentifier = classType.Get("NameIdentifier");
+            return (java.lang.String)retObjectNameIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNameIdentifier != null ? retObjectNameIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -317,9 +381,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getOtherPhone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOtherPhone = null;
         try {
-            return (java.lang.String)classType.Get("OtherPhone");
+            retObjectOtherPhone = classType.Get("OtherPhone");
+            return (java.lang.String)retObjectOtherPhone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOtherPhone != null ? retObjectOtherPhone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,9 +395,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getPostalCode() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostalCode = null;
         try {
-            return (java.lang.String)classType.Get("PostalCode");
+            retObjectPostalCode = classType.Get("PostalCode");
+            return (java.lang.String)retObjectPostalCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPostalCode != null ? retObjectPostalCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,9 +409,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getPPID() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPPID = null;
         try {
-            return (java.lang.String)classType.Get("PPID");
+            retObjectPPID = classType.Get("PPID");
+            return (java.lang.String)retObjectPPID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPPID != null ? retObjectPPID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -347,9 +423,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getRsa() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRsa = null;
         try {
-            return (java.lang.String)classType.Get("Rsa");
+            retObjectRsa = classType.Get("Rsa");
+            return (java.lang.String)retObjectRsa;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRsa != null ? retObjectRsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,9 +437,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getSid() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSid = null;
         try {
-            return (java.lang.String)classType.Get("Sid");
+            retObjectSid = classType.Get("Sid");
+            return (java.lang.String)retObjectSid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSid != null ? retObjectSid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,9 +451,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getSpn() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSpn = null;
         try {
-            return (java.lang.String)classType.Get("Spn");
+            retObjectSpn = classType.Get("Spn");
+            return (java.lang.String)retObjectSpn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSpn != null ? retObjectSpn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,9 +465,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getStateOrProvince() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStateOrProvince = null;
         try {
-            return (java.lang.String)classType.Get("StateOrProvince");
+            retObjectStateOrProvince = classType.Get("StateOrProvince");
+            return (java.lang.String)retObjectStateOrProvince;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStateOrProvince != null ? retObjectStateOrProvince.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,9 +479,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getStreetAddress() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStreetAddress = null;
         try {
-            return (java.lang.String)classType.Get("StreetAddress");
+            retObjectStreetAddress = classType.Get("StreetAddress");
+            return (java.lang.String)retObjectStreetAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStreetAddress != null ? retObjectStreetAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,9 +493,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getSurname() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSurname = null;
         try {
-            return (java.lang.String)classType.Get("Surname");
+            retObjectSurname = classType.Get("Surname");
+            return (java.lang.String)retObjectSurname;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSurname != null ? retObjectSurname.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,9 +507,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getSystem() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSystem = null;
         try {
-            return (java.lang.String)classType.Get("System");
+            retObjectSystem = classType.Get("System");
+            return (java.lang.String)retObjectSystem;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystem != null ? retObjectSystem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,9 +521,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getThumbprint() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThumbprint = null;
         try {
-            return (java.lang.String)classType.Get("Thumbprint");
+            retObjectThumbprint = classType.Get("Thumbprint");
+            return (java.lang.String)retObjectThumbprint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThumbprint != null ? retObjectThumbprint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -427,9 +535,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getUpn() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUpn = null;
         try {
-            return (java.lang.String)classType.Get("Upn");
+            retObjectUpn = classType.Get("Upn");
+            return (java.lang.String)retObjectUpn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUpn != null ? retObjectUpn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,9 +549,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getUri() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUri = null;
         try {
-            return (java.lang.String)classType.Get("Uri");
+            retObjectUri = classType.Get("Uri");
+            return (java.lang.String)retObjectUri;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUri != null ? retObjectUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,9 +563,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getWebpage() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWebpage = null;
         try {
-            return (java.lang.String)classType.Get("Webpage");
+            retObjectWebpage = classType.Get("Webpage");
+            return (java.lang.String)retObjectWebpage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWebpage != null ? retObjectWebpage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,9 +577,13 @@ public class ClaimTypes extends NetObject  {
 
     public static java.lang.String getX500DistinguishedName() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectX500DistinguishedName = null;
         try {
-            return (java.lang.String)classType.Get("X500DistinguishedName");
+            retObjectX500DistinguishedName = classType.Get("X500DistinguishedName");
+            return (java.lang.String)retObjectX500DistinguishedName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectX500DistinguishedName != null ? retObjectX500DistinguishedName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

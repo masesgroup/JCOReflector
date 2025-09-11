@@ -144,9 +144,13 @@ public class IMultiTargetingSupportServiceImplementation extends NetObject imple
     
     public boolean IsSupportedType(NetType type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSupportedType = null;
         try {
-            return (boolean)classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            retObjectIsSupportedType = classInstance.Invoke("IsSupportedType", type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectIsSupportedType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSupportedType != null ? retObjectIsSupportedType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,10 +158,14 @@ public class IMultiTargetingSupportServiceImplementation extends NetObject imple
 
     public Assembly GetReflectionAssembly(AssemblyName targetAssemblyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReflectionAssembly = null;
         try {
-            JCObject objGetReflectionAssembly = (JCObject)classInstance.Invoke("GetReflectionAssembly", targetAssemblyName == null ? null : targetAssemblyName.getJCOInstance());
+            retObjectGetReflectionAssembly = classInstance.Invoke("GetReflectionAssembly", targetAssemblyName == null ? null : targetAssemblyName.getJCOInstance());
+            JCObject objGetReflectionAssembly = (JCObject)retObjectGetReflectionAssembly;
             return new Assembly(objGetReflectionAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReflectionAssembly != null ? retObjectGetReflectionAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +173,14 @@ public class IMultiTargetingSupportServiceImplementation extends NetObject imple
 
     public NetType GetRuntimeType(NetType reflectionType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRuntimeType = null;
         try {
-            JCObject objGetRuntimeType = (JCObject)classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            retObjectGetRuntimeType = classInstance.Invoke("GetRuntimeType", reflectionType == null ? null : reflectionType.getJCOInstance());
+            JCObject objGetRuntimeType = (JCObject)retObjectGetRuntimeType;
             return new NetType(objGetRuntimeType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRuntimeType != null ? retObjectGetRuntimeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

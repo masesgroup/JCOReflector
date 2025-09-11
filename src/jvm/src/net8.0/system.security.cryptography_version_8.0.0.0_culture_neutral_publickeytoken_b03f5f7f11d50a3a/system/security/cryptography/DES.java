@@ -155,9 +155,13 @@ public class DES extends SymmetricAlgorithm  {
     
     public static boolean IsSemiWeakKey(byte[] rgbKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSemiWeakKey = null;
         try {
-            return (boolean)classType.Invoke("IsSemiWeakKey", (java.lang.Object)rgbKey);
+            retObjectIsSemiWeakKey = classType.Invoke("IsSemiWeakKey", (java.lang.Object)rgbKey);
+            return (boolean)retObjectIsSemiWeakKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSemiWeakKey != null ? retObjectIsSemiWeakKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class DES extends SymmetricAlgorithm  {
 
     public static boolean IsSemiWeakKey(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsSemiWeakKey = null;
         try {
-            return (boolean)classType.Invoke("IsSemiWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectIsSemiWeakKey = classType.Invoke("IsSemiWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectIsSemiWeakKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsSemiWeakKey != null ? retObjectIsSemiWeakKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +183,13 @@ public class DES extends SymmetricAlgorithm  {
 
     public static boolean IsWeakKey(byte[] rgbKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWeakKey = null;
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)rgbKey);
+            retObjectIsWeakKey = classType.Invoke("IsWeakKey", (java.lang.Object)rgbKey);
+            return (boolean)retObjectIsWeakKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWeakKey != null ? retObjectIsWeakKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +197,13 @@ public class DES extends SymmetricAlgorithm  {
 
     public static boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsWeakKey = null;
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectIsWeakKey = classType.Invoke("IsWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectIsWeakKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsWeakKey != null ? retObjectIsWeakKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +211,14 @@ public class DES extends SymmetricAlgorithm  {
 
     public static DES CreateNewDES() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create");
+            retObjectCreate = classType.Invoke("Create");
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DES(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +226,14 @@ public class DES extends SymmetricAlgorithm  {
 
     public static DES CreateNewDES(java.lang.String algName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algName);
+            retObjectCreate = classType.Invoke("Create", algName);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new DES(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

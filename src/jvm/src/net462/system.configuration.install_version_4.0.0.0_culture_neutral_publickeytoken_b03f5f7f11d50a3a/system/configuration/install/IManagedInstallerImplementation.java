@@ -142,9 +142,19 @@ public class IManagedInstallerImplementation extends NetObject implements IManag
     
     public int ManagedInstall(java.lang.String commandLine, int hInstall) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManagedInstall = null;
         try {
-            return (int)classInstance.Invoke("ManagedInstall", commandLine, hInstall);
+            retObjectManagedInstall = classInstance.Invoke("ManagedInstall", commandLine, hInstall);
+            return (int)retObjectManagedInstall;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectManagedInstallNumber = (java.lang.Number)retObjectManagedInstall;
+                return retObjectManagedInstallNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectManagedInstall != null ? retObjectManagedInstall.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

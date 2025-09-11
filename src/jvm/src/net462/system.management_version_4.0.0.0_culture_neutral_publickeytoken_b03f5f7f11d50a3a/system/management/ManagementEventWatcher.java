@@ -228,10 +228,14 @@ public class ManagementEventWatcher extends Component  {
     
     public ManagementBaseObject WaitForNextEvent() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitForNextEvent = null;
         try {
-            JCObject objWaitForNextEvent = (JCObject)classInstance.Invoke("WaitForNextEvent");
+            retObjectWaitForNextEvent = classInstance.Invoke("WaitForNextEvent");
+            JCObject objWaitForNextEvent = (JCObject)retObjectWaitForNextEvent;
             return new ManagementBaseObject(objWaitForNextEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWaitForNextEvent != null ? retObjectWaitForNextEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +243,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void Start() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Start");
         } catch (JCNativeException jcne) {
@@ -249,7 +253,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void Stop() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.management.ManagementException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Stop");
         } catch (JCNativeException jcne) {
@@ -263,10 +267,14 @@ public class ManagementEventWatcher extends Component  {
     
     public EventQuery getQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectQuery = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Query");
+            retObjectQuery = classInstance.Get("Query");
+            JCObject val = (JCObject)retObjectQuery;
             return new EventQuery(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuery != null ? retObjectQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +282,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void setQuery(EventQuery Query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Query", Query == null ? null : Query.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,10 +292,14 @@ public class ManagementEventWatcher extends Component  {
 
     public EventWatcherOptions getOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Options");
+            retObjectOptions = classInstance.Get("Options");
+            JCObject val = (JCObject)retObjectOptions;
             return new EventWatcherOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOptions != null ? retObjectOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +307,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void setOptions(EventWatcherOptions Options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Options", Options == null ? null : Options.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -305,10 +317,14 @@ public class ManagementEventWatcher extends Component  {
 
     public ManagementScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new ManagementScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +332,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void setScope(ManagementScope Scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -331,7 +347,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void addEventArrived(EventArrivedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("EventArrived", handler);
         } catch (JCNativeException jcne) {
@@ -341,7 +357,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void removeEventArrived(EventArrivedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("EventArrived", handler);
         } catch (JCNativeException jcne) {
@@ -351,7 +367,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void addStopped(StoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Stopped", handler);
         } catch (JCNativeException jcne) {
@@ -361,7 +377,7 @@ public class ManagementEventWatcher extends Component  {
 
     public void removeStopped(StoppedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Stopped", handler);
         } catch (JCNativeException jcne) {

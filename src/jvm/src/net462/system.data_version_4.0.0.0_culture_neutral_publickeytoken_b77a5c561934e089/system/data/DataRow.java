@@ -161,9 +161,13 @@ public class DataRow extends NetObject  {
     
     public boolean HasVersion(DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasVersion = null;
         try {
-            return (boolean)classInstance.Invoke("HasVersion", version == null ? null : version.getJCOInstance());
+            retObjectHasVersion = classInstance.Invoke("HasVersion", version == null ? null : version.getJCOInstance());
+            return (boolean)retObjectHasVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasVersion != null ? retObjectHasVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class DataRow extends NetObject  {
 
     public boolean IsNull(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsNull", columnIndex);
+            retObjectIsNull = classInstance.Invoke("IsNull", columnIndex);
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class DataRow extends NetObject  {
 
     public boolean IsNull(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance());
+            retObjectIsNull = classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance());
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,9 +203,13 @@ public class DataRow extends NetObject  {
 
     public boolean IsNull(DataColumn column, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            retObjectIsNull = classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +217,13 @@ public class DataRow extends NetObject  {
 
     public boolean IsNull(java.lang.String columnName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNull = null;
         try {
-            return (boolean)classInstance.Invoke("IsNull", columnName);
+            retObjectIsNull = classInstance.Invoke("IsNull", columnName);
+            return (boolean)retObjectIsNull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsNull != null ? retObjectIsNull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,16 +231,20 @@ public class DataRow extends NetObject  {
 
     public DataColumn[] GetColumnsInError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnsInError = null;
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetColumnsInError");
+            retObjectGetColumnsInError = classInstance.Invoke("GetColumnsInError");
+            JCObject resultingObjects = (JCObject)retObjectGetColumnsInError;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetColumnsInError != null ? retObjectGetColumnsInError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class DataRow extends NetObject  {
 
     public DataRow GetParentRow(DataRelation relation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRow = null;
         try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance());
+            retObjectGetParentRow = classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance());
+            JCObject objGetParentRow = (JCObject)retObjectGetParentRow;
             return new DataRow(objGetParentRow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRow != null ? retObjectGetParentRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class DataRow extends NetObject  {
 
     public DataRow GetParentRow(DataRelation relation, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRow = null;
         try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            retObjectGetParentRow = classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            JCObject objGetParentRow = (JCObject)retObjectGetParentRow;
             return new DataRow(objGetParentRow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRow != null ? retObjectGetParentRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +282,14 @@ public class DataRow extends NetObject  {
 
     public DataRow GetParentRow(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRow = null;
         try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relationName);
+            retObjectGetParentRow = classInstance.Invoke("GetParentRow", relationName);
+            JCObject objGetParentRow = (JCObject)retObjectGetParentRow;
             return new DataRow(objGetParentRow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRow != null ? retObjectGetParentRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +297,14 @@ public class DataRow extends NetObject  {
 
     public DataRow GetParentRow(java.lang.String relationName, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRow = null;
         try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relationName, version == null ? null : version.getJCOInstance());
+            retObjectGetParentRow = classInstance.Invoke("GetParentRow", relationName, version == null ? null : version.getJCOInstance());
+            JCObject objGetParentRow = (JCObject)retObjectGetParentRow;
             return new DataRow(objGetParentRow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRow != null ? retObjectGetParentRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,16 +312,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetChildRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance());
+            retObjectGetChildRows = classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetChildRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildRows != null ? retObjectGetChildRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,16 +333,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetChildRows(DataRelation relation, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            retObjectGetChildRows = classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetChildRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildRows != null ? retObjectGetChildRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,16 +354,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetChildRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName);
+            retObjectGetChildRows = classInstance.Invoke("GetChildRows", relationName);
+            JCObject resultingObjects = (JCObject)retObjectGetChildRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildRows != null ? retObjectGetChildRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,16 +375,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetChildRows(java.lang.String relationName, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName, version == null ? null : version.getJCOInstance());
+            retObjectGetChildRows = classInstance.Invoke("GetChildRows", relationName, version == null ? null : version.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetChildRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChildRows != null ? retObjectGetChildRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,16 +396,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetParentRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance());
+            retObjectGetParentRows = classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetParentRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRows != null ? retObjectGetParentRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,16 +417,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetParentRows(DataRelation relation, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            retObjectGetParentRows = classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetParentRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRows != null ? retObjectGetParentRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,16 +438,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetParentRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName);
+            retObjectGetParentRows = classInstance.Invoke("GetParentRows", relationName);
+            JCObject resultingObjects = (JCObject)retObjectGetParentRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRows != null ? retObjectGetParentRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,16 +459,20 @@ public class DataRow extends NetObject  {
 
     public DataRow[] GetParentRows(java.lang.String relationName, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParentRows = null;
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName, version == null ? null : version.getJCOInstance());
+            retObjectGetParentRows = classInstance.Invoke("GetParentRows", relationName, version == null ? null : version.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetParentRows;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParentRows != null ? retObjectGetParentRows.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,9 +480,13 @@ public class DataRow extends NetObject  {
 
     public java.lang.String GetColumnError(int columnIndex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnError = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetColumnError", columnIndex);
+            retObjectGetColumnError = classInstance.Invoke("GetColumnError", columnIndex);
+            return (java.lang.String)retObjectGetColumnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetColumnError != null ? retObjectGetColumnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,9 +494,13 @@ public class DataRow extends NetObject  {
 
     public java.lang.String GetColumnError(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnError = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetColumnError", column == null ? null : column.getJCOInstance());
+            retObjectGetColumnError = classInstance.Invoke("GetColumnError", column == null ? null : column.getJCOInstance());
+            return (java.lang.String)retObjectGetColumnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetColumnError != null ? retObjectGetColumnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,9 +508,13 @@ public class DataRow extends NetObject  {
 
     public java.lang.String GetColumnError(java.lang.String columnName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetColumnError = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetColumnError", columnName);
+            retObjectGetColumnError = classInstance.Invoke("GetColumnError", columnName);
+            return (java.lang.String)retObjectGetColumnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetColumnError != null ? retObjectGetColumnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -438,7 +522,7 @@ public class DataRow extends NetObject  {
 
     public void AcceptChanges() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AcceptChanges");
         } catch (JCNativeException jcne) {
@@ -448,7 +532,7 @@ public class DataRow extends NetObject  {
 
     public void BeginEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginEdit");
         } catch (JCNativeException jcne) {
@@ -458,7 +542,7 @@ public class DataRow extends NetObject  {
 
     public void CancelEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelEdit");
         } catch (JCNativeException jcne) {
@@ -468,7 +552,7 @@ public class DataRow extends NetObject  {
 
     public void ClearErrors() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearErrors");
         } catch (JCNativeException jcne) {
@@ -478,7 +562,7 @@ public class DataRow extends NetObject  {
 
     public void Delete() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Delete");
         } catch (JCNativeException jcne) {
@@ -488,7 +572,7 @@ public class DataRow extends NetObject  {
 
     public void EndEdit() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.IndexOutOfRangeException, system.data.DataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndEdit");
         } catch (JCNativeException jcne) {
@@ -498,7 +582,7 @@ public class DataRow extends NetObject  {
 
     public void RejectChanges() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RejectChanges");
         } catch (JCNativeException jcne) {
@@ -508,7 +592,7 @@ public class DataRow extends NetObject  {
 
     public void SetAdded() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.DataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAdded");
         } catch (JCNativeException jcne) {
@@ -518,7 +602,7 @@ public class DataRow extends NetObject  {
 
     public void SetColumnError(int columnIndex, java.lang.String error) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumnError", columnIndex, error);
         } catch (JCNativeException jcne) {
@@ -528,7 +612,7 @@ public class DataRow extends NetObject  {
 
     public void SetColumnError(DataColumn column, java.lang.String error) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumnError", column == null ? null : column.getJCOInstance(), error);
         } catch (JCNativeException jcne) {
@@ -538,7 +622,7 @@ public class DataRow extends NetObject  {
 
     public void SetColumnError(java.lang.String columnName, java.lang.String error) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetColumnError", columnName, error);
         } catch (JCNativeException jcne) {
@@ -548,7 +632,7 @@ public class DataRow extends NetObject  {
 
     public void SetModified() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.data.DataException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetModified");
         } catch (JCNativeException jcne) {
@@ -558,7 +642,7 @@ public class DataRow extends NetObject  {
 
     public void SetParentRow(DataRow parentRow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParentRow", parentRow == null ? null : parentRow.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -568,7 +652,7 @@ public class DataRow extends NetObject  {
 
     public void SetParentRow(DataRow parentRow, DataRelation relation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParentRow", parentRow == null ? null : parentRow.getJCOInstance(), relation == null ? null : relation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -582,9 +666,13 @@ public class DataRow extends NetObject  {
     
     public boolean getHasErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasErrors = null;
         try {
-            return (boolean)classInstance.Get("HasErrors");
+            retObjectHasErrors = classInstance.Get("HasErrors");
+            return (boolean)retObjectHasErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasErrors != null ? retObjectHasErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -592,10 +680,14 @@ public class DataRow extends NetObject  {
 
     public DataRowState getRowState() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowState");
+            retObjectRowState = classInstance.Get("RowState");
+            JCObject val = (JCObject)retObjectRowState;
             return new DataRowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowState != null ? retObjectRowState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,10 +695,14 @@ public class DataRow extends NetObject  {
 
     public DataTable getTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Table");
+            retObjectTable = classInstance.Get("Table");
+            JCObject val = (JCObject)retObjectTable;
             return new DataTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTable != null ? retObjectTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -614,16 +710,20 @@ public class DataRow extends NetObject  {
 
     public final NetObject[] getItemArray() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemArray = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ItemArray");
+            retObjectItemArray = classInstance.Get("ItemArray");
+            JCObject resultingObjects = (JCObject)retObjectItemArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemArray != null ? retObjectItemArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -631,7 +731,7 @@ public class DataRow extends NetObject  {
 
     public void setItemArray(NetObject[] ItemArray) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemArray", toObjectFromArray(ItemArray));
         } catch (JCNativeException jcne) {
@@ -641,9 +741,13 @@ public class DataRow extends NetObject  {
 
     public java.lang.String getRowError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowError = null;
         try {
-            return (java.lang.String)classInstance.Get("RowError");
+            retObjectRowError = classInstance.Get("RowError");
+            return (java.lang.String)retObjectRowError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRowError != null ? retObjectRowError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -651,7 +755,7 @@ public class DataRow extends NetObject  {
 
     public void setRowError(java.lang.String RowError) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RowError", RowError);
         } catch (JCNativeException jcne) {

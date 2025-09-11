@@ -147,7 +147,7 @@ public class UCOMITypeCompImplementation extends NetObject implements UCOMITypeC
     
     public void BindType(java.lang.String szName, int lHashVal, JCORefOut<UCOMITypeInfo> ppTInfo, JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BindType", szName, lHashVal, ppTInfo.getJCRefOut(), ppTComp.getJCRefOut());
         } catch (JCNativeException jcne) {

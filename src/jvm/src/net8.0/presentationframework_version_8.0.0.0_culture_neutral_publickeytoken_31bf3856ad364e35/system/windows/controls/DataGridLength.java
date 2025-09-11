@@ -188,9 +188,13 @@ public class DataGridLength extends ValueType  {
     
     public boolean Equals(DataGridLength other) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +206,13 @@ public class DataGridLength extends ValueType  {
     
     public boolean getIsAbsolute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAbsolute = null;
         try {
-            return (boolean)classInstance.Get("IsAbsolute");
+            retObjectIsAbsolute = classInstance.Get("IsAbsolute");
+            return (boolean)retObjectIsAbsolute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAbsolute != null ? retObjectIsAbsolute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +220,13 @@ public class DataGridLength extends ValueType  {
 
     public boolean getIsAuto() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAuto = null;
         try {
-            return (boolean)classInstance.Get("IsAuto");
+            retObjectIsAuto = classInstance.Get("IsAuto");
+            return (boolean)retObjectIsAuto;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAuto != null ? retObjectIsAuto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +234,13 @@ public class DataGridLength extends ValueType  {
 
     public boolean getIsSizeToCells() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSizeToCells = null;
         try {
-            return (boolean)classInstance.Get("IsSizeToCells");
+            retObjectIsSizeToCells = classInstance.Get("IsSizeToCells");
+            return (boolean)retObjectIsSizeToCells;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSizeToCells != null ? retObjectIsSizeToCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +248,13 @@ public class DataGridLength extends ValueType  {
 
     public boolean getIsSizeToHeader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSizeToHeader = null;
         try {
-            return (boolean)classInstance.Get("IsSizeToHeader");
+            retObjectIsSizeToHeader = classInstance.Get("IsSizeToHeader");
+            return (boolean)retObjectIsSizeToHeader;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSizeToHeader != null ? retObjectIsSizeToHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +262,13 @@ public class DataGridLength extends ValueType  {
 
     public boolean getIsStar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsStar = null;
         try {
-            return (boolean)classInstance.Get("IsStar");
+            retObjectIsStar = classInstance.Get("IsStar");
+            return (boolean)retObjectIsStar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsStar != null ? retObjectIsStar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,9 +276,13 @@ public class DataGridLength extends ValueType  {
 
     public double getDesiredValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesiredValue = null;
         try {
-            return (double)classInstance.Get("DesiredValue");
+            retObjectDesiredValue = classInstance.Get("DesiredValue");
+            return (double)retObjectDesiredValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDesiredValue != null ? retObjectDesiredValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +290,13 @@ public class DataGridLength extends ValueType  {
 
     public double getDisplayValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayValue = null;
         try {
-            return (double)classInstance.Get("DisplayValue");
+            retObjectDisplayValue = classInstance.Get("DisplayValue");
+            return (double)retObjectDisplayValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDisplayValue != null ? retObjectDisplayValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,9 +304,13 @@ public class DataGridLength extends ValueType  {
 
     public double getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (double)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (double)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,10 +318,14 @@ public class DataGridLength extends ValueType  {
 
     public static DataGridLength getAuto() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAuto = null;
         try {
-            JCObject val = (JCObject)classType.Get("Auto");
+            retObjectAuto = classType.Get("Auto");
+            JCObject val = (JCObject)retObjectAuto;
             return new DataGridLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuto != null ? retObjectAuto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,10 +333,14 @@ public class DataGridLength extends ValueType  {
 
     public static DataGridLength getSizeToCells() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeToCells = null;
         try {
-            JCObject val = (JCObject)classType.Get("SizeToCells");
+            retObjectSizeToCells = classType.Get("SizeToCells");
+            JCObject val = (JCObject)retObjectSizeToCells;
             return new DataGridLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeToCells != null ? retObjectSizeToCells.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,10 +348,14 @@ public class DataGridLength extends ValueType  {
 
     public static DataGridLength getSizeToHeader() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSizeToHeader = null;
         try {
-            JCObject val = (JCObject)classType.Get("SizeToHeader");
+            retObjectSizeToHeader = classType.Get("SizeToHeader");
+            JCObject val = (JCObject)retObjectSizeToHeader;
             return new DataGridLength(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeToHeader != null ? retObjectSizeToHeader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,10 +363,14 @@ public class DataGridLength extends ValueType  {
 
     public DataGridLengthUnitType getUnitType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnitType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnitType");
+            retObjectUnitType = classInstance.Get("UnitType");
+            JCObject val = (JCObject)retObjectUnitType;
             return new DataGridLengthUnitType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnitType != null ? retObjectUnitType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

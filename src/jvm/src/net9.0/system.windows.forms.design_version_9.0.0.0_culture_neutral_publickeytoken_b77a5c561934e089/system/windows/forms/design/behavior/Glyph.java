@@ -158,10 +158,14 @@ public class Glyph extends NetObject  {
     
     public Cursor GetHitTest(Point p) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHitTest = null;
         try {
-            JCObject objGetHitTest = (JCObject)classInstance.Invoke("GetHitTest", p == null ? null : p.getJCOInstance());
+            retObjectGetHitTest = classInstance.Invoke("GetHitTest", p == null ? null : p.getJCOInstance());
+            JCObject objGetHitTest = (JCObject)retObjectGetHitTest;
             return new Cursor(objGetHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHitTest != null ? retObjectGetHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +173,7 @@ public class Glyph extends NetObject  {
 
     public void Paint(PaintEventArgs pe) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Paint", pe == null ? null : pe.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,10 +187,14 @@ public class Glyph extends NetObject  {
     
     public Rectangle getBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +202,14 @@ public class Glyph extends NetObject  {
 
     public Behavior getBehavior() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Behavior");
+            retObjectBehavior = classInstance.Get("Behavior");
+            JCObject val = (JCObject)retObjectBehavior;
             return new Behavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBehavior != null ? retObjectBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

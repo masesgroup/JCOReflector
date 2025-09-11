@@ -180,10 +180,14 @@ public class CodeNamespace extends CodeObject  {
     
     public CodeCommentStatementCollection getComments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Comments");
+            retObjectComments = classInstance.Get("Comments");
+            JCObject val = (JCObject)retObjectComments;
             return new CodeCommentStatementCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComments != null ? retObjectComments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class CodeNamespace extends CodeObject  {
 
     public CodeNamespaceImportCollection getImports() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImports = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Imports");
+            retObjectImports = classInstance.Get("Imports");
+            JCObject val = (JCObject)retObjectImports;
             return new CodeNamespaceImportCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImports != null ? retObjectImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class CodeNamespace extends CodeObject  {
 
     public CodeTypeDeclarationCollection getTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Types");
+            retObjectTypes = classInstance.Get("Types");
+            JCObject val = (JCObject)retObjectTypes;
             return new CodeTypeDeclarationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypes != null ? retObjectTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class CodeNamespace extends CodeObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +239,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -238,7 +254,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void addPopulateComments(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PopulateComments", handler);
         } catch (JCNativeException jcne) {
@@ -248,7 +264,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void removePopulateComments(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PopulateComments", handler);
         } catch (JCNativeException jcne) {
@@ -258,7 +274,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void addPopulateImports(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PopulateImports", handler);
         } catch (JCNativeException jcne) {
@@ -268,7 +284,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void removePopulateImports(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PopulateImports", handler);
         } catch (JCNativeException jcne) {
@@ -278,7 +294,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void addPopulateTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PopulateTypes", handler);
         } catch (JCNativeException jcne) {
@@ -288,7 +304,7 @@ public class CodeNamespace extends CodeObject  {
 
     public void removePopulateTypes(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PopulateTypes", handler);
         } catch (JCNativeException jcne) {

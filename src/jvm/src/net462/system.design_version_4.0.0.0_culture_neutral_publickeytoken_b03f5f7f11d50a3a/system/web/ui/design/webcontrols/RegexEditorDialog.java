@@ -172,9 +172,13 @@ public class RegexEditorDialog extends Form  {
     
     public java.lang.String getRegularExpression() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRegularExpression = null;
         try {
-            return (java.lang.String)classInstance.Get("RegularExpression");
+            retObjectRegularExpression = classInstance.Get("RegularExpression");
+            return (java.lang.String)retObjectRegularExpression;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRegularExpression != null ? retObjectRegularExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +186,7 @@ public class RegexEditorDialog extends Form  {
 
     public void setRegularExpression(java.lang.String RegularExpression) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RegularExpression", RegularExpression);
         } catch (JCNativeException jcne) {

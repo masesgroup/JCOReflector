@@ -143,10 +143,14 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
     
     public ValueTaskSourceStatus GetStatus(short token) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetStatus = null;
         try {
-            JCObject objGetStatus = (JCObject)classInstance.Invoke("GetStatus", token);
+            retObjectGetStatus = classInstance.Invoke("GetStatus", token);
+            JCObject objGetStatus = (JCObject)retObjectGetStatus;
             return new ValueTaskSourceStatus(objGetStatus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStatus != null ? retObjectGetStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
 
     public void GetResult(short token) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetResult", token);
         } catch (JCNativeException jcne) {

@@ -177,10 +177,14 @@ public class MediaTypeWithQualityHeaderValue extends MediaTypeHeaderValue  {
     
     public static MediaTypeWithQualityHeaderValue ParseNewMediaTypeWithQualityHeaderValue(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", input);
+            retObjectParse = classType.Invoke("Parse", input);
+            JCObject objParse = (JCObject)retObjectParse;
             return new MediaTypeWithQualityHeaderValue(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

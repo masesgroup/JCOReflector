@@ -170,9 +170,13 @@ public class AssemblyTrademarkAttribute extends Attribute  {
     
     public java.lang.String getTrademark() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTrademark = null;
         try {
-            return (java.lang.String)classInstance.Get("Trademark");
+            retObjectTrademark = classInstance.Get("Trademark");
+            return (java.lang.String)retObjectTrademark;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTrademark != null ? retObjectTrademark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

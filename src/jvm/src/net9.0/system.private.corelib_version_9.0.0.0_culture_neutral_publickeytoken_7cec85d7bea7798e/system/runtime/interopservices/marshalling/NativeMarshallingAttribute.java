@@ -170,10 +170,14 @@ public class NativeMarshallingAttribute extends Attribute  {
     
     public NetType getNativeType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNativeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NativeType");
+            retObjectNativeType = classInstance.Get("NativeType");
+            JCObject val = (JCObject)retObjectNativeType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNativeType != null ? retObjectNativeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

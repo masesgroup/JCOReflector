@@ -161,10 +161,14 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
     
     public NetException getException() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectException = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Exception");
+            retObjectException = classInstance.Get("Exception");
+            JCObject val = (JCObject)retObjectException;
             return new NetException(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectException != null ? retObjectException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
 
     public Guid getContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContextGuid");
+            retObjectContextGuid = classInstance.Get("ContextGuid");
+            JCObject val = (JCObject)retObjectContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContextGuid != null ? retObjectContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
 
     public Guid getParentContextGuid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentContextGuid = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentContextGuid");
+            retObjectParentContextGuid = classInstance.Get("ParentContextGuid");
+            JCObject val = (JCObject)retObjectParentContextGuid;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentContextGuid != null ? retObjectParentContextGuid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
 
     public java.lang.String getCurrentActivityPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentActivityPath = null;
         try {
-            return (java.lang.String)classInstance.Get("CurrentActivityPath");
+            retObjectCurrentActivityPath = classInstance.Get("CurrentActivityPath");
+            return (java.lang.String)retObjectCurrentActivityPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCurrentActivityPath != null ? retObjectCurrentActivityPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +220,13 @@ public class TrackingWorkflowExceptionEventArgs extends EventArgs  {
 
     public java.lang.String getOriginalActivityPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalActivityPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OriginalActivityPath");
+            retObjectOriginalActivityPath = classInstance.Get("OriginalActivityPath");
+            return (java.lang.String)retObjectOriginalActivityPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOriginalActivityPath != null ? retObjectOriginalActivityPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

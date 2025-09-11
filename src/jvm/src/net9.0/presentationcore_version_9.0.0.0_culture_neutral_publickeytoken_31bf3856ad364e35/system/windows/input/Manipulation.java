@@ -161,9 +161,13 @@ public class Manipulation extends NetObject  {
     
     public static boolean IsManipulationActive(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsManipulationActive = null;
         try {
-            return (boolean)classType.Invoke("IsManipulationActive", element == null ? null : element.getJCOInstance());
+            retObjectIsManipulationActive = classType.Invoke("IsManipulationActive", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectIsManipulationActive;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsManipulationActive != null ? retObjectIsManipulationActive.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,10 +175,14 @@ public class Manipulation extends NetObject  {
 
     public static IInputElement GetManipulationContainer(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetManipulationContainer = null;
         try {
-            JCObject objGetManipulationContainer = (JCObject)classType.Invoke("GetManipulationContainer", element == null ? null : element.getJCOInstance());
+            retObjectGetManipulationContainer = classType.Invoke("GetManipulationContainer", element == null ? null : element.getJCOInstance());
+            JCObject objGetManipulationContainer = (JCObject)retObjectGetManipulationContainer;
             return new IInputElementImplementation(objGetManipulationContainer);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManipulationContainer != null ? retObjectGetManipulationContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class Manipulation extends NetObject  {
 
     public static ManipulationModes GetManipulationMode(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetManipulationMode = null;
         try {
-            JCObject objGetManipulationMode = (JCObject)classType.Invoke("GetManipulationMode", element == null ? null : element.getJCOInstance());
+            retObjectGetManipulationMode = classType.Invoke("GetManipulationMode", element == null ? null : element.getJCOInstance());
+            JCObject objGetManipulationMode = (JCObject)retObjectGetManipulationMode;
             return new ManipulationModes(objGetManipulationMode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManipulationMode != null ? retObjectGetManipulationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class Manipulation extends NetObject  {
 
     public static ManipulationPivot GetManipulationPivot(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetManipulationPivot = null;
         try {
-            JCObject objGetManipulationPivot = (JCObject)classType.Invoke("GetManipulationPivot", element == null ? null : element.getJCOInstance());
+            retObjectGetManipulationPivot = classType.Invoke("GetManipulationPivot", element == null ? null : element.getJCOInstance());
+            JCObject objGetManipulationPivot = (JCObject)retObjectGetManipulationPivot;
             return new ManipulationPivot(objGetManipulationPivot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManipulationPivot != null ? retObjectGetManipulationPivot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +220,7 @@ public class Manipulation extends NetObject  {
 
     public static void AddManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddManipulator", element == null ? null : element.getJCOInstance(), manipulator == null ? null : manipulator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,7 +230,7 @@ public class Manipulation extends NetObject  {
 
     public static void CompleteManipulation(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CompleteManipulation", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,7 +240,7 @@ public class Manipulation extends NetObject  {
 
     public static void RemoveManipulator(UIElement element, IManipulator manipulator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("RemoveManipulator", element == null ? null : element.getJCOInstance(), manipulator == null ? null : manipulator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -234,7 +250,7 @@ public class Manipulation extends NetObject  {
 
     public static void SetManipulationContainer(UIElement element, IInputElement container) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetManipulationContainer", element == null ? null : element.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,7 +260,7 @@ public class Manipulation extends NetObject  {
 
     public static void SetManipulationMode(UIElement element, ManipulationModes mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetManipulationMode", element == null ? null : element.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,7 +270,7 @@ public class Manipulation extends NetObject  {
 
     public static void SetManipulationParameter(UIElement element, ManipulationParameters2D parameter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetManipulationParameter", element == null ? null : element.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +280,7 @@ public class Manipulation extends NetObject  {
 
     public static void SetManipulationPivot(UIElement element, ManipulationPivot pivot) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetManipulationPivot", element == null ? null : element.getJCOInstance(), pivot == null ? null : pivot.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +290,7 @@ public class Manipulation extends NetObject  {
 
     public static void StartInertia(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("StartInertia", element == null ? null : element.getJCOInstance());
         } catch (JCNativeException jcne) {

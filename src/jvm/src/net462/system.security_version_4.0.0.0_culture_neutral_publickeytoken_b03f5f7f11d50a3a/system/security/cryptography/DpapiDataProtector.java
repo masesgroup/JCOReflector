@@ -167,9 +167,13 @@ public class DpapiDataProtector extends DataProtector  {
     
     public boolean IsReprotectRequired(byte[] encryptedData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReprotectRequired = null;
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (java.lang.Object)encryptedData);
+            retObjectIsReprotectRequired = classInstance.Invoke("IsReprotectRequired", (java.lang.Object)encryptedData);
+            return (boolean)retObjectIsReprotectRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsReprotectRequired != null ? retObjectIsReprotectRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class DpapiDataProtector extends DataProtector  {
 
     public boolean IsReprotectRequired(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReprotectRequired = null;
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (java.lang.Object)dupParam0.getJCRefOut());
+            retObjectIsReprotectRequired = classInstance.Invoke("IsReprotectRequired", (java.lang.Object)dupParam0.getJCRefOut());
+            return (boolean)retObjectIsReprotectRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsReprotectRequired != null ? retObjectIsReprotectRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class DpapiDataProtector extends DataProtector  {
     
     public DataProtectionScope getScope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Scope");
+            retObjectScope = classInstance.Get("Scope");
+            JCObject val = (JCObject)retObjectScope;
             return new DataProtectionScope(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScope != null ? retObjectScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class DpapiDataProtector extends DataProtector  {
 
     public void setScope(DataProtectionScope Scope) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Scope", Scope == null ? null : Scope.getJCOInstance());
         } catch (JCNativeException jcne) {

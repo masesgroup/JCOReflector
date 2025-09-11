@@ -146,10 +146,14 @@ public class IComponentDiscoveryServiceImplementation extends NetObject implemen
     
     public ICollection GetComponentTypes(IDesignerHost designerHost, NetType baseType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetComponentTypes = null;
         try {
-            JCObject objGetComponentTypes = (JCObject)classInstance.Invoke("GetComponentTypes", designerHost == null ? null : designerHost.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
+            retObjectGetComponentTypes = classInstance.Invoke("GetComponentTypes", designerHost == null ? null : designerHost.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
+            JCObject objGetComponentTypes = (JCObject)retObjectGetComponentTypes;
             return new ICollectionImplementation(objGetComponentTypes);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetComponentTypes != null ? retObjectGetComponentTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

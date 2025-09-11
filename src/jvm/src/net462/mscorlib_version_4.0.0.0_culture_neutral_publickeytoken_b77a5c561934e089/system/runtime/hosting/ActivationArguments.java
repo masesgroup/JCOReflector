@@ -198,10 +198,14 @@ public class ActivationArguments extends EvidenceBase  {
     
     public EvidenceBase Clone() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new EvidenceBase(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class ActivationArguments extends EvidenceBase  {
     
     public ActivationContext getActivationContext() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivationContext");
+            retObjectActivationContext = classInstance.Get("ActivationContext");
+            JCObject val = (JCObject)retObjectActivationContext;
             return new ActivationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivationContext != null ? retObjectActivationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class ActivationArguments extends EvidenceBase  {
 
     public ApplicationIdentity getApplicationIdentity() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectApplicationIdentity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ApplicationIdentity");
+            retObjectApplicationIdentity = classInstance.Get("ApplicationIdentity");
+            JCObject val = (JCObject)retObjectApplicationIdentity;
             return new ApplicationIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectApplicationIdentity != null ? retObjectApplicationIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +247,12 @@ public class ActivationArguments extends EvidenceBase  {
 
     public java.lang.String[] getActivationData() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivationData = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ActivationData");
+            retObjectActivationData = classInstance.Get("ActivationData");
+            JCObject resultingObjects = (JCObject)retObjectActivationData;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -247,6 +261,8 @@ public class ActivationArguments extends EvidenceBase  {
 				resultingArray[indexActivationData] = (java.lang.String)resultingArrayList.get(indexActivationData);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectActivationData != null ? retObjectActivationData.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

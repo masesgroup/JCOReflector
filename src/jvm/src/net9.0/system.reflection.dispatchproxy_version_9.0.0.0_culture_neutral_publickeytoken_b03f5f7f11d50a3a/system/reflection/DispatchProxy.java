@@ -153,10 +153,14 @@ public class DispatchProxy extends NetObject  {
     
     public static NetObject Create(NetType interfaceType, NetType proxyType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.io.FileLoadException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", interfaceType == null ? null : interfaceType.getJCOInstance(), proxyType == null ? null : proxyType.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", interfaceType == null ? null : interfaceType.getJCOInstance(), proxyType == null ? null : proxyType.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NetObject(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

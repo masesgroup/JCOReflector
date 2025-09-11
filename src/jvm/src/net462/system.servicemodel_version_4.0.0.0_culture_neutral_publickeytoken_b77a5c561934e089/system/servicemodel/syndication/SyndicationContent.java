@@ -162,10 +162,14 @@ public class SyndicationContent extends NetObject  {
     
     public SyndicationContent Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SyndicationContent(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class SyndicationContent extends NetObject  {
 
     public static TextSyndicationContent CreateHtmlContent(java.lang.String content) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateHtmlContent = null;
         try {
-            JCObject objCreateHtmlContent = (JCObject)classType.Invoke("CreateHtmlContent", content);
+            retObjectCreateHtmlContent = classType.Invoke("CreateHtmlContent", content);
+            JCObject objCreateHtmlContent = (JCObject)retObjectCreateHtmlContent;
             return new TextSyndicationContent(objCreateHtmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHtmlContent != null ? retObjectCreateHtmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class SyndicationContent extends NetObject  {
 
     public static TextSyndicationContent CreatePlaintextContent(java.lang.String content) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreatePlaintextContent = null;
         try {
-            JCObject objCreatePlaintextContent = (JCObject)classType.Invoke("CreatePlaintextContent", content);
+            retObjectCreatePlaintextContent = classType.Invoke("CreatePlaintextContent", content);
+            JCObject objCreatePlaintextContent = (JCObject)retObjectCreatePlaintextContent;
             return new TextSyndicationContent(objCreatePlaintextContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePlaintextContent != null ? retObjectCreatePlaintextContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class SyndicationContent extends NetObject  {
 
     public static TextSyndicationContent CreateXhtmlContent(java.lang.String content) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXhtmlContent = null;
         try {
-            JCObject objCreateXhtmlContent = (JCObject)classType.Invoke("CreateXhtmlContent", content);
+            retObjectCreateXhtmlContent = classType.Invoke("CreateXhtmlContent", content);
+            JCObject objCreateXhtmlContent = (JCObject)retObjectCreateXhtmlContent;
             return new TextSyndicationContent(objCreateXhtmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXhtmlContent != null ? retObjectCreateXhtmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class SyndicationContent extends NetObject  {
 
     public static UrlSyndicationContent CreateUrlContent(Uri url, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateUrlContent = null;
         try {
-            JCObject objCreateUrlContent = (JCObject)classType.Invoke("CreateUrlContent", url == null ? null : url.getJCOInstance(), mediaType);
+            retObjectCreateUrlContent = classType.Invoke("CreateUrlContent", url == null ? null : url.getJCOInstance(), mediaType);
+            JCObject objCreateUrlContent = (JCObject)retObjectCreateUrlContent;
             return new UrlSyndicationContent(objCreateUrlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateUrlContent != null ? retObjectCreateUrlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class SyndicationContent extends NetObject  {
 
     public static XmlSyndicationContent CreateXmlContent(NetObject dataContractObject) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXmlContent = null;
         try {
-            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", dataContractObject == null ? null : dataContractObject.getJCOInstance());
+            retObjectCreateXmlContent = classType.Invoke("CreateXmlContent", dataContractObject == null ? null : dataContractObject.getJCOInstance());
+            JCObject objCreateXmlContent = (JCObject)retObjectCreateXmlContent;
             return new XmlSyndicationContent(objCreateXmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXmlContent != null ? retObjectCreateXmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class SyndicationContent extends NetObject  {
 
     public static XmlSyndicationContent CreateXmlContent(NetObject dataContractObject, XmlObjectSerializer dataContractSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXmlContent = null;
         try {
-            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", dataContractObject == null ? null : dataContractObject.getJCOInstance(), dataContractSerializer == null ? null : dataContractSerializer.getJCOInstance());
+            retObjectCreateXmlContent = classType.Invoke("CreateXmlContent", dataContractObject == null ? null : dataContractObject.getJCOInstance(), dataContractSerializer == null ? null : dataContractSerializer.getJCOInstance());
+            JCObject objCreateXmlContent = (JCObject)retObjectCreateXmlContent;
             return new XmlSyndicationContent(objCreateXmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXmlContent != null ? retObjectCreateXmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class SyndicationContent extends NetObject  {
 
     public static XmlSyndicationContent CreateXmlContent(NetObject xmlSerializerObject, XmlSerializer serializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.ThreadAbortException, system.security.SecurityException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.configuration.ConfigurationException, system.UnauthorizedAccessException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXmlContent = null;
         try {
-            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", xmlSerializerObject == null ? null : xmlSerializerObject.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            retObjectCreateXmlContent = classType.Invoke("CreateXmlContent", xmlSerializerObject == null ? null : xmlSerializerObject.getJCOInstance(), serializer == null ? null : serializer.getJCOInstance());
+            JCObject objCreateXmlContent = (JCObject)retObjectCreateXmlContent;
             return new XmlSyndicationContent(objCreateXmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXmlContent != null ? retObjectCreateXmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +282,14 @@ public class SyndicationContent extends NetObject  {
 
     public static XmlSyndicationContent CreateXmlContent(XmlReader xmlReader) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateXmlContent = null;
         try {
-            JCObject objCreateXmlContent = (JCObject)classType.Invoke("CreateXmlContent", xmlReader == null ? null : xmlReader.getJCOInstance());
+            retObjectCreateXmlContent = classType.Invoke("CreateXmlContent", xmlReader == null ? null : xmlReader.getJCOInstance());
+            JCObject objCreateXmlContent = (JCObject)retObjectCreateXmlContent;
             return new XmlSyndicationContent(objCreateXmlContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateXmlContent != null ? retObjectCreateXmlContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +297,7 @@ public class SyndicationContent extends NetObject  {
 
     public void WriteTo(XmlWriter writer, java.lang.String outerElementName, java.lang.String outerElementNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteTo", writer == null ? null : writer.getJCOInstance(), outerElementName, outerElementNamespace);
         } catch (JCNativeException jcne) {
@@ -275,9 +311,13 @@ public class SyndicationContent extends NetObject  {
     
     public java.lang.String getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (java.lang.String)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (java.lang.String)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -164,9 +164,13 @@ public class HelpProvider extends Component  {
     
     public boolean CanExtend(NetObject target) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExtend = null;
         try {
-            return (boolean)classInstance.Invoke("CanExtend", target == null ? null : target.getJCOInstance());
+            retObjectCanExtend = classInstance.Invoke("CanExtend", target == null ? null : target.getJCOInstance());
+            return (boolean)retObjectCanExtend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExtend != null ? retObjectCanExtend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +178,13 @@ public class HelpProvider extends Component  {
 
     public boolean GetShowHelp(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetShowHelp = null;
         try {
-            return (boolean)classInstance.Invoke("GetShowHelp", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetShowHelp = classInstance.Invoke("GetShowHelp", ctl == null ? null : ctl.getJCOInstance());
+            return (boolean)retObjectGetShowHelp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetShowHelp != null ? retObjectGetShowHelp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +192,13 @@ public class HelpProvider extends Component  {
 
     public java.lang.String GetHelpKeyword(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHelpKeyword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHelpKeyword", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetHelpKeyword = classInstance.Invoke("GetHelpKeyword", ctl == null ? null : ctl.getJCOInstance());
+            return (java.lang.String)retObjectGetHelpKeyword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHelpKeyword != null ? retObjectGetHelpKeyword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +206,13 @@ public class HelpProvider extends Component  {
 
     public java.lang.String GetHelpString(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHelpString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetHelpString", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetHelpString = classInstance.Invoke("GetHelpString", ctl == null ? null : ctl.getJCOInstance());
+            return (java.lang.String)retObjectGetHelpString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetHelpString != null ? retObjectGetHelpString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class HelpProvider extends Component  {
 
     public HelpNavigator GetHelpNavigator(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetHelpNavigator = null;
         try {
-            JCObject objGetHelpNavigator = (JCObject)classInstance.Invoke("GetHelpNavigator", ctl == null ? null : ctl.getJCOInstance());
+            retObjectGetHelpNavigator = classInstance.Invoke("GetHelpNavigator", ctl == null ? null : ctl.getJCOInstance());
+            JCObject objGetHelpNavigator = (JCObject)retObjectGetHelpNavigator;
             return new HelpNavigator(objGetHelpNavigator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetHelpNavigator != null ? retObjectGetHelpNavigator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +235,7 @@ public class HelpProvider extends Component  {
 
     public void ResetShowHelp(Control ctl) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetShowHelp", ctl == null ? null : ctl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +245,7 @@ public class HelpProvider extends Component  {
 
     public void SetHelpKeyword(Control ctl, java.lang.String keyword) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHelpKeyword", ctl == null ? null : ctl.getJCOInstance(), keyword);
         } catch (JCNativeException jcne) {
@@ -235,7 +255,7 @@ public class HelpProvider extends Component  {
 
     public void SetHelpNavigator(Control ctl, HelpNavigator navigator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHelpNavigator", ctl == null ? null : ctl.getJCOInstance(), navigator == null ? null : navigator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,7 +265,7 @@ public class HelpProvider extends Component  {
 
     public void SetHelpString(Control ctl, java.lang.String helpString) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetHelpString", ctl == null ? null : ctl.getJCOInstance(), helpString);
         } catch (JCNativeException jcne) {
@@ -255,7 +275,7 @@ public class HelpProvider extends Component  {
 
     public void SetShowHelp(Control ctl, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetShowHelp", ctl == null ? null : ctl.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class HelpProvider extends Component  {
     
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class HelpProvider extends Component  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -290,9 +314,13 @@ public class HelpProvider extends Component  {
 
     public java.lang.String getHelpNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpNamespace");
+            retObjectHelpNamespace = classInstance.Get("HelpNamespace");
+            return (java.lang.String)retObjectHelpNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpNamespace != null ? retObjectHelpNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +328,7 @@ public class HelpProvider extends Component  {
 
     public void setHelpNamespace(java.lang.String HelpNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpNamespace", HelpNamespace);
         } catch (JCNativeException jcne) {

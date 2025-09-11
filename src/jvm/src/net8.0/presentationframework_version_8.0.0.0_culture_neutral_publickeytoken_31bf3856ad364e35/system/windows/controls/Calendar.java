@@ -169,7 +169,7 @@ public class Calendar extends Control  {
     
     public void OnApplyTemplate() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnApplyTemplate");
         } catch (JCNativeException jcne) {
@@ -183,9 +183,13 @@ public class Calendar extends Control  {
     
     public boolean getIsTodayHighlighted() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTodayHighlighted = null;
         try {
-            return (boolean)classInstance.Get("IsTodayHighlighted");
+            retObjectIsTodayHighlighted = classInstance.Get("IsTodayHighlighted");
+            return (boolean)retObjectIsTodayHighlighted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTodayHighlighted != null ? retObjectIsTodayHighlighted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +197,7 @@ public class Calendar extends Control  {
 
     public void setIsTodayHighlighted(boolean IsTodayHighlighted) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTodayHighlighted", IsTodayHighlighted);
         } catch (JCNativeException jcne) {
@@ -203,10 +207,14 @@ public class Calendar extends Control  {
 
     public DateTime getDisplayDate() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayDate");
+            retObjectDisplayDate = classInstance.Get("DisplayDate");
+            JCObject val = (JCObject)retObjectDisplayDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayDate != null ? retObjectDisplayDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class Calendar extends Control  {
 
     public void setDisplayDate(DateTime DisplayDate) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayDate", DisplayDate == null ? null : DisplayDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +232,14 @@ public class Calendar extends Control  {
 
     public DayOfWeek getFirstDayOfWeek() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFirstDayOfWeek = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FirstDayOfWeek");
+            retObjectFirstDayOfWeek = classInstance.Get("FirstDayOfWeek");
+            JCObject val = (JCObject)retObjectFirstDayOfWeek;
             return new DayOfWeek(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFirstDayOfWeek != null ? retObjectFirstDayOfWeek.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +247,7 @@ public class Calendar extends Control  {
 
     public void setFirstDayOfWeek(DayOfWeek FirstDayOfWeek) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FirstDayOfWeek", FirstDayOfWeek == null ? null : FirstDayOfWeek.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -245,10 +257,14 @@ public class Calendar extends Control  {
 
     public CalendarBlackoutDatesCollection getBlackoutDates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlackoutDates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BlackoutDates");
+            retObjectBlackoutDates = classInstance.Get("BlackoutDates");
+            JCObject val = (JCObject)retObjectBlackoutDates;
             return new CalendarBlackoutDatesCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlackoutDates != null ? retObjectBlackoutDates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +272,14 @@ public class Calendar extends Control  {
 
     public CalendarMode getDisplayMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayMode");
+            retObjectDisplayMode = classInstance.Get("DisplayMode");
+            JCObject val = (JCObject)retObjectDisplayMode;
             return new CalendarMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayMode != null ? retObjectDisplayMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class Calendar extends Control  {
 
     public void setDisplayMode(CalendarMode DisplayMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayMode", DisplayMode == null ? null : DisplayMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +297,14 @@ public class Calendar extends Control  {
 
     public CalendarSelectionMode getSelectionMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectionMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectionMode");
+            retObjectSelectionMode = classInstance.Get("SelectionMode");
+            JCObject val = (JCObject)retObjectSelectionMode;
             return new CalendarSelectionMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectionMode != null ? retObjectSelectionMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class Calendar extends Control  {
 
     public void setSelectionMode(CalendarSelectionMode SelectionMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectionMode", SelectionMode == null ? null : SelectionMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +322,14 @@ public class Calendar extends Control  {
 
     public SelectedDatesCollection getSelectedDates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedDates = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedDates");
+            retObjectSelectedDates = classInstance.Get("SelectedDates");
+            JCObject val = (JCObject)retObjectSelectedDates;
             return new SelectedDatesCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedDates != null ? retObjectSelectedDates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +337,14 @@ public class Calendar extends Control  {
 
     public Style getCalendarButtonStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarButtonStyle");
+            retObjectCalendarButtonStyle = classInstance.Get("CalendarButtonStyle");
+            JCObject val = (JCObject)retObjectCalendarButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarButtonStyle != null ? retObjectCalendarButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +352,7 @@ public class Calendar extends Control  {
 
     public void setCalendarButtonStyle(Style CalendarButtonStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarButtonStyle", CalendarButtonStyle == null ? null : CalendarButtonStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +362,14 @@ public class Calendar extends Control  {
 
     public Style getCalendarDayButtonStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarDayButtonStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarDayButtonStyle");
+            retObjectCalendarDayButtonStyle = classInstance.Get("CalendarDayButtonStyle");
+            JCObject val = (JCObject)retObjectCalendarDayButtonStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarDayButtonStyle != null ? retObjectCalendarDayButtonStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +377,7 @@ public class Calendar extends Control  {
 
     public void setCalendarDayButtonStyle(Style CalendarDayButtonStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarDayButtonStyle", CalendarDayButtonStyle == null ? null : CalendarDayButtonStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +387,14 @@ public class Calendar extends Control  {
 
     public Style getCalendarItemStyle() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalendarItemStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CalendarItemStyle");
+            retObjectCalendarItemStyle = classInstance.Get("CalendarItemStyle");
+            JCObject val = (JCObject)retObjectCalendarItemStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCalendarItemStyle != null ? retObjectCalendarItemStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +402,7 @@ public class Calendar extends Control  {
 
     public void setCalendarItemStyle(Style CalendarItemStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CalendarItemStyle", CalendarItemStyle == null ? null : CalendarItemStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

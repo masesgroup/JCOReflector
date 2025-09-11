@@ -165,10 +165,14 @@ public class UserProfileAttribute extends Attribute  {
     
     public IValueProvider GetValueProvider(ModelBindingExecutionContext modelBindingExecutionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetValueProvider = null;
         try {
-            JCObject objGetValueProvider = (JCObject)classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            retObjectGetValueProvider = classInstance.Invoke("GetValueProvider", modelBindingExecutionContext == null ? null : modelBindingExecutionContext.getJCOInstance());
+            JCObject objGetValueProvider = (JCObject)retObjectGetValueProvider;
             return new IValueProviderImplementation(objGetValueProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueProvider != null ? retObjectGetValueProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

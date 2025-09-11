@@ -171,16 +171,20 @@ public class ParameterEditorUserControl extends UserControl  {
     
     public Parameter[] GetParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParameters = null;
         try {
             ArrayList<Parameter> resultingArrayList = new ArrayList<Parameter>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
+            retObjectGetParameters = classInstance.Invoke("GetParameters");
+            JCObject resultingObjects = (JCObject)retObjectGetParameters;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Parameter(resultingObject));
             }
             Parameter[] resultingArray = new Parameter[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParameters != null ? retObjectGetParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public void AddParameters(Parameter[] parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddParameters", (java.lang.Object)toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public void ClearParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearParameters");
         } catch (JCNativeException jcne) {
@@ -208,7 +212,7 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public void SetAllowCollectionChanges(boolean allowChanges) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAllowCollectionChanges", allowChanges);
         } catch (JCNativeException jcne) {
@@ -222,9 +226,13 @@ public class ParameterEditorUserControl extends UserControl  {
     
     public boolean getParametersConfigured() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParametersConfigured = null;
         try {
-            return (boolean)classInstance.Get("ParametersConfigured");
+            retObjectParametersConfigured = classInstance.Get("ParametersConfigured");
+            return (boolean)retObjectParametersConfigured;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectParametersConfigured != null ? retObjectParametersConfigured.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +240,14 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public TypeDescriptionProvider getTypeDescriptionProvider() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeDescriptionProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeDescriptionProvider");
+            retObjectTypeDescriptionProvider = classInstance.Get("TypeDescriptionProvider");
+            JCObject val = (JCObject)retObjectTypeDescriptionProvider;
             return new TypeDescriptionProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeDescriptionProvider != null ? retObjectTypeDescriptionProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +260,7 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public void addParametersChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ParametersChanged", handler);
         } catch (JCNativeException jcne) {
@@ -258,7 +270,7 @@ public class ParameterEditorUserControl extends UserControl  {
 
     public void removeParametersChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ParametersChanged", handler);
         } catch (JCNativeException jcne) {

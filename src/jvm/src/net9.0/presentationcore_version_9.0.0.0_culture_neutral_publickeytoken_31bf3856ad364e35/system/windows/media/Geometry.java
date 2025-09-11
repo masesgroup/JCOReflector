@@ -167,9 +167,13 @@ public class Geometry extends Animatable implements system.IFormattable {
     
     public boolean FillContains(Geometry geometry, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContains = null;
         try {
-            return (boolean)classInstance.Invoke("FillContains", geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectFillContains = classInstance.Invoke("FillContains", geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectFillContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFillContains != null ? retObjectFillContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean FillContains(Geometry geometry) throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContains = null;
         try {
-            return (boolean)classInstance.Invoke("FillContains", geometry == null ? null : geometry.getJCOInstance());
+            retObjectFillContains = classInstance.Invoke("FillContains", geometry == null ? null : geometry.getJCOInstance());
+            return (boolean)retObjectFillContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFillContains != null ? retObjectFillContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean FillContains(Point hitPoint, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContains = null;
         try {
-            return (boolean)classInstance.Invoke("FillContains", hitPoint == null ? null : hitPoint.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectFillContains = classInstance.Invoke("FillContains", hitPoint == null ? null : hitPoint.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectFillContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFillContains != null ? retObjectFillContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean FillContains(Point hitPoint) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContains = null;
         try {
-            return (boolean)classInstance.Invoke("FillContains", hitPoint == null ? null : hitPoint.getJCOInstance());
+            retObjectFillContains = classInstance.Invoke("FillContains", hitPoint == null ? null : hitPoint.getJCOInstance());
+            return (boolean)retObjectFillContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFillContains != null ? retObjectFillContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +223,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean IsEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("IsEmpty");
+            retObjectIsEmpty = classInstance.Invoke("IsEmpty");
+            return (boolean)retObjectIsEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEmpty != null ? retObjectIsEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +237,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean MayHaveCurves() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMayHaveCurves = null;
         try {
-            return (boolean)classInstance.Invoke("MayHaveCurves");
+            retObjectMayHaveCurves = classInstance.Invoke("MayHaveCurves");
+            return (boolean)retObjectMayHaveCurves;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMayHaveCurves != null ? retObjectMayHaveCurves.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +251,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean ShouldSerializeTransform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeTransform = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeTransform");
+            retObjectShouldSerializeTransform = classInstance.Invoke("ShouldSerializeTransform");
+            return (boolean)retObjectShouldSerializeTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeTransform != null ? retObjectShouldSerializeTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,9 +265,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean StrokeContains(Pen pen, Point hitPoint, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeContains = null;
         try {
-            return (boolean)classInstance.Invoke("StrokeContains", pen == null ? null : pen.getJCOInstance(), hitPoint == null ? null : hitPoint.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectStrokeContains = classInstance.Invoke("StrokeContains", pen == null ? null : pen.getJCOInstance(), hitPoint == null ? null : hitPoint.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            return (boolean)retObjectStrokeContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStrokeContains != null ? retObjectStrokeContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +279,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public boolean StrokeContains(Pen pen, Point hitPoint) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeContains = null;
         try {
-            return (boolean)classInstance.Invoke("StrokeContains", pen == null ? null : pen.getJCOInstance(), hitPoint == null ? null : hitPoint.getJCOInstance());
+            retObjectStrokeContains = classInstance.Invoke("StrokeContains", pen == null ? null : pen.getJCOInstance(), hitPoint == null ? null : hitPoint.getJCOInstance());
+            return (boolean)retObjectStrokeContains;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectStrokeContains != null ? retObjectStrokeContains.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,9 +293,19 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public double GetArea() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArea = null;
         try {
-            return (double)classInstance.Invoke("GetArea");
+            retObjectGetArea = classInstance.Invoke("GetArea");
+            return (double)retObjectGetArea;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
+                return retObjectGetAreaNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,9 +313,19 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public double GetArea(double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetArea = null;
         try {
-            return (double)classInstance.Invoke("GetArea", tolerance, type == null ? null : type.getJCOInstance());
+            retObjectGetArea = classInstance.Invoke("GetArea", tolerance, type == null ? null : type.getJCOInstance());
+            return (double)retObjectGetArea;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetAreaNumber = (java.lang.Number)retObjectGetArea;
+                return retObjectGetAreaNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectGetArea != null ? retObjectGetArea.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,9 +333,13 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public java.lang.String ToString(IFormatProvider provider) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            retObjectToString = classInstance.Invoke("ToString", provider == null ? null : provider.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +347,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Geometry CloneNewGeometry() throws Throwable, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new Geometry(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +362,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Geometry CloneCurrentValueNewGeometry() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new Geometry(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +377,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public static Geometry Parse(java.lang.String source) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParse = null;
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", source);
+            retObjectParse = classType.Invoke("Parse", source);
+            JCObject objParse = (JCObject)retObjectParse;
             return new Geometry(objParse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParse != null ? retObjectParse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +392,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public IntersectionDetail FillContainsWithDetail(Geometry geometry, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContainsWithDetail = null;
         try {
-            JCObject objFillContainsWithDetail = (JCObject)classInstance.Invoke("FillContainsWithDetail", geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectFillContainsWithDetail = classInstance.Invoke("FillContainsWithDetail", geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objFillContainsWithDetail = (JCObject)retObjectFillContainsWithDetail;
             return new IntersectionDetail(objFillContainsWithDetail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillContainsWithDetail != null ? retObjectFillContainsWithDetail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +407,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public IntersectionDetail FillContainsWithDetail(Geometry geometry) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFillContainsWithDetail = null;
         try {
-            JCObject objFillContainsWithDetail = (JCObject)classInstance.Invoke("FillContainsWithDetail", geometry == null ? null : geometry.getJCOInstance());
+            retObjectFillContainsWithDetail = classInstance.Invoke("FillContainsWithDetail", geometry == null ? null : geometry.getJCOInstance());
+            JCObject objFillContainsWithDetail = (JCObject)retObjectFillContainsWithDetail;
             return new IntersectionDetail(objFillContainsWithDetail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFillContainsWithDetail != null ? retObjectFillContainsWithDetail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +422,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public IntersectionDetail StrokeContainsWithDetail(Pen pen, Geometry geometry, double tolerance, ToleranceType type) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeContainsWithDetail = null;
         try {
-            JCObject objStrokeContainsWithDetail = (JCObject)classInstance.Invoke("StrokeContainsWithDetail", pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectStrokeContainsWithDetail = classInstance.Invoke("StrokeContainsWithDetail", pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objStrokeContainsWithDetail = (JCObject)retObjectStrokeContainsWithDetail;
             return new IntersectionDetail(objStrokeContainsWithDetail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeContainsWithDetail != null ? retObjectStrokeContainsWithDetail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +437,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public IntersectionDetail StrokeContainsWithDetail(Pen pen, Geometry geometry) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrokeContainsWithDetail = null;
         try {
-            JCObject objStrokeContainsWithDetail = (JCObject)classInstance.Invoke("StrokeContainsWithDetail", pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance());
+            retObjectStrokeContainsWithDetail = classInstance.Invoke("StrokeContainsWithDetail", pen == null ? null : pen.getJCOInstance(), geometry == null ? null : geometry.getJCOInstance());
+            JCObject objStrokeContainsWithDetail = (JCObject)retObjectStrokeContainsWithDetail;
             return new IntersectionDetail(objStrokeContainsWithDetail);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrokeContainsWithDetail != null ? retObjectStrokeContainsWithDetail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,10 +452,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public static PathGeometry Combine(Geometry geometry1, Geometry geometry2, GeometryCombineMode mode, Transform transform, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            JCObject objCombine = (JCObject)classType.Invoke("Combine", geometry1 == null ? null : geometry1.getJCOInstance(), geometry2 == null ? null : geometry2.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), transform == null ? null : transform.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectCombine = classType.Invoke("Combine", geometry1 == null ? null : geometry1.getJCOInstance(), geometry2 == null ? null : geometry2.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), transform == null ? null : transform.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objCombine = (JCObject)retObjectCombine;
             return new PathGeometry(objCombine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +467,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public static PathGeometry Combine(Geometry geometry1, Geometry geometry2, GeometryCombineMode mode, Transform transform) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCombine = null;
         try {
-            JCObject objCombine = (JCObject)classType.Invoke("Combine", geometry1 == null ? null : geometry1.getJCOInstance(), geometry2 == null ? null : geometry2.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), transform == null ? null : transform.getJCOInstance());
+            retObjectCombine = classType.Invoke("Combine", geometry1 == null ? null : geometry1.getJCOInstance(), geometry2 == null ? null : geometry2.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), transform == null ? null : transform.getJCOInstance());
+            JCObject objCombine = (JCObject)retObjectCombine;
             return new PathGeometry(objCombine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCombine != null ? retObjectCombine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +482,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetFlattenedPathGeometry() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFlattenedPathGeometry = null;
         try {
-            JCObject objGetFlattenedPathGeometry = (JCObject)classInstance.Invoke("GetFlattenedPathGeometry");
+            retObjectGetFlattenedPathGeometry = classInstance.Invoke("GetFlattenedPathGeometry");
+            JCObject objGetFlattenedPathGeometry = (JCObject)retObjectGetFlattenedPathGeometry;
             return new PathGeometry(objGetFlattenedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFlattenedPathGeometry != null ? retObjectGetFlattenedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +497,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetFlattenedPathGeometry(double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFlattenedPathGeometry = null;
         try {
-            JCObject objGetFlattenedPathGeometry = (JCObject)classInstance.Invoke("GetFlattenedPathGeometry", tolerance, type == null ? null : type.getJCOInstance());
+            retObjectGetFlattenedPathGeometry = classInstance.Invoke("GetFlattenedPathGeometry", tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objGetFlattenedPathGeometry = (JCObject)retObjectGetFlattenedPathGeometry;
             return new PathGeometry(objGetFlattenedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFlattenedPathGeometry != null ? retObjectGetFlattenedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +512,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetOutlinedPathGeometry() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutlinedPathGeometry = null;
         try {
-            JCObject objGetOutlinedPathGeometry = (JCObject)classInstance.Invoke("GetOutlinedPathGeometry");
+            retObjectGetOutlinedPathGeometry = classInstance.Invoke("GetOutlinedPathGeometry");
+            JCObject objGetOutlinedPathGeometry = (JCObject)retObjectGetOutlinedPathGeometry;
             return new PathGeometry(objGetOutlinedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutlinedPathGeometry != null ? retObjectGetOutlinedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,10 +527,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetOutlinedPathGeometry(double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutlinedPathGeometry = null;
         try {
-            JCObject objGetOutlinedPathGeometry = (JCObject)classInstance.Invoke("GetOutlinedPathGeometry", tolerance, type == null ? null : type.getJCOInstance());
+            retObjectGetOutlinedPathGeometry = classInstance.Invoke("GetOutlinedPathGeometry", tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objGetOutlinedPathGeometry = (JCObject)retObjectGetOutlinedPathGeometry;
             return new PathGeometry(objGetOutlinedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutlinedPathGeometry != null ? retObjectGetOutlinedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,10 +542,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetWidenedPathGeometry(Pen pen, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWidenedPathGeometry = null;
         try {
-            JCObject objGetWidenedPathGeometry = (JCObject)classInstance.Invoke("GetWidenedPathGeometry", pen == null ? null : pen.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectGetWidenedPathGeometry = classInstance.Invoke("GetWidenedPathGeometry", pen == null ? null : pen.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objGetWidenedPathGeometry = (JCObject)retObjectGetWidenedPathGeometry;
             return new PathGeometry(objGetWidenedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWidenedPathGeometry != null ? retObjectGetWidenedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +557,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public PathGeometry GetWidenedPathGeometry(Pen pen) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWidenedPathGeometry = null;
         try {
-            JCObject objGetWidenedPathGeometry = (JCObject)classInstance.Invoke("GetWidenedPathGeometry", pen == null ? null : pen.getJCOInstance());
+            retObjectGetWidenedPathGeometry = classInstance.Invoke("GetWidenedPathGeometry", pen == null ? null : pen.getJCOInstance());
+            JCObject objGetWidenedPathGeometry = (JCObject)retObjectGetWidenedPathGeometry;
             return new PathGeometry(objGetWidenedPathGeometry);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetWidenedPathGeometry != null ? retObjectGetWidenedPathGeometry.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,10 +572,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Rect GetRenderBounds(Pen pen, double tolerance, ToleranceType type) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRenderBounds = null;
         try {
-            JCObject objGetRenderBounds = (JCObject)classInstance.Invoke("GetRenderBounds", pen == null ? null : pen.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            retObjectGetRenderBounds = classInstance.Invoke("GetRenderBounds", pen == null ? null : pen.getJCOInstance(), tolerance, type == null ? null : type.getJCOInstance());
+            JCObject objGetRenderBounds = (JCObject)retObjectGetRenderBounds;
             return new Rect(objGetRenderBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRenderBounds != null ? retObjectGetRenderBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -463,10 +587,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Rect GetRenderBounds(Pen pen) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRenderBounds = null;
         try {
-            JCObject objGetRenderBounds = (JCObject)classInstance.Invoke("GetRenderBounds", pen == null ? null : pen.getJCOInstance());
+            retObjectGetRenderBounds = classInstance.Invoke("GetRenderBounds", pen == null ? null : pen.getJCOInstance());
+            JCObject objGetRenderBounds = (JCObject)retObjectGetRenderBounds;
             return new Rect(objGetRenderBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRenderBounds != null ? retObjectGetRenderBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,7 +606,7 @@ public class Geometry extends Animatable implements system.IFormattable {
      */
     @Deprecated 
     public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 
@@ -487,9 +615,13 @@ public class Geometry extends Animatable implements system.IFormattable {
     
     public static double getStandardFlatteningTolerance() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectStandardFlatteningTolerance = null;
         try {
-            return (double)classType.Get("StandardFlatteningTolerance");
+            retObjectStandardFlatteningTolerance = classType.Get("StandardFlatteningTolerance");
+            return (double)retObjectStandardFlatteningTolerance;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectStandardFlatteningTolerance != null ? retObjectStandardFlatteningTolerance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,10 +629,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public static Geometry getEmpty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
         try {
-            JCObject val = (JCObject)classType.Get("Empty");
+            retObjectEmpty = classType.Get("Empty");
+            JCObject val = (JCObject)retObjectEmpty;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,10 +644,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Transform getTransform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Transform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -519,7 +659,7 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public void setTransform(Transform Transform) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -529,10 +669,14 @@ public class Geometry extends Animatable implements system.IFormattable {
 
     public Rect getBounds() throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bounds");
+            retObjectBounds = classInstance.Get("Bounds");
+            JCObject val = (JCObject)retObjectBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBounds != null ? retObjectBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

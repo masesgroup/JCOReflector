@@ -142,10 +142,14 @@ public class INormalizeForIsolatedStorageImplementation extends NetObject implem
     
     public NetObject Normalize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNormalize = null;
         try {
-            JCObject objNormalize = (JCObject)classInstance.Invoke("Normalize");
+            retObjectNormalize = classInstance.Invoke("Normalize");
+            JCObject objNormalize = (JCObject)retObjectNormalize;
             return new NetObject(objNormalize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNormalize != null ? retObjectNormalize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

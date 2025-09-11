@@ -146,9 +146,13 @@ public class IInstanceImplementation extends NetObject implements IInstance {
     
     public boolean getPublished() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublished = null;
         try {
-            return (boolean)classInstance.Get("Published");
+            retObjectPublished = classInstance.Get("Published");
+            return (boolean)retObjectPublished;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPublished != null ? retObjectPublished.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,7 +160,7 @@ public class IInstanceImplementation extends NetObject implements IInstance {
 
     public void setPublished(boolean Published) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Published", Published);
         } catch (JCNativeException jcne) {

@@ -158,9 +158,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
     
     public char ToLower(char c) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLower = null;
         try {
-            return (char)classInstance.Invoke("ToLower", c);
+            retObjectToLower = classInstance.Invoke("ToLower", c);
+            return (char)retObjectToLower;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectToLower != null ? retObjectToLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public char ToUpper(char c) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUpper = null;
         try {
-            return (char)classInstance.Invoke("ToUpper", c);
+            retObjectToUpper = classInstance.Invoke("ToUpper", c);
+            return (char)retObjectToUpper;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectToUpper != null ? retObjectToUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public static TextInfo ReadOnly(TextInfo textInfo) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            JCObject objReadOnly = (JCObject)classType.Invoke("ReadOnly", textInfo == null ? null : textInfo.getJCOInstance());
+            retObjectReadOnly = classType.Invoke("ReadOnly", textInfo == null ? null : textInfo.getJCOInstance());
+            JCObject objReadOnly = (JCObject)retObjectReadOnly;
             return new TextInfo(objReadOnly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public NetObject Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public java.lang.String ToLower(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToLower = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToLower", str);
+            retObjectToLower = classInstance.Invoke("ToLower", str);
+            return (java.lang.String)retObjectToLower;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToLower != null ? retObjectToLower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public java.lang.String ToTitleCase(java.lang.String str) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToTitleCase = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToTitleCase", str);
+            retObjectToTitleCase = classInstance.Invoke("ToTitleCase", str);
+            return (java.lang.String)retObjectToTitleCase;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToTitleCase != null ? retObjectToTitleCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,9 +244,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public java.lang.String ToUpper(java.lang.String str) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToUpper = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToUpper", str);
+            retObjectToUpper = classInstance.Invoke("ToUpper", str);
+            return (java.lang.String)retObjectToUpper;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToUpper != null ? retObjectToUpper.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +262,7 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
      */
     @Deprecated 
     public void OnDeserialization(NetObject sender) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 
@@ -243,9 +271,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
     
     public boolean getIsReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReadOnly = null;
         try {
-            return (boolean)classInstance.Get("IsReadOnly");
+            retObjectIsReadOnly = classInstance.Get("IsReadOnly");
+            return (boolean)retObjectIsReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReadOnly != null ? retObjectIsReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,9 +285,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public boolean getIsRightToLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRightToLeft = null;
         try {
-            return (boolean)classInstance.Get("IsRightToLeft");
+            retObjectIsRightToLeft = classInstance.Get("IsRightToLeft");
+            return (boolean)retObjectIsRightToLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRightToLeft != null ? retObjectIsRightToLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,9 +299,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public int getANSICodePage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectANSICodePage = null;
         try {
-            return (int)classInstance.Get("ANSICodePage");
+            retObjectANSICodePage = classInstance.Get("ANSICodePage");
+            return (int)retObjectANSICodePage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectANSICodePage != null ? retObjectANSICodePage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,9 +313,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public int getEBCDICCodePage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEBCDICCodePage = null;
         try {
-            return (int)classInstance.Get("EBCDICCodePage");
+            retObjectEBCDICCodePage = classInstance.Get("EBCDICCodePage");
+            return (int)retObjectEBCDICCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEBCDICCodePage != null ? retObjectEBCDICCodePage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,9 +327,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public int getLCID() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLCID = null;
         try {
-            return (int)classInstance.Get("LCID");
+            retObjectLCID = classInstance.Get("LCID");
+            return (int)retObjectLCID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLCID != null ? retObjectLCID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,9 +341,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public int getMacCodePage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMacCodePage = null;
         try {
-            return (int)classInstance.Get("MacCodePage");
+            retObjectMacCodePage = classInstance.Get("MacCodePage");
+            return (int)retObjectMacCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMacCodePage != null ? retObjectMacCodePage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,9 +355,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public int getOEMCodePage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOEMCodePage = null;
         try {
-            return (int)classInstance.Get("OEMCodePage");
+            retObjectOEMCodePage = classInstance.Get("OEMCodePage");
+            return (int)retObjectOEMCodePage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOEMCodePage != null ? retObjectOEMCodePage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,9 +369,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public java.lang.String getCultureName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCultureName = null;
         try {
-            return (java.lang.String)classInstance.Get("CultureName");
+            retObjectCultureName = classInstance.Get("CultureName");
+            return (java.lang.String)retObjectCultureName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCultureName != null ? retObjectCultureName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,9 +383,13 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public java.lang.String getListSeparator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectListSeparator = null;
         try {
-            return (java.lang.String)classInstance.Get("ListSeparator");
+            retObjectListSeparator = classInstance.Get("ListSeparator");
+            return (java.lang.String)retObjectListSeparator;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectListSeparator != null ? retObjectListSeparator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +397,7 @@ public class TextInfo extends NetObject implements system.runtime.serialization.
 
     public void setListSeparator(java.lang.String ListSeparator) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ListSeparator", ListSeparator);
         } catch (JCNativeException jcne) {

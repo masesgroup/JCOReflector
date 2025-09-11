@@ -167,9 +167,13 @@ public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
     
     public boolean Fallback(char charUnknownHigh, char charUnknownLow, int index) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallback = null;
         try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
+            retObjectFallback = classInstance.Invoke("Fallback", charUnknownHigh, charUnknownLow, index);
+            return (boolean)retObjectFallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFallback != null ? retObjectFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
 
     public boolean Fallback(char charUnknown, int index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFallback = null;
         try {
-            return (boolean)classInstance.Invoke("Fallback", charUnknown, index);
+            retObjectFallback = classInstance.Invoke("Fallback", charUnknown, index);
+            return (boolean)retObjectFallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectFallback != null ? retObjectFallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
 
     public boolean MovePrevious() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMovePrevious = null;
         try {
-            return (boolean)classInstance.Invoke("MovePrevious");
+            retObjectMovePrevious = classInstance.Invoke("MovePrevious");
+            return (boolean)retObjectMovePrevious;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMovePrevious != null ? retObjectMovePrevious.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +209,13 @@ public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
 
     public char GetNextChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextChar = null;
         try {
-            return (char)classInstance.Invoke("GetNextChar");
+            retObjectGetNextChar = classInstance.Invoke("GetNextChar");
+            return (char)retObjectGetNextChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetNextChar != null ? retObjectGetNextChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +223,7 @@ public class EncoderReplacementFallbackBuffer extends EncoderFallbackBuffer  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {

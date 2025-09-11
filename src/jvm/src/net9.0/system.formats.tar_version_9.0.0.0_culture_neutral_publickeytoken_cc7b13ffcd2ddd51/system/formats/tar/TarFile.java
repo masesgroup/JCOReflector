@@ -156,10 +156,14 @@ public class TarFile extends NetObject  {
     
     public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, Stream destination, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromDirectoryAsync = null;
         try {
-            JCObject objCreateFromDirectoryAsync = (JCObject)classType.Invoke("CreateFromDirectoryAsync", sourceDirectoryName, destination == null ? null : destination.getJCOInstance(), includeBaseDirectory, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCreateFromDirectoryAsync = classType.Invoke("CreateFromDirectoryAsync", sourceDirectoryName, destination == null ? null : destination.getJCOInstance(), includeBaseDirectory, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCreateFromDirectoryAsync = (JCObject)retObjectCreateFromDirectoryAsync;
             return new Task(objCreateFromDirectoryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromDirectoryAsync != null ? retObjectCreateFromDirectoryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class TarFile extends NetObject  {
 
     public static Task CreateFromDirectoryAsync(java.lang.String sourceDirectoryName, java.lang.String destinationFileName, boolean includeBaseDirectory, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateFromDirectoryAsync = null;
         try {
-            JCObject objCreateFromDirectoryAsync = (JCObject)classType.Invoke("CreateFromDirectoryAsync", sourceDirectoryName, destinationFileName, includeBaseDirectory, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCreateFromDirectoryAsync = classType.Invoke("CreateFromDirectoryAsync", sourceDirectoryName, destinationFileName, includeBaseDirectory, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCreateFromDirectoryAsync = (JCObject)retObjectCreateFromDirectoryAsync;
             return new Task(objCreateFromDirectoryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateFromDirectoryAsync != null ? retObjectCreateFromDirectoryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class TarFile extends NetObject  {
 
     public static Task ExtractToDirectoryAsync(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtractToDirectoryAsync = null;
         try {
-            JCObject objExtractToDirectoryAsync = (JCObject)classType.Invoke("ExtractToDirectoryAsync", source == null ? null : source.getJCOInstance(), destinationDirectoryName, overwriteFiles, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectExtractToDirectoryAsync = classType.Invoke("ExtractToDirectoryAsync", source == null ? null : source.getJCOInstance(), destinationDirectoryName, overwriteFiles, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExtractToDirectoryAsync = (JCObject)retObjectExtractToDirectoryAsync;
             return new Task(objExtractToDirectoryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractToDirectoryAsync != null ? retObjectExtractToDirectoryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +201,14 @@ public class TarFile extends NetObject  {
 
     public static Task ExtractToDirectoryAsync(java.lang.String sourceFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExtractToDirectoryAsync = null;
         try {
-            JCObject objExtractToDirectoryAsync = (JCObject)classType.Invoke("ExtractToDirectoryAsync", sourceFileName, destinationDirectoryName, overwriteFiles, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectExtractToDirectoryAsync = classType.Invoke("ExtractToDirectoryAsync", sourceFileName, destinationDirectoryName, overwriteFiles, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objExtractToDirectoryAsync = (JCObject)retObjectExtractToDirectoryAsync;
             return new Task(objExtractToDirectoryAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtractToDirectoryAsync != null ? retObjectExtractToDirectoryAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +216,7 @@ public class TarFile extends NetObject  {
 
     public static void CreateFromDirectory(java.lang.String sourceDirectoryName, Stream destination, boolean includeBaseDirectory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.DirectoryNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateFromDirectory", sourceDirectoryName, destination == null ? null : destination.getJCOInstance(), includeBaseDirectory);
         } catch (JCNativeException jcne) {
@@ -210,7 +226,7 @@ public class TarFile extends NetObject  {
 
     public static void CreateFromDirectory(java.lang.String sourceDirectoryName, java.lang.String destinationFileName, boolean includeBaseDirectory) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.DirectoryNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.io.InvalidDataException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CreateFromDirectory", sourceDirectoryName, destinationFileName, includeBaseDirectory);
         } catch (JCNativeException jcne) {
@@ -220,7 +236,7 @@ public class TarFile extends NetObject  {
 
     public static void ExtractToDirectory(Stream source, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.DirectoryNotFoundException, system.diagnostics.UnreachableException, system.FormatException, system.io.IOException, system.runtime.serialization.SerializationException, system.io.InvalidDataException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToDirectory", source == null ? null : source.getJCOInstance(), destinationDirectoryName, overwriteFiles);
         } catch (JCNativeException jcne) {
@@ -230,7 +246,7 @@ public class TarFile extends NetObject  {
 
     public static void ExtractToDirectory(java.lang.String sourceFileName, java.lang.String destinationDirectoryName, boolean overwriteFiles) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NullReferenceException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.runtime.serialization.SerializationException, system.diagnostics.UnreachableException, system.io.IOException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.InvalidDataException, system.OverflowException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ExtractToDirectory", sourceFileName, destinationDirectoryName, overwriteFiles);
         } catch (JCNativeException jcne) {

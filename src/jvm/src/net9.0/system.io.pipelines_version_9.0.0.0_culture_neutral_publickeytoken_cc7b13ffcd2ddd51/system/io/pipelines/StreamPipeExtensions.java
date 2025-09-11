@@ -157,10 +157,14 @@ public class StreamPipeExtensions extends NetObject  {
     
     public static Task CopyToAsync(Stream source, PipeWriter destination, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCopyToAsync = null;
         try {
-            JCObject objCopyToAsync = (JCObject)classType.Invoke("CopyToAsync", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            retObjectCopyToAsync = classType.Invoke("CopyToAsync", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance(), cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            JCObject objCopyToAsync = (JCObject)retObjectCopyToAsync;
             return new Task(objCopyToAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopyToAsync != null ? retObjectCopyToAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

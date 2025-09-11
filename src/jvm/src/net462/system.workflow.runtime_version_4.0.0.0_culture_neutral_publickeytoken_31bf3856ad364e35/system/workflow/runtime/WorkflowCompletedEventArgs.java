@@ -161,10 +161,14 @@ public class WorkflowCompletedEventArgs extends WorkflowEventArgs  {
     
     public Activity getWorkflowDefinition() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowDefinition");
+            retObjectWorkflowDefinition = classInstance.Get("WorkflowDefinition");
+            JCObject val = (JCObject)retObjectWorkflowDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowDefinition != null ? retObjectWorkflowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

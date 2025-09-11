@@ -163,9 +163,13 @@ public class Visual3D extends DependencyObject  {
     
     public boolean IsAncestorOf(DependencyObject descendant) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAncestorOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsAncestorOf", descendant == null ? null : descendant.getJCOInstance());
+            retObjectIsAncestorOf = classInstance.Invoke("IsAncestorOf", descendant == null ? null : descendant.getJCOInstance());
+            return (boolean)retObjectIsAncestorOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsAncestorOf != null ? retObjectIsAncestorOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,9 +177,13 @@ public class Visual3D extends DependencyObject  {
 
     public boolean IsDescendantOf(DependencyObject ancestor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDescendantOf = null;
         try {
-            return (boolean)classInstance.Invoke("IsDescendantOf", ancestor == null ? null : ancestor.getJCOInstance());
+            retObjectIsDescendantOf = classInstance.Invoke("IsDescendantOf", ancestor == null ? null : ancestor.getJCOInstance());
+            return (boolean)retObjectIsDescendantOf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDescendantOf != null ? retObjectIsDescendantOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +191,14 @@ public class Visual3D extends DependencyObject  {
 
     public NetObject GetAnimationBaseValue(DependencyProperty dp) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAnimationBaseValue = null;
         try {
-            JCObject objGetAnimationBaseValue = (JCObject)classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            retObjectGetAnimationBaseValue = classInstance.Invoke("GetAnimationBaseValue", dp == null ? null : dp.getJCOInstance());
+            JCObject objGetAnimationBaseValue = (JCObject)retObjectGetAnimationBaseValue;
             return new NetObject(objGetAnimationBaseValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAnimationBaseValue != null ? retObjectGetAnimationBaseValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,10 +206,14 @@ public class Visual3D extends DependencyObject  {
 
     public DependencyObject FindCommonVisualAncestor(DependencyObject otherVisual) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFindCommonVisualAncestor = null;
         try {
-            JCObject objFindCommonVisualAncestor = (JCObject)classInstance.Invoke("FindCommonVisualAncestor", otherVisual == null ? null : otherVisual.getJCOInstance());
+            retObjectFindCommonVisualAncestor = classInstance.Invoke("FindCommonVisualAncestor", otherVisual == null ? null : otherVisual.getJCOInstance());
+            JCObject objFindCommonVisualAncestor = (JCObject)retObjectFindCommonVisualAncestor;
             return new DependencyObject(objFindCommonVisualAncestor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFindCommonVisualAncestor != null ? retObjectFindCommonVisualAncestor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +221,14 @@ public class Visual3D extends DependencyObject  {
 
     public GeneralTransform3D TransformToAncestor(Visual3D ancestor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformToAncestor = null;
         try {
-            JCObject objTransformToAncestor = (JCObject)classInstance.Invoke("TransformToAncestor", ancestor == null ? null : ancestor.getJCOInstance());
+            retObjectTransformToAncestor = classInstance.Invoke("TransformToAncestor", ancestor == null ? null : ancestor.getJCOInstance());
+            JCObject objTransformToAncestor = (JCObject)retObjectTransformToAncestor;
             return new GeneralTransform3D(objTransformToAncestor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformToAncestor != null ? retObjectTransformToAncestor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +236,14 @@ public class Visual3D extends DependencyObject  {
 
     public GeneralTransform3D TransformToDescendant(Visual3D descendant) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformToDescendant = null;
         try {
-            JCObject objTransformToDescendant = (JCObject)classInstance.Invoke("TransformToDescendant", descendant == null ? null : descendant.getJCOInstance());
+            retObjectTransformToDescendant = classInstance.Invoke("TransformToDescendant", descendant == null ? null : descendant.getJCOInstance());
+            JCObject objTransformToDescendant = (JCObject)retObjectTransformToDescendant;
             return new GeneralTransform3D(objTransformToDescendant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformToDescendant != null ? retObjectTransformToDescendant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +251,14 @@ public class Visual3D extends DependencyObject  {
 
     public GeneralTransform3DTo2D TransformToAncestor(Visual ancestor) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformToAncestor = null;
         try {
-            JCObject objTransformToAncestor = (JCObject)classInstance.Invoke("TransformToAncestor", ancestor == null ? null : ancestor.getJCOInstance());
+            retObjectTransformToAncestor = classInstance.Invoke("TransformToAncestor", ancestor == null ? null : ancestor.getJCOInstance());
+            JCObject objTransformToAncestor = (JCObject)retObjectTransformToAncestor;
             return new GeneralTransform3DTo2D(objTransformToAncestor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformToAncestor != null ? retObjectTransformToAncestor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +266,7 @@ public class Visual3D extends DependencyObject  {
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +276,7 @@ public class Visual3D extends DependencyObject  {
 
     public void ApplyAnimationClock(DependencyProperty dp, AnimationClock clock) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyAnimationClock", dp == null ? null : dp.getJCOInstance(), clock == null ? null : clock.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,7 +286,7 @@ public class Visual3D extends DependencyObject  {
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation, HandoffBehavior handoffBehavior) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance(), handoffBehavior == null ? null : handoffBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +296,7 @@ public class Visual3D extends DependencyObject  {
 
     public void BeginAnimation(DependencyProperty dp, AnimationTimeline animation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.windows.media.animation.AnimationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginAnimation", dp == null ? null : dp.getJCOInstance(), animation == null ? null : animation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -282,9 +310,13 @@ public class Visual3D extends DependencyObject  {
     
     public boolean getHasAnimatedProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAnimatedProperties = null;
         try {
-            return (boolean)classInstance.Get("HasAnimatedProperties");
+            retObjectHasAnimatedProperties = classInstance.Get("HasAnimatedProperties");
+            return (boolean)retObjectHasAnimatedProperties;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAnimatedProperties != null ? retObjectHasAnimatedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,10 +324,14 @@ public class Visual3D extends DependencyObject  {
 
     public Transform3D getTransform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Transform3D(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +339,7 @@ public class Visual3D extends DependencyObject  {
 
     public void setTransform(Transform3D Transform) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {

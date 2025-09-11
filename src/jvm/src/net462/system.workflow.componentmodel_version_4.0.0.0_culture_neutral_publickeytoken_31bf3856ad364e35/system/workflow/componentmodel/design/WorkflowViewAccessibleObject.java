@@ -170,9 +170,19 @@ public class WorkflowViewAccessibleObject extends NetObject  {
     
     public int GetChildCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChildCount = null;
         try {
-            return (int)classInstance.Invoke("GetChildCount");
+            retObjectGetChildCount = classInstance.Invoke("GetChildCount");
+            return (int)retObjectGetChildCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetChildCountNumber = (java.lang.Number)retObjectGetChildCount;
+                return retObjectGetChildCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetChildCount != null ? retObjectGetChildCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +190,14 @@ public class WorkflowViewAccessibleObject extends NetObject  {
 
     public AccessibleObject GetChild(int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChild = null;
         try {
-            JCObject objGetChild = (JCObject)classInstance.Invoke("GetChild", index);
+            retObjectGetChild = classInstance.Invoke("GetChild", index);
+            JCObject objGetChild = (JCObject)retObjectGetChild;
             return new AccessibleObject(objGetChild);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetChild != null ? retObjectGetChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +205,14 @@ public class WorkflowViewAccessibleObject extends NetObject  {
 
     public AccessibleObject Navigate(AccessibleNavigation navdir) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNavigate = null;
         try {
-            JCObject objNavigate = (JCObject)classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            retObjectNavigate = classInstance.Invoke("Navigate", navdir == null ? null : navdir.getJCOInstance());
+            JCObject objNavigate = (JCObject)retObjectNavigate;
             return new AccessibleObject(objNavigate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNavigate != null ? retObjectNavigate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

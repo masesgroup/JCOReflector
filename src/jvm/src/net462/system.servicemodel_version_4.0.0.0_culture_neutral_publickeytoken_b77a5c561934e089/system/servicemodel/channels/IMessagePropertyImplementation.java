@@ -144,10 +144,14 @@ public class IMessagePropertyImplementation extends NetObject implements IMessag
     
     public IMessageProperty CreateCopy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateCopy = null;
         try {
-            JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
+            retObjectCreateCopy = classInstance.Invoke("CreateCopy");
+            JCObject objCreateCopy = (JCObject)retObjectCreateCopy;
             return new IMessagePropertyImplementation(objCreateCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCopy != null ? retObjectCreateCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

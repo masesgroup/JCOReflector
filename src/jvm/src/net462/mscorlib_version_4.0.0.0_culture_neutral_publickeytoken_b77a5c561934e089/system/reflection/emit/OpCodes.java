@@ -156,9 +156,13 @@ public class OpCodes extends NetObject  {
     
     public static boolean TakesSingleByteArgument(OpCode inst) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTakesSingleByteArgument = null;
         try {
-            return (boolean)classType.Invoke("TakesSingleByteArgument", inst == null ? null : inst.getJCOInstance());
+            retObjectTakesSingleByteArgument = classType.Invoke("TakesSingleByteArgument", inst == null ? null : inst.getJCOInstance());
+            return (boolean)retObjectTakesSingleByteArgument;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTakesSingleByteArgument != null ? retObjectTakesSingleByteArgument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

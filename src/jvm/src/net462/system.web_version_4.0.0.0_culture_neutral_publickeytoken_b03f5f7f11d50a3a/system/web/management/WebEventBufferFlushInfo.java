@@ -162,9 +162,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
     
     public int getEventsDiscardedSinceLastNotification() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventsDiscardedSinceLastNotification = null;
         try {
-            return (int)classInstance.Get("EventsDiscardedSinceLastNotification");
+            retObjectEventsDiscardedSinceLastNotification = classInstance.Get("EventsDiscardedSinceLastNotification");
+            return (int)retObjectEventsDiscardedSinceLastNotification;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventsDiscardedSinceLastNotification != null ? retObjectEventsDiscardedSinceLastNotification.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public int getEventsInBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventsInBuffer = null;
         try {
-            return (int)classInstance.Get("EventsInBuffer");
+            retObjectEventsInBuffer = classInstance.Get("EventsInBuffer");
+            return (int)retObjectEventsInBuffer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventsInBuffer != null ? retObjectEventsInBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public int getNotificationSequence() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationSequence = null;
         try {
-            return (int)classInstance.Get("NotificationSequence");
+            retObjectNotificationSequence = classInstance.Get("NotificationSequence");
+            return (int)retObjectNotificationSequence;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNotificationSequence != null ? retObjectNotificationSequence.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +204,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public DateTime getLastNotificationUtc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastNotificationUtc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastNotificationUtc");
+            retObjectLastNotificationUtc = classInstance.Get("LastNotificationUtc");
+            JCObject val = (JCObject)retObjectLastNotificationUtc;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastNotificationUtc != null ? retObjectLastNotificationUtc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public EventNotificationType getNotificationType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNotificationType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NotificationType");
+            retObjectNotificationType = classInstance.Get("NotificationType");
+            JCObject val = (JCObject)retObjectNotificationType;
             return new EventNotificationType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotificationType != null ? retObjectNotificationType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +234,14 @@ public class WebEventBufferFlushInfo extends NetObject  {
 
     public WebBaseEventCollection getEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvents = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Events");
+            retObjectEvents = classInstance.Get("Events");
+            JCObject val = (JCObject)retObjectEvents;
             return new WebBaseEventCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEvents != null ? retObjectEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

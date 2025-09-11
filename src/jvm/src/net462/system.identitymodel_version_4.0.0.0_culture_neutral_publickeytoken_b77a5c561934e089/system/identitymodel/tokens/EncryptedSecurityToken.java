@@ -170,9 +170,13 @@ public class EncryptedSecurityToken extends SecurityToken  {
     
     public boolean MatchesKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchesKeyIdentifierClause = null;
         try {
-            return (boolean)classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatchesKeyIdentifierClause = classInstance.Invoke("MatchesKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatchesKeyIdentifierClause;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatchesKeyIdentifierClause != null ? retObjectMatchesKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class EncryptedSecurityToken extends SecurityToken  {
 
     public SecurityKey ResolveKeyIdentifierClause(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResolveKeyIdentifierClause = null;
         try {
-            JCObject objResolveKeyIdentifierClause = (JCObject)classInstance.Invoke("ResolveKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectResolveKeyIdentifierClause = classInstance.Invoke("ResolveKeyIdentifierClause", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            JCObject objResolveKeyIdentifierClause = (JCObject)retObjectResolveKeyIdentifierClause;
             return new SecurityKey(objResolveKeyIdentifierClause);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResolveKeyIdentifierClause != null ? retObjectResolveKeyIdentifierClause.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +203,14 @@ public class EncryptedSecurityToken extends SecurityToken  {
     
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptingCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptingCredentials");
+            retObjectEncryptingCredentials = classInstance.Get("EncryptingCredentials");
+            JCObject val = (JCObject)retObjectEncryptingCredentials;
             return new EncryptingCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptingCredentials != null ? retObjectEncryptingCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +218,14 @@ public class EncryptedSecurityToken extends SecurityToken  {
 
     public SecurityToken getToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Token");
+            retObjectToken = classInstance.Get("Token");
+            JCObject val = (JCObject)retObjectToken;
             return new SecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToken != null ? retObjectToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

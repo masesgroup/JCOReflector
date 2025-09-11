@@ -252,9 +252,13 @@ public class UniqueConstraint extends Constraint  {
     
     public boolean getIsPrimaryKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsPrimaryKey = null;
         try {
-            return (boolean)classInstance.Get("IsPrimaryKey");
+            retObjectIsPrimaryKey = classInstance.Get("IsPrimaryKey");
+            return (boolean)retObjectIsPrimaryKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrimaryKey != null ? retObjectIsPrimaryKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,16 +266,20 @@ public class UniqueConstraint extends Constraint  {
 
     public final DataColumn[] getColumns() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumns = null;
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Columns");
+            retObjectColumns = classInstance.Get("Columns");
+            JCObject resultingObjects = (JCObject)retObjectColumns;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumns != null ? retObjectColumns.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

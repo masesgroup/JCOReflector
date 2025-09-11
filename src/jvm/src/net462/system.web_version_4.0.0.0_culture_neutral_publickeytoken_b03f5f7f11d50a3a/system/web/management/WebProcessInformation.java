@@ -156,7 +156,7 @@ public class WebProcessInformation extends NetObject  {
     
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatToString", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,9 +170,13 @@ public class WebProcessInformation extends NetObject  {
     
     public int getProcessID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessID = null;
         try {
-            return (int)classInstance.Get("ProcessID");
+            retObjectProcessID = classInstance.Get("ProcessID");
+            return (int)retObjectProcessID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProcessID != null ? retObjectProcessID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class WebProcessInformation extends NetObject  {
 
     public java.lang.String getAccountName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccountName = null;
         try {
-            return (java.lang.String)classInstance.Get("AccountName");
+            retObjectAccountName = classInstance.Get("AccountName");
+            return (java.lang.String)retObjectAccountName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAccountName != null ? retObjectAccountName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class WebProcessInformation extends NetObject  {
 
     public java.lang.String getProcessName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProcessName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProcessName");
+            retObjectProcessName = classInstance.Get("ProcessName");
+            return (java.lang.String)retObjectProcessName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProcessName != null ? retObjectProcessName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

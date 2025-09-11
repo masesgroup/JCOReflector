@@ -157,9 +157,13 @@ public class XsltConvert extends NetObject  {
     
     public static boolean ToBoolean(XPathItem item) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToBoolean = null;
         try {
-            return (boolean)classType.Invoke("ToBoolean", item == null ? null : item.getJCOInstance());
+            retObjectToBoolean = classType.Invoke("ToBoolean", item == null ? null : item.getJCOInstance());
+            return (boolean)retObjectToBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectToBoolean != null ? retObjectToBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,19 @@ public class XsltConvert extends NetObject  {
 
     public static double ToDouble(int value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            retObjectToDouble = classType.Invoke("ToDouble", value);
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +191,19 @@ public class XsltConvert extends NetObject  {
 
     public static double ToDouble(long value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            retObjectToDouble = classType.Invoke("ToDouble", value);
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +211,19 @@ public class XsltConvert extends NetObject  {
 
     public static double ToDouble(Decimal value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            retObjectToDouble = classType.Invoke("ToDouble", value == null ? null : value.getJCOInstance());
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +231,19 @@ public class XsltConvert extends NetObject  {
 
     public static double ToDouble(java.lang.String value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classType.Invoke("ToDouble", value);
+            retObjectToDouble = classType.Invoke("ToDouble", value);
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +251,19 @@ public class XsltConvert extends NetObject  {
 
     public static double ToDouble(XPathItem item) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDouble = null;
         try {
-            return (double)classType.Invoke("ToDouble", item == null ? null : item.getJCOInstance());
+            retObjectToDouble = classType.Invoke("ToDouble", item == null ? null : item.getJCOInstance());
+            return (double)retObjectToDouble;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToDoubleNumber = (java.lang.Number)retObjectToDouble;
+                return retObjectToDoubleNumber.doubleValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into double and, as fallback solution, into java.lang.Number", retObjectToDouble != null ? retObjectToDouble.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,9 +271,19 @@ public class XsltConvert extends NetObject  {
 
     public static int ToInt(double value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToInt = null;
         try {
-            return (int)classType.Invoke("ToInt", value);
+            retObjectToInt = classType.Invoke("ToInt", value);
+            return (int)retObjectToInt;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToIntNumber = (java.lang.Number)retObjectToInt;
+                return retObjectToIntNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectToInt != null ? retObjectToInt.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,9 +291,19 @@ public class XsltConvert extends NetObject  {
 
     public static long ToLong(double value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToLong = null;
         try {
-            return (long)classType.Invoke("ToLong", value);
+            retObjectToLong = classType.Invoke("ToLong", value);
+            return (long)retObjectToLong;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectToLongNumber = (java.lang.Number)retObjectToLong;
+                return retObjectToLongNumber.longValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into long and, as fallback solution, into java.lang.Number", retObjectToLong != null ? retObjectToLong.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +311,14 @@ public class XsltConvert extends NetObject  {
 
     public static DateTime ToDateTime(java.lang.String value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDateTime = null;
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", value);
+            retObjectToDateTime = classType.Invoke("ToDateTime", value);
+            JCObject objToDateTime = (JCObject)retObjectToDateTime;
             return new DateTime(objToDateTime);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDateTime != null ? retObjectToDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +326,14 @@ public class XsltConvert extends NetObject  {
 
     public static Decimal ToDecimal(double value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToDecimal = null;
         try {
-            JCObject objToDecimal = (JCObject)classType.Invoke("ToDecimal", value);
+            retObjectToDecimal = classType.Invoke("ToDecimal", value);
+            JCObject objToDecimal = (JCObject)retObjectToDecimal;
             return new Decimal(objToDecimal);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToDecimal != null ? retObjectToDecimal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,9 +341,13 @@ public class XsltConvert extends NetObject  {
 
     public static java.lang.String ToString(double value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ToString", value);
+            retObjectToString = classType.Invoke("ToString", value);
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,9 +355,13 @@ public class XsltConvert extends NetObject  {
 
     public static java.lang.String ToString(DateTime value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.InvalidOperationException, system.UnauthorizedAccessException, system.io.IOException, system.NullReferenceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+            retObjectToString = classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,9 +369,13 @@ public class XsltConvert extends NetObject  {
 
     public static java.lang.String ToString(XPathItem item) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToString = null;
         try {
-            return (java.lang.String)classType.Invoke("ToString", item == null ? null : item.getJCOInstance());
+            retObjectToString = classType.Invoke("ToString", item == null ? null : item.getJCOInstance());
+            return (java.lang.String)retObjectToString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToString != null ? retObjectToString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +383,14 @@ public class XsltConvert extends NetObject  {
 
     public static XPathNavigator ToNode(XPathItem item) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToNode = null;
         try {
-            JCObject objToNode = (JCObject)classType.Invoke("ToNode", item == null ? null : item.getJCOInstance());
+            retObjectToNode = classType.Invoke("ToNode", item == null ? null : item.getJCOInstance());
+            JCObject objToNode = (JCObject)retObjectToNode;
             return new XPathNavigator(objToNode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToNode != null ? retObjectToNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

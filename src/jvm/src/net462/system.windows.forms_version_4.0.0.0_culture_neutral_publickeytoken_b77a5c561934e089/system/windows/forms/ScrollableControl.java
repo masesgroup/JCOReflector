@@ -168,7 +168,7 @@ public class ScrollableControl extends Control  {
     
     public void ScrollControlIntoView(Control activeControl) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollControlIntoView", activeControl == null ? null : activeControl.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +178,7 @@ public class ScrollableControl extends Control  {
 
     public void SetAutoScrollMargin(int x, int y) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetAutoScrollMargin", x, y);
         } catch (JCNativeException jcne) {
@@ -192,9 +192,13 @@ public class ScrollableControl extends Control  {
     
     public boolean getAutoScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScroll = null;
         try {
-            return (boolean)classInstance.Get("AutoScroll");
+            retObjectAutoScroll = classInstance.Get("AutoScroll");
+            return (boolean)retObjectAutoScroll;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoScroll != null ? retObjectAutoScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +206,7 @@ public class ScrollableControl extends Control  {
 
     public void setAutoScroll(boolean AutoScroll) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScroll", AutoScroll);
         } catch (JCNativeException jcne) {
@@ -212,10 +216,14 @@ public class ScrollableControl extends Control  {
 
     public Point getAutoScrollPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScrollPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScrollPosition");
+            retObjectAutoScrollPosition = classInstance.Get("AutoScrollPosition");
+            JCObject val = (JCObject)retObjectAutoScrollPosition;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScrollPosition != null ? retObjectAutoScrollPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,7 +231,7 @@ public class ScrollableControl extends Control  {
 
     public void setAutoScrollPosition(Point AutoScrollPosition) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.componentmodel.InvalidEnumArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.componentmodel.InvalidAsynchronousStateException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScrollPosition", AutoScrollPosition == null ? null : AutoScrollPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,10 +241,14 @@ public class ScrollableControl extends Control  {
 
     public Size getAutoScrollMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScrollMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScrollMargin");
+            retObjectAutoScrollMargin = classInstance.Get("AutoScrollMargin");
+            JCObject val = (JCObject)retObjectAutoScrollMargin;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScrollMargin != null ? retObjectAutoScrollMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +256,7 @@ public class ScrollableControl extends Control  {
 
     public void setAutoScrollMargin(Size AutoScrollMargin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScrollMargin", AutoScrollMargin == null ? null : AutoScrollMargin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -254,10 +266,14 @@ public class ScrollableControl extends Control  {
 
     public Size getAutoScrollMinSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScrollMinSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScrollMinSize");
+            retObjectAutoScrollMinSize = classInstance.Get("AutoScrollMinSize");
+            JCObject val = (JCObject)retObjectAutoScrollMinSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScrollMinSize != null ? retObjectAutoScrollMinSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +281,7 @@ public class ScrollableControl extends Control  {
 
     public void setAutoScrollMinSize(Size AutoScrollMinSize) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScrollMinSize", AutoScrollMinSize == null ? null : AutoScrollMinSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -275,10 +291,14 @@ public class ScrollableControl extends Control  {
 
     public HScrollProperties getHorizontalScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHorizontalScroll = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HorizontalScroll");
+            retObjectHorizontalScroll = classInstance.Get("HorizontalScroll");
+            JCObject val = (JCObject)retObjectHorizontalScroll;
             return new HScrollProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHorizontalScroll != null ? retObjectHorizontalScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +306,14 @@ public class ScrollableControl extends Control  {
 
     public VScrollProperties getVerticalScroll() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerticalScroll = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("VerticalScroll");
+            retObjectVerticalScroll = classInstance.Get("VerticalScroll");
+            JCObject val = (JCObject)retObjectVerticalScroll;
             return new VScrollProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerticalScroll != null ? retObjectVerticalScroll.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +326,7 @@ public class ScrollableControl extends Control  {
 
     public void addScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {
@@ -312,7 +336,7 @@ public class ScrollableControl extends Control  {
 
     public void removeScroll(ScrollEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Scroll", handler);
         } catch (JCNativeException jcne) {

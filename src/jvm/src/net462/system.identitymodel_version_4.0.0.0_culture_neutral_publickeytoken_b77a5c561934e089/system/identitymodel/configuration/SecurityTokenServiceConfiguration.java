@@ -229,10 +229,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     
     public SecurityTokenService CreateSecurityTokenService() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSecurityTokenService = null;
         try {
-            JCObject objCreateSecurityTokenService = (JCObject)classInstance.Invoke("CreateSecurityTokenService");
+            retObjectCreateSecurityTokenService = classInstance.Invoke("CreateSecurityTokenService");
+            JCObject objCreateSecurityTokenService = (JCObject)retObjectCreateSecurityTokenService;
             return new SecurityTokenService(objCreateSecurityTokenService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSecurityTokenService != null ? retObjectCreateSecurityTokenService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +248,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     
     public boolean getDisableWsdl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisableWsdl = null;
         try {
-            return (boolean)classInstance.Get("DisableWsdl");
+            retObjectDisableWsdl = classInstance.Get("DisableWsdl");
+            return (boolean)retObjectDisableWsdl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDisableWsdl != null ? retObjectDisableWsdl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,7 +262,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setDisableWsdl(boolean DisableWsdl) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisableWsdl", DisableWsdl);
         } catch (JCNativeException jcne) {
@@ -264,9 +272,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public int getDefaultMaxSymmetricKeySizeInBits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultMaxSymmetricKeySizeInBits = null;
         try {
-            return (int)classInstance.Get("DefaultMaxSymmetricKeySizeInBits");
+            retObjectDefaultMaxSymmetricKeySizeInBits = classInstance.Get("DefaultMaxSymmetricKeySizeInBits");
+            return (int)retObjectDefaultMaxSymmetricKeySizeInBits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDefaultMaxSymmetricKeySizeInBits != null ? retObjectDefaultMaxSymmetricKeySizeInBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +286,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setDefaultMaxSymmetricKeySizeInBits(int DefaultMaxSymmetricKeySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultMaxSymmetricKeySizeInBits", DefaultMaxSymmetricKeySizeInBits);
         } catch (JCNativeException jcne) {
@@ -284,9 +296,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public int getDefaultSymmetricKeySizeInBits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultSymmetricKeySizeInBits = null;
         try {
-            return (int)classInstance.Get("DefaultSymmetricKeySizeInBits");
+            retObjectDefaultSymmetricKeySizeInBits = classInstance.Get("DefaultSymmetricKeySizeInBits");
+            return (int)retObjectDefaultSymmetricKeySizeInBits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDefaultSymmetricKeySizeInBits != null ? retObjectDefaultSymmetricKeySizeInBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +310,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setDefaultSymmetricKeySizeInBits(int DefaultSymmetricKeySizeInBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultSymmetricKeySizeInBits", DefaultSymmetricKeySizeInBits);
         } catch (JCNativeException jcne) {
@@ -304,10 +320,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public WSTrust13RequestSerializer getWSTrust13RequestSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrust13RequestSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrust13RequestSerializer");
+            retObjectWSTrust13RequestSerializer = classInstance.Get("WSTrust13RequestSerializer");
+            JCObject val = (JCObject)retObjectWSTrust13RequestSerializer;
             return new WSTrust13RequestSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrust13RequestSerializer != null ? retObjectWSTrust13RequestSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +335,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setWSTrust13RequestSerializer(WSTrust13RequestSerializer WSTrust13RequestSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrust13RequestSerializer", WSTrust13RequestSerializer == null ? null : WSTrust13RequestSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -325,10 +345,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public WSTrust13ResponseSerializer getWSTrust13ResponseSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrust13ResponseSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrust13ResponseSerializer");
+            retObjectWSTrust13ResponseSerializer = classInstance.Get("WSTrust13ResponseSerializer");
+            JCObject val = (JCObject)retObjectWSTrust13ResponseSerializer;
             return new WSTrust13ResponseSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrust13ResponseSerializer != null ? retObjectWSTrust13ResponseSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +360,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setWSTrust13ResponseSerializer(WSTrust13ResponseSerializer WSTrust13ResponseSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrust13ResponseSerializer", WSTrust13ResponseSerializer == null ? null : WSTrust13ResponseSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -346,10 +370,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public WSTrustFeb2005RequestSerializer getWSTrustFeb2005RequestSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrustFeb2005RequestSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustFeb2005RequestSerializer");
+            retObjectWSTrustFeb2005RequestSerializer = classInstance.Get("WSTrustFeb2005RequestSerializer");
+            JCObject val = (JCObject)retObjectWSTrustFeb2005RequestSerializer;
             return new WSTrustFeb2005RequestSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrustFeb2005RequestSerializer != null ? retObjectWSTrustFeb2005RequestSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -357,7 +385,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setWSTrustFeb2005RequestSerializer(WSTrustFeb2005RequestSerializer WSTrustFeb2005RequestSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrustFeb2005RequestSerializer", WSTrustFeb2005RequestSerializer == null ? null : WSTrustFeb2005RequestSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -367,10 +395,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public WSTrustFeb2005ResponseSerializer getWSTrustFeb2005ResponseSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWSTrustFeb2005ResponseSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WSTrustFeb2005ResponseSerializer");
+            retObjectWSTrustFeb2005ResponseSerializer = classInstance.Get("WSTrustFeb2005ResponseSerializer");
+            JCObject val = (JCObject)retObjectWSTrustFeb2005ResponseSerializer;
             return new WSTrustFeb2005ResponseSerializer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWSTrustFeb2005ResponseSerializer != null ? retObjectWSTrustFeb2005ResponseSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -378,7 +410,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setWSTrustFeb2005ResponseSerializer(WSTrustFeb2005ResponseSerializer WSTrustFeb2005ResponseSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WSTrustFeb2005ResponseSerializer", WSTrustFeb2005ResponseSerializer == null ? null : WSTrustFeb2005ResponseSerializer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -388,10 +420,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +435,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -409,9 +445,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public java.lang.String getDefaultTokenType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultTokenType = null;
         try {
-            return (java.lang.String)classInstance.Get("DefaultTokenType");
+            retObjectDefaultTokenType = classInstance.Get("DefaultTokenType");
+            return (java.lang.String)retObjectDefaultTokenType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDefaultTokenType != null ? retObjectDefaultTokenType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +459,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setDefaultTokenType(java.lang.String DefaultTokenType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultTokenType", DefaultTokenType);
         } catch (JCNativeException jcne) {
@@ -429,9 +469,13 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public java.lang.String getTokenIssuerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenIssuerName = null;
         try {
-            return (java.lang.String)classInstance.Get("TokenIssuerName");
+            retObjectTokenIssuerName = classInstance.Get("TokenIssuerName");
+            return (java.lang.String)retObjectTokenIssuerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTokenIssuerName != null ? retObjectTokenIssuerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +483,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setTokenIssuerName(java.lang.String TokenIssuerName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenIssuerName", TokenIssuerName);
         } catch (JCNativeException jcne) {
@@ -449,10 +493,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public TimeSpan getDefaultTokenLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefaultTokenLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DefaultTokenLifetime");
+            retObjectDefaultTokenLifetime = classInstance.Get("DefaultTokenLifetime");
+            JCObject val = (JCObject)retObjectDefaultTokenLifetime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefaultTokenLifetime != null ? retObjectDefaultTokenLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +508,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setDefaultTokenLifetime(TimeSpan DefaultTokenLifetime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DefaultTokenLifetime", DefaultTokenLifetime == null ? null : DefaultTokenLifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -470,10 +518,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public TimeSpan getMaximumTokenLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximumTokenLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaximumTokenLifetime");
+            retObjectMaximumTokenLifetime = classInstance.Get("MaximumTokenLifetime");
+            JCObject val = (JCObject)retObjectMaximumTokenLifetime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaximumTokenLifetime != null ? retObjectMaximumTokenLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,7 +533,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setMaximumTokenLifetime(TimeSpan MaximumTokenLifetime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximumTokenLifetime", MaximumTokenLifetime == null ? null : MaximumTokenLifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -491,10 +543,14 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public NetType getSecurityTokenService() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecurityTokenService = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecurityTokenService");
+            retObjectSecurityTokenService = classInstance.Get("SecurityTokenService");
+            JCObject val = (JCObject)retObjectSecurityTokenService;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecurityTokenService != null ? retObjectSecurityTokenService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -502,7 +558,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     public void setSecurityTokenService(NetType SecurityTokenService) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecurityTokenService", SecurityTokenService == null ? null : SecurityTokenService.getJCOInstance());
         } catch (JCNativeException jcne) {

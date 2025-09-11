@@ -165,9 +165,13 @@ public class WebSocketDeflateOptions extends NetObject  {
     
     public boolean getClientContextTakeover() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientContextTakeover = null;
         try {
-            return (boolean)classInstance.Get("ClientContextTakeover");
+            retObjectClientContextTakeover = classInstance.Get("ClientContextTakeover");
+            return (boolean)retObjectClientContextTakeover;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectClientContextTakeover != null ? retObjectClientContextTakeover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public void setClientContextTakeover(boolean ClientContextTakeover) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientContextTakeover", ClientContextTakeover);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public boolean getServerContextTakeover() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerContextTakeover = null;
         try {
-            return (boolean)classInstance.Get("ServerContextTakeover");
+            retObjectServerContextTakeover = classInstance.Get("ServerContextTakeover");
+            return (boolean)retObjectServerContextTakeover;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectServerContextTakeover != null ? retObjectServerContextTakeover.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public void setServerContextTakeover(boolean ServerContextTakeover) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerContextTakeover", ServerContextTakeover);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public int getClientMaxWindowBits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientMaxWindowBits = null;
         try {
-            return (int)classInstance.Get("ClientMaxWindowBits");
+            retObjectClientMaxWindowBits = classInstance.Get("ClientMaxWindowBits");
+            return (int)retObjectClientMaxWindowBits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectClientMaxWindowBits != null ? retObjectClientMaxWindowBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public void setClientMaxWindowBits(int ClientMaxWindowBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientMaxWindowBits", ClientMaxWindowBits);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public int getServerMaxWindowBits() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectServerMaxWindowBits = null;
         try {
-            return (int)classInstance.Get("ServerMaxWindowBits");
+            retObjectServerMaxWindowBits = classInstance.Get("ServerMaxWindowBits");
+            return (int)retObjectServerMaxWindowBits;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectServerMaxWindowBits != null ? retObjectServerMaxWindowBits.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class WebSocketDeflateOptions extends NetObject  {
 
     public void setServerMaxWindowBits(int ServerMaxWindowBits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ServerMaxWindowBits", ServerMaxWindowBits);
         } catch (JCNativeException jcne) {

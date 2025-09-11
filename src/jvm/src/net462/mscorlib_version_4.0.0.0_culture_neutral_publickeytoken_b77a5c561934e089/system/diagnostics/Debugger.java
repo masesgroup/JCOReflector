@@ -161,9 +161,13 @@ public class Debugger extends NetObject  {
     
     public static boolean IsLogging() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsLogging = null;
         try {
-            return (boolean)classType.Invoke("IsLogging");
+            retObjectIsLogging = classType.Invoke("IsLogging");
+            return (boolean)retObjectIsLogging;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsLogging != null ? retObjectIsLogging.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class Debugger extends NetObject  {
 
     public static boolean Launch() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLaunch = null;
         try {
-            return (boolean)classType.Invoke("Launch");
+            retObjectLaunch = classType.Invoke("Launch");
+            return (boolean)retObjectLaunch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLaunch != null ? retObjectLaunch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +189,7 @@ public class Debugger extends NetObject  {
 
     public static void Break() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Break");
         } catch (JCNativeException jcne) {
@@ -191,7 +199,7 @@ public class Debugger extends NetObject  {
 
     public static void Log(int level, java.lang.String category, java.lang.String message) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Log", level, category, message);
         } catch (JCNativeException jcne) {
@@ -201,7 +209,7 @@ public class Debugger extends NetObject  {
 
     public static void NotifyOfCrossThreadDependency() throws Throwable, system.InvalidOperationException, system.threading.ThreadAbortException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("NotifyOfCrossThreadDependency");
         } catch (JCNativeException jcne) {
@@ -215,9 +223,13 @@ public class Debugger extends NetObject  {
     
     public static boolean getIsAttached() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsAttached = null;
         try {
-            return (boolean)classType.Get("IsAttached");
+            retObjectIsAttached = classType.Get("IsAttached");
+            return (boolean)retObjectIsAttached;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAttached != null ? retObjectIsAttached.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

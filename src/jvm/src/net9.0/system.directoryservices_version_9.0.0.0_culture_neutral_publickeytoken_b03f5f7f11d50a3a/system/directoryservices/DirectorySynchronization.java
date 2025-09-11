@@ -203,10 +203,12 @@ public class DirectorySynchronization extends NetObject  {
     
     public byte[] GetDirectorySynchronizationCookie() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDirectorySynchronizationCookie = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectorySynchronizationCookie");
+            retObjectGetDirectorySynchronizationCookie = classInstance.Invoke("GetDirectorySynchronizationCookie");
+            JCObject resultingObjects = (JCObject)retObjectGetDirectorySynchronizationCookie;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -215,6 +217,8 @@ public class DirectorySynchronization extends NetObject  {
 				resultingArray[indexGetDirectorySynchronizationCookie] = (byte)resultingArrayList.get(indexGetDirectorySynchronizationCookie);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetDirectorySynchronizationCookie != null ? retObjectGetDirectorySynchronizationCookie.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +226,14 @@ public class DirectorySynchronization extends NetObject  {
 
     public DirectorySynchronization Copy() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCopy = null;
         try {
-            JCObject objCopy = (JCObject)classInstance.Invoke("Copy");
+            retObjectCopy = classInstance.Invoke("Copy");
+            JCObject objCopy = (JCObject)retObjectCopy;
             return new DirectorySynchronization(objCopy);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCopy != null ? retObjectCopy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +241,7 @@ public class DirectorySynchronization extends NetObject  {
 
     public void ResetDirectorySynchronizationCookie() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDirectorySynchronizationCookie");
         } catch (JCNativeException jcne) {
@@ -243,7 +251,7 @@ public class DirectorySynchronization extends NetObject  {
 
     public void ResetDirectorySynchronizationCookie(byte[] cookie) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDirectorySynchronizationCookie", (java.lang.Object)cookie);
         } catch (JCNativeException jcne) {
@@ -253,7 +261,7 @@ public class DirectorySynchronization extends NetObject  {
 
     public void ResetDirectorySynchronizationCookie(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ResetDirectorySynchronizationCookie", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -267,10 +275,14 @@ public class DirectorySynchronization extends NetObject  {
     
     public DirectorySynchronizationOptions getOption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Option");
+            retObjectOption = classInstance.Get("Option");
+            JCObject val = (JCObject)retObjectOption;
             return new DirectorySynchronizationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOption != null ? retObjectOption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +290,7 @@ public class DirectorySynchronization extends NetObject  {
 
     public void setOption(DirectorySynchronizationOptions Option) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Option", Option == null ? null : Option.getJCOInstance());
         } catch (JCNativeException jcne) {

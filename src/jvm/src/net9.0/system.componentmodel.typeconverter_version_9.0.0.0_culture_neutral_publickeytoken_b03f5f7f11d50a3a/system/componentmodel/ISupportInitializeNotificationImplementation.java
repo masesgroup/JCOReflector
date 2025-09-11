@@ -145,7 +145,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
     
     public void BeginInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginInit");
         } catch (JCNativeException jcne) {
@@ -155,7 +155,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
 
     public void EndInit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndInit");
         } catch (JCNativeException jcne) {
@@ -169,9 +169,13 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
     
     public boolean getIsInitialized() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInitialized = null;
         try {
-            return (boolean)classInstance.Get("IsInitialized");
+            retObjectIsInitialized = classInstance.Get("IsInitialized");
+            return (boolean)retObjectIsInitialized;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInitialized != null ? retObjectIsInitialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,7 +188,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
 
     public void addInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {
@@ -194,7 +198,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
 
     public void removeInitialized(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
         } catch (JCNativeException jcne) {

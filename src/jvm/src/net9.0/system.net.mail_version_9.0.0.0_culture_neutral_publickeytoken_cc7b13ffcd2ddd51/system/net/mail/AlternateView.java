@@ -222,10 +222,14 @@ public class AlternateView extends AttachmentBase  {
     
     public static AlternateView CreateAlternateViewFromString(java.lang.String content, ContentType contentType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAlternateViewFromString = null;
         try {
-            JCObject objCreateAlternateViewFromString = (JCObject)classType.Invoke("CreateAlternateViewFromString", content, contentType == null ? null : contentType.getJCOInstance());
+            retObjectCreateAlternateViewFromString = classType.Invoke("CreateAlternateViewFromString", content, contentType == null ? null : contentType.getJCOInstance());
+            JCObject objCreateAlternateViewFromString = (JCObject)retObjectCreateAlternateViewFromString;
             return new AlternateView(objCreateAlternateViewFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAlternateViewFromString != null ? retObjectCreateAlternateViewFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +237,14 @@ public class AlternateView extends AttachmentBase  {
 
     public static AlternateView CreateAlternateViewFromString(java.lang.String content, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAlternateViewFromString = null;
         try {
-            JCObject objCreateAlternateViewFromString = (JCObject)classType.Invoke("CreateAlternateViewFromString", content, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
+            retObjectCreateAlternateViewFromString = classType.Invoke("CreateAlternateViewFromString", content, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
+            JCObject objCreateAlternateViewFromString = (JCObject)retObjectCreateAlternateViewFromString;
             return new AlternateView(objCreateAlternateViewFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAlternateViewFromString != null ? retObjectCreateAlternateViewFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +252,14 @@ public class AlternateView extends AttachmentBase  {
 
     public static AlternateView CreateAlternateViewFromString(java.lang.String content) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateAlternateViewFromString = null;
         try {
-            JCObject objCreateAlternateViewFromString = (JCObject)classType.Invoke("CreateAlternateViewFromString", content);
+            retObjectCreateAlternateViewFromString = classType.Invoke("CreateAlternateViewFromString", content);
+            JCObject objCreateAlternateViewFromString = (JCObject)retObjectCreateAlternateViewFromString;
             return new AlternateView(objCreateAlternateViewFromString);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateAlternateViewFromString != null ? retObjectCreateAlternateViewFromString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +271,14 @@ public class AlternateView extends AttachmentBase  {
     
     public LinkedResourceCollection getLinkedResources() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinkedResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LinkedResources");
+            retObjectLinkedResources = classInstance.Get("LinkedResources");
+            JCObject val = (JCObject)retObjectLinkedResources;
             return new LinkedResourceCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLinkedResources != null ? retObjectLinkedResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,10 +286,14 @@ public class AlternateView extends AttachmentBase  {
 
     public Uri getBaseUri() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.diagnostics.UnreachableException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            retObjectBaseUri = classInstance.Get("BaseUri");
+            JCObject val = (JCObject)retObjectBaseUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +301,7 @@ public class AlternateView extends AttachmentBase  {
 
     public void setBaseUri(Uri BaseUri) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {

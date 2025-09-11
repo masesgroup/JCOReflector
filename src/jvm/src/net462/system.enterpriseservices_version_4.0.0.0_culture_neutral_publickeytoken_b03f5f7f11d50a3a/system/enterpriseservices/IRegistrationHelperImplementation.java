@@ -143,7 +143,7 @@ public class IRegistrationHelperImplementation extends NetObject implements IReg
     
     public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -153,7 +153,7 @@ public class IRegistrationHelperImplementation extends NetObject implements IReg
 
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UninstallAssembly", assembly, application);
         } catch (JCNativeException jcne) {

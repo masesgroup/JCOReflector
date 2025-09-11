@@ -161,10 +161,14 @@ public class NullabilityInfo extends NetObject  {
     
     public NullabilityInfo getElementType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElementType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ElementType");
+            retObjectElementType = classInstance.Get("ElementType");
+            JCObject val = (JCObject)retObjectElementType;
             return new NullabilityInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementType != null ? retObjectElementType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,16 +176,20 @@ public class NullabilityInfo extends NetObject  {
 
     public final NullabilityInfo[] getGenericTypeArguments() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGenericTypeArguments = null;
         try {
             ArrayList<NullabilityInfo> resultingArrayList = new ArrayList<NullabilityInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("GenericTypeArguments");
+            retObjectGenericTypeArguments = classInstance.Get("GenericTypeArguments");
+            JCObject resultingObjects = (JCObject)retObjectGenericTypeArguments;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NullabilityInfo(resultingObject));
             }
             NullabilityInfo[] resultingArray = new NullabilityInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGenericTypeArguments != null ? retObjectGenericTypeArguments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class NullabilityInfo extends NetObject  {
 
     public NullabilityState getReadState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReadState");
+            retObjectReadState = classInstance.Get("ReadState");
+            JCObject val = (JCObject)retObjectReadState;
             return new NullabilityState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadState != null ? retObjectReadState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class NullabilityInfo extends NetObject  {
 
     public void setReadState(NullabilityState ReadState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadState", ReadState == null ? null : ReadState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,10 +222,14 @@ public class NullabilityInfo extends NetObject  {
 
     public NullabilityState getWriteState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WriteState");
+            retObjectWriteState = classInstance.Get("WriteState");
+            JCObject val = (JCObject)retObjectWriteState;
             return new NullabilityState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteState != null ? retObjectWriteState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +237,7 @@ public class NullabilityInfo extends NetObject  {
 
     public void setWriteState(NullabilityState WriteState) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteState", WriteState == null ? null : WriteState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -231,10 +247,14 @@ public class NullabilityInfo extends NetObject  {
 
     public NetType getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

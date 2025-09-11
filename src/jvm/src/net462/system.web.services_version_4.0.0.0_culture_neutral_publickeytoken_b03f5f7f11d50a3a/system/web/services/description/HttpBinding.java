@@ -166,9 +166,13 @@ public class HttpBinding extends ServiceDescriptionFormatExtension  {
     
     public java.lang.String getVerb() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerb = null;
         try {
-            return (java.lang.String)classInstance.Get("Verb");
+            retObjectVerb = classInstance.Get("Verb");
+            return (java.lang.String)retObjectVerb;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVerb != null ? retObjectVerb.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class HttpBinding extends ServiceDescriptionFormatExtension  {
 
     public void setVerb(java.lang.String Verb) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Verb", Verb);
         } catch (JCNativeException jcne) {

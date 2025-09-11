@@ -147,10 +147,14 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
     
     public Task ReleaseSessionStateAsync(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReleaseSessionStateAsync = null;
         try {
-            JCObject objReleaseSessionStateAsync = (JCObject)classInstance.Invoke("ReleaseSessionStateAsync", context == null ? null : context.getJCOInstance());
+            retObjectReleaseSessionStateAsync = classInstance.Invoke("ReleaseSessionStateAsync", context == null ? null : context.getJCOInstance());
+            JCObject objReleaseSessionStateAsync = (JCObject)retObjectReleaseSessionStateAsync;
             return new Task(objReleaseSessionStateAsync);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReleaseSessionStateAsync != null ? retObjectReleaseSessionStateAsync.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
 
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -168,7 +172,7 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
 
     public void Init(HttpApplication context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +182,7 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
 
     public void ReleaseSessionState(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseSessionState", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {

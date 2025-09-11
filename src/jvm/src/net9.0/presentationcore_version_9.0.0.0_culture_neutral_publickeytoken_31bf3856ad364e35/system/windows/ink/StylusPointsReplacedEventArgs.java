@@ -171,10 +171,14 @@ public class StylusPointsReplacedEventArgs extends EventArgs  {
     
     public StylusPointCollection getNewStylusPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewStylusPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NewStylusPoints");
+            retObjectNewStylusPoints = classInstance.Get("NewStylusPoints");
+            JCObject val = (JCObject)retObjectNewStylusPoints;
             return new StylusPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewStylusPoints != null ? retObjectNewStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class StylusPointsReplacedEventArgs extends EventArgs  {
 
     public StylusPointCollection getPreviousStylusPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviousStylusPoints = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviousStylusPoints");
+            retObjectPreviousStylusPoints = classInstance.Get("PreviousStylusPoints");
+            JCObject val = (JCObject)retObjectPreviousStylusPoints;
             return new StylusPointCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviousStylusPoints != null ? retObjectPreviousStylusPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

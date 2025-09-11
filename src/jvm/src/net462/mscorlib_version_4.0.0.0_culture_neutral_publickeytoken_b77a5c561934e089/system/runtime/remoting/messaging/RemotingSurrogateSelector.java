@@ -167,10 +167,14 @@ public class RemotingSurrogateSelector extends NetObject  {
     
     public NetObject GetRootObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRootObject = null;
         try {
-            JCObject objGetRootObject = (JCObject)classInstance.Invoke("GetRootObject");
+            retObjectGetRootObject = classInstance.Invoke("GetRootObject");
+            JCObject objGetRootObject = (JCObject)retObjectGetRootObject;
             return new NetObject(objGetRootObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRootObject != null ? retObjectGetRootObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +182,14 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> ssout) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSurrogate = null;
         try {
-            JCObject objGetSurrogate = (JCObject)classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), ssout.getJCRefOut());
+            retObjectGetSurrogate = classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), ssout.getJCRefOut());
+            JCObject objGetSurrogate = (JCObject)retObjectGetSurrogate;
             return new ISerializationSurrogateImplementation(objGetSurrogate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSurrogate != null ? retObjectGetSurrogate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextSelector = null;
         try {
-            JCObject objGetNextSelector = (JCObject)classInstance.Invoke("GetNextSelector");
+            retObjectGetNextSelector = classInstance.Invoke("GetNextSelector");
+            JCObject objGetNextSelector = (JCObject)retObjectGetNextSelector;
             return new ISurrogateSelectorImplementation(objGetNextSelector);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextSelector != null ? retObjectGetNextSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public void ChainSelector(ISurrogateSelector selector) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ChainSelector", selector == null ? null : selector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -210,7 +222,7 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public void SetRootObject(NetObject obj) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetRootObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +232,7 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public void UseSoapFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UseSoapFormat");
         } catch (JCNativeException jcne) {
@@ -234,9 +246,13 @@ public class RemotingSurrogateSelector extends NetObject  {
     
     public MessageSurrogateFilter getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (MessageSurrogateFilter)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (MessageSurrogateFilter)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into MessageSurrogateFilter", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +260,7 @@ public class RemotingSurrogateSelector extends NetObject  {
 
     public void setFilter(MessageSurrogateFilter Filter) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter);
         } catch (JCNativeException jcne) {

@@ -169,10 +169,14 @@ public class ParametersEncoder extends ValueType  {
     
     public ParametersEncoder StartVarArgs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartVarArgs = null;
         try {
-            JCObject objStartVarArgs = (JCObject)classInstance.Invoke("StartVarArgs");
+            retObjectStartVarArgs = classInstance.Invoke("StartVarArgs");
+            JCObject objStartVarArgs = (JCObject)retObjectStartVarArgs;
             return new ParametersEncoder(objStartVarArgs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartVarArgs != null ? retObjectStartVarArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class ParametersEncoder extends ValueType  {
 
     public ParameterTypeEncoder AddParameter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddParameter = null;
         try {
-            JCObject objAddParameter = (JCObject)classInstance.Invoke("AddParameter");
+            retObjectAddParameter = classInstance.Invoke("AddParameter");
+            JCObject objAddParameter = (JCObject)retObjectAddParameter;
             return new ParameterTypeEncoder(objAddParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddParameter != null ? retObjectAddParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +203,13 @@ public class ParametersEncoder extends ValueType  {
     
     public boolean getHasVarArgs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasVarArgs = null;
         try {
-            return (boolean)classInstance.Get("HasVarArgs");
+            retObjectHasVarArgs = classInstance.Get("HasVarArgs");
+            return (boolean)retObjectHasVarArgs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasVarArgs != null ? retObjectHasVarArgs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,10 +217,14 @@ public class ParametersEncoder extends ValueType  {
 
     public BlobBuilder getBuilder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuilder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Builder");
+            retObjectBuilder = classInstance.Get("Builder");
+            JCObject val = (JCObject)retObjectBuilder;
             return new BlobBuilder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuilder != null ? retObjectBuilder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

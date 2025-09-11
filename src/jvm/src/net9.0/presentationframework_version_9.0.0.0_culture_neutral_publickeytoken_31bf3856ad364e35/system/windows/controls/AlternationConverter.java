@@ -164,10 +164,14 @@ public class AlternationConverter extends NetObject  {
     
     public NetObject Convert(NetObject o, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classInstance.Invoke("Convert", o == null ? null : o.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvert = classInstance.Invoke("Convert", o == null ? null : o.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new NetObject(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class AlternationConverter extends NetObject  {
 
     public NetObject ConvertBack(NetObject o, NetType targetType, NetObject parameter, CultureInfo culture) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConvertBack = null;
         try {
-            JCObject objConvertBack = (JCObject)classInstance.Invoke("ConvertBack", o == null ? null : o.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            retObjectConvertBack = classInstance.Invoke("ConvertBack", o == null ? null : o.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
+            JCObject objConvertBack = (JCObject)retObjectConvertBack;
             return new NetObject(objConvertBack);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertBack != null ? retObjectConvertBack.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class AlternationConverter extends NetObject  {
     
     public IList getValues() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValues = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Values");
+            retObjectValues = classInstance.Get("Values");
+            JCObject val = (JCObject)retObjectValues;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValues != null ? retObjectValues.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

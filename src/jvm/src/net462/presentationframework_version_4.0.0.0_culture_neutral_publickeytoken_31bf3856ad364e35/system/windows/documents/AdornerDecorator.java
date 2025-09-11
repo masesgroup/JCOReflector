@@ -168,10 +168,14 @@ public class AdornerDecorator extends Decorator  {
     
     public AdornerLayer getAdornerLayer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdornerLayer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdornerLayer");
+            retObjectAdornerLayer = classInstance.Get("AdornerLayer");
+            JCObject val = (JCObject)retObjectAdornerLayer;
             return new AdornerLayer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdornerLayer != null ? retObjectAdornerLayer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

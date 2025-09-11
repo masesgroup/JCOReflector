@@ -144,7 +144,7 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
     
     public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EnumerateAppDomains", appDomainInfoEnum.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
 
     public void Shutdown() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shutdown");
         } catch (JCNativeException jcne) {
@@ -164,7 +164,7 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
 
     public void ShutdownApplication(java.lang.String appId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShutdownApplication", appId);
         } catch (JCNativeException jcne) {
@@ -174,7 +174,7 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
 
     public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartApplication", appId, appPath, runtimeInterface.getJCRefOut());
         } catch (JCNativeException jcne) {

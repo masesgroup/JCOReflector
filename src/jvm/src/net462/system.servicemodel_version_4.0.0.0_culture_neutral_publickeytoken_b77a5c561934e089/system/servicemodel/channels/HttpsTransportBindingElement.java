@@ -164,10 +164,14 @@ public class HttpsTransportBindingElement extends HttpTransportBindingElement  {
     
     public BindingElement Clone() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class HttpsTransportBindingElement extends HttpTransportBindingElement  {
 
     public XmlElement GetTransportTokenAssertion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransportTokenAssertion = null;
         try {
-            JCObject objGetTransportTokenAssertion = (JCObject)classInstance.Invoke("GetTransportTokenAssertion");
+            retObjectGetTransportTokenAssertion = classInstance.Invoke("GetTransportTokenAssertion");
+            JCObject objGetTransportTokenAssertion = (JCObject)retObjectGetTransportTokenAssertion;
             return new XmlElement(objGetTransportTokenAssertion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransportTokenAssertion != null ? retObjectGetTransportTokenAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class HttpsTransportBindingElement extends HttpTransportBindingElement  {
     
     public boolean getRequireClientCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequireClientCertificate = null;
         try {
-            return (boolean)classInstance.Get("RequireClientCertificate");
+            retObjectRequireClientCertificate = classInstance.Get("RequireClientCertificate");
+            return (boolean)retObjectRequireClientCertificate;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequireClientCertificate != null ? retObjectRequireClientCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +212,7 @@ public class HttpsTransportBindingElement extends HttpTransportBindingElement  {
 
     public void setRequireClientCertificate(boolean RequireClientCertificate) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequireClientCertificate", RequireClientCertificate);
         } catch (JCNativeException jcne) {

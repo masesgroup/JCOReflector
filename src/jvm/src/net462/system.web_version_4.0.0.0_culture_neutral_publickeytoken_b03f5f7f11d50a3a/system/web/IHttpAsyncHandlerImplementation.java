@@ -148,10 +148,14 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
     
     public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginProcessRequest = null;
         try {
-            JCObject objBeginProcessRequest = (JCObject)classInstance.Invoke("BeginProcessRequest", context == null ? null : context.getJCOInstance(), cb, extraData == null ? null : extraData.getJCOInstance());
+            retObjectBeginProcessRequest = classInstance.Invoke("BeginProcessRequest", context == null ? null : context.getJCOInstance(), cb, extraData == null ? null : extraData.getJCOInstance());
+            JCObject objBeginProcessRequest = (JCObject)retObjectBeginProcessRequest;
             return new IAsyncResultImplementation(objBeginProcessRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginProcessRequest != null ? retObjectBeginProcessRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +163,7 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
 
     public void EndProcessRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndProcessRequest", result == null ? null : result.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -169,7 +173,7 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
 
     public void ProcessRequest(HttpContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ProcessRequest", context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,9 +187,13 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
     
     public boolean getIsReusable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReusable = null;
         try {
-            return (boolean)classInstance.Get("IsReusable");
+            retObjectIsReusable = classInstance.Get("IsReusable");
+            return (boolean)retObjectIsReusable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReusable != null ? retObjectIsReusable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -181,9 +181,13 @@ public class XamlDebuggerXmlReader extends NetObject  {
     
     public boolean Read() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.xaml.XamlSchemaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRead = null;
         try {
-            return (boolean)classInstance.Invoke("Read");
+            retObjectRead = classInstance.Invoke("Read");
+            return (boolean)retObjectRead;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRead != null ? retObjectRead.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +195,14 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static NetObject GetEndColumn(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEndColumn = null;
         try {
-            JCObject objGetEndColumn = (JCObject)classType.Invoke("GetEndColumn", instance == null ? null : instance.getJCOInstance());
+            retObjectGetEndColumn = classType.Invoke("GetEndColumn", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetEndColumn = (JCObject)retObjectGetEndColumn;
             return new NetObject(objGetEndColumn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEndColumn != null ? retObjectGetEndColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +210,14 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static NetObject GetEndLine(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetEndLine = null;
         try {
-            JCObject objGetEndLine = (JCObject)classType.Invoke("GetEndLine", instance == null ? null : instance.getJCOInstance());
+            retObjectGetEndLine = classType.Invoke("GetEndLine", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetEndLine = (JCObject)retObjectGetEndLine;
             return new NetObject(objGetEndLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEndLine != null ? retObjectGetEndLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +225,14 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static NetObject GetFileName(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFileName = null;
         try {
-            JCObject objGetFileName = (JCObject)classType.Invoke("GetFileName", instance == null ? null : instance.getJCOInstance());
+            retObjectGetFileName = classType.Invoke("GetFileName", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetFileName = (JCObject)retObjectGetFileName;
             return new NetObject(objGetFileName);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFileName != null ? retObjectGetFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +240,14 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static NetObject GetStartColumn(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStartColumn = null;
         try {
-            JCObject objGetStartColumn = (JCObject)classType.Invoke("GetStartColumn", instance == null ? null : instance.getJCOInstance());
+            retObjectGetStartColumn = classType.Invoke("GetStartColumn", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetStartColumn = (JCObject)retObjectGetStartColumn;
             return new NetObject(objGetStartColumn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStartColumn != null ? retObjectGetStartColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +255,14 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static NetObject GetStartLine(NetObject instance) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetStartLine = null;
         try {
-            JCObject objGetStartLine = (JCObject)classType.Invoke("GetStartLine", instance == null ? null : instance.getJCOInstance());
+            retObjectGetStartLine = classType.Invoke("GetStartLine", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetStartLine = (JCObject)retObjectGetStartLine;
             return new NetObject(objGetStartLine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetStartLine != null ? retObjectGetStartLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +270,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void CopyAttachedSourceLocation(NetObject source, NetObject destination) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("CopyAttachedSourceLocation", source == null ? null : source.getJCOInstance(), destination == null ? null : destination.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,7 +280,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void SetEndColumn(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEndColumn", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +290,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void SetEndLine(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetEndLine", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -276,7 +300,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void SetFileName(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetFileName", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +310,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void SetStartColumn(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStartColumn", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,7 +320,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public static void SetStartLine(NetObject instance, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetStartLine", instance == null ? null : instance.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,9 +334,13 @@ public class XamlDebuggerXmlReader extends NetObject  {
     
     public boolean getCollectNonActivitySourceLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCollectNonActivitySourceLocation = null;
         try {
-            return (boolean)classInstance.Get("CollectNonActivitySourceLocation");
+            retObjectCollectNonActivitySourceLocation = classInstance.Get("CollectNonActivitySourceLocation");
+            return (boolean)retObjectCollectNonActivitySourceLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCollectNonActivitySourceLocation != null ? retObjectCollectNonActivitySourceLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public void setCollectNonActivitySourceLocation(boolean CollectNonActivitySourceLocation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CollectNonActivitySourceLocation", CollectNonActivitySourceLocation);
         } catch (JCNativeException jcne) {
@@ -330,9 +358,13 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public boolean getHasLineInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasLineInfo = null;
         try {
-            return (boolean)classInstance.Get("HasLineInfo");
+            retObjectHasLineInfo = classInstance.Get("HasLineInfo");
+            return (boolean)retObjectHasLineInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasLineInfo != null ? retObjectHasLineInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,9 +372,13 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public int getLineNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumber = null;
         try {
-            return (int)classInstance.Get("LineNumber");
+            retObjectLineNumber = classInstance.Get("LineNumber");
+            return (int)retObjectLineNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLineNumber != null ? retObjectLineNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,9 +386,13 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     public int getLinePosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLinePosition = null;
         try {
-            return (int)classInstance.Get("LinePosition");
+            retObjectLinePosition = classInstance.Get("LinePosition");
+            return (int)retObjectLinePosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLinePosition != null ? retObjectLinePosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

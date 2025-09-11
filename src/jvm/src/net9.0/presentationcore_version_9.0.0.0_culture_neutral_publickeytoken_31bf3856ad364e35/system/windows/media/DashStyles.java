@@ -158,10 +158,14 @@ public class DashStyles extends NetObject  {
     
     public static DashStyle getDash() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDash = null;
         try {
-            JCObject val = (JCObject)classType.Get("Dash");
+            retObjectDash = classType.Get("Dash");
+            JCObject val = (JCObject)retObjectDash;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDash != null ? retObjectDash.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class DashStyles extends NetObject  {
 
     public static DashStyle getDashDot() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDashDot = null;
         try {
-            JCObject val = (JCObject)classType.Get("DashDot");
+            retObjectDashDot = classType.Get("DashDot");
+            JCObject val = (JCObject)retObjectDashDot;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDashDot != null ? retObjectDashDot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class DashStyles extends NetObject  {
 
     public static DashStyle getDashDotDot() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDashDotDot = null;
         try {
-            JCObject val = (JCObject)classType.Get("DashDotDot");
+            retObjectDashDotDot = classType.Get("DashDotDot");
+            JCObject val = (JCObject)retObjectDashDotDot;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDashDotDot != null ? retObjectDashDotDot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class DashStyles extends NetObject  {
 
     public static DashStyle getDot() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDot = null;
         try {
-            JCObject val = (JCObject)classType.Get("Dot");
+            retObjectDot = classType.Get("Dot");
+            JCObject val = (JCObject)retObjectDot;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDot != null ? retObjectDot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class DashStyles extends NetObject  {
 
     public static DashStyle getSolid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSolid = null;
         try {
-            JCObject val = (JCObject)classType.Get("Solid");
+            retObjectSolid = classType.Get("Solid");
+            JCObject val = (JCObject)retObjectSolid;
             return new DashStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSolid != null ? retObjectSolid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

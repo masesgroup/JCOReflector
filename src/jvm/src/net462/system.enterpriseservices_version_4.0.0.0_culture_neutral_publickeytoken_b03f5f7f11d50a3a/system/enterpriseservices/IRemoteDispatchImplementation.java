@@ -142,9 +142,13 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
     
     public java.lang.String RemoteDispatchAutoDone(java.lang.String s) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteDispatchAutoDone = null;
         try {
-            return (java.lang.String)classInstance.Invoke("RemoteDispatchAutoDone", s);
+            retObjectRemoteDispatchAutoDone = classInstance.Invoke("RemoteDispatchAutoDone", s);
+            return (java.lang.String)retObjectRemoteDispatchAutoDone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRemoteDispatchAutoDone != null ? retObjectRemoteDispatchAutoDone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,13 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
 
     public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemoteDispatchNotAutoDone = null;
         try {
-            return (java.lang.String)classInstance.Invoke("RemoteDispatchNotAutoDone", s);
+            retObjectRemoteDispatchNotAutoDone = classInstance.Invoke("RemoteDispatchNotAutoDone", s);
+            return (java.lang.String)retObjectRemoteDispatchNotAutoDone;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectRemoteDispatchNotAutoDone != null ? retObjectRemoteDispatchNotAutoDone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

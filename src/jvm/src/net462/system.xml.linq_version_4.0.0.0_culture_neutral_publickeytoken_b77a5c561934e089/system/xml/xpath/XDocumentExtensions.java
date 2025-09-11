@@ -156,10 +156,14 @@ public class XDocumentExtensions extends NetObject  {
     
     public static IXPathNavigable ToXPathNavigable(XNode node) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectToXPathNavigable = null;
         try {
-            JCObject objToXPathNavigable = (JCObject)classType.Invoke("ToXPathNavigable", node == null ? null : node.getJCOInstance());
+            retObjectToXPathNavigable = classType.Invoke("ToXPathNavigable", node == null ? null : node.getJCOInstance());
+            JCObject objToXPathNavigable = (JCObject)retObjectToXPathNavigable;
             return new IXPathNavigableImplementation(objToXPathNavigable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToXPathNavigable != null ? retObjectToXPathNavigable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

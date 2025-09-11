@@ -177,10 +177,14 @@ public class ResXResourceSet extends ResourceSet  {
     
     public NetType GetDefaultReader() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultReader = null;
         try {
-            JCObject objGetDefaultReader = (JCObject)classInstance.Invoke("GetDefaultReader");
+            retObjectGetDefaultReader = classInstance.Invoke("GetDefaultReader");
+            JCObject objGetDefaultReader = (JCObject)retObjectGetDefaultReader;
             return new NetType(objGetDefaultReader);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultReader != null ? retObjectGetDefaultReader.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +192,14 @@ public class ResXResourceSet extends ResourceSet  {
 
     public NetType GetDefaultWriter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDefaultWriter = null;
         try {
-            JCObject objGetDefaultWriter = (JCObject)classInstance.Invoke("GetDefaultWriter");
+            retObjectGetDefaultWriter = classInstance.Invoke("GetDefaultWriter");
+            JCObject objGetDefaultWriter = (JCObject)retObjectGetDefaultWriter;
             return new NetType(objGetDefaultWriter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDefaultWriter != null ? retObjectGetDefaultWriter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

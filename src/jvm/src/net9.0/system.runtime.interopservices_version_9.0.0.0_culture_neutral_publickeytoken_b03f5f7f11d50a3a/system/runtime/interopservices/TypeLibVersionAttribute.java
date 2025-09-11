@@ -170,9 +170,13 @@ public class TypeLibVersionAttribute extends Attribute  {
     
     public int getMajorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMajorVersion = null;
         try {
-            return (int)classInstance.Get("MajorVersion");
+            retObjectMajorVersion = classInstance.Get("MajorVersion");
+            return (int)retObjectMajorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMajorVersion != null ? retObjectMajorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class TypeLibVersionAttribute extends Attribute  {
 
     public int getMinorVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinorVersion = null;
         try {
-            return (int)classInstance.Get("MinorVersion");
+            retObjectMinorVersion = classInstance.Get("MinorVersion");
+            return (int)retObjectMinorVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinorVersion != null ? retObjectMinorVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

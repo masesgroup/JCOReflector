@@ -166,9 +166,13 @@ public class MembershipUser extends NetObject  {
     
     public boolean ChangePassword(java.lang.String oldPassword, java.lang.String newPassword) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePassword = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePassword", oldPassword, newPassword);
+            retObjectChangePassword = classInstance.Invoke("ChangePassword", oldPassword, newPassword);
+            return (boolean)retObjectChangePassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePassword != null ? retObjectChangePassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class MembershipUser extends NetObject  {
 
     public boolean ChangePasswordQuestionAndAnswer(java.lang.String password, java.lang.String newPasswordQuestion, java.lang.String newPasswordAnswer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChangePasswordQuestionAndAnswer = null;
         try {
-            return (boolean)classInstance.Invoke("ChangePasswordQuestionAndAnswer", password, newPasswordQuestion, newPasswordAnswer);
+            retObjectChangePasswordQuestionAndAnswer = classInstance.Invoke("ChangePasswordQuestionAndAnswer", password, newPasswordQuestion, newPasswordAnswer);
+            return (boolean)retObjectChangePasswordQuestionAndAnswer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectChangePasswordQuestionAndAnswer != null ? retObjectChangePasswordQuestionAndAnswer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class MembershipUser extends NetObject  {
 
     public boolean UnlockUser() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnlockUser = null;
         try {
-            return (boolean)classInstance.Invoke("UnlockUser");
+            retObjectUnlockUser = classInstance.Invoke("UnlockUser");
+            return (boolean)retObjectUnlockUser;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectUnlockUser != null ? retObjectUnlockUser.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String GetPassword() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPassword");
+            retObjectGetPassword = classInstance.Invoke("GetPassword");
+            return (java.lang.String)retObjectGetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPassword != null ? retObjectGetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String GetPassword(java.lang.String passwordAnswer) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetPassword", passwordAnswer);
+            retObjectGetPassword = classInstance.Invoke("GetPassword", passwordAnswer);
+            return (java.lang.String)retObjectGetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetPassword != null ? retObjectGetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +236,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String ResetPassword() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OverflowException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResetPassword");
+            retObjectResetPassword = classInstance.Invoke("ResetPassword");
+            return (java.lang.String)retObjectResetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResetPassword != null ? retObjectResetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,9 +250,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String ResetPassword(java.lang.String passwordAnswer) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetPassword = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ResetPassword", passwordAnswer);
+            retObjectResetPassword = classInstance.Invoke("ResetPassword", passwordAnswer);
+            return (java.lang.String)retObjectResetPassword;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectResetPassword != null ? retObjectResetPassword.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,9 +268,13 @@ public class MembershipUser extends NetObject  {
     
     public boolean getIsApproved() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsApproved = null;
         try {
-            return (boolean)classInstance.Get("IsApproved");
+            retObjectIsApproved = classInstance.Get("IsApproved");
+            return (boolean)retObjectIsApproved;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsApproved != null ? retObjectIsApproved.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +282,7 @@ public class MembershipUser extends NetObject  {
 
     public void setIsApproved(boolean IsApproved) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsApproved", IsApproved);
         } catch (JCNativeException jcne) {
@@ -260,9 +292,13 @@ public class MembershipUser extends NetObject  {
 
     public boolean getIsLockedOut() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsLockedOut = null;
         try {
-            return (boolean)classInstance.Get("IsLockedOut");
+            retObjectIsLockedOut = classInstance.Get("IsLockedOut");
+            return (boolean)retObjectIsLockedOut;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsLockedOut != null ? retObjectIsLockedOut.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,9 +306,13 @@ public class MembershipUser extends NetObject  {
 
     public boolean getIsOnline() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOnline = null;
         try {
-            return (boolean)classInstance.Get("IsOnline");
+            retObjectIsOnline = classInstance.Get("IsOnline");
+            return (boolean)retObjectIsOnline;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOnline != null ? retObjectIsOnline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +320,14 @@ public class MembershipUser extends NetObject  {
 
     public DateTime getCreationDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreationDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CreationDate");
+            retObjectCreationDate = classInstance.Get("CreationDate");
+            JCObject val = (JCObject)retObjectCreationDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreationDate != null ? retObjectCreationDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +335,14 @@ public class MembershipUser extends NetObject  {
 
     public DateTime getLastActivityDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastActivityDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastActivityDate");
+            retObjectLastActivityDate = classInstance.Get("LastActivityDate");
+            JCObject val = (JCObject)retObjectLastActivityDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastActivityDate != null ? retObjectLastActivityDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +350,7 @@ public class MembershipUser extends NetObject  {
 
     public void setLastActivityDate(DateTime LastActivityDate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastActivityDate", LastActivityDate == null ? null : LastActivityDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,10 +360,14 @@ public class MembershipUser extends NetObject  {
 
     public DateTime getLastLockoutDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastLockoutDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastLockoutDate");
+            retObjectLastLockoutDate = classInstance.Get("LastLockoutDate");
+            JCObject val = (JCObject)retObjectLastLockoutDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastLockoutDate != null ? retObjectLastLockoutDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,10 +375,14 @@ public class MembershipUser extends NetObject  {
 
     public DateTime getLastLoginDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastLoginDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastLoginDate");
+            retObjectLastLoginDate = classInstance.Get("LastLoginDate");
+            JCObject val = (JCObject)retObjectLastLoginDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastLoginDate != null ? retObjectLastLoginDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +390,7 @@ public class MembershipUser extends NetObject  {
 
     public void setLastLoginDate(DateTime LastLoginDate) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LastLoginDate", LastLoginDate == null ? null : LastLoginDate.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +400,14 @@ public class MembershipUser extends NetObject  {
 
     public DateTime getLastPasswordChangedDate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLastPasswordChangedDate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LastPasswordChangedDate");
+            retObjectLastPasswordChangedDate = classInstance.Get("LastPasswordChangedDate");
+            JCObject val = (JCObject)retObjectLastPasswordChangedDate;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLastPasswordChangedDate != null ? retObjectLastPasswordChangedDate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +415,14 @@ public class MembershipUser extends NetObject  {
 
     public NetObject getProviderUserKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderUserKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProviderUserKey");
+            retObjectProviderUserKey = classInstance.Get("ProviderUserKey");
+            JCObject val = (JCObject)retObjectProviderUserKey;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProviderUserKey != null ? retObjectProviderUserKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,9 +430,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String getComment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComment = null;
         try {
-            return (java.lang.String)classInstance.Get("Comment");
+            retObjectComment = classInstance.Get("Comment");
+            return (java.lang.String)retObjectComment;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComment != null ? retObjectComment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +444,7 @@ public class MembershipUser extends NetObject  {
 
     public void setComment(java.lang.String Comment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Comment", Comment);
         } catch (JCNativeException jcne) {
@@ -386,9 +454,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String getEmail() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmail = null;
         try {
-            return (java.lang.String)classInstance.Get("Email");
+            retObjectEmail = classInstance.Get("Email");
+            return (java.lang.String)retObjectEmail;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEmail != null ? retObjectEmail.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -396,7 +468,7 @@ public class MembershipUser extends NetObject  {
 
     public void setEmail(java.lang.String Email) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Email", Email);
         } catch (JCNativeException jcne) {
@@ -406,9 +478,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String getPasswordQuestion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordQuestion = null;
         try {
-            return (java.lang.String)classInstance.Get("PasswordQuestion");
+            retObjectPasswordQuestion = classInstance.Get("PasswordQuestion");
+            return (java.lang.String)retObjectPasswordQuestion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPasswordQuestion != null ? retObjectPasswordQuestion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -416,9 +492,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,9 +506,13 @@ public class MembershipUser extends NetObject  {
 
     public java.lang.String getUserName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserName = null;
         try {
-            return (java.lang.String)classInstance.Get("UserName");
+            retObjectUserName = classInstance.Get("UserName");
+            return (java.lang.String)retObjectUserName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUserName != null ? retObjectUserName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

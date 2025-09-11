@@ -179,10 +179,14 @@ public class DelayActivity extends Activity  {
     
     public TimeSpan getTimeoutDuration() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTimeoutDuration = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TimeoutDuration");
+            retObjectTimeoutDuration = classInstance.Get("TimeoutDuration");
+            JCObject val = (JCObject)retObjectTimeoutDuration;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTimeoutDuration != null ? retObjectTimeoutDuration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class DelayActivity extends Activity  {
 
     public void setTimeoutDuration(TimeSpan TimeoutDuration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TimeoutDuration", TimeoutDuration == null ? null : TimeoutDuration.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -205,7 +209,7 @@ public class DelayActivity extends Activity  {
 
     public void addInitializeTimeoutDuration(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InitializeTimeoutDuration", handler);
         } catch (JCNativeException jcne) {
@@ -215,7 +219,7 @@ public class DelayActivity extends Activity  {
 
     public void removeInitializeTimeoutDuration(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InitializeTimeoutDuration", handler);
         } catch (JCNativeException jcne) {

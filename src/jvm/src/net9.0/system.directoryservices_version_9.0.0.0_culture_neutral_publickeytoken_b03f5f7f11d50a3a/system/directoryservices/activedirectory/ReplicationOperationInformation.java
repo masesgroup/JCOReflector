@@ -168,10 +168,14 @@ public class ReplicationOperationInformation extends NetObject  {
     
     public DateTime getOperationStartTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationStartTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationStartTime");
+            retObjectOperationStartTime = classInstance.Get("OperationStartTime");
+            JCObject val = (JCObject)retObjectOperationStartTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationStartTime != null ? retObjectOperationStartTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +183,14 @@ public class ReplicationOperationInformation extends NetObject  {
 
     public ReplicationOperation getCurrentOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCurrentOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CurrentOperation");
+            retObjectCurrentOperation = classInstance.Get("CurrentOperation");
+            JCObject val = (JCObject)retObjectCurrentOperation;
             return new ReplicationOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentOperation != null ? retObjectCurrentOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +198,14 @@ public class ReplicationOperationInformation extends NetObject  {
 
     public ReplicationOperationCollection getPendingOperations() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPendingOperations = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PendingOperations");
+            retObjectPendingOperations = classInstance.Get("PendingOperations");
+            JCObject val = (JCObject)retObjectPendingOperations;
             return new ReplicationOperationCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPendingOperations != null ? retObjectPendingOperations.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

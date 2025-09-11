@@ -172,9 +172,13 @@ public class CspKeyContainerInfo extends NetObject  {
     
     public boolean getAccessible() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAccessible = null;
         try {
-            return (boolean)classInstance.Get("Accessible");
+            retObjectAccessible = classInstance.Get("Accessible");
+            return (boolean)retObjectAccessible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAccessible != null ? retObjectAccessible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getExportable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExportable = null;
         try {
-            return (boolean)classInstance.Get("Exportable");
+            retObjectExportable = classInstance.Get("Exportable");
+            return (boolean)retObjectExportable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectExportable != null ? retObjectExportable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +200,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getHardwareDevice() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHardwareDevice = null;
         try {
-            return (boolean)classInstance.Get("HardwareDevice");
+            retObjectHardwareDevice = classInstance.Get("HardwareDevice");
+            return (boolean)retObjectHardwareDevice;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHardwareDevice != null ? retObjectHardwareDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getMachineKeyStore() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineKeyStore = null;
         try {
-            return (boolean)classInstance.Get("MachineKeyStore");
+            retObjectMachineKeyStore = classInstance.Get("MachineKeyStore");
+            return (boolean)retObjectMachineKeyStore;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMachineKeyStore != null ? retObjectMachineKeyStore.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,9 +228,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getProtected() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtected = null;
         try {
-            return (boolean)classInstance.Get("Protected");
+            retObjectProtected = classInstance.Get("Protected");
+            return (boolean)retObjectProtected;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProtected != null ? retObjectProtected.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +242,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getRandomlyGenerated() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRandomlyGenerated = null;
         try {
-            return (boolean)classInstance.Get("RandomlyGenerated");
+            retObjectRandomlyGenerated = classInstance.Get("RandomlyGenerated");
+            return (boolean)retObjectRandomlyGenerated;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRandomlyGenerated != null ? retObjectRandomlyGenerated.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +256,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public boolean getRemovable() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemovable = null;
         try {
-            return (boolean)classInstance.Get("Removable");
+            retObjectRemovable = classInstance.Get("Removable");
+            return (boolean)retObjectRemovable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRemovable != null ? retObjectRemovable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +270,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public int getProviderType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderType = null;
         try {
-            return (int)classInstance.Get("ProviderType");
+            retObjectProviderType = classInstance.Get("ProviderType");
+            return (int)retObjectProviderType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectProviderType != null ? retObjectProviderType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +284,14 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public CryptoKeySecurity getCryptoKeySecurity() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.SystemException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCryptoKeySecurity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CryptoKeySecurity");
+            retObjectCryptoKeySecurity = classInstance.Get("CryptoKeySecurity");
+            JCObject val = (JCObject)retObjectCryptoKeySecurity;
             return new CryptoKeySecurity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCryptoKeySecurity != null ? retObjectCryptoKeySecurity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +299,14 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public KeyNumber getKeyNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyNumber = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("KeyNumber");
+            retObjectKeyNumber = classInstance.Get("KeyNumber");
+            JCObject val = (JCObject)retObjectKeyNumber;
             return new KeyNumber(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeyNumber != null ? retObjectKeyNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +314,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public java.lang.String getKeyContainerName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyContainerName");
+            retObjectKeyContainerName = classInstance.Get("KeyContainerName");
+            return (java.lang.String)retObjectKeyContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyContainerName != null ? retObjectKeyContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +328,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,9 +342,13 @@ public class CspKeyContainerInfo extends NetObject  {
 
     public java.lang.String getUniqueKeyContainerName() throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUniqueKeyContainerName = null;
         try {
-            return (java.lang.String)classInstance.Get("UniqueKeyContainerName");
+            retObjectUniqueKeyContainerName = classInstance.Get("UniqueKeyContainerName");
+            return (java.lang.String)retObjectUniqueKeyContainerName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectUniqueKeyContainerName != null ? retObjectUniqueKeyContainerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

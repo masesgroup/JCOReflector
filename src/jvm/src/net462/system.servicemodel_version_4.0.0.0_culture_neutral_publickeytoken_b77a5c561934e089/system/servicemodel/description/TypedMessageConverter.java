@@ -158,10 +158,14 @@ public class TypedMessageConverter extends NetObject  {
     
     public NetObject FromMessage(Message message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFromMessage = null;
         try {
-            JCObject objFromMessage = (JCObject)classInstance.Invoke("FromMessage", message == null ? null : message.getJCOInstance());
+            retObjectFromMessage = classInstance.Invoke("FromMessage", message == null ? null : message.getJCOInstance());
+            JCObject objFromMessage = (JCObject)retObjectFromMessage;
             return new NetObject(objFromMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromMessage != null ? retObjectFromMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public Message ToMessage(NetObject typedMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToMessage = null;
         try {
-            JCObject objToMessage = (JCObject)classInstance.Invoke("ToMessage", typedMessage == null ? null : typedMessage.getJCOInstance());
+            retObjectToMessage = classInstance.Invoke("ToMessage", typedMessage == null ? null : typedMessage.getJCOInstance());
+            JCObject objToMessage = (JCObject)retObjectToMessage;
             return new Message(objToMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToMessage != null ? retObjectToMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +188,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public Message ToMessage(NetObject typedMessage, MessageVersion version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToMessage = null;
         try {
-            JCObject objToMessage = (JCObject)classInstance.Invoke("ToMessage", typedMessage == null ? null : typedMessage.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            retObjectToMessage = classInstance.Invoke("ToMessage", typedMessage == null ? null : typedMessage.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            JCObject objToMessage = (JCObject)retObjectToMessage;
             return new Message(objToMessage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToMessage != null ? retObjectToMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action);
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,10 +218,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +233,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +248,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace);
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace);
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +263,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, DataContractFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,10 +278,14 @@ public class TypedMessageConverter extends NetObject  {
 
     public static TypedMessageConverter Create(NetType messageContract, java.lang.String action, java.lang.String defaultNamespace, XmlSerializerFormatAttribute formatterAttribute) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", messageContract == null ? null : messageContract.getJCOInstance(), action, defaultNamespace, formatterAttribute == null ? null : formatterAttribute.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new TypedMessageConverter(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

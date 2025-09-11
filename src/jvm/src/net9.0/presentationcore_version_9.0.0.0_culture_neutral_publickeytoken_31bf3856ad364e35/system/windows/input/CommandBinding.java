@@ -199,10 +199,14 @@ public class CommandBinding extends NetObject  {
     
     public ICommand getCommand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCommand = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Command");
+            retObjectCommand = classInstance.Get("Command");
+            JCObject val = (JCObject)retObjectCommand;
             return new ICommandImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCommand != null ? retObjectCommand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +214,7 @@ public class CommandBinding extends NetObject  {
 
     public void setCommand(ICommand Command) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Command", Command == null ? null : Command.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +229,7 @@ public class CommandBinding extends NetObject  {
 
     public void addCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CanExecute", handler);
         } catch (JCNativeException jcne) {
@@ -235,7 +239,7 @@ public class CommandBinding extends NetObject  {
 
     public void removeCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CanExecute", handler);
         } catch (JCNativeException jcne) {
@@ -245,7 +249,7 @@ public class CommandBinding extends NetObject  {
 
     public void addPreviewCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewCanExecute", handler);
         } catch (JCNativeException jcne) {
@@ -255,7 +259,7 @@ public class CommandBinding extends NetObject  {
 
     public void removePreviewCanExecute(CanExecuteRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewCanExecute", handler);
         } catch (JCNativeException jcne) {
@@ -265,7 +269,7 @@ public class CommandBinding extends NetObject  {
 
     public void addExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Executed", handler);
         } catch (JCNativeException jcne) {
@@ -275,7 +279,7 @@ public class CommandBinding extends NetObject  {
 
     public void removeExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Executed", handler);
         } catch (JCNativeException jcne) {
@@ -285,7 +289,7 @@ public class CommandBinding extends NetObject  {
 
     public void addPreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("PreviewExecuted", handler);
         } catch (JCNativeException jcne) {
@@ -295,7 +299,7 @@ public class CommandBinding extends NetObject  {
 
     public void removePreviewExecuted(ExecutedRoutedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PreviewExecuted", handler);
         } catch (JCNativeException jcne) {

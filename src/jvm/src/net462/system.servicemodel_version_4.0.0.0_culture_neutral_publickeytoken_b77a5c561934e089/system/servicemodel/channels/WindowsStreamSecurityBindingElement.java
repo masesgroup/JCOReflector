@@ -171,10 +171,14 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
     
     public BindingElement Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +186,14 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
 
     public StreamUpgradeProvider BuildClientStreamUpgradeProvider(BindingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildClientStreamUpgradeProvider = null;
         try {
-            JCObject objBuildClientStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildClientStreamUpgradeProvider = classInstance.Invoke("BuildClientStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildClientStreamUpgradeProvider = (JCObject)retObjectBuildClientStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildClientStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildClientStreamUpgradeProvider != null ? retObjectBuildClientStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +201,14 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
 
     public StreamUpgradeProvider BuildServerStreamUpgradeProvider(BindingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildServerStreamUpgradeProvider = null;
         try {
-            JCObject objBuildServerStreamUpgradeProvider = (JCObject)classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            retObjectBuildServerStreamUpgradeProvider = classInstance.Invoke("BuildServerStreamUpgradeProvider", context == null ? null : context.getJCOInstance());
+            JCObject objBuildServerStreamUpgradeProvider = (JCObject)retObjectBuildServerStreamUpgradeProvider;
             return new StreamUpgradeProvider(objBuildServerStreamUpgradeProvider);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBuildServerStreamUpgradeProvider != null ? retObjectBuildServerStreamUpgradeProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +216,14 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
 
     public XmlElement GetTransportTokenAssertion() throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTransportTokenAssertion = null;
         try {
-            JCObject objGetTransportTokenAssertion = (JCObject)classInstance.Invoke("GetTransportTokenAssertion");
+            retObjectGetTransportTokenAssertion = classInstance.Invoke("GetTransportTokenAssertion");
+            JCObject objGetTransportTokenAssertion = (JCObject)retObjectGetTransportTokenAssertion;
             return new XmlElement(objGetTransportTokenAssertion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetTransportTokenAssertion != null ? retObjectGetTransportTokenAssertion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +235,7 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -228,10 +244,14 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
     
     public ProtectionLevel getProtectionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProtectionLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProtectionLevel");
+            retObjectProtectionLevel = classInstance.Get("ProtectionLevel");
+            JCObject val = (JCObject)retObjectProtectionLevel;
             return new ProtectionLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProtectionLevel != null ? retObjectProtectionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class WindowsStreamSecurityBindingElement extends StreamUpgradeBindingEle
 
     public void setProtectionLevel(ProtectionLevel ProtectionLevel) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProtectionLevel", ProtectionLevel == null ? null : ProtectionLevel.getJCOInstance());
         } catch (JCNativeException jcne) {

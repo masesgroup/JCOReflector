@@ -161,10 +161,14 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
     
     public NetObject getResourceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceKey");
+            retObjectResourceKey = classInstance.Get("ResourceKey");
+            JCObject val = (JCObject)retObjectResourceKey;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceKey != null ? retObjectResourceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,7 +176,7 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public void setResourceKey(NetObject ResourceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceKey", ResourceKey == null ? null : ResourceKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -182,10 +186,14 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public NetObject getTargetObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetObject");
+            retObjectTargetObject = classInstance.Get("TargetObject");
+            JCObject val = (JCObject)retObjectTargetObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetObject != null ? retObjectTargetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public void setTargetObject(NetObject TargetObject) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetObject", TargetObject == null ? null : TargetObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public NetObject getTargetProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetProperty = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetProperty");
+            retObjectTargetProperty = classInstance.Get("TargetProperty");
+            JCObject val = (JCObject)retObjectTargetProperty;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetProperty != null ? retObjectTargetProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public void setTargetProperty(NetObject TargetProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TargetProperty", TargetProperty == null ? null : TargetProperty.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,10 +236,14 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public ResourceDictionary getResourceDictionary() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResourceDictionary = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResourceDictionary");
+            retObjectResourceDictionary = classInstance.Get("ResourceDictionary");
+            JCObject val = (JCObject)retObjectResourceDictionary;
             return new ResourceDictionary(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResourceDictionary != null ? retObjectResourceDictionary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class StaticResourceResolvedEventArgs extends EventArgs  {
 
     public void setResourceDictionary(ResourceDictionary ResourceDictionary) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResourceDictionary", ResourceDictionary == null ? null : ResourceDictionary.getJCOInstance());
         } catch (JCNativeException jcne) {

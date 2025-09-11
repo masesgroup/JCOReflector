@@ -215,10 +215,14 @@ public class SoapSchemaImporter extends SchemaImporter  {
     
     public XmlMembersMapping ImportMembersMapping(java.lang.String name, java.lang.String ns, SoapSchemaMember member) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", name, ns, member == null ? null : member.getJCOInstance());
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", name, ns, member == null ? null : member.getJCOInstance());
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,10 +230,14 @@ public class SoapSchemaImporter extends SchemaImporter  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String name, java.lang.String ns, SoapSchemaMember[] members) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members));
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members));
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,10 +245,14 @@ public class SoapSchemaImporter extends SchemaImporter  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String name, java.lang.String ns, SoapSchemaMember[] members, boolean hasWrapperElement) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members), hasWrapperElement);
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members), hasWrapperElement);
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,10 +260,14 @@ public class SoapSchemaImporter extends SchemaImporter  {
 
     public XmlMembersMapping ImportMembersMapping(java.lang.String name, java.lang.String ns, SoapSchemaMember[] members, boolean hasWrapperElement, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.RankException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportMembersMapping = null;
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members), hasWrapperElement, baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
+            retObjectImportMembersMapping = classInstance.Invoke("ImportMembersMapping", name, ns, toObjectFromArray(members), hasWrapperElement, baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
+            JCObject objImportMembersMapping = (JCObject)retObjectImportMembersMapping;
             return new XmlMembersMapping(objImportMembersMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportMembersMapping != null ? retObjectImportMembersMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,10 +275,14 @@ public class SoapSchemaImporter extends SchemaImporter  {
 
     public XmlTypeMapping ImportDerivedTypeMapping(XmlQualifiedName name, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportDerivedTypeMapping = null;
         try {
-            JCObject objImportDerivedTypeMapping = (JCObject)classInstance.Invoke("ImportDerivedTypeMapping", name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
+            retObjectImportDerivedTypeMapping = classInstance.Invoke("ImportDerivedTypeMapping", name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
+            JCObject objImportDerivedTypeMapping = (JCObject)retObjectImportDerivedTypeMapping;
             return new XmlTypeMapping(objImportDerivedTypeMapping);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportDerivedTypeMapping != null ? retObjectImportDerivedTypeMapping.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -193,9 +193,13 @@ public class MaskedTextBox extends TextBoxBase  {
     
     public char GetCharFromPosition(Point pt) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharFromPosition = null;
         try {
-            return (char)classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharFromPosition = classInstance.Invoke("GetCharFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (char)retObjectGetCharFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into char", retObjectGetCharFromPosition != null ? retObjectGetCharFromPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,19 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public int GetCharIndexFromPosition(Point pt) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCharIndexFromPosition = null;
         try {
-            return (int)classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            retObjectGetCharIndexFromPosition = classInstance.Invoke("GetCharIndexFromPosition", pt == null ? null : pt.getJCOInstance());
+            return (int)retObjectGetCharIndexFromPosition;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetCharIndexFromPositionNumber = (java.lang.Number)retObjectGetCharIndexFromPosition;
+                return retObjectGetCharIndexFromPositionNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetCharIndexFromPosition != null ? retObjectGetCharIndexFromPosition.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +227,19 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public int GetFirstCharIndexFromLineNewMaskedTextBox(int lineNumber) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexFromLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            retObjectGetFirstCharIndexFromLine = classInstance.Invoke("GetFirstCharIndexFromLine", lineNumber);
+            return (int)retObjectGetFirstCharIndexFromLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexFromLineNumber = (java.lang.Number)retObjectGetFirstCharIndexFromLine;
+                return retObjectGetFirstCharIndexFromLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexFromLine != null ? retObjectGetFirstCharIndexFromLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,19 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public int GetFirstCharIndexOfCurrentLineNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFirstCharIndexOfCurrentLine = null;
         try {
-            return (int)classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            retObjectGetFirstCharIndexOfCurrentLine = classInstance.Invoke("GetFirstCharIndexOfCurrentLine");
+            return (int)retObjectGetFirstCharIndexOfCurrentLine;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetFirstCharIndexOfCurrentLineNumber = (java.lang.Number)retObjectGetFirstCharIndexOfCurrentLine;
+                return retObjectGetFirstCharIndexOfCurrentLineNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetFirstCharIndexOfCurrentLine != null ? retObjectGetFirstCharIndexOfCurrentLine.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,9 +267,19 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public int GetLineFromCharIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetLineFromCharIndex = null;
         try {
-            return (int)classInstance.Invoke("GetLineFromCharIndex", index);
+            retObjectGetLineFromCharIndex = classInstance.Invoke("GetLineFromCharIndex", index);
+            return (int)retObjectGetLineFromCharIndex;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetLineFromCharIndexNumber = (java.lang.Number)retObjectGetLineFromCharIndex;
+                return retObjectGetLineFromCharIndexNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetLineFromCharIndex != null ? retObjectGetLineFromCharIndex.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +287,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public Point GetPositionFromCharIndex(int index) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPositionFromCharIndex = null;
         try {
-            JCObject objGetPositionFromCharIndex = (JCObject)classInstance.Invoke("GetPositionFromCharIndex", index);
+            retObjectGetPositionFromCharIndex = classInstance.Invoke("GetPositionFromCharIndex", index);
+            JCObject objGetPositionFromCharIndex = (JCObject)retObjectGetPositionFromCharIndex;
             return new Point(objGetPositionFromCharIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPositionFromCharIndex != null ? retObjectGetPositionFromCharIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +302,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public NetObject ValidateText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.InvalidCastException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateText = null;
         try {
-            JCObject objValidateText = (JCObject)classInstance.Invoke("ValidateText");
+            retObjectValidateText = classInstance.Invoke("ValidateText");
+            JCObject objValidateText = (JCObject)retObjectValidateText;
             return new NetObject(objValidateText);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateText != null ? retObjectValidateText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,7 +317,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void ClearUndoNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearUndo");
         } catch (JCNativeException jcne) {
@@ -275,7 +327,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void ScrollToCaretNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ScrollToCaret");
         } catch (JCNativeException jcne) {
@@ -285,7 +337,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void UndoNewMaskedTextBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Undo");
         } catch (JCNativeException jcne) {
@@ -299,9 +351,13 @@ public class MaskedTextBox extends TextBoxBase  {
     
     public boolean getAcceptsTab() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptsTab = null;
         try {
-            return (boolean)classInstance.Get("AcceptsTab");
+            retObjectAcceptsTab = classInstance.Get("AcceptsTab");
+            return (boolean)retObjectAcceptsTab;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcceptsTab != null ? retObjectAcceptsTab.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +365,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setAcceptsTab(boolean AcceptsTab) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptsTab", AcceptsTab);
         } catch (JCNativeException jcne) {
@@ -319,9 +375,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getAllowPromptAsInput() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowPromptAsInput = null;
         try {
-            return (boolean)classInstance.Get("AllowPromptAsInput");
+            retObjectAllowPromptAsInput = classInstance.Get("AllowPromptAsInput");
+            return (boolean)retObjectAllowPromptAsInput;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowPromptAsInput != null ? retObjectAllowPromptAsInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +389,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setAllowPromptAsInput(boolean AllowPromptAsInput) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.TypeInitializationException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowPromptAsInput", AllowPromptAsInput);
         } catch (JCNativeException jcne) {
@@ -339,9 +399,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getAsciiOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAsciiOnly = null;
         try {
-            return (boolean)classInstance.Get("AsciiOnly");
+            retObjectAsciiOnly = classInstance.Get("AsciiOnly");
+            return (boolean)retObjectAsciiOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAsciiOnly != null ? retObjectAsciiOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,7 +413,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setAsciiOnly(boolean AsciiOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.TypeInitializationException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AsciiOnly", AsciiOnly);
         } catch (JCNativeException jcne) {
@@ -359,9 +423,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getBeepOnError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeepOnError = null;
         try {
-            return (boolean)classInstance.Get("BeepOnError");
+            retObjectBeepOnError = classInstance.Get("BeepOnError");
+            return (boolean)retObjectBeepOnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBeepOnError != null ? retObjectBeepOnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -369,7 +437,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setBeepOnError(boolean BeepOnError) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BeepOnError", BeepOnError);
         } catch (JCNativeException jcne) {
@@ -379,9 +447,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getCanUndo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanUndo = null;
         try {
-            return (boolean)classInstance.Get("CanUndo");
+            retObjectCanUndo = classInstance.Get("CanUndo");
+            return (boolean)retObjectCanUndo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanUndo != null ? retObjectCanUndo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -389,9 +461,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getHidePromptOnLeave() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHidePromptOnLeave = null;
         try {
-            return (boolean)classInstance.Get("HidePromptOnLeave");
+            retObjectHidePromptOnLeave = classInstance.Get("HidePromptOnLeave");
+            return (boolean)retObjectHidePromptOnLeave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHidePromptOnLeave != null ? retObjectHidePromptOnLeave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,7 +475,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setHidePromptOnLeave(boolean HidePromptOnLeave) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HidePromptOnLeave", HidePromptOnLeave);
         } catch (JCNativeException jcne) {
@@ -409,9 +485,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getIsOverwriteMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsOverwriteMode = null;
         try {
-            return (boolean)classInstance.Get("IsOverwriteMode");
+            retObjectIsOverwriteMode = classInstance.Get("IsOverwriteMode");
+            return (boolean)retObjectIsOverwriteMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsOverwriteMode != null ? retObjectIsOverwriteMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,9 +499,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getMaskCompleted() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaskCompleted = null;
         try {
-            return (boolean)classInstance.Get("MaskCompleted");
+            retObjectMaskCompleted = classInstance.Get("MaskCompleted");
+            return (boolean)retObjectMaskCompleted;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaskCompleted != null ? retObjectMaskCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -429,9 +513,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getMaskFull() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaskFull = null;
         try {
-            return (boolean)classInstance.Get("MaskFull");
+            retObjectMaskFull = classInstance.Get("MaskFull");
+            return (boolean)retObjectMaskFull;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaskFull != null ? retObjectMaskFull.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,9 +527,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ReadOnly");
+            retObjectReadOnly = classInstance.Get("ReadOnly");
+            return (boolean)retObjectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnly != null ? retObjectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -449,7 +541,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnly", ReadOnly);
         } catch (JCNativeException jcne) {
@@ -459,9 +551,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getRejectInputOnFirstFailure() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRejectInputOnFirstFailure = null;
         try {
-            return (boolean)classInstance.Get("RejectInputOnFirstFailure");
+            retObjectRejectInputOnFirstFailure = classInstance.Get("RejectInputOnFirstFailure");
+            return (boolean)retObjectRejectInputOnFirstFailure;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRejectInputOnFirstFailure != null ? retObjectRejectInputOnFirstFailure.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -469,7 +565,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setRejectInputOnFirstFailure(boolean RejectInputOnFirstFailure) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RejectInputOnFirstFailure", RejectInputOnFirstFailure);
         } catch (JCNativeException jcne) {
@@ -479,9 +575,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getResetOnPrompt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetOnPrompt = null;
         try {
-            return (boolean)classInstance.Get("ResetOnPrompt");
+            retObjectResetOnPrompt = classInstance.Get("ResetOnPrompt");
+            return (boolean)retObjectResetOnPrompt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResetOnPrompt != null ? retObjectResetOnPrompt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -489,7 +589,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setResetOnPrompt(boolean ResetOnPrompt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResetOnPrompt", ResetOnPrompt);
         } catch (JCNativeException jcne) {
@@ -499,9 +599,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getResetOnSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResetOnSpace = null;
         try {
-            return (boolean)classInstance.Get("ResetOnSpace");
+            retObjectResetOnSpace = classInstance.Get("ResetOnSpace");
+            return (boolean)retObjectResetOnSpace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectResetOnSpace != null ? retObjectResetOnSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -509,7 +613,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setResetOnSpace(boolean ResetOnSpace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResetOnSpace", ResetOnSpace);
         } catch (JCNativeException jcne) {
@@ -519,9 +623,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getSkipLiterals() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipLiterals = null;
         try {
-            return (boolean)classInstance.Get("SkipLiterals");
+            retObjectSkipLiterals = classInstance.Get("SkipLiterals");
+            return (boolean)retObjectSkipLiterals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipLiterals != null ? retObjectSkipLiterals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,7 +637,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setSkipLiterals(boolean SkipLiterals) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipLiterals", SkipLiterals);
         } catch (JCNativeException jcne) {
@@ -539,9 +647,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getUseSystemPasswordChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSystemPasswordChar = null;
         try {
-            return (boolean)classInstance.Get("UseSystemPasswordChar");
+            retObjectUseSystemPasswordChar = classInstance.Get("UseSystemPasswordChar");
+            return (boolean)retObjectUseSystemPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSystemPasswordChar != null ? retObjectUseSystemPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,7 +661,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setUseSystemPasswordChar(boolean UseSystemPasswordChar) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSystemPasswordChar", UseSystemPasswordChar);
         } catch (JCNativeException jcne) {
@@ -559,9 +671,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public boolean getWordWrap() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWordWrap = null;
         try {
-            return (boolean)classInstance.Get("WordWrap");
+            retObjectWordWrap = classInstance.Get("WordWrap");
+            return (boolean)retObjectWordWrap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWordWrap != null ? retObjectWordWrap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,7 +685,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setWordWrap(boolean WordWrap) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WordWrap", WordWrap);
         } catch (JCNativeException jcne) {
@@ -579,9 +695,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public char getPasswordChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPasswordChar = null;
         try {
-            return (char)classInstance.Get("PasswordChar");
+            retObjectPasswordChar = classInstance.Get("PasswordChar");
+            return (char)retObjectPasswordChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPasswordChar != null ? retObjectPasswordChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -589,7 +709,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setPasswordChar(char PasswordChar) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PasswordChar", PasswordChar);
         } catch (JCNativeException jcne) {
@@ -599,9 +719,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public char getPromptChar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromptChar = null;
         try {
-            return (char)classInstance.Get("PromptChar");
+            retObjectPromptChar = classInstance.Get("PromptChar");
+            return (char)retObjectPromptChar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectPromptChar != null ? retObjectPromptChar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -609,7 +733,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setPromptChar(char PromptChar) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.NotSupportedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PromptChar", PromptChar);
         } catch (JCNativeException jcne) {
@@ -619,10 +743,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public MaskedTextProvider getMaskedTextProvider() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaskedTextProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MaskedTextProvider");
+            retObjectMaskedTextProvider = classInstance.Get("MaskedTextProvider");
+            JCObject val = (JCObject)retObjectMaskedTextProvider;
             return new MaskedTextProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMaskedTextProvider != null ? retObjectMaskedTextProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,10 +758,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public CultureInfo getCulture() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -641,7 +773,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setCulture(CultureInfo Culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.TypeInitializationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Culture", Culture == null ? null : Culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -651,10 +783,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public IFormatProvider getFormatProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormatProvider");
+            retObjectFormatProvider = classInstance.Get("FormatProvider");
+            JCObject val = (JCObject)retObjectFormatProvider;
             return new IFormatProviderImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormatProvider != null ? retObjectFormatProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,7 +798,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setFormatProvider(IFormatProvider FormatProvider) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormatProvider", FormatProvider == null ? null : FormatProvider.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -672,9 +808,13 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public java.lang.String getMask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMask = null;
         try {
-            return (java.lang.String)classInstance.Get("Mask");
+            retObjectMask = classInstance.Get("Mask");
+            return (java.lang.String)retObjectMask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMask != null ? retObjectMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,7 +822,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setMask(java.lang.String Mask) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.threading.WaitHandleCannotBeOpenedException, system.UriFormatException, system.io.FileNotFoundException, system.threading.AbandonedMutexException, system.TimeoutException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Mask", Mask);
         } catch (JCNativeException jcne) {
@@ -692,10 +832,12 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public java.lang.String[] getLines() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLines = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Lines");
+            retObjectLines = classInstance.Get("Lines");
+            JCObject resultingObjects = (JCObject)retObjectLines;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -704,6 +846,8 @@ public class MaskedTextBox extends TextBoxBase  {
 				resultingArray[indexLines] = (java.lang.String)resultingArrayList.get(indexLines);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectLines != null ? retObjectLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -711,7 +855,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setLines(java.lang.String[] Lines) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Lines", Lines);
         } catch (JCNativeException jcne) {
@@ -721,10 +865,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public NetType getValidatingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatingType");
+            retObjectValidatingType = classInstance.Get("ValidatingType");
+            JCObject val = (JCObject)retObjectValidatingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatingType != null ? retObjectValidatingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -732,7 +880,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setValidatingType(NetType ValidatingType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidatingType", ValidatingType == null ? null : ValidatingType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -742,10 +890,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public HorizontalAlignment getTextAlign() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextAlign = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextAlign");
+            retObjectTextAlign = classInstance.Get("TextAlign");
+            JCObject val = (JCObject)retObjectTextAlign;
             return new HorizontalAlignment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextAlign != null ? retObjectTextAlign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -753,7 +905,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setTextAlign(HorizontalAlignment TextAlign) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextAlign", TextAlign == null ? null : TextAlign.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -763,10 +915,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public InsertKeyMode getInsertKeyMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInsertKeyMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InsertKeyMode");
+            retObjectInsertKeyMode = classInstance.Get("InsertKeyMode");
+            JCObject val = (JCObject)retObjectInsertKeyMode;
             return new InsertKeyMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInsertKeyMode != null ? retObjectInsertKeyMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -774,7 +930,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setInsertKeyMode(InsertKeyMode InsertKeyMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InsertKeyMode", InsertKeyMode == null ? null : InsertKeyMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -784,10 +940,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public MaskFormat getCutCopyMaskFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCutCopyMaskFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CutCopyMaskFormat");
+            retObjectCutCopyMaskFormat = classInstance.Get("CutCopyMaskFormat");
+            JCObject val = (JCObject)retObjectCutCopyMaskFormat;
             return new MaskFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCutCopyMaskFormat != null ? retObjectCutCopyMaskFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -795,7 +955,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setCutCopyMaskFormat(MaskFormat CutCopyMaskFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CutCopyMaskFormat", CutCopyMaskFormat == null ? null : CutCopyMaskFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -805,10 +965,14 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public MaskFormat getTextMaskFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTextMaskFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TextMaskFormat");
+            retObjectTextMaskFormat = classInstance.Get("TextMaskFormat");
+            JCObject val = (JCObject)retObjectTextMaskFormat;
             return new MaskFormat(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTextMaskFormat != null ? retObjectTextMaskFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -816,7 +980,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void setTextMaskFormat(MaskFormat TextMaskFormat) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TextMaskFormat", TextMaskFormat == null ? null : TextMaskFormat.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -831,7 +995,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -841,7 +1005,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeAcceptsTabChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AcceptsTabChanged", handler);
         } catch (JCNativeException jcne) {
@@ -851,7 +1015,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addIsOverwriteModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("IsOverwriteModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -861,7 +1025,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeIsOverwriteModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("IsOverwriteModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -871,7 +1035,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addMaskChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MaskChanged", handler);
         } catch (JCNativeException jcne) {
@@ -881,7 +1045,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeMaskChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MaskChanged", handler);
         } catch (JCNativeException jcne) {
@@ -891,7 +1055,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -901,7 +1065,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeMultilineChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MultilineChanged", handler);
         } catch (JCNativeException jcne) {
@@ -911,7 +1075,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextAlignChanged", handler);
         } catch (JCNativeException jcne) {
@@ -921,7 +1085,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeTextAlignChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextAlignChanged", handler);
         } catch (JCNativeException jcne) {
@@ -931,7 +1095,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addMaskInputRejected(MaskInputRejectedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MaskInputRejected", handler);
         } catch (JCNativeException jcne) {
@@ -941,7 +1105,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeMaskInputRejected(MaskInputRejectedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MaskInputRejected", handler);
         } catch (JCNativeException jcne) {
@@ -951,7 +1115,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void addTypeValidationCompleted(TypeValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TypeValidationCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -961,7 +1125,7 @@ public class MaskedTextBox extends TextBoxBase  {
 
     public void removeTypeValidationCompleted(TypeValidationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TypeValidationCompleted", handler);
         } catch (JCNativeException jcne) {

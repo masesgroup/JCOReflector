@@ -178,9 +178,13 @@ public class XamlReaderSettings extends NetObject  {
     
     public boolean getAllowProtectedMembersOnRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowProtectedMembersOnRoot = null;
         try {
-            return (boolean)classInstance.Get("AllowProtectedMembersOnRoot");
+            retObjectAllowProtectedMembersOnRoot = classInstance.Get("AllowProtectedMembersOnRoot");
+            return (boolean)retObjectAllowProtectedMembersOnRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowProtectedMembersOnRoot != null ? retObjectAllowProtectedMembersOnRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setAllowProtectedMembersOnRoot(boolean AllowProtectedMembersOnRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowProtectedMembersOnRoot", AllowProtectedMembersOnRoot);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class XamlReaderSettings extends NetObject  {
 
     public boolean getIgnoreUidsOnPropertyElements() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreUidsOnPropertyElements = null;
         try {
-            return (boolean)classInstance.Get("IgnoreUidsOnPropertyElements");
+            retObjectIgnoreUidsOnPropertyElements = classInstance.Get("IgnoreUidsOnPropertyElements");
+            return (boolean)retObjectIgnoreUidsOnPropertyElements;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreUidsOnPropertyElements != null ? retObjectIgnoreUidsOnPropertyElements.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setIgnoreUidsOnPropertyElements(boolean IgnoreUidsOnPropertyElements) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreUidsOnPropertyElements", IgnoreUidsOnPropertyElements);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class XamlReaderSettings extends NetObject  {
 
     public boolean getProvideLineInfo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProvideLineInfo = null;
         try {
-            return (boolean)classInstance.Get("ProvideLineInfo");
+            retObjectProvideLineInfo = classInstance.Get("ProvideLineInfo");
+            return (boolean)retObjectProvideLineInfo;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectProvideLineInfo != null ? retObjectProvideLineInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setProvideLineInfo(boolean ProvideLineInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProvideLineInfo", ProvideLineInfo);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class XamlReaderSettings extends NetObject  {
 
     public boolean getValuesMustBeString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValuesMustBeString = null;
         try {
-            return (boolean)classInstance.Get("ValuesMustBeString");
+            retObjectValuesMustBeString = classInstance.Get("ValuesMustBeString");
+            return (boolean)retObjectValuesMustBeString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValuesMustBeString != null ? retObjectValuesMustBeString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setValuesMustBeString(boolean ValuesMustBeString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValuesMustBeString", ValuesMustBeString);
         } catch (JCNativeException jcne) {
@@ -258,10 +274,14 @@ public class XamlReaderSettings extends NetObject  {
 
     public Assembly getLocalAssembly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocalAssembly = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LocalAssembly");
+            retObjectLocalAssembly = classInstance.Get("LocalAssembly");
+            JCObject val = (JCObject)retObjectLocalAssembly;
             return new Assembly(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocalAssembly != null ? retObjectLocalAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +289,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setLocalAssembly(Assembly LocalAssembly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocalAssembly", LocalAssembly == null ? null : LocalAssembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -279,10 +299,14 @@ public class XamlReaderSettings extends NetObject  {
 
     public Uri getBaseUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
+            retObjectBaseUri = classInstance.Get("BaseUri");
+            JCObject val = (JCObject)retObjectBaseUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseUri != null ? retObjectBaseUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,7 +314,7 @@ public class XamlReaderSettings extends NetObject  {
 
     public void setBaseUri(Uri BaseUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
         } catch (JCNativeException jcne) {

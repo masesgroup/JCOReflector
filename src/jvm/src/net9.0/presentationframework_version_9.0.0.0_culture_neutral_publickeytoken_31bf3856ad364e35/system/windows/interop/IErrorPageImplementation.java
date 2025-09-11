@@ -148,9 +148,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
     
     public boolean getErrorFlag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorFlag = null;
         try {
-            return (boolean)classInstance.Get("ErrorFlag");
+            retObjectErrorFlag = classInstance.Get("ErrorFlag");
+            return (boolean)retObjectErrorFlag;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectErrorFlag != null ? retObjectErrorFlag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setErrorFlag(boolean ErrorFlag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorFlag", ErrorFlag);
         } catch (JCNativeException jcne) {
@@ -168,9 +172,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public java.lang.String getErrorText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorText = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorText");
+            retObjectErrorText = classInstance.Get("ErrorText");
+            return (java.lang.String)retObjectErrorText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorText != null ? retObjectErrorText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +186,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setErrorText(java.lang.String ErrorText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorText", ErrorText);
         } catch (JCNativeException jcne) {
@@ -188,9 +196,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public java.lang.String getErrorTitle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorTitle = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorTitle");
+            retObjectErrorTitle = classInstance.Get("ErrorTitle");
+            return (java.lang.String)retObjectErrorTitle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorTitle != null ? retObjectErrorTitle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +210,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setErrorTitle(java.lang.String ErrorTitle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorTitle", ErrorTitle);
         } catch (JCNativeException jcne) {
@@ -208,9 +220,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public java.lang.String getLogFilePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("LogFilePath");
+            retObjectLogFilePath = classInstance.Get("LogFilePath");
+            return (java.lang.String)retObjectLogFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogFilePath != null ? retObjectLogFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +234,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setLogFilePath(java.lang.String LogFilePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogFilePath", LogFilePath);
         } catch (JCNativeException jcne) {
@@ -228,10 +244,14 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public Uri getDeploymentPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeploymentPath = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeploymentPath");
+            retObjectDeploymentPath = classInstance.Get("DeploymentPath");
+            JCObject val = (JCObject)retObjectDeploymentPath;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeploymentPath != null ? retObjectDeploymentPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +259,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setDeploymentPath(Uri DeploymentPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeploymentPath", DeploymentPath == null ? null : DeploymentPath.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +269,14 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public Uri getSupportUri() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSupportUri = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SupportUri");
+            retObjectSupportUri = classInstance.Get("SupportUri");
+            JCObject val = (JCObject)retObjectSupportUri;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSupportUri != null ? retObjectSupportUri.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +284,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setSupportUri(Uri SupportUri) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SupportUri", SupportUri == null ? null : SupportUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,9 +294,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public DispatcherOperationCallback getGetWinFxCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetWinFxCallback = null;
         try {
-            return (DispatcherOperationCallback)classInstance.Get("GetWinFxCallback");
+            retObjectGetWinFxCallback = classInstance.Get("GetWinFxCallback");
+            return (DispatcherOperationCallback)retObjectGetWinFxCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into DispatcherOperationCallback", retObjectGetWinFxCallback != null ? retObjectGetWinFxCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +308,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setGetWinFxCallback(DispatcherOperationCallback GetWinFxCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GetWinFxCallback", GetWinFxCallback);
         } catch (JCNativeException jcne) {
@@ -290,9 +318,13 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public DispatcherOperationCallback getRefreshCallback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRefreshCallback = null;
         try {
-            return (DispatcherOperationCallback)classInstance.Get("RefreshCallback");
+            retObjectRefreshCallback = classInstance.Get("RefreshCallback");
+            return (DispatcherOperationCallback)retObjectRefreshCallback;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into DispatcherOperationCallback", retObjectRefreshCallback != null ? retObjectRefreshCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +332,7 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
 
     public void setRefreshCallback(DispatcherOperationCallback RefreshCallback) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RefreshCallback", RefreshCallback);
         } catch (JCNativeException jcne) {

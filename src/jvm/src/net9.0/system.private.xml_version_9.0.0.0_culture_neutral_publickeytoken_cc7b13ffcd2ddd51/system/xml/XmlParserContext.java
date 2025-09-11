@@ -203,9 +203,13 @@ public class XmlParserContext extends NetObject  {
     
     public java.lang.String getBaseURI() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseURI = null;
         try {
-            return (java.lang.String)classInstance.Get("BaseURI");
+            retObjectBaseURI = classInstance.Get("BaseURI");
+            return (java.lang.String)retObjectBaseURI;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBaseURI != null ? retObjectBaseURI.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +217,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setBaseURI(java.lang.String BaseURI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BaseURI", BaseURI);
         } catch (JCNativeException jcne) {
@@ -223,9 +227,13 @@ public class XmlParserContext extends NetObject  {
 
     public java.lang.String getDocTypeName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("DocTypeName");
+            retObjectDocTypeName = classInstance.Get("DocTypeName");
+            return (java.lang.String)retObjectDocTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDocTypeName != null ? retObjectDocTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +241,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setDocTypeName(java.lang.String DocTypeName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DocTypeName", DocTypeName);
         } catch (JCNativeException jcne) {
@@ -243,9 +251,13 @@ public class XmlParserContext extends NetObject  {
 
     public java.lang.String getInternalSubset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInternalSubset = null;
         try {
-            return (java.lang.String)classInstance.Get("InternalSubset");
+            retObjectInternalSubset = classInstance.Get("InternalSubset");
+            return (java.lang.String)retObjectInternalSubset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectInternalSubset != null ? retObjectInternalSubset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +265,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setInternalSubset(java.lang.String InternalSubset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InternalSubset", InternalSubset);
         } catch (JCNativeException jcne) {
@@ -263,9 +275,13 @@ public class XmlParserContext extends NetObject  {
 
     public java.lang.String getPublicId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPublicId = null;
         try {
-            return (java.lang.String)classInstance.Get("PublicId");
+            retObjectPublicId = classInstance.Get("PublicId");
+            return (java.lang.String)retObjectPublicId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPublicId != null ? retObjectPublicId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +289,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setPublicId(java.lang.String PublicId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PublicId", PublicId);
         } catch (JCNativeException jcne) {
@@ -283,9 +299,13 @@ public class XmlParserContext extends NetObject  {
 
     public java.lang.String getSystemId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSystemId = null;
         try {
-            return (java.lang.String)classInstance.Get("SystemId");
+            retObjectSystemId = classInstance.Get("SystemId");
+            return (java.lang.String)retObjectSystemId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSystemId != null ? retObjectSystemId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +313,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setSystemId(java.lang.String SystemId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SystemId", SystemId);
         } catch (JCNativeException jcne) {
@@ -303,9 +323,13 @@ public class XmlParserContext extends NetObject  {
 
     public java.lang.String getXmlLang() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlLang = null;
         try {
-            return (java.lang.String)classInstance.Get("XmlLang");
+            retObjectXmlLang = classInstance.Get("XmlLang");
+            return (java.lang.String)retObjectXmlLang;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXmlLang != null ? retObjectXmlLang.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,7 +337,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setXmlLang(java.lang.String XmlLang) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlLang", XmlLang);
         } catch (JCNativeException jcne) {
@@ -323,10 +347,14 @@ public class XmlParserContext extends NetObject  {
 
     public Encoding getEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encoding");
+            retObjectEncoding = classInstance.Get("Encoding");
+            JCObject val = (JCObject)retObjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncoding != null ? retObjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -334,7 +362,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setEncoding(Encoding Encoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encoding", Encoding == null ? null : Encoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -344,10 +372,14 @@ public class XmlParserContext extends NetObject  {
 
     public XmlNamespaceManager getNamespaceManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespaceManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NamespaceManager");
+            retObjectNamespaceManager = classInstance.Get("NamespaceManager");
+            JCObject val = (JCObject)retObjectNamespaceManager;
             return new XmlNamespaceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNamespaceManager != null ? retObjectNamespaceManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +387,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setNamespaceManager(XmlNamespaceManager NamespaceManager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NamespaceManager", NamespaceManager == null ? null : NamespaceManager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +397,14 @@ public class XmlParserContext extends NetObject  {
 
     public XmlNameTable getNameTable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNameTable = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NameTable");
+            retObjectNameTable = classInstance.Get("NameTable");
+            JCObject val = (JCObject)retObjectNameTable;
             return new XmlNameTable(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNameTable != null ? retObjectNameTable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +412,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setNameTable(XmlNameTable NameTable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NameTable", NameTable == null ? null : NameTable.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +422,14 @@ public class XmlParserContext extends NetObject  {
 
     public XmlSpace getXmlSpace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSpace = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlSpace");
+            retObjectXmlSpace = classInstance.Get("XmlSpace");
+            JCObject val = (JCObject)retObjectXmlSpace;
             return new XmlSpace(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlSpace != null ? retObjectXmlSpace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +437,7 @@ public class XmlParserContext extends NetObject  {
 
     public void setXmlSpace(XmlSpace XmlSpace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlSpace", XmlSpace == null ? null : XmlSpace.getJCOInstance());
         } catch (JCNativeException jcne) {

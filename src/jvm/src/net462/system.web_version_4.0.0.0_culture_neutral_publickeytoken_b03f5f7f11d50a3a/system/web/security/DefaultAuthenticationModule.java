@@ -163,7 +163,7 @@ public class DefaultAuthenticationModule extends NetObject  {
     
     public void Dispose() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -173,7 +173,7 @@ public class DefaultAuthenticationModule extends NetObject  {
 
     public void Init(HttpApplication app) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.PlatformNotSupportedException, system.security.SecurityException, system.NullReferenceException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Init", app == null ? null : app.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -192,7 +192,7 @@ public class DefaultAuthenticationModule extends NetObject  {
 
     public void addAuthenticate(DefaultAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {
@@ -202,7 +202,7 @@ public class DefaultAuthenticationModule extends NetObject  {
 
     public void removeAuthenticate(DefaultAuthenticationEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Authenticate", handler);
         } catch (JCNativeException jcne) {

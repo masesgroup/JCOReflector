@@ -171,9 +171,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
     
     public boolean getIsInvariantToDuplicates() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvariantToDuplicates = null;
         try {
-            return (boolean)classInstance.Get("IsInvariantToDuplicates");
+            retObjectIsInvariantToDuplicates = classInstance.Get("IsInvariantToDuplicates");
+            return (boolean)retObjectIsInvariantToDuplicates;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvariantToDuplicates != null ? retObjectIsInvariantToDuplicates.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setIsInvariantToDuplicates(boolean IsInvariantToDuplicates) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInvariantToDuplicates", IsInvariantToDuplicates);
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public boolean getIsInvariantToNulls() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvariantToNulls = null;
         try {
-            return (boolean)classInstance.Get("IsInvariantToNulls");
+            retObjectIsInvariantToNulls = classInstance.Get("IsInvariantToNulls");
+            return (boolean)retObjectIsInvariantToNulls;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvariantToNulls != null ? retObjectIsInvariantToNulls.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +209,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setIsInvariantToNulls(boolean IsInvariantToNulls) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInvariantToNulls", IsInvariantToNulls);
         } catch (JCNativeException jcne) {
@@ -211,9 +219,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public boolean getIsInvariantToOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsInvariantToOrder = null;
         try {
-            return (boolean)classInstance.Get("IsInvariantToOrder");
+            retObjectIsInvariantToOrder = classInstance.Get("IsInvariantToOrder");
+            return (boolean)retObjectIsInvariantToOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsInvariantToOrder != null ? retObjectIsInvariantToOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +233,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setIsInvariantToOrder(boolean IsInvariantToOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsInvariantToOrder", IsInvariantToOrder);
         } catch (JCNativeException jcne) {
@@ -231,9 +243,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public boolean getIsNullIfEmpty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullIfEmpty = null;
         try {
-            return (boolean)classInstance.Get("IsNullIfEmpty");
+            retObjectIsNullIfEmpty = classInstance.Get("IsNullIfEmpty");
+            return (boolean)retObjectIsNullIfEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullIfEmpty != null ? retObjectIsNullIfEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,7 +257,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setIsNullIfEmpty(boolean IsNullIfEmpty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNullIfEmpty", IsNullIfEmpty);
         } catch (JCNativeException jcne) {
@@ -251,9 +267,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public int getMaxByteSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxByteSize = null;
         try {
-            return (int)classInstance.Get("MaxByteSize");
+            retObjectMaxByteSize = classInstance.Get("MaxByteSize");
+            return (int)retObjectMaxByteSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxByteSize != null ? retObjectMaxByteSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setMaxByteSize(int MaxByteSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxByteSize", MaxByteSize);
         } catch (JCNativeException jcne) {
@@ -271,10 +291,14 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public Format getFormat() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormat = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Format");
+            retObjectFormat = classInstance.Get("Format");
+            JCObject val = (JCObject)retObjectFormat;
             return new Format(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormat != null ? retObjectFormat.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,9 +306,13 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +320,7 @@ public class SqlUserDefinedAggregateAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {

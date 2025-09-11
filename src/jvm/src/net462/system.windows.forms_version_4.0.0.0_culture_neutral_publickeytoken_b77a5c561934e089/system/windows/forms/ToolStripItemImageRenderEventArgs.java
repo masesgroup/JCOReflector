@@ -184,10 +184,14 @@ public class ToolStripItemImageRenderEventArgs extends ToolStripItemRenderEventA
     
     public Image getImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +199,14 @@ public class ToolStripItemImageRenderEventArgs extends ToolStripItemRenderEventA
 
     public Rectangle getImageRectangle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageRectangle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImageRectangle");
+            retObjectImageRectangle = classInstance.Get("ImageRectangle");
+            JCObject val = (JCObject)retObjectImageRectangle;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImageRectangle != null ? retObjectImageRectangle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

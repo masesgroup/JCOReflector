@@ -166,10 +166,12 @@ public class PathData extends NetObject  {
     
     public byte[] getTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypes = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Types");
+            retObjectTypes = classInstance.Get("Types");
+            JCObject resultingObjects = (JCObject)retObjectTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -178,6 +180,8 @@ public class PathData extends NetObject  {
 				resultingArray[indexTypes] = (byte)resultingArrayList.get(indexTypes);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectTypes != null ? retObjectTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class PathData extends NetObject  {
 
     public void setTypes(byte[] Types) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Types", Types);
         } catch (JCNativeException jcne) {
@@ -195,16 +199,20 @@ public class PathData extends NetObject  {
 
     public final PointF[] getPoints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPoints = null;
         try {
             ArrayList<PointF> resultingArrayList = new ArrayList<PointF>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Points");
+            retObjectPoints = classInstance.Get("Points");
+            JCObject resultingObjects = (JCObject)retObjectPoints;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PointF(resultingObject));
             }
             PointF[] resultingArray = new PointF[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPoints != null ? retObjectPoints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +220,7 @@ public class PathData extends NetObject  {
 
     public void setPoints(PointF[] Points) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Points", toObjectFromArray(Points));
         } catch (JCNativeException jcne) {

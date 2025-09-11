@@ -157,7 +157,7 @@ public class Trace extends NetObject  {
     
     public static void Assert(boolean condition, java.lang.String message, java.lang.String detailMessage) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition, message, detailMessage);
         } catch (JCNativeException jcne) {
@@ -167,7 +167,7 @@ public class Trace extends NetObject  {
 
     public static void Assert(boolean condition, java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition, message);
         } catch (JCNativeException jcne) {
@@ -177,7 +177,7 @@ public class Trace extends NetObject  {
 
     public static void Assert(boolean condition) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Assert", condition);
         } catch (JCNativeException jcne) {
@@ -187,7 +187,7 @@ public class Trace extends NetObject  {
 
     public static void Close() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -197,7 +197,7 @@ public class Trace extends NetObject  {
 
     public static void Fail(java.lang.String message, java.lang.String detailMessage) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Fail", message, detailMessage);
         } catch (JCNativeException jcne) {
@@ -207,7 +207,7 @@ public class Trace extends NetObject  {
 
     public static void Fail(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Fail", message);
         } catch (JCNativeException jcne) {
@@ -217,7 +217,7 @@ public class Trace extends NetObject  {
 
     public static void Flush() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -227,7 +227,7 @@ public class Trace extends NetObject  {
 
     public static void Indent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Indent");
         } catch (JCNativeException jcne) {
@@ -237,7 +237,7 @@ public class Trace extends NetObject  {
 
     public static void Refresh() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Refresh");
         } catch (JCNativeException jcne) {
@@ -247,7 +247,7 @@ public class Trace extends NetObject  {
 
     public static void TraceError(java.lang.String format, NetObject... args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceError", format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -257,7 +257,7 @@ public class Trace extends NetObject  {
 
     public static void TraceError(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceError", message);
         } catch (JCNativeException jcne) {
@@ -267,7 +267,7 @@ public class Trace extends NetObject  {
 
     public static void TraceInformation(java.lang.String format, NetObject... args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceInformation", format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -277,7 +277,7 @@ public class Trace extends NetObject  {
 
     public static void TraceInformation(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceInformation", message);
         } catch (JCNativeException jcne) {
@@ -287,7 +287,7 @@ public class Trace extends NetObject  {
 
     public static void TraceWarning(java.lang.String format, NetObject... args) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceWarning", format, toObjectFromArray(args));
         } catch (JCNativeException jcne) {
@@ -297,7 +297,7 @@ public class Trace extends NetObject  {
 
     public static void TraceWarning(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TraceWarning", message);
         } catch (JCNativeException jcne) {
@@ -307,7 +307,7 @@ public class Trace extends NetObject  {
 
     public static void Unindent() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Unindent");
         } catch (JCNativeException jcne) {
@@ -317,7 +317,7 @@ public class Trace extends NetObject  {
 
     public static void Write(NetObject value, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -327,7 +327,7 @@ public class Trace extends NetObject  {
 
     public static void Write(NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -337,7 +337,7 @@ public class Trace extends NetObject  {
 
     public static void Write(java.lang.String message, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", message, category);
         } catch (JCNativeException jcne) {
@@ -347,7 +347,7 @@ public class Trace extends NetObject  {
 
     public static void Write(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Write", message);
         } catch (JCNativeException jcne) {
@@ -357,7 +357,7 @@ public class Trace extends NetObject  {
 
     public static void WriteIf(boolean condition, NetObject value, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -367,7 +367,7 @@ public class Trace extends NetObject  {
 
     public static void WriteIf(boolean condition, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -377,7 +377,7 @@ public class Trace extends NetObject  {
 
     public static void WriteIf(boolean condition, java.lang.String message, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, message, category);
         } catch (JCNativeException jcne) {
@@ -387,7 +387,7 @@ public class Trace extends NetObject  {
 
     public static void WriteIf(boolean condition, java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteIf", condition, message);
         } catch (JCNativeException jcne) {
@@ -397,7 +397,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLine(NetObject value, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -407,7 +407,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLine(NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -417,7 +417,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLine(java.lang.String message, java.lang.String category) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", message, category);
         } catch (JCNativeException jcne) {
@@ -427,7 +427,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLine(java.lang.String message) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLine", message);
         } catch (JCNativeException jcne) {
@@ -437,7 +437,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLineIf(boolean condition, NetObject value, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, value == null ? null : value.getJCOInstance(), category);
         } catch (JCNativeException jcne) {
@@ -447,7 +447,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLineIf(boolean condition, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -457,7 +457,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLineIf(boolean condition, java.lang.String message, java.lang.String category) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, message, category);
         } catch (JCNativeException jcne) {
@@ -467,7 +467,7 @@ public class Trace extends NetObject  {
 
     public static void WriteLineIf(boolean condition, java.lang.String message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("WriteLineIf", condition, message);
         } catch (JCNativeException jcne) {
@@ -481,9 +481,13 @@ public class Trace extends NetObject  {
     
     public static boolean getAutoFlush() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAutoFlush = null;
         try {
-            return (boolean)classType.Get("AutoFlush");
+            retObjectAutoFlush = classType.Get("AutoFlush");
+            return (boolean)retObjectAutoFlush;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoFlush != null ? retObjectAutoFlush.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,7 +495,7 @@ public class Trace extends NetObject  {
 
     public static void setAutoFlush(boolean AutoFlush) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("AutoFlush", AutoFlush);
         } catch (JCNativeException jcne) {
@@ -501,9 +505,13 @@ public class Trace extends NetObject  {
 
     public static boolean getUseGlobalLock() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUseGlobalLock = null;
         try {
-            return (boolean)classType.Get("UseGlobalLock");
+            retObjectUseGlobalLock = classType.Get("UseGlobalLock");
+            return (boolean)retObjectUseGlobalLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseGlobalLock != null ? retObjectUseGlobalLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -511,7 +519,7 @@ public class Trace extends NetObject  {
 
     public static void setUseGlobalLock(boolean UseGlobalLock) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("UseGlobalLock", UseGlobalLock);
         } catch (JCNativeException jcne) {
@@ -521,9 +529,13 @@ public class Trace extends NetObject  {
 
     public static int getIndentLevel() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndentLevel = null;
         try {
-            return (int)classType.Get("IndentLevel");
+            retObjectIndentLevel = classType.Get("IndentLevel");
+            return (int)retObjectIndentLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIndentLevel != null ? retObjectIndentLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -531,7 +543,7 @@ public class Trace extends NetObject  {
 
     public static void setIndentLevel(int IndentLevel) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IndentLevel", IndentLevel);
         } catch (JCNativeException jcne) {
@@ -541,9 +553,13 @@ public class Trace extends NetObject  {
 
     public static int getIndentSize() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIndentSize = null;
         try {
-            return (int)classType.Get("IndentSize");
+            retObjectIndentSize = classType.Get("IndentSize");
+            return (int)retObjectIndentSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectIndentSize != null ? retObjectIndentSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,7 +567,7 @@ public class Trace extends NetObject  {
 
     public static void setIndentSize(int IndentSize) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Set("IndentSize", IndentSize);
         } catch (JCNativeException jcne) {
@@ -561,10 +577,14 @@ public class Trace extends NetObject  {
 
     public static CorrelationManager getCorrelationManager() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCorrelationManager = null;
         try {
-            JCObject val = (JCObject)classType.Get("CorrelationManager");
+            retObjectCorrelationManager = classType.Get("CorrelationManager");
+            JCObject val = (JCObject)retObjectCorrelationManager;
             return new CorrelationManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCorrelationManager != null ? retObjectCorrelationManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -572,10 +592,14 @@ public class Trace extends NetObject  {
 
     public static TraceListenerCollection getListeners() throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListeners = null;
         try {
-            JCObject val = (JCObject)classType.Get("Listeners");
+            retObjectListeners = classType.Get("Listeners");
+            JCObject val = (JCObject)retObjectListeners;
             return new TraceListenerCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListeners != null ? retObjectListeners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -172,10 +172,14 @@ public class DataGridViewEditingControlShowingEventArgs extends EventArgs  {
     
     public Control getControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Control");
+            retObjectControl = classInstance.Get("Control");
+            JCObject val = (JCObject)retObjectControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectControl != null ? retObjectControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,10 +187,14 @@ public class DataGridViewEditingControlShowingEventArgs extends EventArgs  {
 
     public DataGridViewCellStyle getCellStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellStyle");
+            retObjectCellStyle = classInstance.Get("CellStyle");
+            JCObject val = (JCObject)retObjectCellStyle;
             return new DataGridViewCellStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellStyle != null ? retObjectCellStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,7 +202,7 @@ public class DataGridViewEditingControlShowingEventArgs extends EventArgs  {
 
     public void setCellStyle(DataGridViewCellStyle CellStyle) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CellStyle", CellStyle == null ? null : CellStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

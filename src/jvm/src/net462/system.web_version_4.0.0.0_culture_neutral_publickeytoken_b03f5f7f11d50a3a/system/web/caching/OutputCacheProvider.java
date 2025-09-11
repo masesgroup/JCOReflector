@@ -155,10 +155,14 @@ public class OutputCacheProvider extends ProviderBase  {
     
     public NetObject Add(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            retObjectAdd = classInstance.Invoke("Add", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new NetObject(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class OutputCacheProvider extends ProviderBase  {
 
     public NetObject Get(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classInstance.Invoke("Get", key);
+            retObjectGet = classInstance.Invoke("Get", key);
+            JCObject objGet = (JCObject)retObjectGet;
             return new NetObject(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +185,7 @@ public class OutputCacheProvider extends ProviderBase  {
 
     public void Remove(java.lang.String key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Remove", key);
         } catch (JCNativeException jcne) {
@@ -187,7 +195,7 @@ public class OutputCacheProvider extends ProviderBase  {
 
     public void Set(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Set", key, entry == null ? null : entry.getJCOInstance(), utcExpiry == null ? null : utcExpiry.getJCOInstance());
         } catch (JCNativeException jcne) {

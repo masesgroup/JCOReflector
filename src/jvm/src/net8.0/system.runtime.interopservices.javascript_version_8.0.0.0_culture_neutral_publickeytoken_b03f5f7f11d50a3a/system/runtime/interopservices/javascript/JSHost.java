@@ -158,10 +158,14 @@ public class JSHost extends NetObject  {
     
     public static JSObject getDotnetInstance() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDotnetInstance = null;
         try {
-            JCObject val = (JCObject)classType.Get("DotnetInstance");
+            retObjectDotnetInstance = classType.Get("DotnetInstance");
+            JCObject val = (JCObject)retObjectDotnetInstance;
             return new JSObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDotnetInstance != null ? retObjectDotnetInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class JSHost extends NetObject  {
 
     public static JSObject getGlobalThis() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGlobalThis = null;
         try {
-            JCObject val = (JCObject)classType.Get("GlobalThis");
+            retObjectGlobalThis = classType.Get("GlobalThis");
+            JCObject val = (JCObject)retObjectGlobalThis;
             return new JSObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGlobalThis != null ? retObjectGlobalThis.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

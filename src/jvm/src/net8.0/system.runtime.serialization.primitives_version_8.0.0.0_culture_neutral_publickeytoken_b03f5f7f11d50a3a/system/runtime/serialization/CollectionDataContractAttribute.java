@@ -166,9 +166,13 @@ public class CollectionDataContractAttribute extends Attribute  {
     
     public boolean getIsItemNameSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsItemNameSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsItemNameSetExplicitly");
+            retObjectIsItemNameSetExplicitly = classInstance.Get("IsItemNameSetExplicitly");
+            return (boolean)retObjectIsItemNameSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsItemNameSetExplicitly != null ? retObjectIsItemNameSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +180,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsKeyNameSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsKeyNameSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsKeyNameSetExplicitly");
+            retObjectIsKeyNameSetExplicitly = classInstance.Get("IsKeyNameSetExplicitly");
+            return (boolean)retObjectIsKeyNameSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsKeyNameSetExplicitly != null ? retObjectIsKeyNameSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +194,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsNameSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNameSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsNameSetExplicitly");
+            retObjectIsNameSetExplicitly = classInstance.Get("IsNameSetExplicitly");
+            return (boolean)retObjectIsNameSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNameSetExplicitly != null ? retObjectIsNameSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +208,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsNamespaceSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNamespaceSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsNamespaceSetExplicitly");
+            retObjectIsNamespaceSetExplicitly = classInstance.Get("IsNamespaceSetExplicitly");
+            return (boolean)retObjectIsNamespaceSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNamespaceSetExplicitly != null ? retObjectIsNamespaceSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +222,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsReference() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReference = null;
         try {
-            return (boolean)classInstance.Get("IsReference");
+            retObjectIsReference = classInstance.Get("IsReference");
+            return (boolean)retObjectIsReference;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReference != null ? retObjectIsReference.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,7 +236,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setIsReference(boolean IsReference) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsReference", IsReference);
         } catch (JCNativeException jcne) {
@@ -226,9 +246,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsReferenceSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsReferenceSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsReferenceSetExplicitly");
+            retObjectIsReferenceSetExplicitly = classInstance.Get("IsReferenceSetExplicitly");
+            return (boolean)retObjectIsReferenceSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsReferenceSetExplicitly != null ? retObjectIsReferenceSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,9 +260,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public boolean getIsValueNameSetExplicitly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValueNameSetExplicitly = null;
         try {
-            return (boolean)classInstance.Get("IsValueNameSetExplicitly");
+            retObjectIsValueNameSetExplicitly = classInstance.Get("IsValueNameSetExplicitly");
+            return (boolean)retObjectIsValueNameSetExplicitly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValueNameSetExplicitly != null ? retObjectIsValueNameSetExplicitly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,9 +274,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public java.lang.String getItemName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemName = null;
         try {
-            return (java.lang.String)classInstance.Get("ItemName");
+            retObjectItemName = classInstance.Get("ItemName");
+            return (java.lang.String)retObjectItemName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectItemName != null ? retObjectItemName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,7 +288,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setItemName(java.lang.String ItemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemName", ItemName);
         } catch (JCNativeException jcne) {
@@ -266,9 +298,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public java.lang.String getKeyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyName = null;
         try {
-            return (java.lang.String)classInstance.Get("KeyName");
+            retObjectKeyName = classInstance.Get("KeyName");
+            return (java.lang.String)retObjectKeyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectKeyName != null ? retObjectKeyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +312,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setKeyName(java.lang.String KeyName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyName", KeyName);
         } catch (JCNativeException jcne) {
@@ -286,9 +322,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -296,7 +336,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setName(java.lang.String Name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Name", Name);
         } catch (JCNativeException jcne) {
@@ -306,9 +346,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public java.lang.String getNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("Namespace");
+            retObjectNamespace = classInstance.Get("Namespace");
+            return (java.lang.String)retObjectNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNamespace != null ? retObjectNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +360,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setNamespace(java.lang.String Namespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Namespace", Namespace);
         } catch (JCNativeException jcne) {
@@ -326,9 +370,13 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public java.lang.String getValueName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueName = null;
         try {
-            return (java.lang.String)classInstance.Get("ValueName");
+            retObjectValueName = classInstance.Get("ValueName");
+            return (java.lang.String)retObjectValueName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValueName != null ? retObjectValueName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,7 +384,7 @@ public class CollectionDataContractAttribute extends Attribute  {
 
     public void setValueName(java.lang.String ValueName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValueName", ValueName);
         } catch (JCNativeException jcne) {

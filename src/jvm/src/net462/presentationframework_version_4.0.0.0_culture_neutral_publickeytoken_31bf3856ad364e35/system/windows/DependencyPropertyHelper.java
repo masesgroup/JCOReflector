@@ -156,9 +156,13 @@ public class DependencyPropertyHelper extends NetObject  {
     
     public static boolean IsTemplatedValueDynamic(DependencyObject elementInTemplate, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTemplatedValueDynamic = null;
         try {
-            return (boolean)classType.Invoke("IsTemplatedValueDynamic", elementInTemplate == null ? null : elementInTemplate.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectIsTemplatedValueDynamic = classType.Invoke("IsTemplatedValueDynamic", elementInTemplate == null ? null : elementInTemplate.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            return (boolean)retObjectIsTemplatedValueDynamic;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsTemplatedValueDynamic != null ? retObjectIsTemplatedValueDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class DependencyPropertyHelper extends NetObject  {
 
     public static ValueSource GetValueSource(DependencyObject dependencyObject, DependencyProperty dependencyProperty) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValueSource = null;
         try {
-            JCObject objGetValueSource = (JCObject)classType.Invoke("GetValueSource", dependencyObject == null ? null : dependencyObject.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            retObjectGetValueSource = classType.Invoke("GetValueSource", dependencyObject == null ? null : dependencyObject.getJCOInstance(), dependencyProperty == null ? null : dependencyProperty.getJCOInstance());
+            JCObject objGetValueSource = (JCObject)retObjectGetValueSource;
             return new ValueSource(objGetValueSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValueSource != null ? retObjectGetValueSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

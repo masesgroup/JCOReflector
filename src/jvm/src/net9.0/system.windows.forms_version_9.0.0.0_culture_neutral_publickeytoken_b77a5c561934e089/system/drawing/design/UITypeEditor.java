@@ -169,9 +169,13 @@ public class UITypeEditor extends NetObject  {
     
     public boolean GetPaintValueSupported() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPaintValueSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported");
+            retObjectGetPaintValueSupported = classInstance.Invoke("GetPaintValueSupported");
+            return (boolean)retObjectGetPaintValueSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPaintValueSupported != null ? retObjectGetPaintValueSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class UITypeEditor extends NetObject  {
 
     public boolean GetPaintValueSupported(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPaintValueSupported = null;
         try {
-            return (boolean)classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
+            retObjectGetPaintValueSupported = classInstance.Invoke("GetPaintValueSupported", context == null ? null : context.getJCOInstance());
+            return (boolean)retObjectGetPaintValueSupported;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetPaintValueSupported != null ? retObjectGetPaintValueSupported.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,14 @@ public class UITypeEditor extends NetObject  {
 
     public UITypeEditorEditStyle GetEditStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditStyle = null;
         try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle");
+            retObjectGetEditStyle = classInstance.Invoke("GetEditStyle");
+            JCObject objGetEditStyle = (JCObject)retObjectGetEditStyle;
             return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditStyle != null ? retObjectGetEditStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class UITypeEditor extends NetObject  {
 
     public UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetEditStyle = null;
         try {
-            JCObject objGetEditStyle = (JCObject)classInstance.Invoke("GetEditStyle", context == null ? null : context.getJCOInstance());
+            retObjectGetEditStyle = classInstance.Invoke("GetEditStyle", context == null ? null : context.getJCOInstance());
+            JCObject objGetEditStyle = (JCObject)retObjectGetEditStyle;
             return new UITypeEditorEditStyle(objGetEditStyle);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetEditStyle != null ? retObjectGetEditStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class UITypeEditor extends NetObject  {
 
     public NetObject EditValue(ITypeDescriptorContext context, IServiceProvider provider, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditValue = null;
         try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectEditValue = classInstance.Invoke("EditValue", context == null ? null : context.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objEditValue = (JCObject)retObjectEditValue;
             return new NetObject(objEditValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditValue != null ? retObjectEditValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,10 +242,14 @@ public class UITypeEditor extends NetObject  {
 
     public NetObject EditValue(IServiceProvider provider, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEditValue = null;
         try {
-            JCObject objEditValue = (JCObject)classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectEditValue = classInstance.Invoke("EditValue", provider == null ? null : provider.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objEditValue = (JCObject)retObjectEditValue;
             return new NetObject(objEditValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEditValue != null ? retObjectEditValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +257,7 @@ public class UITypeEditor extends NetObject  {
 
     public void PaintValue(PaintValueEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintValue", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +267,7 @@ public class UITypeEditor extends NetObject  {
 
     public void PaintValue(NetObject value, Graphics canvas, Rectangle rectangle) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PaintValue", value == null ? null : value.getJCOInstance(), canvas == null ? null : canvas.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -257,9 +281,13 @@ public class UITypeEditor extends NetObject  {
     
     public boolean getIsDropDownResizable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDropDownResizable = null;
         try {
-            return (boolean)classInstance.Get("IsDropDownResizable");
+            retObjectIsDropDownResizable = classInstance.Get("IsDropDownResizable");
+            return (boolean)retObjectIsDropDownResizable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDropDownResizable != null ? retObjectIsDropDownResizable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

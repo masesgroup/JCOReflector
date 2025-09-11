@@ -160,9 +160,13 @@ public class GeneralTransform3DTo2D extends Freezable  {
     
     public boolean TryTransform(Point3D inPoint, JCORefOut<Point> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryTransform = null;
         try {
-            return (boolean)classInstance.Invoke("TryTransform", inPoint == null ? null : inPoint.getJCOInstance(), result.getJCRefOut());
+            retObjectTryTransform = classInstance.Invoke("TryTransform", inPoint == null ? null : inPoint.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryTransform;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryTransform != null ? retObjectTryTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,10 +174,14 @@ public class GeneralTransform3DTo2D extends Freezable  {
 
     public Point Transform(Point3D point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", point == null ? null : point.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new Point(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +189,14 @@ public class GeneralTransform3DTo2D extends Freezable  {
 
     public Rect TransformBounds(Rect3D rect3D) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransformBounds = null;
         try {
-            JCObject objTransformBounds = (JCObject)classInstance.Invoke("TransformBounds", rect3D == null ? null : rect3D.getJCOInstance());
+            retObjectTransformBounds = classInstance.Invoke("TransformBounds", rect3D == null ? null : rect3D.getJCOInstance());
+            JCObject objTransformBounds = (JCObject)retObjectTransformBounds;
             return new Rect(objTransformBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransformBounds != null ? retObjectTransformBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

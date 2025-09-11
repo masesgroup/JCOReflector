@@ -181,9 +181,13 @@ public class NodeLabelEditEventArgs extends EventArgs  {
     
     public boolean getCancelEdit() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelEdit = null;
         try {
-            return (boolean)classInstance.Get("CancelEdit");
+            retObjectCancelEdit = classInstance.Get("CancelEdit");
+            return (boolean)retObjectCancelEdit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCancelEdit != null ? retObjectCancelEdit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +195,7 @@ public class NodeLabelEditEventArgs extends EventArgs  {
 
     public void setCancelEdit(boolean CancelEdit) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelEdit", CancelEdit);
         } catch (JCNativeException jcne) {
@@ -201,9 +205,13 @@ public class NodeLabelEditEventArgs extends EventArgs  {
 
     public java.lang.String getLabel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            return (java.lang.String)classInstance.Get("Label");
+            retObjectLabel = classInstance.Get("Label");
+            return (java.lang.String)retObjectLabel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +219,14 @@ public class NodeLabelEditEventArgs extends EventArgs  {
 
     public TreeNode getNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Node");
+            retObjectNode = classInstance.Get("Node");
+            JCObject val = (JCObject)retObjectNode;
             return new TreeNode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNode != null ? retObjectNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

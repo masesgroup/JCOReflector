@@ -142,9 +142,13 @@ public class IExtenderProviderImplementation extends NetObject implements IExten
     
     public boolean CanExtend(NetObject extendee) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanExtend = null;
         try {
-            return (boolean)classInstance.Invoke("CanExtend", extendee == null ? null : extendee.getJCOInstance());
+            retObjectCanExtend = classInstance.Invoke("CanExtend", extendee == null ? null : extendee.getJCOInstance());
+            return (boolean)retObjectCanExtend;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCanExtend != null ? retObjectCanExtend.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

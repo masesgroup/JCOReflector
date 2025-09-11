@@ -143,10 +143,14 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
     
     public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadItemValue = null;
         try {
-            JCObject objReadItemValue = (JCObject)classInstance.Invoke("ReadItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            retObjectReadItemValue = classInstance.Invoke("ReadItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
+            JCObject objReadItemValue = (JCObject)retObjectReadItemValue;
             return new NetObject(objReadItemValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadItemValue != null ? retObjectReadItemValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,7 +158,7 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     public void Clear() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
         } catch (JCNativeException jcne) {
@@ -164,7 +168,7 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -174,7 +178,7 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     public void ClearValue(DependencyProperty dp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ClearValue", dp == null ? null : dp.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -184,7 +188,7 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
 
     public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StoreItemValue", item == null ? null : item.getJCOInstance(), dp == null ? null : dp.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

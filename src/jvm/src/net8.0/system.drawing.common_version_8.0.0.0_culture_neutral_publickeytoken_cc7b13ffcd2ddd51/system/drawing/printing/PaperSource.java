@@ -166,9 +166,13 @@ public class PaperSource extends NetObject  {
     
     public int getRawKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawKind = null;
         try {
-            return (int)classInstance.Get("RawKind");
+            retObjectRawKind = classInstance.Get("RawKind");
+            return (int)retObjectRawKind;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRawKind != null ? retObjectRawKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class PaperSource extends NetObject  {
 
     public void setRawKind(int RawKind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RawKind", RawKind);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class PaperSource extends NetObject  {
 
     public PaperSourceKind getKind() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKind = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Kind");
+            retObjectKind = classInstance.Get("Kind");
+            JCObject val = (JCObject)retObjectKind;
             return new PaperSourceKind(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKind != null ? retObjectKind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +205,13 @@ public class PaperSource extends NetObject  {
 
     public java.lang.String getSourceName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSourceName = null;
         try {
-            return (java.lang.String)classInstance.Get("SourceName");
+            retObjectSourceName = classInstance.Get("SourceName");
+            return (java.lang.String)retObjectSourceName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSourceName != null ? retObjectSourceName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +219,7 @@ public class PaperSource extends NetObject  {
 
     public void setSourceName(java.lang.String SourceName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SourceName", SourceName);
         } catch (JCNativeException jcne) {

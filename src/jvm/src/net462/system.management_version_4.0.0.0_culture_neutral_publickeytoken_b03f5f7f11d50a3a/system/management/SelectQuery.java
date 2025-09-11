@@ -203,10 +203,14 @@ public class SelectQuery extends WqlObjectQuery  {
     
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +222,13 @@ public class SelectQuery extends WqlObjectQuery  {
     
     public boolean getIsSchemaQuery() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSchemaQuery = null;
         try {
-            return (boolean)classInstance.Get("IsSchemaQuery");
+            retObjectIsSchemaQuery = classInstance.Get("IsSchemaQuery");
+            return (boolean)retObjectIsSchemaQuery;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSchemaQuery != null ? retObjectIsSchemaQuery.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +236,7 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public void setIsSchemaQuery(boolean IsSchemaQuery) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSchemaQuery", IsSchemaQuery);
         } catch (JCNativeException jcne) {
@@ -238,10 +246,14 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public StringCollection getSelectedProperties() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectedProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SelectedProperties");
+            retObjectSelectedProperties = classInstance.Get("SelectedProperties");
+            JCObject val = (JCObject)retObjectSelectedProperties;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSelectedProperties != null ? retObjectSelectedProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +261,7 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public void setSelectedProperties(StringCollection SelectedProperties) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectedProperties", SelectedProperties == null ? null : SelectedProperties.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,9 +271,13 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public java.lang.String getClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("ClassName");
+            retObjectClassName = classInstance.Get("ClassName");
+            return (java.lang.String)retObjectClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClassName != null ? retObjectClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,7 +285,7 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public void setClassName(java.lang.String ClassName) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClassName", ClassName);
         } catch (JCNativeException jcne) {
@@ -279,9 +295,13 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            return (java.lang.String)classInstance.Get("Condition");
+            retObjectCondition = classInstance.Get("Condition");
+            return (java.lang.String)retObjectCondition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,7 +309,7 @@ public class SelectQuery extends WqlObjectQuery  {
 
     public void setCondition(java.lang.String Condition) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition);
         } catch (JCNativeException jcne) {

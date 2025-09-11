@@ -159,10 +159,14 @@ public class ImportScope extends ValueType  {
     
     public ImportDefinitionCollection GetImports() throws Throwable, system.BadImageFormatException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetImports = null;
         try {
-            JCObject objGetImports = (JCObject)classInstance.Invoke("GetImports");
+            retObjectGetImports = classInstance.Invoke("GetImports");
+            JCObject objGetImports = (JCObject)retObjectGetImports;
             return new ImportDefinitionCollection(objGetImports);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetImports != null ? retObjectGetImports.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class ImportScope extends ValueType  {
     
     public BlobHandle getImportsBlob() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImportsBlob = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImportsBlob");
+            retObjectImportsBlob = classInstance.Get("ImportsBlob");
+            JCObject val = (JCObject)retObjectImportsBlob;
             return new BlobHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImportsBlob != null ? retObjectImportsBlob.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class ImportScope extends ValueType  {
 
     public ImportScopeHandle getParent() throws Throwable, system.ArgumentException, system.BadImageFormatException, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new ImportScopeHandle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,9 +165,13 @@ public class ExceptionPersistenceExtension extends NetObject  {
     
     public boolean getPersistExceptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPersistExceptions = null;
         try {
-            return (boolean)classInstance.Get("PersistExceptions");
+            retObjectPersistExceptions = classInstance.Get("PersistExceptions");
+            return (boolean)retObjectPersistExceptions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPersistExceptions != null ? retObjectPersistExceptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class ExceptionPersistenceExtension extends NetObject  {
 
     public void setPersistExceptions(boolean PersistExceptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PersistExceptions", PersistExceptions);
         } catch (JCNativeException jcne) {

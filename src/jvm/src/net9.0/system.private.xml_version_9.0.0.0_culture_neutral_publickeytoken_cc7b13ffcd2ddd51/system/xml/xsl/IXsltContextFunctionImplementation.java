@@ -145,10 +145,14 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
     
     public NetObject Invoke(XsltContext xsltContext, NetObject[] args, XPathNavigator docContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", xsltContext == null ? null : xsltContext.getJCOInstance(), toObjectFromArray(args), docContext == null ? null : docContext.getJCOInstance());
+            retObjectInvoke = classInstance.Invoke("Invoke", xsltContext == null ? null : xsltContext.getJCOInstance(), toObjectFromArray(args), docContext == null ? null : docContext.getJCOInstance());
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new NetObject(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,9 +164,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
     
     public int getMaxargs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxargs = null;
         try {
-            return (int)classInstance.Get("Maxargs");
+            retObjectMaxargs = classInstance.Get("Maxargs");
+            return (int)retObjectMaxargs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxargs != null ? retObjectMaxargs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +178,13 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
 
     public int getMinargs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinargs = null;
         try {
-            return (int)classInstance.Get("Minargs");
+            retObjectMinargs = classInstance.Get("Minargs");
+            return (int)retObjectMinargs;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinargs != null ? retObjectMinargs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +192,14 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
 
     public XPathResultType getReturnType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReturnType");
+            retObjectReturnType = classInstance.Get("ReturnType");
+            JCObject val = (JCObject)retObjectReturnType;
             return new XPathResultType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturnType != null ? retObjectReturnType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,16 +207,20 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
 
     public final XPathResultType[] getArgTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectArgTypes = null;
         try {
             ArrayList<XPathResultType> resultingArrayList = new ArrayList<XPathResultType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("ArgTypes");
+            retObjectArgTypes = classInstance.Get("ArgTypes");
+            JCObject resultingObjects = (JCObject)retObjectArgTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XPathResultType(resultingObject));
             }
             XPathResultType[] resultingArray = new XPathResultType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArgTypes != null ? retObjectArgTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

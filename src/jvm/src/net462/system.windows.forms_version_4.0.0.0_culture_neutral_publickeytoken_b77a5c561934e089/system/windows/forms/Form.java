@@ -193,9 +193,13 @@ public class Form extends ContainerControl  {
     
     public boolean ValidateChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.io.IOException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateChildren = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateChildren");
+            retObjectValidateChildren = classInstance.Invoke("ValidateChildren");
+            return (boolean)retObjectValidateChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateChildren != null ? retObjectValidateChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class Form extends ContainerControl  {
 
     public boolean ValidateChildren(ValidationConstraints validationConstraints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateChildren = null;
         try {
-            return (boolean)classInstance.Invoke("ValidateChildren", validationConstraints == null ? null : validationConstraints.getJCOInstance());
+            retObjectValidateChildren = classInstance.Invoke("ValidateChildren", validationConstraints == null ? null : validationConstraints.getJCOInstance());
+            return (boolean)retObjectValidateChildren;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectValidateChildren != null ? retObjectValidateChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +221,14 @@ public class Form extends ContainerControl  {
 
     public static SizeF GetAutoScaleSize(Font font) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetAutoScaleSize = null;
         try {
-            JCObject objGetAutoScaleSize = (JCObject)classType.Invoke("GetAutoScaleSize", font == null ? null : font.getJCOInstance());
+            retObjectGetAutoScaleSize = classType.Invoke("GetAutoScaleSize", font == null ? null : font.getJCOInstance());
+            JCObject objGetAutoScaleSize = (JCObject)retObjectGetAutoScaleSize;
             return new SizeF(objGetAutoScaleSize);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAutoScaleSize != null ? retObjectGetAutoScaleSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +236,14 @@ public class Form extends ContainerControl  {
 
     public DialogResult ShowDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog");
+            retObjectShowDialog = classInstance.Invoke("ShowDialog");
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new DialogResult(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class Form extends ContainerControl  {
 
     public DialogResult ShowDialog(IWin32Window owner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.componentmodel.InvalidAsynchronousStateException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance());
+            retObjectShowDialog = classInstance.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance());
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new DialogResult(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class Form extends ContainerControl  {
 
     public void Activate() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Activate");
         } catch (JCNativeException jcne) {
@@ -256,7 +276,7 @@ public class Form extends ContainerControl  {
 
     public void AddOwnedForm(Form ownedForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddOwnedForm", ownedForm == null ? null : ownedForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -266,7 +286,7 @@ public class Form extends ContainerControl  {
 
     public void Close() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -276,7 +296,7 @@ public class Form extends ContainerControl  {
 
     public void LayoutMdi(MdiLayout value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LayoutMdi", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,7 +306,7 @@ public class Form extends ContainerControl  {
 
     public void RemoveOwnedForm(Form ownedForm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveOwnedForm", ownedForm == null ? null : ownedForm.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -296,7 +316,7 @@ public class Form extends ContainerControl  {
 
     public void SetDesktopBounds(int x, int y, int width, int height) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDesktopBounds", x, y, width, height);
         } catch (JCNativeException jcne) {
@@ -306,7 +326,7 @@ public class Form extends ContainerControl  {
 
     public void SetDesktopLocation(int x, int y) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetDesktopLocation", x, y);
         } catch (JCNativeException jcne) {
@@ -316,7 +336,7 @@ public class Form extends ContainerControl  {
 
     public void Show(IWin32Window owner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Show", owner == null ? null : owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,9 +350,13 @@ public class Form extends ContainerControl  {
     
     public boolean getAllowTransparency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowTransparency = null;
         try {
-            return (boolean)classInstance.Get("AllowTransparency");
+            retObjectAllowTransparency = classInstance.Get("AllowTransparency");
+            return (boolean)retObjectAllowTransparency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowTransparency != null ? retObjectAllowTransparency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +364,7 @@ public class Form extends ContainerControl  {
 
     public void setAllowTransparency(boolean AllowTransparency) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowTransparency", AllowTransparency);
         } catch (JCNativeException jcne) {
@@ -350,9 +374,13 @@ public class Form extends ContainerControl  {
 
     public boolean getAutoScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScale = null;
         try {
-            return (boolean)classInstance.Get("AutoScale");
+            retObjectAutoScale = classInstance.Get("AutoScale");
+            return (boolean)retObjectAutoScale;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAutoScale != null ? retObjectAutoScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +388,7 @@ public class Form extends ContainerControl  {
 
     public void setAutoScale(boolean AutoScale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScale", AutoScale);
         } catch (JCNativeException jcne) {
@@ -370,9 +398,13 @@ public class Form extends ContainerControl  {
 
     public boolean getControlBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectControlBox = null;
         try {
-            return (boolean)classInstance.Get("ControlBox");
+            retObjectControlBox = classInstance.Get("ControlBox");
+            return (boolean)retObjectControlBox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectControlBox != null ? retObjectControlBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +412,7 @@ public class Form extends ContainerControl  {
 
     public void setControlBox(boolean ControlBox) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ControlBox", ControlBox);
         } catch (JCNativeException jcne) {
@@ -390,9 +422,13 @@ public class Form extends ContainerControl  {
 
     public boolean getHelpButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpButton = null;
         try {
-            return (boolean)classInstance.Get("HelpButton");
+            retObjectHelpButton = classInstance.Get("HelpButton");
+            return (boolean)retObjectHelpButton;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHelpButton != null ? retObjectHelpButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +436,7 @@ public class Form extends ContainerControl  {
 
     public void setHelpButton(boolean HelpButton) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpButton", HelpButton);
         } catch (JCNativeException jcne) {
@@ -410,9 +446,13 @@ public class Form extends ContainerControl  {
 
     public boolean getIsMdiChild() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMdiChild = null;
         try {
-            return (boolean)classInstance.Get("IsMdiChild");
+            retObjectIsMdiChild = classInstance.Get("IsMdiChild");
+            return (boolean)retObjectIsMdiChild;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMdiChild != null ? retObjectIsMdiChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,9 +460,13 @@ public class Form extends ContainerControl  {
 
     public boolean getIsMdiContainer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsMdiContainer = null;
         try {
-            return (boolean)classInstance.Get("IsMdiContainer");
+            retObjectIsMdiContainer = classInstance.Get("IsMdiContainer");
+            return (boolean)retObjectIsMdiContainer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsMdiContainer != null ? retObjectIsMdiContainer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -430,7 +474,7 @@ public class Form extends ContainerControl  {
 
     public void setIsMdiContainer(boolean IsMdiContainer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsMdiContainer", IsMdiContainer);
         } catch (JCNativeException jcne) {
@@ -440,9 +484,13 @@ public class Form extends ContainerControl  {
 
     public boolean getIsRestrictedWindow() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRestrictedWindow = null;
         try {
-            return (boolean)classInstance.Get("IsRestrictedWindow");
+            retObjectIsRestrictedWindow = classInstance.Get("IsRestrictedWindow");
+            return (boolean)retObjectIsRestrictedWindow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRestrictedWindow != null ? retObjectIsRestrictedWindow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -450,9 +498,13 @@ public class Form extends ContainerControl  {
 
     public boolean getKeyPreview() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyPreview = null;
         try {
-            return (boolean)classInstance.Get("KeyPreview");
+            retObjectKeyPreview = classInstance.Get("KeyPreview");
+            return (boolean)retObjectKeyPreview;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeyPreview != null ? retObjectKeyPreview.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +512,7 @@ public class Form extends ContainerControl  {
 
     public void setKeyPreview(boolean KeyPreview) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyPreview", KeyPreview);
         } catch (JCNativeException jcne) {
@@ -470,9 +522,13 @@ public class Form extends ContainerControl  {
 
     public boolean getMaximizeBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaximizeBox = null;
         try {
-            return (boolean)classInstance.Get("MaximizeBox");
+            retObjectMaximizeBox = classInstance.Get("MaximizeBox");
+            return (boolean)retObjectMaximizeBox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMaximizeBox != null ? retObjectMaximizeBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +536,7 @@ public class Form extends ContainerControl  {
 
     public void setMaximizeBox(boolean MaximizeBox) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaximizeBox", MaximizeBox);
         } catch (JCNativeException jcne) {
@@ -490,9 +546,13 @@ public class Form extends ContainerControl  {
 
     public boolean getMinimizeBox() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimizeBox = null;
         try {
-            return (boolean)classInstance.Get("MinimizeBox");
+            retObjectMinimizeBox = classInstance.Get("MinimizeBox");
+            return (boolean)retObjectMinimizeBox;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMinimizeBox != null ? retObjectMinimizeBox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +560,7 @@ public class Form extends ContainerControl  {
 
     public void setMinimizeBox(boolean MinimizeBox) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MinimizeBox", MinimizeBox);
         } catch (JCNativeException jcne) {
@@ -510,9 +570,13 @@ public class Form extends ContainerControl  {
 
     public boolean getModal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectModal = null;
         try {
-            return (boolean)classInstance.Get("Modal");
+            retObjectModal = classInstance.Get("Modal");
+            return (boolean)retObjectModal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectModal != null ? retObjectModal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,9 +584,13 @@ public class Form extends ContainerControl  {
 
     public boolean getRightToLeftLayout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightToLeftLayout = null;
         try {
-            return (boolean)classInstance.Get("RightToLeftLayout");
+            retObjectRightToLeftLayout = classInstance.Get("RightToLeftLayout");
+            return (boolean)retObjectRightToLeftLayout;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRightToLeftLayout != null ? retObjectRightToLeftLayout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -530,7 +598,7 @@ public class Form extends ContainerControl  {
 
     public void setRightToLeftLayout(boolean RightToLeftLayout) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RightToLeftLayout", RightToLeftLayout);
         } catch (JCNativeException jcne) {
@@ -540,9 +608,13 @@ public class Form extends ContainerControl  {
 
     public boolean getShowIcon() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowIcon = null;
         try {
-            return (boolean)classInstance.Get("ShowIcon");
+            retObjectShowIcon = classInstance.Get("ShowIcon");
+            return (boolean)retObjectShowIcon;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowIcon != null ? retObjectShowIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,7 +622,7 @@ public class Form extends ContainerControl  {
 
     public void setShowIcon(boolean ShowIcon) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NullReferenceException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowIcon", ShowIcon);
         } catch (JCNativeException jcne) {
@@ -560,9 +632,13 @@ public class Form extends ContainerControl  {
 
     public boolean getShowInTaskbar() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowInTaskbar = null;
         try {
-            return (boolean)classInstance.Get("ShowInTaskbar");
+            retObjectShowInTaskbar = classInstance.Get("ShowInTaskbar");
+            return (boolean)retObjectShowInTaskbar;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowInTaskbar != null ? retObjectShowInTaskbar.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -570,7 +646,7 @@ public class Form extends ContainerControl  {
 
     public void setShowInTaskbar(boolean ShowInTaskbar) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowInTaskbar", ShowInTaskbar);
         } catch (JCNativeException jcne) {
@@ -580,9 +656,13 @@ public class Form extends ContainerControl  {
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,7 +670,7 @@ public class Form extends ContainerControl  {
 
     public void setTabStop(boolean TabStop) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -600,9 +680,13 @@ public class Form extends ContainerControl  {
 
     public boolean getTopLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopLevel = null;
         try {
-            return (boolean)classInstance.Get("TopLevel");
+            retObjectTopLevel = classInstance.Get("TopLevel");
+            return (boolean)retObjectTopLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTopLevel != null ? retObjectTopLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,7 +694,7 @@ public class Form extends ContainerControl  {
 
     public void setTopLevel(boolean TopLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopLevel", TopLevel);
         } catch (JCNativeException jcne) {
@@ -620,9 +704,13 @@ public class Form extends ContainerControl  {
 
     public boolean getTopMost() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTopMost = null;
         try {
-            return (boolean)classInstance.Get("TopMost");
+            retObjectTopMost = classInstance.Get("TopMost");
+            return (boolean)retObjectTopMost;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTopMost != null ? retObjectTopMost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -630,7 +718,7 @@ public class Form extends ContainerControl  {
 
     public void setTopMost(boolean TopMost) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TopMost", TopMost);
         } catch (JCNativeException jcne) {
@@ -640,9 +728,13 @@ public class Form extends ContainerControl  {
 
     public double getOpacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacity = null;
         try {
-            return (double)classInstance.Get("Opacity");
+            retObjectOpacity = classInstance.Get("Opacity");
+            return (double)retObjectOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOpacity != null ? retObjectOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -650,7 +742,7 @@ public class Form extends ContainerControl  {
 
     public void setOpacity(double Opacity) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Opacity", Opacity);
         } catch (JCNativeException jcne) {
@@ -660,9 +752,13 @@ public class Form extends ContainerControl  {
 
     public int getTabIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (int)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (int)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,7 +766,7 @@ public class Form extends ContainerControl  {
 
     public void setTabIndex(int TabIndex) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -680,10 +776,14 @@ public class Form extends ContainerControl  {
 
     public Color getTransparencyKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransparencyKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransparencyKey");
+            retObjectTransparencyKey = classInstance.Get("TransparencyKey");
+            JCObject val = (JCObject)retObjectTransparencyKey;
             return new Color(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransparencyKey != null ? retObjectTransparencyKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -691,7 +791,7 @@ public class Form extends ContainerControl  {
 
     public void setTransparencyKey(Color TransparencyKey) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransparencyKey", TransparencyKey == null ? null : TransparencyKey.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -701,10 +801,14 @@ public class Form extends ContainerControl  {
 
     public Icon getIcon() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIcon = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Icon");
+            retObjectIcon = classInstance.Get("Icon");
+            JCObject val = (JCObject)retObjectIcon;
             return new Icon(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIcon != null ? retObjectIcon.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,7 +816,7 @@ public class Form extends ContainerControl  {
 
     public void setIcon(Icon Icon) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Icon", Icon == null ? null : Icon.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -722,10 +826,14 @@ public class Form extends ContainerControl  {
 
     public Point getDesktopLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesktopLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesktopLocation");
+            retObjectDesktopLocation = classInstance.Get("DesktopLocation");
+            JCObject val = (JCObject)retObjectDesktopLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopLocation != null ? retObjectDesktopLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -733,7 +841,7 @@ public class Form extends ContainerControl  {
 
     public void setDesktopLocation(Point DesktopLocation) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesktopLocation", DesktopLocation == null ? null : DesktopLocation.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -743,10 +851,14 @@ public class Form extends ContainerControl  {
 
     public Point getLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Location");
+            retObjectLocation = classInstance.Get("Location");
+            JCObject val = (JCObject)retObjectLocation;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLocation != null ? retObjectLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -754,7 +866,7 @@ public class Form extends ContainerControl  {
 
     public void setLocation(Point Location) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Location", Location == null ? null : Location.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -764,10 +876,14 @@ public class Form extends ContainerControl  {
 
     public Rectangle getDesktopBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDesktopBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DesktopBounds");
+            retObjectDesktopBounds = classInstance.Get("DesktopBounds");
+            JCObject val = (JCObject)retObjectDesktopBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDesktopBounds != null ? retObjectDesktopBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -775,7 +891,7 @@ public class Form extends ContainerControl  {
 
     public void setDesktopBounds(Rectangle DesktopBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DesktopBounds", DesktopBounds == null ? null : DesktopBounds.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -785,10 +901,14 @@ public class Form extends ContainerControl  {
 
     public Rectangle getRestoreBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreBounds");
+            retObjectRestoreBounds = classInstance.Get("RestoreBounds");
+            JCObject val = (JCObject)retObjectRestoreBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreBounds != null ? retObjectRestoreBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -796,10 +916,14 @@ public class Form extends ContainerControl  {
 
     public Size getAutoScaleBaseSize() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoScaleBaseSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoScaleBaseSize");
+            retObjectAutoScaleBaseSize = classInstance.Get("AutoScaleBaseSize");
+            JCObject val = (JCObject)retObjectAutoScaleBaseSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoScaleBaseSize != null ? retObjectAutoScaleBaseSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -807,7 +931,7 @@ public class Form extends ContainerControl  {
 
     public void setAutoScaleBaseSize(Size AutoScaleBaseSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoScaleBaseSize", AutoScaleBaseSize == null ? null : AutoScaleBaseSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -817,10 +941,14 @@ public class Form extends ContainerControl  {
 
     public Size getClientSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientSize");
+            retObjectClientSize = classInstance.Get("ClientSize");
+            JCObject val = (JCObject)retObjectClientSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientSize != null ? retObjectClientSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -828,7 +956,7 @@ public class Form extends ContainerControl  {
 
     public void setClientSize(Size ClientSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientSize", ClientSize == null ? null : ClientSize.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -838,10 +966,14 @@ public class Form extends ContainerControl  {
 
     public Size getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            JCObject val = (JCObject)retObjectSize;
             return new Size(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -849,7 +981,7 @@ public class Form extends ContainerControl  {
 
     public void setSize(Size Size) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size == null ? null : Size.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -859,10 +991,14 @@ public class Form extends ContainerControl  {
 
     public AutoSizeMode getAutoSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAutoSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AutoSizeMode");
+            retObjectAutoSizeMode = classInstance.Get("AutoSizeMode");
+            JCObject val = (JCObject)retObjectAutoSizeMode;
             return new AutoSizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAutoSizeMode != null ? retObjectAutoSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -870,7 +1006,7 @@ public class Form extends ContainerControl  {
 
     public void setAutoSizeMode(AutoSizeMode AutoSizeMode) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AutoSizeMode", AutoSizeMode == null ? null : AutoSizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -880,10 +1016,14 @@ public class Form extends ContainerControl  {
 
     public DialogResult getDialogResult() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDialogResult = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DialogResult");
+            retObjectDialogResult = classInstance.Get("DialogResult");
+            JCObject val = (JCObject)retObjectDialogResult;
             return new DialogResult(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDialogResult != null ? retObjectDialogResult.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -891,7 +1031,7 @@ public class Form extends ContainerControl  {
 
     public void setDialogResult(DialogResult DialogResult) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DialogResult", DialogResult == null ? null : DialogResult.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -901,10 +1041,14 @@ public class Form extends ContainerControl  {
 
     public static Form getActiveForm() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectActiveForm = null;
         try {
-            JCObject val = (JCObject)classType.Get("ActiveForm");
+            retObjectActiveForm = classType.Get("ActiveForm");
+            JCObject val = (JCObject)retObjectActiveForm;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveForm != null ? retObjectActiveForm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -912,10 +1056,14 @@ public class Form extends ContainerControl  {
 
     public Form getActiveMdiChild() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActiveMdiChild = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActiveMdiChild");
+            retObjectActiveMdiChild = classInstance.Get("ActiveMdiChild");
+            JCObject val = (JCObject)retObjectActiveMdiChild;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActiveMdiChild != null ? retObjectActiveMdiChild.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -923,10 +1071,14 @@ public class Form extends ContainerControl  {
 
     public Form getMdiParent() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMdiParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MdiParent");
+            retObjectMdiParent = classInstance.Get("MdiParent");
+            JCObject val = (JCObject)retObjectMdiParent;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMdiParent != null ? retObjectMdiParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -934,7 +1086,7 @@ public class Form extends ContainerControl  {
 
     public void setMdiParent(Form MdiParent) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.runtime.interopservices.ExternalException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MdiParent", MdiParent == null ? null : MdiParent.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -944,10 +1096,14 @@ public class Form extends ContainerControl  {
 
     public Form getOwner() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwner = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Owner");
+            retObjectOwner = classInstance.Get("Owner");
+            JCObject val = (JCObject)retObjectOwner;
             return new Form(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwner != null ? retObjectOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -955,7 +1111,7 @@ public class Form extends ContainerControl  {
 
     public void setOwner(Form Owner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Owner", Owner == null ? null : Owner.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -965,16 +1121,20 @@ public class Form extends ContainerControl  {
 
     public final Form[] getMdiChildren() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMdiChildren = null;
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MdiChildren");
+            retObjectMdiChildren = classInstance.Get("MdiChildren");
+            JCObject resultingObjects = (JCObject)retObjectMdiChildren;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMdiChildren != null ? retObjectMdiChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -982,16 +1142,20 @@ public class Form extends ContainerControl  {
 
     public final Form[] getOwnedForms() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnedForms = null;
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("OwnedForms");
+            retObjectOwnedForms = classInstance.Get("OwnedForms");
+            JCObject resultingObjects = (JCObject)retObjectOwnedForms;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOwnedForms != null ? retObjectOwnedForms.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -999,10 +1163,14 @@ public class Form extends ContainerControl  {
 
     public FormBorderStyle getFormBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FormBorderStyle");
+            retObjectFormBorderStyle = classInstance.Get("FormBorderStyle");
+            JCObject val = (JCObject)retObjectFormBorderStyle;
             return new FormBorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFormBorderStyle != null ? retObjectFormBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1010,7 +1178,7 @@ public class Form extends ContainerControl  {
 
     public void setFormBorderStyle(FormBorderStyle FormBorderStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FormBorderStyle", FormBorderStyle == null ? null : FormBorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1020,10 +1188,14 @@ public class Form extends ContainerControl  {
 
     public FormStartPosition getStartPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStartPosition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StartPosition");
+            retObjectStartPosition = classInstance.Get("StartPosition");
+            JCObject val = (JCObject)retObjectStartPosition;
             return new FormStartPosition(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStartPosition != null ? retObjectStartPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1031,7 +1203,7 @@ public class Form extends ContainerControl  {
 
     public void setStartPosition(FormStartPosition StartPosition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("StartPosition", StartPosition == null ? null : StartPosition.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1041,10 +1213,14 @@ public class Form extends ContainerControl  {
 
     public FormWindowState getWindowState() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowState = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WindowState");
+            retObjectWindowState = classInstance.Get("WindowState");
+            JCObject val = (JCObject)retObjectWindowState;
             return new FormWindowState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWindowState != null ? retObjectWindowState.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1052,7 +1228,7 @@ public class Form extends ContainerControl  {
 
     public void setWindowState(FormWindowState WindowState) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowState", WindowState == null ? null : WindowState.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1062,10 +1238,14 @@ public class Form extends ContainerControl  {
 
     public IButtonControl getAcceptButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcceptButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AcceptButton");
+            retObjectAcceptButton = classInstance.Get("AcceptButton");
+            JCObject val = (JCObject)retObjectAcceptButton;
             return new IButtonControlImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAcceptButton != null ? retObjectAcceptButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1073,7 +1253,7 @@ public class Form extends ContainerControl  {
 
     public void setAcceptButton(IButtonControl AcceptButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcceptButton", AcceptButton == null ? null : AcceptButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1083,10 +1263,14 @@ public class Form extends ContainerControl  {
 
     public IButtonControl getCancelButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelButton");
+            retObjectCancelButton = classInstance.Get("CancelButton");
+            JCObject val = (JCObject)retObjectCancelButton;
             return new IButtonControlImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelButton != null ? retObjectCancelButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1094,7 +1278,7 @@ public class Form extends ContainerControl  {
 
     public void setCancelButton(IButtonControl CancelButton) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelButton", CancelButton == null ? null : CancelButton.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1104,10 +1288,14 @@ public class Form extends ContainerControl  {
 
     public MainMenu getMenu() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Menu");
+            retObjectMenu = classInstance.Get("Menu");
+            JCObject val = (JCObject)retObjectMenu;
             return new MainMenu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMenu != null ? retObjectMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1115,7 +1303,7 @@ public class Form extends ContainerControl  {
 
     public void setMenu(MainMenu Menu) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Menu", Menu == null ? null : Menu.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1125,10 +1313,14 @@ public class Form extends ContainerControl  {
 
     public MainMenu getMergedMenu() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMergedMenu = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MergedMenu");
+            retObjectMergedMenu = classInstance.Get("MergedMenu");
+            JCObject val = (JCObject)retObjectMergedMenu;
             return new MainMenu(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMergedMenu != null ? retObjectMergedMenu.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1136,10 +1328,14 @@ public class Form extends ContainerControl  {
 
     public MenuStrip getMainMenuStrip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMainMenuStrip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MainMenuStrip");
+            retObjectMainMenuStrip = classInstance.Get("MainMenuStrip");
+            JCObject val = (JCObject)retObjectMainMenuStrip;
             return new MenuStrip(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMainMenuStrip != null ? retObjectMainMenuStrip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1147,7 +1343,7 @@ public class Form extends ContainerControl  {
 
     public void setMainMenuStrip(MenuStrip MainMenuStrip) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MainMenuStrip", MainMenuStrip == null ? null : MainMenuStrip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1157,10 +1353,14 @@ public class Form extends ContainerControl  {
 
     public Padding getMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMargin = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Margin");
+            retObjectMargin = classInstance.Get("Margin");
+            JCObject val = (JCObject)retObjectMargin;
             return new Padding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMargin != null ? retObjectMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1168,7 +1368,7 @@ public class Form extends ContainerControl  {
 
     public void setMargin(Padding Margin) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Margin", Margin == null ? null : Margin.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1178,10 +1378,14 @@ public class Form extends ContainerControl  {
 
     public SizeGripStyle getSizeGripStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeGripStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeGripStyle");
+            retObjectSizeGripStyle = classInstance.Get("SizeGripStyle");
+            JCObject val = (JCObject)retObjectSizeGripStyle;
             return new SizeGripStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeGripStyle != null ? retObjectSizeGripStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1189,7 +1393,7 @@ public class Form extends ContainerControl  {
 
     public void setSizeGripStyle(SizeGripStyle SizeGripStyle) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeGripStyle", SizeGripStyle == null ? null : SizeGripStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -1204,7 +1408,7 @@ public class Form extends ContainerControl  {
 
     public void addClosing(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -1214,7 +1418,7 @@ public class Form extends ContainerControl  {
 
     public void removeClosing(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closing", handler);
         } catch (JCNativeException jcne) {
@@ -1224,7 +1428,7 @@ public class Form extends ContainerControl  {
 
     public void addHelpButtonClicked(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpButtonClicked", handler);
         } catch (JCNativeException jcne) {
@@ -1234,7 +1438,7 @@ public class Form extends ContainerControl  {
 
     public void removeHelpButtonClicked(CancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpButtonClicked", handler);
         } catch (JCNativeException jcne) {
@@ -1244,7 +1448,7 @@ public class Form extends ContainerControl  {
 
     public void addActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -1254,7 +1458,7 @@ public class Form extends ContainerControl  {
 
     public void removeActivated(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Activated", handler);
         } catch (JCNativeException jcne) {
@@ -1264,7 +1468,7 @@ public class Form extends ContainerControl  {
 
     public void addAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1274,7 +1478,7 @@ public class Form extends ContainerControl  {
 
     public void removeAutoSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1284,7 +1488,7 @@ public class Form extends ContainerControl  {
 
     public void addAutoValidateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("AutoValidateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1294,7 +1498,7 @@ public class Form extends ContainerControl  {
 
     public void removeAutoValidateChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoValidateChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1304,7 +1508,7 @@ public class Form extends ContainerControl  {
 
     public void addClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -1314,7 +1518,7 @@ public class Form extends ContainerControl  {
 
     public void removeClosed(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Closed", handler);
         } catch (JCNativeException jcne) {
@@ -1324,7 +1528,7 @@ public class Form extends ContainerControl  {
 
     public void addDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Deactivate", handler);
         } catch (JCNativeException jcne) {
@@ -1334,7 +1538,7 @@ public class Form extends ContainerControl  {
 
     public void removeDeactivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Deactivate", handler);
         } catch (JCNativeException jcne) {
@@ -1344,7 +1548,7 @@ public class Form extends ContainerControl  {
 
     public void addLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Load", handler);
         } catch (JCNativeException jcne) {
@@ -1354,7 +1558,7 @@ public class Form extends ContainerControl  {
 
     public void removeLoad(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Load", handler);
         } catch (JCNativeException jcne) {
@@ -1364,7 +1568,7 @@ public class Form extends ContainerControl  {
 
     public void addMarginChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MarginChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1374,7 +1578,7 @@ public class Form extends ContainerControl  {
 
     public void removeMarginChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MarginChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1384,7 +1588,7 @@ public class Form extends ContainerControl  {
 
     public void addMaximizedBoundsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MaximizedBoundsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1394,7 +1598,7 @@ public class Form extends ContainerControl  {
 
     public void removeMaximizedBoundsChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MaximizedBoundsChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1404,7 +1608,7 @@ public class Form extends ContainerControl  {
 
     public void addMaximumSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MaximumSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1414,7 +1618,7 @@ public class Form extends ContainerControl  {
 
     public void removeMaximumSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MaximumSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1424,7 +1628,7 @@ public class Form extends ContainerControl  {
 
     public void addMdiChildActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MdiChildActivate", handler);
         } catch (JCNativeException jcne) {
@@ -1434,7 +1638,7 @@ public class Form extends ContainerControl  {
 
     public void removeMdiChildActivate(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MdiChildActivate", handler);
         } catch (JCNativeException jcne) {
@@ -1444,7 +1648,7 @@ public class Form extends ContainerControl  {
 
     public void addMenuComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1454,7 +1658,7 @@ public class Form extends ContainerControl  {
 
     public void removeMenuComplete(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuComplete", handler);
         } catch (JCNativeException jcne) {
@@ -1464,7 +1668,7 @@ public class Form extends ContainerControl  {
 
     public void addMenuStart(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MenuStart", handler);
         } catch (JCNativeException jcne) {
@@ -1474,7 +1678,7 @@ public class Form extends ContainerControl  {
 
     public void removeMenuStart(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MenuStart", handler);
         } catch (JCNativeException jcne) {
@@ -1484,7 +1688,7 @@ public class Form extends ContainerControl  {
 
     public void addMinimumSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("MinimumSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1494,7 +1698,7 @@ public class Form extends ContainerControl  {
 
     public void removeMinimumSizeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MinimumSizeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1504,7 +1708,7 @@ public class Form extends ContainerControl  {
 
     public void addResizeBegin(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ResizeBegin", handler);
         } catch (JCNativeException jcne) {
@@ -1514,7 +1718,7 @@ public class Form extends ContainerControl  {
 
     public void removeResizeBegin(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResizeBegin", handler);
         } catch (JCNativeException jcne) {
@@ -1524,7 +1728,7 @@ public class Form extends ContainerControl  {
 
     public void addResizeEnd(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ResizeEnd", handler);
         } catch (JCNativeException jcne) {
@@ -1534,7 +1738,7 @@ public class Form extends ContainerControl  {
 
     public void removeResizeEnd(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ResizeEnd", handler);
         } catch (JCNativeException jcne) {
@@ -1544,7 +1748,7 @@ public class Form extends ContainerControl  {
 
     public void addRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1554,7 +1758,7 @@ public class Form extends ContainerControl  {
 
     public void removeRightToLeftLayoutChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftLayoutChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1564,7 +1768,7 @@ public class Form extends ContainerControl  {
 
     public void addShown(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Shown", handler);
         } catch (JCNativeException jcne) {
@@ -1574,7 +1778,7 @@ public class Form extends ContainerControl  {
 
     public void removeShown(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Shown", handler);
         } catch (JCNativeException jcne) {
@@ -1584,7 +1788,7 @@ public class Form extends ContainerControl  {
 
     public void addTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1594,7 +1798,7 @@ public class Form extends ContainerControl  {
 
     public void removeTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1604,7 +1808,7 @@ public class Form extends ContainerControl  {
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1614,7 +1818,7 @@ public class Form extends ContainerControl  {
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1624,7 +1828,7 @@ public class Form extends ContainerControl  {
 
     public void addDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1634,7 +1838,7 @@ public class Form extends ContainerControl  {
 
     public void removeDpiChanged(DpiChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DpiChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1644,7 +1848,7 @@ public class Form extends ContainerControl  {
 
     public void addFormClosed(FormClosedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormClosed", handler);
         } catch (JCNativeException jcne) {
@@ -1654,7 +1858,7 @@ public class Form extends ContainerControl  {
 
     public void removeFormClosed(FormClosedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormClosed", handler);
         } catch (JCNativeException jcne) {
@@ -1664,7 +1868,7 @@ public class Form extends ContainerControl  {
 
     public void addFormClosing(FormClosingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FormClosing", handler);
         } catch (JCNativeException jcne) {
@@ -1674,7 +1878,7 @@ public class Form extends ContainerControl  {
 
     public void removeFormClosing(FormClosingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FormClosing", handler);
         } catch (JCNativeException jcne) {
@@ -1684,7 +1888,7 @@ public class Form extends ContainerControl  {
 
     public void addInputLanguageChanged(InputLanguageChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InputLanguageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1694,7 +1898,7 @@ public class Form extends ContainerControl  {
 
     public void removeInputLanguageChanged(InputLanguageChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InputLanguageChanged", handler);
         } catch (JCNativeException jcne) {
@@ -1704,7 +1908,7 @@ public class Form extends ContainerControl  {
 
     public void addInputLanguageChanging(InputLanguageChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("InputLanguageChanging", handler);
         } catch (JCNativeException jcne) {
@@ -1714,7 +1918,7 @@ public class Form extends ContainerControl  {
 
     public void removeInputLanguageChanging(InputLanguageChangingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("InputLanguageChanging", handler);
         } catch (JCNativeException jcne) {

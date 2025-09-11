@@ -164,10 +164,14 @@ public class CallExternalMethodActivityValidator extends ActivityValidator  {
     
     public ValidationErrorCollection Validate(ValidationManager manager, NetObject obj) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidate = null;
         try {
-            JCObject objValidate = (JCObject)classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            retObjectValidate = classInstance.Invoke("Validate", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
+            JCObject objValidate = (JCObject)retObjectValidate;
             return new ValidationErrorCollection(objValidate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidate != null ? retObjectValidate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

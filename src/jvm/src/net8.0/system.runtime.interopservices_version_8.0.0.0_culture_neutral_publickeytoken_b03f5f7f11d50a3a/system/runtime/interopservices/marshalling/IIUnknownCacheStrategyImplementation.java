@@ -145,7 +145,7 @@ public class IIUnknownCacheStrategyImplementation extends NetObject implements I
     
     public void Clear(IIUnknownStrategy unknownStrategy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear", unknownStrategy == null ? null : unknownStrategy.getJCOInstance());
         } catch (JCNativeException jcne) {

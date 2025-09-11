@@ -164,9 +164,13 @@ public class CreateItem extends TaskExtension  {
     
     public boolean Execute() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExecute = null;
         try {
-            return (boolean)classInstance.Invoke("Execute");
+            retObjectExecute = classInstance.Invoke("Execute");
+            return (boolean)retObjectExecute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectExecute != null ? retObjectExecute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class CreateItem extends TaskExtension  {
     
     public boolean getPreserveExistingMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreserveExistingMetadata = null;
         try {
-            return (boolean)classInstance.Get("PreserveExistingMetadata");
+            retObjectPreserveExistingMetadata = classInstance.Get("PreserveExistingMetadata");
+            return (boolean)retObjectPreserveExistingMetadata;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPreserveExistingMetadata != null ? retObjectPreserveExistingMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +196,7 @@ public class CreateItem extends TaskExtension  {
 
     public void setPreserveExistingMetadata(boolean PreserveExistingMetadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreserveExistingMetadata", PreserveExistingMetadata);
         } catch (JCNativeException jcne) {
@@ -198,16 +206,20 @@ public class CreateItem extends TaskExtension  {
 
     public final ITaskItem[] getExclude() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExclude = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Exclude");
+            retObjectExclude = classInstance.Get("Exclude");
+            JCObject resultingObjects = (JCObject)retObjectExclude;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclude != null ? retObjectExclude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class CreateItem extends TaskExtension  {
 
     public void setExclude(ITaskItem[] Exclude) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Exclude", toObjectFromArray(Exclude));
         } catch (JCNativeException jcne) {
@@ -225,16 +237,20 @@ public class CreateItem extends TaskExtension  {
 
     public final ITaskItem[] getInclude() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInclude = null;
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Include");
+            retObjectInclude = classInstance.Get("Include");
+            JCObject resultingObjects = (JCObject)retObjectInclude;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInclude != null ? retObjectInclude.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +258,7 @@ public class CreateItem extends TaskExtension  {
 
     public void setInclude(ITaskItem[] Include) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Include", toObjectFromArray(Include));
         } catch (JCNativeException jcne) {
@@ -252,10 +268,12 @@ public class CreateItem extends TaskExtension  {
 
     public java.lang.String[] getAdditionalMetadata() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalMetadata = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("AdditionalMetadata");
+            retObjectAdditionalMetadata = classInstance.Get("AdditionalMetadata");
+            JCObject resultingObjects = (JCObject)retObjectAdditionalMetadata;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -264,6 +282,8 @@ public class CreateItem extends TaskExtension  {
 				resultingArray[indexAdditionalMetadata] = (java.lang.String)resultingArrayList.get(indexAdditionalMetadata);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectAdditionalMetadata != null ? retObjectAdditionalMetadata.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +291,7 @@ public class CreateItem extends TaskExtension  {
 
     public void setAdditionalMetadata(java.lang.String[] AdditionalMetadata) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalMetadata", AdditionalMetadata);
         } catch (JCNativeException jcne) {

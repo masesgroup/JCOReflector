@@ -270,9 +270,13 @@ public class SendPacketsElement extends NetObject  {
     
     public boolean getEndOfPacket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndOfPacket = null;
         try {
-            return (boolean)classInstance.Get("EndOfPacket");
+            retObjectEndOfPacket = classInstance.Get("EndOfPacket");
+            return (boolean)retObjectEndOfPacket;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEndOfPacket != null ? retObjectEndOfPacket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +284,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setEndOfPacket(boolean EndOfPacket) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EndOfPacket", EndOfPacket);
         } catch (JCNativeException jcne) {
@@ -290,10 +294,12 @@ public class SendPacketsElement extends NetObject  {
 
     public byte[] getBuffer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuffer = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Buffer");
+            retObjectBuffer = classInstance.Get("Buffer");
+            JCObject resultingObjects = (JCObject)retObjectBuffer;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -302,6 +308,8 @@ public class SendPacketsElement extends NetObject  {
 				resultingArray[indexBuffer] = (byte)resultingArrayList.get(indexBuffer);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectBuffer != null ? retObjectBuffer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +317,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setBuffer(byte[] Buffer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Buffer", Buffer);
         } catch (JCNativeException jcne) {
@@ -319,9 +327,13 @@ public class SendPacketsElement extends NetObject  {
 
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +341,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setCount(int Count) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Count", Count);
         } catch (JCNativeException jcne) {
@@ -339,9 +351,13 @@ public class SendPacketsElement extends NetObject  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,9 +365,13 @@ public class SendPacketsElement extends NetObject  {
 
     public long getOffsetLong() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffsetLong = null;
         try {
-            return (long)classInstance.Get("OffsetLong");
+            retObjectOffsetLong = classInstance.Get("OffsetLong");
+            return (long)retObjectOffsetLong;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectOffsetLong != null ? retObjectOffsetLong.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -359,7 +379,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setOffsetLong(long OffsetLong) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OffsetLong", OffsetLong);
         } catch (JCNativeException jcne) {
@@ -369,10 +389,14 @@ public class SendPacketsElement extends NetObject  {
 
     public FileStream getFileStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileStream = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileStream");
+            retObjectFileStream = classInstance.Get("FileStream");
+            JCObject val = (JCObject)retObjectFileStream;
             return new FileStream(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileStream != null ? retObjectFileStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +404,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setFileStream(FileStream FileStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileStream", FileStream == null ? null : FileStream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -390,9 +414,13 @@ public class SendPacketsElement extends NetObject  {
 
     public java.lang.String getFilePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("FilePath");
+            retObjectFilePath = classInstance.Get("FilePath");
+            return (java.lang.String)retObjectFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilePath != null ? retObjectFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,7 +428,7 @@ public class SendPacketsElement extends NetObject  {
 
     public void setFilePath(java.lang.String FilePath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FilePath", FilePath);
         } catch (JCNativeException jcne) {

@@ -170,9 +170,13 @@ public class AssemblyProductAttribute extends Attribute  {
     
     public java.lang.String getProduct() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProduct = null;
         try {
-            return (java.lang.String)classInstance.Get("Product");
+            retObjectProduct = classInstance.Get("Product");
+            return (java.lang.String)retObjectProduct;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProduct != null ? retObjectProduct.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

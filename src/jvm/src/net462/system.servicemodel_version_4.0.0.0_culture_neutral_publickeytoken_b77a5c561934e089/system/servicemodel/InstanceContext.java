@@ -189,9 +189,19 @@ public class InstanceContext extends CommunicationObject  {
     
     public int IncrementManualFlowControlLimit(int incrementBy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncrementManualFlowControlLimit = null;
         try {
-            return (int)classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
+            retObjectIncrementManualFlowControlLimit = classInstance.Invoke("IncrementManualFlowControlLimit", incrementBy);
+            return (int)retObjectIncrementManualFlowControlLimit;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectIncrementManualFlowControlLimitNumber = (java.lang.Number)retObjectIncrementManualFlowControlLimit;
+                return retObjectIncrementManualFlowControlLimitNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectIncrementManualFlowControlLimit != null ? retObjectIncrementManualFlowControlLimit.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +209,14 @@ public class InstanceContext extends CommunicationObject  {
 
     public NetObject GetServiceInstance() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.xml.XmlException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServiceInstance = null;
         try {
-            JCObject objGetServiceInstance = (JCObject)classInstance.Invoke("GetServiceInstance");
+            retObjectGetServiceInstance = classInstance.Invoke("GetServiceInstance");
+            JCObject objGetServiceInstance = (JCObject)retObjectGetServiceInstance;
             return new NetObject(objGetServiceInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServiceInstance != null ? retObjectGetServiceInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +224,14 @@ public class InstanceContext extends CommunicationObject  {
 
     public NetObject GetServiceInstance(Message message) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetServiceInstance = null;
         try {
-            JCObject objGetServiceInstance = (JCObject)classInstance.Invoke("GetServiceInstance", message == null ? null : message.getJCOInstance());
+            retObjectGetServiceInstance = classInstance.Invoke("GetServiceInstance", message == null ? null : message.getJCOInstance());
+            JCObject objGetServiceInstance = (JCObject)retObjectGetServiceInstance;
             return new NetObject(objGetServiceInstance);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetServiceInstance != null ? retObjectGetServiceInstance.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,7 +239,7 @@ public class InstanceContext extends CommunicationObject  {
 
     public void ReleaseServiceInstance() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseServiceInstance");
         } catch (JCNativeException jcne) {
@@ -235,9 +253,13 @@ public class InstanceContext extends CommunicationObject  {
     
     public int getManualFlowControlLimit() throws Throwable, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualFlowControlLimit = null;
         try {
-            return (int)classInstance.Get("ManualFlowControlLimit");
+            retObjectManualFlowControlLimit = classInstance.Get("ManualFlowControlLimit");
+            return (int)retObjectManualFlowControlLimit;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectManualFlowControlLimit != null ? retObjectManualFlowControlLimit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,7 +267,7 @@ public class InstanceContext extends CommunicationObject  {
 
     public void setManualFlowControlLimit(int ManualFlowControlLimit) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualFlowControlLimit", ManualFlowControlLimit);
         } catch (JCNativeException jcne) {
@@ -255,10 +277,14 @@ public class InstanceContext extends CommunicationObject  {
 
     public ServiceHostBase getHost() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHost = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Host");
+            retObjectHost = classInstance.Get("Host");
+            JCObject val = (JCObject)retObjectHost;
             return new ServiceHostBase(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHost != null ? retObjectHost.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -266,10 +292,14 @@ public class InstanceContext extends CommunicationObject  {
 
     public SynchronizationContext getSynchronizationContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSynchronizationContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SynchronizationContext");
+            retObjectSynchronizationContext = classInstance.Get("SynchronizationContext");
+            JCObject val = (JCObject)retObjectSynchronizationContext;
             return new SynchronizationContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSynchronizationContext != null ? retObjectSynchronizationContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +307,7 @@ public class InstanceContext extends CommunicationObject  {
 
     public void setSynchronizationContext(SynchronizationContext SynchronizationContext) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SynchronizationContext", SynchronizationContext == null ? null : SynchronizationContext.getJCOInstance());
         } catch (JCNativeException jcne) {

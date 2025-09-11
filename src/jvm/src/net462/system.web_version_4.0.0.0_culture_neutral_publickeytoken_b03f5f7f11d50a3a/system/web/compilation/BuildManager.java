@@ -166,10 +166,14 @@ public class BuildManager extends NetObject  {
     
     public static ICollection GetReferencedAssemblies() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.InvalidOperationException, system.web.HttpException, system.security.SecurityException, system.web.HttpCompileException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.provider.ProviderException, system.NotImplementedException, system.web.HttpParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetReferencedAssemblies = null;
         try {
-            JCObject objGetReferencedAssemblies = (JCObject)classType.Invoke("GetReferencedAssemblies");
+            retObjectGetReferencedAssemblies = classType.Invoke("GetReferencedAssemblies");
+            JCObject objGetReferencedAssemblies = (JCObject)retObjectGetReferencedAssemblies;
             return new ICollectionImplementation(objGetReferencedAssemblies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReferencedAssemblies != null ? retObjectGetReferencedAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +181,14 @@ public class BuildManager extends NetObject  {
 
     public static ICollection GetVirtualPathDependencies(java.lang.String virtualPath) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.web.HttpException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetVirtualPathDependencies = null;
         try {
-            JCObject objGetVirtualPathDependencies = (JCObject)classType.Invoke("GetVirtualPathDependencies", virtualPath);
+            retObjectGetVirtualPathDependencies = classType.Invoke("GetVirtualPathDependencies", virtualPath);
+            JCObject objGetVirtualPathDependencies = (JCObject)retObjectGetVirtualPathDependencies;
             return new ICollectionImplementation(objGetVirtualPathDependencies);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetVirtualPathDependencies != null ? retObjectGetVirtualPathDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class BuildManager extends NetObject  {
 
     public static Stream CreateCachedFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateCachedFile = null;
         try {
-            JCObject objCreateCachedFile = (JCObject)classType.Invoke("CreateCachedFile", fileName);
+            retObjectCreateCachedFile = classType.Invoke("CreateCachedFile", fileName);
+            JCObject objCreateCachedFile = (JCObject)retObjectCreateCachedFile;
             return new Stream(objCreateCachedFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateCachedFile != null ? retObjectCreateCachedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class BuildManager extends NetObject  {
 
     public static Stream ReadCachedFile(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReadCachedFile = null;
         try {
-            JCObject objReadCachedFile = (JCObject)classType.Invoke("ReadCachedFile", fileName);
+            retObjectReadCachedFile = classType.Invoke("ReadCachedFile", fileName);
+            JCObject objReadCachedFile = (JCObject)retObjectReadCachedFile;
             return new Stream(objReadCachedFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReadCachedFile != null ? retObjectReadCachedFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class BuildManager extends NetObject  {
 
     public static NetObject CreateInstanceFromVirtualPath(java.lang.String virtualPath, NetType requiredBaseType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpCompileException, system.NullReferenceException, system.web.HttpParseException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateInstanceFromVirtualPath = null;
         try {
-            JCObject objCreateInstanceFromVirtualPath = (JCObject)classType.Invoke("CreateInstanceFromVirtualPath", virtualPath, requiredBaseType == null ? null : requiredBaseType.getJCOInstance());
+            retObjectCreateInstanceFromVirtualPath = classType.Invoke("CreateInstanceFromVirtualPath", virtualPath, requiredBaseType == null ? null : requiredBaseType.getJCOInstance());
+            JCObject objCreateInstanceFromVirtualPath = (JCObject)retObjectCreateInstanceFromVirtualPath;
             return new NetObject(objCreateInstanceFromVirtualPath);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateInstanceFromVirtualPath != null ? retObjectCreateInstanceFromVirtualPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class BuildManager extends NetObject  {
 
     public static Assembly GetCompiledAssembly(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledAssembly = null;
         try {
-            JCObject objGetCompiledAssembly = (JCObject)classType.Invoke("GetCompiledAssembly", virtualPath);
+            retObjectGetCompiledAssembly = classType.Invoke("GetCompiledAssembly", virtualPath);
+            JCObject objGetCompiledAssembly = (JCObject)retObjectGetCompiledAssembly;
             return new Assembly(objGetCompiledAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledAssembly != null ? retObjectGetCompiledAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +256,13 @@ public class BuildManager extends NetObject  {
 
     public static java.lang.String GetCompiledCustomString(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledCustomString = null;
         try {
-            return (java.lang.String)classType.Invoke("GetCompiledCustomString", virtualPath);
+            retObjectGetCompiledCustomString = classType.Invoke("GetCompiledCustomString", virtualPath);
+            return (java.lang.String)retObjectGetCompiledCustomString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetCompiledCustomString != null ? retObjectGetCompiledCustomString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,10 +270,14 @@ public class BuildManager extends NetObject  {
 
     public static NetType GetCompiledType(java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpCompileException, system.NullReferenceException, system.web.HttpParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCompiledType = null;
         try {
-            JCObject objGetCompiledType = (JCObject)classType.Invoke("GetCompiledType", virtualPath);
+            retObjectGetCompiledType = classType.Invoke("GetCompiledType", virtualPath);
+            JCObject objGetCompiledType = (JCObject)retObjectGetCompiledType;
             return new NetType(objGetCompiledType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCompiledType != null ? retObjectGetCompiledType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,10 +285,14 @@ public class BuildManager extends NetObject  {
 
     public static NetType GetGlobalAsaxType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.web.HttpCompileException, system.configuration.provider.ProviderException, system.web.HttpParseException, system.OperationCanceledException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetGlobalAsaxType = null;
         try {
-            JCObject objGetGlobalAsaxType = (JCObject)classType.Invoke("GetGlobalAsaxType");
+            retObjectGetGlobalAsaxType = classType.Invoke("GetGlobalAsaxType");
+            JCObject objGetGlobalAsaxType = (JCObject)retObjectGetGlobalAsaxType;
             return new NetType(objGetGlobalAsaxType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalAsaxType != null ? retObjectGetGlobalAsaxType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,10 +300,14 @@ public class BuildManager extends NetObject  {
 
     public static NetType GetType(java.lang.String typeName, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.xml.XmlException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.web.HttpCompileException, system.configuration.provider.ProviderException, system.web.HttpParseException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classType.Invoke("GetType", typeName, throwOnError);
+            retObjectGetType = classType.Invoke("GetType", typeName, throwOnError);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,10 +315,14 @@ public class BuildManager extends NetObject  {
 
     public static NetType GetType(java.lang.String typeName, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.web.HttpCompileException, system.configuration.provider.ProviderException, system.web.HttpParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classType.Invoke("GetType", typeName, throwOnError, ignoreCase);
+            retObjectGetType = classType.Invoke("GetType", typeName, throwOnError, ignoreCase);
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,10 +330,14 @@ public class BuildManager extends NetObject  {
 
     public static BuildDependencySet GetCachedBuildDependencySet(HttpContext context, java.lang.String virtualPath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCachedBuildDependencySet = null;
         try {
-            JCObject objGetCachedBuildDependencySet = (JCObject)classType.Invoke("GetCachedBuildDependencySet", context == null ? null : context.getJCOInstance(), virtualPath);
+            retObjectGetCachedBuildDependencySet = classType.Invoke("GetCachedBuildDependencySet", context == null ? null : context.getJCOInstance(), virtualPath);
+            JCObject objGetCachedBuildDependencySet = (JCObject)retObjectGetCachedBuildDependencySet;
             return new BuildDependencySet(objGetCachedBuildDependencySet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCachedBuildDependencySet != null ? retObjectGetCachedBuildDependencySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,10 +345,14 @@ public class BuildManager extends NetObject  {
 
     public static BuildDependencySet GetCachedBuildDependencySet(HttpContext context, java.lang.String virtualPath, boolean ensureIsUpToDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCachedBuildDependencySet = null;
         try {
-            JCObject objGetCachedBuildDependencySet = (JCObject)classType.Invoke("GetCachedBuildDependencySet", context == null ? null : context.getJCOInstance(), virtualPath, ensureIsUpToDate);
+            retObjectGetCachedBuildDependencySet = classType.Invoke("GetCachedBuildDependencySet", context == null ? null : context.getJCOInstance(), virtualPath, ensureIsUpToDate);
+            JCObject objGetCachedBuildDependencySet = (JCObject)retObjectGetCachedBuildDependencySet;
             return new BuildDependencySet(objGetCachedBuildDependencySet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCachedBuildDependencySet != null ? retObjectGetCachedBuildDependencySet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +360,14 @@ public class BuildManager extends NetObject  {
 
     public static IWebObjectFactory GetObjectFactory(java.lang.String virtualPath, boolean throwIfNotFound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpCompileException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetObjectFactory = null;
         try {
-            JCObject objGetObjectFactory = (JCObject)classType.Invoke("GetObjectFactory", virtualPath, throwIfNotFound);
+            retObjectGetObjectFactory = classType.Invoke("GetObjectFactory", virtualPath, throwIfNotFound);
+            JCObject objGetObjectFactory = (JCObject)retObjectGetObjectFactory;
             return new IWebObjectFactoryImplementation(objGetObjectFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjectFactory != null ? retObjectGetObjectFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +375,7 @@ public class BuildManager extends NetObject  {
 
     public static void AddCompilationDependency(java.lang.String dependency) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddCompilationDependency", dependency);
         } catch (JCNativeException jcne) {
@@ -329,7 +385,7 @@ public class BuildManager extends NetObject  {
 
     public static void AddReferencedAssembly(Assembly assembly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("AddReferencedAssembly", assembly == null ? null : assembly.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,9 +399,13 @@ public class BuildManager extends NetObject  {
     
     public static boolean getIsPrecompiledApp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsPrecompiledApp = null;
         try {
-            return (boolean)classType.Get("IsPrecompiledApp");
+            retObjectIsPrecompiledApp = classType.Get("IsPrecompiledApp");
+            return (boolean)retObjectIsPrecompiledApp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsPrecompiledApp != null ? retObjectIsPrecompiledApp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,9 +413,13 @@ public class BuildManager extends NetObject  {
 
     public static boolean getIsUpdatablePrecompiledApp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsUpdatablePrecompiledApp = null;
         try {
-            return (boolean)classType.Get("IsUpdatablePrecompiledApp");
+            retObjectIsUpdatablePrecompiledApp = classType.Get("IsUpdatablePrecompiledApp");
+            return (boolean)retObjectIsUpdatablePrecompiledApp;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsUpdatablePrecompiledApp != null ? retObjectIsUpdatablePrecompiledApp.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,10 +427,14 @@ public class BuildManager extends NetObject  {
 
     public static IList getCodeAssemblies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.web.HttpCompileException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.web.HttpParseException, system.threading.AbandonedMutexException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCodeAssemblies = null;
         try {
-            JCObject val = (JCObject)classType.Get("CodeAssemblies");
+            retObjectCodeAssemblies = classType.Get("CodeAssemblies");
+            JCObject val = (JCObject)retObjectCodeAssemblies;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCodeAssemblies != null ? retObjectCodeAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -374,10 +442,14 @@ public class BuildManager extends NetObject  {
 
     public static FrameworkName getTargetFramework() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.io.IOException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTargetFramework = null;
         try {
-            JCObject val = (JCObject)classType.Get("TargetFramework");
+            retObjectTargetFramework = classType.Get("TargetFramework");
+            JCObject val = (JCObject)retObjectTargetFramework;
             return new FrameworkName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetFramework != null ? retObjectTargetFramework.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

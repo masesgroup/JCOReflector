@@ -161,10 +161,14 @@ public class PartialCachingControl extends BasePartialCachingControl  {
     
     public Control getCachedControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachedControl = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachedControl");
+            retObjectCachedControl = classInstance.Get("CachedControl");
+            JCObject val = (JCObject)retObjectCachedControl;
             return new Control(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachedControl != null ? retObjectCachedControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

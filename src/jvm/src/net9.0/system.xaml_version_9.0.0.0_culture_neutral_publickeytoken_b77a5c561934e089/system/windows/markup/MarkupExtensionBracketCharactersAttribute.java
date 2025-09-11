@@ -170,9 +170,13 @@ public class MarkupExtensionBracketCharactersAttribute extends Attribute  {
     
     public char getClosingBracket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClosingBracket = null;
         try {
-            return (char)classInstance.Get("ClosingBracket");
+            retObjectClosingBracket = classInstance.Get("ClosingBracket");
+            return (char)retObjectClosingBracket;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectClosingBracket != null ? retObjectClosingBracket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class MarkupExtensionBracketCharactersAttribute extends Attribute  {
 
     public char getOpeningBracket() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpeningBracket = null;
         try {
-            return (char)classInstance.Get("OpeningBracket");
+            retObjectOpeningBracket = classInstance.Get("OpeningBracket");
+            return (char)retObjectOpeningBracket;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into char", retObjectOpeningBracket != null ? retObjectOpeningBracket.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

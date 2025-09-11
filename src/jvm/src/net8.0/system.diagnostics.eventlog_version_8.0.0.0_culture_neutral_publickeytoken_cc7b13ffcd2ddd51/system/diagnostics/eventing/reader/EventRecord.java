@@ -155,9 +155,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
     
     public java.lang.String FormatDescription() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatDescription = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatDescription");
+            retObjectFormatDescription = classInstance.Invoke("FormatDescription");
+            return (java.lang.String)retObjectFormatDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatDescription != null ? retObjectFormatDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String ToXml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            return (java.lang.String)retObjectToXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +183,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -186,7 +194,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -202,9 +210,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
     
     public int getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            return (int)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            return (int)retObjectId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +224,14 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public EventBookmark getBookmark() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBookmark = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bookmark");
+            retObjectBookmark = classInstance.Get("Bookmark");
+            JCObject val = (JCObject)retObjectBookmark;
             return new EventBookmark(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBookmark != null ? retObjectBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public SecurityIdentifier getUserId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserId");
+            retObjectUserId = classInstance.Get("UserId");
+            JCObject val = (JCObject)retObjectUserId;
             return new SecurityIdentifier(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserId != null ? retObjectUserId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +254,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getLevelDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevelDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("LevelDisplayName");
+            retObjectLevelDisplayName = classInstance.Get("LevelDisplayName");
+            return (java.lang.String)retObjectLevelDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLevelDisplayName != null ? retObjectLevelDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +268,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getLogName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogName = null;
         try {
-            return (java.lang.String)classInstance.Get("LogName");
+            retObjectLogName = classInstance.Get("LogName");
+            return (java.lang.String)retObjectLogName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogName != null ? retObjectLogName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +282,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getMachineName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMachineName = null;
         try {
-            return (java.lang.String)classInstance.Get("MachineName");
+            retObjectMachineName = classInstance.Get("MachineName");
+            return (java.lang.String)retObjectMachineName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMachineName != null ? retObjectMachineName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +296,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getOpcodeDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpcodeDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("OpcodeDisplayName");
+            retObjectOpcodeDisplayName = classInstance.Get("OpcodeDisplayName");
+            return (java.lang.String)retObjectOpcodeDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOpcodeDisplayName != null ? retObjectOpcodeDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +310,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getProviderName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProviderName = null;
         try {
-            return (java.lang.String)classInstance.Get("ProviderName");
+            retObjectProviderName = classInstance.Get("ProviderName");
+            return (java.lang.String)retObjectProviderName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProviderName != null ? retObjectProviderName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,9 +324,13 @@ public class EventRecord extends NetObject implements AutoCloseable {
 
     public java.lang.String getTaskDisplayName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("TaskDisplayName");
+            retObjectTaskDisplayName = classInstance.Get("TaskDisplayName");
+            return (java.lang.String)retObjectTaskDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTaskDisplayName != null ? retObjectTaskDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

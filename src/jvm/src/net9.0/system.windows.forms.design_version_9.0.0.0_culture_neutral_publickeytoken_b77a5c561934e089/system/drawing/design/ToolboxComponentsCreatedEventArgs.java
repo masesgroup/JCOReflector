@@ -172,16 +172,20 @@ public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
     
     public final IComponent[] getComponents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponents = null;
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("Components");
+            retObjectComponents = classInstance.Get("Components");
+            JCObject resultingObjects = (JCObject)retObjectComponents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectComponents != null ? retObjectComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

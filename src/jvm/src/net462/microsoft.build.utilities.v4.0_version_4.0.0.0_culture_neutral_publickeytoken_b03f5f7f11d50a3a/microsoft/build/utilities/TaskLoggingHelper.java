@@ -183,9 +183,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
     
     public boolean LogMessageFromText(java.lang.String lineOfText, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogMessageFromText = null;
         try {
-            return (boolean)classInstance.Invoke("LogMessageFromText", lineOfText, messageImportance == null ? null : messageImportance.getJCOInstance());
+            retObjectLogMessageFromText = classInstance.Invoke("LogMessageFromText", lineOfText, messageImportance == null ? null : messageImportance.getJCOInstance());
+            return (boolean)retObjectLogMessageFromText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLogMessageFromText != null ? retObjectLogMessageFromText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +197,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public boolean LogMessagesFromFile(java.lang.String fileName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogMessagesFromFile = null;
         try {
-            return (boolean)classInstance.Invoke("LogMessagesFromFile", fileName);
+            retObjectLogMessagesFromFile = classInstance.Invoke("LogMessagesFromFile", fileName);
+            return (boolean)retObjectLogMessagesFromFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLogMessagesFromFile != null ? retObjectLogMessagesFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +211,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public boolean LogMessagesFromFile(java.lang.String fileName, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogMessagesFromFile = null;
         try {
-            return (boolean)classInstance.Invoke("LogMessagesFromFile", fileName, messageImportance == null ? null : messageImportance.getJCOInstance());
+            retObjectLogMessagesFromFile = classInstance.Invoke("LogMessagesFromFile", fileName, messageImportance == null ? null : messageImportance.getJCOInstance());
+            return (boolean)retObjectLogMessagesFromFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLogMessagesFromFile != null ? retObjectLogMessagesFromFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +225,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public boolean LogMessagesFromStream(TextReader stream, MessageImportance messageImportance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexMatchTimeoutException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogMessagesFromStream = null;
         try {
-            return (boolean)classInstance.Invoke("LogMessagesFromStream", stream == null ? null : stream.getJCOInstance(), messageImportance == null ? null : messageImportance.getJCOInstance());
+            retObjectLogMessagesFromStream = classInstance.Invoke("LogMessagesFromStream", stream == null ? null : stream.getJCOInstance(), messageImportance == null ? null : messageImportance.getJCOInstance());
+            return (boolean)retObjectLogMessagesFromStream;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectLogMessagesFromStream != null ? retObjectLogMessagesFromStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +239,14 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public NetObject InitializeLifetimeService() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.runtime.remoting.RemotingException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.TypeInitializationException, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitializeLifetimeService = null;
         try {
-            JCObject objInitializeLifetimeService = (JCObject)classInstance.Invoke("InitializeLifetimeService");
+            retObjectInitializeLifetimeService = classInstance.Invoke("InitializeLifetimeService");
+            JCObject objInitializeLifetimeService = (JCObject)retObjectInitializeLifetimeService;
             return new NetObject(objInitializeLifetimeService);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitializeLifetimeService != null ? retObjectInitializeLifetimeService.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +254,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public java.lang.String ExtractMessageCode(java.lang.String message, JCORefOut messageWithoutCodePrefix) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtractMessageCode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ExtractMessageCode", message, messageWithoutCodePrefix.getJCRefOut());
+            retObjectExtractMessageCode = classInstance.Invoke("ExtractMessageCode", message, messageWithoutCodePrefix.getJCRefOut());
+            return (java.lang.String)retObjectExtractMessageCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectExtractMessageCode != null ? retObjectExtractMessageCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,9 +268,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public java.lang.String FormatResourceString(java.lang.String resourceName, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatResourceString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatResourceString", resourceName, toObjectFromArray(args));
+            retObjectFormatResourceString = classInstance.Invoke("FormatResourceString", resourceName, toObjectFromArray(args));
+            return (java.lang.String)retObjectFormatResourceString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatResourceString != null ? retObjectFormatResourceString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,9 +282,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public java.lang.String FormatString(java.lang.String unformatted, NetObject... args) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFormatString = null;
         try {
-            return (java.lang.String)classInstance.Invoke("FormatString", unformatted, toObjectFromArray(args));
+            retObjectFormatString = classInstance.Invoke("FormatString", unformatted, toObjectFromArray(args));
+            return (java.lang.String)retObjectFormatString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectFormatString != null ? retObjectFormatString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,9 +296,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public java.lang.String GetResourceMessage(java.lang.String resourceName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResourceMessage = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetResourceMessage", resourceName);
+            retObjectGetResourceMessage = classInstance.Invoke("GetResourceMessage", resourceName);
+            return (java.lang.String)retObjectGetResourceMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetResourceMessage != null ? retObjectGetResourceMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,7 +310,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogCommandLine(MessageImportance importance, java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogCommandLine", importance == null ? null : importance.getJCOInstance(), commandLine);
         } catch (JCNativeException jcne) {
@@ -284,7 +320,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogCommandLine(java.lang.String commandLine) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogCommandLine", commandLine);
         } catch (JCNativeException jcne) {
@@ -294,7 +330,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogCriticalMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogCriticalMessage", subcategory, code, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -304,7 +340,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogError(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogError", message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -314,7 +350,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogError(java.lang.String subcategory, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogError", subcategory, errorCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -324,7 +360,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -334,7 +370,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.security.SecurityException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace);
         } catch (JCNativeException jcne) {
@@ -344,7 +380,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorFromException(NetException exception, boolean showStackTrace, boolean showDetail, java.lang.String file) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace, showDetail, file);
         } catch (JCNativeException jcne) {
@@ -354,7 +390,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorFromResources", messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -364,7 +400,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorFromResources(java.lang.String subcategoryResourceName, java.lang.String errorCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorFromResources", subcategoryResourceName, errorCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -374,7 +410,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorWithCodeFromResources", messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -384,7 +420,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogErrorWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorWithCodeFromResources", subcategoryResourceName, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -394,7 +430,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogExternalProjectFinished(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, boolean succeeded) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogExternalProjectFinished", message, helpKeyword, projectFile, succeeded);
         } catch (JCNativeException jcne) {
@@ -404,7 +440,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogExternalProjectStarted(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogExternalProjectStarted", message, helpKeyword, projectFile, targetNames);
         } catch (JCNativeException jcne) {
@@ -414,7 +450,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogMessage(MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessage", importance == null ? null : importance.getJCOInstance(), message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -424,7 +460,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogMessage(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessage", message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -434,7 +470,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogMessage(java.lang.String subcategory, java.lang.String code, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, MessageImportance importance, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessage", subcategory, code, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, importance == null ? null : importance.getJCOInstance(), message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -444,7 +480,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogMessageFromResources(MessageImportance importance, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessageFromResources", importance == null ? null : importance.getJCOInstance(), messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -454,7 +490,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogMessageFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessageFromResources", messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -464,7 +500,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarning(java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarning", message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -474,7 +510,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarning(java.lang.String subcategory, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String message, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarning", subcategory, warningCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, message, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -484,7 +520,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningFromException(NetException exception) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningFromException", exception == null ? null : exception.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -494,7 +530,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningFromException(NetException exception, boolean showStackTrace) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningFromException", exception == null ? null : exception.getJCOInstance(), showStackTrace);
         } catch (JCNativeException jcne) {
@@ -504,7 +540,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningFromResources", messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -514,7 +550,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningFromResources(java.lang.String subcategoryResourceName, java.lang.String warningCode, java.lang.String helpKeyword, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningFromResources", subcategoryResourceName, warningCode, helpKeyword, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -524,7 +560,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningWithCodeFromResources(java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningWithCodeFromResources", messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -534,7 +570,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void LogWarningWithCodeFromResources(java.lang.String subcategoryResourceName, java.lang.String file, int lineNumber, int columnNumber, int endLineNumber, int endColumnNumber, java.lang.String messageResourceName, NetObject... messageArgs) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningWithCodeFromResources", subcategoryResourceName, file, lineNumber, columnNumber, endLineNumber, endColumnNumber, messageResourceName, toObjectFromArray(messageArgs));
         } catch (JCNativeException jcne) {
@@ -544,7 +580,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void MarkAsInactive() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MarkAsInactive");
         } catch (JCNativeException jcne) {
@@ -558,9 +594,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
     
     public boolean getHasLoggedErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasLoggedErrors = null;
         try {
-            return (boolean)classInstance.Get("HasLoggedErrors");
+            retObjectHasLoggedErrors = classInstance.Get("HasLoggedErrors");
+            return (boolean)retObjectHasLoggedErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasLoggedErrors != null ? retObjectHasLoggedErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,10 +608,14 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public ResourceManager getTaskResources() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskResources = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskResources");
+            retObjectTaskResources = classInstance.Get("TaskResources");
+            JCObject val = (JCObject)retObjectTaskResources;
             return new ResourceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskResources != null ? retObjectTaskResources.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -579,7 +623,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void setTaskResources(ResourceManager TaskResources) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskResources", TaskResources == null ? null : TaskResources.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -589,9 +633,13 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public java.lang.String getHelpKeywordPrefix() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHelpKeywordPrefix = null;
         try {
-            return (java.lang.String)classInstance.Get("HelpKeywordPrefix");
+            retObjectHelpKeywordPrefix = classInstance.Get("HelpKeywordPrefix");
+            return (java.lang.String)retObjectHelpKeywordPrefix;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHelpKeywordPrefix != null ? retObjectHelpKeywordPrefix.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -599,7 +647,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
 
     public void setHelpKeywordPrefix(java.lang.String HelpKeywordPrefix) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HelpKeywordPrefix", HelpKeywordPrefix);
         } catch (JCNativeException jcne) {

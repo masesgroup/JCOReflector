@@ -168,9 +168,13 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
     
     public boolean PartExists(Uri partUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPartExists = null;
         try {
-            return (boolean)classInstance.Invoke("PartExists", partUri == null ? null : partUri.getJCOInstance());
+            retObjectPartExists = classInstance.Invoke("PartExists", partUri == null ? null : partUri.getJCOInstance());
+            return (boolean)retObjectPartExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectPartExists != null ? retObjectPartExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public boolean RelationshipExists(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.OutOfMemoryException, system.io.FileFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRelationshipExists = null;
         try {
-            return (boolean)classInstance.Invoke("RelationshipExists", id);
+            retObjectRelationshipExists = classInstance.Invoke("RelationshipExists", id);
+            return (boolean)retObjectRelationshipExists;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectRelationshipExists != null ? retObjectRelationshipExists.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(Stream stream, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(Stream stream, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.OutOfMemoryException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", stream == null ? null : stream.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess, FileShare packageShare) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance(), packageShare == null ? null : packageShare.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance(), packageShare == null ? null : packageShare.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(java.lang.String path, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance());
+            retObjectOpen = classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance());
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public static Package Open(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpen = null;
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path);
+            retObjectOpen = classType.Invoke("Open", path);
+            JCObject objOpen = (JCObject)retObjectOpen;
             return new Package(objOpen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpen != null ? retObjectOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackagePart CreatePart(Uri partUri, java.lang.String contentType, CompressionOption compressionOption) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.UriFormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePart = null;
         try {
-            JCObject objCreatePart = (JCObject)classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType, compressionOption == null ? null : compressionOption.getJCOInstance());
+            retObjectCreatePart = classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType, compressionOption == null ? null : compressionOption.getJCOInstance());
+            JCObject objCreatePart = (JCObject)retObjectCreatePart;
             return new PackagePart(objCreatePart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePart != null ? retObjectCreatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackagePart CreatePart(Uri partUri, java.lang.String contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreatePart = null;
         try {
-            JCObject objCreatePart = (JCObject)classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType);
+            retObjectCreatePart = classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType);
+            JCObject objCreatePart = (JCObject)retObjectCreatePart;
             return new PackagePart(objCreatePart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreatePart != null ? retObjectCreatePart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +331,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackagePart GetPart(Uri partUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPart = null;
         try {
-            JCObject objGetPart = (JCObject)classInstance.Invoke("GetPart", partUri == null ? null : partUri.getJCOInstance());
+            retObjectGetPart = classInstance.Invoke("GetPart", partUri == null ? null : partUri.getJCOInstance());
+            JCObject objGetPart = (JCObject)retObjectGetPart;
             return new PackagePart(objGetPart);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPart != null ? retObjectGetPart.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +346,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackagePartCollection GetParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetParts = null;
         try {
-            JCObject objGetParts = (JCObject)classInstance.Invoke("GetParts");
+            retObjectGetParts = classInstance.Invoke("GetParts");
+            JCObject objGetParts = (JCObject)retObjectGetParts;
             return new PackagePartCollection(objGetParts);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetParts != null ? retObjectGetParts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +361,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType, java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.OutOfMemoryException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateRelationship = null;
         try {
-            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType, id);
+            retObjectCreateRelationship = classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType, id);
+            JCObject objCreateRelationship = (JCObject)retObjectCreateRelationship;
             return new PackageRelationship(objCreateRelationship);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRelationship != null ? retObjectCreateRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +376,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateRelationship = null;
         try {
-            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType);
+            retObjectCreateRelationship = classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType);
+            JCObject objCreateRelationship = (JCObject)retObjectCreateRelationship;
             return new PackageRelationship(objCreateRelationship);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateRelationship != null ? retObjectCreateRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,10 +391,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageRelationship GetRelationship(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.InvalidOperationException, system.xml.XmlException, system.OutOfMemoryException, system.io.FileFormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationship = null;
         try {
-            JCObject objGetRelationship = (JCObject)classInstance.Invoke("GetRelationship", id);
+            retObjectGetRelationship = classInstance.Invoke("GetRelationship", id);
+            JCObject objGetRelationship = (JCObject)retObjectGetRelationship;
             return new PackageRelationship(objGetRelationship);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationship != null ? retObjectGetRelationship.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,10 +406,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageRelationshipCollection GetRelationships() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationships = null;
         try {
-            JCObject objGetRelationships = (JCObject)classInstance.Invoke("GetRelationships");
+            retObjectGetRelationships = classInstance.Invoke("GetRelationships");
+            JCObject objGetRelationships = (JCObject)retObjectGetRelationships;
             return new PackageRelationshipCollection(objGetRelationships);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationships != null ? retObjectGetRelationships.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,10 +421,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageRelationshipCollection GetRelationshipsByType(java.lang.String relationshipType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRelationshipsByType = null;
         try {
-            JCObject objGetRelationshipsByType = (JCObject)classInstance.Invoke("GetRelationshipsByType", relationshipType);
+            retObjectGetRelationshipsByType = classInstance.Invoke("GetRelationshipsByType", relationshipType);
+            JCObject objGetRelationshipsByType = (JCObject)retObjectGetRelationshipsByType;
             return new PackageRelationshipCollection(objGetRelationshipsByType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRelationshipsByType != null ? retObjectGetRelationshipsByType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +436,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public void Close() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Close");
         } catch (JCNativeException jcne) {
@@ -374,7 +446,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public void DeletePart(Uri partUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeletePart", partUri == null ? null : partUri.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -384,7 +456,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public void DeleteRelationship(java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.io.FileFormatException, system.NotSupportedException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DeleteRelationship", id);
         } catch (JCNativeException jcne) {
@@ -394,7 +466,7 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public void Flush() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.io.FileFormatException, system.OutOfMemoryException, system.FormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.security.SecurityException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flush");
         } catch (JCNativeException jcne) {
@@ -408,13 +480,13 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
      */
     @Deprecated 
     public void Dispose() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -430,10 +502,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
     
     public FileAccess getFileOpenAccess() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileOpenAccess = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("FileOpenAccess");
+            retObjectFileOpenAccess = classInstance.Get("FileOpenAccess");
+            JCObject val = (JCObject)retObjectFileOpenAccess;
             return new FileAccess(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFileOpenAccess != null ? retObjectFileOpenAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -441,10 +517,14 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
 
     public PackageProperties getPackageProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.OutOfMemoryException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPackageProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PackageProperties");
+            retObjectPackageProperties = classInstance.Get("PackageProperties");
+            JCObject val = (JCObject)retObjectPackageProperties;
             return new PackageProperties(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPackageProperties != null ? retObjectPackageProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

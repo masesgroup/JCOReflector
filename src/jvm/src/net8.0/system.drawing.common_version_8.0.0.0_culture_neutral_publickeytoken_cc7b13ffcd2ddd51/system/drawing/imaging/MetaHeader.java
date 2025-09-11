@@ -165,9 +165,13 @@ public class MetaHeader extends NetObject  {
     
     public short getHeaderSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaderSize = null;
         try {
-            return (short)classInstance.Get("HeaderSize");
+            retObjectHeaderSize = classInstance.Get("HeaderSize");
+            return (short)retObjectHeaderSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectHeaderSize != null ? retObjectHeaderSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class MetaHeader extends NetObject  {
 
     public void setHeaderSize(short HeaderSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeaderSize", HeaderSize);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class MetaHeader extends NetObject  {
 
     public short getNoObjects() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoObjects = null;
         try {
-            return (short)classInstance.Get("NoObjects");
+            retObjectNoObjects = classInstance.Get("NoObjects");
+            return (short)retObjectNoObjects;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectNoObjects != null ? retObjectNoObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class MetaHeader extends NetObject  {
 
     public void setNoObjects(short NoObjects) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoObjects", NoObjects);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class MetaHeader extends NetObject  {
 
     public short getNoParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNoParameters = null;
         try {
-            return (short)classInstance.Get("NoParameters");
+            retObjectNoParameters = classInstance.Get("NoParameters");
+            return (short)retObjectNoParameters;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectNoParameters != null ? retObjectNoParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class MetaHeader extends NetObject  {
 
     public void setNoParameters(short NoParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("NoParameters", NoParameters);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class MetaHeader extends NetObject  {
 
     public short getType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            return (short)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            return (short)retObjectType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class MetaHeader extends NetObject  {
 
     public void setType(short Type) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Type", Type);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class MetaHeader extends NetObject  {
 
     public short getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (short)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (short)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class MetaHeader extends NetObject  {
 
     public void setVersion(short Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class MetaHeader extends NetObject  {
 
     public int getMaxRecord() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRecord = null;
         try {
-            return (int)classInstance.Get("MaxRecord");
+            retObjectMaxRecord = classInstance.Get("MaxRecord");
+            return (int)retObjectMaxRecord;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxRecord != null ? retObjectMaxRecord.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class MetaHeader extends NetObject  {
 
     public void setMaxRecord(int MaxRecord) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRecord", MaxRecord);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class MetaHeader extends NetObject  {
 
     public int getSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSize = null;
         try {
-            return (int)classInstance.Get("Size");
+            retObjectSize = classInstance.Get("Size");
+            return (int)retObjectSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectSize != null ? retObjectSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class MetaHeader extends NetObject  {
 
     public void setSize(int Size) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Size", Size);
         } catch (JCNativeException jcne) {

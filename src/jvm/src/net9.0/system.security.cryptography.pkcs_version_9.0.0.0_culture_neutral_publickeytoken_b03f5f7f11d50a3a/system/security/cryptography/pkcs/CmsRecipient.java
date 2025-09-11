@@ -202,10 +202,14 @@ public class CmsRecipient extends NetObject  {
     
     public SubjectIdentifierType getRecipientIdentifierType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecipientIdentifierType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RecipientIdentifierType");
+            retObjectRecipientIdentifierType = classInstance.Get("RecipientIdentifierType");
+            JCObject val = (JCObject)retObjectRecipientIdentifierType;
             return new SubjectIdentifierType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRecipientIdentifierType != null ? retObjectRecipientIdentifierType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,10 +217,14 @@ public class CmsRecipient extends NetObject  {
 
     public RSAEncryptionPadding getRSAEncryptionPadding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRSAEncryptionPadding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RSAEncryptionPadding");
+            retObjectRSAEncryptionPadding = classInstance.Get("RSAEncryptionPadding");
+            JCObject val = (JCObject)retObjectRSAEncryptionPadding;
             return new RSAEncryptionPadding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRSAEncryptionPadding != null ? retObjectRSAEncryptionPadding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,10 +232,14 @@ public class CmsRecipient extends NetObject  {
 
     public X509Certificate2 getCertificate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCertificate = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Certificate");
+            retObjectCertificate = classInstance.Get("Certificate");
+            JCObject val = (JCObject)retObjectCertificate;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCertificate != null ? retObjectCertificate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

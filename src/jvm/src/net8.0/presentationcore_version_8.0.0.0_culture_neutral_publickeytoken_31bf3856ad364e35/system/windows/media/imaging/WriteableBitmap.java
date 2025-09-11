@@ -182,9 +182,13 @@ public class WriteableBitmap extends BitmapSource  {
     
     public boolean TryLock(Duration timeout) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.TimeoutException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTryLock = null;
         try {
-            return (boolean)classInstance.Invoke("TryLock", timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryLock = classInstance.Invoke("TryLock", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryLock;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryLock != null ? retObjectTryLock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +196,14 @@ public class WriteableBitmap extends BitmapSource  {
 
     public WriteableBitmap CloneNewWriteableBitmap() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new WriteableBitmap(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +211,14 @@ public class WriteableBitmap extends BitmapSource  {
 
     public WriteableBitmap CloneCurrentValueNewWriteableBitmap() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCloneCurrentValue = null;
         try {
-            JCObject objCloneCurrentValue = (JCObject)classInstance.Invoke("CloneCurrentValue");
+            retObjectCloneCurrentValue = classInstance.Invoke("CloneCurrentValue");
+            JCObject objCloneCurrentValue = (JCObject)retObjectCloneCurrentValue;
             return new WriteableBitmap(objCloneCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCloneCurrentValue != null ? retObjectCloneCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class WriteableBitmap extends BitmapSource  {
 
     public void AddDirtyRect(Int32Rect dirtyRect) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddDirtyRect", dirtyRect == null ? null : dirtyRect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -224,7 +236,7 @@ public class WriteableBitmap extends BitmapSource  {
 
     public void Lock() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.NotImplementedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Lock");
         } catch (JCNativeException jcne) {
@@ -234,7 +246,7 @@ public class WriteableBitmap extends BitmapSource  {
 
     public void Unlock() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException, system.componentmodel.Win32Exception, system.TimeoutException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unlock");
         } catch (JCNativeException jcne) {
@@ -244,7 +256,7 @@ public class WriteableBitmap extends BitmapSource  {
 
     public void WritePixels(Int32Rect sourceRect, Array sourceBuffer, int sourceBufferStride, int destinationX, int destinationY) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WritePixels", sourceRect == null ? null : sourceRect.getJCOInstance(), sourceBuffer == null ? null : sourceBuffer.getJCOInstance(), sourceBufferStride, destinationX, destinationY);
         } catch (JCNativeException jcne) {
@@ -254,7 +266,7 @@ public class WriteableBitmap extends BitmapSource  {
 
     public void WritePixels(Int32Rect sourceRect, Array pixels, int stride, int offset) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WritePixels", sourceRect == null ? null : sourceRect.getJCOInstance(), pixels == null ? null : pixels.getJCOInstance(), stride, offset);
         } catch (JCNativeException jcne) {
@@ -268,9 +280,13 @@ public class WriteableBitmap extends BitmapSource  {
     
     public int getBackBufferStride() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBackBufferStride = null;
         try {
-            return (int)classInstance.Get("BackBufferStride");
+            retObjectBackBufferStride = classInstance.Get("BackBufferStride");
+            return (int)retObjectBackBufferStride;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBackBufferStride != null ? retObjectBackBufferStride.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

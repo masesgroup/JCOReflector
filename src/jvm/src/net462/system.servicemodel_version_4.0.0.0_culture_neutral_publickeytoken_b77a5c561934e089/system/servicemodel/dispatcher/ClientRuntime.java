@@ -165,9 +165,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
     
     public boolean getManualAddressing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManualAddressing = null;
         try {
-            return (boolean)classInstance.Get("ManualAddressing");
+            retObjectManualAddressing = classInstance.Get("ManualAddressing");
+            return (boolean)retObjectManualAddressing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectManualAddressing != null ? retObjectManualAddressing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setManualAddressing(boolean ManualAddressing) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ManualAddressing", ManualAddressing);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public boolean getMessageVersionNoneFaultsEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageVersionNoneFaultsEnabled = null;
         try {
-            return (boolean)classInstance.Get("MessageVersionNoneFaultsEnabled");
+            retObjectMessageVersionNoneFaultsEnabled = classInstance.Get("MessageVersionNoneFaultsEnabled");
+            return (boolean)retObjectMessageVersionNoneFaultsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMessageVersionNoneFaultsEnabled != null ? retObjectMessageVersionNoneFaultsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setMessageVersionNoneFaultsEnabled(boolean MessageVersionNoneFaultsEnabled) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageVersionNoneFaultsEnabled", MessageVersionNoneFaultsEnabled);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public boolean getValidateMustUnderstand() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateMustUnderstand = null;
         try {
-            return (boolean)classInstance.Get("ValidateMustUnderstand");
+            retObjectValidateMustUnderstand = classInstance.Get("ValidateMustUnderstand");
+            return (boolean)retObjectValidateMustUnderstand;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateMustUnderstand != null ? retObjectValidateMustUnderstand.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setValidateMustUnderstand(boolean ValidateMustUnderstand) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateMustUnderstand", ValidateMustUnderstand);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public int getMaxFaultSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxFaultSize = null;
         try {
-            return (int)classInstance.Get("MaxFaultSize");
+            retObjectMaxFaultSize = classInstance.Get("MaxFaultSize");
+            return (int)retObjectMaxFaultSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxFaultSize != null ? retObjectMaxFaultSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setMaxFaultSize(int MaxFaultSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxFaultSize", MaxFaultSize);
         } catch (JCNativeException jcne) {
@@ -245,10 +261,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public ClientOperation getUnhandledClientOperation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnhandledClientOperation = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UnhandledClientOperation");
+            retObjectUnhandledClientOperation = classInstance.Get("UnhandledClientOperation");
+            JCObject val = (JCObject)retObjectUnhandledClientOperation;
             return new ClientOperation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnhandledClientOperation != null ? retObjectUnhandledClientOperation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +276,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public DispatchRuntime getCallbackDispatchRuntime() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallbackDispatchRuntime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallbackDispatchRuntime");
+            retObjectCallbackDispatchRuntime = classInstance.Get("CallbackDispatchRuntime");
+            JCObject val = (JCObject)retObjectCallbackDispatchRuntime;
             return new DispatchRuntime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallbackDispatchRuntime != null ? retObjectCallbackDispatchRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +291,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public IClientOperationSelector getOperationSelector() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOperationSelector = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OperationSelector");
+            retObjectOperationSelector = classInstance.Get("OperationSelector");
+            JCObject val = (JCObject)retObjectOperationSelector;
             return new IClientOperationSelectorImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOperationSelector != null ? retObjectOperationSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +306,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setOperationSelector(IClientOperationSelector OperationSelector) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OperationSelector", OperationSelector == null ? null : OperationSelector.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -288,9 +316,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public java.lang.String getContractName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractName = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractName");
+            retObjectContractName = classInstance.Get("ContractName");
+            return (java.lang.String)retObjectContractName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractName != null ? retObjectContractName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,9 +330,13 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public java.lang.String getContractNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ContractNamespace");
+            retObjectContractNamespace = classInstance.Get("ContractNamespace");
+            return (java.lang.String)retObjectContractNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectContractNamespace != null ? retObjectContractNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,10 +344,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public NetType getCallbackClientType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallbackClientType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CallbackClientType");
+            retObjectCallbackClientType = classInstance.Get("CallbackClientType");
+            JCObject val = (JCObject)retObjectCallbackClientType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallbackClientType != null ? retObjectCallbackClientType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +359,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setCallbackClientType(NetType CallbackClientType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CallbackClientType", CallbackClientType == null ? null : CallbackClientType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -329,10 +369,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public NetType getContractClientType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContractClientType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContractClientType");
+            retObjectContractClientType = classInstance.Get("ContractClientType");
+            JCObject val = (JCObject)retObjectContractClientType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContractClientType != null ? retObjectContractClientType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +384,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setContractClientType(NetType ContractClientType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ContractClientType", ContractClientType == null ? null : ContractClientType.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +394,14 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public Uri getVia() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVia = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Via");
+            retObjectVia = classInstance.Get("Via");
+            JCObject val = (JCObject)retObjectVia;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVia != null ? retObjectVia.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,7 +409,7 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
 
     public void setVia(Uri Via) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Via", Via == null ? null : Via.getJCOInstance());
         } catch (JCNativeException jcne) {

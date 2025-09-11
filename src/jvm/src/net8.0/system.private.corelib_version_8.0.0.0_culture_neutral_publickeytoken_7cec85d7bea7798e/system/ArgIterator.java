@@ -169,9 +169,19 @@ public class ArgIterator extends ValueType  {
     
     public int GetRemainingCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRemainingCount = null;
         try {
-            return (int)classInstance.Invoke("GetRemainingCount");
+            retObjectGetRemainingCount = classInstance.Invoke("GetRemainingCount");
+            return (int)retObjectGetRemainingCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRemainingCountNumber = (java.lang.Number)retObjectGetRemainingCount;
+                return retObjectGetRemainingCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRemainingCount != null ? retObjectGetRemainingCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +189,14 @@ public class ArgIterator extends ValueType  {
 
     public RuntimeTypeHandle GetNextArgType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextArgType = null;
         try {
-            JCObject objGetNextArgType = (JCObject)classInstance.Invoke("GetNextArgType");
+            retObjectGetNextArgType = classInstance.Invoke("GetNextArgType");
+            JCObject objGetNextArgType = (JCObject)retObjectGetNextArgType;
             return new RuntimeTypeHandle(objGetNextArgType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextArgType != null ? retObjectGetNextArgType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,10 +204,14 @@ public class ArgIterator extends ValueType  {
 
     public TypedReference GetNextArg() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextArg = null;
         try {
-            JCObject objGetNextArg = (JCObject)classInstance.Invoke("GetNextArg");
+            retObjectGetNextArg = classInstance.Invoke("GetNextArg");
+            JCObject objGetNextArg = (JCObject)retObjectGetNextArg;
             return new TypedReference(objGetNextArg);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextArg != null ? retObjectGetNextArg.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +219,14 @@ public class ArgIterator extends ValueType  {
 
     public TypedReference GetNextArg(RuntimeTypeHandle rth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetNextArg = null;
         try {
-            JCObject objGetNextArg = (JCObject)classInstance.Invoke("GetNextArg", rth == null ? null : rth.getJCOInstance());
+            retObjectGetNextArg = classInstance.Invoke("GetNextArg", rth == null ? null : rth.getJCOInstance());
+            JCObject objGetNextArg = (JCObject)retObjectGetNextArg;
             return new TypedReference(objGetNextArg);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetNextArg != null ? retObjectGetNextArg.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +234,7 @@ public class ArgIterator extends ValueType  {
 
     public void End() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("End");
         } catch (JCNativeException jcne) {

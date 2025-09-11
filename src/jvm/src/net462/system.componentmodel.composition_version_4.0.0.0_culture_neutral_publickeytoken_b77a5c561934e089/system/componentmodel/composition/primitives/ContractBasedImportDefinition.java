@@ -158,9 +158,13 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
     
     public boolean IsConstraintSatisfiedBy(ExportDefinition exportDefinition) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsConstraintSatisfiedBy = null;
         try {
-            return (boolean)classInstance.Invoke("IsConstraintSatisfiedBy", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            retObjectIsConstraintSatisfiedBy = classInstance.Invoke("IsConstraintSatisfiedBy", exportDefinition == null ? null : exportDefinition.getJCOInstance());
+            return (boolean)retObjectIsConstraintSatisfiedBy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsConstraintSatisfiedBy != null ? retObjectIsConstraintSatisfiedBy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
     
     public CreationPolicy getRequiredCreationPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredCreationPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequiredCreationPolicy");
+            retObjectRequiredCreationPolicy = classInstance.Get("RequiredCreationPolicy");
+            JCObject val = (JCObject)retObjectRequiredCreationPolicy;
             return new CreationPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequiredCreationPolicy != null ? retObjectRequiredCreationPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
 
     public java.lang.String getRequiredTypeIdentity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiredTypeIdentity = null;
         try {
-            return (java.lang.String)classInstance.Get("RequiredTypeIdentity");
+            retObjectRequiredTypeIdentity = classInstance.Get("RequiredTypeIdentity");
+            return (java.lang.String)retObjectRequiredTypeIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequiredTypeIdentity != null ? retObjectRequiredTypeIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

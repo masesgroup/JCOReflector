@@ -156,10 +156,14 @@ public class AnimationTimeline extends Timeline  {
     
     public NetObject GetCurrentValue(NetObject defaultOriginValue, NetObject defaultDestinationValue, AnimationClock animationClock) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetCurrentValue = null;
         try {
-            JCObject objGetCurrentValue = (JCObject)classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            retObjectGetCurrentValue = classInstance.Invoke("GetCurrentValue", defaultOriginValue == null ? null : defaultOriginValue.getJCOInstance(), defaultDestinationValue == null ? null : defaultDestinationValue.getJCOInstance(), animationClock == null ? null : animationClock.getJCOInstance());
+            JCObject objGetCurrentValue = (JCObject)retObjectGetCurrentValue;
             return new NetObject(objGetCurrentValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCurrentValue != null ? retObjectGetCurrentValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,10 +171,14 @@ public class AnimationTimeline extends Timeline  {
 
     public AnimationClock CreateClockNewAnimationTimeline() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateClock = null;
         try {
-            JCObject objCreateClock = (JCObject)classInstance.Invoke("CreateClock");
+            retObjectCreateClock = classInstance.Invoke("CreateClock");
+            JCObject objCreateClock = (JCObject)retObjectCreateClock;
             return new AnimationClock(objCreateClock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateClock != null ? retObjectCreateClock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,10 +186,14 @@ public class AnimationTimeline extends Timeline  {
 
     public AnimationTimeline CloneNewAnimationTimeline() throws Throwable, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new AnimationTimeline(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class AnimationTimeline extends Timeline  {
     
     public boolean getIsDestinationDefault() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDestinationDefault = null;
         try {
-            return (boolean)classInstance.Get("IsDestinationDefault");
+            retObjectIsDestinationDefault = classInstance.Get("IsDestinationDefault");
+            return (boolean)retObjectIsDestinationDefault;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsDestinationDefault != null ? retObjectIsDestinationDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +219,14 @@ public class AnimationTimeline extends Timeline  {
 
     public NetType getTargetPropertyType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTargetPropertyType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TargetPropertyType");
+            retObjectTargetPropertyType = classInstance.Get("TargetPropertyType");
+            JCObject val = (JCObject)retObjectTargetPropertyType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTargetPropertyType != null ? retObjectTargetPropertyType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

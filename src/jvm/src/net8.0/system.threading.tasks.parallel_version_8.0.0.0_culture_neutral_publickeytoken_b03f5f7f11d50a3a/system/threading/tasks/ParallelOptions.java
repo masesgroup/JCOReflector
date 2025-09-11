@@ -167,9 +167,13 @@ public class ParallelOptions extends NetObject  {
     
     public int getMaxDegreeOfParallelism() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxDegreeOfParallelism = null;
         try {
-            return (int)classInstance.Get("MaxDegreeOfParallelism");
+            retObjectMaxDegreeOfParallelism = classInstance.Get("MaxDegreeOfParallelism");
+            return (int)retObjectMaxDegreeOfParallelism;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxDegreeOfParallelism != null ? retObjectMaxDegreeOfParallelism.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ParallelOptions extends NetObject  {
 
     public void setMaxDegreeOfParallelism(int MaxDegreeOfParallelism) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxDegreeOfParallelism", MaxDegreeOfParallelism);
         } catch (JCNativeException jcne) {
@@ -187,10 +191,14 @@ public class ParallelOptions extends NetObject  {
 
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            retObjectCancellationToken = classInstance.Get("CancellationToken");
+            JCObject val = (JCObject)retObjectCancellationToken;
             return new CancellationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancellationToken != null ? retObjectCancellationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class ParallelOptions extends NetObject  {
 
     public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -208,10 +216,14 @@ public class ParallelOptions extends NetObject  {
 
     public TaskScheduler getTaskScheduler() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTaskScheduler = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TaskScheduler");
+            retObjectTaskScheduler = classInstance.Get("TaskScheduler");
+            JCObject val = (JCObject)retObjectTaskScheduler;
             return new TaskScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTaskScheduler != null ? retObjectTaskScheduler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class ParallelOptions extends NetObject  {
 
     public void setTaskScheduler(TaskScheduler TaskScheduler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TaskScheduler", TaskScheduler == null ? null : TaskScheduler.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -237,9 +237,13 @@ public class CacheDependency extends NetObject implements AutoCloseable {
     
     public boolean TakeOwnership() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTakeOwnership = null;
         try {
-            return (boolean)classInstance.Invoke("TakeOwnership");
+            retObjectTakeOwnership = classInstance.Invoke("TakeOwnership");
+            return (boolean)retObjectTakeOwnership;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTakeOwnership != null ? retObjectTakeOwnership.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,9 +251,13 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public java.lang.String GetUniqueID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetUniqueID = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetUniqueID");
+            retObjectGetUniqueID = classInstance.Invoke("GetUniqueID");
+            return (java.lang.String)retObjectGetUniqueID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetUniqueID != null ? retObjectGetUniqueID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,10 +265,12 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public java.lang.String[] GetFileDependencies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFileDependencies = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileDependencies");
+            retObjectGetFileDependencies = classInstance.Invoke("GetFileDependencies");
+            JCObject resultingObjects = (JCObject)retObjectGetFileDependencies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -269,6 +279,8 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 				resultingArray[indexGetFileDependencies] = (java.lang.String)resultingArrayList.get(indexGetFileDependencies);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetFileDependencies != null ? retObjectGetFileDependencies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +288,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.web.HttpException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -286,7 +298,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public void ItemRemoved() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.web.HttpException, system.OverflowException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ItemRemoved");
         } catch (JCNativeException jcne) {
@@ -296,7 +308,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public void KeepDependenciesAlive() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("KeepDependenciesAlive");
         } catch (JCNativeException jcne) {
@@ -307,7 +319,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -323,9 +335,13 @@ public class CacheDependency extends NetObject implements AutoCloseable {
     
     public boolean getHasChanged() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasChanged = null;
         try {
-            return (boolean)classInstance.Get("HasChanged");
+            retObjectHasChanged = classInstance.Get("HasChanged");
+            return (boolean)retObjectHasChanged;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasChanged != null ? retObjectHasChanged.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +349,14 @@ public class CacheDependency extends NetObject implements AutoCloseable {
 
     public DateTime getUtcLastModified() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUtcLastModified = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UtcLastModified");
+            retObjectUtcLastModified = classInstance.Get("UtcLastModified");
+            JCObject val = (JCObject)retObjectUtcLastModified;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUtcLastModified != null ? retObjectUtcLastModified.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

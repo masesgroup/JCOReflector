@@ -201,10 +201,14 @@ public class XmlSyndicationContent extends SyndicationContent  {
     
     public SyndicationContent Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new SyndicationContent(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +216,14 @@ public class XmlSyndicationContent extends SyndicationContent  {
 
     public XmlDictionaryReader GetReaderAtContent() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetReaderAtContent = null;
         try {
-            JCObject objGetReaderAtContent = (JCObject)classInstance.Invoke("GetReaderAtContent");
+            retObjectGetReaderAtContent = classInstance.Invoke("GetReaderAtContent");
+            JCObject objGetReaderAtContent = (JCObject)retObjectGetReaderAtContent;
             return new XmlDictionaryReader(objGetReaderAtContent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetReaderAtContent != null ? retObjectGetReaderAtContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +235,14 @@ public class XmlSyndicationContent extends SyndicationContent  {
     
     public SyndicationElementExtension getExtension() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtension = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Extension");
+            retObjectExtension = classInstance.Get("Extension");
+            JCObject val = (JCObject)retObjectExtension;
             return new SyndicationElementExtension(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtension != null ? retObjectExtension.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

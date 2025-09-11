@@ -180,9 +180,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
     
     public boolean ShouldSerializeExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeExtendedProtectionPolicy = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            retObjectShouldSerializeExtendedProtectionPolicy = classInstance.Invoke("ShouldSerializeExtendedProtectionPolicy");
+            return (boolean)retObjectShouldSerializeExtendedProtectionPolicy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeExtendedProtectionPolicy != null ? retObjectShouldSerializeExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +194,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean ShouldSerializeMessageHandlerFactory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeMessageHandlerFactory = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeMessageHandlerFactory");
+            retObjectShouldSerializeMessageHandlerFactory = classInstance.Invoke("ShouldSerializeMessageHandlerFactory");
+            return (boolean)retObjectShouldSerializeMessageHandlerFactory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeMessageHandlerFactory != null ? retObjectShouldSerializeMessageHandlerFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +208,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean ShouldSerializeWebSocketSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeWebSocketSettings = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeWebSocketSettings");
+            retObjectShouldSerializeWebSocketSettings = classInstance.Invoke("ShouldSerializeWebSocketSettings");
+            return (boolean)retObjectShouldSerializeWebSocketSettings;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeWebSocketSettings != null ? retObjectShouldSerializeWebSocketSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +222,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.UriFormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +241,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -234,7 +250,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -243,7 +259,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -252,9 +268,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
     
     public boolean getAllowCookies() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowCookies = null;
         try {
-            return (boolean)classInstance.Get("AllowCookies");
+            retObjectAllowCookies = classInstance.Get("AllowCookies");
+            return (boolean)retObjectAllowCookies;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowCookies != null ? retObjectAllowCookies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +282,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setAllowCookies(boolean AllowCookies) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowCookies", AllowCookies);
         } catch (JCNativeException jcne) {
@@ -272,9 +292,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean getBypassProxyOnLocal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBypassProxyOnLocal = null;
         try {
-            return (boolean)classInstance.Get("BypassProxyOnLocal");
+            retObjectBypassProxyOnLocal = classInstance.Get("BypassProxyOnLocal");
+            return (boolean)retObjectBypassProxyOnLocal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBypassProxyOnLocal != null ? retObjectBypassProxyOnLocal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +306,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setBypassProxyOnLocal(boolean BypassProxyOnLocal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BypassProxyOnLocal", BypassProxyOnLocal);
         } catch (JCNativeException jcne) {
@@ -292,9 +316,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean getDecompressionEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecompressionEnabled = null;
         try {
-            return (boolean)classInstance.Get("DecompressionEnabled");
+            retObjectDecompressionEnabled = classInstance.Get("DecompressionEnabled");
+            return (boolean)retObjectDecompressionEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectDecompressionEnabled != null ? retObjectDecompressionEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setDecompressionEnabled(boolean DecompressionEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DecompressionEnabled", DecompressionEnabled);
         } catch (JCNativeException jcne) {
@@ -312,9 +340,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean getKeepAliveEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeepAliveEnabled = null;
         try {
-            return (boolean)classInstance.Get("KeepAliveEnabled");
+            retObjectKeepAliveEnabled = classInstance.Get("KeepAliveEnabled");
+            return (boolean)retObjectKeepAliveEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectKeepAliveEnabled != null ? retObjectKeepAliveEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +354,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setKeepAliveEnabled(boolean KeepAliveEnabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeepAliveEnabled", KeepAliveEnabled);
         } catch (JCNativeException jcne) {
@@ -332,9 +364,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean getUnsafeConnectionNtlmAuthentication() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnsafeConnectionNtlmAuthentication = null;
         try {
-            return (boolean)classInstance.Get("UnsafeConnectionNtlmAuthentication");
+            retObjectUnsafeConnectionNtlmAuthentication = classInstance.Get("UnsafeConnectionNtlmAuthentication");
+            return (boolean)retObjectUnsafeConnectionNtlmAuthentication;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUnsafeConnectionNtlmAuthentication != null ? retObjectUnsafeConnectionNtlmAuthentication.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,7 +378,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setUnsafeConnectionNtlmAuthentication(boolean UnsafeConnectionNtlmAuthentication) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnsafeConnectionNtlmAuthentication", UnsafeConnectionNtlmAuthentication);
         } catch (JCNativeException jcne) {
@@ -352,9 +388,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public boolean getUseDefaultWebProxy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseDefaultWebProxy = null;
         try {
-            return (boolean)classInstance.Get("UseDefaultWebProxy");
+            retObjectUseDefaultWebProxy = classInstance.Get("UseDefaultWebProxy");
+            return (boolean)retObjectUseDefaultWebProxy;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseDefaultWebProxy != null ? retObjectUseDefaultWebProxy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +402,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setUseDefaultWebProxy(boolean UseDefaultWebProxy) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseDefaultWebProxy", UseDefaultWebProxy);
         } catch (JCNativeException jcne) {
@@ -372,9 +412,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public int getMaxBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferSize = null;
         try {
-            return (int)classInstance.Get("MaxBufferSize");
+            retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
+            return (int)retObjectMaxBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,7 +426,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setMaxBufferSize(int MaxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferSize", MaxBufferSize);
         } catch (JCNativeException jcne) {
@@ -392,9 +436,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public int getMaxPendingAccepts() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxPendingAccepts = null;
         try {
-            return (int)classInstance.Get("MaxPendingAccepts");
+            retObjectMaxPendingAccepts = classInstance.Get("MaxPendingAccepts");
+            return (int)retObjectMaxPendingAccepts;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxPendingAccepts != null ? retObjectMaxPendingAccepts.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -402,7 +450,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setMaxPendingAccepts(int MaxPendingAccepts) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxPendingAccepts", MaxPendingAccepts);
         } catch (JCNativeException jcne) {
@@ -412,10 +460,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public AuthenticationSchemes getAuthenticationScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticationScheme = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticationScheme");
+            retObjectAuthenticationScheme = classInstance.Get("AuthenticationScheme");
+            JCObject val = (JCObject)retObjectAuthenticationScheme;
             return new AuthenticationSchemes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticationScheme != null ? retObjectAuthenticationScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -423,7 +475,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setAuthenticationScheme(AuthenticationSchemes AuthenticationScheme) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AuthenticationScheme", AuthenticationScheme == null ? null : AuthenticationScheme.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -433,10 +485,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public AuthenticationSchemes getProxyAuthenticationScheme() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyAuthenticationScheme = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyAuthenticationScheme");
+            retObjectProxyAuthenticationScheme = classInstance.Get("ProxyAuthenticationScheme");
+            JCObject val = (JCObject)retObjectProxyAuthenticationScheme;
             return new AuthenticationSchemes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyAuthenticationScheme != null ? retObjectProxyAuthenticationScheme.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +500,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setProxyAuthenticationScheme(AuthenticationSchemes ProxyAuthenticationScheme) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyAuthenticationScheme", ProxyAuthenticationScheme == null ? null : ProxyAuthenticationScheme.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -454,10 +510,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public ExtendedProtectionPolicy getExtendedProtectionPolicy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedProtectionPolicy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExtendedProtectionPolicy");
+            retObjectExtendedProtectionPolicy = classInstance.Get("ExtendedProtectionPolicy");
+            JCObject val = (JCObject)retObjectExtendedProtectionPolicy;
             return new ExtendedProtectionPolicy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExtendedProtectionPolicy != null ? retObjectExtendedProtectionPolicy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +525,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setExtendedProtectionPolicy(ExtendedProtectionPolicy ExtendedProtectionPolicy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException, system.configuration.ConfigurationErrorsException, system.MissingMethodException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedProtectionPolicy", ExtendedProtectionPolicy == null ? null : ExtendedProtectionPolicy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -475,10 +535,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public HttpMessageHandlerFactory getMessageHandlerFactory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessageHandlerFactory = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MessageHandlerFactory");
+            retObjectMessageHandlerFactory = classInstance.Get("MessageHandlerFactory");
+            JCObject val = (JCObject)retObjectMessageHandlerFactory;
             return new HttpMessageHandlerFactory(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMessageHandlerFactory != null ? retObjectMessageHandlerFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,7 +550,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setMessageHandlerFactory(HttpMessageHandlerFactory MessageHandlerFactory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MessageHandlerFactory", MessageHandlerFactory == null ? null : MessageHandlerFactory.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -496,10 +560,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public WebSocketTransportSettings getWebSocketSettings() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWebSocketSettings = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WebSocketSettings");
+            retObjectWebSocketSettings = classInstance.Get("WebSocketSettings");
+            JCObject val = (JCObject)retObjectWebSocketSettings;
             return new WebSocketTransportSettings(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWebSocketSettings != null ? retObjectWebSocketSettings.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -507,7 +575,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setWebSocketSettings(WebSocketTransportSettings WebSocketSettings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WebSocketSettings", WebSocketSettings == null ? null : WebSocketSettings.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -517,10 +585,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public HostNameComparisonMode getHostNameComparisonMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHostNameComparisonMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HostNameComparisonMode");
+            retObjectHostNameComparisonMode = classInstance.Get("HostNameComparisonMode");
+            JCObject val = (JCObject)retObjectHostNameComparisonMode;
             return new HostNameComparisonMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHostNameComparisonMode != null ? retObjectHostNameComparisonMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,7 +600,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setHostNameComparisonMode(HostNameComparisonMode HostNameComparisonMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HostNameComparisonMode", HostNameComparisonMode == null ? null : HostNameComparisonMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -538,10 +610,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public TransferMode getTransferMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransferMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TransferMode");
+            retObjectTransferMode = classInstance.Get("TransferMode");
+            JCObject val = (JCObject)retObjectTransferMode;
             return new TransferMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransferMode != null ? retObjectTransferMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,7 +625,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setTransferMode(TransferMode TransferMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TransferMode", TransferMode == null ? null : TransferMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -559,9 +635,13 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public java.lang.String getRealm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRealm = null;
         try {
-            return (java.lang.String)classInstance.Get("Realm");
+            retObjectRealm = classInstance.Get("Realm");
+            return (java.lang.String)retObjectRealm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRealm != null ? retObjectRealm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,7 +649,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setRealm(java.lang.String Realm) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Realm", Realm);
         } catch (JCNativeException jcne) {
@@ -579,10 +659,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public TimeSpan getRequestInitializationTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestInitializationTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestInitializationTimeout");
+            retObjectRequestInitializationTimeout = classInstance.Get("RequestInitializationTimeout");
+            JCObject val = (JCObject)retObjectRequestInitializationTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestInitializationTimeout != null ? retObjectRequestInitializationTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -590,7 +674,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setRequestInitializationTimeout(TimeSpan RequestInitializationTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestInitializationTimeout", RequestInitializationTimeout == null ? null : RequestInitializationTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -600,10 +684,14 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public Uri getProxyAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProxyAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProxyAddress");
+            retObjectProxyAddress = classInstance.Get("ProxyAddress");
+            JCObject val = (JCObject)retObjectProxyAddress;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProxyAddress != null ? retObjectProxyAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -611,7 +699,7 @@ public class HttpTransportBindingElement extends TransportBindingElement impleme
 
     public void setProxyAddress(Uri ProxyAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProxyAddress", ProxyAddress == null ? null : ProxyAddress.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -156,10 +156,14 @@ public class ForIn extends AST  {
     
     public static IEnumerator JScriptGetEnumerator(NetObject coll) throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, microsoft.jscript.JScriptException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectJScriptGetEnumerator = null;
         try {
-            JCObject objJScriptGetEnumerator = (JCObject)classType.Invoke("JScriptGetEnumerator", coll == null ? null : coll.getJCOInstance());
+            retObjectJScriptGetEnumerator = classType.Invoke("JScriptGetEnumerator", coll == null ? null : coll.getJCOInstance());
+            JCObject objJScriptGetEnumerator = (JCObject)retObjectJScriptGetEnumerator;
             return new IEnumeratorImplementation(objJScriptGetEnumerator);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectJScriptGetEnumerator != null ? retObjectJScriptGetEnumerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

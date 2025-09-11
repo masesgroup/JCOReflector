@@ -166,9 +166,13 @@ public class ZLibCompressionOptions extends NetObject  {
     
     public int getCompressionLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompressionLevel = null;
         try {
-            return (int)classInstance.Get("CompressionLevel");
+            retObjectCompressionLevel = classInstance.Get("CompressionLevel");
+            return (int)retObjectCompressionLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCompressionLevel != null ? retObjectCompressionLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ZLibCompressionOptions extends NetObject  {
 
     public void setCompressionLevel(int CompressionLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompressionLevel", CompressionLevel);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class ZLibCompressionOptions extends NetObject  {
 
     public ZLibCompressionStrategy getCompressionStrategy() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompressionStrategy = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CompressionStrategy");
+            retObjectCompressionStrategy = classInstance.Get("CompressionStrategy");
+            JCObject val = (JCObject)retObjectCompressionStrategy;
             return new ZLibCompressionStrategy(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCompressionStrategy != null ? retObjectCompressionStrategy.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ZLibCompressionOptions extends NetObject  {
 
     public void setCompressionStrategy(ZLibCompressionStrategy CompressionStrategy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CompressionStrategy", CompressionStrategy == null ? null : CompressionStrategy.getJCOInstance());
         } catch (JCNativeException jcne) {

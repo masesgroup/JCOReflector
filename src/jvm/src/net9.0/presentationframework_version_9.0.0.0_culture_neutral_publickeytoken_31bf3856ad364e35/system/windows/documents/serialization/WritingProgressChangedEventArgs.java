@@ -171,9 +171,13 @@ public class WritingProgressChangedEventArgs extends ProgressChangedEventArgs  {
     
     public int getNumber() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumber = null;
         try {
-            return (int)classInstance.Get("Number");
+            retObjectNumber = classInstance.Get("Number");
+            return (int)retObjectNumber;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumber != null ? retObjectNumber.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class WritingProgressChangedEventArgs extends ProgressChangedEventArgs  {
 
     public WritingProgressChangeLevel getWritingLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWritingLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WritingLevel");
+            retObjectWritingLevel = classInstance.Get("WritingLevel");
+            JCObject val = (JCObject)retObjectWritingLevel;
             return new WritingProgressChangeLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWritingLevel != null ? retObjectWritingLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class ScrollEventArgs extends RoutedEventArgs  {
     
     public double getNewValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNewValue = null;
         try {
-            return (double)classInstance.Get("NewValue");
+            retObjectNewValue = classInstance.Get("NewValue");
+            return (double)retObjectNewValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectNewValue != null ? retObjectNewValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class ScrollEventArgs extends RoutedEventArgs  {
 
     public ScrollEventType getScrollEventType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScrollEventType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ScrollEventType");
+            retObjectScrollEventType = classInstance.Get("ScrollEventType");
+            JCObject val = (JCObject)retObjectScrollEventType;
             return new ScrollEventType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScrollEventType != null ? retObjectScrollEventType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

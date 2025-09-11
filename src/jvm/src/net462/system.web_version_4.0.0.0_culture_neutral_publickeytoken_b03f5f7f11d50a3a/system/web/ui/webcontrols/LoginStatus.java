@@ -169,9 +169,13 @@ public class LoginStatus extends CompositeControl  {
     
     public java.lang.String getLoginImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("LoginImageUrl");
+            retObjectLoginImageUrl = classInstance.Get("LoginImageUrl");
+            return (java.lang.String)retObjectLoginImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoginImageUrl != null ? retObjectLoginImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLoginImageUrl(java.lang.String LoginImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoginImageUrl", LoginImageUrl);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class LoginStatus extends CompositeControl  {
 
     public java.lang.String getLoginText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLoginText = null;
         try {
-            return (java.lang.String)classInstance.Get("LoginText");
+            retObjectLoginText = classInstance.Get("LoginText");
+            return (java.lang.String)retObjectLoginText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLoginText != null ? retObjectLoginText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLoginText(java.lang.String LoginText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LoginText", LoginText);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class LoginStatus extends CompositeControl  {
 
     public java.lang.String getLogoutImageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutImageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("LogoutImageUrl");
+            retObjectLogoutImageUrl = classInstance.Get("LogoutImageUrl");
+            return (java.lang.String)retObjectLogoutImageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogoutImageUrl != null ? retObjectLogoutImageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLogoutImageUrl(java.lang.String LogoutImageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogoutImageUrl", LogoutImageUrl);
         } catch (JCNativeException jcne) {
@@ -229,9 +241,13 @@ public class LoginStatus extends CompositeControl  {
 
     public java.lang.String getLogoutPageUrl() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutPageUrl = null;
         try {
-            return (java.lang.String)classInstance.Get("LogoutPageUrl");
+            retObjectLogoutPageUrl = classInstance.Get("LogoutPageUrl");
+            return (java.lang.String)retObjectLogoutPageUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogoutPageUrl != null ? retObjectLogoutPageUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLogoutPageUrl(java.lang.String LogoutPageUrl) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogoutPageUrl", LogoutPageUrl);
         } catch (JCNativeException jcne) {
@@ -249,9 +265,13 @@ public class LoginStatus extends CompositeControl  {
 
     public java.lang.String getLogoutText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutText = null;
         try {
-            return (java.lang.String)classInstance.Get("LogoutText");
+            retObjectLogoutText = classInstance.Get("LogoutText");
+            return (java.lang.String)retObjectLogoutText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogoutText != null ? retObjectLogoutText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +279,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLogoutText(java.lang.String LogoutText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogoutText", LogoutText);
         } catch (JCNativeException jcne) {
@@ -269,10 +289,14 @@ public class LoginStatus extends CompositeControl  {
 
     public LogoutAction getLogoutAction() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogoutAction = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LogoutAction");
+            retObjectLogoutAction = classInstance.Get("LogoutAction");
+            JCObject val = (JCObject)retObjectLogoutAction;
             return new LogoutAction(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLogoutAction != null ? retObjectLogoutAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +304,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void setLogoutAction(LogoutAction LogoutAction) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LogoutAction", LogoutAction == null ? null : LogoutAction.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -295,7 +319,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void addLoggedOut(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoggedOut", handler);
         } catch (JCNativeException jcne) {
@@ -305,7 +329,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void removeLoggedOut(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoggedOut", handler);
         } catch (JCNativeException jcne) {
@@ -315,7 +339,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void addLoggingOut(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoggingOut", handler);
         } catch (JCNativeException jcne) {
@@ -325,7 +349,7 @@ public class LoginStatus extends CompositeControl  {
 
     public void removeLoggingOut(LoginCancelEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoggingOut", handler);
         } catch (JCNativeException jcne) {

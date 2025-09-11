@@ -167,9 +167,13 @@ public class DataListDesigner extends BaseDataListDesigner  {
     
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException, system.NotImplementedException, system.OverflowException, system.MulticastNotSupportedException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class DataListDesigner extends BaseDataListDesigner  {
 
     public java.lang.String GetTemplateContainerDataItemProperty(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateContainerDataItemProperty = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTemplateContainerDataItemProperty", templateName);
+            retObjectGetTemplateContainerDataItemProperty = classInstance.Invoke("GetTemplateContainerDataItemProperty", templateName);
+            return (java.lang.String)retObjectGetTemplateContainerDataItemProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTemplateContainerDataItemProperty != null ? retObjectGetTemplateContainerDataItemProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class DataListDesigner extends BaseDataListDesigner  {
 
     public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> allowEditing) throws Throwable, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTemplateContent = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+            retObjectGetTemplateContent = classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+            return (java.lang.String)retObjectGetTemplateContent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetTemplateContent != null ? retObjectGetTemplateContent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +209,7 @@ public class DataListDesigner extends BaseDataListDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +219,7 @@ public class DataListDesigner extends BaseDataListDesigner  {
 
     public void SetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, java.lang.String templateContent) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpException, system.web.HttpParseException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, templateContent);
         } catch (JCNativeException jcne) {

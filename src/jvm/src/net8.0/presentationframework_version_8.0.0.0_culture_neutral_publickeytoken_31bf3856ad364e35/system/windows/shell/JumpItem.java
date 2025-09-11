@@ -157,9 +157,13 @@ public class JumpItem extends NetObject  {
     
     public java.lang.String getCustomCategory() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomCategory = null;
         try {
-            return (java.lang.String)classInstance.Get("CustomCategory");
+            retObjectCustomCategory = classInstance.Get("CustomCategory");
+            return (java.lang.String)retObjectCustomCategory;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCustomCategory != null ? retObjectCustomCategory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class JumpItem extends NetObject  {
 
     public void setCustomCategory(java.lang.String CustomCategory) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomCategory", CustomCategory);
         } catch (JCNativeException jcne) {

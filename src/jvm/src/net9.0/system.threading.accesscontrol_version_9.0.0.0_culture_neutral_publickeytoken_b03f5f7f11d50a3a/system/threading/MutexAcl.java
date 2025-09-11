@@ -156,9 +156,13 @@ public class MutexAcl extends NetObject  {
     
     public static boolean TryOpenExisting(java.lang.String name, MutexRights rights, JCORefOut<Mutex> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryOpenExisting = null;
         try {
-            return (boolean)classType.Invoke("TryOpenExisting", name, rights == null ? null : rights.getJCOInstance(), result.getJCRefOut());
+            retObjectTryOpenExisting = classType.Invoke("TryOpenExisting", name, rights == null ? null : rights.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryOpenExisting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryOpenExisting != null ? retObjectTryOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class MutexAcl extends NetObject  {
 
     public static Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, MutexSecurity mutexSecurity) throws Throwable, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.LockRecursionException, system.NotSupportedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", initiallyOwned, name, createdNew.getJCRefOut(), mutexSecurity == null ? null : mutexSecurity.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", initiallyOwned, name, createdNew.getJCRefOut(), mutexSecurity == null ? null : mutexSecurity.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Mutex(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class MutexAcl extends NetObject  {
 
     public static Mutex OpenExisting(java.lang.String name, MutexRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.DirectoryNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", name, rights == null ? null : rights.getJCOInstance());
+            retObjectOpenExisting = classType.Invoke("OpenExisting", name, rights == null ? null : rights.getJCOInstance());
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new Mutex(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

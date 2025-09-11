@@ -165,10 +165,14 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
     
     public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResolvedSelectedDataSource = null;
         try {
-            JCObject objGetResolvedSelectedDataSource = (JCObject)classInstance.Invoke("GetResolvedSelectedDataSource");
+            retObjectGetResolvedSelectedDataSource = classInstance.Invoke("GetResolvedSelectedDataSource");
+            JCObject objGetResolvedSelectedDataSource = (JCObject)retObjectGetResolvedSelectedDataSource;
             return new IEnumerableImplementation(objGetResolvedSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResolvedSelectedDataSource != null ? retObjectGetResolvedSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public NetObject GetSelectedDataSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSelectedDataSource = null;
         try {
-            JCObject objGetSelectedDataSource = (JCObject)classInstance.Invoke("GetSelectedDataSource");
+            retObjectGetSelectedDataSource = classInstance.Invoke("GetSelectedDataSource");
+            JCObject objGetSelectedDataSource = (JCObject)retObjectGetSelectedDataSource;
             return new NetObject(objGetSelectedDataSource);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSelectedDataSource != null ? retObjectGetSelectedDataSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public java.lang.String GetDesignTimeHtml() throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.NullReferenceException, system.TypeLoadException, system.NotImplementedException, system.web.HttpException, system.OverflowException, system.web.HttpRequestValidationException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDesignTimeHtml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetDesignTimeHtml");
+            retObjectGetDesignTimeHtml = classInstance.Invoke("GetDesignTimeHtml");
+            return (java.lang.String)retObjectGetDesignTimeHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetDesignTimeHtml != null ? retObjectGetDesignTimeHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +209,7 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,7 +219,7 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public void OnDataSourceChanged() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.configuration.ConfigurationException, system.NotImplementedException, system.web.HttpException, system.InvalidOperationException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnDataSourceChanged");
         } catch (JCNativeException jcne) {
@@ -221,9 +233,13 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
     
     public java.lang.String getDataTextField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataTextField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataTextField");
+            retObjectDataTextField = classInstance.Get("DataTextField");
+            return (java.lang.String)retObjectDataTextField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataTextField != null ? retObjectDataTextField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +247,7 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public void setDataTextField(java.lang.String DataTextField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataTextField", DataTextField);
         } catch (JCNativeException jcne) {
@@ -241,9 +257,13 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public java.lang.String getDataValueField() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataValueField = null;
         try {
-            return (java.lang.String)classInstance.Get("DataValueField");
+            retObjectDataValueField = classInstance.Get("DataValueField");
+            return (java.lang.String)retObjectDataValueField;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDataValueField != null ? retObjectDataValueField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +271,7 @@ public class ListControlDesigner extends DataBoundControlDesigner  {
 
     public void setDataValueField(java.lang.String DataValueField) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DataValueField", DataValueField);
         } catch (JCNativeException jcne) {

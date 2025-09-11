@@ -158,9 +158,13 @@ public class Attribute extends NetObject  {
     
     public boolean IsDefaultAttribute() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsDefaultAttribute = null;
         try {
-            return (boolean)classInstance.Invoke("IsDefaultAttribute");
+            retObjectIsDefaultAttribute = classInstance.Invoke("IsDefaultAttribute");
+            return (boolean)retObjectIsDefaultAttribute;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefaultAttribute != null ? retObjectIsDefaultAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +186,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,9 +200,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +214,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +228,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,9 +242,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,9 +256,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,9 +270,13 @@ public class Attribute extends NetObject  {
 
     public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsDefined = null;
         try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectIsDefined = classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            return (boolean)retObjectIsDefined;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsDefined != null ? retObjectIsDefined.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,9 +284,13 @@ public class Attribute extends NetObject  {
 
     public boolean Match(NetObject obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatch = null;
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            retObjectMatch = classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectMatch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatch != null ? retObjectMatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +298,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +313,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +328,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,10 +343,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,10 +358,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,10 +373,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,10 +388,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,10 +403,14 @@ public class Attribute extends NetObject  {
 
     public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.reflection.AmbiguousMatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttribute = null;
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttribute = classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject objGetCustomAttribute = (JCObject)retObjectGetCustomAttribute;
             return new Attribute(objGetCustomAttribute);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttribute != null ? retObjectGetCustomAttribute.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,16 +418,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Assembly element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -363,16 +439,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,16 +460,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,16 +481,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,16 +502,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(MemberInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,16 +523,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,16 +544,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,16 +565,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,16 +586,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Module element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -499,16 +607,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -516,16 +628,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -533,16 +649,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(Module element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,16 +670,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(ParameterInfo element, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,16 +691,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.FormatException, system.NullReferenceException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -584,16 +712,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -601,16 +733,20 @@ public class Attribute extends NetObject  {
 
     public static Attribute[] GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomAttributes = null;
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            retObjectGetCustomAttributes = classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetCustomAttributes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomAttributes != null ? retObjectGetCustomAttributes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -622,10 +758,14 @@ public class Attribute extends NetObject  {
     
     public NetObject getTypeId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypeId");
+            retObjectTypeId = classInstance.Get("TypeId");
+            JCObject val = (JCObject)retObjectTypeId;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeId != null ? retObjectTypeId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

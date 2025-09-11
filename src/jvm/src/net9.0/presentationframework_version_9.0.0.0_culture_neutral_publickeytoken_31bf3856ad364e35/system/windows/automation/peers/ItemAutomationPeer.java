@@ -158,10 +158,14 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
     
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPattern = null;
         try {
-            JCObject objGetPattern = (JCObject)classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            retObjectGetPattern = classInstance.Invoke("GetPattern", patternInterface == null ? null : patternInterface.getJCOInstance());
+            JCObject objGetPattern = (JCObject)retObjectGetPattern;
             return new NetObject(objGetPattern);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPattern != null ? retObjectGetPattern.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
      */
     @Deprecated 
     public void Realize() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
     }
 
 
@@ -182,10 +186,14 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
     
     public NetObject getItem() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItem = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Item");
+            retObjectItem = classInstance.Get("Item");
+            JCObject val = (JCObject)retObjectItem;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItem != null ? retObjectItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
 
     public void setItem(NetObject Item) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Item", Item == null ? null : Item.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,10 +211,14 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
 
     public ItemsControlAutomationPeer getItemsControlAutomationPeer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectItemsControlAutomationPeer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ItemsControlAutomationPeer");
+            retObjectItemsControlAutomationPeer = classInstance.Get("ItemsControlAutomationPeer");
+            JCObject val = (JCObject)retObjectItemsControlAutomationPeer;
             return new ItemsControlAutomationPeer(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectItemsControlAutomationPeer != null ? retObjectItemsControlAutomationPeer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
 
     public void setItemsControlAutomationPeer(ItemsControlAutomationPeer ItemsControlAutomationPeer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ItemsControlAutomationPeer", ItemsControlAutomationPeer == null ? null : ItemsControlAutomationPeer.getJCOInstance());
         } catch (JCNativeException jcne) {

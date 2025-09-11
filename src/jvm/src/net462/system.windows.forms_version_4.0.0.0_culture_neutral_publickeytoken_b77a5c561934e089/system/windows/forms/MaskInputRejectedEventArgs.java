@@ -171,9 +171,13 @@ public class MaskInputRejectedEventArgs extends EventArgs  {
     
     public int getPosition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPosition = null;
         try {
-            return (int)classInstance.Get("Position");
+            retObjectPosition = classInstance.Get("Position");
+            return (int)retObjectPosition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPosition != null ? retObjectPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class MaskInputRejectedEventArgs extends EventArgs  {
 
     public MaskedTextResultHint getRejectionHint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRejectionHint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RejectionHint");
+            retObjectRejectionHint = classInstance.Get("RejectionHint");
+            JCObject val = (JCObject)retObjectRejectionHint;
             return new MaskedTextResultHint(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRejectionHint != null ? retObjectRejectionHint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

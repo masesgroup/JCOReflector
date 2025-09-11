@@ -147,10 +147,14 @@ public class IAutomationLiveRegionImplementation extends NetObject implements IA
     
     public AutomationLiveSetting getLiveSetting() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLiveSetting = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LiveSetting");
+            retObjectLiveSetting = classInstance.Get("LiveSetting");
+            JCObject val = (JCObject)retObjectLiveSetting;
             return new AutomationLiveSetting(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLiveSetting != null ? retObjectLiveSetting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +162,7 @@ public class IAutomationLiveRegionImplementation extends NetObject implements IA
 
     public void setLiveSetting(AutomationLiveSetting LiveSetting) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LiveSetting", LiveSetting == null ? null : LiveSetting.getJCOInstance());
         } catch (JCNativeException jcne) {

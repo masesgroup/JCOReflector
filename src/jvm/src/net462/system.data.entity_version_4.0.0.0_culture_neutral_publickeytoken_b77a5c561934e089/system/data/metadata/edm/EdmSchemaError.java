@@ -161,9 +161,13 @@ public class EdmSchemaError extends EdmError  {
     
     public int getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            return (int)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            return (int)retObjectColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class EdmSchemaError extends EdmError  {
 
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCode = null;
         try {
-            return (int)classInstance.Get("ErrorCode");
+            retObjectErrorCode = classInstance.Get("ErrorCode");
+            return (int)retObjectErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class EdmSchemaError extends EdmError  {
 
     public int getLine() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLine = null;
         try {
-            return (int)classInstance.Get("Line");
+            retObjectLine = classInstance.Get("Line");
+            return (int)retObjectLine;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLine != null ? retObjectLine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +203,14 @@ public class EdmSchemaError extends EdmError  {
 
     public EdmSchemaErrorSeverity getSeverity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSeverity = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Severity");
+            retObjectSeverity = classInstance.Get("Severity");
+            JCObject val = (JCObject)retObjectSeverity;
             return new EdmSchemaErrorSeverity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSeverity != null ? retObjectSeverity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +218,7 @@ public class EdmSchemaError extends EdmError  {
 
     public void setSeverity(EdmSchemaErrorSeverity Severity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Severity", Severity == null ? null : Severity.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -212,9 +228,13 @@ public class EdmSchemaError extends EdmError  {
 
     public java.lang.String getSchemaLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("SchemaLocation");
+            retObjectSchemaLocation = classInstance.Get("SchemaLocation");
+            return (java.lang.String)retObjectSchemaLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSchemaLocation != null ? retObjectSchemaLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,9 +242,13 @@ public class EdmSchemaError extends EdmError  {
 
     public java.lang.String getSchemaName() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSchemaName = null;
         try {
-            return (java.lang.String)classInstance.Get("SchemaName");
+            retObjectSchemaName = classInstance.Get("SchemaName");
+            return (java.lang.String)retObjectSchemaName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSchemaName != null ? retObjectSchemaName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +256,13 @@ public class EdmSchemaError extends EdmError  {
 
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStackTrace = null;
         try {
-            return (java.lang.String)classInstance.Get("StackTrace");
+            retObjectStackTrace = classInstance.Get("StackTrace");
+            return (java.lang.String)retObjectStackTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStackTrace != null ? retObjectStackTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -193,9 +193,13 @@ public class VsaEngine extends BaseVsaEngine  {
     
     public boolean CompileEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompileEmpty = null;
         try {
-            return (boolean)classInstance.Invoke("CompileEmpty");
+            retObjectCompileEmpty = classInstance.Invoke("CompileEmpty");
+            return (boolean)retObjectCompileEmpty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCompileEmpty != null ? retObjectCompileEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +207,13 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public boolean IsValidIdentifier(java.lang.String ident) throws Throwable, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, microsoft.jscript.EndOfFile, system.OutOfMemoryException, system.NotSupportedException, system.NotImplementedException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValidIdentifier = null;
         try {
-            return (boolean)classInstance.Invoke("IsValidIdentifier", ident);
+            retObjectIsValidIdentifier = classInstance.Invoke("IsValidIdentifier", ident);
+            return (boolean)retObjectIsValidIdentifier;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidIdentifier != null ? retObjectIsValidIdentifier.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +221,19 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public int GetItemCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemCount = null;
         try {
-            return (int)classInstance.Invoke("GetItemCount");
+            retObjectGetItemCount = classInstance.Invoke("GetItemCount");
+            return (int)retObjectGetItemCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetItemCountNumber = (java.lang.Number)retObjectGetItemCount;
+                return retObjectGetItemCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetItemCount != null ? retObjectGetItemCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +241,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public ArrayConstructor GetOriginalArrayConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOriginalArrayConstructor = null;
         try {
-            JCObject objGetOriginalArrayConstructor = (JCObject)classInstance.Invoke("GetOriginalArrayConstructor");
+            retObjectGetOriginalArrayConstructor = classInstance.Invoke("GetOriginalArrayConstructor");
+            JCObject objGetOriginalArrayConstructor = (JCObject)retObjectGetOriginalArrayConstructor;
             return new ArrayConstructor(objGetOriginalArrayConstructor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOriginalArrayConstructor != null ? retObjectGetOriginalArrayConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +256,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScope(boolean fast, java.lang.String[] assemblyNames) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScope = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", fast, assemblyNames);
+            retObjectCreateEngineAndGetGlobalScope = classType.Invoke("CreateEngineAndGetGlobalScope", fast, assemblyNames);
+            JCObject objCreateEngineAndGetGlobalScope = (JCObject)retObjectCreateEngineAndGetGlobalScope;
             return new GlobalScope(objCreateEngineAndGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScope != null ? retObjectCreateEngineAndGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +271,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScope(boolean dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScope = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", dupParam0, dupParam1.getJCRefOut());
+            retObjectCreateEngineAndGetGlobalScope = classType.Invoke("CreateEngineAndGetGlobalScope", dupParam0, dupParam1.getJCRefOut());
+            JCObject objCreateEngineAndGetGlobalScope = (JCObject)retObjectCreateEngineAndGetGlobalScope;
             return new GlobalScope(objCreateEngineAndGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScope != null ? retObjectCreateEngineAndGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,10 +286,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScopeWithType = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithType", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
+            retObjectCreateEngineAndGetGlobalScopeWithType = classType.Invoke("CreateEngineAndGetGlobalScopeWithType", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
+            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)retObjectCreateEngineAndGetGlobalScopeWithType;
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScopeWithType != null ? retObjectCreateEngineAndGetGlobalScopeWithType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,10 +301,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScopeWithType = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithType", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            retObjectCreateEngineAndGetGlobalScopeWithType = classType.Invoke("CreateEngineAndGetGlobalScopeWithType", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)retObjectCreateEngineAndGetGlobalScopeWithType;
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScopeWithType != null ? retObjectCreateEngineAndGetGlobalScopeWithType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,10 +316,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean fast, java.lang.String[] assemblyNames, RuntimeTypeHandle callingTypeHandle, java.lang.String rootNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance(), rootNamespace);
+            retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", fast, assemblyNames, callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance(), rootNamespace);
+            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace;
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace != null ? retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,10 +331,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = null;
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace;
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace != null ? retObjectCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,10 +346,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public GlobalScope GetMainScope() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetMainScope = null;
         try {
-            JCObject objGetMainScope = (JCObject)classInstance.Invoke("GetMainScope");
+            retObjectGetMainScope = classInstance.Invoke("GetMainScope");
+            JCObject objGetMainScope = (JCObject)retObjectGetMainScope;
             return new GlobalScope(objGetMainScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetMainScope != null ? retObjectGetMainScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,10 +361,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public IVsaScriptScope GetGlobalScope() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetGlobalScope = null;
         try {
-            JCObject objGetGlobalScope = (JCObject)classInstance.Invoke("GetGlobalScope");
+            retObjectGetGlobalScope = classInstance.Invoke("GetGlobalScope");
+            JCObject objGetGlobalScope = (JCObject)retObjectGetGlobalScope;
             return new IVsaScriptScopeImplementation(objGetGlobalScope);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetGlobalScope != null ? retObjectGetGlobalScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,10 +376,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public ObjectConstructor GetOriginalObjectConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOriginalObjectConstructor = null;
         try {
-            JCObject objGetOriginalObjectConstructor = (JCObject)classInstance.Invoke("GetOriginalObjectConstructor");
+            retObjectGetOriginalObjectConstructor = classInstance.Invoke("GetOriginalObjectConstructor");
+            JCObject objGetOriginalObjectConstructor = (JCObject)retObjectGetOriginalObjectConstructor;
             return new ObjectConstructor(objGetOriginalObjectConstructor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOriginalObjectConstructor != null ? retObjectGetOriginalObjectConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,10 +391,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public RegExpConstructor GetOriginalRegExpConstructor() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOriginalRegExpConstructor = null;
         try {
-            JCObject objGetOriginalRegExpConstructor = (JCObject)classInstance.Invoke("GetOriginalRegExpConstructor");
+            retObjectGetOriginalRegExpConstructor = classInstance.Invoke("GetOriginalRegExpConstructor");
+            JCObject objGetOriginalRegExpConstructor = (JCObject)retObjectGetOriginalRegExpConstructor;
             return new RegExpConstructor(objGetOriginalRegExpConstructor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOriginalRegExpConstructor != null ? retObjectGetOriginalRegExpConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +406,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public ScriptObject PopScriptObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPopScriptObject = null;
         try {
-            JCObject objPopScriptObject = (JCObject)classInstance.Invoke("PopScriptObject");
+            retObjectPopScriptObject = classInstance.Invoke("PopScriptObject");
+            JCObject objPopScriptObject = (JCObject)retObjectPopScriptObject;
             return new ScriptObject(objPopScriptObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPopScriptObject != null ? retObjectPopScriptObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,10 +421,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public ScriptObject ScriptObjectStackTop() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectScriptObjectStackTop = null;
         try {
-            JCObject objScriptObjectStackTop = (JCObject)classInstance.Invoke("ScriptObjectStackTop");
+            retObjectScriptObjectStackTop = classInstance.Invoke("ScriptObjectStackTop");
+            JCObject objScriptObjectStackTop = (JCObject)retObjectScriptObjectStackTop;
             return new ScriptObject(objScriptObjectStackTop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectScriptObjectStackTop != null ? retObjectScriptObjectStackTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,10 +436,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public IJSVsaEngine Clone(AppDomain domain) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
+            retObjectClone = classInstance.Invoke("Clone", domain == null ? null : domain.getJCOInstance());
+            JCObject objClone = (JCObject)retObjectClone;
             return new IJSVsaEngineImplementation(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,10 +451,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public IJSVsaItem GetItem(java.lang.String itemName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItem = null;
         try {
-            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", itemName);
+            retObjectGetItem = classInstance.Invoke("GetItem", itemName);
+            JCObject objGetItem = (JCObject)retObjectGetItem;
             return new IJSVsaItemImplementation(objGetItem);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItem != null ? retObjectGetItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,10 +466,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public IJSVsaItem GetItemAtIndex(int index) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetItemAtIndex = null;
         try {
-            JCObject objGetItemAtIndex = (JCObject)classInstance.Invoke("GetItemAtIndex", index);
+            retObjectGetItemAtIndex = classInstance.Invoke("GetItemAtIndex", index);
+            JCObject objGetItemAtIndex = (JCObject)retObjectGetItemAtIndex;
             return new IJSVsaItemImplementation(objGetItemAtIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetItemAtIndex != null ? retObjectGetItemAtIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -399,10 +481,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static VsaEngine CreateEngine() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngine = null;
         try {
-            JCObject objCreateEngine = (JCObject)classType.Invoke("CreateEngine");
+            retObjectCreateEngine = classType.Invoke("CreateEngine");
+            JCObject objCreateEngine = (JCObject)retObjectCreateEngine;
             return new VsaEngine(objCreateEngine);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngine != null ? retObjectCreateEngine.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -410,10 +496,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public static VsaEngine CreateEngineWithType(RuntimeTypeHandle callingTypeHandle) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateEngineWithType = null;
         try {
-            JCObject objCreateEngineWithType = (JCObject)classType.Invoke("CreateEngineWithType", callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
+            retObjectCreateEngineWithType = classType.Invoke("CreateEngineWithType", callingTypeHandle == null ? null : callingTypeHandle.getJCOInstance());
+            JCObject objCreateEngineWithType = (JCObject)retObjectCreateEngineWithType;
             return new VsaEngine(objCreateEngineWithType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEngineWithType != null ? retObjectCreateEngineWithType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -421,10 +511,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public Assembly GetAssembly() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetAssembly = null;
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly");
+            retObjectGetAssembly = classInstance.Invoke("GetAssembly");
+            JCObject objGetAssembly = (JCObject)retObjectGetAssembly;
             return new Assembly(objGetAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetAssembly != null ? retObjectGetAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,10 +526,14 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public Module GetModule() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, microsoft.jscript.EndOfFile, system.TypeLoadException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModule = null;
         try {
-            JCObject objGetModule = (JCObject)classInstance.Invoke("GetModule");
+            retObjectGetModule = classInstance.Invoke("GetModule");
+            JCObject objGetModule = (JCObject)retObjectGetModule;
             return new Module(objGetModule);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetModule != null ? retObjectGetModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +541,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void ConnectEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ConnectEvents");
         } catch (JCNativeException jcne) {
@@ -453,7 +551,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void DisconnectEvents() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DisconnectEvents");
         } catch (JCNativeException jcne) {
@@ -463,7 +561,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void InitVsaEngine(java.lang.String rootMoniker, IJSVsaSite site) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitVsaEngine", rootMoniker, site == null ? null : site.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -473,7 +571,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void Interrupt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Interrupt");
         } catch (JCNativeException jcne) {
@@ -483,7 +581,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void PushScriptObject(ScriptObject obj) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("PushScriptObject", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -493,7 +591,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void RegisterEventSource(java.lang.String name) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterEventSource", name);
         } catch (JCNativeException jcne) {
@@ -503,7 +601,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void Reset() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -513,7 +611,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void Restart() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Restart");
         } catch (JCNativeException jcne) {
@@ -523,7 +621,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void Run(AppDomain domain) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Run", domain == null ? null : domain.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -533,7 +631,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void RunEmpty() throws Throwable, system.ArgumentException, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RunEmpty");
         } catch (JCNativeException jcne) {
@@ -543,7 +641,7 @@ public class VsaEngine extends BaseVsaEngine  {
 
     public void SetOutputStream(IMessageReceiver output) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetOutputStream", output == null ? null : output.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -557,10 +655,14 @@ public class VsaEngine extends BaseVsaEngine  {
     
     public LenientGlobalObject getLenientGlobalObject() throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLenientGlobalObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LenientGlobalObject");
+            retObjectLenientGlobalObject = classInstance.Get("LenientGlobalObject");
+            JCObject val = (JCObject)retObjectLenientGlobalObject;
             return new LenientGlobalObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLenientGlobalObject != null ? retObjectLenientGlobalObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,7 +142,7 @@ public class IValidatorImplementation extends NetObject implements IValidator {
     
     public void Validate() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate");
         } catch (JCNativeException jcne) {
@@ -156,9 +156,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
     
     public boolean getIsValid() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsValid = null;
         try {
-            return (boolean)classInstance.Get("IsValid");
+            retObjectIsValid = classInstance.Get("IsValid");
+            return (boolean)retObjectIsValid;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsValid != null ? retObjectIsValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,7 +170,7 @@ public class IValidatorImplementation extends NetObject implements IValidator {
 
     public void setIsValid(boolean IsValid) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsValid", IsValid);
         } catch (JCNativeException jcne) {
@@ -176,9 +180,13 @@ public class IValidatorImplementation extends NetObject implements IValidator {
 
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorMessage");
+            retObjectErrorMessage = classInstance.Get("ErrorMessage");
+            return (java.lang.String)retObjectErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorMessage != null ? retObjectErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +194,7 @@ public class IValidatorImplementation extends NetObject implements IValidator {
 
     public void setErrorMessage(java.lang.String ErrorMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorMessage", ErrorMessage);
         } catch (JCNativeException jcne) {

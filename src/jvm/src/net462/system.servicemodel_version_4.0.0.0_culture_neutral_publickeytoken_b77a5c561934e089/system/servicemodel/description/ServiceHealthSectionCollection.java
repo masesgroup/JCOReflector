@@ -162,10 +162,14 @@ public class ServiceHealthSectionCollection extends NetObjectEnumerable  {
     
     public ServiceHealthSection CreateSection(java.lang.String title) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSection = null;
         try {
-            JCObject objCreateSection = (JCObject)classInstance.Invoke("CreateSection", title);
+            retObjectCreateSection = classInstance.Invoke("CreateSection", title);
+            JCObject objCreateSection = (JCObject)retObjectCreateSection;
             return new ServiceHealthSection(objCreateSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSection != null ? retObjectCreateSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ServiceHealthSectionCollection extends NetObjectEnumerable  {
 
     public ServiceHealthSection CreateSection(java.lang.String title, java.lang.String backgroundColor) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSection = null;
         try {
-            JCObject objCreateSection = (JCObject)classInstance.Invoke("CreateSection", title, backgroundColor);
+            retObjectCreateSection = classInstance.Invoke("CreateSection", title, backgroundColor);
+            JCObject objCreateSection = (JCObject)retObjectCreateSection;
             return new ServiceHealthSection(objCreateSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSection != null ? retObjectCreateSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class ServiceHealthSectionCollection extends NetObjectEnumerable  {
 
     public ServiceHealthSection CreateSection(java.lang.String title, java.lang.String backgroundColor, java.lang.String foregroundColor) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateSection = null;
         try {
-            JCObject objCreateSection = (JCObject)classInstance.Invoke("CreateSection", title, backgroundColor, foregroundColor);
+            retObjectCreateSection = classInstance.Invoke("CreateSection", title, backgroundColor, foregroundColor);
+            JCObject objCreateSection = (JCObject)retObjectCreateSection;
             return new ServiceHealthSection(objCreateSection);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateSection != null ? retObjectCreateSection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

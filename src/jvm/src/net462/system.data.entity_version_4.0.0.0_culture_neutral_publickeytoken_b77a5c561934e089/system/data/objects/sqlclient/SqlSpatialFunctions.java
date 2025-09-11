@@ -155,10 +155,14 @@ public class SqlSpatialFunctions extends NetObject  {
     
     public static DbGeography EnvelopeCenter(DbGeography geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEnvelopeCenter = null;
         try {
-            JCObject objEnvelopeCenter = (JCObject)classType.Invoke("EnvelopeCenter", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectEnvelopeCenter = classType.Invoke("EnvelopeCenter", geographyValue == null ? null : geographyValue.getJCOInstance());
+            JCObject objEnvelopeCenter = (JCObject)retObjectEnvelopeCenter;
             return new DbGeography(objEnvelopeCenter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvelopeCenter != null ? retObjectEnvelopeCenter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class SqlSpatialFunctions extends NetObject  {
 
     public static DbGeometry MakeValid(DbGeometry geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeValid = null;
         try {
-            JCObject objMakeValid = (JCObject)classType.Invoke("MakeValid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectMakeValid = classType.Invoke("MakeValid", geometryValue == null ? null : geometryValue.getJCOInstance());
+            JCObject objMakeValid = (JCObject)retObjectMakeValid;
             return new DbGeometry(objMakeValid);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeValid != null ? retObjectMakeValid.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class SqlSpatialFunctions extends NetObject  {
 
     public static java.lang.String AsTextZM(DbGeography geographyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsTextZM = null;
         try {
-            return (java.lang.String)classType.Invoke("AsTextZM", geographyValue == null ? null : geographyValue.getJCOInstance());
+            retObjectAsTextZM = classType.Invoke("AsTextZM", geographyValue == null ? null : geographyValue.getJCOInstance());
+            return (java.lang.String)retObjectAsTextZM;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsTextZM != null ? retObjectAsTextZM.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class SqlSpatialFunctions extends NetObject  {
 
     public static java.lang.String AsTextZM(DbGeometry geometryValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAsTextZM = null;
         try {
-            return (java.lang.String)classType.Invoke("AsTextZM", geometryValue == null ? null : geometryValue.getJCOInstance());
+            retObjectAsTextZM = classType.Invoke("AsTextZM", geometryValue == null ? null : geometryValue.getJCOInstance());
+            return (java.lang.String)retObjectAsTextZM;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectAsTextZM != null ? retObjectAsTextZM.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

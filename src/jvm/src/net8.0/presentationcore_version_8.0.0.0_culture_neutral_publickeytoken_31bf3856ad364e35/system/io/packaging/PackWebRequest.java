@@ -165,10 +165,14 @@ public class PackWebRequest extends WebRequest  {
     
     public Stream GetRequestStream() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestStream = null;
         try {
-            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream");
+            retObjectGetRequestStream = classInstance.Invoke("GetRequestStream");
+            JCObject objGetRequestStream = (JCObject)retObjectGetRequestStream;
             return new Stream(objGetRequestStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRequestStream != null ? retObjectGetRequestStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,10 +180,14 @@ public class PackWebRequest extends WebRequest  {
 
     public WebRequest GetInnerRequest() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.UriFormatException, system.FormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.net.WebException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetInnerRequest = null;
         try {
-            JCObject objGetInnerRequest = (JCObject)classInstance.Invoke("GetInnerRequest");
+            retObjectGetInnerRequest = classInstance.Invoke("GetInnerRequest");
+            JCObject objGetInnerRequest = (JCObject)retObjectGetInnerRequest;
             return new WebRequest(objGetInnerRequest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetInnerRequest != null ? retObjectGetInnerRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,10 +195,14 @@ public class PackWebRequest extends WebRequest  {
 
     public WebResponse GetResponse() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.net.WebException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.UriFormatException, system.NotSupportedException, system.ArrayTypeMismatchException, system.diagnostics.UnreachableException, system.RankException, system.componentmodel.Win32Exception, system.net.CookieException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetResponse = null;
         try {
-            JCObject objGetResponse = (JCObject)classInstance.Invoke("GetResponse");
+            retObjectGetResponse = classInstance.Invoke("GetResponse");
+            JCObject objGetResponse = (JCObject)retObjectGetResponse;
             return new WebResponse(objGetResponse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetResponse != null ? retObjectGetResponse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

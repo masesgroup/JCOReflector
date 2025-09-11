@@ -172,9 +172,13 @@ public class TableLayoutCellPaintEventArgs extends PaintEventArgs  {
     
     public int getColumn() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumn = null;
         try {
-            return (int)classInstance.Get("Column");
+            retObjectColumn = classInstance.Get("Column");
+            return (int)retObjectColumn;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumn != null ? retObjectColumn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +186,13 @@ public class TableLayoutCellPaintEventArgs extends PaintEventArgs  {
 
     public int getRow() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRow = null;
         try {
-            return (int)classInstance.Get("Row");
+            retObjectRow = classInstance.Get("Row");
+            return (int)retObjectRow;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRow != null ? retObjectRow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class TableLayoutCellPaintEventArgs extends PaintEventArgs  {
 
     public Rectangle getCellBounds() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCellBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CellBounds");
+            retObjectCellBounds = classInstance.Get("CellBounds");
+            JCObject val = (JCObject)retObjectCellBounds;
             return new Rectangle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCellBounds != null ? retObjectCellBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -171,9 +171,13 @@ public class ContrastCurveEffect extends ColorCurveEffect  {
     
     public int getContrast() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContrast = null;
         try {
-            return (int)classInstance.Get("Contrast");
+            retObjectContrast = classInstance.Get("Contrast");
+            return (int)retObjectContrast;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectContrast != null ? retObjectContrast.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

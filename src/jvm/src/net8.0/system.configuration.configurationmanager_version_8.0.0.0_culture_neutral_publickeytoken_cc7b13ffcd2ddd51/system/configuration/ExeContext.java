@@ -160,10 +160,14 @@ public class ExeContext extends NetObject  {
     
     public ConfigurationUserLevel getUserLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserLevel");
+            retObjectUserLevel = classInstance.Get("UserLevel");
+            JCObject val = (JCObject)retObjectUserLevel;
             return new ConfigurationUserLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserLevel != null ? retObjectUserLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +175,13 @@ public class ExeContext extends NetObject  {
 
     public java.lang.String getExePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExePath = null;
         try {
-            return (java.lang.String)classInstance.Get("ExePath");
+            retObjectExePath = classInstance.Get("ExePath");
+            return (java.lang.String)retObjectExePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExePath != null ? retObjectExePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

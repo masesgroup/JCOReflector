@@ -158,7 +158,7 @@ public class MultiBindingExpression extends BindingExpressionBase  {
     
     public void UpdateSource() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidCastException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateSource");
         } catch (JCNativeException jcne) {
@@ -168,7 +168,7 @@ public class MultiBindingExpression extends BindingExpressionBase  {
 
     public void UpdateTarget() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("UpdateTarget");
         } catch (JCNativeException jcne) {
@@ -182,10 +182,14 @@ public class MultiBindingExpression extends BindingExpressionBase  {
     
     public MultiBinding getParentMultiBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParentMultiBinding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParentMultiBinding");
+            retObjectParentMultiBinding = classInstance.Get("ParentMultiBinding");
+            JCObject val = (JCObject)retObjectParentMultiBinding;
             return new MultiBinding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParentMultiBinding != null ? retObjectParentMultiBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

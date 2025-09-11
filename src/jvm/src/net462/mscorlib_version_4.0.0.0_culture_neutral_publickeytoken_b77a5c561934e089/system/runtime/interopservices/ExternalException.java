@@ -184,9 +184,13 @@ public class ExternalException extends SystemException {
     
     public int getErrorCode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorCode = null;
         try {
-            return (int)classInstance.Get("ErrorCode");
+            retObjectErrorCode = classInstance.Get("ErrorCode");
+            return (int)retObjectErrorCode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectErrorCode != null ? retObjectErrorCode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

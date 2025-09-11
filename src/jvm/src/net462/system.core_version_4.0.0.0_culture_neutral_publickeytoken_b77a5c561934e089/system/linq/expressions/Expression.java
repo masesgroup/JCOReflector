@@ -197,9 +197,13 @@ public class Expression extends NetObject  {
     
     public static boolean TryGetActionType(NetType[] typeArgs, JCORefOut<NetType> actionType) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetActionType = null;
         try {
-            return (boolean)classType.Invoke("TryGetActionType", toObjectFromArray(typeArgs), actionType.getJCRefOut());
+            retObjectTryGetActionType = classType.Invoke("TryGetActionType", toObjectFromArray(typeArgs), actionType.getJCRefOut());
+            return (boolean)retObjectTryGetActionType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetActionType != null ? retObjectTryGetActionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +211,13 @@ public class Expression extends NetObject  {
 
     public static boolean TryGetFuncType(NetType[] typeArgs, JCORefOut<NetType> funcType) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryGetFuncType = null;
         try {
-            return (boolean)classType.Invoke("TryGetFuncType", toObjectFromArray(typeArgs), funcType.getJCRefOut());
+            retObjectTryGetFuncType = classType.Invoke("TryGetFuncType", toObjectFromArray(typeArgs), funcType.getJCRefOut());
+            return (boolean)retObjectTryGetFuncType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryGetFuncType != null ? retObjectTryGetFuncType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +225,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Add(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new BinaryExpression(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +240,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Add(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAdd = null;
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAdd = classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAdd = (JCObject)retObjectAdd;
             return new BinaryExpression(objAdd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdd != null ? retObjectAdd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +255,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssign = null;
         try {
-            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAddAssign = classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAddAssign = (JCObject)retObjectAddAssign;
             return new BinaryExpression(objAddAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssign != null ? retObjectAddAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +270,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssign = null;
         try {
-            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAddAssign = classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAddAssign = (JCObject)retObjectAddAssign;
             return new BinaryExpression(objAddAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssign != null ? retObjectAddAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +285,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssign = null;
         try {
-            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectAddAssign = classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAddAssign = (JCObject)retObjectAddAssign;
             return new BinaryExpression(objAddAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssign != null ? retObjectAddAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +300,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssignChecked = null;
         try {
-            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAddAssignChecked = classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAddAssignChecked = (JCObject)retObjectAddAssignChecked;
             return new BinaryExpression(objAddAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssignChecked != null ? retObjectAddAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +315,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssignChecked = null;
         try {
-            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAddAssignChecked = classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAddAssignChecked = (JCObject)retObjectAddAssignChecked;
             return new BinaryExpression(objAddAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssignChecked != null ? retObjectAddAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,10 +330,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddAssignChecked = null;
         try {
-            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectAddAssignChecked = classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAddAssignChecked = (JCObject)retObjectAddAssignChecked;
             return new BinaryExpression(objAddAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddAssignChecked != null ? retObjectAddAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,10 +345,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddChecked = null;
         try {
-            JCObject objAddChecked = (JCObject)classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAddChecked = classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAddChecked = (JCObject)retObjectAddChecked;
             return new BinaryExpression(objAddChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddChecked != null ? retObjectAddChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,10 +360,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AddChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAddChecked = null;
         try {
-            JCObject objAddChecked = (JCObject)classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAddChecked = classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAddChecked = (JCObject)retObjectAddChecked;
             return new BinaryExpression(objAddChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddChecked != null ? retObjectAddChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,10 +375,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression And(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnd = null;
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAnd = classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAnd = (JCObject)retObjectAnd;
             return new BinaryExpression(objAnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnd != null ? retObjectAnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,10 +390,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression And(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAnd = null;
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAnd = classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAnd = (JCObject)retObjectAnd;
             return new BinaryExpression(objAnd);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAnd != null ? retObjectAnd.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,10 +405,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AndAlso(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndAlso = null;
         try {
-            JCObject objAndAlso = (JCObject)classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAndAlso = classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAndAlso = (JCObject)retObjectAndAlso;
             return new BinaryExpression(objAndAlso);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndAlso != null ? retObjectAndAlso.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,10 +420,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AndAlso(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndAlso = null;
         try {
-            JCObject objAndAlso = (JCObject)classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAndAlso = classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAndAlso = (JCObject)retObjectAndAlso;
             return new BinaryExpression(objAndAlso);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndAlso != null ? retObjectAndAlso.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,10 +435,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AndAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndAssign = null;
         try {
-            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAndAssign = classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAndAssign = (JCObject)retObjectAndAssign;
             return new BinaryExpression(objAndAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndAssign != null ? retObjectAndAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -382,10 +450,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndAssign = null;
         try {
-            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectAndAssign = classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objAndAssign = (JCObject)retObjectAndAssign;
             return new BinaryExpression(objAndAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndAssign != null ? retObjectAndAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,10 +465,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAndAssign = null;
         try {
-            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectAndAssign = classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAndAssign = (JCObject)retObjectAndAssign;
             return new BinaryExpression(objAndAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAndAssign != null ? retObjectAndAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,10 +480,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ArrayIndex(Expression array, Expression index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrayIndex = null;
         try {
-            JCObject objArrayIndex = (JCObject)classType.Invoke("ArrayIndex", array == null ? null : array.getJCOInstance(), index == null ? null : index.getJCOInstance());
+            retObjectArrayIndex = classType.Invoke("ArrayIndex", array == null ? null : array.getJCOInstance(), index == null ? null : index.getJCOInstance());
+            JCObject objArrayIndex = (JCObject)retObjectArrayIndex;
             return new BinaryExpression(objArrayIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrayIndex != null ? retObjectArrayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,10 +495,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Assign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectAssign = null;
         try {
-            JCObject objAssign = (JCObject)classType.Invoke("Assign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectAssign = classType.Invoke("Assign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAssign = (JCObject)retObjectAssign;
             return new BinaryExpression(objAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssign != null ? retObjectAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -426,10 +510,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Coalesce(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCoalesce = null;
         try {
-            JCObject objCoalesce = (JCObject)classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectCoalesce = classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objCoalesce = (JCObject)retObjectCoalesce;
             return new BinaryExpression(objCoalesce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoalesce != null ? retObjectCoalesce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,10 +525,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Coalesce(Expression left, Expression right, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCoalesce = null;
         try {
-            JCObject objCoalesce = (JCObject)classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectCoalesce = classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objCoalesce = (JCObject)retObjectCoalesce;
             return new BinaryExpression(objCoalesce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCoalesce != null ? retObjectCoalesce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,10 +540,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Divide(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new BinaryExpression(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -459,10 +555,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Divide(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivide = null;
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectDivide = classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objDivide = (JCObject)retObjectDivide;
             return new BinaryExpression(objDivide);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivide != null ? retObjectDivide.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,10 +570,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression DivideAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivideAssign = null;
         try {
-            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectDivideAssign = classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivideAssign = (JCObject)retObjectDivideAssign;
             return new BinaryExpression(objDivideAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivideAssign != null ? retObjectDivideAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -481,10 +585,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivideAssign = null;
         try {
-            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectDivideAssign = classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objDivideAssign = (JCObject)retObjectDivideAssign;
             return new BinaryExpression(objDivideAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivideAssign != null ? retObjectDivideAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,10 +600,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDivideAssign = null;
         try {
-            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectDivideAssign = classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objDivideAssign = (JCObject)retObjectDivideAssign;
             return new BinaryExpression(objDivideAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDivideAssign != null ? retObjectDivideAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,10 +615,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Equal(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEqual = null;
         try {
-            JCObject objEqual = (JCObject)classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectEqual = classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objEqual = (JCObject)retObjectEqual;
             return new BinaryExpression(objEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEqual != null ? retObjectEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,10 +630,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Equal(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEqual = null;
         try {
-            JCObject objEqual = (JCObject)classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectEqual = classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objEqual = (JCObject)retObjectEqual;
             return new BinaryExpression(objEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEqual != null ? retObjectEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,10 +645,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ExclusiveOr(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclusiveOr = null;
         try {
-            JCObject objExclusiveOr = (JCObject)classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectExclusiveOr = classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objExclusiveOr = (JCObject)retObjectExclusiveOr;
             return new BinaryExpression(objExclusiveOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveOr != null ? retObjectExclusiveOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -536,10 +660,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ExclusiveOr(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclusiveOr = null;
         try {
-            JCObject objExclusiveOr = (JCObject)classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectExclusiveOr = classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objExclusiveOr = (JCObject)retObjectExclusiveOr;
             return new BinaryExpression(objExclusiveOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveOr != null ? retObjectExclusiveOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -547,10 +675,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclusiveOrAssign = null;
         try {
-            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectExclusiveOrAssign = classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objExclusiveOrAssign = (JCObject)retObjectExclusiveOrAssign;
             return new BinaryExpression(objExclusiveOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveOrAssign != null ? retObjectExclusiveOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -558,10 +690,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclusiveOrAssign = null;
         try {
-            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectExclusiveOrAssign = classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objExclusiveOrAssign = (JCObject)retObjectExclusiveOrAssign;
             return new BinaryExpression(objExclusiveOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveOrAssign != null ? retObjectExclusiveOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,10 +705,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectExclusiveOrAssign = null;
         try {
-            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectExclusiveOrAssign = classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objExclusiveOrAssign = (JCObject)retObjectExclusiveOrAssign;
             return new BinaryExpression(objExclusiveOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExclusiveOrAssign != null ? retObjectExclusiveOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,10 +720,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression GreaterThan(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new BinaryExpression(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -591,10 +735,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression GreaterThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThan = null;
         try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectGreaterThan = classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objGreaterThan = (JCObject)retObjectGreaterThan;
             return new BinaryExpression(objGreaterThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThan != null ? retObjectGreaterThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -602,10 +750,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new BinaryExpression(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -613,10 +765,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGreaterThanOrEqual = null;
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectGreaterThanOrEqual = classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objGreaterThanOrEqual = (JCObject)retObjectGreaterThanOrEqual;
             return new BinaryExpression(objGreaterThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGreaterThanOrEqual != null ? retObjectGreaterThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,10 +780,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LeftShift(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShift = null;
         try {
-            JCObject objLeftShift = (JCObject)classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectLeftShift = classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLeftShift = (JCObject)retObjectLeftShift;
             return new BinaryExpression(objLeftShift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShift != null ? retObjectLeftShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -635,10 +795,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LeftShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShift = null;
         try {
-            JCObject objLeftShift = (JCObject)classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectLeftShift = classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objLeftShift = (JCObject)retObjectLeftShift;
             return new BinaryExpression(objLeftShift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShift != null ? retObjectLeftShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -646,10 +810,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LeftShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShiftAssign = null;
         try {
-            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectLeftShiftAssign = classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLeftShiftAssign = (JCObject)retObjectLeftShiftAssign;
             return new BinaryExpression(objLeftShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShiftAssign != null ? retObjectLeftShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -657,10 +825,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShiftAssign = null;
         try {
-            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectLeftShiftAssign = classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objLeftShiftAssign = (JCObject)retObjectLeftShiftAssign;
             return new BinaryExpression(objLeftShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShiftAssign != null ? retObjectLeftShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -668,10 +840,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLeftShiftAssign = null;
         try {
-            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectLeftShiftAssign = classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objLeftShiftAssign = (JCObject)retObjectLeftShiftAssign;
             return new BinaryExpression(objLeftShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftShiftAssign != null ? retObjectLeftShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -679,10 +855,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LessThan(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new BinaryExpression(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -690,10 +870,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LessThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThan = null;
         try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectLessThan = classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objLessThan = (JCObject)retObjectLessThan;
             return new BinaryExpression(objLessThan);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThan != null ? retObjectLessThan.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -701,10 +885,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LessThanOrEqual(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new BinaryExpression(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -712,10 +900,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression LessThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLessThanOrEqual = null;
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectLessThanOrEqual = classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)retObjectLessThanOrEqual;
             return new BinaryExpression(objLessThanOrEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLessThanOrEqual != null ? retObjectLessThanOrEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -723,10 +915,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeBinary = null;
         try {
-            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMakeBinary = classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMakeBinary = (JCObject)retObjectMakeBinary;
             return new BinaryExpression(objMakeBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeBinary != null ? retObjectMakeBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -734,10 +930,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeBinary = null;
         try {
-            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectMakeBinary = classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objMakeBinary = (JCObject)retObjectMakeBinary;
             return new BinaryExpression(objMakeBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeBinary != null ? retObjectMakeBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -745,10 +945,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeBinary = null;
         try {
-            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectMakeBinary = classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objMakeBinary = (JCObject)retObjectMakeBinary;
             return new BinaryExpression(objMakeBinary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeBinary != null ? retObjectMakeBinary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -756,10 +960,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Modulo(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModulo = null;
         try {
-            JCObject objModulo = (JCObject)classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectModulo = classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objModulo = (JCObject)retObjectModulo;
             return new BinaryExpression(objModulo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModulo != null ? retObjectModulo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -767,10 +975,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Modulo(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModulo = null;
         try {
-            JCObject objModulo = (JCObject)classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectModulo = classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objModulo = (JCObject)retObjectModulo;
             return new BinaryExpression(objModulo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModulo != null ? retObjectModulo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -778,10 +990,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ModuloAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModuloAssign = null;
         try {
-            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectModuloAssign = classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objModuloAssign = (JCObject)retObjectModuloAssign;
             return new BinaryExpression(objModuloAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModuloAssign != null ? retObjectModuloAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -789,10 +1005,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModuloAssign = null;
         try {
-            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectModuloAssign = classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objModuloAssign = (JCObject)retObjectModuloAssign;
             return new BinaryExpression(objModuloAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModuloAssign != null ? retObjectModuloAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -800,10 +1020,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectModuloAssign = null;
         try {
-            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectModuloAssign = classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objModuloAssign = (JCObject)retObjectModuloAssign;
             return new BinaryExpression(objModuloAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectModuloAssign != null ? retObjectModuloAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -811,10 +1035,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Multiply(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new BinaryExpression(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -822,10 +1050,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Multiply(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiply = null;
         try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectMultiply = classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objMultiply = (JCObject)retObjectMultiply;
             return new BinaryExpression(objMultiply);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiply != null ? retObjectMultiply.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -833,10 +1065,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssign = null;
         try {
-            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiplyAssign = classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiplyAssign = (JCObject)retObjectMultiplyAssign;
             return new BinaryExpression(objMultiplyAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssign != null ? retObjectMultiplyAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,10 +1080,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssign = null;
         try {
-            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectMultiplyAssign = classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objMultiplyAssign = (JCObject)retObjectMultiplyAssign;
             return new BinaryExpression(objMultiplyAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssign != null ? retObjectMultiplyAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -855,10 +1095,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssign = null;
         try {
-            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectMultiplyAssign = classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objMultiplyAssign = (JCObject)retObjectMultiplyAssign;
             return new BinaryExpression(objMultiplyAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssign != null ? retObjectMultiplyAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -866,10 +1110,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssignChecked = null;
         try {
-            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiplyAssignChecked = classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiplyAssignChecked = (JCObject)retObjectMultiplyAssignChecked;
             return new BinaryExpression(objMultiplyAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssignChecked != null ? retObjectMultiplyAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -877,10 +1125,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssignChecked = null;
         try {
-            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectMultiplyAssignChecked = classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objMultiplyAssignChecked = (JCObject)retObjectMultiplyAssignChecked;
             return new BinaryExpression(objMultiplyAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssignChecked != null ? retObjectMultiplyAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -888,10 +1140,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyAssignChecked = null;
         try {
-            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectMultiplyAssignChecked = classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objMultiplyAssignChecked = (JCObject)retObjectMultiplyAssignChecked;
             return new BinaryExpression(objMultiplyAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyAssignChecked != null ? retObjectMultiplyAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -899,10 +1155,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyChecked = null;
         try {
-            JCObject objMultiplyChecked = (JCObject)classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectMultiplyChecked = classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiplyChecked = (JCObject)retObjectMultiplyChecked;
             return new BinaryExpression(objMultiplyChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyChecked != null ? retObjectMultiplyChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -910,10 +1170,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression MultiplyChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMultiplyChecked = null;
         try {
-            JCObject objMultiplyChecked = (JCObject)classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectMultiplyChecked = classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objMultiplyChecked = (JCObject)retObjectMultiplyChecked;
             return new BinaryExpression(objMultiplyChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMultiplyChecked != null ? retObjectMultiplyChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -921,10 +1185,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression NotEqual(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEqual = null;
         try {
-            JCObject objNotEqual = (JCObject)classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectNotEqual = classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objNotEqual = (JCObject)retObjectNotEqual;
             return new BinaryExpression(objNotEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEqual != null ? retObjectNotEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -932,10 +1200,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression NotEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNotEqual = null;
         try {
-            JCObject objNotEqual = (JCObject)classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            retObjectNotEqual = classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            JCObject objNotEqual = (JCObject)retObjectNotEqual;
             return new BinaryExpression(objNotEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNotEqual != null ? retObjectNotEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -943,10 +1215,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Or(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOr = null;
         try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectOr = classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objOr = (JCObject)retObjectOr;
             return new BinaryExpression(objOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOr != null ? retObjectOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -954,10 +1230,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Or(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOr = null;
         try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectOr = classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objOr = (JCObject)retObjectOr;
             return new BinaryExpression(objOr);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOr != null ? retObjectOr.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -965,10 +1245,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression OrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrAssign = null;
         try {
-            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectOrAssign = classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objOrAssign = (JCObject)retObjectOrAssign;
             return new BinaryExpression(objOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrAssign != null ? retObjectOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -976,10 +1260,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrAssign = null;
         try {
-            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectOrAssign = classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objOrAssign = (JCObject)retObjectOrAssign;
             return new BinaryExpression(objOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrAssign != null ? retObjectOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -987,10 +1275,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrAssign = null;
         try {
-            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectOrAssign = classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objOrAssign = (JCObject)retObjectOrAssign;
             return new BinaryExpression(objOrAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrAssign != null ? retObjectOrAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -998,10 +1290,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression OrElse(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrElse = null;
         try {
-            JCObject objOrElse = (JCObject)classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectOrElse = classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objOrElse = (JCObject)retObjectOrElse;
             return new BinaryExpression(objOrElse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrElse != null ? retObjectOrElse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1009,10 +1305,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression OrElse(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOrElse = null;
         try {
-            JCObject objOrElse = (JCObject)classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectOrElse = classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objOrElse = (JCObject)retObjectOrElse;
             return new BinaryExpression(objOrElse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOrElse != null ? retObjectOrElse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1020,10 +1320,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Power(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPower = null;
         try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectPower = classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objPower = (JCObject)retObjectPower;
             return new BinaryExpression(objPower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPower != null ? retObjectPower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1031,10 +1335,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Power(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPower = null;
         try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPower = classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPower = (JCObject)retObjectPower;
             return new BinaryExpression(objPower);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPower != null ? retObjectPower.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1042,10 +1350,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression PowerAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerAssign = null;
         try {
-            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectPowerAssign = classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objPowerAssign = (JCObject)retObjectPowerAssign;
             return new BinaryExpression(objPowerAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerAssign != null ? retObjectPowerAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1053,10 +1365,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerAssign = null;
         try {
-            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPowerAssign = classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPowerAssign = (JCObject)retObjectPowerAssign;
             return new BinaryExpression(objPowerAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerAssign != null ? retObjectPowerAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1064,10 +1380,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPowerAssign = null;
         try {
-            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectPowerAssign = classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objPowerAssign = (JCObject)retObjectPowerAssign;
             return new BinaryExpression(objPowerAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerAssign != null ? retObjectPowerAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1075,10 +1395,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ReferenceEqual(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReferenceEqual = null;
         try {
-            JCObject objReferenceEqual = (JCObject)classType.Invoke("ReferenceEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectReferenceEqual = classType.Invoke("ReferenceEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objReferenceEqual = (JCObject)retObjectReferenceEqual;
             return new BinaryExpression(objReferenceEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceEqual != null ? retObjectReferenceEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1086,10 +1410,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression ReferenceNotEqual(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReferenceNotEqual = null;
         try {
-            JCObject objReferenceNotEqual = (JCObject)classType.Invoke("ReferenceNotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectReferenceNotEqual = classType.Invoke("ReferenceNotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objReferenceNotEqual = (JCObject)retObjectReferenceNotEqual;
             return new BinaryExpression(objReferenceNotEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReferenceNotEqual != null ? retObjectReferenceNotEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1097,10 +1425,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression RightShift(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShift = null;
         try {
-            JCObject objRightShift = (JCObject)classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectRightShift = classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objRightShift = (JCObject)retObjectRightShift;
             return new BinaryExpression(objRightShift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShift != null ? retObjectRightShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1108,10 +1440,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression RightShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShift = null;
         try {
-            JCObject objRightShift = (JCObject)classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectRightShift = classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objRightShift = (JCObject)retObjectRightShift;
             return new BinaryExpression(objRightShift);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShift != null ? retObjectRightShift.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1119,10 +1455,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression RightShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShiftAssign = null;
         try {
-            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectRightShiftAssign = classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objRightShiftAssign = (JCObject)retObjectRightShiftAssign;
             return new BinaryExpression(objRightShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShiftAssign != null ? retObjectRightShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1130,10 +1470,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShiftAssign = null;
         try {
-            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectRightShiftAssign = classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objRightShiftAssign = (JCObject)retObjectRightShiftAssign;
             return new BinaryExpression(objRightShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShiftAssign != null ? retObjectRightShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1141,10 +1485,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRightShiftAssign = null;
         try {
-            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectRightShiftAssign = classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objRightShiftAssign = (JCObject)retObjectRightShiftAssign;
             return new BinaryExpression(objRightShiftAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightShiftAssign != null ? retObjectRightShiftAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1152,10 +1500,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Subtract(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new BinaryExpression(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1163,10 +1515,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression Subtract(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtract = null;
         try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectSubtract = classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objSubtract = (JCObject)retObjectSubtract;
             return new BinaryExpression(objSubtract);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtract != null ? retObjectSubtract.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1174,10 +1530,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssign = null;
         try {
-            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtractAssign = classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtractAssign = (JCObject)retObjectSubtractAssign;
             return new BinaryExpression(objSubtractAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssign != null ? retObjectSubtractAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1185,10 +1545,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssign = null;
         try {
-            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectSubtractAssign = classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objSubtractAssign = (JCObject)retObjectSubtractAssign;
             return new BinaryExpression(objSubtractAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssign != null ? retObjectSubtractAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1196,10 +1560,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssign = null;
         try {
-            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectSubtractAssign = classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objSubtractAssign = (JCObject)retObjectSubtractAssign;
             return new BinaryExpression(objSubtractAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssign != null ? retObjectSubtractAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1207,10 +1575,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssignChecked = null;
         try {
-            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtractAssignChecked = classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtractAssignChecked = (JCObject)retObjectSubtractAssignChecked;
             return new BinaryExpression(objSubtractAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssignChecked != null ? retObjectSubtractAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1218,10 +1590,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssignChecked = null;
         try {
-            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectSubtractAssignChecked = classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objSubtractAssignChecked = (JCObject)retObjectSubtractAssignChecked;
             return new BinaryExpression(objSubtractAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssignChecked != null ? retObjectSubtractAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1229,10 +1605,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractAssignChecked = null;
         try {
-            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            retObjectSubtractAssignChecked = classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objSubtractAssignChecked = (JCObject)retObjectSubtractAssignChecked;
             return new BinaryExpression(objSubtractAssignChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractAssignChecked != null ? retObjectSubtractAssignChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1240,10 +1620,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractChecked = null;
         try {
-            JCObject objSubtractChecked = (JCObject)classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectSubtractChecked = classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtractChecked = (JCObject)retObjectSubtractChecked;
             return new BinaryExpression(objSubtractChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractChecked != null ? retObjectSubtractChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1251,10 +1635,14 @@ public class Expression extends NetObject  {
 
     public static BinaryExpression SubtractChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSubtractChecked = null;
         try {
-            JCObject objSubtractChecked = (JCObject)classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectSubtractChecked = classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objSubtractChecked = (JCObject)retObjectSubtractChecked;
             return new BinaryExpression(objSubtractChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubtractChecked != null ? retObjectSubtractChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1262,10 +1650,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectBlock = classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1273,10 +1665,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectBlock = classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1284,10 +1680,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectBlock = classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1295,10 +1695,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            retObjectBlock = classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1306,10 +1710,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", (java.lang.Object)toObjectFromArray(expressions));
+            retObjectBlock = classType.Invoke("Block", (java.lang.Object)toObjectFromArray(expressions));
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1317,10 +1725,14 @@ public class Expression extends NetObject  {
 
     public static BlockExpression Block(NetType type, Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBlock = null;
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", type == null ? null : type.getJCOInstance(), toObjectFromArray(expressions));
+            retObjectBlock = classType.Invoke("Block", type == null ? null : type.getJCOInstance(), toObjectFromArray(expressions));
+            JCObject objBlock = (JCObject)retObjectBlock;
             return new BlockExpression(objBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBlock != null ? retObjectBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1328,10 +1740,14 @@ public class Expression extends NetObject  {
 
     public static CatchBlock Catch(ParameterExpression variable, Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCatch = null;
         try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            retObjectCatch = classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            JCObject objCatch = (JCObject)retObjectCatch;
             return new CatchBlock(objCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatch != null ? retObjectCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1339,10 +1755,14 @@ public class Expression extends NetObject  {
 
     public static CatchBlock Catch(ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCatch = null;
         try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            retObjectCatch = classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            JCObject objCatch = (JCObject)retObjectCatch;
             return new CatchBlock(objCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatch != null ? retObjectCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1350,10 +1770,14 @@ public class Expression extends NetObject  {
 
     public static CatchBlock Catch(NetType type, Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCatch = null;
         try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            retObjectCatch = classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance());
+            JCObject objCatch = (JCObject)retObjectCatch;
             return new CatchBlock(objCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatch != null ? retObjectCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1361,10 +1785,14 @@ public class Expression extends NetObject  {
 
     public static CatchBlock Catch(NetType type, Expression body, Expression filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCatch = null;
         try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            retObjectCatch = classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            JCObject objCatch = (JCObject)retObjectCatch;
             return new CatchBlock(objCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCatch != null ? retObjectCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1372,10 +1800,14 @@ public class Expression extends NetObject  {
 
     public static CatchBlock MakeCatchBlock(NetType type, ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeCatchBlock = null;
         try {
-            JCObject objMakeCatchBlock = (JCObject)classType.Invoke("MakeCatchBlock", type == null ? null : type.getJCOInstance(), variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            retObjectMakeCatchBlock = classType.Invoke("MakeCatchBlock", type == null ? null : type.getJCOInstance(), variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            JCObject objMakeCatchBlock = (JCObject)retObjectMakeCatchBlock;
             return new CatchBlock(objMakeCatchBlock);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeCatchBlock != null ? retObjectMakeCatchBlock.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1383,10 +1815,14 @@ public class Expression extends NetObject  {
 
     public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
+            retObjectCondition = classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
+            JCObject objCondition = (JCObject)retObjectCondition;
             return new ConditionalExpression(objCondition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1394,10 +1830,14 @@ public class Expression extends NetObject  {
 
     public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectCondition = classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objCondition = (JCObject)retObjectCondition;
             return new ConditionalExpression(objCondition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1405,10 +1845,14 @@ public class Expression extends NetObject  {
 
     public static ConditionalExpression IfThen(Expression test, Expression ifTrue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIfThen = null;
         try {
-            JCObject objIfThen = (JCObject)classType.Invoke("IfThen", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance());
+            retObjectIfThen = classType.Invoke("IfThen", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance());
+            JCObject objIfThen = (JCObject)retObjectIfThen;
             return new ConditionalExpression(objIfThen);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIfThen != null ? retObjectIfThen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1416,10 +1860,14 @@ public class Expression extends NetObject  {
 
     public static ConditionalExpression IfThenElse(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIfThenElse = null;
         try {
-            JCObject objIfThenElse = (JCObject)classType.Invoke("IfThenElse", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
+            retObjectIfThenElse = classType.Invoke("IfThenElse", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
+            JCObject objIfThenElse = (JCObject)retObjectIfThenElse;
             return new ConditionalExpression(objIfThenElse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIfThenElse != null ? retObjectIfThenElse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1427,10 +1875,14 @@ public class Expression extends NetObject  {
 
     public static ConstantExpression Constant(NetObject value) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConstant = null;
         try {
-            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance());
+            retObjectConstant = classType.Invoke("Constant", value == null ? null : value.getJCOInstance());
+            JCObject objConstant = (JCObject)retObjectConstant;
             return new ConstantExpression(objConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstant != null ? retObjectConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1438,10 +1890,14 @@ public class Expression extends NetObject  {
 
     public static ConstantExpression Constant(NetObject value, NetType type) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConstant = null;
         try {
-            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectConstant = classType.Invoke("Constant", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConstant = (JCObject)retObjectConstant;
             return new ConstantExpression(objConstant);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConstant != null ? retObjectConstant.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1449,10 +1905,14 @@ public class Expression extends NetObject  {
 
     public static DebugInfoExpression ClearDebugInfo(SymbolDocumentInfo document) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectClearDebugInfo = null;
         try {
-            JCObject objClearDebugInfo = (JCObject)classType.Invoke("ClearDebugInfo", document == null ? null : document.getJCOInstance());
+            retObjectClearDebugInfo = classType.Invoke("ClearDebugInfo", document == null ? null : document.getJCOInstance());
+            JCObject objClearDebugInfo = (JCObject)retObjectClearDebugInfo;
             return new DebugInfoExpression(objClearDebugInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClearDebugInfo != null ? retObjectClearDebugInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1460,10 +1920,14 @@ public class Expression extends NetObject  {
 
     public static DebugInfoExpression DebugInfo(SymbolDocumentInfo document, int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDebugInfo = null;
         try {
-            JCObject objDebugInfo = (JCObject)classType.Invoke("DebugInfo", document == null ? null : document.getJCOInstance(), startLine, startColumn, endLine, endColumn);
+            retObjectDebugInfo = classType.Invoke("DebugInfo", document == null ? null : document.getJCOInstance(), startLine, startColumn, endLine, endColumn);
+            JCObject objDebugInfo = (JCObject)retObjectDebugInfo;
             return new DebugInfoExpression(objDebugInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDebugInfo != null ? retObjectDebugInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1471,10 +1935,14 @@ public class Expression extends NetObject  {
 
     public static DefaultExpression Default(NetType type) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject objDefault = (JCObject)classType.Invoke("Default", type == null ? null : type.getJCOInstance());
+            retObjectDefault = classType.Invoke("Default", type == null ? null : type.getJCOInstance());
+            JCObject objDefault = (JCObject)retObjectDefault;
             return new DefaultExpression(objDefault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1482,10 +1950,14 @@ public class Expression extends NetObject  {
 
     public static DefaultExpression Empty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEmpty = null;
         try {
-            JCObject objEmpty = (JCObject)classType.Invoke("Empty");
+            retObjectEmpty = classType.Invoke("Empty");
+            JCObject objEmpty = (JCObject)retObjectEmpty;
             return new DefaultExpression(objEmpty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmpty != null ? retObjectEmpty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1493,10 +1965,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objDynamic = (JCObject)retObjectDynamic;
             return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1504,10 +1980,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objDynamic = (JCObject)retObjectDynamic;
             return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1515,10 +1995,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objDynamic = (JCObject)retObjectDynamic;
             return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1526,10 +2010,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objDynamic = (JCObject)retObjectDynamic;
             return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1537,10 +2025,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDynamic = null;
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectDynamic = classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objDynamic = (JCObject)retObjectDynamic;
             return new DynamicExpression(objDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDynamic != null ? retObjectDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1548,10 +2040,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
             return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1559,10 +2055,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
             return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1570,10 +2070,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
             return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1581,10 +2085,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
             return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1592,10 +2100,14 @@ public class Expression extends NetObject  {
 
     public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeDynamic = null;
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectMakeDynamic = classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objMakeDynamic = (JCObject)retObjectMakeDynamic;
             return new DynamicExpression(objMakeDynamic);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeDynamic != null ? retObjectMakeDynamic.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1603,10 +2115,14 @@ public class Expression extends NetObject  {
 
     public static ElementInit ElementInit(MethodInfo addMethod, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectElementInit = null;
         try {
-            JCObject objElementInit = (JCObject)classType.Invoke("ElementInit", addMethod == null ? null : addMethod.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectElementInit = classType.Invoke("ElementInit", addMethod == null ? null : addMethod.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objElementInit = (JCObject)retObjectElementInit;
             return new ElementInit(objElementInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectElementInit != null ? retObjectElementInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1614,10 +2130,14 @@ public class Expression extends NetObject  {
 
     public Expression Reduce() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReduce = null;
         try {
-            JCObject objReduce = (JCObject)classInstance.Invoke("Reduce");
+            retObjectReduce = classInstance.Invoke("Reduce");
+            JCObject objReduce = (JCObject)retObjectReduce;
             return new Expression(objReduce);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduce != null ? retObjectReduce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1625,10 +2145,14 @@ public class Expression extends NetObject  {
 
     public Expression ReduceAndCheck() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReduceAndCheck = null;
         try {
-            JCObject objReduceAndCheck = (JCObject)classInstance.Invoke("ReduceAndCheck");
+            retObjectReduceAndCheck = classInstance.Invoke("ReduceAndCheck");
+            JCObject objReduceAndCheck = (JCObject)retObjectReduceAndCheck;
             return new Expression(objReduceAndCheck);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduceAndCheck != null ? retObjectReduceAndCheck.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1636,10 +2160,14 @@ public class Expression extends NetObject  {
 
     public Expression ReduceExtensions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReduceExtensions = null;
         try {
-            JCObject objReduceExtensions = (JCObject)classInstance.Invoke("ReduceExtensions");
+            retObjectReduceExtensions = classInstance.Invoke("ReduceExtensions");
+            JCObject objReduceExtensions = (JCObject)retObjectReduceExtensions;
             return new Expression(objReduceExtensions);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReduceExtensions != null ? retObjectReduceExtensions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1647,10 +2175,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Break(LabelTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBreak = null;
         try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance());
+            retObjectBreak = classType.Invoke("Break", target == null ? null : target.getJCOInstance());
+            JCObject objBreak = (JCObject)retObjectBreak;
             return new GotoExpression(objBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreak != null ? retObjectBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1658,10 +2190,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Break(LabelTarget target, Expression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBreak = null;
         try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectBreak = classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objBreak = (JCObject)retObjectBreak;
             return new GotoExpression(objBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreak != null ? retObjectBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1669,10 +2205,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Break(LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBreak = null;
         try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectBreak = classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objBreak = (JCObject)retObjectBreak;
             return new GotoExpression(objBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreak != null ? retObjectBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1680,10 +2220,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Break(LabelTarget target, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBreak = null;
         try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectBreak = classType.Invoke("Break", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objBreak = (JCObject)retObjectBreak;
             return new GotoExpression(objBreak);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBreak != null ? retObjectBreak.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1691,10 +2235,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Continue(LabelTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContinue = null;
         try {
-            JCObject objContinue = (JCObject)classType.Invoke("Continue", target == null ? null : target.getJCOInstance());
+            retObjectContinue = classType.Invoke("Continue", target == null ? null : target.getJCOInstance());
+            JCObject objContinue = (JCObject)retObjectContinue;
             return new GotoExpression(objContinue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinue != null ? retObjectContinue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1702,10 +2250,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Continue(LabelTarget target, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectContinue = null;
         try {
-            JCObject objContinue = (JCObject)classType.Invoke("Continue", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectContinue = classType.Invoke("Continue", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objContinue = (JCObject)retObjectContinue;
             return new GotoExpression(objContinue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContinue != null ? retObjectContinue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1713,10 +2265,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Goto(LabelTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoto = null;
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance());
+            retObjectGoto = classType.Invoke("Goto", target == null ? null : target.getJCOInstance());
+            JCObject objGoto = (JCObject)retObjectGoto;
             return new GotoExpression(objGoto);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGoto != null ? retObjectGoto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1724,10 +2280,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Goto(LabelTarget target, Expression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoto = null;
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectGoto = classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objGoto = (JCObject)retObjectGoto;
             return new GotoExpression(objGoto);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGoto != null ? retObjectGoto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1735,10 +2295,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Goto(LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoto = null;
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGoto = classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGoto = (JCObject)retObjectGoto;
             return new GotoExpression(objGoto);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGoto != null ? retObjectGoto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1746,10 +2310,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Goto(LabelTarget target, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGoto = null;
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectGoto = classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGoto = (JCObject)retObjectGoto;
             return new GotoExpression(objGoto);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGoto != null ? retObjectGoto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1757,10 +2325,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression MakeGoto(GotoExpressionKind kind, LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeGoto = null;
         try {
-            JCObject objMakeGoto = (JCObject)classType.Invoke("MakeGoto", kind == null ? null : kind.getJCOInstance(), target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectMakeGoto = classType.Invoke("MakeGoto", kind == null ? null : kind.getJCOInstance(), target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objMakeGoto = (JCObject)retObjectMakeGoto;
             return new GotoExpression(objMakeGoto);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeGoto != null ? retObjectMakeGoto.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1768,10 +2340,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Return(LabelTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReturn = null;
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance());
+            retObjectReturn = classType.Invoke("Return", target == null ? null : target.getJCOInstance());
+            JCObject objReturn = (JCObject)retObjectReturn;
             return new GotoExpression(objReturn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturn != null ? retObjectReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1779,10 +2355,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Return(LabelTarget target, Expression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReturn = null;
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            retObjectReturn = classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objReturn = (JCObject)retObjectReturn;
             return new GotoExpression(objReturn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturn != null ? retObjectReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1790,10 +2370,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Return(LabelTarget target, Expression value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReturn = null;
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectReturn = classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objReturn = (JCObject)retObjectReturn;
             return new GotoExpression(objReturn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturn != null ? retObjectReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1801,10 +2385,14 @@ public class Expression extends NetObject  {
 
     public static GotoExpression Return(LabelTarget target, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectReturn = null;
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectReturn = classType.Invoke("Return", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objReturn = (JCObject)retObjectReturn;
             return new GotoExpression(objReturn);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReturn != null ? retObjectReturn.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1812,10 +2400,14 @@ public class Expression extends NetObject  {
 
     public static IndexExpression ArrayAccess(Expression array, Expression... indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrayAccess = null;
         try {
-            JCObject objArrayAccess = (JCObject)classType.Invoke("ArrayAccess", array == null ? null : array.getJCOInstance(), toObjectFromArray(indexes));
+            retObjectArrayAccess = classType.Invoke("ArrayAccess", array == null ? null : array.getJCOInstance(), toObjectFromArray(indexes));
+            JCObject objArrayAccess = (JCObject)retObjectArrayAccess;
             return new IndexExpression(objArrayAccess);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrayAccess != null ? retObjectArrayAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1823,10 +2415,14 @@ public class Expression extends NetObject  {
 
     public static IndexExpression Property(Expression instance, PropertyInfo indexer, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", instance == null ? null : instance.getJCOInstance(), indexer == null ? null : indexer.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectProperty = classType.Invoke("Property", instance == null ? null : instance.getJCOInstance(), indexer == null ? null : indexer.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new IndexExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1834,10 +2430,14 @@ public class Expression extends NetObject  {
 
     public static IndexExpression Property(Expression instance, java.lang.String propertyName, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", instance == null ? null : instance.getJCOInstance(), propertyName, toObjectFromArray(arguments));
+            retObjectProperty = classType.Invoke("Property", instance == null ? null : instance.getJCOInstance(), propertyName, toObjectFromArray(arguments));
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new IndexExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1845,10 +2445,14 @@ public class Expression extends NetObject  {
 
     public static InvocationExpression Invoke(Expression expression, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInvoke = null;
         try {
-            JCObject objInvoke = (JCObject)classType.Invoke("Invoke", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectInvoke = classType.Invoke("Invoke", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objInvoke = (JCObject)retObjectInvoke;
             return new InvocationExpression(objInvoke);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvoke != null ? retObjectInvoke.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1856,10 +2460,14 @@ public class Expression extends NetObject  {
 
     public static LabelExpression Label(LabelTarget target) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance());
+            retObjectLabel = classType.Invoke("Label", target == null ? null : target.getJCOInstance());
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelExpression(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1867,10 +2475,14 @@ public class Expression extends NetObject  {
 
     public static LabelExpression Label(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectLabel = classType.Invoke("Label", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelExpression(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1878,10 +2490,14 @@ public class Expression extends NetObject  {
 
     public static LabelTarget Label() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label");
+            retObjectLabel = classType.Invoke("Label");
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelTarget(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1889,10 +2505,14 @@ public class Expression extends NetObject  {
 
     public static LabelTarget Label(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", name);
+            retObjectLabel = classType.Invoke("Label", name);
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelTarget(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1900,10 +2520,14 @@ public class Expression extends NetObject  {
 
     public static LabelTarget Label(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance());
+            retObjectLabel = classType.Invoke("Label", type == null ? null : type.getJCOInstance());
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelTarget(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1911,10 +2535,14 @@ public class Expression extends NetObject  {
 
     public static LabelTarget Label(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLabel = null;
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance(), name);
+            retObjectLabel = classType.Invoke("Label", type == null ? null : type.getJCOInstance(), name);
+            JCObject objLabel = (JCObject)retObjectLabel;
             return new LabelTarget(objLabel);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLabel != null ? retObjectLabel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1922,10 +2550,14 @@ public class Expression extends NetObject  {
 
     public static LambdaExpression Lambda(Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLambda = null;
         try {
-            JCObject objLambda = (JCObject)classType.Invoke("Lambda", body == null ? null : body.getJCOInstance(), tailCall, toObjectFromArray(parameters));
+            retObjectLambda = classType.Invoke("Lambda", body == null ? null : body.getJCOInstance(), tailCall, toObjectFromArray(parameters));
+            JCObject objLambda = (JCObject)retObjectLambda;
             return new LambdaExpression(objLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1933,10 +2565,14 @@ public class Expression extends NetObject  {
 
     public static LambdaExpression Lambda(Expression body, ParameterExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLambda = null;
         try {
-            JCObject objLambda = (JCObject)classType.Invoke("Lambda", body == null ? null : body.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectLambda = classType.Invoke("Lambda", body == null ? null : body.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objLambda = (JCObject)retObjectLambda;
             return new LambdaExpression(objLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1944,10 +2580,14 @@ public class Expression extends NetObject  {
 
     public static LambdaExpression Lambda(NetType delegateType, Expression body, boolean tailCall, ParameterExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLambda = null;
         try {
-            JCObject objLambda = (JCObject)classType.Invoke("Lambda", delegateType == null ? null : delegateType.getJCOInstance(), body == null ? null : body.getJCOInstance(), tailCall, toObjectFromArray(parameters));
+            retObjectLambda = classType.Invoke("Lambda", delegateType == null ? null : delegateType.getJCOInstance(), body == null ? null : body.getJCOInstance(), tailCall, toObjectFromArray(parameters));
+            JCObject objLambda = (JCObject)retObjectLambda;
             return new LambdaExpression(objLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1955,10 +2595,14 @@ public class Expression extends NetObject  {
 
     public static LambdaExpression Lambda(NetType delegateType, Expression body, ParameterExpression... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLambda = null;
         try {
-            JCObject objLambda = (JCObject)classType.Invoke("Lambda", delegateType == null ? null : delegateType.getJCOInstance(), body == null ? null : body.getJCOInstance(), toObjectFromArray(parameters));
+            retObjectLambda = classType.Invoke("Lambda", delegateType == null ? null : delegateType.getJCOInstance(), body == null ? null : body.getJCOInstance(), toObjectFromArray(parameters));
+            JCObject objLambda = (JCObject)retObjectLambda;
             return new LambdaExpression(objLambda);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLambda != null ? retObjectLambda.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1966,10 +2610,14 @@ public class Expression extends NetObject  {
 
     public static ListInitExpression ListInit(NewExpression newExpression, ElementInit... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListInit = null;
         try {
-            JCObject objListInit = (JCObject)classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectListInit = classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objListInit = (JCObject)retObjectListInit;
             return new ListInitExpression(objListInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListInit != null ? retObjectListInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1977,10 +2625,14 @@ public class Expression extends NetObject  {
 
     public static ListInitExpression ListInit(NewExpression newExpression, Expression... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListInit = null;
         try {
-            JCObject objListInit = (JCObject)classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectListInit = classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objListInit = (JCObject)retObjectListInit;
             return new ListInitExpression(objListInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListInit != null ? retObjectListInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1988,10 +2640,14 @@ public class Expression extends NetObject  {
 
     public static ListInitExpression ListInit(NewExpression newExpression, MethodInfo addMethod, Expression... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListInit = null;
         try {
-            JCObject objListInit = (JCObject)classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), addMethod == null ? null : addMethod.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectListInit = classType.Invoke("ListInit", newExpression == null ? null : newExpression.getJCOInstance(), addMethod == null ? null : addMethod.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objListInit = (JCObject)retObjectListInit;
             return new ListInitExpression(objListInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListInit != null ? retObjectListInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1999,10 +2655,14 @@ public class Expression extends NetObject  {
 
     public static LoopExpression Loop(Expression body) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoop = null;
         try {
-            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance());
+            retObjectLoop = classType.Invoke("Loop", body == null ? null : body.getJCOInstance());
+            JCObject objLoop = (JCObject)retObjectLoop;
             return new LoopExpression(objLoop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoop != null ? retObjectLoop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2010,10 +2670,14 @@ public class Expression extends NetObject  {
 
     public static LoopExpression Loop(Expression body, LabelTarget _break) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoop = null;
         try {
-            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance());
+            retObjectLoop = classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance());
+            JCObject objLoop = (JCObject)retObjectLoop;
             return new LoopExpression(objLoop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoop != null ? retObjectLoop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2021,10 +2685,14 @@ public class Expression extends NetObject  {
 
     public static LoopExpression Loop(Expression body, LabelTarget _break, LabelTarget _continue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLoop = null;
         try {
-            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance(), _continue == null ? null : _continue.getJCOInstance());
+            retObjectLoop = classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance(), _continue == null ? null : _continue.getJCOInstance());
+            JCObject objLoop = (JCObject)retObjectLoop;
             return new LoopExpression(objLoop);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLoop != null ? retObjectLoop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2032,10 +2700,14 @@ public class Expression extends NetObject  {
 
     public static MemberAssignment Bind(MemberInfo member, Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classType.Invoke("Bind", member == null ? null : member.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            retObjectBind = classType.Invoke("Bind", member == null ? null : member.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            JCObject objBind = (JCObject)retObjectBind;
             return new MemberAssignment(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2043,10 +2715,14 @@ public class Expression extends NetObject  {
 
     public static MemberAssignment Bind(MethodInfo propertyAccessor, Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectBind = null;
         try {
-            JCObject objBind = (JCObject)classType.Invoke("Bind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            retObjectBind = classType.Invoke("Bind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), expression == null ? null : expression.getJCOInstance());
+            JCObject objBind = (JCObject)retObjectBind;
             return new MemberAssignment(objBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBind != null ? retObjectBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2054,10 +2730,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Field(Expression expression, FieldInfo field) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectField = null;
         try {
-            JCObject objField = (JCObject)classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), field == null ? null : field.getJCOInstance());
+            retObjectField = classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), field == null ? null : field.getJCOInstance());
+            JCObject objField = (JCObject)retObjectField;
             return new MemberExpression(objField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectField != null ? retObjectField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2065,10 +2745,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Field(Expression expression, java.lang.String fieldName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectField = null;
         try {
-            JCObject objField = (JCObject)classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), fieldName);
+            retObjectField = classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), fieldName);
+            JCObject objField = (JCObject)retObjectField;
             return new MemberExpression(objField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectField != null ? retObjectField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2076,10 +2760,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Field(Expression expression, NetType type, java.lang.String fieldName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectField = null;
         try {
-            JCObject objField = (JCObject)classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), fieldName);
+            retObjectField = classType.Invoke("Field", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), fieldName);
+            JCObject objField = (JCObject)retObjectField;
             return new MemberExpression(objField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectField != null ? retObjectField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2087,10 +2775,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression MakeMemberAccess(Expression expression, MemberInfo member) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeMemberAccess = null;
         try {
-            JCObject objMakeMemberAccess = (JCObject)classType.Invoke("MakeMemberAccess", expression == null ? null : expression.getJCOInstance(), member == null ? null : member.getJCOInstance());
+            retObjectMakeMemberAccess = classType.Invoke("MakeMemberAccess", expression == null ? null : expression.getJCOInstance(), member == null ? null : member.getJCOInstance());
+            JCObject objMakeMemberAccess = (JCObject)retObjectMakeMemberAccess;
             return new MemberExpression(objMakeMemberAccess);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeMemberAccess != null ? retObjectMakeMemberAccess.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2098,10 +2790,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Property(Expression expression, MethodInfo propertyAccessor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), propertyAccessor == null ? null : propertyAccessor.getJCOInstance());
+            retObjectProperty = classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), propertyAccessor == null ? null : propertyAccessor.getJCOInstance());
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new MemberExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2109,10 +2805,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Property(Expression expression, PropertyInfo property) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            retObjectProperty = classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), property == null ? null : property.getJCOInstance());
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new MemberExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2120,10 +2820,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Property(Expression expression, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), propertyName);
+            retObjectProperty = classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), propertyName);
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new MemberExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2131,10 +2835,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression Property(Expression expression, NetType type, java.lang.String propertyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectProperty = null;
         try {
-            JCObject objProperty = (JCObject)classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), propertyName);
+            retObjectProperty = classType.Invoke("Property", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), propertyName);
+            JCObject objProperty = (JCObject)retObjectProperty;
             return new MemberExpression(objProperty);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperty != null ? retObjectProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2142,10 +2850,14 @@ public class Expression extends NetObject  {
 
     public static MemberExpression PropertyOrField(Expression expression, java.lang.String propertyOrFieldName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPropertyOrField = null;
         try {
-            JCObject objPropertyOrField = (JCObject)classType.Invoke("PropertyOrField", expression == null ? null : expression.getJCOInstance(), propertyOrFieldName);
+            retObjectPropertyOrField = classType.Invoke("PropertyOrField", expression == null ? null : expression.getJCOInstance(), propertyOrFieldName);
+            JCObject objPropertyOrField = (JCObject)retObjectPropertyOrField;
             return new MemberExpression(objPropertyOrField);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPropertyOrField != null ? retObjectPropertyOrField.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2153,10 +2865,14 @@ public class Expression extends NetObject  {
 
     public static MemberInitExpression MemberInit(NewExpression newExpression, MemberBinding... bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemberInit = null;
         try {
-            JCObject objMemberInit = (JCObject)classType.Invoke("MemberInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(bindings));
+            retObjectMemberInit = classType.Invoke("MemberInit", newExpression == null ? null : newExpression.getJCOInstance(), toObjectFromArray(bindings));
+            JCObject objMemberInit = (JCObject)retObjectMemberInit;
             return new MemberInitExpression(objMemberInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberInit != null ? retObjectMemberInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2164,10 +2880,14 @@ public class Expression extends NetObject  {
 
     public static MemberListBinding ListBind(MemberInfo member, ElementInit... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListBind = null;
         try {
-            JCObject objListBind = (JCObject)classType.Invoke("ListBind", member == null ? null : member.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectListBind = classType.Invoke("ListBind", member == null ? null : member.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objListBind = (JCObject)retObjectListBind;
             return new MemberListBinding(objListBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListBind != null ? retObjectListBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2175,10 +2895,14 @@ public class Expression extends NetObject  {
 
     public static MemberListBinding ListBind(MethodInfo propertyAccessor, ElementInit... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectListBind = null;
         try {
-            JCObject objListBind = (JCObject)classType.Invoke("ListBind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectListBind = classType.Invoke("ListBind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objListBind = (JCObject)retObjectListBind;
             return new MemberListBinding(objListBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectListBind != null ? retObjectListBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2186,10 +2910,14 @@ public class Expression extends NetObject  {
 
     public static MemberMemberBinding MemberBind(MemberInfo member, MemberBinding... bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemberBind = null;
         try {
-            JCObject objMemberBind = (JCObject)classType.Invoke("MemberBind", member == null ? null : member.getJCOInstance(), toObjectFromArray(bindings));
+            retObjectMemberBind = classType.Invoke("MemberBind", member == null ? null : member.getJCOInstance(), toObjectFromArray(bindings));
+            JCObject objMemberBind = (JCObject)retObjectMemberBind;
             return new MemberMemberBinding(objMemberBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberBind != null ? retObjectMemberBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2197,10 +2925,14 @@ public class Expression extends NetObject  {
 
     public static MemberMemberBinding MemberBind(MethodInfo propertyAccessor, MemberBinding... bindings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMemberBind = null;
         try {
-            JCObject objMemberBind = (JCObject)classType.Invoke("MemberBind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), toObjectFromArray(bindings));
+            retObjectMemberBind = classType.Invoke("MemberBind", propertyAccessor == null ? null : propertyAccessor.getJCOInstance(), toObjectFromArray(bindings));
+            JCObject objMemberBind = (JCObject)retObjectMemberBind;
             return new MemberMemberBinding(objMemberBind);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberBind != null ? retObjectMemberBind.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2208,10 +2940,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression ArrayIndex(Expression array, Expression... indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrayIndex = null;
         try {
-            JCObject objArrayIndex = (JCObject)classType.Invoke("ArrayIndex", array == null ? null : array.getJCOInstance(), toObjectFromArray(indexes));
+            retObjectArrayIndex = classType.Invoke("ArrayIndex", array == null ? null : array.getJCOInstance(), toObjectFromArray(indexes));
+            JCObject objArrayIndex = (JCObject)retObjectArrayIndex;
             return new MethodCallExpression(objArrayIndex);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrayIndex != null ? retObjectArrayIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2219,10 +2955,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(Expression instance, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2230,10 +2970,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2241,10 +2985,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2252,10 +3000,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectCall = classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2263,10 +3015,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(Expression instance, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), methodName, toObjectFromArray(typeArguments), toObjectFromArray(arguments));
+            retObjectCall = classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), methodName, toObjectFromArray(typeArguments), toObjectFromArray(arguments));
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2274,10 +3030,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression arg0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2285,10 +3045,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2296,10 +3060,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2307,10 +3075,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2318,10 +3090,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2329,10 +3105,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(MethodInfo method, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectCall = classType.Invoke("Call", method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2340,10 +3120,14 @@ public class Expression extends NetObject  {
 
     public static MethodCallExpression Call(NetType type, java.lang.String methodName, NetType[] typeArguments, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCall = null;
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", type == null ? null : type.getJCOInstance(), methodName, toObjectFromArray(typeArguments), toObjectFromArray(arguments));
+            retObjectCall = classType.Invoke("Call", type == null ? null : type.getJCOInstance(), methodName, toObjectFromArray(typeArguments), toObjectFromArray(arguments));
+            JCObject objCall = (JCObject)retObjectCall;
             return new MethodCallExpression(objCall);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCall != null ? retObjectCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2351,10 +3135,14 @@ public class Expression extends NetObject  {
 
     public static NewArrayExpression NewArrayBounds(NetType type, Expression... bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewArrayBounds = null;
         try {
-            JCObject objNewArrayBounds = (JCObject)classType.Invoke("NewArrayBounds", type == null ? null : type.getJCOInstance(), toObjectFromArray(bounds));
+            retObjectNewArrayBounds = classType.Invoke("NewArrayBounds", type == null ? null : type.getJCOInstance(), toObjectFromArray(bounds));
+            JCObject objNewArrayBounds = (JCObject)retObjectNewArrayBounds;
             return new NewArrayExpression(objNewArrayBounds);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewArrayBounds != null ? retObjectNewArrayBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2362,10 +3150,14 @@ public class Expression extends NetObject  {
 
     public static NewArrayExpression NewArrayInit(NetType type, Expression... initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNewArrayInit = null;
         try {
-            JCObject objNewArrayInit = (JCObject)classType.Invoke("NewArrayInit", type == null ? null : type.getJCOInstance(), toObjectFromArray(initializers));
+            retObjectNewArrayInit = classType.Invoke("NewArrayInit", type == null ? null : type.getJCOInstance(), toObjectFromArray(initializers));
+            JCObject objNewArrayInit = (JCObject)retObjectNewArrayInit;
             return new NewArrayExpression(objNewArrayInit);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNewArrayInit != null ? retObjectNewArrayInit.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2373,10 +3165,14 @@ public class Expression extends NetObject  {
 
     public static NewExpression New(ConstructorInfo constructor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNew = null;
         try {
-            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance());
+            retObjectNew = classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance());
+            JCObject objNew = (JCObject)retObjectNew;
             return new NewExpression(objNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNew != null ? retObjectNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2384,10 +3180,14 @@ public class Expression extends NetObject  {
 
     public static NewExpression New(ConstructorInfo constructor, Expression... arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNew = null;
         try {
-            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance(), toObjectFromArray(arguments));
+            retObjectNew = classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objNew = (JCObject)retObjectNew;
             return new NewExpression(objNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNew != null ? retObjectNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2395,10 +3195,14 @@ public class Expression extends NetObject  {
 
     public static NewExpression New(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNew = null;
         try {
-            JCObject objNew = (JCObject)classType.Invoke("New", type == null ? null : type.getJCOInstance());
+            retObjectNew = classType.Invoke("New", type == null ? null : type.getJCOInstance());
+            JCObject objNew = (JCObject)retObjectNew;
             return new NewExpression(objNew);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNew != null ? retObjectNew.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2406,10 +3210,14 @@ public class Expression extends NetObject  {
 
     public static ParameterExpression Parameter(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParameter = null;
         try {
-            JCObject objParameter = (JCObject)classType.Invoke("Parameter", type == null ? null : type.getJCOInstance());
+            retObjectParameter = classType.Invoke("Parameter", type == null ? null : type.getJCOInstance());
+            JCObject objParameter = (JCObject)retObjectParameter;
             return new ParameterExpression(objParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameter != null ? retObjectParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2417,10 +3225,14 @@ public class Expression extends NetObject  {
 
     public static ParameterExpression Parameter(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectParameter = null;
         try {
-            JCObject objParameter = (JCObject)classType.Invoke("Parameter", type == null ? null : type.getJCOInstance(), name);
+            retObjectParameter = classType.Invoke("Parameter", type == null ? null : type.getJCOInstance(), name);
+            JCObject objParameter = (JCObject)retObjectParameter;
             return new ParameterExpression(objParameter);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameter != null ? retObjectParameter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2428,10 +3240,14 @@ public class Expression extends NetObject  {
 
     public static ParameterExpression Variable(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVariable = null;
         try {
-            JCObject objVariable = (JCObject)classType.Invoke("Variable", type == null ? null : type.getJCOInstance());
+            retObjectVariable = classType.Invoke("Variable", type == null ? null : type.getJCOInstance());
+            JCObject objVariable = (JCObject)retObjectVariable;
             return new ParameterExpression(objVariable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariable != null ? retObjectVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2439,10 +3255,14 @@ public class Expression extends NetObject  {
 
     public static ParameterExpression Variable(NetType type, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVariable = null;
         try {
-            JCObject objVariable = (JCObject)classType.Invoke("Variable", type == null ? null : type.getJCOInstance(), name);
+            retObjectVariable = classType.Invoke("Variable", type == null ? null : type.getJCOInstance(), name);
+            JCObject objVariable = (JCObject)retObjectVariable;
             return new ParameterExpression(objVariable);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVariable != null ? retObjectVariable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2450,10 +3270,14 @@ public class Expression extends NetObject  {
 
     public static RuntimeVariablesExpression RuntimeVariables(ParameterExpression... variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRuntimeVariables = null;
         try {
-            JCObject objRuntimeVariables = (JCObject)classType.Invoke("RuntimeVariables", (java.lang.Object)toObjectFromArray(variables));
+            retObjectRuntimeVariables = classType.Invoke("RuntimeVariables", (java.lang.Object)toObjectFromArray(variables));
+            JCObject objRuntimeVariables = (JCObject)retObjectRuntimeVariables;
             return new RuntimeVariablesExpression(objRuntimeVariables);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRuntimeVariables != null ? retObjectRuntimeVariables.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2461,10 +3285,14 @@ public class Expression extends NetObject  {
 
     public static SwitchCase SwitchCase(Expression body, Expression... testValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitchCase = null;
         try {
-            JCObject objSwitchCase = (JCObject)classType.Invoke("SwitchCase", body == null ? null : body.getJCOInstance(), toObjectFromArray(testValues));
+            retObjectSwitchCase = classType.Invoke("SwitchCase", body == null ? null : body.getJCOInstance(), toObjectFromArray(testValues));
+            JCObject objSwitchCase = (JCObject)retObjectSwitchCase;
             return new SwitchCase(objSwitchCase);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitchCase != null ? retObjectSwitchCase.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2472,10 +3300,14 @@ public class Expression extends NetObject  {
 
     public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, SwitchCase... cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), toObjectFromArray(cases));
+            retObjectSwitch = classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), toObjectFromArray(cases));
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new SwitchExpression(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2483,10 +3315,14 @@ public class Expression extends NetObject  {
 
     public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), comparison == null ? null : comparison.getJCOInstance(), toObjectFromArray(cases));
+            retObjectSwitch = classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), comparison == null ? null : comparison.getJCOInstance(), toObjectFromArray(cases));
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new SwitchExpression(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2494,10 +3330,14 @@ public class Expression extends NetObject  {
 
     public static SwitchExpression Switch(Expression switchValue, SwitchCase... cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), toObjectFromArray(cases));
+            retObjectSwitch = classType.Invoke("Switch", switchValue == null ? null : switchValue.getJCOInstance(), toObjectFromArray(cases));
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new SwitchExpression(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2505,10 +3345,14 @@ public class Expression extends NetObject  {
 
     public static SwitchExpression Switch(NetType type, Expression switchValue, Expression defaultBody, MethodInfo comparison, SwitchCase... cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSwitch = null;
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", type == null ? null : type.getJCOInstance(), switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), comparison == null ? null : comparison.getJCOInstance(), toObjectFromArray(cases));
+            retObjectSwitch = classType.Invoke("Switch", type == null ? null : type.getJCOInstance(), switchValue == null ? null : switchValue.getJCOInstance(), defaultBody == null ? null : defaultBody.getJCOInstance(), comparison == null ? null : comparison.getJCOInstance(), toObjectFromArray(cases));
+            JCObject objSwitch = (JCObject)retObjectSwitch;
             return new SwitchExpression(objSwitch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSwitch != null ? retObjectSwitch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2516,10 +3360,14 @@ public class Expression extends NetObject  {
 
     public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSymbolDocument = null;
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName);
+            retObjectSymbolDocument = classType.Invoke("SymbolDocument", fileName);
+            JCObject objSymbolDocument = (JCObject)retObjectSymbolDocument;
             return new SymbolDocumentInfo(objSymbolDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymbolDocument != null ? retObjectSymbolDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2527,10 +3375,14 @@ public class Expression extends NetObject  {
 
     public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSymbolDocument = null;
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance());
+            retObjectSymbolDocument = classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance());
+            JCObject objSymbolDocument = (JCObject)retObjectSymbolDocument;
             return new SymbolDocumentInfo(objSymbolDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymbolDocument != null ? retObjectSymbolDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2538,10 +3390,14 @@ public class Expression extends NetObject  {
 
     public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSymbolDocument = null;
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance());
+            retObjectSymbolDocument = classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance());
+            JCObject objSymbolDocument = (JCObject)retObjectSymbolDocument;
             return new SymbolDocumentInfo(objSymbolDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymbolDocument != null ? retObjectSymbolDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2549,10 +3405,14 @@ public class Expression extends NetObject  {
 
     public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSymbolDocument = null;
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
+            retObjectSymbolDocument = classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
+            JCObject objSymbolDocument = (JCObject)retObjectSymbolDocument;
             return new SymbolDocumentInfo(objSymbolDocument);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSymbolDocument != null ? retObjectSymbolDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2560,10 +3420,14 @@ public class Expression extends NetObject  {
 
     public static TryExpression TryCatch(Expression body, CatchBlock... handlers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCatch = null;
         try {
-            JCObject objTryCatch = (JCObject)classType.Invoke("TryCatch", body == null ? null : body.getJCOInstance(), toObjectFromArray(handlers));
+            retObjectTryCatch = classType.Invoke("TryCatch", body == null ? null : body.getJCOInstance(), toObjectFromArray(handlers));
+            JCObject objTryCatch = (JCObject)retObjectTryCatch;
             return new TryExpression(objTryCatch);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryCatch != null ? retObjectTryCatch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2571,10 +3435,14 @@ public class Expression extends NetObject  {
 
     public static TryExpression TryCatchFinally(Expression body, Expression _finally, CatchBlock... handlers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryCatchFinally = null;
         try {
-            JCObject objTryCatchFinally = (JCObject)classType.Invoke("TryCatchFinally", body == null ? null : body.getJCOInstance(), _finally == null ? null : _finally.getJCOInstance(), toObjectFromArray(handlers));
+            retObjectTryCatchFinally = classType.Invoke("TryCatchFinally", body == null ? null : body.getJCOInstance(), _finally == null ? null : _finally.getJCOInstance(), toObjectFromArray(handlers));
+            JCObject objTryCatchFinally = (JCObject)retObjectTryCatchFinally;
             return new TryExpression(objTryCatchFinally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryCatchFinally != null ? retObjectTryCatchFinally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2582,10 +3450,14 @@ public class Expression extends NetObject  {
 
     public static TryExpression TryFault(Expression body, Expression fault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryFault = null;
         try {
-            JCObject objTryFault = (JCObject)classType.Invoke("TryFault", body == null ? null : body.getJCOInstance(), fault == null ? null : fault.getJCOInstance());
+            retObjectTryFault = classType.Invoke("TryFault", body == null ? null : body.getJCOInstance(), fault == null ? null : fault.getJCOInstance());
+            JCObject objTryFault = (JCObject)retObjectTryFault;
             return new TryExpression(objTryFault);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryFault != null ? retObjectTryFault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2593,10 +3465,14 @@ public class Expression extends NetObject  {
 
     public static TryExpression TryFinally(Expression body, Expression _finally) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryFinally = null;
         try {
-            JCObject objTryFinally = (JCObject)classType.Invoke("TryFinally", body == null ? null : body.getJCOInstance(), _finally == null ? null : _finally.getJCOInstance());
+            retObjectTryFinally = classType.Invoke("TryFinally", body == null ? null : body.getJCOInstance(), _finally == null ? null : _finally.getJCOInstance());
+            JCObject objTryFinally = (JCObject)retObjectTryFinally;
             return new TryExpression(objTryFinally);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTryFinally != null ? retObjectTryFinally.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2604,10 +3480,14 @@ public class Expression extends NetObject  {
 
     public static TypeBinaryExpression TypeEqual(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeEqual = null;
         try {
-            JCObject objTypeEqual = (JCObject)classType.Invoke("TypeEqual", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectTypeEqual = classType.Invoke("TypeEqual", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objTypeEqual = (JCObject)retObjectTypeEqual;
             return new TypeBinaryExpression(objTypeEqual);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeEqual != null ? retObjectTypeEqual.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2615,10 +3495,14 @@ public class Expression extends NetObject  {
 
     public static TypeBinaryExpression TypeIs(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeIs = null;
         try {
-            JCObject objTypeIs = (JCObject)classType.Invoke("TypeIs", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectTypeIs = classType.Invoke("TypeIs", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objTypeIs = (JCObject)retObjectTypeIs;
             return new TypeBinaryExpression(objTypeIs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeIs != null ? retObjectTypeIs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2626,10 +3510,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression ArrayLength(Expression array) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectArrayLength = null;
         try {
-            JCObject objArrayLength = (JCObject)classType.Invoke("ArrayLength", array == null ? null : array.getJCOInstance());
+            retObjectArrayLength = classType.Invoke("ArrayLength", array == null ? null : array.getJCOInstance());
+            JCObject objArrayLength = (JCObject)retObjectArrayLength;
             return new UnaryExpression(objArrayLength);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectArrayLength != null ? retObjectArrayLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2637,10 +3525,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Convert(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new UnaryExpression(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2648,10 +3540,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Convert(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvert = null;
         try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectConvert = classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objConvert = (JCObject)retObjectConvert;
             return new UnaryExpression(objConvert);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvert != null ? retObjectConvert.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2659,10 +3555,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression ConvertChecked(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertChecked = null;
         try {
-            JCObject objConvertChecked = (JCObject)classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectConvertChecked = classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConvertChecked = (JCObject)retObjectConvertChecked;
             return new UnaryExpression(objConvertChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertChecked != null ? retObjectConvertChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2670,10 +3570,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression ConvertChecked(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectConvertChecked = null;
         try {
-            JCObject objConvertChecked = (JCObject)classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectConvertChecked = classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objConvertChecked = (JCObject)retObjectConvertChecked;
             return new UnaryExpression(objConvertChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConvertChecked != null ? retObjectConvertChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2681,10 +3585,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Decrement(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecrement = null;
         try {
-            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance());
+            retObjectDecrement = classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance());
+            JCObject objDecrement = (JCObject)retObjectDecrement;
             return new UnaryExpression(objDecrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrement != null ? retObjectDecrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2692,10 +3600,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Decrement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecrement = null;
         try {
-            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectDecrement = classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objDecrement = (JCObject)retObjectDecrement;
             return new UnaryExpression(objDecrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecrement != null ? retObjectDecrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2703,10 +3615,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Increment(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncrement = null;
         try {
-            JCObject objIncrement = (JCObject)classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance());
+            retObjectIncrement = classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance());
+            JCObject objIncrement = (JCObject)retObjectIncrement;
             return new UnaryExpression(objIncrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncrement != null ? retObjectIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2714,10 +3630,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Increment(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIncrement = null;
         try {
-            JCObject objIncrement = (JCObject)classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectIncrement = classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objIncrement = (JCObject)retObjectIncrement;
             return new UnaryExpression(objIncrement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIncrement != null ? retObjectIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2725,10 +3645,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression IsFalse(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFalse = null;
         try {
-            JCObject objIsFalse = (JCObject)classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance());
+            retObjectIsFalse = classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance());
+            JCObject objIsFalse = (JCObject)retObjectIsFalse;
             return new UnaryExpression(objIsFalse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsFalse != null ? retObjectIsFalse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2736,10 +3660,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression IsFalse(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsFalse = null;
         try {
-            JCObject objIsFalse = (JCObject)classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectIsFalse = classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objIsFalse = (JCObject)retObjectIsFalse;
             return new UnaryExpression(objIsFalse);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsFalse != null ? retObjectIsFalse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2747,10 +3675,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression IsTrue(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTrue = null;
         try {
-            JCObject objIsTrue = (JCObject)classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance());
+            retObjectIsTrue = classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance());
+            JCObject objIsTrue = (JCObject)retObjectIsTrue;
             return new UnaryExpression(objIsTrue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsTrue != null ? retObjectIsTrue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2758,10 +3690,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression IsTrue(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsTrue = null;
         try {
-            JCObject objIsTrue = (JCObject)classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectIsTrue = classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objIsTrue = (JCObject)retObjectIsTrue;
             return new UnaryExpression(objIsTrue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsTrue != null ? retObjectIsTrue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2769,10 +3705,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeUnary = null;
         try {
-            JCObject objMakeUnary = (JCObject)classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectMakeUnary = classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objMakeUnary = (JCObject)retObjectMakeUnary;
             return new UnaryExpression(objMakeUnary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeUnary != null ? retObjectMakeUnary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2780,10 +3720,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectMakeUnary = null;
         try {
-            JCObject objMakeUnary = (JCObject)classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectMakeUnary = classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objMakeUnary = (JCObject)retObjectMakeUnary;
             return new UnaryExpression(objMakeUnary);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMakeUnary != null ? retObjectMakeUnary.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2791,10 +3735,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Negate(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance());
+            retObjectNegate = classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
             return new UnaryExpression(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2802,10 +3750,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Negate(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegate = null;
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectNegate = classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objNegate = (JCObject)retObjectNegate;
             return new UnaryExpression(objNegate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegate != null ? retObjectNegate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2813,10 +3765,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression NegateChecked(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegateChecked = null;
         try {
-            JCObject objNegateChecked = (JCObject)classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance());
+            retObjectNegateChecked = classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance());
+            JCObject objNegateChecked = (JCObject)retObjectNegateChecked;
             return new UnaryExpression(objNegateChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegateChecked != null ? retObjectNegateChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2824,10 +3780,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression NegateChecked(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNegateChecked = null;
         try {
-            JCObject objNegateChecked = (JCObject)classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectNegateChecked = classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objNegateChecked = (JCObject)retObjectNegateChecked;
             return new UnaryExpression(objNegateChecked);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNegateChecked != null ? retObjectNegateChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2835,10 +3795,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Not(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNot = null;
         try {
-            JCObject objNot = (JCObject)classType.Invoke("Not", expression == null ? null : expression.getJCOInstance());
+            retObjectNot = classType.Invoke("Not", expression == null ? null : expression.getJCOInstance());
+            JCObject objNot = (JCObject)retObjectNot;
             return new UnaryExpression(objNot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNot != null ? retObjectNot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2846,10 +3810,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Not(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNot = null;
         try {
-            JCObject objNot = (JCObject)classType.Invoke("Not", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectNot = classType.Invoke("Not", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objNot = (JCObject)retObjectNot;
             return new UnaryExpression(objNot);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNot != null ? retObjectNot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2857,10 +3825,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression OnesComplement(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnesComplement = null;
         try {
-            JCObject objOnesComplement = (JCObject)classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance());
+            retObjectOnesComplement = classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance());
+            JCObject objOnesComplement = (JCObject)retObjectOnesComplement;
             return new UnaryExpression(objOnesComplement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnesComplement != null ? retObjectOnesComplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2868,10 +3840,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression OnesComplement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOnesComplement = null;
         try {
-            JCObject objOnesComplement = (JCObject)classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectOnesComplement = classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objOnesComplement = (JCObject)retObjectOnesComplement;
             return new UnaryExpression(objOnesComplement);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnesComplement != null ? retObjectOnesComplement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2879,10 +3855,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PostDecrementAssign(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostDecrementAssign = null;
         try {
-            JCObject objPostDecrementAssign = (JCObject)classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance());
+            retObjectPostDecrementAssign = classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance());
+            JCObject objPostDecrementAssign = (JCObject)retObjectPostDecrementAssign;
             return new UnaryExpression(objPostDecrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostDecrementAssign != null ? retObjectPostDecrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2890,10 +3870,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PostDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostDecrementAssign = null;
         try {
-            JCObject objPostDecrementAssign = (JCObject)classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPostDecrementAssign = classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPostDecrementAssign = (JCObject)retObjectPostDecrementAssign;
             return new UnaryExpression(objPostDecrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostDecrementAssign != null ? retObjectPostDecrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2901,10 +3885,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PostIncrementAssign(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostIncrementAssign = null;
         try {
-            JCObject objPostIncrementAssign = (JCObject)classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance());
+            retObjectPostIncrementAssign = classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance());
+            JCObject objPostIncrementAssign = (JCObject)retObjectPostIncrementAssign;
             return new UnaryExpression(objPostIncrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostIncrementAssign != null ? retObjectPostIncrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2912,10 +3900,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PostIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPostIncrementAssign = null;
         try {
-            JCObject objPostIncrementAssign = (JCObject)classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPostIncrementAssign = classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPostIncrementAssign = (JCObject)retObjectPostIncrementAssign;
             return new UnaryExpression(objPostIncrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPostIncrementAssign != null ? retObjectPostIncrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2923,10 +3915,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PreDecrementAssign(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreDecrementAssign = null;
         try {
-            JCObject objPreDecrementAssign = (JCObject)classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance());
+            retObjectPreDecrementAssign = classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance());
+            JCObject objPreDecrementAssign = (JCObject)retObjectPreDecrementAssign;
             return new UnaryExpression(objPreDecrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreDecrementAssign != null ? retObjectPreDecrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2934,10 +3930,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PreDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreDecrementAssign = null;
         try {
-            JCObject objPreDecrementAssign = (JCObject)classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPreDecrementAssign = classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPreDecrementAssign = (JCObject)retObjectPreDecrementAssign;
             return new UnaryExpression(objPreDecrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreDecrementAssign != null ? retObjectPreDecrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2945,10 +3945,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PreIncrementAssign(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreIncrementAssign = null;
         try {
-            JCObject objPreIncrementAssign = (JCObject)classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance());
+            retObjectPreIncrementAssign = classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance());
+            JCObject objPreIncrementAssign = (JCObject)retObjectPreIncrementAssign;
             return new UnaryExpression(objPreIncrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreIncrementAssign != null ? retObjectPreIncrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2956,10 +3960,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression PreIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPreIncrementAssign = null;
         try {
-            JCObject objPreIncrementAssign = (JCObject)classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectPreIncrementAssign = classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objPreIncrementAssign = (JCObject)retObjectPreIncrementAssign;
             return new UnaryExpression(objPreIncrementAssign);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreIncrementAssign != null ? retObjectPreIncrementAssign.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2967,10 +3975,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Quote(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectQuote = null;
         try {
-            JCObject objQuote = (JCObject)classType.Invoke("Quote", expression == null ? null : expression.getJCOInstance());
+            retObjectQuote = classType.Invoke("Quote", expression == null ? null : expression.getJCOInstance());
+            JCObject objQuote = (JCObject)retObjectQuote;
             return new UnaryExpression(objQuote);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectQuote != null ? retObjectQuote.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2978,10 +3990,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Rethrow() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRethrow = null;
         try {
-            JCObject objRethrow = (JCObject)classType.Invoke("Rethrow");
+            retObjectRethrow = classType.Invoke("Rethrow");
+            JCObject objRethrow = (JCObject)retObjectRethrow;
             return new UnaryExpression(objRethrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRethrow != null ? retObjectRethrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2989,10 +4005,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Rethrow(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRethrow = null;
         try {
-            JCObject objRethrow = (JCObject)classType.Invoke("Rethrow", type == null ? null : type.getJCOInstance());
+            retObjectRethrow = classType.Invoke("Rethrow", type == null ? null : type.getJCOInstance());
+            JCObject objRethrow = (JCObject)retObjectRethrow;
             return new UnaryExpression(objRethrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRethrow != null ? retObjectRethrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3000,10 +4020,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Throw(Expression value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThrow = null;
         try {
-            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance());
+            retObjectThrow = classType.Invoke("Throw", value == null ? null : value.getJCOInstance());
+            JCObject objThrow = (JCObject)retObjectThrow;
             return new UnaryExpression(objThrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThrow != null ? retObjectThrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3011,10 +4035,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Throw(Expression value, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThrow = null;
         try {
-            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectThrow = classType.Invoke("Throw", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objThrow = (JCObject)retObjectThrow;
             return new UnaryExpression(objThrow);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThrow != null ? retObjectThrow.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3022,10 +4050,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression TypeAs(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTypeAs = null;
         try {
-            JCObject objTypeAs = (JCObject)classType.Invoke("TypeAs", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectTypeAs = classType.Invoke("TypeAs", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objTypeAs = (JCObject)retObjectTypeAs;
             return new UnaryExpression(objTypeAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypeAs != null ? retObjectTypeAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3033,10 +4065,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression UnaryPlus(Expression expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnaryPlus = null;
         try {
-            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance());
+            retObjectUnaryPlus = classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance());
+            JCObject objUnaryPlus = (JCObject)retObjectUnaryPlus;
             return new UnaryExpression(objUnaryPlus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnaryPlus != null ? retObjectUnaryPlus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3044,10 +4080,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression UnaryPlus(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnaryPlus = null;
         try {
-            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            retObjectUnaryPlus = classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objUnaryPlus = (JCObject)retObjectUnaryPlus;
             return new UnaryExpression(objUnaryPlus);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnaryPlus != null ? retObjectUnaryPlus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3055,10 +4095,14 @@ public class Expression extends NetObject  {
 
     public static UnaryExpression Unbox(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectUnbox = null;
         try {
-            JCObject objUnbox = (JCObject)classType.Invoke("Unbox", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            retObjectUnbox = classType.Invoke("Unbox", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objUnbox = (JCObject)retObjectUnbox;
             return new UnaryExpression(objUnbox);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnbox != null ? retObjectUnbox.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3066,10 +4110,14 @@ public class Expression extends NetObject  {
 
     public static NetType GetActionType(NetType... typeArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetActionType = null;
         try {
-            JCObject objGetActionType = (JCObject)classType.Invoke("GetActionType", (java.lang.Object)toObjectFromArray(typeArgs));
+            retObjectGetActionType = classType.Invoke("GetActionType", (java.lang.Object)toObjectFromArray(typeArgs));
+            JCObject objGetActionType = (JCObject)retObjectGetActionType;
             return new NetType(objGetActionType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetActionType != null ? retObjectGetActionType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3077,10 +4125,14 @@ public class Expression extends NetObject  {
 
     public static NetType GetDelegateType(NetType... typeArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetDelegateType = null;
         try {
-            JCObject objGetDelegateType = (JCObject)classType.Invoke("GetDelegateType", (java.lang.Object)toObjectFromArray(typeArgs));
+            retObjectGetDelegateType = classType.Invoke("GetDelegateType", (java.lang.Object)toObjectFromArray(typeArgs));
+            JCObject objGetDelegateType = (JCObject)retObjectGetDelegateType;
             return new NetType(objGetDelegateType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDelegateType != null ? retObjectGetDelegateType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3088,10 +4140,14 @@ public class Expression extends NetObject  {
 
     public static NetType GetFuncType(NetType... typeArgs) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetFuncType = null;
         try {
-            JCObject objGetFuncType = (JCObject)classType.Invoke("GetFuncType", (java.lang.Object)toObjectFromArray(typeArgs));
+            retObjectGetFuncType = classType.Invoke("GetFuncType", (java.lang.Object)toObjectFromArray(typeArgs));
+            JCObject objGetFuncType = (JCObject)retObjectGetFuncType;
             return new NetType(objGetFuncType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFuncType != null ? retObjectGetFuncType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3103,9 +4159,13 @@ public class Expression extends NetObject  {
     
     public boolean getCanReduce() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCanReduce = null;
         try {
-            return (boolean)classInstance.Get("CanReduce");
+            retObjectCanReduce = classInstance.Get("CanReduce");
+            return (boolean)retObjectCanReduce;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCanReduce != null ? retObjectCanReduce.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3113,10 +4173,14 @@ public class Expression extends NetObject  {
 
     public ExpressionType getNodeType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNodeType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NodeType");
+            retObjectNodeType = classInstance.Get("NodeType");
+            JCObject val = (JCObject)retObjectNodeType;
             return new ExpressionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNodeType != null ? retObjectNodeType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3124,10 +4188,14 @@ public class Expression extends NetObject  {
 
     public NetType getType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Type");
+            retObjectType = classInstance.Get("Type");
+            JCObject val = (JCObject)retObjectType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectType != null ? retObjectType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

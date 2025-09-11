@@ -176,10 +176,14 @@ public class PeerPresenceInfo extends NetObject  {
     
     public PeerPresenceStatus getPresenceStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPresenceStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PresenceStatus");
+            retObjectPresenceStatus = classInstance.Get("PresenceStatus");
+            JCObject val = (JCObject)retObjectPresenceStatus;
             return new PeerPresenceStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPresenceStatus != null ? retObjectPresenceStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class PeerPresenceInfo extends NetObject  {
 
     public void setPresenceStatus(PeerPresenceStatus PresenceStatus) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PresenceStatus", PresenceStatus == null ? null : PresenceStatus.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class PeerPresenceInfo extends NetObject  {
 
     public java.lang.String getDescriptiveText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescriptiveText = null;
         try {
-            return (java.lang.String)classInstance.Get("DescriptiveText");
+            retObjectDescriptiveText = classInstance.Get("DescriptiveText");
+            return (java.lang.String)retObjectDescriptiveText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescriptiveText != null ? retObjectDescriptiveText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,7 +215,7 @@ public class PeerPresenceInfo extends NetObject  {
 
     public void setDescriptiveText(java.lang.String DescriptiveText) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DescriptiveText", DescriptiveText);
         } catch (JCNativeException jcne) {

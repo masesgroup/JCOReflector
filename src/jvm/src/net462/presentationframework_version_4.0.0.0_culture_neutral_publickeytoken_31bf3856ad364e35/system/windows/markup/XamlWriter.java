@@ -157,9 +157,13 @@ public class XamlWriter extends NetObject  {
     
     public static java.lang.String Save(NetObject obj) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSave = null;
         try {
-            return (java.lang.String)classType.Invoke("Save", obj == null ? null : obj.getJCOInstance());
+            retObjectSave = classType.Invoke("Save", obj == null ? null : obj.getJCOInstance());
+            return (java.lang.String)retObjectSave;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectSave != null ? retObjectSave.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class XamlWriter extends NetObject  {
 
     public static void Save(NetObject obj, Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", obj == null ? null : obj.getJCOInstance(), stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class XamlWriter extends NetObject  {
 
     public static void Save(NetObject obj, TextWriter writer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", obj == null ? null : obj.getJCOInstance(), writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -187,7 +191,7 @@ public class XamlWriter extends NetObject  {
 
     public static void Save(NetObject obj, XamlDesignerSerializationManager manager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", obj == null ? null : obj.getJCOInstance(), manager == null ? null : manager.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -197,7 +201,7 @@ public class XamlWriter extends NetObject  {
 
     public static void Save(NetObject obj, XmlWriter xmlWriter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Save", obj == null ? null : obj.getJCOInstance(), xmlWriter == null ? null : xmlWriter.getJCOInstance());
         } catch (JCNativeException jcne) {

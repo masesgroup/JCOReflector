@@ -157,10 +157,14 @@ public class MsmqMessageProperty extends NetObject  {
     
     public static MsmqMessageProperty Get(Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGet = null;
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", message == null ? null : message.getJCOInstance());
+            retObjectGet = classType.Invoke("Get", message == null ? null : message.getJCOInstance());
+            JCObject objGet = (JCObject)retObjectGet;
             return new MsmqMessageProperty(objGet);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class MsmqMessageProperty extends NetObject  {
     
     public int getAbortCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAbortCount = null;
         try {
-            return (int)classInstance.Get("AbortCount");
+            retObjectAbortCount = classInstance.Get("AbortCount");
+            return (int)retObjectAbortCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectAbortCount != null ? retObjectAbortCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +190,7 @@ public class MsmqMessageProperty extends NetObject  {
 
     public void setAbortCount(int AbortCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AbortCount", AbortCount);
         } catch (JCNativeException jcne) {
@@ -192,9 +200,13 @@ public class MsmqMessageProperty extends NetObject  {
 
     public int getMoveCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMoveCount = null;
         try {
-            return (int)classInstance.Get("MoveCount");
+            retObjectMoveCount = classInstance.Get("MoveCount");
+            return (int)retObjectMoveCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMoveCount != null ? retObjectMoveCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +214,7 @@ public class MsmqMessageProperty extends NetObject  {
 
     public void setMoveCount(int MoveCount) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MoveCount", MoveCount);
         } catch (JCNativeException jcne) {

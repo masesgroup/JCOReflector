@@ -159,9 +159,13 @@ public class SpellCheck extends NetObject  {
     
     public static boolean GetIsEnabled(TextBoxBase textBoxBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsEnabled = null;
         try {
-            return (boolean)classType.Invoke("GetIsEnabled", textBoxBase == null ? null : textBoxBase.getJCOInstance());
+            retObjectGetIsEnabled = classType.Invoke("GetIsEnabled", textBoxBase == null ? null : textBoxBase.getJCOInstance());
+            return (boolean)retObjectGetIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsEnabled != null ? retObjectGetIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class SpellCheck extends NetObject  {
 
     public static IList GetCustomDictionaries(TextBoxBase textBoxBase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetCustomDictionaries = null;
         try {
-            JCObject objGetCustomDictionaries = (JCObject)classType.Invoke("GetCustomDictionaries", textBoxBase == null ? null : textBoxBase.getJCOInstance());
+            retObjectGetCustomDictionaries = classType.Invoke("GetCustomDictionaries", textBoxBase == null ? null : textBoxBase.getJCOInstance());
+            JCObject objGetCustomDictionaries = (JCObject)retObjectGetCustomDictionaries;
             return new IListImplementation(objGetCustomDictionaries);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetCustomDictionaries != null ? retObjectGetCustomDictionaries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class SpellCheck extends NetObject  {
 
     public static void SetIsEnabled(TextBoxBase textBoxBase, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsEnabled", textBoxBase == null ? null : textBoxBase.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -190,7 +198,7 @@ public class SpellCheck extends NetObject  {
 
     public static void SetSpellingReform(TextBoxBase textBoxBase, SpellingReform value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetSpellingReform", textBoxBase == null ? null : textBoxBase.getJCOInstance(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,9 +212,13 @@ public class SpellCheck extends NetObject  {
     
     public boolean getIsEnabled() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsEnabled");
+            retObjectIsEnabled = classInstance.Get("IsEnabled");
+            return (boolean)retObjectIsEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsEnabled != null ? retObjectIsEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class SpellCheck extends NetObject  {
 
     public void setIsEnabled(boolean IsEnabled) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsEnabled", IsEnabled);
         } catch (JCNativeException jcne) {
@@ -224,10 +236,14 @@ public class SpellCheck extends NetObject  {
 
     public IList getCustomDictionaries() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomDictionaries = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomDictionaries");
+            retObjectCustomDictionaries = classInstance.Get("CustomDictionaries");
+            JCObject val = (JCObject)retObjectCustomDictionaries;
             return new IListImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomDictionaries != null ? retObjectCustomDictionaries.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +251,14 @@ public class SpellCheck extends NetObject  {
 
     public SpellingReform getSpellingReform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSpellingReform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SpellingReform");
+            retObjectSpellingReform = classInstance.Get("SpellingReform");
+            JCObject val = (JCObject)retObjectSpellingReform;
             return new SpellingReform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSpellingReform != null ? retObjectSpellingReform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +266,7 @@ public class SpellCheck extends NetObject  {
 
     public void setSpellingReform(SpellingReform SpellingReform) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SpellingReform", SpellingReform == null ? null : SpellingReform.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -162,10 +162,14 @@ public class ManifestSignatureInformation extends NetObject  {
     
     public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.security.SecurityException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            JCObject objVerifySignature = (JCObject)classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance());
+            retObjectVerifySignature = classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance());
+            JCObject objVerifySignature = (JCObject)retObjectVerifySignature;
             return new ManifestSignatureInformationCollection(objVerifySignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,10 +177,14 @@ public class ManifestSignatureInformation extends NetObject  {
 
     public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ObjectDisposedException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            JCObject objVerifySignature = (JCObject)classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance(), manifests == null ? null : manifests.getJCOInstance());
+            retObjectVerifySignature = classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance(), manifests == null ? null : manifests.getJCOInstance());
+            JCObject objVerifySignature = (JCObject)retObjectVerifySignature;
             return new ManifestSignatureInformationCollection(objVerifySignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class ManifestSignatureInformation extends NetObject  {
 
     public static ManifestSignatureInformationCollection VerifySignature(ActivationContext application, ManifestKinds manifests, X509RevocationFlag revocationFlag, X509RevocationMode revocationMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.FormatException, system.xml.xpath.XPathException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.AccessViolationException, system.UriFormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectVerifySignature = null;
         try {
-            JCObject objVerifySignature = (JCObject)classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance(), manifests == null ? null : manifests.getJCOInstance(), revocationFlag == null ? null : revocationFlag.getJCOInstance(), revocationMode == null ? null : revocationMode.getJCOInstance());
+            retObjectVerifySignature = classType.Invoke("VerifySignature", application == null ? null : application.getJCOInstance(), manifests == null ? null : manifests.getJCOInstance(), revocationFlag == null ? null : revocationFlag.getJCOInstance(), revocationMode == null ? null : revocationMode.getJCOInstance());
+            JCObject objVerifySignature = (JCObject)retObjectVerifySignature;
             return new ManifestSignatureInformationCollection(objVerifySignature);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectVerifySignature != null ? retObjectVerifySignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class ManifestSignatureInformation extends NetObject  {
     
     public StrongNameSignatureInformation getStrongNameSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStrongNameSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StrongNameSignature");
+            retObjectStrongNameSignature = classInstance.Get("StrongNameSignature");
+            JCObject val = (JCObject)retObjectStrongNameSignature;
             return new StrongNameSignatureInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStrongNameSignature != null ? retObjectStrongNameSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class ManifestSignatureInformation extends NetObject  {
 
     public AuthenticodeSignatureInformation getAuthenticodeSignature() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAuthenticodeSignature = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AuthenticodeSignature");
+            retObjectAuthenticodeSignature = classInstance.Get("AuthenticodeSignature");
+            JCObject val = (JCObject)retObjectAuthenticodeSignature;
             return new AuthenticodeSignatureInformation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAuthenticodeSignature != null ? retObjectAuthenticodeSignature.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class ManifestSignatureInformation extends NetObject  {
 
     public ManifestKinds getManifest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectManifest = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Manifest");
+            retObjectManifest = classInstance.Get("Manifest");
+            JCObject val = (JCObject)retObjectManifest;
             return new ManifestKinds(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectManifest != null ? retObjectManifest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

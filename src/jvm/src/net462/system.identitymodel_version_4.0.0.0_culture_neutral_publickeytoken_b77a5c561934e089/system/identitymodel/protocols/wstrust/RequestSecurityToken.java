@@ -193,10 +193,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
     
     public AdditionalContext getAdditionalContext() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdditionalContext = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AdditionalContext");
+            retObjectAdditionalContext = classInstance.Get("AdditionalContext");
+            JCObject val = (JCObject)retObjectAdditionalContext;
             return new AdditionalContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAdditionalContext != null ? retObjectAdditionalContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +208,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setAdditionalContext(AdditionalContext AdditionalContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdditionalContext", AdditionalContext == null ? null : AdditionalContext.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,10 +218,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public EndpointReference getIssuer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIssuer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Issuer");
+            retObjectIssuer = classInstance.Get("Issuer");
+            JCObject val = (JCObject)retObjectIssuer;
             return new EndpointReference(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIssuer != null ? retObjectIssuer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,7 +233,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setIssuer(EndpointReference Issuer) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Issuer", Issuer == null ? null : Issuer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -235,10 +243,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public Participants getParticipants() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParticipants = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Participants");
+            retObjectParticipants = classInstance.Get("Participants");
+            JCObject val = (JCObject)retObjectParticipants;
             return new Participants(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParticipants != null ? retObjectParticipants.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +258,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setParticipants(Participants Participants) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Participants", Participants == null ? null : Participants.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,10 +268,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public Renewing getRenewing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Renewing");
+            retObjectRenewing = classInstance.Get("Renewing");
+            JCObject val = (JCObject)retObjectRenewing;
             return new Renewing(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewing != null ? retObjectRenewing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +283,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setRenewing(Renewing Renewing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Renewing", Renewing == null ? null : Renewing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +293,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public RequestClaimCollection getClaims() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClaims = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Claims");
+            retObjectClaims = classInstance.Get("Claims");
+            JCObject val = (JCObject)retObjectClaims;
             return new RequestClaimCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClaims != null ? retObjectClaims.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,10 +308,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public RequestSecurityToken getSecondaryParameters() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSecondaryParameters = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SecondaryParameters");
+            retObjectSecondaryParameters = classInstance.Get("SecondaryParameters");
+            JCObject val = (JCObject)retObjectSecondaryParameters;
             return new RequestSecurityToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSecondaryParameters != null ? retObjectSecondaryParameters.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +323,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setSecondaryParameters(RequestSecurityToken SecondaryParameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SecondaryParameters", SecondaryParameters == null ? null : SecondaryParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -309,10 +333,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getActAs() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActAs = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActAs");
+            retObjectActAs = classInstance.Get("ActAs");
+            JCObject val = (JCObject)retObjectActAs;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActAs != null ? retObjectActAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +348,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setActAs(SecurityTokenElement ActAs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActAs", ActAs == null ? null : ActAs.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -330,10 +358,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getCancelTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancelTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancelTarget");
+            retObjectCancelTarget = classInstance.Get("CancelTarget");
+            JCObject val = (JCObject)retObjectCancelTarget;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancelTarget != null ? retObjectCancelTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +373,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setCancelTarget(SecurityTokenElement CancelTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancelTarget", CancelTarget == null ? null : CancelTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +383,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getDelegateTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDelegateTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DelegateTo");
+            retObjectDelegateTo = classInstance.Get("DelegateTo");
+            JCObject val = (JCObject)retObjectDelegateTo;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDelegateTo != null ? retObjectDelegateTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +398,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setDelegateTo(SecurityTokenElement DelegateTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DelegateTo", DelegateTo == null ? null : DelegateTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -372,10 +408,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getEncryption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Encryption");
+            retObjectEncryption = classInstance.Get("Encryption");
+            JCObject val = (JCObject)retObjectEncryption;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryption != null ? retObjectEncryption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +423,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setEncryption(SecurityTokenElement Encryption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Encryption", Encryption == null ? null : Encryption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -393,10 +433,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getOnBehalfOf() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnBehalfOf = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OnBehalfOf");
+            retObjectOnBehalfOf = classInstance.Get("OnBehalfOf");
+            JCObject val = (JCObject)retObjectOnBehalfOf;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOnBehalfOf != null ? retObjectOnBehalfOf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,7 +448,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setOnBehalfOf(SecurityTokenElement OnBehalfOf) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnBehalfOf", OnBehalfOf == null ? null : OnBehalfOf.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -414,10 +458,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getProofEncryption() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProofEncryption = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ProofEncryption");
+            retObjectProofEncryption = classInstance.Get("ProofEncryption");
+            JCObject val = (JCObject)retObjectProofEncryption;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProofEncryption != null ? retObjectProofEncryption.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +473,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setProofEncryption(SecurityTokenElement ProofEncryption) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ProofEncryption", ProofEncryption == null ? null : ProofEncryption.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -435,10 +483,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getRenewTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRenewTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RenewTarget");
+            retObjectRenewTarget = classInstance.Get("RenewTarget");
+            JCObject val = (JCObject)retObjectRenewTarget;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRenewTarget != null ? retObjectRenewTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +498,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setRenewTarget(SecurityTokenElement RenewTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RenewTarget", RenewTarget == null ? null : RenewTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -456,10 +508,14 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public SecurityTokenElement getValidateTarget() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateTarget = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidateTarget");
+            retObjectValidateTarget = classInstance.Get("ValidateTarget");
+            JCObject val = (JCObject)retObjectValidateTarget;
             return new SecurityTokenElement(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidateTarget != null ? retObjectValidateTarget.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -467,7 +523,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setValidateTarget(SecurityTokenElement ValidateTarget) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateTarget", ValidateTarget == null ? null : ValidateTarget.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -477,9 +533,13 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public java.lang.String getComputedKeyAlgorithm() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComputedKeyAlgorithm = null;
         try {
-            return (java.lang.String)classInstance.Get("ComputedKeyAlgorithm");
+            retObjectComputedKeyAlgorithm = classInstance.Get("ComputedKeyAlgorithm");
+            return (java.lang.String)retObjectComputedKeyAlgorithm;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComputedKeyAlgorithm != null ? retObjectComputedKeyAlgorithm.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +547,7 @@ public class RequestSecurityToken extends WSTrustMessage  {
 
     public void setComputedKeyAlgorithm(java.lang.String ComputedKeyAlgorithm) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ComputedKeyAlgorithm", ComputedKeyAlgorithm);
         } catch (JCNativeException jcne) {

@@ -157,9 +157,13 @@ public class UdpStatistics extends NetObject  {
     
     public int getUdpListeners() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUdpListeners = null;
         try {
-            return (int)classInstance.Get("UdpListeners");
+            retObjectUdpListeners = classInstance.Get("UdpListeners");
+            return (int)retObjectUdpListeners;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUdpListeners != null ? retObjectUdpListeners.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class UdpStatistics extends NetObject  {
 
     public long getDatagramsReceived() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatagramsReceived = null;
         try {
-            return (long)classInstance.Get("DatagramsReceived");
+            retObjectDatagramsReceived = classInstance.Get("DatagramsReceived");
+            return (long)retObjectDatagramsReceived;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDatagramsReceived != null ? retObjectDatagramsReceived.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +185,13 @@ public class UdpStatistics extends NetObject  {
 
     public long getDatagramsSent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDatagramsSent = null;
         try {
-            return (long)classInstance.Get("DatagramsSent");
+            retObjectDatagramsSent = classInstance.Get("DatagramsSent");
+            return (long)retObjectDatagramsSent;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectDatagramsSent != null ? retObjectDatagramsSent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +199,13 @@ public class UdpStatistics extends NetObject  {
 
     public long getIncomingDatagramsDiscarded() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingDatagramsDiscarded = null;
         try {
-            return (long)classInstance.Get("IncomingDatagramsDiscarded");
+            retObjectIncomingDatagramsDiscarded = classInstance.Get("IncomingDatagramsDiscarded");
+            return (long)retObjectIncomingDatagramsDiscarded;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectIncomingDatagramsDiscarded != null ? retObjectIncomingDatagramsDiscarded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,9 +213,13 @@ public class UdpStatistics extends NetObject  {
 
     public long getIncomingDatagramsWithErrors() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncomingDatagramsWithErrors = null;
         try {
-            return (long)classInstance.Get("IncomingDatagramsWithErrors");
+            retObjectIncomingDatagramsWithErrors = classInstance.Get("IncomingDatagramsWithErrors");
+            return (long)retObjectIncomingDatagramsWithErrors;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectIncomingDatagramsWithErrors != null ? retObjectIncomingDatagramsWithErrors.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -169,10 +169,14 @@ public class ProviderConnectionPoint extends ConnectionPoint  {
     
     public NetObject GetObject(Control control) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObject = null;
         try {
-            JCObject objGetObject = (JCObject)classInstance.Invoke("GetObject", control == null ? null : control.getJCOInstance());
+            retObjectGetObject = classInstance.Invoke("GetObject", control == null ? null : control.getJCOInstance());
+            JCObject objGetObject = (JCObject)retObjectGetObject;
             return new NetObject(objGetObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObject != null ? retObjectGetObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class ProviderConnectionPoint extends ConnectionPoint  {
 
     public ConnectionInterfaceCollection GetSecondaryInterfaces(Control control) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetSecondaryInterfaces = null;
         try {
-            JCObject objGetSecondaryInterfaces = (JCObject)classInstance.Invoke("GetSecondaryInterfaces", control == null ? null : control.getJCOInstance());
+            retObjectGetSecondaryInterfaces = classInstance.Invoke("GetSecondaryInterfaces", control == null ? null : control.getJCOInstance());
+            JCObject objGetSecondaryInterfaces = (JCObject)retObjectGetSecondaryInterfaces;
             return new ConnectionInterfaceCollection(objGetSecondaryInterfaces);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSecondaryInterfaces != null ? retObjectGetSecondaryInterfaces.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

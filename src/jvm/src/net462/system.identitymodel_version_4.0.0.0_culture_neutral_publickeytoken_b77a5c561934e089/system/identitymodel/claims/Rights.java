@@ -157,9 +157,13 @@ public class Rights extends NetObject  {
     
     public static java.lang.String getIdentity() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIdentity = null;
         try {
-            return (java.lang.String)classType.Get("Identity");
+            retObjectIdentity = classType.Get("Identity");
+            return (java.lang.String)retObjectIdentity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIdentity != null ? retObjectIdentity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class Rights extends NetObject  {
 
     public static java.lang.String getPossessProperty() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectPossessProperty = null;
         try {
-            return (java.lang.String)classType.Get("PossessProperty");
+            retObjectPossessProperty = classType.Get("PossessProperty");
+            return (java.lang.String)retObjectPossessProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPossessProperty != null ? retObjectPossessProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

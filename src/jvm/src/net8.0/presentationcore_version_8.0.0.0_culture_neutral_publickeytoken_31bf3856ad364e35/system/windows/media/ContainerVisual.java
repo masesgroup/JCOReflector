@@ -179,10 +179,14 @@ public class ContainerVisual extends Visual  {
     
     public HitTestResult HitTestNewContainerVisual(Point point) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHitTest = null;
         try {
-            JCObject objHitTest = (JCObject)classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            retObjectHitTest = classInstance.Invoke("HitTest", point == null ? null : point.getJCOInstance());
+            JCObject objHitTest = (JCObject)retObjectHitTest;
             return new HitTestResult(objHitTest);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHitTest != null ? retObjectHitTest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +194,7 @@ public class ContainerVisual extends Visual  {
 
     public void HitTestNewContainerVisual(HitTestFilterCallback filterCallback, HitTestResultCallback resultCallback, HitTestParameters hitTestParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("HitTest", filterCallback, resultCallback, hitTestParameters == null ? null : hitTestParameters.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -204,9 +208,13 @@ public class ContainerVisual extends Visual  {
     
     public double getOpacity() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacity = null;
         try {
-            return (double)classInstance.Get("Opacity");
+            retObjectOpacity = classInstance.Get("Opacity");
+            return (double)retObjectOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectOpacity != null ? retObjectOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +222,7 @@ public class ContainerVisual extends Visual  {
 
     public void setOpacity(double Opacity) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Opacity", Opacity);
         } catch (JCNativeException jcne) {
@@ -224,10 +232,14 @@ public class ContainerVisual extends Visual  {
 
     public DependencyObject getParent() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Parent");
+            retObjectParent = classInstance.Get("Parent");
+            JCObject val = (JCObject)retObjectParent;
             return new DependencyObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParent != null ? retObjectParent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,10 +247,14 @@ public class ContainerVisual extends Visual  {
 
     public Brush getOpacityMask() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpacityMask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OpacityMask");
+            retObjectOpacityMask = classInstance.Get("OpacityMask");
+            JCObject val = (JCObject)retObjectOpacityMask;
             return new Brush(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpacityMask != null ? retObjectOpacityMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +262,7 @@ public class ContainerVisual extends Visual  {
 
     public void setOpacityMask(Brush OpacityMask) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OpacityMask", OpacityMask == null ? null : OpacityMask.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -256,10 +272,14 @@ public class ContainerVisual extends Visual  {
 
     public CacheMode getCacheMode() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CacheMode");
+            retObjectCacheMode = classInstance.Get("CacheMode");
+            JCObject val = (JCObject)retObjectCacheMode;
             return new CacheMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCacheMode != null ? retObjectCacheMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +287,7 @@ public class ContainerVisual extends Visual  {
 
     public void setCacheMode(CacheMode CacheMode) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheMode", CacheMode == null ? null : CacheMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -277,10 +297,14 @@ public class ContainerVisual extends Visual  {
 
     public DoubleCollection getXSnappingGuidelines() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXSnappingGuidelines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XSnappingGuidelines");
+            retObjectXSnappingGuidelines = classInstance.Get("XSnappingGuidelines");
+            JCObject val = (JCObject)retObjectXSnappingGuidelines;
             return new DoubleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXSnappingGuidelines != null ? retObjectXSnappingGuidelines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class ContainerVisual extends Visual  {
 
     public void setXSnappingGuidelines(DoubleCollection XSnappingGuidelines) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XSnappingGuidelines", XSnappingGuidelines == null ? null : XSnappingGuidelines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -298,10 +322,14 @@ public class ContainerVisual extends Visual  {
 
     public DoubleCollection getYSnappingGuidelines() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectYSnappingGuidelines = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("YSnappingGuidelines");
+            retObjectYSnappingGuidelines = classInstance.Get("YSnappingGuidelines");
+            JCObject val = (JCObject)retObjectYSnappingGuidelines;
             return new DoubleCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectYSnappingGuidelines != null ? retObjectYSnappingGuidelines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +337,7 @@ public class ContainerVisual extends Visual  {
 
     public void setYSnappingGuidelines(DoubleCollection YSnappingGuidelines) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("YSnappingGuidelines", YSnappingGuidelines == null ? null : YSnappingGuidelines.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -319,10 +347,14 @@ public class ContainerVisual extends Visual  {
 
     public BitmapEffect getBitmapEffect() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmapEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BitmapEffect");
+            retObjectBitmapEffect = classInstance.Get("BitmapEffect");
+            JCObject val = (JCObject)retObjectBitmapEffect;
             return new BitmapEffect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitmapEffect != null ? retObjectBitmapEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +362,7 @@ public class ContainerVisual extends Visual  {
 
     public void setBitmapEffect(BitmapEffect BitmapEffect) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BitmapEffect", BitmapEffect == null ? null : BitmapEffect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -340,10 +372,14 @@ public class ContainerVisual extends Visual  {
 
     public BitmapEffectInput getBitmapEffectInput() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmapEffectInput = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BitmapEffectInput");
+            retObjectBitmapEffectInput = classInstance.Get("BitmapEffectInput");
+            JCObject val = (JCObject)retObjectBitmapEffectInput;
             return new BitmapEffectInput(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitmapEffectInput != null ? retObjectBitmapEffectInput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -351,7 +387,7 @@ public class ContainerVisual extends Visual  {
 
     public void setBitmapEffectInput(BitmapEffectInput BitmapEffectInput) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BitmapEffectInput", BitmapEffectInput == null ? null : BitmapEffectInput.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,10 +397,14 @@ public class ContainerVisual extends Visual  {
 
     public Effect getEffect() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEffect = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Effect");
+            retObjectEffect = classInstance.Get("Effect");
+            JCObject val = (JCObject)retObjectEffect;
             return new Effect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEffect != null ? retObjectEffect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +412,7 @@ public class ContainerVisual extends Visual  {
 
     public void setEffect(Effect Effect) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Effect", Effect == null ? null : Effect.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -382,10 +422,14 @@ public class ContainerVisual extends Visual  {
 
     public Geometry getClip() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Clip");
+            retObjectClip = classInstance.Get("Clip");
+            JCObject val = (JCObject)retObjectClip;
             return new Geometry(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClip != null ? retObjectClip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,7 +437,7 @@ public class ContainerVisual extends Visual  {
 
     public void setClip(Geometry Clip) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Clip", Clip == null ? null : Clip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -403,10 +447,14 @@ public class ContainerVisual extends Visual  {
 
     public Transform getTransform() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Transform");
+            retObjectTransform = classInstance.Get("Transform");
+            JCObject val = (JCObject)retObjectTransform;
             return new Transform(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -414,7 +462,7 @@ public class ContainerVisual extends Visual  {
 
     public void setTransform(Transform Transform) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Transform", Transform == null ? null : Transform.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -424,10 +472,14 @@ public class ContainerVisual extends Visual  {
 
     public VisualCollection getChildren() throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChildren = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Children");
+            retObjectChildren = classInstance.Get("Children");
+            JCObject val = (JCObject)retObjectChildren;
             return new VisualCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChildren != null ? retObjectChildren.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -435,10 +487,14 @@ public class ContainerVisual extends Visual  {
 
     public Rect getContentBounds() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContentBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ContentBounds");
+            retObjectContentBounds = classInstance.Get("ContentBounds");
+            JCObject val = (JCObject)retObjectContentBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectContentBounds != null ? retObjectContentBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,10 +502,14 @@ public class ContainerVisual extends Visual  {
 
     public Rect getDescendantBounds() throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescendantBounds = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DescendantBounds");
+            retObjectDescendantBounds = classInstance.Get("DescendantBounds");
+            JCObject val = (JCObject)retObjectDescendantBounds;
             return new Rect(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDescendantBounds != null ? retObjectDescendantBounds.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,10 +517,14 @@ public class ContainerVisual extends Visual  {
 
     public Vector getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            JCObject val = (JCObject)retObjectOffset;
             return new Vector(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,7 +532,7 @@ public class ContainerVisual extends Visual  {
 
     public void setOffset(Vector Offset) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.OverflowException, system.componentmodel.Win32Exception, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset == null ? null : Offset.getJCOInstance());
         } catch (JCNativeException jcne) {

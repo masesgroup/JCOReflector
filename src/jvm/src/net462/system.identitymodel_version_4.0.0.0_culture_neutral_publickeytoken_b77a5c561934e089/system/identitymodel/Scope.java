@@ -207,9 +207,13 @@ public class Scope extends NetObject  {
     
     public boolean getSymmetricKeyEncryptionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSymmetricKeyEncryptionRequired = null;
         try {
-            return (boolean)classInstance.Get("SymmetricKeyEncryptionRequired");
+            retObjectSymmetricKeyEncryptionRequired = classInstance.Get("SymmetricKeyEncryptionRequired");
+            return (boolean)retObjectSymmetricKeyEncryptionRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSymmetricKeyEncryptionRequired != null ? retObjectSymmetricKeyEncryptionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +221,7 @@ public class Scope extends NetObject  {
 
     public void setSymmetricKeyEncryptionRequired(boolean SymmetricKeyEncryptionRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SymmetricKeyEncryptionRequired", SymmetricKeyEncryptionRequired);
         } catch (JCNativeException jcne) {
@@ -227,9 +231,13 @@ public class Scope extends NetObject  {
 
     public boolean getTokenEncryptionRequired() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTokenEncryptionRequired = null;
         try {
-            return (boolean)classInstance.Get("TokenEncryptionRequired");
+            retObjectTokenEncryptionRequired = classInstance.Get("TokenEncryptionRequired");
+            return (boolean)retObjectTokenEncryptionRequired;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTokenEncryptionRequired != null ? retObjectTokenEncryptionRequired.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +245,7 @@ public class Scope extends NetObject  {
 
     public void setTokenEncryptionRequired(boolean TokenEncryptionRequired) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TokenEncryptionRequired", TokenEncryptionRequired);
         } catch (JCNativeException jcne) {
@@ -247,10 +255,14 @@ public class Scope extends NetObject  {
 
     public EncryptingCredentials getEncryptingCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncryptingCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EncryptingCredentials");
+            retObjectEncryptingCredentials = classInstance.Get("EncryptingCredentials");
+            JCObject val = (JCObject)retObjectEncryptingCredentials;
             return new EncryptingCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEncryptingCredentials != null ? retObjectEncryptingCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +270,7 @@ public class Scope extends NetObject  {
 
     public void setEncryptingCredentials(EncryptingCredentials EncryptingCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EncryptingCredentials", EncryptingCredentials == null ? null : EncryptingCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +280,14 @@ public class Scope extends NetObject  {
 
     public SigningCredentials getSigningCredentials() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSigningCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SigningCredentials");
+            retObjectSigningCredentials = classInstance.Get("SigningCredentials");
+            JCObject val = (JCObject)retObjectSigningCredentials;
             return new SigningCredentials(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSigningCredentials != null ? retObjectSigningCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +295,7 @@ public class Scope extends NetObject  {
 
     public void setSigningCredentials(SigningCredentials SigningCredentials) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SigningCredentials", SigningCredentials == null ? null : SigningCredentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,9 +305,13 @@ public class Scope extends NetObject  {
 
     public java.lang.String getAppliesToAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAppliesToAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("AppliesToAddress");
+            retObjectAppliesToAddress = classInstance.Get("AppliesToAddress");
+            return (java.lang.String)retObjectAppliesToAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAppliesToAddress != null ? retObjectAppliesToAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +319,7 @@ public class Scope extends NetObject  {
 
     public void setAppliesToAddress(java.lang.String AppliesToAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AppliesToAddress", AppliesToAddress);
         } catch (JCNativeException jcne) {
@@ -309,9 +329,13 @@ public class Scope extends NetObject  {
 
     public java.lang.String getReplyToAddress() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyToAddress = null;
         try {
-            return (java.lang.String)classInstance.Get("ReplyToAddress");
+            retObjectReplyToAddress = classInstance.Get("ReplyToAddress");
+            return (java.lang.String)retObjectReplyToAddress;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectReplyToAddress != null ? retObjectReplyToAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +343,7 @@ public class Scope extends NetObject  {
 
     public void setReplyToAddress(java.lang.String ReplyToAddress) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyToAddress", ReplyToAddress);
         } catch (JCNativeException jcne) {

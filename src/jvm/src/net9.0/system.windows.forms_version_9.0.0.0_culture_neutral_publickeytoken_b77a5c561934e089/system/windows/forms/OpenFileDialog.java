@@ -163,10 +163,14 @@ public class OpenFileDialog extends FileDialog  {
     
     public Stream OpenFile() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpenFile = null;
         try {
-            JCObject objOpenFile = (JCObject)classInstance.Invoke("OpenFile");
+            retObjectOpenFile = classInstance.Invoke("OpenFile");
+            JCObject objOpenFile = (JCObject)retObjectOpenFile;
             return new Stream(objOpenFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenFile != null ? retObjectOpenFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +178,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void Reset() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class OpenFileDialog extends FileDialog  {
     
     public boolean getMultiselect() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMultiselect = null;
         try {
-            return (boolean)classInstance.Get("Multiselect");
+            retObjectMultiselect = classInstance.Get("Multiselect");
+            return (boolean)retObjectMultiselect;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectMultiselect != null ? retObjectMultiselect.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void setMultiselect(boolean Multiselect) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Multiselect", Multiselect);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class OpenFileDialog extends FileDialog  {
 
     public boolean getReadOnlyChecked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReadOnlyChecked = null;
         try {
-            return (boolean)classInstance.Get("ReadOnlyChecked");
+            retObjectReadOnlyChecked = classInstance.Get("ReadOnlyChecked");
+            return (boolean)retObjectReadOnlyChecked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReadOnlyChecked != null ? retObjectReadOnlyChecked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void setReadOnlyChecked(boolean ReadOnlyChecked) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReadOnlyChecked", ReadOnlyChecked);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class OpenFileDialog extends FileDialog  {
 
     public boolean getSelectReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSelectReadOnly = null;
         try {
-            return (boolean)classInstance.Get("SelectReadOnly");
+            retObjectSelectReadOnly = classInstance.Get("SelectReadOnly");
+            return (boolean)retObjectSelectReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSelectReadOnly != null ? retObjectSelectReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void setSelectReadOnly(boolean SelectReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SelectReadOnly", SelectReadOnly);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class OpenFileDialog extends FileDialog  {
 
     public boolean getShowPreview() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowPreview = null;
         try {
-            return (boolean)classInstance.Get("ShowPreview");
+            retObjectShowPreview = classInstance.Get("ShowPreview");
+            return (boolean)retObjectShowPreview;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowPreview != null ? retObjectShowPreview.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void setShowPreview(boolean ShowPreview) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowPreview", ShowPreview);
         } catch (JCNativeException jcne) {
@@ -268,9 +288,13 @@ public class OpenFileDialog extends FileDialog  {
 
     public boolean getShowReadOnly() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowReadOnly = null;
         try {
-            return (boolean)classInstance.Get("ShowReadOnly");
+            retObjectShowReadOnly = classInstance.Get("ShowReadOnly");
+            return (boolean)retObjectShowReadOnly;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowReadOnly != null ? retObjectShowReadOnly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +302,7 @@ public class OpenFileDialog extends FileDialog  {
 
     public void setShowReadOnly(boolean ShowReadOnly) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowReadOnly", ShowReadOnly);
         } catch (JCNativeException jcne) {
@@ -288,9 +312,13 @@ public class OpenFileDialog extends FileDialog  {
 
     public java.lang.String getSafeFileName() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("SafeFileName");
+            retObjectSafeFileName = classInstance.Get("SafeFileName");
+            return (java.lang.String)retObjectSafeFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSafeFileName != null ? retObjectSafeFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +326,12 @@ public class OpenFileDialog extends FileDialog  {
 
     public java.lang.String[] getSafeFileNames() throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSafeFileNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("SafeFileNames");
+            retObjectSafeFileNames = classInstance.Get("SafeFileNames");
+            JCObject resultingObjects = (JCObject)retObjectSafeFileNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -310,6 +340,8 @@ public class OpenFileDialog extends FileDialog  {
 				resultingArray[indexSafeFileNames] = (java.lang.String)resultingArrayList.get(indexSafeFileNames);
 			}
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into JCObject", retObjectSafeFileNames != null ? retObjectSafeFileNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

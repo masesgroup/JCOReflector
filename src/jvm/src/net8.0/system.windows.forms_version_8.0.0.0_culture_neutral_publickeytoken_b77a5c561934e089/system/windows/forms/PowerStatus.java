@@ -162,9 +162,13 @@ public class PowerStatus extends NetObject  {
     
     public int getBatteryFullLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatteryFullLifetime = null;
         try {
-            return (int)classInstance.Get("BatteryFullLifetime");
+            retObjectBatteryFullLifetime = classInstance.Get("BatteryFullLifetime");
+            return (int)retObjectBatteryFullLifetime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBatteryFullLifetime != null ? retObjectBatteryFullLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,9 +176,13 @@ public class PowerStatus extends NetObject  {
 
     public int getBatteryLifeRemaining() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatteryLifeRemaining = null;
         try {
-            return (int)classInstance.Get("BatteryLifeRemaining");
+            retObjectBatteryLifeRemaining = classInstance.Get("BatteryLifeRemaining");
+            return (int)retObjectBatteryLifeRemaining;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBatteryLifeRemaining != null ? retObjectBatteryLifeRemaining.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,10 +190,14 @@ public class PowerStatus extends NetObject  {
 
     public Single getBatteryLifePercent() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatteryLifePercent = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BatteryLifePercent");
+            retObjectBatteryLifePercent = classInstance.Get("BatteryLifePercent");
+            JCObject val = (JCObject)retObjectBatteryLifePercent;
             return new Single(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatteryLifePercent != null ? retObjectBatteryLifePercent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +205,14 @@ public class PowerStatus extends NetObject  {
 
     public BatteryChargeStatus getBatteryChargeStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBatteryChargeStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BatteryChargeStatus");
+            retObjectBatteryChargeStatus = classInstance.Get("BatteryChargeStatus");
+            JCObject val = (JCObject)retObjectBatteryChargeStatus;
             return new BatteryChargeStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBatteryChargeStatus != null ? retObjectBatteryChargeStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +220,14 @@ public class PowerStatus extends NetObject  {
 
     public PowerLineStatus getPowerLineStatus() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPowerLineStatus = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PowerLineStatus");
+            retObjectPowerLineStatus = classInstance.Get("PowerLineStatus");
+            JCObject val = (JCObject)retObjectPowerLineStatus;
             return new PowerLineStatus(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPowerLineStatus != null ? retObjectPowerLineStatus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

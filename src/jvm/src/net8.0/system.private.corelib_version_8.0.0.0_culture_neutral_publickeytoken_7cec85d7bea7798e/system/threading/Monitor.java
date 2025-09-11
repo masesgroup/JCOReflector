@@ -154,9 +154,13 @@ public class Monitor extends NetObject  {
     
     public static boolean IsEntered(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsEntered = null;
         try {
-            return (boolean)classType.Invoke("IsEntered", obj == null ? null : obj.getJCOInstance());
+            retObjectIsEntered = classType.Invoke("IsEntered", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectIsEntered;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsEntered != null ? retObjectIsEntered.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,9 +168,13 @@ public class Monitor extends NetObject  {
 
     public static boolean TryEnter(NetObject obj, int millisecondsTimeout) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout);
+            retObjectTryEnter = classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout);
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,9 +182,13 @@ public class Monitor extends NetObject  {
 
     public static boolean TryEnter(NetObject obj, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            retObjectTryEnter = classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,9 +196,13 @@ public class Monitor extends NetObject  {
 
     public static boolean TryEnter(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryEnter = null;
         try {
-            return (boolean)classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance());
+            retObjectTryEnter = classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectTryEnter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryEnter != null ? retObjectTryEnter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +210,13 @@ public class Monitor extends NetObject  {
 
     public static boolean Wait(NetObject obj, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, exitContext);
+            retObjectWait = classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, exitContext);
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,9 +224,13 @@ public class Monitor extends NetObject  {
 
     public static boolean Wait(NetObject obj, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout);
+            retObjectWait = classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout);
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,9 +238,13 @@ public class Monitor extends NetObject  {
 
     public static boolean Wait(NetObject obj, TimeSpan timeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            retObjectWait = classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,9 +252,13 @@ public class Monitor extends NetObject  {
 
     public static boolean Wait(NetObject obj, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            retObjectWait = classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,9 +266,13 @@ public class Monitor extends NetObject  {
 
     public static boolean Wait(NetObject obj) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectWait = null;
         try {
-            return (boolean)classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance());
+            retObjectWait = classType.Invoke("Wait", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectWait;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectWait != null ? retObjectWait.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,7 +280,7 @@ public class Monitor extends NetObject  {
 
     public static void Enter(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Enter", obj == null ? null : obj.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -254,7 +290,7 @@ public class Monitor extends NetObject  {
 
     public static void Enter(NetObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Enter", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -264,7 +300,7 @@ public class Monitor extends NetObject  {
 
     public static void Exit(NetObject obj) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Exit", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -274,7 +310,7 @@ public class Monitor extends NetObject  {
 
     public static void Pulse(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Pulse", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -284,7 +320,7 @@ public class Monitor extends NetObject  {
 
     public static void PulseAll(NetObject obj) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PulseAll", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,7 +330,7 @@ public class Monitor extends NetObject  {
 
     public static void TryEnter(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -304,7 +340,7 @@ public class Monitor extends NetObject  {
 
     public static void TryEnter(NetObject obj, int millisecondsTimeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -314,7 +350,7 @@ public class Monitor extends NetObject  {
 
     public static void TryEnter(NetObject obj, TimeSpan timeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -328,9 +364,13 @@ public class Monitor extends NetObject  {
     
     public static long getLockContentionCount() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectLockContentionCount = null;
         try {
-            return (long)classType.Get("LockContentionCount");
+            retObjectLockContentionCount = classType.Get("LockContentionCount");
+            return (long)retObjectLockContentionCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectLockContentionCount != null ? retObjectLockContentionCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

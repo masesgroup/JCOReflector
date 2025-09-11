@@ -167,9 +167,13 @@ public class ValidationSettings extends NetObject  {
     
     public boolean getOnlyUseAdditionalConstraints() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOnlyUseAdditionalConstraints = null;
         try {
-            return (boolean)classInstance.Get("OnlyUseAdditionalConstraints");
+            retObjectOnlyUseAdditionalConstraints = classInstance.Get("OnlyUseAdditionalConstraints");
+            return (boolean)retObjectOnlyUseAdditionalConstraints;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOnlyUseAdditionalConstraints != null ? retObjectOnlyUseAdditionalConstraints.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setOnlyUseAdditionalConstraints(boolean OnlyUseAdditionalConstraints) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OnlyUseAdditionalConstraints", OnlyUseAdditionalConstraints);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class ValidationSettings extends NetObject  {
 
     public boolean getPrepareForRuntime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrepareForRuntime = null;
         try {
-            return (boolean)classInstance.Get("PrepareForRuntime");
+            retObjectPrepareForRuntime = classInstance.Get("PrepareForRuntime");
+            return (boolean)retObjectPrepareForRuntime;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectPrepareForRuntime != null ? retObjectPrepareForRuntime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setPrepareForRuntime(boolean PrepareForRuntime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrepareForRuntime", PrepareForRuntime);
         } catch (JCNativeException jcne) {
@@ -207,9 +215,13 @@ public class ValidationSettings extends NetObject  {
 
     public boolean getSingleLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSingleLevel = null;
         try {
-            return (boolean)classInstance.Get("SingleLevel");
+            retObjectSingleLevel = classInstance.Get("SingleLevel");
+            return (boolean)retObjectSingleLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSingleLevel != null ? retObjectSingleLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +229,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setSingleLevel(boolean SingleLevel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SingleLevel", SingleLevel);
         } catch (JCNativeException jcne) {
@@ -227,9 +239,13 @@ public class ValidationSettings extends NetObject  {
 
     public boolean getSkipValidatingRootConfiguration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSkipValidatingRootConfiguration = null;
         try {
-            return (boolean)classInstance.Get("SkipValidatingRootConfiguration");
+            retObjectSkipValidatingRootConfiguration = classInstance.Get("SkipValidatingRootConfiguration");
+            return (boolean)retObjectSkipValidatingRootConfiguration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectSkipValidatingRootConfiguration != null ? retObjectSkipValidatingRootConfiguration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +253,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setSkipValidatingRootConfiguration(boolean SkipValidatingRootConfiguration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SkipValidatingRootConfiguration", SkipValidatingRootConfiguration);
         } catch (JCNativeException jcne) {
@@ -247,10 +263,14 @@ public class ValidationSettings extends NetObject  {
 
     public LocationReferenceEnvironment getEnvironment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvironment = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Environment");
+            retObjectEnvironment = classInstance.Get("Environment");
+            JCObject val = (JCObject)retObjectEnvironment;
             return new LocationReferenceEnvironment(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvironment != null ? retObjectEnvironment.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setEnvironment(LocationReferenceEnvironment Environment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Environment", Environment == null ? null : Environment.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class ValidationSettings extends NetObject  {
 
     public CancellationToken getCancellationToken() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCancellationToken = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CancellationToken");
+            retObjectCancellationToken = classInstance.Get("CancellationToken");
+            JCObject val = (JCObject)retObjectCancellationToken;
             return new CancellationToken(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCancellationToken != null ? retObjectCancellationToken.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class ValidationSettings extends NetObject  {
 
     public void setCancellationToken(CancellationToken CancellationToken) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CancellationToken", CancellationToken == null ? null : CancellationToken.getJCOInstance());
         } catch (JCNativeException jcne) {

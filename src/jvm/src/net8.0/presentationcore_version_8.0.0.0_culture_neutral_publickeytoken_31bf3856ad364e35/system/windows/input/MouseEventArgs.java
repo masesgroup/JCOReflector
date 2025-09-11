@@ -182,10 +182,14 @@ public class MouseEventArgs extends InputEventArgs  {
     
     public Point GetPosition(IInputElement relativeTo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetPosition = null;
         try {
-            JCObject objGetPosition = (JCObject)classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            retObjectGetPosition = classInstance.Invoke("GetPosition", relativeTo == null ? null : relativeTo.getJCOInstance());
+            JCObject objGetPosition = (JCObject)retObjectGetPosition;
             return new Point(objGetPosition);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetPosition != null ? retObjectGetPosition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +201,14 @@ public class MouseEventArgs extends InputEventArgs  {
     
     public MouseButtonState getLeftButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeftButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LeftButton");
+            retObjectLeftButton = classInstance.Get("LeftButton");
+            JCObject val = (JCObject)retObjectLeftButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeftButton != null ? retObjectLeftButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +216,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public MouseButtonState getMiddleButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMiddleButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MiddleButton");
+            retObjectMiddleButton = classInstance.Get("MiddleButton");
+            JCObject val = (JCObject)retObjectMiddleButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMiddleButton != null ? retObjectMiddleButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,10 +231,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public MouseButtonState getRightButton() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRightButton = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RightButton");
+            retObjectRightButton = classInstance.Get("RightButton");
+            JCObject val = (JCObject)retObjectRightButton;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRightButton != null ? retObjectRightButton.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,10 +246,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public MouseButtonState getXButton1() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXButton1 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XButton1");
+            retObjectXButton1 = classInstance.Get("XButton1");
+            JCObject val = (JCObject)retObjectXButton1;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton1 != null ? retObjectXButton1.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,10 +261,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public MouseButtonState getXButton2() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXButton2 = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XButton2");
+            retObjectXButton2 = classInstance.Get("XButton2");
+            JCObject val = (JCObject)retObjectXButton2;
             return new MouseButtonState(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXButton2 != null ? retObjectXButton2.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,10 +276,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public MouseDevice getMouseDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMouseDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MouseDevice");
+            retObjectMouseDevice = classInstance.Get("MouseDevice");
+            JCObject val = (JCObject)retObjectMouseDevice;
             return new MouseDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMouseDevice != null ? retObjectMouseDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,10 +291,14 @@ public class MouseEventArgs extends InputEventArgs  {
 
     public StylusDevice getStylusDevice() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStylusDevice = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("StylusDevice");
+            retObjectStylusDevice = classInstance.Get("StylusDevice");
+            JCObject val = (JCObject)retObjectStylusDevice;
             return new StylusDevice(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectStylusDevice != null ? retObjectStylusDevice.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

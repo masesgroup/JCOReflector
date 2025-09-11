@@ -163,9 +163,13 @@ public class UserNamePasswordServiceCredential extends NetObject  {
     
     public boolean getCacheLogonTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCacheLogonTokens = null;
         try {
-            return (boolean)classInstance.Get("CacheLogonTokens");
+            retObjectCacheLogonTokens = classInstance.Get("CacheLogonTokens");
+            return (boolean)retObjectCacheLogonTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCacheLogonTokens != null ? retObjectCacheLogonTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setCacheLogonTokens(boolean CacheLogonTokens) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CacheLogonTokens", CacheLogonTokens);
         } catch (JCNativeException jcne) {
@@ -183,9 +187,13 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public boolean getIncludeWindowsGroups() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIncludeWindowsGroups = null;
         try {
-            return (boolean)classInstance.Get("IncludeWindowsGroups");
+            retObjectIncludeWindowsGroups = classInstance.Get("IncludeWindowsGroups");
+            return (boolean)retObjectIncludeWindowsGroups;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIncludeWindowsGroups != null ? retObjectIncludeWindowsGroups.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,7 +201,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setIncludeWindowsGroups(boolean IncludeWindowsGroups) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IncludeWindowsGroups", IncludeWindowsGroups);
         } catch (JCNativeException jcne) {
@@ -203,9 +211,13 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public int getMaxCachedLogonTokens() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxCachedLogonTokens = null;
         try {
-            return (int)classInstance.Get("MaxCachedLogonTokens");
+            retObjectMaxCachedLogonTokens = classInstance.Get("MaxCachedLogonTokens");
+            return (int)retObjectMaxCachedLogonTokens;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxCachedLogonTokens != null ? retObjectMaxCachedLogonTokens.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +225,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setMaxCachedLogonTokens(int MaxCachedLogonTokens) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxCachedLogonTokens", MaxCachedLogonTokens);
         } catch (JCNativeException jcne) {
@@ -223,10 +235,14 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public UserNamePasswordValidator getCustomUserNamePasswordValidator() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCustomUserNamePasswordValidator = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CustomUserNamePasswordValidator");
+            retObjectCustomUserNamePasswordValidator = classInstance.Get("CustomUserNamePasswordValidator");
+            JCObject val = (JCObject)retObjectCustomUserNamePasswordValidator;
             return new UserNamePasswordValidator(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCustomUserNamePasswordValidator != null ? retObjectCustomUserNamePasswordValidator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,7 +250,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setCustomUserNamePasswordValidator(UserNamePasswordValidator CustomUserNamePasswordValidator) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CustomUserNamePasswordValidator", CustomUserNamePasswordValidator == null ? null : CustomUserNamePasswordValidator.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -244,10 +260,14 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public UserNamePasswordValidationMode getUserNamePasswordValidationMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUserNamePasswordValidationMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("UserNamePasswordValidationMode");
+            retObjectUserNamePasswordValidationMode = classInstance.Get("UserNamePasswordValidationMode");
+            JCObject val = (JCObject)retObjectUserNamePasswordValidationMode;
             return new UserNamePasswordValidationMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUserNamePasswordValidationMode != null ? retObjectUserNamePasswordValidationMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setUserNamePasswordValidationMode(UserNamePasswordValidationMode UserNamePasswordValidationMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UserNamePasswordValidationMode", UserNamePasswordValidationMode == null ? null : UserNamePasswordValidationMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -265,10 +285,14 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public TimeSpan getCachedLogonTokenLifetime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCachedLogonTokenLifetime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CachedLogonTokenLifetime");
+            retObjectCachedLogonTokenLifetime = classInstance.Get("CachedLogonTokenLifetime");
+            JCObject val = (JCObject)retObjectCachedLogonTokenLifetime;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCachedLogonTokenLifetime != null ? retObjectCachedLogonTokenLifetime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,7 +300,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setCachedLogonTokenLifetime(TimeSpan CachedLogonTokenLifetime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CachedLogonTokenLifetime", CachedLogonTokenLifetime == null ? null : CachedLogonTokenLifetime.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -286,10 +310,14 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public MembershipProvider getMembershipProvider() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMembershipProvider = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MembershipProvider");
+            retObjectMembershipProvider = classInstance.Get("MembershipProvider");
+            JCObject val = (JCObject)retObjectMembershipProvider;
             return new MembershipProvider(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMembershipProvider != null ? retObjectMembershipProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -297,7 +325,7 @@ public class UserNamePasswordServiceCredential extends NetObject  {
 
     public void setMembershipProvider(MembershipProvider MembershipProvider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MembershipProvider", MembershipProvider == null ? null : MembershipProvider.getJCOInstance());
         } catch (JCNativeException jcne) {

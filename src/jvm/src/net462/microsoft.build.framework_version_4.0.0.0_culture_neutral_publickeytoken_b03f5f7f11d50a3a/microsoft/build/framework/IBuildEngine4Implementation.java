@@ -156,9 +156,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
     
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFile = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance());
+            retObjectBuildProjectFile = classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance());
+            return (boolean)retObjectBuildProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFile != null ? retObjectBuildProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,9 +170,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFile = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            retObjectBuildProjectFile = classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (boolean)retObjectBuildProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFile != null ? retObjectBuildProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,9 +184,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs, java.lang.String toolsVersion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFile = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance(), toolsVersion);
+            retObjectBuildProjectFile = classInstance.Invoke("BuildProjectFile", projectFileName, targetNames, globalProperties == null ? null : globalProperties.getJCOInstance(), targetOutputs == null ? null : targetOutputs.getJCOInstance(), toolsVersion);
+            return (boolean)retObjectBuildProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFile != null ? retObjectBuildProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +198,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFile = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4);
+            retObjectBuildProjectFile = classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4);
+            return (boolean)retObjectBuildProjectFile;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFile != null ? retObjectBuildProjectFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +212,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IDictionary[] targetOutputsPerProject, java.lang.String[] toolsVersion, boolean useResultsCache, boolean unloadProjectsOnCompletion) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFilesInParallel = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFilesInParallel", projectFileNames, targetNames, toObjectFromArray(globalProperties), toObjectFromArray(targetOutputsPerProject), toolsVersion, useResultsCache, unloadProjectsOnCompletion);
+            retObjectBuildProjectFilesInParallel = classInstance.Invoke("BuildProjectFilesInParallel", projectFileNames, targetNames, toObjectFromArray(globalProperties), toObjectFromArray(targetOutputsPerProject), toolsVersion, useResultsCache, unloadProjectsOnCompletion);
+            return (boolean)retObjectBuildProjectFilesInParallel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFilesInParallel != null ? retObjectBuildProjectFilesInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +226,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBuildProjectFilesInParallel = null;
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFilesInParallel", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2), toObjectFromArray(dupParam3), dupParam4.getJCRefOut(), dupParam5, dupParam6);
+            retObjectBuildProjectFilesInParallel = classInstance.Invoke("BuildProjectFilesInParallel", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2), toObjectFromArray(dupParam3), dupParam4.getJCRefOut(), dupParam5, dupParam6);
+            return (boolean)retObjectBuildProjectFilesInParallel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectBuildProjectFilesInParallel != null ? retObjectBuildProjectFilesInParallel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +240,14 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public NetObject GetRegisteredTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRegisteredTaskObject = null;
         try {
-            JCObject objGetRegisteredTaskObject = (JCObject)classInstance.Invoke("GetRegisteredTaskObject", key == null ? null : key.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance());
+            retObjectGetRegisteredTaskObject = classInstance.Invoke("GetRegisteredTaskObject", key == null ? null : key.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance());
+            JCObject objGetRegisteredTaskObject = (JCObject)retObjectGetRegisteredTaskObject;
             return new NetObject(objGetRegisteredTaskObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRegisteredTaskObject != null ? retObjectGetRegisteredTaskObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +255,14 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public NetObject UnregisterTaskObject(NetObject key, RegisteredTaskObjectLifetime lifetime) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnregisterTaskObject = null;
         try {
-            JCObject objUnregisterTaskObject = (JCObject)classInstance.Invoke("UnregisterTaskObject", key == null ? null : key.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance());
+            retObjectUnregisterTaskObject = classInstance.Invoke("UnregisterTaskObject", key == null ? null : key.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance());
+            JCObject objUnregisterTaskObject = (JCObject)retObjectUnregisterTaskObject;
             return new NetObject(objUnregisterTaskObject);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUnregisterTaskObject != null ? retObjectUnregisterTaskObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +270,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void LogCustomEvent(CustomBuildEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogCustomEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +280,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void LogErrorEvent(BuildErrorEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogErrorEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -258,7 +290,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void LogMessageEvent(BuildMessageEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogMessageEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -268,7 +300,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void LogWarningEvent(BuildWarningEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LogWarningEvent", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -278,7 +310,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void Reacquire() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reacquire");
         } catch (JCNativeException jcne) {
@@ -288,7 +320,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void RegisterTaskObject(NetObject key, NetObject obj, RegisteredTaskObjectLifetime lifetime, boolean allowEarlyCollection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterTaskObject", key == null ? null : key.getJCOInstance(), obj == null ? null : obj.getJCOInstance(), lifetime == null ? null : lifetime.getJCOInstance(), allowEarlyCollection);
         } catch (JCNativeException jcne) {
@@ -298,7 +330,7 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public void Yield() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Yield");
         } catch (JCNativeException jcne) {
@@ -312,9 +344,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
     
     public boolean getContinueOnError() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectContinueOnError = null;
         try {
-            return (boolean)classInstance.Get("ContinueOnError");
+            retObjectContinueOnError = classInstance.Get("ContinueOnError");
+            return (boolean)retObjectContinueOnError;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectContinueOnError != null ? retObjectContinueOnError.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,9 +358,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public boolean getIsRunningMultipleNodes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsRunningMultipleNodes = null;
         try {
-            return (boolean)classInstance.Get("IsRunningMultipleNodes");
+            retObjectIsRunningMultipleNodes = classInstance.Get("IsRunningMultipleNodes");
+            return (boolean)retObjectIsRunningMultipleNodes;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsRunningMultipleNodes != null ? retObjectIsRunningMultipleNodes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,9 +372,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public int getColumnNumberOfTaskNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnNumberOfTaskNode = null;
         try {
-            return (int)classInstance.Get("ColumnNumberOfTaskNode");
+            retObjectColumnNumberOfTaskNode = classInstance.Get("ColumnNumberOfTaskNode");
+            return (int)retObjectColumnNumberOfTaskNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectColumnNumberOfTaskNode != null ? retObjectColumnNumberOfTaskNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,9 +386,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public int getLineNumberOfTaskNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLineNumberOfTaskNode = null;
         try {
-            return (int)classInstance.Get("LineNumberOfTaskNode");
+            retObjectLineNumberOfTaskNode = classInstance.Get("LineNumberOfTaskNode");
+            return (int)retObjectLineNumberOfTaskNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLineNumberOfTaskNode != null ? retObjectLineNumberOfTaskNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,9 +400,13 @@ public class IBuildEngine4Implementation extends NetObject implements IBuildEngi
 
     public java.lang.String getProjectFileOfTaskNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProjectFileOfTaskNode = null;
         try {
-            return (java.lang.String)classInstance.Get("ProjectFileOfTaskNode");
+            retObjectProjectFileOfTaskNode = classInstance.Get("ProjectFileOfTaskNode");
+            return (java.lang.String)retObjectProjectFileOfTaskNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectProjectFileOfTaskNode != null ? retObjectProjectFileOfTaskNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

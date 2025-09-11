@@ -164,10 +164,14 @@ public class AssemblyBuilder extends Assembly  {
     
     public FileStream GetFile(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFile = null;
         try {
-            JCObject objGetFile = (JCObject)classInstance.Invoke("GetFile", name);
+            retObjectGetFile = classInstance.Invoke("GetFile", name);
+            JCObject objGetFile = (JCObject)retObjectGetFile;
             return new FileStream(objGetFile);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFile != null ? retObjectGetFile.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,16 +179,20 @@ public class AssemblyBuilder extends Assembly  {
 
     public FileStream[] GetFiles(boolean getResourceModules) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetFiles = null;
         try {
             ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", getResourceModules);
+            retObjectGetFiles = classInstance.Invoke("GetFiles", getResourceModules);
+            JCObject resultingObjects = (JCObject)retObjectGetFiles;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileStream(resultingObject));
             }
             FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetFiles != null ? retObjectGetFiles.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public Stream GetManifestResourceStream(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManifestResourceStream = null;
         try {
-            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", name);
+            retObjectGetManifestResourceStream = classInstance.Invoke("GetManifestResourceStream", name);
+            JCObject objGetManifestResourceStream = (JCObject)retObjectGetManifestResourceStream;
             return new Stream(objGetManifestResourceStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManifestResourceStream != null ? retObjectGetManifestResourceStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,10 +215,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public Stream GetManifestResourceStream(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManifestResourceStream = null;
         try {
-            JCObject objGetManifestResourceStream = (JCObject)classInstance.Invoke("GetManifestResourceStream", type == null ? null : type.getJCOInstance(), name);
+            retObjectGetManifestResourceStream = classInstance.Invoke("GetManifestResourceStream", type == null ? null : type.getJCOInstance(), name);
+            JCObject objGetManifestResourceStream = (JCObject)retObjectGetManifestResourceStream;
             return new Stream(objGetManifestResourceStream);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManifestResourceStream != null ? retObjectGetManifestResourceStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,10 +230,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefineDynamicAssembly = null;
         try {
-            JCObject objDefineDynamicAssembly = (JCObject)classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            retObjectDefineDynamicAssembly = classType.Invoke("DefineDynamicAssembly", name == null ? null : name.getJCOInstance(), access == null ? null : access.getJCOInstance());
+            JCObject objDefineDynamicAssembly = (JCObject)retObjectDefineDynamicAssembly;
             return new AssemblyBuilder(objDefineDynamicAssembly);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicAssembly != null ? retObjectDefineDynamicAssembly.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,10 +245,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public ModuleBuilder DefineDynamicModule(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDefineDynamicModule = null;
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name);
+            retObjectDefineDynamicModule = classInstance.Invoke("DefineDynamicModule", name);
+            JCObject objDefineDynamicModule = (JCObject)retObjectDefineDynamicModule;
             return new ModuleBuilder(objDefineDynamicModule);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefineDynamicModule != null ? retObjectDefineDynamicModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,10 +260,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public ModuleBuilder GetDynamicModule(java.lang.String name) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDynamicModule = null;
         try {
-            JCObject objGetDynamicModule = (JCObject)classInstance.Invoke("GetDynamicModule", name);
+            retObjectGetDynamicModule = classInstance.Invoke("GetDynamicModule", name);
+            JCObject objGetDynamicModule = (JCObject)retObjectGetDynamicModule;
             return new ModuleBuilder(objGetDynamicModule);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetDynamicModule != null ? retObjectGetDynamicModule.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,10 +275,14 @@ public class AssemblyBuilder extends Assembly  {
 
     public ManifestResourceInfo GetManifestResourceInfo(java.lang.String resourceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManifestResourceInfo = null;
         try {
-            JCObject objGetManifestResourceInfo = (JCObject)classInstance.Invoke("GetManifestResourceInfo", resourceName);
+            retObjectGetManifestResourceInfo = classInstance.Invoke("GetManifestResourceInfo", resourceName);
+            JCObject objGetManifestResourceInfo = (JCObject)retObjectGetManifestResourceInfo;
             return new ManifestResourceInfo(objGetManifestResourceInfo);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetManifestResourceInfo != null ? retObjectGetManifestResourceInfo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +290,12 @@ public class AssemblyBuilder extends Assembly  {
 
     public java.lang.String[] GetManifestResourceNames() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetManifestResourceNames = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetManifestResourceNames");
+            retObjectGetManifestResourceNames = classInstance.Invoke("GetManifestResourceNames");
+            JCObject resultingObjects = (JCObject)retObjectGetManifestResourceNames;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -270,6 +304,8 @@ public class AssemblyBuilder extends Assembly  {
 				resultingArray[indexGetManifestResourceNames] = (java.lang.String)resultingArrayList.get(indexGetManifestResourceNames);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectGetManifestResourceNames != null ? retObjectGetManifestResourceNames.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,16 +313,20 @@ public class AssemblyBuilder extends Assembly  {
 
     public NetType[] GetExportedTypes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExportedTypes = null;
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExportedTypes");
+            retObjectGetExportedTypes = classInstance.Invoke("GetExportedTypes");
+            JCObject resultingObjects = (JCObject)retObjectGetExportedTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExportedTypes != null ? retObjectGetExportedTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -294,7 +334,7 @@ public class AssemblyBuilder extends Assembly  {
 
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", con == null ? null : con.getJCOInstance(), binaryAttribute);
         } catch (JCNativeException jcne) {
@@ -304,7 +344,7 @@ public class AssemblyBuilder extends Assembly  {
 
     public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -314,7 +354,7 @@ public class AssemblyBuilder extends Assembly  {
 
     public void SetCustomAttribute(CustomAttributeBuilder customBuilder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetCustomAttribute", customBuilder == null ? null : customBuilder.getJCOInstance());
         } catch (JCNativeException jcne) {

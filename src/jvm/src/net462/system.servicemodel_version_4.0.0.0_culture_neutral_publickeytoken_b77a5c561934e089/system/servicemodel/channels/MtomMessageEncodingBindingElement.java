@@ -186,9 +186,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
     
     public boolean ShouldSerializeMessageVersion() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeMessageVersion = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeMessageVersion");
+            retObjectShouldSerializeMessageVersion = classInstance.Invoke("ShouldSerializeMessageVersion");
+            return (boolean)retObjectShouldSerializeMessageVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeMessageVersion != null ? retObjectShouldSerializeMessageVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,9 +200,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public boolean ShouldSerializeReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeReaderQuotas = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeReaderQuotas");
+            retObjectShouldSerializeReaderQuotas = classInstance.Invoke("ShouldSerializeReaderQuotas");
+            return (boolean)retObjectShouldSerializeReaderQuotas;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeReaderQuotas != null ? retObjectShouldSerializeReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,9 +214,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public boolean ShouldSerializeWriteEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeWriteEncoding = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeWriteEncoding");
+            retObjectShouldSerializeWriteEncoding = classInstance.Invoke("ShouldSerializeWriteEncoding");
+            return (boolean)retObjectShouldSerializeWriteEncoding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeWriteEncoding != null ? retObjectShouldSerializeWriteEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,10 +228,14 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public BindingElement Clone() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new BindingElement(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public MessageEncoderFactory CreateMessageEncoderFactory() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateMessageEncoderFactory = null;
         try {
-            JCObject objCreateMessageEncoderFactory = (JCObject)classInstance.Invoke("CreateMessageEncoderFactory");
+            retObjectCreateMessageEncoderFactory = classInstance.Invoke("CreateMessageEncoderFactory");
+            JCObject objCreateMessageEncoderFactory = (JCObject)retObjectCreateMessageEncoderFactory;
             return new MessageEncoderFactory(objCreateMessageEncoderFactory);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateMessageEncoderFactory != null ? retObjectCreateMessageEncoderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +262,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
      */
     @Deprecated 
     public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -251,7 +271,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
      */
     @Deprecated 
     public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
     }
 
     /**
@@ -260,7 +280,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
      */
     @Deprecated 
     public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 
@@ -269,9 +289,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
     
     public int getMaxBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxBufferSize = null;
         try {
-            return (int)classInstance.Get("MaxBufferSize");
+            retObjectMaxBufferSize = classInstance.Get("MaxBufferSize");
+            return (int)retObjectMaxBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxBufferSize != null ? retObjectMaxBufferSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public void setMaxBufferSize(int MaxBufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxBufferSize", MaxBufferSize);
         } catch (JCNativeException jcne) {
@@ -289,9 +313,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public int getMaxReadPoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxReadPoolSize = null;
         try {
-            return (int)classInstance.Get("MaxReadPoolSize");
+            retObjectMaxReadPoolSize = classInstance.Get("MaxReadPoolSize");
+            return (int)retObjectMaxReadPoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxReadPoolSize != null ? retObjectMaxReadPoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +327,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public void setMaxReadPoolSize(int MaxReadPoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxReadPoolSize", MaxReadPoolSize);
         } catch (JCNativeException jcne) {
@@ -309,9 +337,13 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public int getMaxWritePoolSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxWritePoolSize = null;
         try {
-            return (int)classInstance.Get("MaxWritePoolSize");
+            retObjectMaxWritePoolSize = classInstance.Get("MaxWritePoolSize");
+            return (int)retObjectMaxWritePoolSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxWritePoolSize != null ? retObjectMaxWritePoolSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +351,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public void setMaxWritePoolSize(int MaxWritePoolSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxWritePoolSize", MaxWritePoolSize);
         } catch (JCNativeException jcne) {
@@ -329,10 +361,14 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public Encoding getWriteEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWriteEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WriteEncoding");
+            retObjectWriteEncoding = classInstance.Get("WriteEncoding");
+            JCObject val = (JCObject)retObjectWriteEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWriteEncoding != null ? retObjectWriteEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,7 +376,7 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public void setWriteEncoding(Encoding WriteEncoding) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WriteEncoding", WriteEncoding == null ? null : WriteEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -350,10 +386,14 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
 
     public XmlDictionaryReaderQuotas getReaderQuotas() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReaderQuotas = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReaderQuotas");
+            retObjectReaderQuotas = classInstance.Get("ReaderQuotas");
+            JCObject val = (JCObject)retObjectReaderQuotas;
             return new XmlDictionaryReaderQuotas(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReaderQuotas != null ? retObjectReaderQuotas.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

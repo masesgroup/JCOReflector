@@ -161,10 +161,14 @@ public class XmlAtomicValue extends XPathItem  {
     
     public NetObject ValueAs(NetType type, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAs = null;
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", type == null ? null : type.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            retObjectValueAs = classInstance.Invoke("ValueAs", type == null ? null : type.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            JCObject objValueAs = (JCObject)retObjectValueAs;
             return new NetObject(objValueAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueAs != null ? retObjectValueAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,14 @@ public class XmlAtomicValue extends XPathItem  {
 
     public XmlAtomicValue Clone() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new XmlAtomicValue(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

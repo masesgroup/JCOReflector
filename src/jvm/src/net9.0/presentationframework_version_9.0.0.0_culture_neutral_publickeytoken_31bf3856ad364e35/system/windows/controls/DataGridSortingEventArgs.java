@@ -171,9 +171,13 @@ public class DataGridSortingEventArgs extends DataGridColumnEventArgs  {
     
     public boolean getHandled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHandled = null;
         try {
-            return (boolean)classInstance.Get("Handled");
+            retObjectHandled = classInstance.Get("Handled");
+            return (boolean)retObjectHandled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHandled != null ? retObjectHandled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,7 +185,7 @@ public class DataGridSortingEventArgs extends DataGridColumnEventArgs  {
 
     public void setHandled(boolean Handled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Handled", Handled);
         } catch (JCNativeException jcne) {

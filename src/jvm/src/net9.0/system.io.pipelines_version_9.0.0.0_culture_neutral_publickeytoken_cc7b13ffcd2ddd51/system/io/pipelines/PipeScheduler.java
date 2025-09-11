@@ -158,10 +158,14 @@ public class PipeScheduler extends NetObject  {
     
     public static PipeScheduler getInline() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectInline = null;
         try {
-            JCObject val = (JCObject)classType.Get("Inline");
+            retObjectInline = classType.Get("Inline");
+            JCObject val = (JCObject)retObjectInline;
             return new PipeScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInline != null ? retObjectInline.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class PipeScheduler extends NetObject  {
 
     public static PipeScheduler getThreadPool() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectThreadPool = null;
         try {
-            JCObject val = (JCObject)classType.Get("ThreadPool");
+            retObjectThreadPool = classType.Get("ThreadPool");
+            JCObject val = (JCObject)retObjectThreadPool;
             return new PipeScheduler(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectThreadPool != null ? retObjectThreadPool.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

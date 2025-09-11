@@ -172,9 +172,13 @@ public class ResolveInfo extends NetObject  {
     
     public boolean HasBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasBody = null;
         try {
-            return (boolean)classInstance.Invoke("HasBody");
+            retObjectHasBody = classInstance.Invoke("HasBody");
+            return (boolean)retObjectHasBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectHasBody != null ? retObjectHasBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,9 +190,13 @@ public class ResolveInfo extends NetObject  {
     
     public int getMaxAddresses() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxAddresses = null;
         try {
-            return (int)classInstance.Get("MaxAddresses");
+            retObjectMaxAddresses = classInstance.Get("MaxAddresses");
+            return (int)retObjectMaxAddresses;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxAddresses != null ? retObjectMaxAddresses.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,10 +204,14 @@ public class ResolveInfo extends NetObject  {
 
     public Guid getClientId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ClientId");
+            retObjectClientId = classInstance.Get("ClientId");
+            JCObject val = (JCObject)retObjectClientId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClientId != null ? retObjectClientId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,9 +219,13 @@ public class ResolveInfo extends NetObject  {
 
     public java.lang.String getMeshId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMeshId = null;
         try {
-            return (java.lang.String)classInstance.Get("MeshId");
+            retObjectMeshId = classInstance.Get("MeshId");
+            return (java.lang.String)retObjectMeshId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMeshId != null ? retObjectMeshId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

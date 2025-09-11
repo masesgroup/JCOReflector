@@ -165,9 +165,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
     
     public int getConnection() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConnection = null;
         try {
-            return (int)classInstance.Get("Connection");
+            retObjectConnection = classInstance.Get("Connection");
+            return (int)retObjectConnection;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectConnection != null ? retObjectConnection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setConnection(int Connection) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Connection", Connection);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getLocallyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocallyInitiatedBidirectionalStream = null;
         try {
-            return (int)classInstance.Get("LocallyInitiatedBidirectionalStream");
+            retObjectLocallyInitiatedBidirectionalStream = classInstance.Get("LocallyInitiatedBidirectionalStream");
+            return (int)retObjectLocallyInitiatedBidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectLocallyInitiatedBidirectionalStream != null ? retObjectLocallyInitiatedBidirectionalStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setLocallyInitiatedBidirectionalStream(int LocallyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LocallyInitiatedBidirectionalStream", LocallyInitiatedBidirectionalStream);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getRemotelyInitiatedBidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRemotelyInitiatedBidirectionalStream = null;
         try {
-            return (int)classInstance.Get("RemotelyInitiatedBidirectionalStream");
+            retObjectRemotelyInitiatedBidirectionalStream = classInstance.Get("RemotelyInitiatedBidirectionalStream");
+            return (int)retObjectRemotelyInitiatedBidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectRemotelyInitiatedBidirectionalStream != null ? retObjectRemotelyInitiatedBidirectionalStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setRemotelyInitiatedBidirectionalStream(int RemotelyInitiatedBidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RemotelyInitiatedBidirectionalStream", RemotelyInitiatedBidirectionalStream);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public int getUnidirectionalStream() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUnidirectionalStream = null;
         try {
-            return (int)classInstance.Get("UnidirectionalStream");
+            retObjectUnidirectionalStream = classInstance.Get("UnidirectionalStream");
+            return (int)retObjectUnidirectionalStream;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectUnidirectionalStream != null ? retObjectUnidirectionalStream.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class QuicReceiveWindowSizes extends NetObject  {
 
     public void setUnidirectionalStream(int UnidirectionalStream) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UnidirectionalStream", UnidirectionalStream);
         } catch (JCNativeException jcne) {

@@ -172,10 +172,14 @@ public class CustomPopupPlacement extends ValueType  {
     
     public PopupPrimaryAxis getPrimaryAxis() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPrimaryAxis = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PrimaryAxis");
+            retObjectPrimaryAxis = classInstance.Get("PrimaryAxis");
+            JCObject val = (JCObject)retObjectPrimaryAxis;
             return new PopupPrimaryAxis(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPrimaryAxis != null ? retObjectPrimaryAxis.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class CustomPopupPlacement extends ValueType  {
 
     public void setPrimaryAxis(PopupPrimaryAxis PrimaryAxis) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PrimaryAxis", PrimaryAxis == null ? null : PrimaryAxis.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,10 +197,14 @@ public class CustomPopupPlacement extends ValueType  {
 
     public Point getPoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPoint = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Point");
+            retObjectPoint = classInstance.Get("Point");
+            JCObject val = (JCObject)retObjectPoint;
             return new Point(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPoint != null ? retObjectPoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,7 +212,7 @@ public class CustomPopupPlacement extends ValueType  {
 
     public void setPoint(Point Point) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Point", Point == null ? null : Point.getJCOInstance());
         } catch (JCNativeException jcne) {

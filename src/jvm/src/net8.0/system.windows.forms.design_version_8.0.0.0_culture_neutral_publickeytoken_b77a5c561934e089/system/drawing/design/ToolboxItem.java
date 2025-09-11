@@ -187,16 +187,20 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
     
     public IComponent[] CreateComponents() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponents = null;
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents");
+            retObjectCreateComponents = classInstance.Invoke("CreateComponents");
+            JCObject resultingObjects = (JCObject)retObjectCreateComponents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponents != null ? retObjectCreateComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,16 +208,20 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public IComponent[] CreateComponents(IDesignerHost host, IDictionary defaultValues) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.TypeLoadException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponents = null;
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance(), defaultValues == null ? null : defaultValues.getJCOInstance());
+            retObjectCreateComponents = classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance(), defaultValues == null ? null : defaultValues.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateComponents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponents != null ? retObjectCreateComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,16 +229,20 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public IComponent[] CreateComponents(IDesignerHost host) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.TypeLoadException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateComponents = null;
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance());
+            retObjectCreateComponents = classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectCreateComponents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateComponents != null ? retObjectCreateComponents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,10 +250,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public NetType GetType(IDesignerHost host) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.io.FileLoadException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetType = null;
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", host == null ? null : host.getJCOInstance());
+            retObjectGetType = classInstance.Invoke("GetType", host == null ? null : host.getJCOInstance());
+            JCObject objGetType = (JCObject)retObjectGetType;
             return new NetType(objGetType);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetType != null ? retObjectGetType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,7 +265,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void Initialize(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.TypeLoadException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Initialize", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -259,7 +275,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void Lock() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Lock");
         } catch (JCNativeException jcne) {
@@ -273,7 +289,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
      */
     @Deprecated 
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 
@@ -282,9 +298,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
     
     public boolean getIsTransient() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTransient = null;
         try {
-            return (boolean)classInstance.Get("IsTransient");
+            retObjectIsTransient = classInstance.Get("IsTransient");
+            return (boolean)retObjectIsTransient;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTransient != null ? retObjectIsTransient.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +312,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setIsTransient(boolean IsTransient) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsTransient", IsTransient);
         } catch (JCNativeException jcne) {
@@ -302,9 +322,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public boolean getLocked() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLocked = null;
         try {
-            return (boolean)classInstance.Get("Locked");
+            retObjectLocked = classInstance.Get("Locked");
+            return (boolean)retObjectLocked;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLocked != null ? retObjectLocked.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,10 +336,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public ICollection getFilter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            JCObject val = (JCObject)retObjectFilter;
             return new ICollectionImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +351,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setFilter(ICollection Filter) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Filter", Filter == null ? null : Filter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,10 +361,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public IDictionary getProperties() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectProperties = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Properties");
+            retObjectProperties = classInstance.Get("Properties");
+            JCObject val = (JCObject)retObjectProperties;
             return new IDictionaryImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectProperties != null ? retObjectProperties.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,10 +376,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public Bitmap getBitmap() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitmap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bitmap");
+            retObjectBitmap = classInstance.Get("Bitmap");
+            JCObject val = (JCObject)retObjectBitmap;
             return new Bitmap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBitmap != null ? retObjectBitmap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -355,7 +391,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setBitmap(Bitmap Bitmap) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Bitmap", Bitmap == null ? null : Bitmap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -365,10 +401,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public Bitmap getOriginalBitmap() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalBitmap = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalBitmap");
+            retObjectOriginalBitmap = classInstance.Get("OriginalBitmap");
+            JCObject val = (JCObject)retObjectOriginalBitmap;
             return new Bitmap(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalBitmap != null ? retObjectOriginalBitmap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,7 +416,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setOriginalBitmap(Bitmap OriginalBitmap) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OriginalBitmap", OriginalBitmap == null ? null : OriginalBitmap.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -386,10 +426,14 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public AssemblyName getAssemblyName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            JCObject val = (JCObject)retObjectAssemblyName;
             return new AssemblyName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,7 +441,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setAssemblyName(AssemblyName AssemblyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AssemblyName", AssemblyName == null ? null : AssemblyName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -407,16 +451,20 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public final AssemblyName[] getDependentAssemblies() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDependentAssemblies = null;
         try {
             ArrayList<AssemblyName> resultingArrayList = new ArrayList<AssemblyName>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("DependentAssemblies");
+            retObjectDependentAssemblies = classInstance.Get("DependentAssemblies");
+            JCObject resultingObjects = (JCObject)retObjectDependentAssemblies;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AssemblyName(resultingObject));
             }
             AssemblyName[] resultingArray = new AssemblyName[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDependentAssemblies != null ? retObjectDependentAssemblies.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,7 +472,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setDependentAssemblies(AssemblyName[] DependentAssemblies) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DependentAssemblies", toObjectFromArray(DependentAssemblies));
         } catch (JCNativeException jcne) {
@@ -434,9 +482,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getCompany() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompany = null;
         try {
-            return (java.lang.String)classInstance.Get("Company");
+            retObjectCompany = classInstance.Get("Company");
+            return (java.lang.String)retObjectCompany;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCompany != null ? retObjectCompany.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -444,7 +496,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setCompany(java.lang.String Company) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Company", Company);
         } catch (JCNativeException jcne) {
@@ -454,9 +506,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getComponentType() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectComponentType = null;
         try {
-            return (java.lang.String)classInstance.Get("ComponentType");
+            retObjectComponentType = classInstance.Get("ComponentType");
+            return (java.lang.String)retObjectComponentType;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectComponentType != null ? retObjectComponentType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,9 +520,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getDescription() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDescription = null;
         try {
-            return (java.lang.String)classInstance.Get("Description");
+            retObjectDescription = classInstance.Get("Description");
+            return (java.lang.String)retObjectDescription;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDescription != null ? retObjectDescription.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,7 +534,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setDescription(java.lang.String Description) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Description", Description);
         } catch (JCNativeException jcne) {
@@ -484,9 +544,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getDisplayName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -494,7 +558,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -504,9 +568,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getTypeName() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypeName = null;
         try {
-            return (java.lang.String)classInstance.Get("TypeName");
+            retObjectTypeName = classInstance.Get("TypeName");
+            return (java.lang.String)retObjectTypeName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectTypeName != null ? retObjectTypeName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -514,7 +582,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void setTypeName(java.lang.String TypeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TypeName", TypeName);
         } catch (JCNativeException jcne) {
@@ -524,9 +592,13 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public java.lang.String getVersion() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (java.lang.String)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (java.lang.String)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -539,7 +611,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void addComponentsCreated(ToolboxComponentsCreatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentsCreated", handler);
         } catch (JCNativeException jcne) {
@@ -549,7 +621,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void removeComponentsCreated(ToolboxComponentsCreatedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentsCreated", handler);
         } catch (JCNativeException jcne) {
@@ -559,7 +631,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void addComponentsCreating(ToolboxComponentsCreatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ComponentsCreating", handler);
         } catch (JCNativeException jcne) {
@@ -569,7 +641,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
 
     public void removeComponentsCreating(ToolboxComponentsCreatingEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ComponentsCreating", handler);
         } catch (JCNativeException jcne) {

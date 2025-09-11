@@ -167,9 +167,13 @@ public class CustomValidator extends BaseValidator  {
     
     public boolean getValidateEmptyText() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidateEmptyText = null;
         try {
-            return (boolean)classInstance.Get("ValidateEmptyText");
+            retObjectValidateEmptyText = classInstance.Get("ValidateEmptyText");
+            return (boolean)retObjectValidateEmptyText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValidateEmptyText != null ? retObjectValidateEmptyText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +181,7 @@ public class CustomValidator extends BaseValidator  {
 
     public void setValidateEmptyText(boolean ValidateEmptyText) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ValidateEmptyText", ValidateEmptyText);
         } catch (JCNativeException jcne) {
@@ -187,9 +191,13 @@ public class CustomValidator extends BaseValidator  {
 
     public java.lang.String getClientValidationFunction() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClientValidationFunction = null;
         try {
-            return (java.lang.String)classInstance.Get("ClientValidationFunction");
+            retObjectClientValidationFunction = classInstance.Get("ClientValidationFunction");
+            return (java.lang.String)retObjectClientValidationFunction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectClientValidationFunction != null ? retObjectClientValidationFunction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class CustomValidator extends BaseValidator  {
 
     public void setClientValidationFunction(java.lang.String ClientValidationFunction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ClientValidationFunction", ClientValidationFunction);
         } catch (JCNativeException jcne) {
@@ -212,7 +220,7 @@ public class CustomValidator extends BaseValidator  {
 
     public void addServerValidate(ServerValidateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ServerValidate", handler);
         } catch (JCNativeException jcne) {
@@ -222,7 +230,7 @@ public class CustomValidator extends BaseValidator  {
 
     public void removeServerValidate(ServerValidateEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ServerValidate", handler);
         } catch (JCNativeException jcne) {

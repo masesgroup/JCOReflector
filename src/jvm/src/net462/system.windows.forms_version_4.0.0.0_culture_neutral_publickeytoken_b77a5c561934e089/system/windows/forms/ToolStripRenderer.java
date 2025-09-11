@@ -172,10 +172,14 @@ public class ToolStripRenderer extends NetObject  {
     
     public static Image CreateDisabledImage(Image normalImage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateDisabledImage = null;
         try {
-            JCObject objCreateDisabledImage = (JCObject)classType.Invoke("CreateDisabledImage", normalImage == null ? null : normalImage.getJCOInstance());
+            retObjectCreateDisabledImage = classType.Invoke("CreateDisabledImage", normalImage == null ? null : normalImage.getJCOInstance());
+            JCObject objCreateDisabledImage = (JCObject)retObjectCreateDisabledImage;
             return new Image(objCreateDisabledImage);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDisabledImage != null ? retObjectCreateDisabledImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +187,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawArrow(ToolStripArrowRenderEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawArrow", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -193,7 +197,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawButtonBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -203,7 +207,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawDropDownButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawDropDownButtonBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -213,7 +217,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawGrip(ToolStripGripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawGrip", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -223,7 +227,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawImageMargin(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawImageMargin", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -233,7 +237,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawItemBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawItemBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -243,7 +247,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawItemCheck(ToolStripItemImageRenderEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawItemCheck", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -253,7 +257,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawItemImage(ToolStripItemImageRenderEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawItemImage", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -263,7 +267,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawItemText(ToolStripItemTextRenderEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawItemText", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -273,7 +277,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawLabelBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawLabelBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -283,7 +287,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawMenuItemBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawMenuItemBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -293,7 +297,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawOverflowButtonBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawOverflowButtonBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -303,7 +307,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawSeparator(ToolStripSeparatorRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawSeparator", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -313,7 +317,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawSplitButton(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawSplitButton", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -323,7 +327,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawStatusStripSizingGrip(ToolStripRenderEventArgs e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.runtime.interopservices.ExternalException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawStatusStripSizingGrip", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,7 +337,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawToolStripBackground(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToolStripBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,7 +347,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawToolStripBorder(ToolStripRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToolStripBorder", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -353,7 +357,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawToolStripContentPanelBackground(ToolStripContentPanelRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToolStripContentPanelBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -363,7 +367,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawToolStripPanelBackground(ToolStripPanelRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToolStripPanelBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -373,7 +377,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void DrawToolStripStatusLabelBackground(ToolStripItemRenderEventArgs e) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DrawToolStripStatusLabelBackground", e == null ? null : e.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -392,7 +396,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderArrow(ToolStripArrowRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderArrow", handler);
         } catch (JCNativeException jcne) {
@@ -402,7 +406,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderArrow(ToolStripArrowRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderArrow", handler);
         } catch (JCNativeException jcne) {
@@ -412,7 +416,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderToolStripContentPanelBackground(ToolStripContentPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderToolStripContentPanelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -422,7 +426,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderToolStripContentPanelBackground(ToolStripContentPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderToolStripContentPanelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -432,7 +436,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderGrip(ToolStripGripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderGrip", handler);
         } catch (JCNativeException jcne) {
@@ -442,7 +446,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderGrip(ToolStripGripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderGrip", handler);
         } catch (JCNativeException jcne) {
@@ -452,7 +456,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderItemCheck(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderItemCheck", handler);
         } catch (JCNativeException jcne) {
@@ -462,7 +466,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderItemCheck(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderItemCheck", handler);
         } catch (JCNativeException jcne) {
@@ -472,7 +476,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderItemImage(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderItemImage", handler);
         } catch (JCNativeException jcne) {
@@ -482,7 +486,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderItemImage(ToolStripItemImageRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderItemImage", handler);
         } catch (JCNativeException jcne) {
@@ -492,7 +496,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -502,7 +506,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -512,7 +516,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderDropDownButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderDropDownButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -522,7 +526,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderDropDownButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderDropDownButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -532,7 +536,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderItemBackground", handler);
         } catch (JCNativeException jcne) {
@@ -542,7 +546,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderItemBackground", handler);
         } catch (JCNativeException jcne) {
@@ -552,7 +556,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderLabelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -562,7 +566,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderLabelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -572,7 +576,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderMenuItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderMenuItemBackground", handler);
         } catch (JCNativeException jcne) {
@@ -582,7 +586,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderMenuItemBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderMenuItemBackground", handler);
         } catch (JCNativeException jcne) {
@@ -592,7 +596,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderOverflowButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderOverflowButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -602,7 +606,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderOverflowButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderOverflowButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -612,7 +616,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderSplitButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderSplitButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -622,7 +626,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderSplitButtonBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderSplitButtonBackground", handler);
         } catch (JCNativeException jcne) {
@@ -632,7 +636,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderToolStripStatusLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderToolStripStatusLabelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -642,7 +646,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderToolStripStatusLabelBackground(ToolStripItemRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderToolStripStatusLabelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -652,7 +656,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderItemText(ToolStripItemTextRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderItemText", handler);
         } catch (JCNativeException jcne) {
@@ -662,7 +666,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderItemText(ToolStripItemTextRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderItemText", handler);
         } catch (JCNativeException jcne) {
@@ -672,7 +676,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderToolStripPanelBackground(ToolStripPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderToolStripPanelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -682,7 +686,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderToolStripPanelBackground(ToolStripPanelRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderToolStripPanelBackground", handler);
         } catch (JCNativeException jcne) {
@@ -692,7 +696,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderImageMargin(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderImageMargin", handler);
         } catch (JCNativeException jcne) {
@@ -702,7 +706,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderImageMargin(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderImageMargin", handler);
         } catch (JCNativeException jcne) {
@@ -712,7 +716,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderStatusStripSizingGrip(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderStatusStripSizingGrip", handler);
         } catch (JCNativeException jcne) {
@@ -722,7 +726,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderStatusStripSizingGrip(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderStatusStripSizingGrip", handler);
         } catch (JCNativeException jcne) {
@@ -732,7 +736,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderToolStripBackground(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderToolStripBackground", handler);
         } catch (JCNativeException jcne) {
@@ -742,7 +746,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderToolStripBackground(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderToolStripBackground", handler);
         } catch (JCNativeException jcne) {
@@ -752,7 +756,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderToolStripBorder(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderToolStripBorder", handler);
         } catch (JCNativeException jcne) {
@@ -762,7 +766,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderToolStripBorder(ToolStripRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderToolStripBorder", handler);
         } catch (JCNativeException jcne) {
@@ -772,7 +776,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void addRenderSeparator(ToolStripSeparatorRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RenderSeparator", handler);
         } catch (JCNativeException jcne) {
@@ -782,7 +786,7 @@ public class ToolStripRenderer extends NetObject  {
 
     public void removeRenderSeparator(ToolStripSeparatorRenderEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RenderSeparator", handler);
         } catch (JCNativeException jcne) {

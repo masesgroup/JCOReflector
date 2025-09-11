@@ -200,7 +200,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
     
     public void Dispose() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -211,7 +211,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }
@@ -227,9 +227,13 @@ public class MailMessage extends NetObject implements AutoCloseable {
     
     public boolean getIsBodyHtml() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBodyHtml = null;
         try {
-            return (boolean)classInstance.Get("IsBodyHtml");
+            retObjectIsBodyHtml = classInstance.Get("IsBodyHtml");
+            return (boolean)retObjectIsBodyHtml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBodyHtml != null ? retObjectIsBodyHtml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +241,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setIsBodyHtml(boolean IsBodyHtml) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsBodyHtml", IsBodyHtml);
         } catch (JCNativeException jcne) {
@@ -247,10 +251,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public NameValueCollection getHeaders() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeaders = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Headers");
+            retObjectHeaders = classInstance.Get("Headers");
+            JCObject val = (JCObject)retObjectHeaders;
             return new NameValueCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeaders != null ? retObjectHeaders.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,10 +266,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public AlternateViewCollection getAlternateViews() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAlternateViews = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AlternateViews");
+            retObjectAlternateViews = classInstance.Get("AlternateViews");
+            JCObject val = (JCObject)retObjectAlternateViews;
             return new AlternateViewCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAlternateViews != null ? retObjectAlternateViews.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -269,10 +281,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public AttachmentCollection getAttachments() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttachments = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Attachments");
+            retObjectAttachments = classInstance.Get("Attachments");
+            JCObject val = (JCObject)retObjectAttachments;
             return new AttachmentCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttachments != null ? retObjectAttachments.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,10 +296,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public DeliveryNotificationOptions getDeliveryNotificationOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDeliveryNotificationOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DeliveryNotificationOptions");
+            retObjectDeliveryNotificationOptions = classInstance.Get("DeliveryNotificationOptions");
+            JCObject val = (JCObject)retObjectDeliveryNotificationOptions;
             return new DeliveryNotificationOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDeliveryNotificationOptions != null ? retObjectDeliveryNotificationOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,7 +311,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setDeliveryNotificationOptions(DeliveryNotificationOptions DeliveryNotificationOptions) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DeliveryNotificationOptions", DeliveryNotificationOptions == null ? null : DeliveryNotificationOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -301,10 +321,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddress getFrom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFrom = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("From");
+            retObjectFrom = classInstance.Get("From");
+            JCObject val = (JCObject)retObjectFrom;
             return new MailAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFrom != null ? retObjectFrom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +336,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setFrom(MailAddress From) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("From", From == null ? null : From.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -322,10 +346,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddress getReplyTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplyTo");
+            retObjectReplyTo = classInstance.Get("ReplyTo");
+            JCObject val = (JCObject)retObjectReplyTo;
             return new MailAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplyTo != null ? retObjectReplyTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -333,7 +361,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setReplyTo(MailAddress ReplyTo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReplyTo", ReplyTo == null ? null : ReplyTo.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -343,10 +371,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddress getSender() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSender = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Sender");
+            retObjectSender = classInstance.Get("Sender");
+            JCObject val = (JCObject)retObjectSender;
             return new MailAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSender != null ? retObjectSender.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +386,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setSender(MailAddress Sender) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Sender", Sender == null ? null : Sender.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -364,10 +396,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddressCollection getBcc() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBcc = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Bcc");
+            retObjectBcc = classInstance.Get("Bcc");
+            JCObject val = (JCObject)retObjectBcc;
             return new MailAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBcc != null ? retObjectBcc.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -375,10 +411,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddressCollection getCC() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCC = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("CC");
+            retObjectCC = classInstance.Get("CC");
+            JCObject val = (JCObject)retObjectCC;
             return new MailAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCC != null ? retObjectCC.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -386,10 +426,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddressCollection getReplyToList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReplyToList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ReplyToList");
+            retObjectReplyToList = classInstance.Get("ReplyToList");
+            JCObject val = (JCObject)retObjectReplyToList;
             return new MailAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectReplyToList != null ? retObjectReplyToList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,10 +441,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailAddressCollection getTo() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTo = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("To");
+            retObjectTo = classInstance.Get("To");
+            JCObject val = (JCObject)retObjectTo;
             return new MailAddressCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTo != null ? retObjectTo.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,10 +456,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public MailPriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new MailPriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -419,7 +471,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setPriority(MailPriority Priority) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Priority", Priority == null ? null : Priority.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -429,10 +481,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public TransferEncoding getBodyTransferEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBodyTransferEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BodyTransferEncoding");
+            retObjectBodyTransferEncoding = classInstance.Get("BodyTransferEncoding");
+            JCObject val = (JCObject)retObjectBodyTransferEncoding;
             return new TransferEncoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBodyTransferEncoding != null ? retObjectBodyTransferEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -440,7 +496,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setBodyTransferEncoding(TransferEncoding BodyTransferEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BodyTransferEncoding", BodyTransferEncoding == null ? null : BodyTransferEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -450,9 +506,13 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public java.lang.String getBody() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBody = null;
         try {
-            return (java.lang.String)classInstance.Get("Body");
+            retObjectBody = classInstance.Get("Body");
+            return (java.lang.String)retObjectBody;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBody != null ? retObjectBody.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -460,7 +520,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setBody(java.lang.String Body) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Body", Body);
         } catch (JCNativeException jcne) {
@@ -470,9 +530,13 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public java.lang.String getSubject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubject = null;
         try {
-            return (java.lang.String)classInstance.Get("Subject");
+            retObjectSubject = classInstance.Get("Subject");
+            return (java.lang.String)retObjectSubject;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSubject != null ? retObjectSubject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +544,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setSubject(java.lang.String Subject) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Subject", Subject);
         } catch (JCNativeException jcne) {
@@ -490,10 +554,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public Encoding getBodyEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBodyEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BodyEncoding");
+            retObjectBodyEncoding = classInstance.Get("BodyEncoding");
+            JCObject val = (JCObject)retObjectBodyEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBodyEncoding != null ? retObjectBodyEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -501,7 +569,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setBodyEncoding(Encoding BodyEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BodyEncoding", BodyEncoding == null ? null : BodyEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -511,10 +579,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public Encoding getHeadersEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeadersEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("HeadersEncoding");
+            retObjectHeadersEncoding = classInstance.Get("HeadersEncoding");
+            JCObject val = (JCObject)retObjectHeadersEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectHeadersEncoding != null ? retObjectHeadersEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -522,7 +594,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setHeadersEncoding(Encoding HeadersEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HeadersEncoding", HeadersEncoding == null ? null : HeadersEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -532,10 +604,14 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public Encoding getSubjectEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubjectEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubjectEncoding");
+            retObjectSubjectEncoding = classInstance.Get("SubjectEncoding");
+            JCObject val = (JCObject)retObjectSubjectEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubjectEncoding != null ? retObjectSubjectEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -543,7 +619,7 @@ public class MailMessage extends NetObject implements AutoCloseable {
 
     public void setSubjectEncoding(Encoding SubjectEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubjectEncoding", SubjectEncoding == null ? null : SubjectEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

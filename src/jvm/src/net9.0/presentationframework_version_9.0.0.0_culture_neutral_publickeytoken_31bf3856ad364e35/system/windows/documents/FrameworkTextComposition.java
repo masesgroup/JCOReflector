@@ -156,7 +156,7 @@ public class FrameworkTextComposition extends TextComposition  {
     
     public void Complete() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Complete");
         } catch (JCNativeException jcne) {
@@ -170,9 +170,13 @@ public class FrameworkTextComposition extends TextComposition  {
     
     public int getCompositionLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionLength = null;
         try {
-            return (int)classInstance.Get("CompositionLength");
+            retObjectCompositionLength = classInstance.Get("CompositionLength");
+            return (int)retObjectCompositionLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCompositionLength != null ? retObjectCompositionLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getCompositionOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompositionOffset = null;
         try {
-            return (int)classInstance.Get("CompositionOffset");
+            retObjectCompositionOffset = classInstance.Get("CompositionOffset");
+            return (int)retObjectCompositionOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCompositionOffset != null ? retObjectCompositionOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getResultLength() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultLength = null;
         try {
-            return (int)classInstance.Get("ResultLength");
+            retObjectResultLength = classInstance.Get("ResultLength");
+            return (int)retObjectResultLength;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectResultLength != null ? retObjectResultLength.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class FrameworkTextComposition extends TextComposition  {
 
     public int getResultOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResultOffset = null;
         try {
-            return (int)classInstance.Get("ResultOffset");
+            retObjectResultOffset = classInstance.Get("ResultOffset");
+            return (int)retObjectResultOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectResultOffset != null ? retObjectResultOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

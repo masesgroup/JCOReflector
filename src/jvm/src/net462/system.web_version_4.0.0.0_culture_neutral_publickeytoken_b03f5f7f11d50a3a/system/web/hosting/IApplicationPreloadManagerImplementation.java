@@ -144,7 +144,7 @@ public class IApplicationPreloadManagerImplementation extends NetObject implemen
     
     public void SetApplicationPreloadState(java.lang.String context, java.lang.String appId, boolean enabled) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetApplicationPreloadState", context, appId, enabled);
         } catch (JCNativeException jcne) {
@@ -154,7 +154,7 @@ public class IApplicationPreloadManagerImplementation extends NetObject implemen
 
     public void SetApplicationPreloadUtil(IApplicationPreloadUtil preloadUtil) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetApplicationPreloadUtil", preloadUtil == null ? null : preloadUtil.getJCOInstance());
         } catch (JCNativeException jcne) {

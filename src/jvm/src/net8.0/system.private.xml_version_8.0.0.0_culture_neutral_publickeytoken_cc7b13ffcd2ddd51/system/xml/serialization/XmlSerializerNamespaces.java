@@ -183,16 +183,20 @@ public class XmlSerializerNamespaces extends NetObject  {
     
     public XmlQualifiedName[] ToArray() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToArray = null;
         try {
             ArrayList<XmlQualifiedName> resultingArrayList = new ArrayList<XmlQualifiedName>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
+            retObjectToArray = classInstance.Invoke("ToArray");
+            JCObject resultingObjects = (JCObject)retObjectToArray;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlQualifiedName(resultingObject));
             }
             XmlQualifiedName[] resultingArray = new XmlQualifiedName[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectToArray != null ? retObjectToArray.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +204,7 @@ public class XmlSerializerNamespaces extends NetObject  {
 
     public void Add(java.lang.String prefix, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException, system.NotSupportedException, system.diagnostics.UnreachableException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", prefix, ns);
         } catch (JCNativeException jcne) {
@@ -214,9 +218,13 @@ public class XmlSerializerNamespaces extends NetObject  {
     
     public int getCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCount = null;
         try {
-            return (int)classInstance.Get("Count");
+            retObjectCount = classInstance.Get("Count");
+            return (int)retObjectCount;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectCount != null ? retObjectCount.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

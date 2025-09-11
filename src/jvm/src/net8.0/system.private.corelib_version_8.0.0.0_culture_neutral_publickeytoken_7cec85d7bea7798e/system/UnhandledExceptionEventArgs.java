@@ -170,9 +170,13 @@ public class UnhandledExceptionEventArgs extends EventArgs  {
     
     public boolean getIsTerminating() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsTerminating = null;
         try {
-            return (boolean)classInstance.Get("IsTerminating");
+            retObjectIsTerminating = classInstance.Get("IsTerminating");
+            return (boolean)retObjectIsTerminating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsTerminating != null ? retObjectIsTerminating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,10 +184,14 @@ public class UnhandledExceptionEventArgs extends EventArgs  {
 
     public NetObject getExceptionObject() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExceptionObject = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ExceptionObject");
+            retObjectExceptionObject = classInstance.Get("ExceptionObject");
+            JCObject val = (JCObject)retObjectExceptionObject;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectExceptionObject != null ? retObjectExceptionObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

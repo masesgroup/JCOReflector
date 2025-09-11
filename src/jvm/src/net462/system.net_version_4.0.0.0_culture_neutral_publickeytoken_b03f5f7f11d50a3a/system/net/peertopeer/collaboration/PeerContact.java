@@ -168,9 +168,13 @@ public class PeerContact extends Peer  {
     
     public boolean Equals(PeerContact other) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +182,13 @@ public class PeerContact extends Peer  {
 
     public static boolean Equals(NetObject objA, NetObject objB) throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", objA == null ? null : objA.getJCOInstance(), objB == null ? null : objB.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", objA == null ? null : objA.getJCOInstance(), objB == null ? null : objB.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,10 +196,14 @@ public class PeerContact extends Peer  {
 
     public PeerApplicationCollection GetApplications() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.net.sockets.SocketException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplications = null;
         try {
-            JCObject objGetApplications = (JCObject)classInstance.Invoke("GetApplications");
+            retObjectGetApplications = classInstance.Invoke("GetApplications");
+            JCObject objGetApplications = (JCObject)retObjectGetApplications;
             return new PeerApplicationCollection(objGetApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplications != null ? retObjectGetApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,10 +211,14 @@ public class PeerContact extends Peer  {
 
     public PeerApplicationCollection GetApplications(Guid applicationId) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.net.sockets.SocketException, system.net.peertopeer.PeerToPeerException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplications = null;
         try {
-            JCObject objGetApplications = (JCObject)classInstance.Invoke("GetApplications", applicationId == null ? null : applicationId.getJCOInstance());
+            retObjectGetApplications = classInstance.Invoke("GetApplications", applicationId == null ? null : applicationId.getJCOInstance());
+            JCObject objGetApplications = (JCObject)retObjectGetApplications;
             return new PeerApplicationCollection(objGetApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplications != null ? retObjectGetApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,10 +226,14 @@ public class PeerContact extends Peer  {
 
     public PeerApplicationCollection GetApplications(PeerEndPoint peerEndPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplications = null;
         try {
-            JCObject objGetApplications = (JCObject)classInstance.Invoke("GetApplications", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            retObjectGetApplications = classInstance.Invoke("GetApplications", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            JCObject objGetApplications = (JCObject)retObjectGetApplications;
             return new PeerApplicationCollection(objGetApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplications != null ? retObjectGetApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,10 +241,14 @@ public class PeerContact extends Peer  {
 
     public PeerApplicationCollection GetApplications(PeerEndPoint peerEndPoint, Guid applicationId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetApplications = null;
         try {
-            JCObject objGetApplications = (JCObject)classInstance.Invoke("GetApplications", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), applicationId == null ? null : applicationId.getJCOInstance());
+            retObjectGetApplications = classInstance.Invoke("GetApplications", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), applicationId == null ? null : applicationId.getJCOInstance());
+            JCObject objGetApplications = (JCObject)retObjectGetApplications;
             return new PeerApplicationCollection(objGetApplications);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetApplications != null ? retObjectGetApplications.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,10 +256,14 @@ public class PeerContact extends Peer  {
 
     public static PeerContact FromXml(java.lang.String peerContactXml) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectFromXml = null;
         try {
-            JCObject objFromXml = (JCObject)classType.Invoke("FromXml", peerContactXml);
+            retObjectFromXml = classType.Invoke("FromXml", peerContactXml);
+            JCObject objFromXml = (JCObject)retObjectFromXml;
             return new PeerContact(objFromXml);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectFromXml != null ? retObjectFromXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -243,10 +271,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.AccessViolationException, system.threading.AbandonedMutexException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.net.peertopeer.PeerToPeerException, system.OverflowException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite");
+            retObjectInvite = classInstance.Invoke("Invite");
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,10 +286,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite(PeerApplication applicationToInvite, java.lang.String message, byte[] invitationData) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData);
+            retObjectInvite = classInstance.Invoke("Invite", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData);
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +301,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            retObjectInvite = classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +316,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite(PeerEndPoint peerEndPoint) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.OverflowException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            retObjectInvite = classInstance.Invoke("Invite", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,10 +331,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite(PeerEndPoint peerEndPoint, PeerApplication applicationToInvite, java.lang.String message, byte[] invitationData) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData);
+            retObjectInvite = classInstance.Invoke("Invite", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData);
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,10 +346,14 @@ public class PeerContact extends Peer  {
 
     public PeerInvitationResponse Invite(PeerEndPoint dupParam0, PeerApplication dupParam1, java.lang.String dupParam2, JCORefOut dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInvite = null;
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3.getJCRefOut());
+            retObjectInvite = classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3.getJCRefOut());
+            JCObject objInvite = (JCObject)retObjectInvite;
             return new PeerInvitationResponse(objInvite);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInvite != null ? retObjectInvite.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,10 +361,14 @@ public class PeerContact extends Peer  {
 
     public PeerObjectCollection GetObjects(PeerEndPoint peerEndPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjects = null;
         try {
-            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            retObjectGetObjects = classInstance.Invoke("GetObjects", peerEndPoint == null ? null : peerEndPoint.getJCOInstance());
+            JCObject objGetObjects = (JCObject)retObjectGetObjects;
             return new PeerObjectCollection(objGetObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjects != null ? retObjectGetObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +376,14 @@ public class PeerContact extends Peer  {
 
     public PeerObjectCollection GetObjects(PeerEndPoint peerEndPoint, Guid objectId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.globalization.CultureNotFoundException, system.net.peertopeer.PeerToPeerException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetObjects = null;
         try {
-            JCObject objGetObjects = (JCObject)classInstance.Invoke("GetObjects", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), objectId == null ? null : objectId.getJCOInstance());
+            retObjectGetObjects = classInstance.Invoke("GetObjects", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), objectId == null ? null : objectId.getJCOInstance());
+            JCObject objGetObjects = (JCObject)retObjectGetObjects;
             return new PeerObjectCollection(objGetObjects);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetObjects != null ? retObjectGetObjects.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,9 +391,13 @@ public class PeerContact extends Peer  {
 
     public java.lang.String ToXml() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.net.peertopeer.PeerToPeerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectToXml = null;
         try {
-            return (java.lang.String)classInstance.Invoke("ToXml");
+            retObjectToXml = classInstance.Invoke("ToXml");
+            return (java.lang.String)retObjectToXml;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectToXml != null ? retObjectToXml.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +405,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(PeerApplication applicationToInvite, java.lang.String message, byte[] invitationData, NetObject userToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), message, invitationData, userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,7 +415,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, NetObject dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -361,7 +425,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(PeerEndPoint peerEndPoint, NetObject userToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.net.peertopeer.PeerToPeerException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -371,7 +435,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(PeerEndPoint peerEndPoint, java.lang.String message, byte[] invitationData, PeerApplication applicationToInvite, NetObject userToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", peerEndPoint == null ? null : peerEndPoint.getJCOInstance(), message, invitationData, applicationToInvite == null ? null : applicationToInvite.getJCOInstance(), userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -381,7 +445,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(PeerEndPoint dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, PeerApplication dupParam3, NetObject dupParam4) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,7 +455,7 @@ public class PeerContact extends Peer  {
 
     public void InviteAsync(NetObject userToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.AccessViolationException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.net.peertopeer.PeerToPeerException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InviteAsync", userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -401,7 +465,7 @@ public class PeerContact extends Peer  {
 
     public void Subscribe() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Subscribe");
         } catch (JCNativeException jcne) {
@@ -411,7 +475,7 @@ public class PeerContact extends Peer  {
 
     public void SubscribeAsync(NetObject userToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SubscribeAsync", userToken == null ? null : userToken.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -421,7 +485,7 @@ public class PeerContact extends Peer  {
 
     public void Unsubscribe() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.net.peertopeer.PeerToPeerException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Unsubscribe");
         } catch (JCNativeException jcne) {
@@ -435,9 +499,13 @@ public class PeerContact extends Peer  {
     
     public boolean getIsSubscribed() throws Throwable, system.ObjectDisposedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSubscribed = null;
         try {
-            return (boolean)classInstance.Get("IsSubscribed");
+            retObjectIsSubscribed = classInstance.Get("IsSubscribed");
+            return (boolean)retObjectIsSubscribed;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSubscribed != null ? retObjectIsSubscribed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +513,7 @@ public class PeerContact extends Peer  {
 
     public void setIsSubscribed(boolean IsSubscribed) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsSubscribed", IsSubscribed);
         } catch (JCNativeException jcne) {
@@ -455,10 +523,14 @@ public class PeerContact extends Peer  {
 
     public MailAddress getEmailAddress() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEmailAddress = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("EmailAddress");
+            retObjectEmailAddress = classInstance.Get("EmailAddress");
+            JCObject val = (JCObject)retObjectEmailAddress;
             return new MailAddress(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEmailAddress != null ? retObjectEmailAddress.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +538,7 @@ public class PeerContact extends Peer  {
 
     public void setEmailAddress(MailAddress EmailAddress) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EmailAddress", EmailAddress == null ? null : EmailAddress.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -476,10 +548,14 @@ public class PeerContact extends Peer  {
 
     public SubscriptionType getSubscribeAllowed() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSubscribeAllowed = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SubscribeAllowed");
+            retObjectSubscribeAllowed = classInstance.Get("SubscribeAllowed");
+            JCObject val = (JCObject)retObjectSubscribeAllowed;
             return new SubscriptionType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSubscribeAllowed != null ? retObjectSubscribeAllowed.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -487,7 +563,7 @@ public class PeerContact extends Peer  {
 
     public void setSubscribeAllowed(SubscriptionType SubscribeAllowed) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SubscribeAllowed", SubscribeAllowed == null ? null : SubscribeAllowed.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -497,10 +573,14 @@ public class PeerContact extends Peer  {
 
     public PeerName getPeerName() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPeerName = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PeerName");
+            retObjectPeerName = classInstance.Get("PeerName");
+            JCObject val = (JCObject)retObjectPeerName;
             return new PeerName(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPeerName != null ? retObjectPeerName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,7 +588,7 @@ public class PeerContact extends Peer  {
 
     public void setPeerName(PeerName PeerName) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PeerName", PeerName == null ? null : PeerName.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -518,10 +598,14 @@ public class PeerContact extends Peer  {
 
     public X509Certificate2 getCredentials() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCredentials = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Credentials");
+            retObjectCredentials = classInstance.Get("Credentials");
+            JCObject val = (JCObject)retObjectCredentials;
             return new X509Certificate2(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCredentials != null ? retObjectCredentials.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,7 +613,7 @@ public class PeerContact extends Peer  {
 
     public void setCredentials(X509Certificate2 Credentials) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Credentials", Credentials == null ? null : Credentials.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -539,9 +623,13 @@ public class PeerContact extends Peer  {
 
     public java.lang.String getDisplayName() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayName = null;
         try {
-            return (java.lang.String)classInstance.Get("DisplayName");
+            retObjectDisplayName = classInstance.Get("DisplayName");
+            return (java.lang.String)retObjectDisplayName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectDisplayName != null ? retObjectDisplayName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -549,7 +637,7 @@ public class PeerContact extends Peer  {
 
     public void setDisplayName(java.lang.String DisplayName) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayName", DisplayName);
         } catch (JCNativeException jcne) {
@@ -559,9 +647,13 @@ public class PeerContact extends Peer  {
 
     public java.lang.String getNickname() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNickname = null;
         try {
-            return (java.lang.String)classInstance.Get("Nickname");
+            retObjectNickname = classInstance.Get("Nickname");
+            return (java.lang.String)retObjectNickname;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectNickname != null ? retObjectNickname.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -569,7 +661,7 @@ public class PeerContact extends Peer  {
 
     public void setNickname(java.lang.String Nickname) throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Nickname", Nickname);
         } catch (JCNativeException jcne) {

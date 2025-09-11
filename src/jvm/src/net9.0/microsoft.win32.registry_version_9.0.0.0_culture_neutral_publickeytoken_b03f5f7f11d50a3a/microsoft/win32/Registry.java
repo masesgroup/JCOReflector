@@ -154,10 +154,14 @@ public class Registry extends NetObject  {
     
     public static NetObject GetValue(java.lang.String keyName, java.lang.String valueName, NetObject defaultValue) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetValue = null;
         try {
-            JCObject objGetValue = (JCObject)classType.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            retObjectGetValue = classType.Invoke("GetValue", keyName, valueName, defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objGetValue = (JCObject)retObjectGetValue;
             return new NetObject(objGetValue);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetValue != null ? retObjectGetValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,7 +169,7 @@ public class Registry extends NetObject  {
 
     public static void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value, RegistryValueKind valueKind) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.FormatException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance(), valueKind == null ? null : valueKind.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -175,7 +179,7 @@ public class Registry extends NetObject  {
 
     public static void SetValue(java.lang.String keyName, java.lang.String valueName, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.UnauthorizedAccessException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetValue", keyName, valueName, value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {

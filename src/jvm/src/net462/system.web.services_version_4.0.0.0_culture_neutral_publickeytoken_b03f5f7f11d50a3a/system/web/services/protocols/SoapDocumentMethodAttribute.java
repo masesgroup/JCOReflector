@@ -178,9 +178,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
     
     public boolean getOneWay() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOneWay = null;
         try {
-            return (boolean)classInstance.Get("OneWay");
+            retObjectOneWay = classInstance.Get("OneWay");
+            return (boolean)retObjectOneWay;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOneWay != null ? retObjectOneWay.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setOneWay(boolean OneWay) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OneWay", OneWay);
         } catch (JCNativeException jcne) {
@@ -198,9 +202,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getAction() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAction = null;
         try {
-            return (java.lang.String)classInstance.Get("Action");
+            retObjectAction = classInstance.Get("Action");
+            return (java.lang.String)retObjectAction;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +216,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setAction(java.lang.String Action) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Action", Action);
         } catch (JCNativeException jcne) {
@@ -218,9 +226,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getBinding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBinding = null;
         try {
-            return (java.lang.String)classInstance.Get("Binding");
+            retObjectBinding = classInstance.Get("Binding");
+            return (java.lang.String)retObjectBinding;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBinding != null ? retObjectBinding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,7 +240,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setBinding(java.lang.String Binding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Binding", Binding);
         } catch (JCNativeException jcne) {
@@ -238,9 +250,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getRequestElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestElementName");
+            retObjectRequestElementName = classInstance.Get("RequestElementName");
+            return (java.lang.String)retObjectRequestElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestElementName != null ? retObjectRequestElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -248,7 +264,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setRequestElementName(java.lang.String RequestElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestElementName", RequestElementName);
         } catch (JCNativeException jcne) {
@@ -258,9 +274,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getRequestNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("RequestNamespace");
+            retObjectRequestNamespace = classInstance.Get("RequestNamespace");
+            return (java.lang.String)retObjectRequestNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectRequestNamespace != null ? retObjectRequestNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,7 +288,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setRequestNamespace(java.lang.String RequestNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestNamespace", RequestNamespace);
         } catch (JCNativeException jcne) {
@@ -278,9 +298,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getResponseElementName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseElementName = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseElementName");
+            retObjectResponseElementName = classInstance.Get("ResponseElementName");
+            return (java.lang.String)retObjectResponseElementName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseElementName != null ? retObjectResponseElementName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +312,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setResponseElementName(java.lang.String ResponseElementName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseElementName", ResponseElementName);
         } catch (JCNativeException jcne) {
@@ -298,9 +322,13 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public java.lang.String getResponseNamespace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResponseNamespace = null;
         try {
-            return (java.lang.String)classInstance.Get("ResponseNamespace");
+            retObjectResponseNamespace = classInstance.Get("ResponseNamespace");
+            return (java.lang.String)retObjectResponseNamespace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectResponseNamespace != null ? retObjectResponseNamespace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -308,7 +336,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setResponseNamespace(java.lang.String ResponseNamespace) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResponseNamespace", ResponseNamespace);
         } catch (JCNativeException jcne) {
@@ -318,10 +346,14 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public SoapBindingUse getUse() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUse = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Use");
+            retObjectUse = classInstance.Get("Use");
+            JCObject val = (JCObject)retObjectUse;
             return new SoapBindingUse(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectUse != null ? retObjectUse.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +361,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setUse(SoapBindingUse Use) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Use", Use == null ? null : Use.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -339,10 +371,14 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public SoapParameterStyle getParameterStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectParameterStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ParameterStyle");
+            retObjectParameterStyle = classInstance.Get("ParameterStyle");
+            JCObject val = (JCObject)retObjectParameterStyle;
             return new SoapParameterStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectParameterStyle != null ? retObjectParameterStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -350,7 +386,7 @@ public class SoapDocumentMethodAttribute extends Attribute  {
 
     public void setParameterStyle(SoapParameterStyle ParameterStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ParameterStyle", ParameterStyle == null ? null : ParameterStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

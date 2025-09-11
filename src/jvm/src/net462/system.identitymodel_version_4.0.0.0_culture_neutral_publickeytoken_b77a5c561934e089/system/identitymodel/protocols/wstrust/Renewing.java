@@ -175,9 +175,13 @@ public class Renewing extends NetObject  {
     
     public boolean getAllowRenewal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllowRenewal = null;
         try {
-            return (boolean)classInstance.Get("AllowRenewal");
+            retObjectAllowRenewal = classInstance.Get("AllowRenewal");
+            return (boolean)retObjectAllowRenewal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllowRenewal != null ? retObjectAllowRenewal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +189,7 @@ public class Renewing extends NetObject  {
 
     public void setAllowRenewal(boolean AllowRenewal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllowRenewal", AllowRenewal);
         } catch (JCNativeException jcne) {
@@ -195,9 +199,13 @@ public class Renewing extends NetObject  {
 
     public boolean getOkForRenewalAfterExpiration() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOkForRenewalAfterExpiration = null;
         try {
-            return (boolean)classInstance.Get("OkForRenewalAfterExpiration");
+            retObjectOkForRenewalAfterExpiration = classInstance.Get("OkForRenewalAfterExpiration");
+            return (boolean)retObjectOkForRenewalAfterExpiration;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectOkForRenewalAfterExpiration != null ? retObjectOkForRenewalAfterExpiration.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +213,7 @@ public class Renewing extends NetObject  {
 
     public void setOkForRenewalAfterExpiration(boolean OkForRenewalAfterExpiration) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OkForRenewalAfterExpiration", OkForRenewalAfterExpiration);
         } catch (JCNativeException jcne) {

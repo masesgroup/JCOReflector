@@ -155,7 +155,7 @@ public class CounterData extends NetObject  {
     
     public void Decrement() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Decrement");
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class CounterData extends NetObject  {
 
     public void Increment() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Increment");
         } catch (JCNativeException jcne) {
@@ -175,7 +175,7 @@ public class CounterData extends NetObject  {
 
     public void IncrementBy(long value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("IncrementBy", value);
         } catch (JCNativeException jcne) {
@@ -189,9 +189,13 @@ public class CounterData extends NetObject  {
     
     public long getRawValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRawValue = null;
         try {
-            return (long)classInstance.Get("RawValue");
+            retObjectRawValue = classInstance.Get("RawValue");
+            return (long)retObjectRawValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectRawValue != null ? retObjectRawValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +203,7 @@ public class CounterData extends NetObject  {
 
     public void setRawValue(long RawValue) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RawValue", RawValue);
         } catch (JCNativeException jcne) {
@@ -209,9 +213,13 @@ public class CounterData extends NetObject  {
 
     public long getValue() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (long)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (long)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +227,7 @@ public class CounterData extends NetObject  {
 
     public void setValue(long Value) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Value", Value);
         } catch (JCNativeException jcne) {

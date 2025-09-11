@@ -155,9 +155,13 @@ public class MaskDescriptor extends NetObject  {
     
     public static boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor, JCORefOut validationErrorDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidMaskDescriptor = null;
         try {
-            return (boolean)classType.Invoke("IsValidMaskDescriptor", maskDescriptor == null ? null : maskDescriptor.getJCOInstance(), validationErrorDescription.getJCRefOut());
+            retObjectIsValidMaskDescriptor = classType.Invoke("IsValidMaskDescriptor", maskDescriptor == null ? null : maskDescriptor.getJCOInstance(), validationErrorDescription.getJCRefOut());
+            return (boolean)retObjectIsValidMaskDescriptor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidMaskDescriptor != null ? retObjectIsValidMaskDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,9 +169,13 @@ public class MaskDescriptor extends NetObject  {
 
     public static boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TimeoutException, system.MulticastNotSupportedException, system.FormatException, system.InvalidCastException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectIsValidMaskDescriptor = null;
         try {
-            return (boolean)classType.Invoke("IsValidMaskDescriptor", maskDescriptor == null ? null : maskDescriptor.getJCOInstance());
+            retObjectIsValidMaskDescriptor = classType.Invoke("IsValidMaskDescriptor", maskDescriptor == null ? null : maskDescriptor.getJCOInstance());
+            return (boolean)retObjectIsValidMaskDescriptor;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsValidMaskDescriptor != null ? retObjectIsValidMaskDescriptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,10 +187,14 @@ public class MaskDescriptor extends NetObject  {
     
     public CultureInfo getCulture() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCulture = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Culture");
+            retObjectCulture = classInstance.Get("Culture");
+            JCObject val = (JCObject)retObjectCulture;
             return new CultureInfo(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCulture != null ? retObjectCulture.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +202,13 @@ public class MaskDescriptor extends NetObject  {
 
     public java.lang.String getMask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMask = null;
         try {
-            return (java.lang.String)classInstance.Get("Mask");
+            retObjectMask = classInstance.Get("Mask");
+            return (java.lang.String)retObjectMask;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMask != null ? retObjectMask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +216,13 @@ public class MaskDescriptor extends NetObject  {
 
     public java.lang.String getName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectName = null;
         try {
-            return (java.lang.String)classInstance.Get("Name");
+            retObjectName = classInstance.Get("Name");
+            return (java.lang.String)retObjectName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectName != null ? retObjectName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,9 +230,13 @@ public class MaskDescriptor extends NetObject  {
 
     public java.lang.String getSample() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSample = null;
         try {
-            return (java.lang.String)classInstance.Get("Sample");
+            retObjectSample = classInstance.Get("Sample");
+            return (java.lang.String)retObjectSample;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectSample != null ? retObjectSample.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,10 +244,14 @@ public class MaskDescriptor extends NetObject  {
 
     public NetType getValidatingType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValidatingType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValidatingType");
+            retObjectValidatingType = classInstance.Get("ValidatingType");
+            JCObject val = (JCObject)retObjectValidatingType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValidatingType != null ? retObjectValidatingType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

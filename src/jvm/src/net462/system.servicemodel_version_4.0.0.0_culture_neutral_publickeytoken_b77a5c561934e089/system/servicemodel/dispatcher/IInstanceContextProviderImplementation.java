@@ -147,9 +147,13 @@ public class IInstanceContextProviderImplementation extends NetObject implements
     
     public boolean IsIdle(InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsIdle = null;
         try {
-            return (boolean)classInstance.Invoke("IsIdle", instanceContext == null ? null : instanceContext.getJCOInstance());
+            retObjectIsIdle = classInstance.Invoke("IsIdle", instanceContext == null ? null : instanceContext.getJCOInstance());
+            return (boolean)retObjectIsIdle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsIdle != null ? retObjectIsIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -157,10 +161,14 @@ public class IInstanceContextProviderImplementation extends NetObject implements
 
     public InstanceContext GetExistingInstanceContext(Message message, IContextChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExistingInstanceContext = null;
         try {
-            JCObject objGetExistingInstanceContext = (JCObject)classInstance.Invoke("GetExistingInstanceContext", message == null ? null : message.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            retObjectGetExistingInstanceContext = classInstance.Invoke("GetExistingInstanceContext", message == null ? null : message.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            JCObject objGetExistingInstanceContext = (JCObject)retObjectGetExistingInstanceContext;
             return new InstanceContext(objGetExistingInstanceContext);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExistingInstanceContext != null ? retObjectGetExistingInstanceContext.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +176,7 @@ public class IInstanceContextProviderImplementation extends NetObject implements
 
     public void InitializeInstanceContext(InstanceContext instanceContext, Message message, IContextChannel channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeInstanceContext", instanceContext == null ? null : instanceContext.getJCOInstance(), message == null ? null : message.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -178,7 +186,7 @@ public class IInstanceContextProviderImplementation extends NetObject implements
 
     public void NotifyIdle(InstanceContextIdleCallback callback, InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("NotifyIdle", callback, instanceContext == null ? null : instanceContext.getJCOInstance());
         } catch (JCNativeException jcne) {

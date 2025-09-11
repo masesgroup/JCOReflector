@@ -148,9 +148,13 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
     
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsName = null;
         try {
-            return (boolean)classInstance.Invoke("IsName", szNameBuf, lHashVal);
+            retObjectIsName = classInstance.Invoke("IsName", szNameBuf, lHashVal);
+            return (boolean)retObjectIsName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsName != null ? retObjectIsName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +162,19 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public int GetTypeInfoCount() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetTypeInfoCount = null;
         try {
-            return (int)classInstance.Invoke("GetTypeInfoCount");
+            retObjectGetTypeInfoCount = classInstance.Invoke("GetTypeInfoCount");
+            return (int)retObjectGetTypeInfoCount;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetTypeInfoCountNumber = (java.lang.Number)retObjectGetTypeInfoCount;
+                return retObjectGetTypeInfoCountNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetTypeInfoCount != null ? retObjectGetTypeInfoCount.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +182,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<UCOMITypeInfo[]> ppTInfo, JCORefOut rgMemId, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pcFound) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -178,7 +192,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetDocumentation", index, strName.getJCRefOut(), strDocString.getJCRefOut(), dwHelpContext.getJCRefOut(), strHelpFile.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -188,7 +202,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeComp", ppTComp.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -198,7 +212,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void GetTypeInfo(int index, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeInfo", index, ppTI.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -208,7 +222,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void GetTypeInfoOfGuid(JCORefOut<Guid> guid, JCORefOut<UCOMITypeInfo> ppTInfo) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeInfoOfGuid", guid.getJCRefOut(), ppTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
@@ -218,7 +232,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
 
     public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetTypeInfoType", index, pTKind.getJCRefOut());
         } catch (JCNativeException jcne) {

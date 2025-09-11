@@ -162,9 +162,13 @@ public class WorkflowSymbol extends NetObject  {
     
     public boolean CalculateChecksum() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCalculateChecksum = null;
         try {
-            return (boolean)classInstance.Invoke("CalculateChecksum");
+            retObjectCalculateChecksum = classInstance.Invoke("CalculateChecksum");
+            return (boolean)retObjectCalculateChecksum;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectCalculateChecksum != null ? retObjectCalculateChecksum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -172,10 +176,12 @@ public class WorkflowSymbol extends NetObject  {
 
     public byte[] GetChecksum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetChecksum = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChecksum");
+            retObjectGetChecksum = classInstance.Invoke("GetChecksum");
+            JCObject resultingObjects = (JCObject)retObjectGetChecksum;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -184,6 +190,8 @@ public class WorkflowSymbol extends NetObject  {
 				resultingArray[indexGetChecksum] = (byte)resultingArrayList.get(indexGetChecksum);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetChecksum != null ? retObjectGetChecksum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,10 +199,14 @@ public class WorkflowSymbol extends NetObject  {
 
     public static WorkflowSymbol Decode(java.lang.String symbolString) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.io.EndOfStreamException, system.io.IOException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.OverflowException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDecode = null;
         try {
-            JCObject objDecode = (JCObject)classType.Invoke("Decode", symbolString);
+            retObjectDecode = classType.Invoke("Decode", symbolString);
+            JCObject objDecode = (JCObject)retObjectDecode;
             return new WorkflowSymbol(objDecode);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecode != null ? retObjectDecode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +214,13 @@ public class WorkflowSymbol extends NetObject  {
 
     public java.lang.String Encode() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.UnauthorizedAccessException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEncode = null;
         try {
-            return (java.lang.String)classInstance.Invoke("Encode");
+            retObjectEncode = classInstance.Invoke("Encode");
+            return (java.lang.String)retObjectEncode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectEncode != null ? retObjectEncode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,9 +232,13 @@ public class WorkflowSymbol extends NetObject  {
     
     public java.lang.String getFileName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFileName = null;
         try {
-            return (java.lang.String)classInstance.Get("FileName");
+            retObjectFileName = classInstance.Get("FileName");
+            return (java.lang.String)retObjectFileName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFileName != null ? retObjectFileName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -226,7 +246,7 @@ public class WorkflowSymbol extends NetObject  {
 
     public void setFileName(java.lang.String FileName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("FileName", FileName);
         } catch (JCNativeException jcne) {

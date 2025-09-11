@@ -160,10 +160,14 @@ public class NamedPipeServerStreamAcl extends NetObject  {
     
     public static NamedPipeServerStream Create(java.lang.String pipeName, PipeDirection direction, int maxNumberOfServerInstances, PipeTransmissionMode transmissionMode, PipeOptions options, int inBufferSize, int outBufferSize, PipeSecurity pipeSecurity, HandleInheritability inheritability, PipeAccessRights additionalAccessRights) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.AccessViolationException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.RankException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", pipeName, direction == null ? null : direction.getJCOInstance(), maxNumberOfServerInstances, transmissionMode == null ? null : transmissionMode.getJCOInstance(), options == null ? null : options.getJCOInstance(), inBufferSize, outBufferSize, pipeSecurity == null ? null : pipeSecurity.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), additionalAccessRights == null ? null : additionalAccessRights.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", pipeName, direction == null ? null : direction.getJCOInstance(), maxNumberOfServerInstances, transmissionMode == null ? null : transmissionMode.getJCOInstance(), options == null ? null : options.getJCOInstance(), inBufferSize, outBufferSize, pipeSecurity == null ? null : pipeSecurity.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), additionalAccessRights == null ? null : additionalAccessRights.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new NamedPipeServerStream(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

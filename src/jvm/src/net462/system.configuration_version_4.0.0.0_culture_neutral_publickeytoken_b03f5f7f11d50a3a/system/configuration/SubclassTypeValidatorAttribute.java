@@ -171,10 +171,14 @@ public class SubclassTypeValidatorAttribute extends ConfigurationValidatorAttrib
     
     public NetType getBaseClass() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseClass = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseClass");
+            retObjectBaseClass = classInstance.Get("BaseClass");
+            JCObject val = (JCObject)retObjectBaseClass;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseClass != null ? retObjectBaseClass.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -142,9 +142,13 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
     
     public boolean EvaluateFilter(java.lang.String filterName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEvaluateFilter = null;
         try {
-            return (boolean)classInstance.Invoke("EvaluateFilter", filterName);
+            retObjectEvaluateFilter = classInstance.Invoke("EvaluateFilter", filterName);
+            return (boolean)retObjectEvaluateFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEvaluateFilter != null ? retObjectEvaluateFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,9 +156,19 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
 
     public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCompareFilters = null;
         try {
-            return (int)classInstance.Invoke("CompareFilters", filter1, filter2);
+            retObjectCompareFilters = classInstance.Invoke("CompareFilters", filter1, filter2);
+            return (int)retObjectCompareFilters;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectCompareFiltersNumber = (java.lang.Number)retObjectCompareFilters;
+                return retObjectCompareFiltersNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectCompareFilters != null ? retObjectCompareFilters.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

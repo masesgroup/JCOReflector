@@ -156,9 +156,13 @@ public class SemaphoreAcl extends NetObject  {
     
     public static boolean TryOpenExisting(java.lang.String name, SemaphoreRights rights, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectTryOpenExisting = null;
         try {
-            return (boolean)classType.Invoke("TryOpenExisting", name, rights == null ? null : rights.getJCOInstance(), result.getJCRefOut());
+            retObjectTryOpenExisting = classType.Invoke("TryOpenExisting", name, rights == null ? null : rights.getJCOInstance(), result.getJCRefOut());
+            return (boolean)retObjectTryOpenExisting;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectTryOpenExisting != null ? retObjectTryOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,10 +170,14 @@ public class SemaphoreAcl extends NetObject  {
 
     public static Semaphore Create(int initialCount, int maximumCount, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, SemaphoreSecurity semaphoreSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreate = null;
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", initialCount, maximumCount, name, createdNew.getJCRefOut(), semaphoreSecurity == null ? null : semaphoreSecurity.getJCOInstance());
+            retObjectCreate = classType.Invoke("Create", initialCount, maximumCount, name, createdNew.getJCRefOut(), semaphoreSecurity == null ? null : semaphoreSecurity.getJCOInstance());
+            JCObject objCreate = (JCObject)retObjectCreate;
             return new Semaphore(objCreate);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreate != null ? retObjectCreate.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,10 +185,14 @@ public class SemaphoreAcl extends NetObject  {
 
     public static Semaphore OpenExisting(java.lang.String name, SemaphoreRights rights) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectOpenExisting = null;
         try {
-            JCObject objOpenExisting = (JCObject)classType.Invoke("OpenExisting", name, rights == null ? null : rights.getJCOInstance());
+            retObjectOpenExisting = classType.Invoke("OpenExisting", name, rights == null ? null : rights.getJCOInstance());
+            JCObject objOpenExisting = (JCObject)retObjectOpenExisting;
             return new Semaphore(objOpenExisting);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpenExisting != null ? retObjectOpenExisting.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

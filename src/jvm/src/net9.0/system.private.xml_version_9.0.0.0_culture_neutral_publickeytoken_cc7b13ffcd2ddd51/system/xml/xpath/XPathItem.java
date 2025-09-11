@@ -157,10 +157,14 @@ public class XPathItem extends NetObject  {
     
     public NetObject ValueAs(NetType returnType, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAs = null;
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            retObjectValueAs = classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            JCObject objValueAs = (JCObject)retObjectValueAs;
             return new NetObject(objValueAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueAs != null ? retObjectValueAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,10 +172,14 @@ public class XPathItem extends NetObject  {
 
     public NetObject ValueAs(NetType returnType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAs = null;
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance());
+            retObjectValueAs = classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance());
+            JCObject objValueAs = (JCObject)retObjectValueAs;
             return new NetObject(objValueAs);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueAs != null ? retObjectValueAs.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,9 +191,13 @@ public class XPathItem extends NetObject  {
     
     public boolean getIsNode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNode = null;
         try {
-            return (boolean)classInstance.Get("IsNode");
+            retObjectIsNode = classInstance.Get("IsNode");
+            return (boolean)retObjectIsNode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNode != null ? retObjectIsNode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,9 +205,13 @@ public class XPathItem extends NetObject  {
 
     public boolean getValueAsBoolean() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAsBoolean = null;
         try {
-            return (boolean)classInstance.Get("ValueAsBoolean");
+            retObjectValueAsBoolean = classInstance.Get("ValueAsBoolean");
+            return (boolean)retObjectValueAsBoolean;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectValueAsBoolean != null ? retObjectValueAsBoolean.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,9 +219,13 @@ public class XPathItem extends NetObject  {
 
     public double getValueAsDouble() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAsDouble = null;
         try {
-            return (double)classInstance.Get("ValueAsDouble");
+            retObjectValueAsDouble = classInstance.Get("ValueAsDouble");
+            return (double)retObjectValueAsDouble;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectValueAsDouble != null ? retObjectValueAsDouble.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,9 +233,13 @@ public class XPathItem extends NetObject  {
 
     public int getValueAsInt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAsInt = null;
         try {
-            return (int)classInstance.Get("ValueAsInt");
+            retObjectValueAsInt = classInstance.Get("ValueAsInt");
+            return (int)retObjectValueAsInt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectValueAsInt != null ? retObjectValueAsInt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,9 +247,13 @@ public class XPathItem extends NetObject  {
 
     public long getValueAsLong() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAsLong = null;
         try {
-            return (long)classInstance.Get("ValueAsLong");
+            retObjectValueAsLong = classInstance.Get("ValueAsLong");
+            return (long)retObjectValueAsLong;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into long", retObjectValueAsLong != null ? retObjectValueAsLong.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,10 +261,14 @@ public class XPathItem extends NetObject  {
 
     public DateTime getValueAsDateTime() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueAsDateTime = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueAsDateTime");
+            retObjectValueAsDateTime = classInstance.Get("ValueAsDateTime");
+            JCObject val = (JCObject)retObjectValueAsDateTime;
             return new DateTime(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueAsDateTime != null ? retObjectValueAsDateTime.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,10 +276,14 @@ public class XPathItem extends NetObject  {
 
     public NetObject getTypedValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTypedValue = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("TypedValue");
+            retObjectTypedValue = classInstance.Get("TypedValue");
+            JCObject val = (JCObject)retObjectTypedValue;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTypedValue != null ? retObjectTypedValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,9 +291,13 @@ public class XPathItem extends NetObject  {
 
     public java.lang.String getValue() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValue = null;
         try {
-            return (java.lang.String)classInstance.Get("Value");
+            retObjectValue = classInstance.Get("Value");
+            return (java.lang.String)retObjectValue;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectValue != null ? retObjectValue.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,10 +305,14 @@ public class XPathItem extends NetObject  {
 
     public NetType getValueType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectValueType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ValueType");
+            retObjectValueType = classInstance.Get("ValueType");
+            JCObject val = (JCObject)retObjectValueType;
             return new NetType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectValueType != null ? retObjectValueType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,10 +320,14 @@ public class XPathItem extends NetObject  {
 
     public XmlSchemaType getXmlType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlType");
+            retObjectXmlType = classInstance.Get("XmlType");
+            JCObject val = (JCObject)retObjectXmlType;
             return new XmlSchemaType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlType != null ? retObjectXmlType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

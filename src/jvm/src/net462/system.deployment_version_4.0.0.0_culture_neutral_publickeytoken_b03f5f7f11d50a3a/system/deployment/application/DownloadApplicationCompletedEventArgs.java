@@ -160,9 +160,13 @@ public class DownloadApplicationCompletedEventArgs extends AsyncCompletedEventAr
     
     public java.lang.String getLogFilePath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLogFilePath = null;
         try {
-            return (java.lang.String)classInstance.Get("LogFilePath");
+            retObjectLogFilePath = classInstance.Get("LogFilePath");
+            return (java.lang.String)retObjectLogFilePath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLogFilePath != null ? retObjectLogFilePath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,9 +174,13 @@ public class DownloadApplicationCompletedEventArgs extends AsyncCompletedEventAr
 
     public java.lang.String getShortcutAppId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShortcutAppId = null;
         try {
-            return (java.lang.String)classInstance.Get("ShortcutAppId");
+            retObjectShortcutAppId = classInstance.Get("ShortcutAppId");
+            return (java.lang.String)retObjectShortcutAppId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectShortcutAppId != null ? retObjectShortcutAppId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

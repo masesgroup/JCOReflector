@@ -163,10 +163,14 @@ public class WorkflowInstanceProxy extends NetObject  {
     
     public BookmarkResumptionResult EndResumeBookmark(IAsyncResult result) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEndResumeBookmark = null;
         try {
-            JCObject objEndResumeBookmark = (JCObject)classInstance.Invoke("EndResumeBookmark", result == null ? null : result.getJCOInstance());
+            retObjectEndResumeBookmark = classInstance.Invoke("EndResumeBookmark", result == null ? null : result.getJCOInstance());
+            JCObject objEndResumeBookmark = (JCObject)retObjectEndResumeBookmark;
             return new BookmarkResumptionResult(objEndResumeBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEndResumeBookmark != null ? retObjectEndResumeBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,10 +178,14 @@ public class WorkflowInstanceProxy extends NetObject  {
 
     public IAsyncResult BeginResumeBookmark(Bookmark bookmark, NetObject value, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginResumeBookmark = null;
         try {
-            JCObject objBeginResumeBookmark = (JCObject)classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginResumeBookmark = classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginResumeBookmark = (JCObject)retObjectBeginResumeBookmark;
             return new IAsyncResultImplementation(objBeginResumeBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResumeBookmark != null ? retObjectBeginResumeBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,10 +193,14 @@ public class WorkflowInstanceProxy extends NetObject  {
 
     public IAsyncResult BeginResumeBookmark(Bookmark bookmark, NetObject value, TimeSpan timeout, AsyncCallback callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBeginResumeBookmark = null;
         try {
-            JCObject objBeginResumeBookmark = (JCObject)classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            retObjectBeginResumeBookmark = classInstance.Invoke("BeginResumeBookmark", bookmark == null ? null : bookmark.getJCOInstance(), value == null ? null : value.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            JCObject objBeginResumeBookmark = (JCObject)retObjectBeginResumeBookmark;
             return new IAsyncResultImplementation(objBeginResumeBookmark);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBeginResumeBookmark != null ? retObjectBeginResumeBookmark.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,10 +212,14 @@ public class WorkflowInstanceProxy extends NetObject  {
     
     public Activity getWorkflowDefinition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWorkflowDefinition = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WorkflowDefinition");
+            retObjectWorkflowDefinition = classInstance.Get("WorkflowDefinition");
+            JCObject val = (JCObject)retObjectWorkflowDefinition;
             return new Activity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWorkflowDefinition != null ? retObjectWorkflowDefinition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,10 +227,14 @@ public class WorkflowInstanceProxy extends NetObject  {
 
     public Guid getId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Id");
+            retObjectId = classInstance.Get("Id");
+            JCObject val = (JCObject)retObjectId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectId != null ? retObjectId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

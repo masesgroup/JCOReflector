@@ -163,10 +163,14 @@ public class LateBoundBitmapDecoder extends BitmapDecoder  {
     
     public BitmapDecoder getDecoder() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.UriFormatException, system.componentmodel.Win32Exception, system.io.IOException, system.net.WebException, system.net.CookieException, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDecoder = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Decoder");
+            retObjectDecoder = classInstance.Get("Decoder");
+            JCObject val = (JCObject)retObjectDecoder;
             return new BitmapDecoder(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDecoder != null ? retObjectDecoder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

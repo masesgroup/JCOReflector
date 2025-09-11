@@ -169,9 +169,13 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
     
     public boolean Matches(SecurityKeyIdentifierClause keyIdentifierClause) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", keyIdentifierClause == null ? null : keyIdentifierClause.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,9 +183,13 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public boolean Matches(RSA rsa) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatches = null;
         try {
-            return (boolean)classInstance.Invoke("Matches", rsa == null ? null : rsa.getJCOInstance());
+            retObjectMatches = classInstance.Invoke("Matches", rsa == null ? null : rsa.getJCOInstance());
+            return (boolean)retObjectMatches;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectMatches != null ? retObjectMatches.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,10 +197,12 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public byte[] GetExponent() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExponent = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExponent");
+            retObjectGetExponent = classInstance.Invoke("GetExponent");
+            JCObject resultingObjects = (JCObject)retObjectGetExponent;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -201,6 +211,8 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 				resultingArray[indexGetExponent] = (byte)resultingArrayList.get(indexGetExponent);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetExponent != null ? retObjectGetExponent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,10 +220,12 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public byte[] GetModulus() throws Throwable, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetModulus = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModulus");
+            retObjectGetModulus = classInstance.Invoke("GetModulus");
+            JCObject resultingObjects = (JCObject)retObjectGetModulus;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -220,6 +234,8 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 				resultingArray[indexGetModulus] = (byte)resultingArrayList.get(indexGetModulus);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetModulus != null ? retObjectGetModulus.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,10 +243,14 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public SecurityKey CreateKey() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateKey = null;
         try {
-            JCObject objCreateKey = (JCObject)classInstance.Invoke("CreateKey");
+            retObjectCreateKey = classInstance.Invoke("CreateKey");
+            JCObject objCreateKey = (JCObject)retObjectCreateKey;
             return new SecurityKey(objCreateKey);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateKey != null ? retObjectCreateKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +258,7 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public void WriteExponentAsBase64(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteExponentAsBase64", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -248,7 +268,7 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
 
     public void WriteModulusAsBase64(XmlWriter writer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteModulusAsBase64", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +282,14 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
     
     public RSA getRsa() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRsa = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Rsa");
+            retObjectRsa = classInstance.Get("Rsa");
+            JCObject val = (JCObject)retObjectRsa;
             return new RSA(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRsa != null ? retObjectRsa.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

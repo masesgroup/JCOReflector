@@ -168,9 +168,13 @@ public class EnumerationOptions extends NetObject  {
     
     public boolean getIgnoreInaccessible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIgnoreInaccessible = null;
         try {
-            return (boolean)classInstance.Get("IgnoreInaccessible");
+            retObjectIgnoreInaccessible = classInstance.Get("IgnoreInaccessible");
+            return (boolean)retObjectIgnoreInaccessible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIgnoreInaccessible != null ? retObjectIgnoreInaccessible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +182,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setIgnoreInaccessible(boolean IgnoreInaccessible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IgnoreInaccessible", IgnoreInaccessible);
         } catch (JCNativeException jcne) {
@@ -188,9 +192,13 @@ public class EnumerationOptions extends NetObject  {
 
     public boolean getRecurseSubdirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRecurseSubdirectories = null;
         try {
-            return (boolean)classInstance.Get("RecurseSubdirectories");
+            retObjectRecurseSubdirectories = classInstance.Get("RecurseSubdirectories");
+            return (boolean)retObjectRecurseSubdirectories;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRecurseSubdirectories != null ? retObjectRecurseSubdirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +206,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setRecurseSubdirectories(boolean RecurseSubdirectories) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RecurseSubdirectories", RecurseSubdirectories);
         } catch (JCNativeException jcne) {
@@ -208,9 +216,13 @@ public class EnumerationOptions extends NetObject  {
 
     public boolean getReturnSpecialDirectories() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReturnSpecialDirectories = null;
         try {
-            return (boolean)classInstance.Get("ReturnSpecialDirectories");
+            retObjectReturnSpecialDirectories = classInstance.Get("ReturnSpecialDirectories");
+            return (boolean)retObjectReturnSpecialDirectories;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectReturnSpecialDirectories != null ? retObjectReturnSpecialDirectories.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setReturnSpecialDirectories(boolean ReturnSpecialDirectories) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ReturnSpecialDirectories", ReturnSpecialDirectories);
         } catch (JCNativeException jcne) {
@@ -228,9 +240,13 @@ public class EnumerationOptions extends NetObject  {
 
     public int getBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBufferSize = null;
         try {
-            return (int)classInstance.Get("BufferSize");
+            retObjectBufferSize = classInstance.Get("BufferSize");
+            return (int)retObjectBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBufferSize != null ? retObjectBufferSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -238,7 +254,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setBufferSize(int BufferSize) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BufferSize", BufferSize);
         } catch (JCNativeException jcne) {
@@ -248,9 +264,13 @@ public class EnumerationOptions extends NetObject  {
 
     public int getMaxRecursionDepth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxRecursionDepth = null;
         try {
-            return (int)classInstance.Get("MaxRecursionDepth");
+            retObjectMaxRecursionDepth = classInstance.Get("MaxRecursionDepth");
+            return (int)retObjectMaxRecursionDepth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxRecursionDepth != null ? retObjectMaxRecursionDepth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +278,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setMaxRecursionDepth(int MaxRecursionDepth) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxRecursionDepth", MaxRecursionDepth);
         } catch (JCNativeException jcne) {
@@ -268,10 +288,14 @@ public class EnumerationOptions extends NetObject  {
 
     public FileAttributes getAttributesToSkip() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAttributesToSkip = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("AttributesToSkip");
+            retObjectAttributesToSkip = classInstance.Get("AttributesToSkip");
+            JCObject val = (JCObject)retObjectAttributesToSkip;
             return new FileAttributes(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAttributesToSkip != null ? retObjectAttributesToSkip.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,7 +303,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setAttributesToSkip(FileAttributes AttributesToSkip) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AttributesToSkip", AttributesToSkip == null ? null : AttributesToSkip.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -289,10 +313,14 @@ public class EnumerationOptions extends NetObject  {
 
     public MatchCasing getMatchCasing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchCasing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchCasing");
+            retObjectMatchCasing = classInstance.Get("MatchCasing");
+            JCObject val = (JCObject)retObjectMatchCasing;
             return new MatchCasing(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchCasing != null ? retObjectMatchCasing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +328,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setMatchCasing(MatchCasing MatchCasing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchCasing", MatchCasing == null ? null : MatchCasing.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -310,10 +338,14 @@ public class EnumerationOptions extends NetObject  {
 
     public MatchType getMatchType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMatchType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("MatchType");
+            retObjectMatchType = classInstance.Get("MatchType");
+            JCObject val = (JCObject)retObjectMatchType;
             return new MatchType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMatchType != null ? retObjectMatchType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -321,7 +353,7 @@ public class EnumerationOptions extends NetObject  {
 
     public void setMatchType(MatchType MatchType) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MatchType", MatchType == null ? null : MatchType.getJCOInstance());
         } catch (JCNativeException jcne) {

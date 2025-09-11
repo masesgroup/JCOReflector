@@ -166,10 +166,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
     
     public static SerializationSectionGroup GetSectionGroup(Configuration config) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.TypeLoadException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetSectionGroup = null;
         try {
-            JCObject objGetSectionGroup = (JCObject)classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            retObjectGetSectionGroup = classType.Invoke("GetSectionGroup", config == null ? null : config.getJCOInstance());
+            JCObject objGetSectionGroup = (JCObject)retObjectGetSectionGroup;
             return new SerializationSectionGroup(objGetSectionGroup);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetSectionGroup != null ? retObjectGetSectionGroup.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,10 +185,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
     
     public DataContractSerializerSection getDataContractSerializer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDataContractSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DataContractSerializer");
+            retObjectDataContractSerializer = classInstance.Get("DataContractSerializer");
+            JCObject val = (JCObject)retObjectDataContractSerializer;
             return new DataContractSerializerSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDataContractSerializer != null ? retObjectDataContractSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,10 +200,14 @@ public class SerializationSectionGroup extends ConfigurationSectionGroup  {
 
     public NetDataContractSerializerSection getNetDataContractSerializer() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNetDataContractSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("NetDataContractSerializer");
+            retObjectNetDataContractSerializer = classInstance.Get("NetDataContractSerializer");
+            JCObject val = (JCObject)retObjectNetDataContractSerializer;
             return new NetDataContractSerializerSection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNetDataContractSerializer != null ? retObjectNetDataContractSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

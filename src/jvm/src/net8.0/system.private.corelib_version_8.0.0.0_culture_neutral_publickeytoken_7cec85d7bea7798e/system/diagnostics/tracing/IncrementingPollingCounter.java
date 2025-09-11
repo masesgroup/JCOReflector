@@ -162,10 +162,14 @@ public class IncrementingPollingCounter extends DiagnosticCounter  {
     
     public TimeSpan getDisplayRateTimeScale() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDisplayRateTimeScale = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DisplayRateTimeScale");
+            retObjectDisplayRateTimeScale = classInstance.Get("DisplayRateTimeScale");
+            JCObject val = (JCObject)retObjectDisplayRateTimeScale;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDisplayRateTimeScale != null ? retObjectDisplayRateTimeScale.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,7 +177,7 @@ public class IncrementingPollingCounter extends DiagnosticCounter  {
 
     public void setDisplayRateTimeScale(TimeSpan DisplayRateTimeScale) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DisplayRateTimeScale", DisplayRateTimeScale == null ? null : DisplayRateTimeScale.getJCOInstance());
         } catch (JCNativeException jcne) {

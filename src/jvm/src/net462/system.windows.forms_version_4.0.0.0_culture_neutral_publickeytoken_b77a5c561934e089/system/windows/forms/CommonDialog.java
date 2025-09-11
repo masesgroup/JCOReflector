@@ -158,10 +158,14 @@ public class CommonDialog extends Component  {
     
     public DialogResult ShowDialog() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog");
+            retObjectShowDialog = classInstance.Invoke("ShowDialog");
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new DialogResult(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class CommonDialog extends Component  {
 
     public DialogResult ShowDialog(IWin32Window owner) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.AccessViolationException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.RankException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowDialog = null;
         try {
-            JCObject objShowDialog = (JCObject)classInstance.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance());
+            retObjectShowDialog = classInstance.Invoke("ShowDialog", owner == null ? null : owner.getJCOInstance());
+            JCObject objShowDialog = (JCObject)retObjectShowDialog;
             return new DialogResult(objShowDialog);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectShowDialog != null ? retObjectShowDialog.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +188,7 @@ public class CommonDialog extends Component  {
 
     public void Reset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Reset");
         } catch (JCNativeException jcne) {
@@ -194,10 +202,14 @@ public class CommonDialog extends Component  {
     
     public NetObject getTag() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTag = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tag");
+            retObjectTag = classInstance.Get("Tag");
+            JCObject val = (JCObject)retObjectTag;
             return new NetObject(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTag != null ? retObjectTag.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,7 +217,7 @@ public class CommonDialog extends Component  {
 
     public void setTag(NetObject Tag) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tag", Tag == null ? null : Tag.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -220,7 +232,7 @@ public class CommonDialog extends Component  {
 
     public void addHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {
@@ -230,7 +242,7 @@ public class CommonDialog extends Component  {
 
     public void removeHelpRequest(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequest", handler);
         } catch (JCNativeException jcne) {

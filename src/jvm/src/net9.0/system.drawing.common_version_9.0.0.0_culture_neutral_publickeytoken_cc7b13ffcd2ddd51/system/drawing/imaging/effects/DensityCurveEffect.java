@@ -171,9 +171,13 @@ public class DensityCurveEffect extends ColorCurveEffect  {
     
     public int getDensity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDensity = null;
         try {
-            return (int)classInstance.Get("Density");
+            retObjectDensity = classInstance.Get("Density");
+            return (int)retObjectDensity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectDensity != null ? retObjectDensity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

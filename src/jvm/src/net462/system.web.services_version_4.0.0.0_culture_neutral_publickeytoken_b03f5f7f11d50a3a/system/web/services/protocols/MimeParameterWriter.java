@@ -157,9 +157,13 @@ public class MimeParameterWriter extends MimeFormatter  {
     
     public java.lang.String GetRequestUrl(java.lang.String url, NetObject[] parameters) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetRequestUrl = null;
         try {
-            return (java.lang.String)classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
+            retObjectGetRequestUrl = classInstance.Invoke("GetRequestUrl", url, toObjectFromArray(parameters));
+            return (java.lang.String)retObjectGetRequestUrl;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into java.lang.String", retObjectGetRequestUrl != null ? retObjectGetRequestUrl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +171,7 @@ public class MimeParameterWriter extends MimeFormatter  {
 
     public void InitializeRequest(WebRequest request, NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("InitializeRequest", request == null ? null : request.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -177,7 +181,7 @@ public class MimeParameterWriter extends MimeFormatter  {
 
     public void WriteRequest(Stream requestStream, NetObject[] values) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteRequest", requestStream == null ? null : requestStream.getJCOInstance(), toObjectFromArray(values));
         } catch (JCNativeException jcne) {
@@ -191,9 +195,13 @@ public class MimeParameterWriter extends MimeFormatter  {
     
     public boolean getUsesWriteRequest() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesWriteRequest = null;
         try {
-            return (boolean)classInstance.Get("UsesWriteRequest");
+            retObjectUsesWriteRequest = classInstance.Get("UsesWriteRequest");
+            return (boolean)retObjectUsesWriteRequest;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesWriteRequest != null ? retObjectUsesWriteRequest.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,10 +209,14 @@ public class MimeParameterWriter extends MimeFormatter  {
 
     public Encoding getRequestEncoding() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequestEncoding = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestEncoding");
+            retObjectRequestEncoding = classInstance.Get("RequestEncoding");
+            JCObject val = (JCObject)retObjectRequestEncoding;
             return new Encoding(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRequestEncoding != null ? retObjectRequestEncoding.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,7 +224,7 @@ public class MimeParameterWriter extends MimeFormatter  {
 
     public void setRequestEncoding(Encoding RequestEncoding) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RequestEncoding", RequestEncoding == null ? null : RequestEncoding.getJCOInstance());
         } catch (JCNativeException jcne) {

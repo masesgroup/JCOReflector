@@ -159,9 +159,13 @@ public class StreamPipeWriterOptions extends NetObject  {
     
     public boolean getLeaveOpen() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeaveOpen = null;
         try {
-            return (boolean)classInstance.Get("LeaveOpen");
+            retObjectLeaveOpen = classInstance.Get("LeaveOpen");
+            return (boolean)retObjectLeaveOpen;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectLeaveOpen != null ? retObjectLeaveOpen.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,9 +173,13 @@ public class StreamPipeWriterOptions extends NetObject  {
 
     public int getMinimumBufferSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinimumBufferSize = null;
         try {
-            return (int)classInstance.Get("MinimumBufferSize");
+            retObjectMinimumBufferSize = classInstance.Get("MinimumBufferSize");
+            return (int)retObjectMinimumBufferSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinimumBufferSize != null ? retObjectMinimumBufferSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

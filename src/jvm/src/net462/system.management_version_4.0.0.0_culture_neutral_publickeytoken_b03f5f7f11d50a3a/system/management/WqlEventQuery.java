@@ -234,10 +234,14 @@ public class WqlEventQuery extends EventQuery  {
     
     public NetObject Clone() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectClone = null;
         try {
-            JCObject objClone = (JCObject)classInstance.Invoke("Clone");
+            retObjectClone = classInstance.Invoke("Clone");
+            JCObject objClone = (JCObject)retObjectClone;
             return new NetObject(objClone);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectClone != null ? retObjectClone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,10 +253,14 @@ public class WqlEventQuery extends EventQuery  {
     
     public StringCollection getGroupByPropertyList() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupByPropertyList = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GroupByPropertyList");
+            retObjectGroupByPropertyList = classInstance.Get("GroupByPropertyList");
+            JCObject val = (JCObject)retObjectGroupByPropertyList;
             return new StringCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupByPropertyList != null ? retObjectGroupByPropertyList.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +268,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setGroupByPropertyList(StringCollection GroupByPropertyList) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupByPropertyList", GroupByPropertyList == null ? null : GroupByPropertyList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,9 +278,13 @@ public class WqlEventQuery extends EventQuery  {
 
     public java.lang.String getCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCondition = null;
         try {
-            return (java.lang.String)classInstance.Get("Condition");
+            retObjectCondition = classInstance.Get("Condition");
+            return (java.lang.String)retObjectCondition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectCondition != null ? retObjectCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -280,7 +292,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setCondition(java.lang.String Condition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Condition", Condition);
         } catch (JCNativeException jcne) {
@@ -290,9 +302,13 @@ public class WqlEventQuery extends EventQuery  {
 
     public java.lang.String getEventClassName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventClassName = null;
         try {
-            return (java.lang.String)classInstance.Get("EventClassName");
+            retObjectEventClassName = classInstance.Get("EventClassName");
+            return (java.lang.String)retObjectEventClassName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectEventClassName != null ? retObjectEventClassName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -300,7 +316,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setEventClassName(java.lang.String EventClassName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EventClassName", EventClassName);
         } catch (JCNativeException jcne) {
@@ -310,9 +326,13 @@ public class WqlEventQuery extends EventQuery  {
 
     public java.lang.String getHavingCondition() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHavingCondition = null;
         try {
-            return (java.lang.String)classInstance.Get("HavingCondition");
+            retObjectHavingCondition = classInstance.Get("HavingCondition");
+            return (java.lang.String)retObjectHavingCondition;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectHavingCondition != null ? retObjectHavingCondition.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +340,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setHavingCondition(java.lang.String HavingCondition) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("HavingCondition", HavingCondition);
         } catch (JCNativeException jcne) {
@@ -330,10 +350,14 @@ public class WqlEventQuery extends EventQuery  {
 
     public TimeSpan getGroupWithinInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGroupWithinInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("GroupWithinInterval");
+            retObjectGroupWithinInterval = classInstance.Get("GroupWithinInterval");
+            JCObject val = (JCObject)retObjectGroupWithinInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGroupWithinInterval != null ? retObjectGroupWithinInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -341,7 +365,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setGroupWithinInterval(TimeSpan GroupWithinInterval) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("GroupWithinInterval", GroupWithinInterval == null ? null : GroupWithinInterval.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -351,10 +375,14 @@ public class WqlEventQuery extends EventQuery  {
 
     public TimeSpan getWithinInterval() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWithinInterval = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("WithinInterval");
+            retObjectWithinInterval = classInstance.Get("WithinInterval");
+            JCObject val = (JCObject)retObjectWithinInterval;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectWithinInterval != null ? retObjectWithinInterval.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,7 +390,7 @@ public class WqlEventQuery extends EventQuery  {
 
     public void setWithinInterval(TimeSpan WithinInterval) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WithinInterval", WithinInterval == null ? null : WithinInterval.getJCOInstance());
         } catch (JCNativeException jcne) {

@@ -170,7 +170,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
     
     public void Commit() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.windows.xps.XpsSerializationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit");
         } catch (JCNativeException jcne) {
@@ -180,7 +180,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void SaveAsXaml(NetObject serializedObject) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.windows.xps.XpsSerializationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.NotImplementedException, system.UriFormatException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SaveAsXaml", serializedObject == null ? null : serializedObject.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -190,7 +190,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void SetFontSubsettingCountPolicy(int countPolicy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontSubsettingCountPolicy", countPolicy);
         } catch (JCNativeException jcne) {
@@ -200,7 +200,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void SetFontSubsettingPolicy(FontSubsetterCommitPolicies policy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetFontSubsettingPolicy", policy == null ? null : policy.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -214,9 +214,13 @@ public class XpsSerializationManager extends PackageSerializationManager  {
     
     public boolean getIsBatchMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsBatchMode = null;
         try {
-            return (boolean)classInstance.Get("IsBatchMode");
+            retObjectIsBatchMode = classInstance.Get("IsBatchMode");
+            return (boolean)retObjectIsBatchMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsBatchMode != null ? retObjectIsBatchMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +233,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void addXpsSerializationPrintTicketRequired(XpsSerializationPrintTicketRequiredEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("XpsSerializationPrintTicketRequired", handler);
         } catch (JCNativeException jcne) {
@@ -239,7 +243,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void removeXpsSerializationPrintTicketRequired(XpsSerializationPrintTicketRequiredEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("XpsSerializationPrintTicketRequired", handler);
         } catch (JCNativeException jcne) {
@@ -249,7 +253,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void addXpsSerializationProgressChanged(XpsSerializationProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("XpsSerializationProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -259,7 +263,7 @@ public class XpsSerializationManager extends PackageSerializationManager  {
 
     public void removeXpsSerializationProgressChanged(XpsSerializationProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("XpsSerializationProgressChanged", handler);
         } catch (JCNativeException jcne) {

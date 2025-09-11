@@ -158,9 +158,13 @@ public class ActivityChangeAction extends WorkflowChangeAction  {
     
     public java.lang.String getOwnerActivityDottedPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOwnerActivityDottedPath = null;
         try {
-            return (java.lang.String)classInstance.Get("OwnerActivityDottedPath");
+            retObjectOwnerActivityDottedPath = classInstance.Get("OwnerActivityDottedPath");
+            return (java.lang.String)retObjectOwnerActivityDottedPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectOwnerActivityDottedPath != null ? retObjectOwnerActivityDottedPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +172,7 @@ public class ActivityChangeAction extends WorkflowChangeAction  {
 
     public void setOwnerActivityDottedPath(java.lang.String OwnerActivityDottedPath) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("OwnerActivityDottedPath", OwnerActivityDottedPath);
         } catch (JCNativeException jcne) {

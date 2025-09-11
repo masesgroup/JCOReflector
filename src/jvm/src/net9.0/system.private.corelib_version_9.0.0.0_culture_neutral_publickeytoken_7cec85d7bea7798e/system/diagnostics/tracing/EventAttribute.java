@@ -177,9 +177,13 @@ public class EventAttribute extends Attribute  {
     
     public byte getVersion() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVersion = null;
         try {
-            return (byte)classInstance.Get("Version");
+            retObjectVersion = classInstance.Get("Version");
+            return (byte)retObjectVersion;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectVersion != null ? retObjectVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +191,7 @@ public class EventAttribute extends Attribute  {
 
     public void setVersion(byte Version) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Version", Version);
         } catch (JCNativeException jcne) {
@@ -197,9 +201,13 @@ public class EventAttribute extends Attribute  {
 
     public int getEventId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEventId = null;
         try {
-            return (int)classInstance.Get("EventId");
+            retObjectEventId = classInstance.Get("EventId");
+            return (int)retObjectEventId;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectEventId != null ? retObjectEventId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,10 +215,14 @@ public class EventAttribute extends Attribute  {
 
     public EventActivityOptions getActivityOptions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectActivityOptions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ActivityOptions");
+            retObjectActivityOptions = classInstance.Get("ActivityOptions");
+            JCObject val = (JCObject)retObjectActivityOptions;
             return new EventActivityOptions(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectActivityOptions != null ? retObjectActivityOptions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class EventAttribute extends Attribute  {
 
     public void setActivityOptions(EventActivityOptions ActivityOptions) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ActivityOptions", ActivityOptions == null ? null : ActivityOptions.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -228,10 +240,14 @@ public class EventAttribute extends Attribute  {
 
     public EventChannel getChannel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChannel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Channel");
+            retObjectChannel = classInstance.Get("Channel");
+            JCObject val = (JCObject)retObjectChannel;
             return new EventChannel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectChannel != null ? retObjectChannel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,7 +255,7 @@ public class EventAttribute extends Attribute  {
 
     public void setChannel(EventChannel Channel) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Channel", Channel == null ? null : Channel.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -249,10 +265,14 @@ public class EventAttribute extends Attribute  {
 
     public EventKeywords getKeywords() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeywords = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Keywords");
+            retObjectKeywords = classInstance.Get("Keywords");
+            JCObject val = (JCObject)retObjectKeywords;
             return new EventKeywords(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectKeywords != null ? retObjectKeywords.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +280,7 @@ public class EventAttribute extends Attribute  {
 
     public void setKeywords(EventKeywords Keywords) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Keywords", Keywords == null ? null : Keywords.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -270,10 +290,14 @@ public class EventAttribute extends Attribute  {
 
     public EventLevel getLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLevel = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Level");
+            retObjectLevel = classInstance.Get("Level");
+            JCObject val = (JCObject)retObjectLevel;
             return new EventLevel(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLevel != null ? retObjectLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +305,7 @@ public class EventAttribute extends Attribute  {
 
     public void setLevel(EventLevel Level) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Level", Level == null ? null : Level.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -291,10 +315,14 @@ public class EventAttribute extends Attribute  {
 
     public EventOpcode getOpcode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOpcode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Opcode");
+            retObjectOpcode = classInstance.Get("Opcode");
+            JCObject val = (JCObject)retObjectOpcode;
             return new EventOpcode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOpcode != null ? retObjectOpcode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,7 +330,7 @@ public class EventAttribute extends Attribute  {
 
     public void setOpcode(EventOpcode Opcode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Opcode", Opcode == null ? null : Opcode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -312,10 +340,14 @@ public class EventAttribute extends Attribute  {
 
     public EventTags getTags() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTags = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Tags");
+            retObjectTags = classInstance.Get("Tags");
+            JCObject val = (JCObject)retObjectTags;
             return new EventTags(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTags != null ? retObjectTags.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,7 +355,7 @@ public class EventAttribute extends Attribute  {
 
     public void setTags(EventTags Tags) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Tags", Tags == null ? null : Tags.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -333,10 +365,14 @@ public class EventAttribute extends Attribute  {
 
     public EventTask getTask() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTask = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Task");
+            retObjectTask = classInstance.Get("Task");
+            JCObject val = (JCObject)retObjectTask;
             return new EventTask(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTask != null ? retObjectTask.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +380,7 @@ public class EventAttribute extends Attribute  {
 
     public void setTask(EventTask Task) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Task", Task == null ? null : Task.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -354,9 +390,13 @@ public class EventAttribute extends Attribute  {
 
     public java.lang.String getMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("Message");
+            retObjectMessage = classInstance.Get("Message");
+            return (java.lang.String)retObjectMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectMessage != null ? retObjectMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +404,7 @@ public class EventAttribute extends Attribute  {
 
     public void setMessage(java.lang.String Message) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Message", Message);
         } catch (JCNativeException jcne) {

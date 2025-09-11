@@ -205,7 +205,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     
     public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -219,10 +219,14 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     
     public Guid getConflictingInstanceId() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectConflictingInstanceId = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ConflictingInstanceId");
+            retObjectConflictingInstanceId = classInstance.Get("ConflictingInstanceId");
+            JCObject val = (JCObject)retObjectConflictingInstanceId;
             return new Guid(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectConflictingInstanceId != null ? retObjectConflictingInstanceId.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +234,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
 
     public void setConflictingInstanceId(Guid ConflictingInstanceId) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ConflictingInstanceId", ConflictingInstanceId == null ? null : ConflictingInstanceId.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -240,10 +244,14 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
 
     public InstanceKey getInstanceKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInstanceKey = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InstanceKey");
+            retObjectInstanceKey = classInstance.Get("InstanceKey");
+            JCObject val = (JCObject)retObjectInstanceKey;
             return new InstanceKey(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInstanceKey != null ? retObjectInstanceKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,7 +259,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
 
     public void setInstanceKey(InstanceKey InstanceKey) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InstanceKey", InstanceKey == null ? null : InstanceKey.getJCOInstance());
         } catch (JCNativeException jcne) {

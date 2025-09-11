@@ -167,9 +167,19 @@ public class BrotliEncoder extends ValueType implements AutoCloseable {
     
     public static int GetMaxCompressedLength(int inputSize) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetMaxCompressedLength = null;
         try {
-            return (int)classType.Invoke("GetMaxCompressedLength", inputSize);
+            retObjectGetMaxCompressedLength = classType.Invoke("GetMaxCompressedLength", inputSize);
+            return (int)retObjectGetMaxCompressedLength;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetMaxCompressedLengthNumber = (java.lang.Number)retObjectGetMaxCompressedLength;
+                return retObjectGetMaxCompressedLengthNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetMaxCompressedLength != null ? retObjectGetMaxCompressedLength.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,7 +187,7 @@ public class BrotliEncoder extends ValueType implements AutoCloseable {
 
     public void Dispose() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Dispose");
         } catch (JCNativeException jcne) {
@@ -188,7 +198,7 @@ public class BrotliEncoder extends ValueType implements AutoCloseable {
     public void close() throws Exception {
         try {
             if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
+                throw new java.lang.UnsupportedOperationException("classInstance is null.");
             try {
                 classInstance.Invoke("Dispose");
             }

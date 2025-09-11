@@ -169,9 +169,13 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
     
     public boolean getShowCheckMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowCheckMargin = null;
         try {
-            return (boolean)classInstance.Get("ShowCheckMargin");
+            retObjectShowCheckMargin = classInstance.Get("ShowCheckMargin");
+            return (boolean)retObjectShowCheckMargin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowCheckMargin != null ? retObjectShowCheckMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
 
     public void setShowCheckMargin(boolean ShowCheckMargin) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowCheckMargin", ShowCheckMargin);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
 
     public boolean getShowImageMargin() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowImageMargin = null;
         try {
-            return (boolean)classInstance.Get("ShowImageMargin");
+            retObjectShowImageMargin = classInstance.Get("ShowImageMargin");
+            return (boolean)retObjectShowImageMargin;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowImageMargin != null ? retObjectShowImageMargin.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
 
     public void setShowImageMargin(boolean ShowImageMargin) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowImageMargin", ShowImageMargin);
         } catch (JCNativeException jcne) {
@@ -209,10 +217,14 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
 
     public ToolStripLayoutStyle getLayoutStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLayoutStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LayoutStyle");
+            retObjectLayoutStyle = classInstance.Get("LayoutStyle");
+            JCObject val = (JCObject)retObjectLayoutStyle;
             return new ToolStripLayoutStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLayoutStyle != null ? retObjectLayoutStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +232,7 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
 
     public void setLayoutStyle(ToolStripLayoutStyle LayoutStyle) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LayoutStyle", LayoutStyle == null ? null : LayoutStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

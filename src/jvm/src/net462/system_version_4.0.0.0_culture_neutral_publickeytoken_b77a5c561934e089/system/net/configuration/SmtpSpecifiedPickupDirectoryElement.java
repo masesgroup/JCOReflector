@@ -166,9 +166,13 @@ public class SmtpSpecifiedPickupDirectoryElement extends ConfigurationElement  {
     
     public java.lang.String getPickupDirectoryLocation() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPickupDirectoryLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("PickupDirectoryLocation");
+            retObjectPickupDirectoryLocation = classInstance.Get("PickupDirectoryLocation");
+            return (java.lang.String)retObjectPickupDirectoryLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectPickupDirectoryLocation != null ? retObjectPickupDirectoryLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class SmtpSpecifiedPickupDirectoryElement extends ConfigurationElement  {
 
     public void setPickupDirectoryLocation(java.lang.String PickupDirectoryLocation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PickupDirectoryLocation", PickupDirectoryLocation);
         } catch (JCNativeException jcne) {

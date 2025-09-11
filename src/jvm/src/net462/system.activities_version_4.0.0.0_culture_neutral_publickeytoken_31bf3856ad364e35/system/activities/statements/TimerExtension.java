@@ -155,7 +155,7 @@ public class TimerExtension extends NetObject  {
     
     public void CancelTimer(Bookmark bookmark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelTimer", bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -165,7 +165,7 @@ public class TimerExtension extends NetObject  {
 
     public void RegisterTimer(TimeSpan timeout, Bookmark bookmark) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterTimer", timeout == null ? null : timeout.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance());
         } catch (JCNativeException jcne) {

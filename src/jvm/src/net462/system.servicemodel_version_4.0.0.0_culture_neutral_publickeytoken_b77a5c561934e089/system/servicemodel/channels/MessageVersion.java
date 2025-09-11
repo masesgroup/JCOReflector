@@ -158,10 +158,14 @@ public class MessageVersion extends NetObject  {
     
     public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateVersion = null;
         try {
-            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance());
+            retObjectCreateVersion = classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance());
+            JCObject objCreateVersion = (JCObject)retObjectCreateVersion;
             return new MessageVersion(objCreateVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateVersion != null ? retObjectCreateVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,10 +173,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion CreateVersion(EnvelopeVersion envelopeVersion, AddressingVersion addressingVersion) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCreateVersion = null;
         try {
-            JCObject objCreateVersion = (JCObject)classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance(), addressingVersion == null ? null : addressingVersion.getJCOInstance());
+            retObjectCreateVersion = classType.Invoke("CreateVersion", envelopeVersion == null ? null : envelopeVersion.getJCOInstance(), addressingVersion == null ? null : addressingVersion.getJCOInstance());
+            JCObject objCreateVersion = (JCObject)retObjectCreateVersion;
             return new MessageVersion(objCreateVersion);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateVersion != null ? retObjectCreateVersion.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,10 +192,14 @@ public class MessageVersion extends NetObject  {
     
     public AddressingVersion getAddressing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAddressing = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Addressing");
+            retObjectAddressing = classInstance.Get("Addressing");
+            JCObject val = (JCObject)retObjectAddressing;
             return new AddressingVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectAddressing != null ? retObjectAddressing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,10 +207,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getDefault() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectDefault = null;
         try {
-            JCObject val = (JCObject)classType.Get("Default");
+            retObjectDefault = classType.Get("Default");
+            JCObject val = (JCObject)retObjectDefault;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDefault != null ? retObjectDefault.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -206,10 +222,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getNone() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectNone = null;
         try {
-            JCObject val = (JCObject)classType.Get("None");
+            retObjectNone = classType.Get("None");
+            JCObject val = (JCObject)retObjectNone;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectNone != null ? retObjectNone.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,10 +237,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap11() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap11 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap11");
+            retObjectSoap11 = classType.Get("Soap11");
+            JCObject val = (JCObject)retObjectSoap11;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap11 != null ? retObjectSoap11.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,10 +252,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap11WSAddressing10() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap11WSAddressing10 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap11WSAddressing10");
+            retObjectSoap11WSAddressing10 = classType.Get("Soap11WSAddressing10");
+            JCObject val = (JCObject)retObjectSoap11WSAddressing10;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap11WSAddressing10 != null ? retObjectSoap11WSAddressing10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,10 +267,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap11WSAddressingAugust2004() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap11WSAddressingAugust2004 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap11WSAddressingAugust2004");
+            retObjectSoap11WSAddressingAugust2004 = classType.Get("Soap11WSAddressingAugust2004");
+            JCObject val = (JCObject)retObjectSoap11WSAddressingAugust2004;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap11WSAddressingAugust2004 != null ? retObjectSoap11WSAddressingAugust2004.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,10 +282,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap12() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap12 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap12");
+            retObjectSoap12 = classType.Get("Soap12");
+            JCObject val = (JCObject)retObjectSoap12;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap12 != null ? retObjectSoap12.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,10 +297,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap12WSAddressing10() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap12WSAddressing10 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap12WSAddressing10");
+            retObjectSoap12WSAddressing10 = classType.Get("Soap12WSAddressing10");
+            JCObject val = (JCObject)retObjectSoap12WSAddressing10;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap12WSAddressing10 != null ? retObjectSoap12WSAddressing10.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +312,14 @@ public class MessageVersion extends NetObject  {
 
     public static MessageVersion getSoap12WSAddressingAugust2004() throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectSoap12WSAddressingAugust2004 = null;
         try {
-            JCObject val = (JCObject)classType.Get("Soap12WSAddressingAugust2004");
+            retObjectSoap12WSAddressingAugust2004 = classType.Get("Soap12WSAddressingAugust2004");
+            JCObject val = (JCObject)retObjectSoap12WSAddressingAugust2004;
             return new MessageVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSoap12WSAddressingAugust2004 != null ? retObjectSoap12WSAddressingAugust2004.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +327,14 @@ public class MessageVersion extends NetObject  {
 
     public EnvelopeVersion getEnvelope() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEnvelope = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Envelope");
+            retObjectEnvelope = classInstance.Get("Envelope");
+            JCObject val = (JCObject)retObjectEnvelope;
             return new EnvelopeVersion(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectEnvelope != null ? retObjectEnvelope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

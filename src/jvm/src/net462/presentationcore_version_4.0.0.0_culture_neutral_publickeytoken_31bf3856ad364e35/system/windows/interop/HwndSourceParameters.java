@@ -178,9 +178,13 @@ public class HwndSourceParameters extends ValueType  {
     
     public boolean Equals(HwndSourceParameters obj) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", obj == null ? null : obj.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +192,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void SetPosition(int x, int y) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetPosition", x, y);
         } catch (JCNativeException jcne) {
@@ -198,7 +202,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void SetSize(int width, int height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSize", width, height);
         } catch (JCNativeException jcne) {
@@ -212,9 +216,13 @@ public class HwndSourceParameters extends ValueType  {
     
     public boolean getAcquireHwndFocusInMenuMode() throws Throwable, system.InvalidOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAcquireHwndFocusInMenuMode = null;
         try {
-            return (boolean)classInstance.Get("AcquireHwndFocusInMenuMode");
+            retObjectAcquireHwndFocusInMenuMode = classInstance.Get("AcquireHwndFocusInMenuMode");
+            return (boolean)retObjectAcquireHwndFocusInMenuMode;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAcquireHwndFocusInMenuMode != null ? retObjectAcquireHwndFocusInMenuMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +230,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setAcquireHwndFocusInMenuMode(boolean AcquireHwndFocusInMenuMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AcquireHwndFocusInMenuMode", AcquireHwndFocusInMenuMode);
         } catch (JCNativeException jcne) {
@@ -232,9 +240,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getAdjustSizingForNonClientArea() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAdjustSizingForNonClientArea = null;
         try {
-            return (boolean)classInstance.Get("AdjustSizingForNonClientArea");
+            retObjectAdjustSizingForNonClientArea = classInstance.Get("AdjustSizingForNonClientArea");
+            return (boolean)retObjectAdjustSizingForNonClientArea;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAdjustSizingForNonClientArea != null ? retObjectAdjustSizingForNonClientArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +254,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setAdjustSizingForNonClientArea(boolean AdjustSizingForNonClientArea) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AdjustSizingForNonClientArea", AdjustSizingForNonClientArea);
         } catch (JCNativeException jcne) {
@@ -252,9 +264,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getHasAssignedSize() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHasAssignedSize = null;
         try {
-            return (boolean)classInstance.Get("HasAssignedSize");
+            retObjectHasAssignedSize = classInstance.Get("HasAssignedSize");
+            return (boolean)retObjectHasAssignedSize;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectHasAssignedSize != null ? retObjectHasAssignedSize.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,9 +278,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getTreatAncestorsAsNonClientArea() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatAncestorsAsNonClientArea = null;
         try {
-            return (boolean)classInstance.Get("TreatAncestorsAsNonClientArea");
+            retObjectTreatAncestorsAsNonClientArea = classInstance.Get("TreatAncestorsAsNonClientArea");
+            return (boolean)retObjectTreatAncestorsAsNonClientArea;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatAncestorsAsNonClientArea != null ? retObjectTreatAncestorsAsNonClientArea.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +292,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setTreatAncestorsAsNonClientArea(boolean TreatAncestorsAsNonClientArea) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatAncestorsAsNonClientArea", TreatAncestorsAsNonClientArea);
         } catch (JCNativeException jcne) {
@@ -282,9 +302,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getTreatAsInputRoot() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTreatAsInputRoot = null;
         try {
-            return (boolean)classInstance.Get("TreatAsInputRoot");
+            retObjectTreatAsInputRoot = classInstance.Get("TreatAsInputRoot");
+            return (boolean)retObjectTreatAsInputRoot;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTreatAsInputRoot != null ? retObjectTreatAsInputRoot.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,7 +316,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setTreatAsInputRoot(boolean TreatAsInputRoot) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TreatAsInputRoot", TreatAsInputRoot);
         } catch (JCNativeException jcne) {
@@ -302,9 +326,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getUsesPerPixelOpacity() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesPerPixelOpacity = null;
         try {
-            return (boolean)classInstance.Get("UsesPerPixelOpacity");
+            retObjectUsesPerPixelOpacity = classInstance.Get("UsesPerPixelOpacity");
+            return (boolean)retObjectUsesPerPixelOpacity;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesPerPixelOpacity != null ? retObjectUsesPerPixelOpacity.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +340,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setUsesPerPixelOpacity(boolean UsesPerPixelOpacity) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsesPerPixelOpacity", UsesPerPixelOpacity);
         } catch (JCNativeException jcne) {
@@ -322,9 +350,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public boolean getUsesPerPixelTransparency() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUsesPerPixelTransparency = null;
         try {
-            return (boolean)classInstance.Get("UsesPerPixelTransparency");
+            retObjectUsesPerPixelTransparency = classInstance.Get("UsesPerPixelTransparency");
+            return (boolean)retObjectUsesPerPixelTransparency;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUsesPerPixelTransparency != null ? retObjectUsesPerPixelTransparency.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,7 +364,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setUsesPerPixelTransparency(boolean UsesPerPixelTransparency) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UsesPerPixelTransparency", UsesPerPixelTransparency);
         } catch (JCNativeException jcne) {
@@ -342,9 +374,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getExtendedWindowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExtendedWindowStyle = null;
         try {
-            return (int)classInstance.Get("ExtendedWindowStyle");
+            retObjectExtendedWindowStyle = classInstance.Get("ExtendedWindowStyle");
+            return (int)retObjectExtendedWindowStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectExtendedWindowStyle != null ? retObjectExtendedWindowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,7 +388,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setExtendedWindowStyle(int ExtendedWindowStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ExtendedWindowStyle", ExtendedWindowStyle);
         } catch (JCNativeException jcne) {
@@ -362,9 +398,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getHeight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHeight = null;
         try {
-            return (int)classInstance.Get("Height");
+            retObjectHeight = classInstance.Get("Height");
+            return (int)retObjectHeight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectHeight != null ? retObjectHeight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,7 +412,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setHeight(int Height) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Height", Height);
         } catch (JCNativeException jcne) {
@@ -382,9 +422,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getPositionX() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositionX = null;
         try {
-            return (int)classInstance.Get("PositionX");
+            retObjectPositionX = classInstance.Get("PositionX");
+            return (int)retObjectPositionX;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPositionX != null ? retObjectPositionX.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,7 +436,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setPositionX(int PositionX) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositionX", PositionX);
         } catch (JCNativeException jcne) {
@@ -402,9 +446,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getPositionY() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPositionY = null;
         try {
-            return (int)classInstance.Get("PositionY");
+            retObjectPositionY = classInstance.Get("PositionY");
+            return (int)retObjectPositionY;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectPositionY != null ? retObjectPositionY.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +460,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setPositionY(int PositionY) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PositionY", PositionY);
         } catch (JCNativeException jcne) {
@@ -422,9 +470,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getWidth() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWidth = null;
         try {
-            return (int)classInstance.Get("Width");
+            retObjectWidth = classInstance.Get("Width");
+            return (int)retObjectWidth;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWidth != null ? retObjectWidth.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +484,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setWidth(int Width) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Width", Width);
         } catch (JCNativeException jcne) {
@@ -442,9 +494,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getWindowClassStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowClassStyle = null;
         try {
-            return (int)classInstance.Get("WindowClassStyle");
+            retObjectWindowClassStyle = classInstance.Get("WindowClassStyle");
+            return (int)retObjectWindowClassStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWindowClassStyle != null ? retObjectWindowClassStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,7 +508,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setWindowClassStyle(int WindowClassStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowClassStyle", WindowClassStyle);
         } catch (JCNativeException jcne) {
@@ -462,9 +518,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public int getWindowStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowStyle = null;
         try {
-            return (int)classInstance.Get("WindowStyle");
+            retObjectWindowStyle = classInstance.Get("WindowStyle");
+            return (int)retObjectWindowStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectWindowStyle != null ? retObjectWindowStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -472,7 +532,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setWindowStyle(int WindowStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowStyle", WindowStyle);
         } catch (JCNativeException jcne) {
@@ -482,9 +542,13 @@ public class HwndSourceParameters extends ValueType  {
 
     public java.lang.String getWindowName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWindowName = null;
         try {
-            return (java.lang.String)classInstance.Get("WindowName");
+            retObjectWindowName = classInstance.Get("WindowName");
+            return (java.lang.String)retObjectWindowName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectWindowName != null ? retObjectWindowName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -492,7 +556,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setWindowName(java.lang.String WindowName) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WindowName", WindowName);
         } catch (JCNativeException jcne) {
@@ -502,10 +566,14 @@ public class HwndSourceParameters extends ValueType  {
 
     public RestoreFocusMode getRestoreFocusMode() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRestoreFocusMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RestoreFocusMode");
+            retObjectRestoreFocusMode = classInstance.Get("RestoreFocusMode");
+            JCObject val = (JCObject)retObjectRestoreFocusMode;
             return new RestoreFocusMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRestoreFocusMode != null ? retObjectRestoreFocusMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,7 +581,7 @@ public class HwndSourceParameters extends ValueType  {
 
     public void setRestoreFocusMode(RestoreFocusMode RestoreFocusMode) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("RestoreFocusMode", RestoreFocusMode == null ? null : RestoreFocusMode.getJCOInstance());
         } catch (JCNativeException jcne) {

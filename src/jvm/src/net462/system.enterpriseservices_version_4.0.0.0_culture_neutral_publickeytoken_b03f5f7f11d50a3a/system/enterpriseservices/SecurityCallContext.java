@@ -158,9 +158,13 @@ public class SecurityCallContext extends NetObject  {
     
     public boolean IsCallerInRole(java.lang.String role) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsCallerInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsCallerInRole", role);
+            retObjectIsCallerInRole = classInstance.Invoke("IsCallerInRole", role);
+            return (boolean)retObjectIsCallerInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsCallerInRole != null ? retObjectIsCallerInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +172,13 @@ public class SecurityCallContext extends NetObject  {
 
     public boolean IsUserInRole(java.lang.String user, java.lang.String role) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsUserInRole = null;
         try {
-            return (boolean)classInstance.Invoke("IsUserInRole", user, role);
+            retObjectIsUserInRole = classInstance.Invoke("IsUserInRole", user, role);
+            return (boolean)retObjectIsUserInRole;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectIsUserInRole != null ? retObjectIsUserInRole.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,9 +190,13 @@ public class SecurityCallContext extends NetObject  {
     
     public boolean getIsSecurityEnabled() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsSecurityEnabled = null;
         try {
-            return (boolean)classInstance.Get("IsSecurityEnabled");
+            retObjectIsSecurityEnabled = classInstance.Get("IsSecurityEnabled");
+            return (boolean)retObjectIsSecurityEnabled;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsSecurityEnabled != null ? retObjectIsSecurityEnabled.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +204,13 @@ public class SecurityCallContext extends NetObject  {
 
     public int getMinAuthenticationLevel() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMinAuthenticationLevel = null;
         try {
-            return (int)classInstance.Get("MinAuthenticationLevel");
+            retObjectMinAuthenticationLevel = classInstance.Get("MinAuthenticationLevel");
+            return (int)retObjectMinAuthenticationLevel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMinAuthenticationLevel != null ? retObjectMinAuthenticationLevel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +218,13 @@ public class SecurityCallContext extends NetObject  {
 
     public int getNumCallers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectNumCallers = null;
         try {
-            return (int)classInstance.Get("NumCallers");
+            retObjectNumCallers = classInstance.Get("NumCallers");
+            return (int)retObjectNumCallers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectNumCallers != null ? retObjectNumCallers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,10 +232,14 @@ public class SecurityCallContext extends NetObject  {
 
     public static SecurityCallContext getCurrentCall() throws Throwable, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.runtime.interopservices.COMException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectCurrentCall = null;
         try {
-            JCObject val = (JCObject)classType.Get("CurrentCall");
+            retObjectCurrentCall = classType.Get("CurrentCall");
+            JCObject val = (JCObject)retObjectCurrentCall;
             return new SecurityCallContext(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCurrentCall != null ? retObjectCurrentCall.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,10 +247,14 @@ public class SecurityCallContext extends NetObject  {
 
     public SecurityCallers getCallers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCallers = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Callers");
+            retObjectCallers = classInstance.Get("Callers");
+            JCObject val = (JCObject)retObjectCallers;
             return new SecurityCallers(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCallers != null ? retObjectCallers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -234,10 +262,14 @@ public class SecurityCallContext extends NetObject  {
 
     public SecurityIdentity getDirectCaller() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDirectCaller = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("DirectCaller");
+            retObjectDirectCaller = classInstance.Get("DirectCaller");
+            JCObject val = (JCObject)retObjectDirectCaller;
             return new SecurityIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDirectCaller != null ? retObjectDirectCaller.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -245,10 +277,14 @@ public class SecurityCallContext extends NetObject  {
 
     public SecurityIdentity getOriginalCaller() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOriginalCaller = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("OriginalCaller");
+            retObjectOriginalCaller = classInstance.Get("OriginalCaller");
+            JCObject val = (JCObject)retObjectOriginalCaller;
             return new SecurityIdentity(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectOriginalCaller != null ? retObjectOriginalCaller.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

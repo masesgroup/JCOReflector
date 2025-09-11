@@ -155,10 +155,14 @@ public class EventManager extends NetObject  {
     
     public static RoutedEvent RegisterRoutedEvent(java.lang.String name, RoutingStrategy routingStrategy, NetType handlerType, NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectRegisterRoutedEvent = null;
         try {
-            JCObject objRegisterRoutedEvent = (JCObject)classType.Invoke("RegisterRoutedEvent", name, routingStrategy == null ? null : routingStrategy.getJCOInstance(), handlerType == null ? null : handlerType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectRegisterRoutedEvent = classType.Invoke("RegisterRoutedEvent", name, routingStrategy == null ? null : routingStrategy.getJCOInstance(), handlerType == null ? null : handlerType.getJCOInstance(), ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject objRegisterRoutedEvent = (JCObject)retObjectRegisterRoutedEvent;
             return new RoutedEvent(objRegisterRoutedEvent);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRegisterRoutedEvent != null ? retObjectRegisterRoutedEvent.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -166,16 +170,20 @@ public class EventManager extends NetObject  {
 
     public static RoutedEvent[] GetRoutedEvents() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRoutedEvents = null;
         try {
             ArrayList<RoutedEvent> resultingArrayList = new ArrayList<RoutedEvent>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetRoutedEvents");
+            retObjectGetRoutedEvents = classType.Invoke("GetRoutedEvents");
+            JCObject resultingObjects = (JCObject)retObjectGetRoutedEvents;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RoutedEvent(resultingObject));
             }
             RoutedEvent[] resultingArray = new RoutedEvent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRoutedEvents != null ? retObjectGetRoutedEvents.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,16 +191,20 @@ public class EventManager extends NetObject  {
 
     public static RoutedEvent[] GetRoutedEventsForOwner(NetType ownerType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRoutedEventsForOwner = null;
         try {
             ArrayList<RoutedEvent> resultingArrayList = new ArrayList<RoutedEvent>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetRoutedEventsForOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            retObjectGetRoutedEventsForOwner = classType.Invoke("GetRoutedEventsForOwner", ownerType == null ? null : ownerType.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetRoutedEventsForOwner;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RoutedEvent(resultingObject));
             }
             RoutedEvent[] resultingArray = new RoutedEvent[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetRoutedEventsForOwner != null ? retObjectGetRoutedEventsForOwner.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

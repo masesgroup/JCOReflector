@@ -157,9 +157,13 @@ public class PixelFormat extends ValueType  {
     
     public boolean Equals(PixelFormat pixelFormat) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classInstance.Invoke("Equals", pixelFormat == null ? null : pixelFormat.getJCOInstance());
+            retObjectEquals = classInstance.Invoke("Equals", pixelFormat == null ? null : pixelFormat.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,9 +171,13 @@ public class PixelFormat extends ValueType  {
 
     public static boolean Equals(PixelFormat left, PixelFormat right) throws Throwable {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectEquals = null;
         try {
-            return (boolean)classType.Invoke("Equals", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            retObjectEquals = classType.Invoke("Equals", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            return (boolean)retObjectEquals;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectEquals != null ? retObjectEquals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +189,13 @@ public class PixelFormat extends ValueType  {
     
     public int getBitsPerPixel() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBitsPerPixel = null;
         try {
-            return (int)classInstance.Get("BitsPerPixel");
+            retObjectBitsPerPixel = classInstance.Get("BitsPerPixel");
+            return (int)retObjectBitsPerPixel;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectBitsPerPixel != null ? retObjectBitsPerPixel.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

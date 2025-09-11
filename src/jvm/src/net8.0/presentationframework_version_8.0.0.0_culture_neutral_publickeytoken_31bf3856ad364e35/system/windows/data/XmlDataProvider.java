@@ -167,9 +167,13 @@ public class XmlDataProvider extends DataSourceProvider  {
     
     public boolean ShouldSerializeSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeSource = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeSource");
+            retObjectShouldSerializeSource = classInstance.Invoke("ShouldSerializeSource");
+            return (boolean)retObjectShouldSerializeSource;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeSource != null ? retObjectShouldSerializeSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,9 +181,13 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public boolean ShouldSerializeXmlSerializer() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeXmlSerializer = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeXmlSerializer");
+            retObjectShouldSerializeXmlSerializer = classInstance.Invoke("ShouldSerializeXmlSerializer");
+            return (boolean)retObjectShouldSerializeXmlSerializer;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeXmlSerializer != null ? retObjectShouldSerializeXmlSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,9 +195,13 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public boolean ShouldSerializeXPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeXPath = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeXPath");
+            retObjectShouldSerializeXPath = classInstance.Invoke("ShouldSerializeXPath");
+            return (boolean)retObjectShouldSerializeXPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeXPath != null ? retObjectShouldSerializeXPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,9 +213,13 @@ public class XmlDataProvider extends DataSourceProvider  {
     
     public boolean getIsAsynchronous() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsAsynchronous = null;
         try {
-            return (boolean)classInstance.Get("IsAsynchronous");
+            retObjectIsAsynchronous = classInstance.Get("IsAsynchronous");
+            return (boolean)retObjectIsAsynchronous;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsAsynchronous != null ? retObjectIsAsynchronous.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +227,7 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public void setIsAsynchronous(boolean IsAsynchronous) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsAsynchronous", IsAsynchronous);
         } catch (JCNativeException jcne) {
@@ -221,9 +237,13 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public java.lang.String getXPath() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXPath = null;
         try {
-            return (java.lang.String)classInstance.Get("XPath");
+            retObjectXPath = classInstance.Get("XPath");
+            return (java.lang.String)retObjectXPath;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectXPath != null ? retObjectXPath.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -231,7 +251,7 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public void setXPath(java.lang.String XPath) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XPath", XPath);
         } catch (JCNativeException jcne) {
@@ -241,10 +261,14 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public Uri getSource() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSource = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Source");
+            retObjectSource = classInstance.Get("Source");
+            JCObject val = (JCObject)retObjectSource;
             return new Uri(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSource != null ? retObjectSource.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +276,7 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public void setSource(Uri Source) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Source", Source == null ? null : Source.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -262,10 +286,14 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public IXmlSerializable getXmlSerializer() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlSerializer = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlSerializer");
+            retObjectXmlSerializer = classInstance.Get("XmlSerializer");
+            JCObject val = (JCObject)retObjectXmlSerializer;
             return new IXmlSerializableImplementation(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlSerializer != null ? retObjectXmlSerializer.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,10 +301,14 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public XmlDocument getDocument() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDocument = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Document");
+            retObjectDocument = classInstance.Get("Document");
+            JCObject val = (JCObject)retObjectDocument;
             return new XmlDocument(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectDocument != null ? retObjectDocument.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +316,7 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public void setDocument(XmlDocument Document) throws Throwable, system.xml.xpath.XPathException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.ArgumentException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Document", Document == null ? null : Document.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -294,10 +326,14 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public XmlNamespaceManager getXmlNamespaceManager() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectXmlNamespaceManager = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("XmlNamespaceManager");
+            retObjectXmlNamespaceManager = classInstance.Get("XmlNamespaceManager");
+            JCObject val = (JCObject)retObjectXmlNamespaceManager;
             return new XmlNamespaceManager(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectXmlNamespaceManager != null ? retObjectXmlNamespaceManager.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +341,7 @@ public class XmlDataProvider extends DataSourceProvider  {
 
     public void setXmlNamespaceManager(XmlNamespaceManager XmlNamespaceManager) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("XmlNamespaceManager", XmlNamespaceManager == null ? null : XmlNamespaceManager.getJCOInstance());
         } catch (JCNativeException jcne) {

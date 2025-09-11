@@ -144,10 +144,12 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
     
     public byte[] Promote() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPromote = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Promote");
+            retObjectPromote = classInstance.Invoke("Promote");
+            JCObject resultingObjects = (JCObject)retObjectPromote;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -156,6 +158,8 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
 				resultingArray[indexPromote] = (byte)resultingArrayList.get(indexPromote);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectPromote != null ? retObjectPromote.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +167,7 @@ public class ISimpleTransactionSuperiorImplementation extends NetObject implemen
 
     public void Rollback() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Rollback");
         } catch (JCNativeException jcne) {

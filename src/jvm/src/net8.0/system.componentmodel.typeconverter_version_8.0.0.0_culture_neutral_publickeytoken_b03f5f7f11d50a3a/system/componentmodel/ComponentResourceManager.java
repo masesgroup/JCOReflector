@@ -173,7 +173,7 @@ public class ComponentResourceManager extends ResourceManager  {
     
     public void ApplyResources(NetObject value, java.lang.String objectName, CultureInfo culture) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.io.IOException, system.FormatException, system.globalization.CultureNotFoundException, system.BadImageFormatException, system.TypeLoadException, system.MethodAccessException, system.MissingMethodException, system.MemberAccessException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyResources", value == null ? null : value.getJCOInstance(), objectName, culture == null ? null : culture.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -183,7 +183,7 @@ public class ComponentResourceManager extends ResourceManager  {
 
     public void ApplyResources(NetObject value, java.lang.String objectName) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.io.IOException, system.FormatException, system.OutOfMemoryException, system.BadImageFormatException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ApplyResources", value == null ? null : value.getJCOInstance(), objectName);
         } catch (JCNativeException jcne) {

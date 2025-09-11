@@ -166,9 +166,13 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
     
     public boolean getEntityKeyProperty() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectEntityKeyProperty = null;
         try {
-            return (boolean)classInstance.Get("EntityKeyProperty");
+            retObjectEntityKeyProperty = classInstance.Get("EntityKeyProperty");
+            return (boolean)retObjectEntityKeyProperty;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectEntityKeyProperty != null ? retObjectEntityKeyProperty.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
 
     public void setEntityKeyProperty(boolean EntityKeyProperty) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("EntityKeyProperty", EntityKeyProperty);
         } catch (JCNativeException jcne) {
@@ -186,9 +190,13 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
 
     public boolean getIsNullable() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsNullable = null;
         try {
-            return (boolean)classInstance.Get("IsNullable");
+            retObjectIsNullable = classInstance.Get("IsNullable");
+            return (boolean)retObjectIsNullable;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsNullable != null ? retObjectIsNullable.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,7 +204,7 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
 
     public void setIsNullable(boolean IsNullable) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IsNullable", IsNullable);
         } catch (JCNativeException jcne) {

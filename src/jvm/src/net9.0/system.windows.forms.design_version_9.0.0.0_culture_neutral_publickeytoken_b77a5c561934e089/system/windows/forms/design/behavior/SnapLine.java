@@ -198,9 +198,13 @@ public class SnapLine extends NetObject  {
     
     public static boolean ShouldSnap(SnapLine line1, SnapLine line2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectShouldSnap = null;
         try {
-            return (boolean)classType.Invoke("ShouldSnap", line1 == null ? null : line1.getJCOInstance(), line2 == null ? null : line2.getJCOInstance());
+            retObjectShouldSnap = classType.Invoke("ShouldSnap", line1 == null ? null : line1.getJCOInstance(), line2 == null ? null : line2.getJCOInstance());
+            return (boolean)retObjectShouldSnap;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSnap != null ? retObjectShouldSnap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +212,7 @@ public class SnapLine extends NetObject  {
 
     public void AdjustOffset(int adjustment) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AdjustOffset", adjustment);
         } catch (JCNativeException jcne) {
@@ -222,9 +226,13 @@ public class SnapLine extends NetObject  {
     
     public boolean getIsHorizontal() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsHorizontal = null;
         try {
-            return (boolean)classInstance.Get("IsHorizontal");
+            retObjectIsHorizontal = classInstance.Get("IsHorizontal");
+            return (boolean)retObjectIsHorizontal;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsHorizontal != null ? retObjectIsHorizontal.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -232,9 +240,13 @@ public class SnapLine extends NetObject  {
 
     public boolean getIsVertical() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsVertical = null;
         try {
-            return (boolean)classInstance.Get("IsVertical");
+            retObjectIsVertical = classInstance.Get("IsVertical");
+            return (boolean)retObjectIsVertical;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsVertical != null ? retObjectIsVertical.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,9 +254,13 @@ public class SnapLine extends NetObject  {
 
     public int getOffset() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectOffset = null;
         try {
-            return (int)classInstance.Get("Offset");
+            retObjectOffset = classInstance.Get("Offset");
+            return (int)retObjectOffset;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectOffset != null ? retObjectOffset.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +268,7 @@ public class SnapLine extends NetObject  {
 
     public void setOffset(int Offset) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Offset", Offset);
         } catch (JCNativeException jcne) {
@@ -262,9 +278,13 @@ public class SnapLine extends NetObject  {
 
     public java.lang.String getFilter() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectFilter = null;
         try {
-            return (java.lang.String)classInstance.Get("Filter");
+            retObjectFilter = classInstance.Get("Filter");
+            return (java.lang.String)retObjectFilter;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,10 +292,14 @@ public class SnapLine extends NetObject  {
 
     public SnapLinePriority getPriority() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPriority = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Priority");
+            retObjectPriority = classInstance.Get("Priority");
+            JCObject val = (JCObject)retObjectPriority;
             return new SnapLinePriority(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPriority != null ? retObjectPriority.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,10 +307,14 @@ public class SnapLine extends NetObject  {
 
     public SnapLineType getSnapLineType() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSnapLineType = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SnapLineType");
+            retObjectSnapLineType = classInstance.Get("SnapLineType");
+            JCObject val = (JCObject)retObjectSnapLineType;
             return new SnapLineType(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSnapLineType != null ? retObjectSnapLineType.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,9 +165,13 @@ public class Grid extends Panel  {
     
     public static boolean GetIsSharedSizeScope(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetIsSharedSizeScope = null;
         try {
-            return (boolean)classType.Invoke("GetIsSharedSizeScope", element == null ? null : element.getJCOInstance());
+            retObjectGetIsSharedSizeScope = classType.Invoke("GetIsSharedSizeScope", element == null ? null : element.getJCOInstance());
+            return (boolean)retObjectGetIsSharedSizeScope;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectGetIsSharedSizeScope != null ? retObjectGetIsSharedSizeScope.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,9 +179,13 @@ public class Grid extends Panel  {
 
     public boolean ShouldSerializeColumnDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeColumnDefinitions = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeColumnDefinitions");
+            retObjectShouldSerializeColumnDefinitions = classInstance.Invoke("ShouldSerializeColumnDefinitions");
+            return (boolean)retObjectShouldSerializeColumnDefinitions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeColumnDefinitions != null ? retObjectShouldSerializeColumnDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,9 +193,13 @@ public class Grid extends Panel  {
 
     public boolean ShouldSerializeRowDefinitions() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShouldSerializeRowDefinitions = null;
         try {
-            return (boolean)classInstance.Invoke("ShouldSerializeRowDefinitions");
+            retObjectShouldSerializeRowDefinitions = classInstance.Invoke("ShouldSerializeRowDefinitions");
+            return (boolean)retObjectShouldSerializeRowDefinitions;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into boolean", retObjectShouldSerializeRowDefinitions != null ? retObjectShouldSerializeRowDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,9 +207,19 @@ public class Grid extends Panel  {
 
     public static int GetColumn(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetColumn = null;
         try {
-            return (int)classType.Invoke("GetColumn", element == null ? null : element.getJCOInstance());
+            retObjectGetColumn = classType.Invoke("GetColumn", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetColumn;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnNumber = (java.lang.Number)retObjectGetColumn;
+                return retObjectGetColumnNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumn != null ? retObjectGetColumn.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,9 +227,19 @@ public class Grid extends Panel  {
 
     public static int GetColumnSpan(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetColumnSpan = null;
         try {
-            return (int)classType.Invoke("GetColumnSpan", element == null ? null : element.getJCOInstance());
+            retObjectGetColumnSpan = classType.Invoke("GetColumnSpan", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetColumnSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetColumnSpanNumber = (java.lang.Number)retObjectGetColumnSpan;
+                return retObjectGetColumnSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetColumnSpan != null ? retObjectGetColumnSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,9 +247,19 @@ public class Grid extends Panel  {
 
     public static int GetRow(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRow = null;
         try {
-            return (int)classType.Invoke("GetRow", element == null ? null : element.getJCOInstance());
+            retObjectGetRow = classType.Invoke("GetRow", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetRow;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowNumber = (java.lang.Number)retObjectGetRow;
+                return retObjectGetRowNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRow != null ? retObjectGetRow.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -225,9 +267,19 @@ public class Grid extends Panel  {
 
     public static int GetRowSpan(UIElement element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
+        java.lang.Object retObjectGetRowSpan = null;
         try {
-            return (int)classType.Invoke("GetRowSpan", element == null ? null : element.getJCOInstance());
+            retObjectGetRowSpan = classType.Invoke("GetRowSpan", element == null ? null : element.getJCOInstance());
+            return (int)retObjectGetRowSpan;
+        } catch (java.lang.ClassCastException cce) {
+            // https://github.com/masesgroup/JCOReflector/issues/246#issuecomment-3281199723
+            try {
+                java.lang.Number retObjectGetRowSpanNumber = (java.lang.Number)retObjectGetRowSpan;
+                return retObjectGetRowSpanNumber.intValue();
+            } catch (java.lang.ClassCastException cceInner) {
+                throw new java.lang.IllegalStateException(java.lang.String.format("Failed to convert %s into int and, as fallback solution, into java.lang.Number", retObjectGetRowSpan != null ? retObjectGetRowSpan.getClass() : "null"), cce);
+            }
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +287,7 @@ public class Grid extends Panel  {
 
     public static void SetColumn(UIElement element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetColumn", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -245,7 +297,7 @@ public class Grid extends Panel  {
 
     public static void SetColumnSpan(UIElement element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetColumnSpan", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -255,7 +307,7 @@ public class Grid extends Panel  {
 
     public static void SetIsSharedSizeScope(UIElement element, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetIsSharedSizeScope", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -265,7 +317,7 @@ public class Grid extends Panel  {
 
     public static void SetRow(UIElement element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRow", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -275,7 +327,7 @@ public class Grid extends Panel  {
 
     public static void SetRowSpan(UIElement element, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+            throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetRowSpan", element == null ? null : element.getJCOInstance(), value);
         } catch (JCNativeException jcne) {
@@ -289,9 +341,13 @@ public class Grid extends Panel  {
     
     public boolean getShowGridLines() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowGridLines = null;
         try {
-            return (boolean)classInstance.Get("ShowGridLines");
+            retObjectShowGridLines = classInstance.Get("ShowGridLines");
+            return (boolean)retObjectShowGridLines;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowGridLines != null ? retObjectShowGridLines.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -299,7 +355,7 @@ public class Grid extends Panel  {
 
     public void setShowGridLines(boolean ShowGridLines) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowGridLines", ShowGridLines);
         } catch (JCNativeException jcne) {
@@ -309,10 +365,14 @@ public class Grid extends Panel  {
 
     public ColumnDefinitionCollection getColumnDefinitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectColumnDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ColumnDefinitions");
+            retObjectColumnDefinitions = classInstance.Get("ColumnDefinitions");
+            JCObject val = (JCObject)retObjectColumnDefinitions;
             return new ColumnDefinitionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectColumnDefinitions != null ? retObjectColumnDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,10 +380,14 @@ public class Grid extends Panel  {
 
     public RowDefinitionCollection getRowDefinitions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidCastException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRowDefinitions = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("RowDefinitions");
+            retObjectRowDefinitions = classInstance.Get("RowDefinitions");
+            JCObject val = (JCObject)retObjectRowDefinitions;
             return new RowDefinitionCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectRowDefinitions != null ? retObjectRowDefinitions.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,10 +156,14 @@ public class ExecutionScope extends NetObject  {
     
     public Expression IsolateExpression(Expression expression, NetObject[] locals) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsolateExpression = null;
         try {
-            JCObject objIsolateExpression = (JCObject)classInstance.Invoke("IsolateExpression", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(locals));
+            retObjectIsolateExpression = classInstance.Invoke("IsolateExpression", expression == null ? null : expression.getJCOInstance(), toObjectFromArray(locals));
+            JCObject objIsolateExpression = (JCObject)retObjectIsolateExpression;
             return new Expression(objIsolateExpression);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIsolateExpression != null ? retObjectIsolateExpression.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,16 +171,20 @@ public class ExecutionScope extends NetObject  {
 
     public NetObject[] CreateHoistedLocals() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateHoistedLocals = null;
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateHoistedLocals");
+            retObjectCreateHoistedLocals = classInstance.Invoke("CreateHoistedLocals");
+            JCObject resultingObjects = (JCObject)retObjectCreateHoistedLocals;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateHoistedLocals != null ? retObjectCreateHoistedLocals.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

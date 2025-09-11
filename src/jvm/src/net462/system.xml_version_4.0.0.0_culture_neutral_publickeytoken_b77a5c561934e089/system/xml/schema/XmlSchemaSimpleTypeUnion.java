@@ -169,10 +169,14 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
     
     public XmlSchemaObjectCollection getBaseTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseTypes = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseTypes");
+            retObjectBaseTypes = classInstance.Get("BaseTypes");
+            JCObject val = (JCObject)retObjectBaseTypes;
             return new XmlSchemaObjectCollection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseTypes != null ? retObjectBaseTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,16 +184,20 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
 
     public final XmlSchemaSimpleType[] getBaseMemberTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBaseMemberTypes = null;
         try {
             ArrayList<XmlSchemaSimpleType> resultingArrayList = new ArrayList<XmlSchemaSimpleType>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("BaseMemberTypes");
+            retObjectBaseMemberTypes = classInstance.Get("BaseMemberTypes");
+            JCObject resultingObjects = (JCObject)retObjectBaseMemberTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaSimpleType(resultingObject));
             }
             XmlSchemaSimpleType[] resultingArray = new XmlSchemaSimpleType[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBaseMemberTypes != null ? retObjectBaseMemberTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,16 +205,20 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
 
     public final XmlQualifiedName[] getMemberTypes() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMemberTypes = null;
         try {
             ArrayList<XmlQualifiedName> resultingArrayList = new ArrayList<XmlQualifiedName>();
-            JCObject resultingObjects = (JCObject)classInstance.Get("MemberTypes");
+            retObjectMemberTypes = classInstance.Get("MemberTypes");
+            JCObject resultingObjects = (JCObject)retObjectMemberTypes;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlQualifiedName(resultingObject));
             }
             XmlQualifiedName[] resultingArray = new XmlQualifiedName[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectMemberTypes != null ? retObjectMemberTypes.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,7 +226,7 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
 
     public void setMemberTypes(XmlQualifiedName[] MemberTypes) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MemberTypes", toObjectFromArray(MemberTypes));
         } catch (JCNativeException jcne) {

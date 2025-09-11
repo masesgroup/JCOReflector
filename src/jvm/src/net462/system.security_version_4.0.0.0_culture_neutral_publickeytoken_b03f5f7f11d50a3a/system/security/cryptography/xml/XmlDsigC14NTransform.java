@@ -174,10 +174,12 @@ public class XmlDsigC14NTransform extends Transform  {
     
     public byte[] GetDigestedOutput(HashAlgorithm hash) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetDigestedOutput = null;
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
+            retObjectGetDigestedOutput = classInstance.Invoke("GetDigestedOutput", hash == null ? null : hash.getJCOInstance());
+            JCObject resultingObjects = (JCObject)retObjectGetDigestedOutput;
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -186,6 +188,8 @@ public class XmlDsigC14NTransform extends Transform  {
 				resultingArray[indexGetDigestedOutput] = (byte)resultingArrayList.get(indexGetDigestedOutput);
             }
             return resultingArray;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into byte", retObjectGetDigestedOutput != null ? retObjectGetDigestedOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,10 +197,14 @@ public class XmlDsigC14NTransform extends Transform  {
 
     public NetObject GetOutput() throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput");
+            retObjectGetOutput = classInstance.Invoke("GetOutput");
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -204,10 +212,14 @@ public class XmlDsigC14NTransform extends Transform  {
 
     public NetObject GetOutput(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetOutput = null;
         try {
-            JCObject objGetOutput = (JCObject)classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            retObjectGetOutput = classInstance.Invoke("GetOutput", type == null ? null : type.getJCOInstance());
+            JCObject objGetOutput = (JCObject)retObjectGetOutput;
             return new NetObject(objGetOutput);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetOutput != null ? retObjectGetOutput.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class XmlDsigC14NTransform extends Transform  {
 
     public void LoadInnerXml(XmlNodeList nodeList) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInnerXml", nodeList == null ? null : nodeList.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -225,7 +237,7 @@ public class XmlDsigC14NTransform extends Transform  {
 
     public void LoadInput(NetObject obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.security.XmlSyntaxException, system.MissingMethodException, system.xml.XmlException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadInput", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {

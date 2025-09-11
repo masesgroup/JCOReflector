@@ -165,9 +165,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
     
     public short getBboxBottom() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBboxBottom = null;
         try {
-            return (short)classInstance.Get("BboxBottom");
+            retObjectBboxBottom = classInstance.Get("BboxBottom");
+            return (short)retObjectBboxBottom;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectBboxBottom != null ? retObjectBboxBottom.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setBboxBottom(short BboxBottom) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BboxBottom", BboxBottom);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getBboxLeft() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBboxLeft = null;
         try {
-            return (short)classInstance.Get("BboxLeft");
+            retObjectBboxLeft = classInstance.Get("BboxLeft");
+            return (short)retObjectBboxLeft;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectBboxLeft != null ? retObjectBboxLeft.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setBboxLeft(short BboxLeft) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BboxLeft", BboxLeft);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getBboxRight() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBboxRight = null;
         try {
-            return (short)classInstance.Get("BboxRight");
+            retObjectBboxRight = classInstance.Get("BboxRight");
+            return (short)retObjectBboxRight;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectBboxRight != null ? retObjectBboxRight.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setBboxRight(short BboxRight) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BboxRight", BboxRight);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getBboxTop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBboxTop = null;
         try {
-            return (short)classInstance.Get("BboxTop");
+            retObjectBboxTop = classInstance.Get("BboxTop");
+            return (short)retObjectBboxTop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectBboxTop != null ? retObjectBboxTop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setBboxTop(short BboxTop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BboxTop", BboxTop);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getChecksum() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectChecksum = null;
         try {
-            return (short)classInstance.Get("Checksum");
+            retObjectChecksum = classInstance.Get("Checksum");
+            return (short)retObjectChecksum;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectChecksum != null ? retObjectChecksum.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setChecksum(short Checksum) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Checksum", Checksum);
         } catch (JCNativeException jcne) {
@@ -265,9 +285,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getHmf() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectHmf = null;
         try {
-            return (short)classInstance.Get("Hmf");
+            retObjectHmf = classInstance.Get("Hmf");
+            return (short)retObjectHmf;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectHmf != null ? retObjectHmf.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,7 +299,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setHmf(short Hmf) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Hmf", Hmf);
         } catch (JCNativeException jcne) {
@@ -285,9 +309,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public short getInch() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInch = null;
         try {
-            return (short)classInstance.Get("Inch");
+            retObjectInch = classInstance.Get("Inch");
+            return (short)retObjectInch;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into short", retObjectInch != null ? retObjectInch.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -295,7 +323,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setInch(short Inch) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Inch", Inch);
         } catch (JCNativeException jcne) {
@@ -305,9 +333,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public int getKey() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKey = null;
         try {
-            return (int)classInstance.Get("Key");
+            retObjectKey = classInstance.Get("Key");
+            return (int)retObjectKey;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectKey != null ? retObjectKey.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -315,7 +347,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setKey(int Key) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Key", Key);
         } catch (JCNativeException jcne) {
@@ -325,9 +357,13 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public int getReserved() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectReserved = null;
         try {
-            return (int)classInstance.Get("Reserved");
+            retObjectReserved = classInstance.Get("Reserved");
+            return (int)retObjectReserved;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectReserved != null ? retObjectReserved.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -335,7 +371,7 @@ public class WmfPlaceableFileHeader extends NetObject  {
 
     public void setReserved(int Reserved) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Reserved", Reserved);
         } catch (JCNativeException jcne) {

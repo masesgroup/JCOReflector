@@ -176,7 +176,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
     
     public void CancelAsync() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CancelAsync");
         } catch (JCNativeException jcne) {
@@ -186,7 +186,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void Load() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.OverflowException, system.componentmodel.Win32Exception, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.io.IOException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load");
         } catch (JCNativeException jcne) {
@@ -196,7 +196,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void Load(java.lang.String url) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException, system.NullReferenceException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", url);
         } catch (JCNativeException jcne) {
@@ -206,7 +206,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void LoadAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.IndexOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.componentmodel.InvalidAsynchronousStateException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadAsync");
         } catch (JCNativeException jcne) {
@@ -216,7 +216,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void LoadAsync(java.lang.String url) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.componentmodel.InvalidAsynchronousStateException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.NotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException, system.NullReferenceException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("LoadAsync", url);
         } catch (JCNativeException jcne) {
@@ -230,7 +230,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
      */
     @Deprecated 
     public void BeginInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
     /**
@@ -239,7 +239,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
      */
     @Deprecated 
     public void EndInit() throws Throwable {
-        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+        throw new java.lang.UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 
@@ -248,9 +248,13 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
     
     public boolean getCausesValidation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCausesValidation = null;
         try {
-            return (boolean)classInstance.Get("CausesValidation");
+            retObjectCausesValidation = classInstance.Get("CausesValidation");
+            return (boolean)retObjectCausesValidation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectCausesValidation != null ? retObjectCausesValidation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,7 +262,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setCausesValidation(boolean CausesValidation) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("CausesValidation", CausesValidation);
         } catch (JCNativeException jcne) {
@@ -268,9 +272,13 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public boolean getTabStop() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabStop = null;
         try {
-            return (boolean)classInstance.Get("TabStop");
+            retObjectTabStop = classInstance.Get("TabStop");
+            return (boolean)retObjectTabStop;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectTabStop != null ? retObjectTabStop.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +286,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setTabStop(boolean TabStop) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabStop", TabStop);
         } catch (JCNativeException jcne) {
@@ -288,9 +296,13 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public boolean getWaitOnLoad() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectWaitOnLoad = null;
         try {
-            return (boolean)classInstance.Get("WaitOnLoad");
+            retObjectWaitOnLoad = classInstance.Get("WaitOnLoad");
+            return (boolean)retObjectWaitOnLoad;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectWaitOnLoad != null ? retObjectWaitOnLoad.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +310,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setWaitOnLoad(boolean WaitOnLoad) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("WaitOnLoad", WaitOnLoad);
         } catch (JCNativeException jcne) {
@@ -308,9 +320,13 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public int getTabIndex() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTabIndex = null;
         try {
-            return (int)classInstance.Get("TabIndex");
+            retObjectTabIndex = classInstance.Get("TabIndex");
+            return (int)retObjectTabIndex;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectTabIndex != null ? retObjectTabIndex.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,7 +334,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setTabIndex(int TabIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("TabIndex", TabIndex);
         } catch (JCNativeException jcne) {
@@ -328,10 +344,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public Image getErrorImage() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ErrorImage");
+            retObjectErrorImage = classInstance.Get("ErrorImage");
+            JCObject val = (JCObject)retObjectErrorImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectErrorImage != null ? retObjectErrorImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +359,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setErrorImage(Image ErrorImage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorImage", ErrorImage == null ? null : ErrorImage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -349,10 +369,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public Image getImage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("Image");
+            retObjectImage = classInstance.Get("Image");
+            JCObject val = (JCObject)retObjectImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImage != null ? retObjectImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -360,7 +384,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setImage(Image Image) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.InvalidAsynchronousStateException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("Image", Image == null ? null : Image.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -370,10 +394,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public Image getInitialImage() throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectInitialImage = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("InitialImage");
+            retObjectInitialImage = classInstance.Get("InitialImage");
+            JCObject val = (JCObject)retObjectInitialImage;
             return new Image(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectInitialImage != null ? retObjectInitialImage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -381,7 +409,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setInitialImage(Image InitialImage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("InitialImage", InitialImage == null ? null : InitialImage.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -391,9 +419,13 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public java.lang.String getImageLocation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImageLocation = null;
         try {
-            return (java.lang.String)classInstance.Get("ImageLocation");
+            retObjectImageLocation = classInstance.Get("ImageLocation");
+            return (java.lang.String)retObjectImageLocation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectImageLocation != null ? retObjectImageLocation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -401,7 +433,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setImageLocation(java.lang.String ImageLocation) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.NotSupportedException, system.componentmodel.InvalidAsynchronousStateException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.AggregateException, system.threading.tasks.TaskCanceledException, system.ObjectDisposedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImageLocation", ImageLocation);
         } catch (JCNativeException jcne) {
@@ -411,10 +443,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public BorderStyle getBorderStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBorderStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("BorderStyle");
+            retObjectBorderStyle = classInstance.Get("BorderStyle");
+            JCObject val = (JCObject)retObjectBorderStyle;
             return new BorderStyle(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectBorderStyle != null ? retObjectBorderStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,7 +458,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setBorderStyle(BorderStyle BorderStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BorderStyle", BorderStyle == null ? null : BorderStyle.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -432,10 +468,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public ImeMode getImeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectImeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ImeMode");
+            retObjectImeMode = classInstance.Get("ImeMode");
+            JCObject val = (JCObject)retObjectImeMode;
             return new ImeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectImeMode != null ? retObjectImeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -443,7 +483,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setImeMode(ImeMode ImeMode) throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ImeMode", ImeMode == null ? null : ImeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -453,10 +493,14 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public PictureBoxSizeMode getSizeMode() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectSizeMode = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("SizeMode");
+            retObjectSizeMode = classInstance.Get("SizeMode");
+            JCObject val = (JCObject)retObjectSizeMode;
             return new PictureBoxSizeMode(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectSizeMode != null ? retObjectSizeMode.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -464,7 +508,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void setSizeMode(PictureBoxSizeMode SizeMode) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("SizeMode", SizeMode == null ? null : SizeMode.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -479,7 +523,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -489,7 +533,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeLoadCompleted(AsyncCompletedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadCompleted", handler);
         } catch (JCNativeException jcne) {
@@ -499,7 +543,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addLoadProgressChanged(ProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("LoadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -509,7 +553,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeLoadProgressChanged(ProgressChangedEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("LoadProgressChanged", handler);
         } catch (JCNativeException jcne) {
@@ -519,7 +563,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -529,7 +573,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeCausesValidationChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("CausesValidationChanged", handler);
         } catch (JCNativeException jcne) {
@@ -539,7 +583,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -549,7 +593,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeEnter(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Enter", handler);
         } catch (JCNativeException jcne) {
@@ -559,7 +603,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -569,7 +613,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeFontChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("FontChanged", handler);
         } catch (JCNativeException jcne) {
@@ -579,7 +623,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -589,7 +633,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeForeColorChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ForeColorChanged", handler);
         } catch (JCNativeException jcne) {
@@ -599,7 +643,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -609,7 +653,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeImeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ImeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -619,7 +663,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -629,7 +673,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeLeave(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Leave", handler);
         } catch (JCNativeException jcne) {
@@ -639,7 +683,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -649,7 +693,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeRightToLeftChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("RightToLeftChanged", handler);
         } catch (JCNativeException jcne) {
@@ -659,7 +703,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addSizeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("SizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -669,7 +713,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeSizeModeChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SizeModeChanged", handler);
         } catch (JCNativeException jcne) {
@@ -679,7 +723,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -689,7 +733,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeTabIndexChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabIndexChanged", handler);
         } catch (JCNativeException jcne) {
@@ -699,7 +743,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -709,7 +753,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeTabStopChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TabStopChanged", handler);
         } catch (JCNativeException jcne) {
@@ -719,7 +763,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -729,7 +773,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeTextChanged(EventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
         } catch (JCNativeException jcne) {
@@ -739,7 +783,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -749,7 +793,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeKeyDown(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyDown", handler);
         } catch (JCNativeException jcne) {
@@ -759,7 +803,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -769,7 +813,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeKeyUp(KeyEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyUp", handler);
         } catch (JCNativeException jcne) {
@@ -779,7 +823,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void addKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.RegisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {
@@ -789,7 +833,7 @@ public class PictureBox extends Control implements system.componentmodel.ISuppor
 
     public void removeKeyPress(KeyPressEventHandler handler) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("KeyPress", handler);
         } catch (JCNativeException jcne) {

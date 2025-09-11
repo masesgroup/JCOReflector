@@ -170,9 +170,13 @@ public class InternalsVisibleToAttribute extends Attribute  {
     
     public boolean getAllInternalsVisible() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAllInternalsVisible = null;
         try {
-            return (boolean)classInstance.Get("AllInternalsVisible");
+            retObjectAllInternalsVisible = classInstance.Get("AllInternalsVisible");
+            return (boolean)retObjectAllInternalsVisible;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectAllInternalsVisible != null ? retObjectAllInternalsVisible.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,7 +184,7 @@ public class InternalsVisibleToAttribute extends Attribute  {
 
     public void setAllInternalsVisible(boolean AllInternalsVisible) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("AllInternalsVisible", AllInternalsVisible);
         } catch (JCNativeException jcne) {
@@ -190,9 +194,13 @@ public class InternalsVisibleToAttribute extends Attribute  {
 
     public java.lang.String getAssemblyName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectAssemblyName = null;
         try {
-            return (java.lang.String)classInstance.Get("AssemblyName");
+            retObjectAssemblyName = classInstance.Get("AssemblyName");
+            return (java.lang.String)retObjectAssemblyName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectAssemblyName != null ? retObjectAssemblyName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

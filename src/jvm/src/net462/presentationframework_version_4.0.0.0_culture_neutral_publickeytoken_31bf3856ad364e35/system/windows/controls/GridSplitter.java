@@ -169,9 +169,13 @@ public class GridSplitter extends Thumb  {
     
     public boolean getShowsPreview() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectShowsPreview = null;
         try {
-            return (boolean)classInstance.Get("ShowsPreview");
+            retObjectShowsPreview = classInstance.Get("ShowsPreview");
+            return (boolean)retObjectShowsPreview;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectShowsPreview != null ? retObjectShowsPreview.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class GridSplitter extends Thumb  {
 
     public void setShowsPreview(boolean ShowsPreview) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ShowsPreview", ShowsPreview);
         } catch (JCNativeException jcne) {
@@ -189,9 +193,13 @@ public class GridSplitter extends Thumb  {
 
     public double getDragIncrement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectDragIncrement = null;
         try {
-            return (double)classInstance.Get("DragIncrement");
+            retObjectDragIncrement = classInstance.Get("DragIncrement");
+            return (double)retObjectDragIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectDragIncrement != null ? retObjectDragIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -199,7 +207,7 @@ public class GridSplitter extends Thumb  {
 
     public void setDragIncrement(double DragIncrement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("DragIncrement", DragIncrement);
         } catch (JCNativeException jcne) {
@@ -209,9 +217,13 @@ public class GridSplitter extends Thumb  {
 
     public double getKeyboardIncrement() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectKeyboardIncrement = null;
         try {
-            return (double)classInstance.Get("KeyboardIncrement");
+            retObjectKeyboardIncrement = classInstance.Get("KeyboardIncrement");
+            return (double)retObjectKeyboardIncrement;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into double", retObjectKeyboardIncrement != null ? retObjectKeyboardIncrement.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -219,7 +231,7 @@ public class GridSplitter extends Thumb  {
 
     public void setKeyboardIncrement(double KeyboardIncrement) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("KeyboardIncrement", KeyboardIncrement);
         } catch (JCNativeException jcne) {
@@ -229,10 +241,14 @@ public class GridSplitter extends Thumb  {
 
     public GridResizeBehavior getResizeBehavior() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResizeBehavior = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResizeBehavior");
+            retObjectResizeBehavior = classInstance.Get("ResizeBehavior");
+            JCObject val = (JCObject)retObjectResizeBehavior;
             return new GridResizeBehavior(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeBehavior != null ? retObjectResizeBehavior.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +256,7 @@ public class GridSplitter extends Thumb  {
 
     public void setResizeBehavior(GridResizeBehavior ResizeBehavior) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResizeBehavior", ResizeBehavior == null ? null : ResizeBehavior.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -250,10 +266,14 @@ public class GridSplitter extends Thumb  {
 
     public GridResizeDirection getResizeDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectResizeDirection = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("ResizeDirection");
+            retObjectResizeDirection = classInstance.Get("ResizeDirection");
+            JCObject val = (JCObject)retObjectResizeDirection;
             return new GridResizeDirection(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectResizeDirection != null ? retObjectResizeDirection.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +281,7 @@ public class GridSplitter extends Thumb  {
 
     public void setResizeDirection(GridResizeDirection ResizeDirection) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ResizeDirection", ResizeDirection == null ? null : ResizeDirection.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -271,10 +291,14 @@ public class GridSplitter extends Thumb  {
 
     public Style getPreviewStyle() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectPreviewStyle = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("PreviewStyle");
+            retObjectPreviewStyle = classInstance.Get("PreviewStyle");
+            JCObject val = (JCObject)retObjectPreviewStyle;
             return new Style(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectPreviewStyle != null ? retObjectPreviewStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +306,7 @@ public class GridSplitter extends Thumb  {
 
     public void setPreviewStyle(Style PreviewStyle) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("PreviewStyle", PreviewStyle == null ? null : PreviewStyle.getJCOInstance());
         } catch (JCNativeException jcne) {

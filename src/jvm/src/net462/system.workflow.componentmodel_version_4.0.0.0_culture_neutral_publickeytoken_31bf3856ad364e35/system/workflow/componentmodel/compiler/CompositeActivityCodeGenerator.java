@@ -163,7 +163,7 @@ public class CompositeActivityCodeGenerator extends ActivityCodeGenerator  {
     
     public void GenerateCode(CodeGenerationManager manager, NetObject obj) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateCode", manager == null ? null : manager.getJCOInstance(), obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {

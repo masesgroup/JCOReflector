@@ -156,7 +156,7 @@ public class WebThreadInformation extends NetObject  {
     
     public void FormatToString(WebEventFormatter formatter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.web.HttpException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.MemberAccessException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FormatToString", formatter == null ? null : formatter.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -170,9 +170,13 @@ public class WebThreadInformation extends NetObject  {
     
     public boolean getIsImpersonating() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIsImpersonating = null;
         try {
-            return (boolean)classInstance.Get("IsImpersonating");
+            retObjectIsImpersonating = classInstance.Get("IsImpersonating");
+            return (boolean)retObjectIsImpersonating;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectIsImpersonating != null ? retObjectIsImpersonating.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,9 +184,13 @@ public class WebThreadInformation extends NetObject  {
 
     public int getThreadID() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadID = null;
         try {
-            return (int)classInstance.Get("ThreadID");
+            retObjectThreadID = classInstance.Get("ThreadID");
+            return (int)retObjectThreadID;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectThreadID != null ? retObjectThreadID.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,9 +198,13 @@ public class WebThreadInformation extends NetObject  {
 
     public java.lang.String getStackTrace() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectStackTrace = null;
         try {
-            return (java.lang.String)classInstance.Get("StackTrace");
+            retObjectStackTrace = classInstance.Get("StackTrace");
+            return (java.lang.String)retObjectStackTrace;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectStackTrace != null ? retObjectStackTrace.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,9 +212,13 @@ public class WebThreadInformation extends NetObject  {
 
     public java.lang.String getThreadAccountName() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectThreadAccountName = null;
         try {
-            return (java.lang.String)classInstance.Get("ThreadAccountName");
+            retObjectThreadAccountName = classInstance.Get("ThreadAccountName");
+            return (java.lang.String)retObjectThreadAccountName;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectThreadAccountName != null ? retObjectThreadAccountName.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

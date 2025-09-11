@@ -164,10 +164,14 @@ public class RC2CryptoServiceProvider extends RC2  {
     
     public ICryptoTransform CreateDecryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDecryptor = null;
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", rgbKey, rgbIV);
+            retObjectCreateDecryptor = classInstance.Invoke("CreateDecryptor", rgbKey, rgbIV);
+            JCObject objCreateDecryptor = (JCObject)retObjectCreateDecryptor;
             return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDecryptor != null ? retObjectCreateDecryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,10 +179,14 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public ICryptoTransform CreateDecryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateDecryptor = null;
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectCreateDecryptor = classInstance.Invoke("CreateDecryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            JCObject objCreateDecryptor = (JCObject)retObjectCreateDecryptor;
             return new ICryptoTransformImplementation(objCreateDecryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateDecryptor != null ? retObjectCreateDecryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,10 +194,14 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public ICryptoTransform CreateEncryptor(byte[] rgbKey, byte[] rgbIV) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEncryptor = null;
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", rgbKey, rgbIV);
+            retObjectCreateEncryptor = classInstance.Invoke("CreateEncryptor", rgbKey, rgbIV);
+            JCObject objCreateEncryptor = (JCObject)retObjectCreateEncryptor;
             return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEncryptor != null ? retObjectCreateEncryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,10 +209,14 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public ICryptoTransform CreateEncryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateEncryptor = null;
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            retObjectCreateEncryptor = classInstance.Invoke("CreateEncryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            JCObject objCreateEncryptor = (JCObject)retObjectCreateEncryptor;
             return new ICryptoTransformImplementation(objCreateEncryptor);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateEncryptor != null ? retObjectCreateEncryptor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +224,7 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public void GenerateIV() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateIV");
         } catch (JCNativeException jcne) {
@@ -218,7 +234,7 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public void GenerateKey() throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GenerateKey");
         } catch (JCNativeException jcne) {
@@ -232,9 +248,13 @@ public class RC2CryptoServiceProvider extends RC2  {
     
     public boolean getUseSalt() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectUseSalt = null;
         try {
-            return (boolean)classInstance.Get("UseSalt");
+            retObjectUseSalt = classInstance.Get("UseSalt");
+            return (boolean)retObjectUseSalt;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectUseSalt != null ? retObjectUseSalt.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,7 +262,7 @@ public class RC2CryptoServiceProvider extends RC2  {
 
     public void setUseSalt(boolean UseSalt) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("UseSalt", UseSalt);
         } catch (JCNativeException jcne) {

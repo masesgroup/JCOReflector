@@ -169,9 +169,13 @@ public class ValidationResult extends NetObject  {
     
     public java.lang.String getErrorMessage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectErrorMessage = null;
         try {
-            return (java.lang.String)classInstance.Get("ErrorMessage");
+            retObjectErrorMessage = classInstance.Get("ErrorMessage");
+            return (java.lang.String)retObjectErrorMessage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectErrorMessage != null ? retObjectErrorMessage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +183,7 @@ public class ValidationResult extends NetObject  {
 
     public void setErrorMessage(java.lang.String ErrorMessage) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ErrorMessage", ErrorMessage);
         } catch (JCNativeException jcne) {

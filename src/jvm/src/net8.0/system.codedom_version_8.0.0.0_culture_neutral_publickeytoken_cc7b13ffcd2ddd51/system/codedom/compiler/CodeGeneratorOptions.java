@@ -165,9 +165,13 @@ public class CodeGeneratorOptions extends NetObject  {
     
     public boolean getBlankLinesBetweenMembers() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBlankLinesBetweenMembers = null;
         try {
-            return (boolean)classInstance.Get("BlankLinesBetweenMembers");
+            retObjectBlankLinesBetweenMembers = classInstance.Get("BlankLinesBetweenMembers");
+            return (boolean)retObjectBlankLinesBetweenMembers;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectBlankLinesBetweenMembers != null ? retObjectBlankLinesBetweenMembers.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -175,7 +179,7 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public void setBlankLinesBetweenMembers(boolean BlankLinesBetweenMembers) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BlankLinesBetweenMembers", BlankLinesBetweenMembers);
         } catch (JCNativeException jcne) {
@@ -185,9 +189,13 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public boolean getElseOnClosing() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectElseOnClosing = null;
         try {
-            return (boolean)classInstance.Get("ElseOnClosing");
+            retObjectElseOnClosing = classInstance.Get("ElseOnClosing");
+            return (boolean)retObjectElseOnClosing;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectElseOnClosing != null ? retObjectElseOnClosing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +203,7 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public void setElseOnClosing(boolean ElseOnClosing) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("ElseOnClosing", ElseOnClosing);
         } catch (JCNativeException jcne) {
@@ -205,9 +213,13 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public boolean getVerbatimOrder() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectVerbatimOrder = null;
         try {
-            return (boolean)classInstance.Get("VerbatimOrder");
+            retObjectVerbatimOrder = classInstance.Get("VerbatimOrder");
+            return (boolean)retObjectVerbatimOrder;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectVerbatimOrder != null ? retObjectVerbatimOrder.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,7 +227,7 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public void setVerbatimOrder(boolean VerbatimOrder) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("VerbatimOrder", VerbatimOrder);
         } catch (JCNativeException jcne) {
@@ -225,9 +237,13 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public java.lang.String getBracingStyle() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectBracingStyle = null;
         try {
-            return (java.lang.String)classInstance.Get("BracingStyle");
+            retObjectBracingStyle = classInstance.Get("BracingStyle");
+            return (java.lang.String)retObjectBracingStyle;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectBracingStyle != null ? retObjectBracingStyle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,7 +251,7 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public void setBracingStyle(java.lang.String BracingStyle) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("BracingStyle", BracingStyle);
         } catch (JCNativeException jcne) {
@@ -245,9 +261,13 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public java.lang.String getIndentString() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIndentString = null;
         try {
-            return (java.lang.String)classInstance.Get("IndentString");
+            retObjectIndentString = classInstance.Get("IndentString");
+            return (java.lang.String)retObjectIndentString;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectIndentString != null ? retObjectIndentString.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -255,7 +275,7 @@ public class CodeGeneratorOptions extends NetObject  {
 
     public void setIndentString(java.lang.String IndentString) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IndentString", IndentString);
         } catch (JCNativeException jcne) {

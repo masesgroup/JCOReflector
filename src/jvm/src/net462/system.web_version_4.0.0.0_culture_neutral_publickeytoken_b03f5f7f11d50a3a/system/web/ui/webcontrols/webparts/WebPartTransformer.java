@@ -154,10 +154,14 @@ public class WebPartTransformer extends NetObject  {
     
     public NetObject Transform(NetObject providerData) throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectTransform = null;
         try {
-            JCObject objTransform = (JCObject)classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            retObjectTransform = classInstance.Invoke("Transform", providerData == null ? null : providerData.getJCOInstance());
+            JCObject objTransform = (JCObject)retObjectTransform;
             return new NetObject(objTransform);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectTransform != null ? retObjectTransform.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,10 +169,14 @@ public class WebPartTransformer extends NetObject  {
 
     public Control CreateConfigurationControl() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectCreateConfigurationControl = null;
         try {
-            JCObject objCreateConfigurationControl = (JCObject)classInstance.Invoke("CreateConfigurationControl");
+            retObjectCreateConfigurationControl = classInstance.Invoke("CreateConfigurationControl");
+            JCObject objCreateConfigurationControl = (JCObject)retObjectCreateConfigurationControl;
             return new Control(objCreateConfigurationControl);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectCreateConfigurationControl != null ? retObjectCreateConfigurationControl.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

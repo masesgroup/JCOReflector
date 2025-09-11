@@ -143,10 +143,14 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
     
     public Expression GetExpressionTree() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectGetExpressionTree = null;
         try {
-            JCObject objGetExpressionTree = (JCObject)classInstance.Invoke("GetExpressionTree");
+            retObjectGetExpressionTree = classInstance.Invoke("GetExpressionTree");
+            JCObject objGetExpressionTree = (JCObject)retObjectGetExpressionTree;
             return new Expression(objGetExpressionTree);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectGetExpressionTree != null ? retObjectGetExpressionTree.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,9 +162,13 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
     
     public boolean getRequiresCompilation() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectRequiresCompilation = null;
         try {
-            return (boolean)classInstance.Get("RequiresCompilation");
+            retObjectRequiresCompilation = classInstance.Get("RequiresCompilation");
+            return (boolean)retObjectRequiresCompilation;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into boolean", retObjectRequiresCompilation != null ? retObjectRequiresCompilation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,9 +176,13 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
 
     public java.lang.String getExpressionText() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectExpressionText = null;
         try {
-            return (java.lang.String)classInstance.Get("ExpressionText");
+            retObjectExpressionText = classInstance.Get("ExpressionText");
+            return (java.lang.String)retObjectExpressionText;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectExpressionText != null ? retObjectExpressionText.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,9 +190,13 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
 
     public java.lang.String getLanguage() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLanguage = null;
         try {
-            return (java.lang.String)classInstance.Get("Language");
+            retObjectLanguage = classInstance.Get("Language");
+            return (java.lang.String)retObjectLanguage;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into java.lang.String", retObjectLanguage != null ? retObjectLanguage.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

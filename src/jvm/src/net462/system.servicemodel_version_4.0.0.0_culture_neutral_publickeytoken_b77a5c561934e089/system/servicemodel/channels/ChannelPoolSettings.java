@@ -166,9 +166,13 @@ public class ChannelPoolSettings extends NetObject  {
     
     public int getMaxOutboundChannelsPerEndpoint() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectMaxOutboundChannelsPerEndpoint = null;
         try {
-            return (int)classInstance.Get("MaxOutboundChannelsPerEndpoint");
+            retObjectMaxOutboundChannelsPerEndpoint = classInstance.Get("MaxOutboundChannelsPerEndpoint");
+            return (int)retObjectMaxOutboundChannelsPerEndpoint;
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into int", retObjectMaxOutboundChannelsPerEndpoint != null ? retObjectMaxOutboundChannelsPerEndpoint.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,7 +180,7 @@ public class ChannelPoolSettings extends NetObject  {
 
     public void setMaxOutboundChannelsPerEndpoint(int MaxOutboundChannelsPerEndpoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxOutboundChannelsPerEndpoint", MaxOutboundChannelsPerEndpoint);
         } catch (JCNativeException jcne) {
@@ -186,10 +190,14 @@ public class ChannelPoolSettings extends NetObject  {
 
     public TimeSpan getIdleTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectIdleTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("IdleTimeout");
+            retObjectIdleTimeout = classInstance.Get("IdleTimeout");
+            JCObject val = (JCObject)retObjectIdleTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectIdleTimeout != null ? retObjectIdleTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +205,7 @@ public class ChannelPoolSettings extends NetObject  {
 
     public void setIdleTimeout(TimeSpan IdleTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("IdleTimeout", IdleTimeout == null ? null : IdleTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
@@ -207,10 +215,14 @@ public class ChannelPoolSettings extends NetObject  {
 
     public TimeSpan getLeaseTimeout() throws Throwable {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        java.lang.Object retObjectLeaseTimeout = null;
         try {
-            JCObject val = (JCObject)classInstance.Get("LeaseTimeout");
+            retObjectLeaseTimeout = classInstance.Get("LeaseTimeout");
+            JCObject val = (JCObject)retObjectLeaseTimeout;
             return new TimeSpan(val);
+        } catch (java.lang.ClassCastException cce) {
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into JCObject", retObjectLeaseTimeout != null ? retObjectLeaseTimeout.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -218,7 +230,7 @@ public class ChannelPoolSettings extends NetObject  {
 
     public void setLeaseTimeout(TimeSpan LeaseTimeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("LeaseTimeout", LeaseTimeout == null ? null : LeaseTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
